@@ -1,0 +1,15 @@
+[Unit]
+Description=Daily pass over the published orbit events, writing the paragraphs that decorate them
+
+[Timer]
+# Once a day, at 05:15 local. Events do not change minute to minute, a paragraph
+# costs tens of seconds of the GPU Bob answers from, and
+# `enrich_orbit_events` skips any event whose cached narrative still validates —
+# so a daily run usually writes only what is genuinely new.
+OnCalendar=*-*-* 05:15:00
+RandomizedDelaySec=600
+Persistent=true
+Unit=orbit-narrative.service
+
+[Install]
+WantedBy=timers.target

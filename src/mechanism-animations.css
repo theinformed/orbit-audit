@@ -1,0 +1,66 @@
+/* The mechanism library.
+   Six rules, and no new colours: every value here is an existing token from
+   src/styles.css, and the figure itself reuses .layer-figure / .layer-video /
+   .layer-figcaption rather than introducing a second treatment for the same
+   object. */
+
+.mechanism-entry {
+  margin: 38px 0 0;
+  padding: 0 0 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mechanism-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.mechanism-entry h3 {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.mechanism-entry .mechanism-question {
+  max-width: 760px;
+  margin: 7px 0 0;
+  color: var(--cyan-bright);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.mechanism-entry .layer-figure {
+  margin-top: 18px;
+}
+
+@media (max-width: 720px) {
+  .mechanism-entry h3 { font-size: 18px; }
+  .mechanism-entry .mechanism-question { font-size: 12px; }
+}
+
+/* The narration transcript. Closed by default and quiet when open: it is the
+   words that exist only in the audio, so a reader who cannot hear loses
+   nothing, and a reader who can is not made to read them twice. */
+.mechanism-transcript {
+  margin: 12px 0 0;
+}
+
+.mechanism-transcript > summary {
+  color: var(--cyan-bright);
+  cursor: pointer;
+  font: 500 10px "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.mechanism-transcript > ol {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.mechanism-transcript > ol > li {
+  margin: 5px 0 0;
+}

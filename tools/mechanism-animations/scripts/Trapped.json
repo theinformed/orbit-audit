@@ -1,0 +1,50 @@
+{
+ "scene": "Trapped",
+ "duration": 70.867,
+ "lines": [
+  {
+   "t": 6.433,
+   "text": "One field line, anchored in the northern and southern hemispheres."
+  },
+  {
+   "t": 11.6,
+   "text": "A charged particle circles its field line. Circling alone never carries it to another."
+  },
+  {
+   "t": 20.567,
+   "text": "Toward the feet the field crowds together, and the particle is turned around."
+  },
+  {
+   "t": 24.833,
+   "text": "It bounces, for as long as nothing scatters it."
+  },
+  {
+   "t": 33.667,
+   "text": "Same particles, seen from above the north pole."
+  },
+  {
+   "t": 40.833,
+   "text": "They drift right round the planet \u2014 and they go opposite ways."
+  },
+  {
+   "t": 44.0,
+   "text": "Ions drift west. Electrons drift east."
+  },
+  {
+   "t": 47.333,
+   "text": "They do not cancel. They add."
+  },
+  {
+   "t": 51.0,
+   "text": "One westward current, tens of thousands of kilometres across."
+  },
+  {
+   "t": 54.167,
+   "text": "So the field measured at the ground goes down."
+  },
+  {
+   "t": 59.533,
+   "text": "That dip is Dst. It is how the size of a magnetic storm is stated."
+  }
+ ]
+}

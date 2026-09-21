@@ -1,0 +1,67 @@
+{
+  "_README": [
+    "The traffic allowances the bandwidth tracker measures against.",
+    "",
+    "This is a configuration file, not a measurement, and the tracker treats it that",
+    "way: every window carries who confirmed it and when, and the operations page",
+    "prints that provenance next to the number. There is deliberately no fallback",
+    "constant anywhere in ops/bandwidth.py -- if this file is missing, the page says",
+    "the allowance is unknown rather than inventing one, because an allowance the",
+    "code made up would look exactly like one Sean confirmed.",
+    "",
+    "A window with no effectiveFrom is ANNOUNCED, not in force. It is displayed so",
+    "an operator can see what is coming, and it is never used in any arithmetic.",
+    "When Sean's fibre install completes, set its effectiveFrom to the date the new",
+    "plan starts and the page follows on the next run -- no code change.",
+    "",
+    "unlimited:true means there is no ceiling. Every percentage-of-allowance figure",
+    "on the page becomes 'no ceiling' rather than a division by zero.",
+    "",
+    "counts: which DIRECTION the allowance bills. This field is load-bearing. The",
+    "VPS allowance is egress-only, so the bigmem-to-VPS publish traffic -- which is",
+    "ingress at the VPS -- does not touch it at all. Getting this wrong would have",
+    "sent Sean optimising the wrong number."
+  ],
+  "schema": 1,
+  "allowances": {
+    "home": {
+      "label": "Sean's home internet (bigmem's connection)",
+      "counts": "both directions",
+      "billingStartDay": 1,
+      "billingStartDayConfirmed": false,
+      "sourceNote": "Sean confirmed 1.25 TB/month on 2026-08-08. The billing RESET DAY has not been confirmed; the tracker assumes the calendar month (UTC) and says so.",
+      "windows": [
+        {
+          "effectiveFrom": "2026-01-01",
+          "bytes": 1250000000000,
+          "unlimited": false,
+          "confirmed": true,
+          "note": "1.25 TB/month. Confirmed by Sean 2026-08-08, superseding a 2 TB figure given earlier from memory."
+        },
+        {
+          "effectiveFrom": null,
+          "unlimited": true,
+          "bytes": null,
+          "confirmed": false,
+          "note": "T-Mobile fibre, unlimited. Sean announced this on 2026-08-08 as 'later this week'. NOT IN FORCE: no start date has been recorded, so the tracker is still measuring against 1.25 TB. Set effectiveFrom to the install date to switch."
+        }
+      ]
+    },
+    "vps": {
+      "label": "Hetzner CPX31, Ashburn (openclaw-ash-1)",
+      "counts": "egress only",
+      "billingStartDay": 1,
+      "billingStartDayConfirmed": false,
+      "sourceNote": "3 TB egress, confirmed by Sean 2026-08-08 and corroborated the same day against Hetzner's own documentation: the Cloud billing FAQ (docs.hetzner.com/cloud/billing/faq/) states 'We only bill for outgoing traffic. Incoming and internal traffic is free', and Hetzner's cloud_data.json shows CPX31 at ASH1 (Ashburn) with 3 TB included and EUR 1.00/USD 1.20 per additional TB. So the bigmem-to-VPS publish traffic, which is ingress here, does not consume this allowance -- only bytes served to visitors do. NOT verified per-server: whether this particular server was grandfathered onto a larger allowance can only be settled by GET /v1/servers included_traffic on the Hetzner API, which has not been run.",
+      "windows": [
+        {
+          "effectiveFrom": "2026-01-01",
+          "bytes": 3000000000000,
+          "unlimited": false,
+          "confirmed": true,
+          "note": "3 TB/month of EGRESS. Confirmed by Sean 2026-08-08."
+        }
+      ]
+    }
+  }
+}

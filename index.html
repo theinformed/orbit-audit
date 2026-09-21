@@ -1,0 +1,1671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="A free, non-commercial learning site: explore satellite orbits, the ionosphere, solar wind, and the magnetosphere in one interactive teaching environment."
+    />
+    <meta name="theme-color" content="#020a10" />
+    <!-- Link previews (iMessage, Slack, Teams, social) read Open Graph tags
+         and need ABSOLUTE URLs and a PNG — an SVG favicon alone yields no
+         preview at all. The PNGs are in public/ and named in web.Dockerfile
+         (any new top-level dist file must be, or nginx serves the SPA shell). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Space Environment Explorer" />
+    <meta property="og:title" content="Space Environment Explorer" />
+    <meta property="og:description" content="Live satellite tracks and space weather in one teaching picture. A free, non-commercial learning site." />
+    <meta property="og:url" content="https://sean.theinformed.org/space/" />
+    <meta property="og:image" content="https://sean.theinformed.org/space/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://sean.theinformed.org/space/social-card.png" />
+    <!-- Relative on purpose: the site is served from /space/, and vite.config
+         sets base "./", so an absolute /favicon.svg would 404. -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <title>Space Environment Explorer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to explorer</a>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Space Environment Explorer home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span><strong>SPACE ENVIRONMENT</strong><small>ORBIT + WEATHER EXPLORER</small></span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <!-- "Explorer", not "Explore". Every other destination in this row is
+               a noun - Current conditions, Historical events, Satellite
+               fundamentals, Transit visibility - and this was the only verb in
+               it. As a noun it reads as the name of a place you can go back to,
+               which is what lets the nav carry the return on its own now that
+               the floating "Back to explorer" button is gone from the desktop
+               layout. `data-view="explore"` is the identifier the router,
+               main.ts and the tests all use, and it is unchanged. -->
+          <button class="nav-item is-active" data-view="explore" data-mobile-label="Explorer">Explorer</button>
+          <button class="nav-item" data-view="now" data-mobile-label="Now">Current conditions</button>
+          <button class="nav-item" data-view="events" data-mobile-label="Events">Historical events</button>
+          <button class="nav-item" data-view="learn-orbits" data-mobile-label="Orbits">Satellite fundamentals</button>
+          <button class="nav-item" data-view="learn-methods" data-mobile-label="Methods">How it works</button>
+          <button class="nav-item" data-view="learn-weather" data-mobile-label="Weather">Learn space weather</button>
+          <!-- "Layers, one by one" used to be a top-nav destination here. Sean,
+               2026-08-21: "I just worry the top rail is getting too crowded."
+               Nine of its ten pages are space-weather layers - thermosphere,
+               ionosphere, plasmasphere, radiation belts, ring current,
+               magnetopause, solar wind, peak surfaces, D-region - and the index
+               is already labelled LEARNING TRACK 03 to Learn space weather's 02,
+               so it is reached from that page's contents spine now. The DOOR
+               moved; the pages did not. `data-view="learn-layers"` is still a
+               route openContent() handles, so every deep link, cross-link from
+               Satellite fundamentals, and bookmark still resolves. -->
+        <button class="nav-item" data-view="connections" data-mobile-label="Connect">Connections</button>
+        <button class="nav-item" data-view="transit" data-mobile-label="Transit">Transit visibility</button>
+        </nav>
+        <div class="live-chip" id="data-status" role="status"><i></i> Loading data…</div>
+        <!-- The storm indicator. It is mounted only when the published indices
+             actually classify a storm, so quiet conditions leave the top bar
+             exactly as it was: Sean's complaint was that this material looked
+             alarming when nothing was happening. When a storm IS running this
+             is the most important thing on the page, so it sits beside the
+             data-freshness pill and carries the state and the one number that
+             defines it. Everything else is behind the click. -->
+        <div class="storm-shell">
+          <button type="button" class="storm-chip" id="storm-chip" aria-expanded="false" aria-controls="storm-dropdown" hidden>
+            <!-- The leading word is the noun only. The label that follows it
+                 supplies "storm", so a chip carrying both read "GEOMAGNETIC
+                 STORM STORM" and was wide enough to push the six-item nav onto
+                 a second line at 1600px. One name at every width now. -->
+            <i aria-hidden="true"></i><b class="storm-chip-name">Geomag</b><span id="storm-chip-label"></span><span class="storm-chip-brief" id="storm-chip-brief"></span>
+          </button>
+          <section class="storm-dropdown" id="storm-dropdown" aria-labelledby="storm-chip" hidden>
+            <div class="storm-dropdown-head">
+              <span class="section-kicker">GEOMAGNETIC STORM</span>
+              <button type="button" class="data-viewer-close" id="storm-dropdown-close" aria-label="Close the geomagnetic storm panel">×</button>
+            </div>
+            <div class="storm-dropdown-body">
+              <p class="storm-reason" id="storm-reason"></p>
+              <!-- The reconciliation. Dst and Kp disagree during onset, and the
+                   site was reporting both without a word about why. -->
+              <p class="storm-reconcile" id="storm-reconcile" hidden></p>
+              <!-- Dst is a global scalar and has no map. What DOES have a map is
+                   everything responding to the storm, and the site already draws
+                   all three honestly. This connects them rather than inventing a
+                   spatial field out of an index. -->
+              <button type="button" class="storm-show" id="storm-show">Show me this storm on the globe →</button>
+              <p class="storm-show-note">Switches on the auroral oval, the magnetosphere plasma field and the radiation belts — the three layers responding to it. Watch the dayside colours compress.</p>
+              <section id="storm-panel" class="storm-panel-host"></section>
+            </div>
+          </section>
+        </div>
+        <button class="about-button" id="about-button" aria-label="About this site">About</button>
+        <!-- THE TWO DOORS ON A PHONE.
+             Sean, 2026-08-20, on a real handset: "Right now I have no way of
+             finding satellites or adding space weather layers." Both were
+             there - behind one button in the top-right corner labelled
+             "Layers & data", wrapped onto the same line as the eight-item nav
+             and reading as a stray tooltip over it. And even once opened, the
+             layer list is HIDDEN in Satellites mode, which is the mode the
+             site starts in: the sheet a visitor finally reached did not
+             contain the thing they were looking for.
+
+             So the nav goes on a phone - learning is a desktop surface for
+             now, which is Sean's call - and the row it occupied becomes two
+             full-width doors named after the two things this site shows. Each
+             one opens the sheet AT its own section, and puts the explorer in a
+             mode where that section exists, so tapping "Space weather" cannot
+             land on a panel that is hidden.
+
+             `#mobile-panel-toggle` keeps its id and its plain open/close
+             contract because every phone test in the suite uses it both as
+             "am I on a phone" and as the way to shut the sheet. -->
+        <div class="mobile-tabs" id="mobile-tabs">
+          <button class="mobile-panel-toggle" id="mobile-panel-toggle" aria-controls="control-rail" aria-expanded="false">
+            Satellites
+          </button>
+          <button class="mobile-panel-toggle" id="mobile-weather-toggle" aria-controls="control-rail" aria-expanded="false">
+            Space weather
+          </button>
+        </div>
+      </header>
+
+      <main id="workspace" class="workspace">
+        <section class="scene-shell" aria-label="Interactive three-dimensional Earth and satellite scene">
+          <div id="scene" class="scene" tabindex="0" aria-describedby="scene-help"></div>
+          <p id="scene-help" class="sr-only">Drag to rotate Earth, scroll to zoom, and select a satellite marker for details.</p>
+
+          <!-- CONSTELLATION OF THE DAY, over the globe, for ten seconds.
+               Sean: "a window that briefly pops up somewhere discreet but that
+               will be seen, saying e.g. 'Showing the Satellite/Constellation of
+               the day: Iridium, a Low Earth Orbit constellation operated by
+               ....'"
+
+               AN ANNOUNCEMENT, NOT A DIALOG. The shell is a permanent, empty,
+               non-interactive `role="status"` region, so a screen reader is
+               already watching it when the note appears inside it; nothing
+               takes focus, nothing is trapped, and Escape closes it. It is the
+               same shape as any other polite live region on this site.
+
+               WHERE IT SITS. Top centre of the SCENE, which is the one part of
+               this layout that is empty on arrival: the legend and the colour
+               scales are bottom-right, the timeline is bottom-left, and the two
+               windows that can open over the globe are top-left and top-right.
+               Below 820 px it becomes a full-width strip at the top of the
+               scene - still clear of the legend at the foot of the screen, and
+               clear of the two doors, which are in the header ABOVE the scene
+               and are not in this element's box at all. `#mobile-panel-toggle`
+               is not touched by any of this.
+
+               The behaviour is in `main.ts`: ten seconds, an X, an outside
+               click, and a click INSIDE that stops the clock for good. -->
+          <div class="featured-toast-shell" id="featured-toast-shell" role="status" aria-live="polite">
+            <div class="featured-toast" id="featured-toast" hidden>
+              <p class="featured-toast-text" id="featured-toast-text"></p>
+              <span class="featured-toast-count" id="featured-toast-count" aria-hidden="true"></span>
+              <button type="button" class="featured-toast-close" id="featured-toast-close" aria-label="Close the constellation of the day note">×</button>
+            </div>
+          </div>
+
+          <div class="scene-hud scene-hud--bottom">
+            <div class="timeline-control" data-globe-label-occluder>
+              <div class="clock-block">
+                <span id="sim-label">LIVE</span>
+                <strong id="sim-time">--:--:-- UTC</strong>
+              </div>
+              <button id="time-play" aria-label="Pause simulation">Ⅱ</button>
+              <div class="time-slider-shell" id="time-slider-shell">
+                <output id="time-slider-tooltip" for="time-slider" aria-live="polite"><strong>NOW</strong><span>UTC</span></output>
+                <input id="time-slider" type="range" min="-2880" max="4320" value="0" step="1" aria-label="Simulation time from 48 hours ago through 72 hours ahead" />
+                <i class="time-now-marker" aria-hidden="true"></i>
+                <!-- WHERE THE ASSIMILATED-GRADE FIELD ACTUALLY IS.
+                     One NOAA WAM release covers about twelve hours of this
+                     120-hour slider; NRLMSIS covers the rest. That is a fact
+                     about a 10% sliver of the track, and no amount of card text
+                     makes it findable — so it is drawn ON the track, at the
+                     hours it is true of. Hidden unless the thermosphere is on,
+                     because a permanent mark for a layer nobody switched on is
+                     furniture. -->
+                <i class="time-coverage-band" id="time-coverage-band" aria-hidden="true" hidden></i>
+                <div class="time-slider-units" aria-hidden="true"><span>−48 h</span><b>NOW</b><span>+72 h</span></div>
+              </div>
+              <button id="time-now">Return to now</button>
+              <button id="time-playback-toggle" aria-label="Open timed playback settings" aria-expanded="false">SPAN</button>
+              <div class="time-playback-settings" id="time-playback-settings" hidden>
+                <div class="time-playback-head"><div><span class="section-kicker">TIMED PLAYBACK</span><strong>Watch the geometry evolve.</strong></div><button id="time-playback-close" aria-label="Close timed playback settings">×</button></div>
+                <label for="time-playback-duration"><span>Simulated duration</span><select id="time-playback-duration"><option value="30">30 minutes</option><option value="120" selected>2 hours</option><option value="360">6 hours</option><option value="1440">24 hours</option></select></label>
+                <label for="time-playback-pace"><span>Playback pace</span><select id="time-playback-pace"><option value="60000">Slow · 60 real seconds</option><option value="30000" selected>Standard · 30 real seconds</option><option value="15000">Fast · 15 real seconds</option><option value="8000">Very fast · 8 real seconds</option></select></label>
+                <p id="time-playback-summary">Runs the selected span in 30 real seconds. Pause at any point with the timeline button.</p>
+                <button class="time-playback-start" id="time-playback-start">Play selected span</button>
+              </div>
+            </div>
+            <!-- The legend column, and the view controls above it. Everything
+                 here is small and permanent: the buttons that change what the
+                 globe shows, then the colour scales for whatever is drawn, then
+                 the satellite colour key. The data viewer is NOT here — it is
+                 its own window in the opposite corner, because Sean asked for
+                 two independent things rather than one tall panel. -->
+            <div class="map-keys" data-globe-label-occluder>
+              <div class="scene-tools" role="group" aria-label="Globe view controls">
+                <button id="zoom-out" title="Zoom out — heights above Earth are drawn on a compressed scale, not linear distance" aria-label="Zoom out">−</button>
+                <button id="reset-view" title="Reset globe view" aria-label="Reset globe view">⌖</button>
+                <button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+                <button id="sun-earth-view" title="Sun–Earth side view" aria-label="Show Sun–Earth side view">↔</button>
+                <button id="cross-section-view" title="Meridional cross-section — the textbook cut, Sun to one side" aria-label="Show meridional cross-section view">⊘</button>
+                <button id="polar-view" title="Polar view — down onto the north pole, noon at the top" aria-label="Show polar view">⊙</button>
+                <button id="display-settings-toggle" title="Display settings" aria-label="Display settings" aria-controls="display-settings" aria-expanded="false">⚙</button>
+              </div>
+              <!-- The legend, and nothing but the legend: one compact ramp per
+                   drawn layer with the units it is measured in. Every other
+                   thing a layer has to say is in the data viewer, which is a
+                   separate window in the opposite corner. -->
+              <section class="map-key" id="map-key" aria-label="Colour scales and units for the layers drawn on the globe" hidden>
+                <div class="map-key-head">
+                  <button type="button" class="map-key-toggle" id="map-key-toggle" aria-expanded="true" aria-controls="map-key-body">
+                    <span class="map-key-caret" aria-hidden="true"></span>
+                    <span>LEGEND</span>
+                    <strong id="map-key-count">—</strong>
+                  </button>
+                </div>
+                <div class="map-key-body" id="map-key-body">
+                  <div class="key-cards" id="key-cards"></div>
+                  <!-- Which radial scale the globe is drawn on right now. One
+                       line, always current: the legend is where a reader asks
+                       what the picture means, so this is where the picture's
+                       one geometric caveat lives. Text set by main.ts. -->
+                  <p class="map-key-scale" id="map-key-scale">Teaching scale: near-Earth heights are stretched &mdash; a 100 km layer draws where 450 km belongs &mdash; and distances past about 4,800 km are compressed; dayside shape is true; the far tail is foreshortened.</p>
+                </div>
+              </section>
+              <div class="legend" id="satellite-legend" aria-label="Satellite mission colors">
+                <span><i style="--legend:#29d4e3"></i>Weather</span>
+                <span><i style="--legend:#f5c96a"></i>SATCOM</span>
+                <span><i style="--legend:#ff7b78"></i>Missile warning / OPIR</span>
+                <span><i style="--legend:#a98cff"></i>Navigation</span>
+                <span><i style="--legend:#76e6a5"></i>Science / Earth</span>
+                <span><i style="--legend:#b9c9d3"></i>Other</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- THE SPACE WEATHER LAYERS PANEL. Its own window, in the top-right
+               of the scene, opposite the selected-satellite list in the top-left
+               and built to the same grammar: a head you can dismiss from, then
+               collapsible cards. There is no switch for it any more — it appears
+               on its own the moment a layer is drawn and disappears when the last
+               one goes off, because a reader who is plotting data has to be able
+               to see it. What it remembers is only whether the reader last left
+               it folded. Sean: "The data viewer would be its own separate
+               window probably in the top right of the screen, sort of like we
+               have for satellites when we select one." Everything that is not a
+               colour scale — derived heights, validity, mode, provenance, the
+               method essays — is in here, and nothing of it is in the legend.
+
+               IT WAS CALLED "DATA EXPLORER" UNTIL 2026-08-21. Sean: "Don't call
+               it Data Explorer. That is cheesy. Just say '# Space Weather Layers'
+               and the X on the other side." So the head is the count and the noun
+               in one line — "1 Space Weather Layer", "3 Space Weather Layers" —
+               which is the shape the satellite stack's head next door already
+               uses, "# Satellite(s) Selected", with the close button on the far
+               side. The count used to have its own chip beside the kicker;
+               printing the number twice was the thing to remove, so the chip IS
+               the title now and `#data-viewer-count` is gone. Every string a
+               reader reads or a screen reader speaks says space weather layers;
+               only the internal `data-viewer` ids keep the old stem, because
+               they are names in the code rather than words on the screen.
+
+               The cards are built from `layerOrder` in main.ts, which is exactly
+               the rail's SPACE WEATHER section — no satellite ever earns a card
+               here, in any mode, Combined included. Two of those layers are
+               arguably furniture rather than weather (Ground stations is a list
+               of antennas; `layer-regions` is hidden), which is written down for
+               Sean to rule on rather than quietly worked around. -->
+          <aside class="data-viewer is-collapsed" id="data-viewer" aria-label="Space weather layers: readings for every layer switched on" hidden data-globe-label-occluder>
+          <div class="data-viewer-head" id="data-viewer-head" role="button" tabindex="0" aria-expanded="false" aria-controls="data-viewer-body" title="Drag to move. Click to expand or collapse.">
+            <span class="data-viewer-chevron" aria-hidden="true"></span>
+            <!-- Count on the first line, WHICH LAYERS on the second.
+
+                 Sean, 2026-08-26: "when we add a layer the layer browser
+                 window starts collapsed. The window should at least start
+                 showing the collapsed layer - the name of the layer - so that
+                 people can see what is being shown." A folded panel that says
+                 only "1 Space Weather Layer" is a count with no subject: the
+                 reader can see that something is plotting and cannot see what.
+
+                 The count stays, because Sean asked for it by name five days
+                 earlier ("Just say '# Space Weather Layers' and the X on the
+                 other side"), so the names go UNDER it rather than over it.
+                 The names line is drawn only while the panel is FOLDED --
+                 opened, the cards below name every layer themselves, and this
+                 file has already retired one duplicate reading printed ten
+                 pixels above the table it summarised (`#conditions-details`).
+                 Names are joined with a middot and ellipsed if they overrun;
+                 nothing is hidden by that, because the count directly above
+                 states the total either way, and the aside's aria-label and
+                 the head's own title carry the full list. -->
+            <span class="data-viewer-heading">
+              <strong class="data-viewer-title" id="data-viewer-title">0 Space Weather Layers</strong>
+              <span class="data-viewer-layers" id="data-viewer-layers" hidden></span>
+            </span>
+            <button type="button" class="data-viewer-close" id="data-viewer-close" aria-label="Stop plotting: turn off every space weather layer and close this panel">×</button>
+          </div>
+          <div class="data-viewer-body" id="data-viewer-body">
+            <div class="data-viewer-cards" id="data-viewer-cards"></div>
+          </div>
+          <div class="data-viewer-resize" id="data-viewer-resize" aria-hidden="true"></div>
+          </aside>
+
+          <aside class="display-settings" id="display-settings" aria-labelledby="display-settings-title" hidden data-globe-label-occluder>
+            <div class="display-settings-head"><div><span class="section-kicker">APPEARANCE + PERFORMANCE</span><h2 id="display-settings-title">Display settings</h2></div><button id="display-settings-close" aria-label="Close display settings">×</button></div>
+            <span class="field-label">Rendering profile</span>
+            <fieldset class="segmented rendering-profile-control" aria-label="Rendering performance profile">
+              <button class="is-active" data-rendering-profile="auto">Auto</button><button data-rendering-profile="efficient">Efficient</button><button data-rendering-profile="quality">Quality</button>
+            </fieldset>
+            <span class="field-label">Motion rate</span>
+            <fieldset class="segmented motion-rate-control" aria-label="Display motion refresh rate">
+              <button class="is-active" data-motion-rate="adaptive">Adaptive</button><button data-motion-rate="60">60 FPS</button><button data-motion-rate="30">30 FPS</button><button data-motion-rate="20">20 FPS</button>
+            </fieldset>
+            <span class="field-label">Satellite marker size</span>
+            <fieldset class="segmented marker-size-control" aria-label="Satellite marker size">
+              <button data-marker-size="compact">Compact</button><button class="is-active" data-marker-size="standard">Standard</button><button data-marker-size="large">Large</button>
+            </fieldset>
+            <span class="field-label">Interface text size</span>
+            <fieldset class="segmented interface-scale-control" aria-label="Interface text size">
+              <button data-interface-scale="standard">Standard</button><button class="is-active" data-interface-scale="large">Large</button><button data-interface-scale="largest">Largest</button>
+            </fieldset>
+            <span class="field-label">Color satellites by</span>
+            <fieldset class="segmented color-mode-control" aria-label="Satellite color encoding">
+              <button class="is-active" data-color-mode="mission">Mission</button><button data-color-mode="constellation">Constellation</button><button data-color-mode="country">Country</button>
+            </fieldset>
+            <span class="field-label">Reference frame</span>
+            <fieldset class="segmented reference-frame-control" aria-label="Globe reference frame">
+              <button class="is-active" data-reference-frame="earth-fixed">Earth-fixed</button><button data-reference-frame="inertial">Inertial</button>
+            </fieldset>
+            <span class="field-label">Environmental fields</span>
+            <fieldset class="segmented field-rendering-control" aria-label="Environmental field rendering">
+              <button class="is-active" data-field-rendering="smooth">Smooth fields</button><button data-field-rendering="native">Native grid</button>
+            </fieldset>
+            <!-- One ruler for the whole scene, switchable, never mixed: every
+                 layer — satellites, belts, boundaries, cut planes — moves to
+                 the chosen scale together, so "is GPS inside the outer belt"
+                 stays answerable by eye on either one. -->
+            <span class="field-label">Distance scale</span>
+            <fieldset class="segmented distance-scale-control" aria-label="Radial distance scale for the whole scene">
+              <button class="is-active" data-distance-scale="teaching">Teaching scale</button><button data-distance-scale="true-distance">True distance</button>
+            </fieldset>
+            <!-- SELECTED-SATELLITE GEOMETRY. These two were on the
+                 satellite card, where they were display preferences sitting
+                 among facts about a spacecraft, and where the second of them
+                 was followed by a 90-word essay on what a footprint edge does
+                 not mean. The controls are here; the essay is going to the
+                 Learn section's footprint page, which is being built now.
+                 What stays with the control is the one-line honesty claim -
+                 the boundary is geometry, the fade is not signal strength -
+                 which is a caveat on what is drawn, not teaching. -->
+            <span class="field-label">Selected-satellite geometry</span>
+            <fieldset class="segmented geometry-mode" aria-label="Selected satellite geometry">
+              <button data-geometry="orbit">Orbit</button><button data-geometry="ground">Ground trace</button><button data-geometry="footprint">Footprint</button><button class="is-active" data-geometry="all">All</button>
+            </fieldset>
+            <div class="geometry-key" aria-label="Selected geometry colors"><span><i class="orbit"></i>Inertial orbit</span><span><i class="ground"></i>Ground trace</span><span><i class="footprint"></i>Footprint</span></div>
+            <span class="field-label">Footprint minimum elevation mask</span>
+            <fieldset class="segmented footprint-elevation-control" aria-label="Footprint minimum elevation mask angle">
+              <button class="is-active" data-footprint-elevation="0">0° · Horizon</button><button data-footprint-elevation="5">5°</button><button data-footprint-elevation="10">10°</button>
+            </fieldset>
+            <p class="display-settings-note geometry-note" id="satellite-geometry-scale-note">Earth hides the back side of the cyan orbit. The red trace follows the rotating Earth; radial distance is compressed.</p>
+            <p class="display-settings-note geometry-note" id="footprint-elevation-note">The yellow boundary is real geometry: where the satellite is above the horizon (0° elevation). The fade inside it is a visual aid, not signal strength.</p>
+            <div class="display-option-list">
+              <label><input type="checkbox" id="display-stars" /><span><strong>Star field</strong><small>Decorative background points</small></span></label>
+              <label><input type="checkbox" id="display-environment-motion" checked /><span><strong>Environmental motion</strong><small>Animate model frames and flow glyphs</small></span></label>
+              <label><input type="checkbox" id="display-satellite-labels" checked /><span><strong>Hover labels</strong><small>Name and origin on hover/selection</small></span></label>
+            </div>
+            <p class="display-profile-status" id="display-profile-status">AUTO · selecting safe settings…</p>
+            <p class="display-settings-note" id="reference-frame-note">Earth-fixed keeps geography stationary. Motion rate changes screen redraw frequency, not the ephemeris or environmental data.</p>
+          </aside>
+
+          <aside class="satellite-stack" id="satellite-stack" hidden aria-label="Selected satellite" data-globe-label-occluder>
+            <!-- ONE SPACECRAFT, ONE CARD, AND NOTHING ABOVE IT.
+
+                 Sean, 2026-08-28: "no multiple satellites selected. also - i
+                 want that changed on desktop too. having multiple satellites in
+                 the viewer overlay is just too cumbersome. one at a time. that
+                 lets you get rid of the 'x # satellites selected' line at the
+                 top with the X, as well as the View Selected, View All, Clear
+                 Selected line. you'll just have the card for the satellite. the
+                 favorite button is still there, and the X just removes the
+                 plotted orbit and footprint and closes the card."
+
+                 Three controls left this panel, and not one of them was
+                 replaced by a smaller version of itself:
+
+                 - "# Satellite(s) Selected" counted a list. There is no list,
+                   and a count that can only ever read 1 is not a fact.
+                 - The X beside it cleared every selection at once. With one
+                   selection the card's own X already IS that gesture, so the
+                   panel would have carried the same action twice, 40 px apart.
+                 - View Selected / View All / Clear Selected chose which of
+                   several pinned spacecraft to plot, and emptied the list. One
+                   spacecraft cannot be scoped against itself.
+
+                 What is left is the card, and the card keeps both of its own
+                 buttons: the STAR, which outlives the card and always did -
+                 closing a card has never un-starred anything - and the X, which
+                 drops the orbit, the ground trace and the footprint, closes the
+                 card, and leaves the star alone.
+
+                 The deleted head bar was also the panel's DRAG HANDLE. Rather
+                 than keep it as an empty grab rail - which would put back the
+                 row Sean asked to delete - the handle moved onto the head the
+                 card already has. See `bindCardDragHandle` in main.ts. -->
+            <div class="stack-cards" id="satellite-stack-cards" aria-live="polite"></div>
+            <!-- THE BOTTOM EDGE, AND THE READER'S HAND ON IT.
+
+                 Sean, 2026-08-30: "on mobile the satellite data card/window
+                 still can't be resized." It never could. This panel has never
+                 carried a resize handle at any width - only a drag handle, and
+                 that one is switched off below 600 px - so this is the control
+                 arriving rather than a repair.
+
+                 PHONE ONLY, and it is `display: none` everywhere else, because
+                 what it offers is meaningless on a desktop: there the panel
+                 already floats, drags and sizes itself to its contents. Here it
+                 is a sheet pinned to both side gutters and hung from the top of
+                 the scene, so the ONE thing the reader can usefully change is
+                 how much of the screen it takes from the globe - which is the
+                 bottom edge, and nothing else.
+
+                 A `separator` with a tabindex is the ARIA window-splitter, so
+                 the arrow keys, Home and End work it as well as a thumb does,
+                 and `aria-valuenow` is written by the same function that writes
+                 the height. See `bindStackSizeGrip` in main.ts. -->
+            <div class="stack-size-grip" id="satellite-stack-size" role="separator"
+                 aria-orientation="horizontal" tabindex="0"
+                 aria-label="Resize the satellite card"
+                 aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"></div>
+          </aside>
+
+          <!-- The probe: a number about a place, which is the second of this
+               site's three containers. The rail answers "what does this field
+               look like over the whole globe" and is capped; this answers "what
+               is it over HERE", and it can carry as much detail as a question
+               deserves because it is only on screen when somebody clicked. The
+               vertical profile lives here because nested shells hide each other
+               from outside and no colour scale fixes that — the column is the
+               honest way to read a 3-D field at a point. -->
+          <aside class="probe-panel" id="probe-panel" hidden aria-label="Vertical ionosphere profile over the selected point" data-globe-label-occluder>
+            <div class="probe-head">
+              <div>
+                <span class="section-kicker">PROBE</span>
+                <strong id="probe-place">—</strong>
+              </div>
+              <button type="button" class="probe-close" id="probe-close" aria-label="Close the probe">×</button>
+            </div>
+            <p class="probe-status" id="probe-status" hidden></p>
+            <!-- The column is a 19 MB artifact. A stray click on the globe must
+                 not spend that on someone's phone, so when the ionosphere layer
+                 is off the probe asks first and says what it costs. -->
+            <button type="button" class="link-button" id="probe-load" hidden>Load the ionosphere column (19 MB) →</button>
+            <div class="probe-body" id="probe-body">
+              <!-- The measured layer structure, and it comes FIRST.
+
+                   It used to sit under the density curve, below the fold of a
+                   460 px panel, so a reader who went looking for the four
+                   layers had to scroll past a chart to reach them. Backwards
+                   twice over: this is the thing that was asked for by name, and
+                   it is the half that renders without the 19 MB column. main.ts
+                   has always drawn it first and independently of that column;
+                   the markup now agrees with the code.
+
+                   The measured layer structure.
+                   The site's operational field resolves D and F2 and genuinely
+                   does not resolve E or F1 — measured, not assumed: the E
+                   ledge's median prominence above the E–F valley is 0.02 dex on
+                   a 5.6-decade scale, and on the DAYSIDE it is negative. So the
+                   four-layer structure the reader asked for is assembled here
+                   instead: a Chapman shape whose strength comes from soundings
+                   taken in the last three hours, above the empirical D region
+                   and below NOAA's modelled F2. It is badged COMPOSITE because
+                   it is neither a measurement nor a single model, and every
+                   layer states its own source. -->
+              <section class="probe-layers" id="probe-layers" hidden aria-labelledby="probe-layers-title">
+                <h3 class="probe-layers-title" id="probe-layers-title">Layer structure <span class="layer-status composite">COMPOSITE</span></h3>
+                <p class="probe-station" id="probe-station"></p>
+                <svg class="probe-ladder" id="probe-ladder" viewBox="0 0 232 168" role="img" aria-labelledby="probe-ladder-caption"></svg>
+                <figcaption class="probe-note" id="probe-ladder-caption">Bar length is the critical frequency; a faint bar is a layer with no sounding near this point.</figcaption>
+                <ul class="probe-layer-list" id="probe-layer-list"></ul>
+                <p class="probe-note" id="probe-composite-evidence"></p>
+                <details class="probe-limits">
+                  <summary>What the layer structure does not cover</summary>
+                  <p class="probe-note" id="probe-sounding-evidence"></p>
+                  <p class="probe-note" id="probe-network-note"></p>
+                  <p class="probe-note" id="probe-composite-limit"></p>
+                </details>
+              </section>
+              <!-- Everything that needs the 19 MB WAM-IPE column is inside this
+                   wrapper, so the measured layer structure ABOVE it can render
+                   without it. The soundings artifact is 9 KB; making a reader
+                   spend 19 MB to see four measured critical frequencies would
+                   be a cost with no reason behind it. -->
+              <div id="probe-model-section">
+              <figure class="probe-figure">
+                <svg id="probe-chart" class="probe-chart" viewBox="0 0 220 240" role="img" aria-labelledby="probe-chart-title"></svg>
+                <figcaption id="probe-chart-title">Electron density against altitude over this point.</figcaption>
+              </figure>
+              <div class="fact-grid" id="probe-readings"></div>
+              <label class="probe-path" for="probe-range">
+                <span>Path length for the usable frequency</span>
+                <select id="probe-range">
+                  <option value="0">Vertical (0 km)</option>
+                  <option value="500">500 km hop</option>
+                  <option value="1000" selected>1,000 km hop</option>
+                  <option value="2000">2,000 km hop</option>
+                  <option value="3000">3,000 km hop</option>
+                </select>
+              </label>
+              <p class="probe-note" id="probe-evidence"></p>
+              <details class="probe-limits">
+                <summary>What these numbers do not cover</summary>
+                <p class="probe-note" id="probe-muf-limit"></p>
+                <p class="probe-note" id="probe-column-limit"></p>
+                <p class="probe-note" id="probe-field-limit"></p>
+              </details>
+              </div>
+            </div>
+          </aside>
+
+
+          <template id="satellite-card-template">
+            <article class="sat-card" data-sat-card>
+              <!-- THE FIRST LINE, AND IT HOLDS ITS SHAPE. Sean: the +/- must
+                   stay in the same position regardless of name length. The
+                   expander, the star and the close are fixed columns pinned to
+                   the TOP of the row, so "EUTE HOT BIRD 13B (HB 8)" wraps
+                   underneath them instead of dragging them down the card. -->
+              <div class="sat-card-head">
+                <button type="button" class="sat-card-toggle" data-card-toggle aria-expanded="true">
+                  <span class="sat-card-chevron" aria-hidden="true">&minus;</span>
+                  <strong data-card-name>&mdash;</strong>
+                </button>
+                <!-- Star first, then close: keeping the object and dismissing
+                     the card are different enough to sit apart, and the star
+                     is the one that persists past this visit. -->
+                <button type="button" class="favorite-star" data-card-favorite aria-pressed="false" aria-label="Star this satellite">&#9734;</button>
+                <button type="button" class="sat-card-remove" data-card-remove aria-label="Remove this satellite from the list">&times;</button>
+                <!-- WHAT IT IS AND WHO FLIES IT, as chips, in the same
+                     `.layer-status` evidence component the space-weather
+                     overlays stamp themselves with. A filled chip means the
+                     label is tied to THIS object; a dashed, dimmed chip with an
+                     ASTERISK means it is claimed but not corroborated against
+                     this spacecraft. The asterisk is a footnote mark and it has
+                     a footnote: "Data Source" below names it
+                     in its own summary and explains it in words, and the mark
+                     itself is a button that goes there. An unknown value gets NO
+                     chip - never a chip reading "unknown". -->
+                <div class="sat-card-chips" data-card-chips></div>
+                <!-- How the object is NAMED, beside its name. NORAD is the
+                     working identifier for this audience - it is what you type
+                     into a tracking tool - and COSPAR is how a launch is cited. -->
+                <p class="sat-card-identity" data-card-identity></p>
+              </div>
+              <div class="sat-card-body" data-card-body>
+                <!-- SATELLITE DETAILS: who runs it, then where it is, then when
+                     it launched, in one grid. It used to be two folds - "Where
+                     it is" and "What it is and who runs it" - which made a
+                     reader open two things to answer one question, and the
+                     second of those headings was, in the owner's words, "really
+                     dumb". The section ends with the two full-width actions -
+                     the 2-D ground-track map, then the OMM download; the orbit
+                     archive is not one of them, because it belongs beside the
+                     launch date (see below). -->
+                <details class="card-section" data-card-section="details" open>
+                  <summary>Satellite Details</summary>
+                  <!-- NOTHING BUT FACTS IN THE FACT GRID. The orbit archive
+                       spent 2026-08-21 to 08-27 as a CELL of this grid, beside
+                       the launch date, because it continues the story the
+                       launch date starts. It was a real improvement on the blue
+                       button it replaced and it cost the grid its shape: the
+                       cell held a control with an arrow and a sentence, so it
+                       never sat like the tabular values beside it, and the row
+                       it forced left a visible hole in the column of blue
+                       readings. Sean, on STARLINK-11600: "see how the grid of
+                       blue text values has sort of a gap in it? I wonder if we
+                       can move the orbit history back down to its own box,
+                       below where it is, in the same style as the other two
+                       boxes ... and then reshuffle so that there are 2 columns
+                       of 3 rows without a gap."
+
+                       So the grid is facts only, and every action this section
+                       offers is one of the three matched boxes below it. -->
+                  <div class="fact-grid" data-card-details></div>
+                  <!-- WHO TALKS TO IT FROM THE GROUND. This moved here when the
+                       "Ground Data" fold was removed; it is hidden whenever no
+                       operator has published a link for the object, so absence
+                       looks like ordinary absence rather than a "no known
+                       stations" finding this site is in no position to make. -->
+                  <div class="station-links" data-card-station-block hidden>
+                    <div data-card-stations></div>
+                  </div>
+                  <!-- THE THREE FULL-WIDTH ACTIONS, AS A SET. The 2-D map used
+                       to be the only thing inside a fold called "Ground Data" -
+                       one heading, one disclosure triangle and one line of shut
+                       fold to reach one button. Sean asked for it directly above
+                       the OMM download and set like it; the orbit archive joined
+                       them at the top on 2026-08-27. All three wear the same box
+                       and the same centred label, so they read as one set of
+                       actions on the same object rather than leftovers in
+                       different places. -->
+                  <div class="card-actions">
+                    <!-- THE ORBIT ARCHIVE, FIRST OF THE THREE. Sean placed it:
+                         "we just move it down to its own box like we had it
+                         before, right between the grid of values and the 2d
+                         ground track box". It is first because it is the only
+                         one of the three that is about THIS spacecraft's own
+                         past; the other two are a different view of where it is
+                         now and an export of the elements it is propagated
+                         from.
+
+                         The box says what the archive holds for this object
+                         when the browser already knows, and says nothing about
+                         a count when it does not. The shard is about 25 MB and
+                         is never fetched to draw a card, so the four states are
+                         four different sentences and NONE of them is a guessed
+                         number - `renderOrbitHistoryFact` in main.ts is the
+                         whole list, and the button's aria-label always names
+                         the state verbatim. Hidden entirely when the release
+                         published no archive at all, and `.card-actions >
+                         [hidden]` takes the box out of the stack with it. -->
+                    <button type="button" class="ground-track-open orbit-history-open" data-card-orbit-history hidden>Open orbit history<span class="orbit-history-state" data-card-orbit-history-value></span> &rarr;</button>
+                    <button type="button" class="ground-track-open" data-card-ground-track>Open 2D ground-track map &rarr;</button>
+                    <button type="button" class="data-export" data-card-export>Download OMM + derived orbit JSON</button>
+                  </div>
+                </details>
+                <!-- SATELLITE BACKGROUND: the published description, whole.
+                     The nested fold under the lead sentence is gone: the
+                     prose has its own section now, and hiding two sentences
+                     behind a disclosure that had to be discovered earned
+                     nothing. Sean, on Suomi NPP, whose fold held one clause:
+                     "the drop down is incredibly short". The section is absent entirely for the 2,451
+                     objects whose only "description" is this site's own
+                     generated hedge, which the category chip now carries. -->
+                <details class="card-section" data-card-section="background" hidden>
+                  <summary>Satellite Background</summary>
+                  <!-- AT MOST TWO PARAGRAPHS, and the second one is filled from
+                       two different places that can never both apply: the
+                       shortened opening's own second paragraph, or the
+                       researched paragraph about this object's FLEET. Sean,
+                       2026-08-27: "max 2 paragraphs, and max just a few lines
+                       per paragraph ... with a max of maybe 6-8 lines", and "I
+                       definitely don't want it to get crowded and crazy".
+                       `renderBackgroundSection` builds the list and refuses to
+                       print a third. -->
+                  <p class="satellite-purpose" data-card-purpose></p>
+                  <p class="satellite-purpose" data-card-purpose-second hidden></p>
+                  <p class="satellite-purpose-source" data-card-purpose-source hidden></p>
+                  <!-- NOTHING RESEARCHED IS DELETED. Where the published
+                       description was too long for the card, the paragraphs
+                       above are a shortened opening and this holds the whole
+                       thing. The lead/rest fold was removed from this card in
+                       August after Sean said of a two-sentence one, "the drop
+                       down is incredibly short" -- and he was right about that
+                       one. This is the opposite case and the reason the fold
+                       is back: what is behind it is up to 2,425 characters,
+                       which is the wall it exists to keep off the card face.
+                       It is absent entirely unless there is a real remainder. -->
+                  <details class="purpose-more" data-card-purpose-more hidden>
+                    <summary data-card-purpose-more-summary>Read the full description</summary>
+                    <p class="satellite-purpose satellite-purpose--rest" data-card-purpose-rest></p>
+                  </details>
+                  <!-- The fleet paragraph's OWN citation, which is a different
+                       page from the one behind the sentence above it. Two
+                       paragraphs from two sources sharing one Source link is
+                       how a card starts vouching for something nobody checked.
+                       The member count beside it is computed by
+                       build_release.py from the retained catalog and is never
+                       written into the paragraph. -->
+                  <p class="satellite-purpose-source" data-card-fleet-source hidden></p>
+                </details>
+                <!-- PROVENANCE ONLY: which elements, how old, from whom, and -
+                     the row this redesign added - what kind of evidence put the
+                     category chip on this card, in words. The chip states the
+                     strength at a glance; this states the mechanism. -->
+                <details class="card-section" data-card-section="ephemeris">
+                  <summary>Data Sources</summary>
+                  <dl class="ephemeris" data-card-ephemeris></dl>
+                </details>
+              </div>
+            </article>
+          </template>
+
+          <!-- One of these per layer switched on, inside the data viewer. It is
+               deliberately the same shape as the satellite card above: name,
+               class line, one sentence, then sections the reader opens when
+               they want the numbers, the validity, or where it came from. -->
+          <!-- The four "how this is built" notes. They are provenance, not a
+               control, so they no longer sit in the rail; the data viewer reads
+               whichever one belongs to the layer it is drawing. They live here
+               rather than inside a viewer card because main.ts keeps their text
+               current by id from every model load, failure and frame change,
+               while the cards themselves are rebuilt on every environment tick. -->
+          <div class="layer-method-notes" hidden>
+            <p class="model-control-note" id="ionosphere-model-note">F2 geometry follows NOAA HmF2 every five minutes and color follows NmF2. E/F1 surfaces require a distinct 3-D profile peak. Below WAM's 90 km boundary, an explicitly empirical Wait–Spies D-region surface responds to solar zenith and GOES X-ray flux.</p>
+            <p class="model-control-note" id="aurora-note">Loads the exact rolling NOAA probability artifact on demand; no image reconstruction or stale timeline hold.</p>
+            <p class="model-control-note" id="geospace-note">Large NOAA model output is reduced on bigmem-PC, then this compact sequence is animated in your browser.</p>
+            <p class="model-control-note" id="drap-note">Loads exact rolling NOAA numeric frames on demand; unavailable timeline periods remain blank.</p>
+          </div>
+
+          <!-- EVERY PER-LAYER CONTROL, kept out of the rail.
+
+               Sean: "The last screenshot shows a ton of nested data and
+               selection options within the right-hand panel - not what I
+               asked for. That should all be in the data viewer." A layer row
+               in the rail is now a toggle, a name, a badge and one line, and
+               nothing else; everything that used to fold out underneath one
+               lives here until the data viewer claims it for that layer's
+               card.
+
+               They are written here rather than built in JavaScript because
+               main.ts binds all of them by id at startup, and because moving
+               a node preserves its listeners while re-creating one would not.
+               The same arrangement the satellite geometry block already
+               uses: one copy, moved to wherever it is currently wanted. -->
+          <div class="layer-control-panels" id="layer-control-panels" hidden>
+            <div class="layer-panel" data-layer-panel="thermosphere">
+              <div class="ionosphere-subcontrols" id="thermosphere-subcontrols" aria-hidden="true">
+                <div class="ionosphere-subcontrols-inner">
+                  <label class="compact-select" for="thermosphere-level"><span>Air density to follow</span><select id="thermosphere-level"><option value="1e-11">1&times;10&minus;&sup1;&sup1; kg m&minus;&sup3; &mdash; lower thermosphere</option><option value="1e-12" selected>1&times;10&minus;&sup1;&sup2; kg m&minus;&sup3; &mdash; the LEO drag shell</option><option value="1e-13">1&times;10&minus;&sup1;&sup3; kg m&minus;&sup3; &mdash; upper thermosphere</option></select></label>
+                </div>
+              </div>
+            </div>
+            <!-- The ionosphere's own settings: which of its four named
+                 regions to draw, and the door to the vertical profile.
+
+                 These replace an altitude-band dropdown that offered the same
+                 slices as kilometre pairs. Four switches say the region's NAME
+                 rather than a number range the reader has to already know how
+                 to read, and they can express what one contiguous window never
+                 could: D and F2 together with the heights between them empty,
+                 which is the picture that shows how far apart the absorbing
+                 bottom and the reflecting top of this thing sit.
+
+                 All four start ON. They are the substance of the layer, not an
+                 annotation over it, so all-off would open the ionosphere as an
+                 empty sky; this is an ISOLATE control, not a reveal one, and
+                 with every box ticked the picture is exactly what this layer
+                 has always opened on. The badge on each row is the evidence
+                 class of what is DRAWN in that band, which is why D reads
+                 EMPIRICAL and the three above it read MODEL - and why the D
+                 band is painted in a different palette. Each region's own
+                 strength, measured, is in the vertical profile. -->
+            <div class="layer-panel" data-layer-panel="ionosphere">
+              <div class="ionosphere-subcontrols" id="ionosphere-subcontrols" aria-hidden="true">
+                <div class="ionosphere-subcontrols-inner">
+                  <span class="field-label">Regions drawn</span>
+                  <label class="layer-control layer-subcontrol"><input type="checkbox" id="ionosphere-region-d" checked /><span><strong>D region &middot; 60&ndash;90 km <em class="layer-status empirical">EMPIRICAL</em></strong><small>The warm band at the bottom. A Wait&ndash;Spies profile driven by the sun&rsquo;s angle and the measured GOES X-ray flux &mdash; the only one of the four that is not the model. Its fit stops at 85 km and the model grid starts at 90, so the 5 km between is drawn as nothing.</small></span></label>
+                  <label class="layer-control layer-subcontrol"><input type="checkbox" id="ionosphere-region-e" checked /><span><strong>E region &middot; 90&ndash;150 km <em class="layer-status model">MODEL</em></strong><small>WAM-IPE at E-region heights. The model resolves no distinct E peak here; the E layer&rsquo;s own strength comes from soundings, in the profile.</small></span></label>
+                  <label class="layer-control layer-subcontrol"><input type="checkbox" id="ionosphere-region-f1" checked /><span><strong>F1 region &middot; 150&ndash;200 km <em class="layer-status model">MODEL</em></strong><small>WAM-IPE at F1 heights. An F1 layer exists only in strong daylight, and whether there is one over a given place is a question the profile answers.</small></span></label>
+                  <label class="layer-control layer-subcontrol"><input type="checkbox" id="ionosphere-region-f2" checked /><span><strong>F2 region &middot; 200 km and above <em class="layer-status model">MODEL</em></strong><small>The peak and the whole topside out to 2,655 km. This is the region WAM-IPE genuinely resolves, and the brightest thing in the picture.</small></span></label>
+                  <!-- The door to the profile. The four-region altitude ladder
+                       has existed and been tested for a while and was reachable
+                       only by clicking bare globe, which nobody discovers. -->
+                  <button type="button" class="link-button ionosphere-profile-pick" id="ionosphere-profile-pick" aria-pressed="false">Show a vertical profile &rarr;</button>
+                  <p class="ionosphere-profile-hint" id="ionosphere-profile-hint" hidden role="status">Click a point on Earth to profile it. Press Escape to cancel.</p>
+                </div>
+              </div>
+            </div>
+            <div class="layer-panel" data-layer-panel="tec"></div>
+            <div class="layer-panel" data-layer-panel="aurora">
+              <div class="aurora-subcontrols" id="aurora-subcontrols" aria-hidden="true">
+                <div class="aurora-subcontrols-inner"></div>
+              </div>
+            </div>
+            <div class="layer-panel" data-layer-panel="plasmasphere"></div>
+            <!-- The ring-current illustration's one setting. It is a physical
+                 choice, not a display option: the last closed drift path moves
+                 with energy, which is the whole teaching point of the layer,
+                 so changing this moves the dashed boundary and re-colours
+                 every path. Quoted at L 8 because that is where the drawn
+                 domain meets the inner edge of the plasma sheet, which is
+                 where storm-time injection delivers ions from. -->
+            <div class="layer-panel" data-layer-panel="ringCurrent">
+              <div data-model-control="ring-current">
+                <span class="field-label">Plasma-sheet ion followed</span>
+                <fieldset class="segmented ring-current-energy-control" aria-label="Ring-current illustration ion energy">
+                  <button data-ring-current-energy="3" title="A cool plasma-sheet ion. Its gradient drift is weak, so convection carries it much deeper before it turns.">3 keV at L 8</button><button class="is-active" data-ring-current-energy="10" title="A typical injected plasma-sheet ion, and the one the layer opens on.">10 keV at L 8</button><button data-ring-current-energy="30" title="A hot injected ion. Its gradient drift is strong enough to close its path much further out.">30 keV at L 8</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="layer-panel" data-layer-panel="solarWind"></div>
+            <div class="layer-panel" data-layer-panel="photons"></div>
+            <!-- The magnetosphere layer's own settings: which published field
+                 is coloured, which cut plane is shown, then the optional
+                 overlays. The projected B and U lines are real BATS-R-US
+                 output — a different quantity, not annotation — but they are
+                 line art over the very colours the layer exists to show, so
+                 they are one click away rather than on by default. The two
+                 boundary sets are annotation in the strict sense: "this is
+                 where a model puts the boundary", drawn thin over the field
+                 for comparison, never standing in for it. The polar cusps join
+                 them: they used to be drawn unconditionally, the owner read the
+                 two orange funnels as a bow shock, and a correction the reader
+                 has to be looking for is worse than a picture with one fewer
+                 thing in it. All five start off: the default picture is the
+                 field alone. -->
+            <div class="layer-panel" data-layer-panel="geospace">
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="geospace-mhd-cut" /><span><strong>NOAA MHD cross-section <em class="layer-status model">NOAA MODEL</em></strong><small>The published BATS-R-US cut, as a slice through the scene. 2.7&nbsp;MB on first use.</small></span></label>
+              <div data-model-control="field">
+                <span class="field-label">Plasma field</span>
+                <fieldset class="segmented model-field-control" aria-label="Geospace model field">
+                  <button class="is-active" data-model-field="density">Density</button><button data-model-field="speed">Speed</button><button data-model-field="pressure">Pressure</button><button data-model-field="magneticField">|B|</button>
+                </fieldset>
+              </div>
+              <div data-model-control="plane">
+                <span class="field-label">Model cut plane</span>
+                <fieldset class="segmented model-plane-control" aria-label="Geospace model cut plane">
+                  <button class="is-active" data-model-plane="meridional">Meridional</button><button data-model-plane="equatorial">Equatorial</button><button data-model-plane="both">Both</button>
+                </fieldset>
+              </div>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="geospace-field-lines" /><span><strong>Magnetic field lines — projected B <em class="layer-status model">NOAA MODEL</em></strong><small>The model's in-plane magnetic vectors.</small></span></label>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="geospace-flow-lines" /><span><strong>Solar-wind flow — projected U + tracers <em class="layer-status model">NOAA MODEL</em></strong><small>The model's in-plane bulk-flow lines, with tracers at its own local speed.</small></span></label>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="annotate-extracted-boundaries" /><span><strong>Annotation: extracted boundary curves <em class="layer-status model">MODEL-DERIVED</em></strong><small>Bow-shock and magnetopause-proxy curves read off these same cuts.</small></span></label>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="annotate-empirical-boundaries" /><span><strong>Annotation: empirical boundary models <em class="layer-status empirical">EMPIRICAL</em></strong><small>Shue 1998, Nguyen 2022 and Lin 2010 crossing fits, from the live IMF and tilt.</small></span></label>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="annotate-polar-cusps" /><span><strong>Annotation: polar cusps <em class="layer-status empirical">EMPIRICAL</em></strong><small>Two amber funnels over the poles: the one way in on the dayside. Not a bow shock. Off until you ask for them; remembered after that.</small></span></label>
+              <label class="layer-control layer-subcontrol"><input type="checkbox" id="magnetopause-cut" /><span><strong>Cut the empirical surfaces open</strong><small>Profile curves in two planes instead of a closed shell.</small></span></label>
+            </div>
+            <!-- One control, and it is the one that teaches: which cut the
+                 derived beta field is drawn on. Meridional is the default
+                 because the plasma sheet is a thin sheet seen edge-on there.
+                 The equatorial option is kept precisely because a tilted
+                 dipole usually puts the sheet ABOVE z = 0, so the equatorial
+                 cut shows the lobe — the card measures that and says so
+                 rather than leaving the reader to assume otherwise. -->
+            <div class="layer-panel" data-layer-panel="plasmaSheet">
+              <div data-model-control="plasma-sheet-plane">
+                <span class="field-label">β cut plane</span>
+              </div>
+            </div>
+            <div class="layer-panel" data-layer-panel="radiation">
+              <div class="model-subcontrols" id="model-subcontrols" aria-hidden="true">
+                <div class="model-subcontrols-inner">
+                  <div data-model-control="radiation">
+                    <span class="field-label">RBE presentation</span>
+                    <fieldset class="segmented radiation-view-control" aria-label="Radiation belt presentation">
+                      <button data-radiation-view="nativeEquatorial" aria-pressed="false" title="The NOAA source grid exactly as published: a flat slice through the magnetic equator. It is 2-D because the data is.">Source slice (flat 2-D)</button><button class="is-active" data-radiation-view="dipoleMapped3d" aria-pressed="true" title="The same flux mapped along dipole field lines into a volume, then rendered by opacity, so the belts and the slot between them emerge from the field.">Dipole-mapped volume (3-D)</button>
+                    </fieldset>
+                    <span class="field-label">RBE electron energy</span>
+                    <fieldset class="segmented radiation-energy-control" aria-label="Radiation belt electron energy">
+                      <button data-radiation-energy="88.349">88 keV</button><button data-radiation-energy="452.75">453 keV</button><button data-radiation-energy="1345.7">1.35 MeV</button><button data-radiation-energy="2320.1">2.32 MeV</button><button class="is-active" data-radiation-energy="-1" title="The view the layer opens on. Every published channel at once: the energy-weighted trapezoidal integral over the 88 keV to 2.32 MeV band, divided by the band width, so it stays on the same colour scale as a single channel.">All energies (combined)</button>
+                    </fieldset>
+                    <label class="compact-select radiation-pitch-row" for="radiation-pitch-select"><span>Pitch presentation</span><select id="radiation-pitch-select" aria-label="Radiation belt pitch presentation" disabled><option>Load model…</option></select></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layer-panel" data-layer-panel="regions"></div>
+            <div class="layer-panel" data-layer-panel="drap"></div>
+            <div class="layer-panel" data-layer-panel="groundStations">
+              <!-- One control, and it is the honest one: which spacecraft the
+                   pass and dwell figures are computed for. It is filled from
+                   the visitor's own selection rather than offering the catalog
+                   again, because a station-to-spacecraft pairing this site
+                   invents is exactly what the station module refuses to do. -->
+              <button type="button" class="ground-track-open" id="ground-station-clear" hidden>Clear the selected station</button>
+            </div>
+          </div>
+
+
+          <template id="layer-card-template">
+            <article class="sat-card data-card" data-layer-card>
+              <!-- The evidence badge sits in the HEAD, beside the name, not in
+                   the body. Cards fold to this row when more than one layer is
+                   on, and a folded card must still say what class of thing it
+                   is drawing: ILLUSTRATION and MODEL cannot be collapsed out of
+                   view. `.layer-status` is the stylesheet's one documented
+                   exception to the tracked-uppercase-mono rule; the evidence
+                   class is put on it by fillLayerCard. -->
+              <div class="sat-card-head">
+                <button type="button" class="sat-card-toggle" data-card-toggle aria-expanded="true">
+                  <span class="sat-card-chevron" aria-hidden="true">−</span>
+                  <strong data-card-name>—</strong>
+                </button>
+                <em class="layer-status" data-card-mission></em>
+              </div>
+              <div class="sat-card-body" data-card-body>
+                <p class="satellite-purpose" data-card-purpose></p>
+                <!-- Where the clock went, when this layer asked for it to be
+                     moved so that it had a published frame to draw. Written by
+                     fillLayerCard from `coverageLandingNotice`, and empty (and
+                     hidden) for every layer that did not move anybody's clock.
+                     It was in the legend until 2026-08-27, and it is a
+                     four-line explanation of STATE rather than a key to
+                     anything drawn, which is why it is here instead. -->
+                <p class="card-clock-note" data-card-landed hidden></p>
+                <!-- WHAT IS DRAWN, in the colours it is drawn in. Built by
+                     fillLayerCard from the spec's `marks`, and empty for every
+                     layer whose whole picture is on its colour ramp. It is
+                     outside the fold below on purpose: "what is that orange
+                     thing" is asked while looking at the orange thing, and the
+                     layer that forced this — the magnetosphere, whose two amber
+                     cusp funnels the owner read as bow shocks — had the answer
+                     buried four sentences into the folded half of the note. -->
+                <ul class="card-marks" data-card-marks hidden></ul>
+                <details class="purpose-more" data-card-purpose-more hidden>
+                  <summary>More about this description</summary>
+                  <p class="satellite-purpose satellite-purpose--rest" data-card-purpose-rest></p>
+                </details>
+                <details class="card-section" data-card-section="readings" open>
+                  <summary>Layer readings</summary>
+                  <div class="fact-grid" data-card-readings></div>
+                </details>
+                <!-- The layer's own settings, below the readings and folded.
+                     They used to sit above them and open, on the reasoning that
+                     changing a control changes every number under it — true,
+                     but it put a thirteen-switch panel between the reader and
+                     the one number they came for. The reader came for the
+                     reading; a control is something they go looking for, and
+                     the caret on this layer's row in the rail opens it
+                     directly. The slot is empty for the layers that have
+                     nothing to set, and the section hides itself then. -->
+                <details class="card-section" data-card-section="controls" data-card-controls>
+                  <summary>Layer settings</summary>
+                  <div data-card-controls-slot></div>
+                </details>
+                <details class="card-section" data-card-section="validity">
+                  <summary>Validity and coverage</summary>
+                  <div class="fact-grid" data-card-validity></div>
+                </details>
+                <details class="card-section" data-card-section="provenance">
+                  <summary>Source and method</summary>
+                  <dl class="ephemeris" data-card-provenance></dl>
+                  <!-- The layer's essay is NOT here. It is one click away on
+                       the Data & methods page, where the long-form science
+                       lives for every layer at once. The operational panel
+                       keeps the view, the legend and this link; a reader who
+                       wants the derivation goes and reads it. The button is
+                       bound in layerCard(), not by the startup [data-view]
+                       sweep — a cloned template's nodes never existed in the
+                       document when that sweep ran. -->
+                  <button type="button" class="link-button" data-card-build-link hidden></button>
+                </details>
+              </div>
+            </article>
+          </template>
+
+        </section>
+
+        <!-- THE TWO TABS ON THE RIGHT EDGE, on desktop.
+             Sean, 2026-08-28: "on desktop, i want the rails for satellites and
+             space weather to be two tabs on the right that if clicked expand
+             the rail and if clicked again collapse it, where the site starts
+             with them collapsed and you can click the tab and it pulls the
+             rail out."
+
+             So the rail is no longer a permanent 390 px column. It is a drawer
+             behind two tabs, and the globe - the reason anyone opened this
+             site - has the whole width on arrival. Only one rail is out at a
+             time: the tabs are the same two doors the phone already carries at
+             the top of the page, so one control vocabulary covers both
+             surfaces and `syncRailTabs()` in main.ts draws both from one field.
+
+             This strip is a grid COLUMN of .workspace, not something floating
+             over the scene. The scene-shell is the offset parent for every
+             window that opens over the globe and their drag clamps are
+             measured from its box, so a tab strip drawn on top of it would
+             have let a dragged card come to rest underneath the tabs. As a
+             column it takes its own width out of the scene instead.
+
+             Each tab is a real button with aria-expanded and a focus ring, and
+             the rail is `visibility: hidden` while collapsed rather than merely
+             zero-width - that is what keeps its controls out of the tab order
+             and out of the accessibility tree while the drawer is shut. -->
+        <div class="rail-tabs" id="rail-tabs" role="group" aria-label="Explorer rails">
+          <button type="button" class="rail-tab" id="rail-tab-satellites" data-rail-tab="satellites" aria-controls="control-rail" aria-expanded="false">Satellites</button>
+          <button type="button" class="rail-tab" id="rail-tab-environment" data-rail-tab="environment" aria-controls="control-rail" aria-expanded="false">Space weather</button>
+        </div>
+
+        <aside id="control-rail" class="control-rail" aria-label="Explorer controls">
+          <div class="rail-handle" aria-hidden="true"></div>
+          <!-- WHAT IS HAPPENING RIGHT NOW, in the rail, UNDER SPACE WEATHER.
+
+               THERE IS NO EXPLORER MODE. The heading and its
+               Satellites / Space weather / Combined control stood here until
+               2026-08-28. Sean: "get rid of the Explorer Mode and
+               Satellite/Space Weather/Combined stuff on the mobile and on
+               desktop version. the contents in those take up the entire panel
+               and it doesn't make sense to have it anymore" - and, on what
+               replaces it: "no combined on either. if you plot an environment
+               layer, it shows up and persists until you X out the layer in the
+               viewer, even if you go back to the satellite panel. same for
+               satellites."
+
+               So what Combined used to do is the only behaviour there is, and
+               it is no longer a state anything can leave: no section in this
+               rail is `hidden` at load, and nothing in here erases, clears or
+               redraws another section's work.
+
+               `data-mode-panel` is left on the sections but nothing reads it
+               any longer: `setMode` was its only reader and it is deleted, and
+               the rail groups its sections by `data-rail-panel` now. It is
+               dead markup awaiting the rail's own sweep, and it can no longer
+               hide anything.
+
+               It was the first thing inside the Data Explorer, above any layer
+               card, and it is why the panel opened on a heading a reader could
+               not interpret. Sean: "Why does it start with 'measured drivers'?
+               What the fuck is that?" A previous pass measured that header
+               block at 182 px of a 432 px window and left it there on the
+               grounds that it answers a question about the whole scene. That
+               was the right diagnosis and the wrong conclusion: scene-wide
+               things belong here, and the Data Explorer is now one rectangle
+               per layer and nothing else.
+
+               NOAA's R/S/G scales come with it, because "what is the storm
+               level" and "what are the drivers" are the same question asked
+               twice and they should read as one block rather than two
+               unrelated folds. Nothing was flattened to prose on the way: the
+               scales are still three coloured blocks and the drivers are still
+               a seven-tile grid, which fits the rail because it was already a
+               two-column grid at 370 px in the panel.
+
+               SHUT by default, alone among the rail's folds, and for the
+               reason the rail's own rule gives: it is the one readout in a
+               column of controls, and this pass exists to get the controls
+               above the fold. The summary row carries the one-line form of
+               exactly the cells inside it, read back out of them rather than
+               recomputed, so shut and open cannot drift apart. -->
+          <section class="rail-section conditions-section" data-rail-panel="environment" data-mode-panel="environment">
+            <details class="rail-details conditions-details" id="conditions-details">
+              <!-- The one-line form lives in the <summary>, which is the part of a
+                   <details> that survives folding. It sat in the details BODY
+                   until now, so it was hidden exactly when it was the only
+                   thing left to read and visible directly above the same four
+                   numbers when the table was open — the reverse of the job the
+                   comment above describes. -->
+              <summary class="rail-head conditions-summary"><h2>Conditions right now</h2><p class="conditions-line" id="key-conditions-summary">Conditions</p></summary>
+              <!-- The live numbers moved into the map key over the globe; this
+                   panel keeps only what you can act on.
+
+                   Sean asked for it back by name: "one thing you did remove -
+                   the SWPC 'card' that was in the rail previously. It looked
+                   good. We can just have it be under 'space weather' as a
+                   separate, collapsable entry." It had not been deleted - it is
+                   fed live by `applySwpcScales` and unhides itself the moment
+                   NOAA's scales land - it had simply been pushed below the fold
+                   by everything above it, which is the same complaint as the
+                   rest of this pass. So it is a fold of its own now, and the
+                   three R/S/G chips are a GRAPHIC: the reader reads the storm
+                   level off three coloured blocks, not off a sentence.
+
+                   It sits inside Conditions right now rather than under the
+                   layers, where it first came back. "What is the storm level"
+                   and "what are the drivers" are the same question asked
+                   twice, so they are one block. The three fuller NOAA panels
+                   stay on Current conditions, which is where they were moved
+                   to and where they belong. -->
+              <details class="swpc-summary" id="swpc-summary" hidden open>
+                <summary class="swpc-summary-head"><span>NOAA conditions</span><small id="swpc-summary-time">—</small></summary>
+                <div class="swpc-scale-strip" aria-label="Latest observed NOAA space weather scales">
+                  <span id="swpc-scale-r"><b>R—</b><small>Radio</small></span>
+                  <span id="swpc-scale-s"><b>S—</b><small>Radiation</small></span>
+                  <span id="swpc-scale-g"><b>G—</b><small>Geomagnetic</small></span>
+                </div>
+                <!-- Shown only when the G-scale and Dst genuinely disagree. A
+                     reader who sees G0 beside a storm classification and no
+                     explanation concludes the site is broken. -->
+                <button type="button" class="swpc-scale-conflict" id="swpc-scale-conflict" hidden></button>
+                <button id="swpc-outlook-open">Conditions + 3-day outlook →</button>
+              </details>
+              <!-- Two of these rows repeat a number a switched-on layer's own
+                   card already shows in more detail — solar wind speed and
+                   IMF Bz against the solar-wind layer's card, the X-ray class
+                   against the photon layer's card. main.ts hides the
+                   redundant row for exactly as long as that layer is on,
+                   via [data-drivers-dedupe], so the same figure never has two
+                   homes open on screen at once. Kp, F2 peak, protons and
+                   aurora have no layer card that restates them and always
+                   show. -->
+              <details class="card-section" data-card-section="conditions" open>
+                <!-- WHAT TIME THESE SEVEN NUMBERS ARE FOR, on the fold's own
+                     head, in the grammar the rest of the rail already uses for
+                     exactly this - Favorites carries "0 of 200" there and
+                     Satellites carries "31 shown".
+
+                     It replaces a line UNDER the grid that read
+                     "PROPAGATED SOLAR WIND - GOES X-RAY - 2026-08-21 06:45 UTC".
+                     Sean: "I don't really get what that is." Neither half of
+                     that was a fact a reader could act on: the propagation and
+                     the instrument are how the number was obtained, and the
+                     rail is not where this site explains that. The TIME is the
+                     fact, because these seven numbers move with the time
+                     slider, so it stays - and on the summary row it survives
+                     folding, costs no vertical space, and cannot collide with
+                     anything below it. The fuller statement is still on the
+                     row, as its tooltip. -->
+                <summary class="driver-summary">Measured drivers<b class="weather-valid-time" id="weather-valid-time">loading</b></summary>
+                <div class="weather-readout" id="weather-readout">
+                  <article data-drivers-dedupe="solarWind"><span>Solar wind</span><strong id="wind-speed">—</strong><small>km/s</small></article>
+                  <article data-drivers-dedupe="solarWind"><span>IMF Bz</span><strong id="imf-bz">—</strong><small>nT GSM</small></article>
+                  <article><span>Planetary Kp</span><strong id="kp-index">—</strong><small>0–9</small></article>
+                  <article data-drivers-dedupe="ionosphere"><span>F2 peak</span><strong id="hmf2">—</strong><small>km median</small></article>
+                  <article data-drivers-dedupe="photons"><span>GOES X-ray</span><strong id="xray-class">—</strong><small>0.1–0.8 nm class</small></article>
+                  <article><span>GOES protons</span><strong id="proton-flux">—</strong><small id="proton-channel">integral channel</small></article>
+                  <article><span>Aurora max</span><strong id="aurora-probability">—</strong><small>OVATION probability</small></article>
+                </div>
+              </details>
+              <!-- The pipeline's plain-language summary. It is a
+                   readout of exactly these conditions, so it belongs
+                   with them rather than as a second prose block in the
+                   rail directly under the storm material. -->
+              <!-- CURRENT ANALYSIS: two paragraphs, one text size, one voice.
+
+                   It was four blocks in three sizes and three colours - a
+                   tracked-caps provenance kicker, the summary, a bordered
+                   reconciliation panel, and a grey model note - and Sean read
+                   the result exactly as it was built: "It has three different
+                   text sizes and three different colors. Can we get one
+                   cohesive message? Two paragraphs max?"
+
+                   Nothing was dropped on the way. The provenance distinction
+                   is a SENTENCE at the head of the second paragraph, which is
+                   where a reader asks where a summary came from; the model
+                   caveats and the observation times follow it; and the Kp/Dst
+                   disagreement is one sentence at the end of the FIRST
+                   paragraph, said only while the two genuinely disagree,
+                   because that is a caveat on the summary's own claim.
+
+                   ONE WRITER. Both paragraphs are composed by
+                   `renderCurrentAnalysis()`, which is called from the readout
+                   update and from the storm update. The reconciliation used to
+                   be written on a different update path from the summary it
+                   qualifies, which is how two blocks in one fold could
+                   describe two different instants. -->
+              <details class="card-section weather-brief" data-card-section="brief">
+                <summary>Current Analysis</summary>
+                <p class="weather-brief-line" id="weather-brief-text">A fact-bounded teaching summary appears after the bundle loads.</p>
+                <p class="weather-brief-line" id="weather-note">Observation times and model caveats appear here after the bundle loads.</p>
+                <div class="brief-actions">
+                  <a id="weather-json-download" download>Download verified NOAA JSON</a>
+                  <a href="https://www.spaceweather.gov/" target="_blank" rel="noreferrer">Open NOAA SWPC ↗</a>
+                </div>
+              </details>
+            </details>
+          </section>
+
+          <!-- THE SATELLITE CATALOG, in the order Sean set on 2026-08-28:
+               "start with 'Satellite Catalog' and to the right 'x Selected'
+               and a 'Clear' button and under that heading you'll have the ALL
+               LEO MEO GEO etc boxes and for GEO the additional line still
+               shows up for GEO type with the three types... don't have
+               'catalog Filters' just Mission Types, Constellations/Fleets,
+               Owners/Organizations. Users expand those to select what they
+               want to see."
+
+               Four things came off it in the same change, all of them
+               scaffolding around the lists rather than the lists themselves:
+               the "Catalog filters" wrapper fold, its "N active" counter, the
+               "only" chip on every row, and the Select all / Clear this list
+               pair inside each section. "it's still so cumbersome."
+
+               Find a satellite and Favorites now sit BELOW this section
+               rather than above it, which is the other half of the same
+               instruction: "find a satellite and favorites should come at the
+               bottom." Browsing the catalog is the mode's first move; going
+               to one named spacecraft is the specialised one. -->
+          <section class="rail-section" data-rail-panel="satellites" data-mode-panel="satellites">
+            <!-- Folds, on the same `details` as Find a satellite and Favorites
+                 below, because Sean asked the obvious question: "if we made
+                 favorites collapsable, shouldn’t we also make satellites
+                 collapsable?" It is one element and no script, so the keyboard
+                 and screen-reader behaviour is the browser’s.
+
+                 OPEN by default: this is the mode’s primary control surface,
+                 and shipping it shut would open the mode on a column with
+                 nothing to act on. In Combined mode it is also the fold that
+                 makes one scrolling column readable, now that the wrapper fold
+                 inside it is gone.
+
+                 The count and Clear stay on the summary row, so the one fact
+                 worth seeing while shut — how many spacecraft the selection
+                 leaves drawn — and the one control that undoes it are visible
+                 either way. -->
+            <details class="rail-details catalog-details" id="catalog-details" open>
+            <summary class="rail-head catalog-summary"><h2>Satellite Catalog</h2><strong id="visible-count">—</strong><button type="button" id="catalog-clear">Clear</button></summary>
+            <!-- ONE MESSAGE, ONE WRITER. This row is spoken to only when a
+                 click changed the selection beyond the box that was clicked —
+                 the linking that is the whole point of the three lists — or
+                 when a combination with ticks in all three lists matches
+                 nothing. It carries no button. "Show every satellite again"
+                 lived here and is gone: with the catalog opening on a chosen
+                 selection, a standing offer to re-show everything fired at the
+                 reader for states he had picked himself. Sean: "Stop that
+                 shit. You keep adding a feature there... None of those orbits
+                 should be selected when you come to the site." -->
+            <p class="filter-status" id="filter-status" role="status" hidden>
+              <span id="filter-status-text"></span>
+            </p>
+            <!-- THE BAND IS A TOP-LEVEL FILTER AND NOTHING MORE. Sean: "when a
+                 user hits one of those, nothing happens - it's just a top
+                 level filter. they have to choose one of the options below to
+                 select what they want." Pressing LEO narrows what the three
+                 lists below OFFER; it plots nothing on its own. -->
+            <fieldset class="segmented" aria-label="Orbit class">
+              <button data-orbit="all" aria-pressed="false">All</button><button data-orbit="LEO" aria-pressed="false">LEO</button><button data-orbit="MEO" aria-pressed="false">MEO</button><button data-orbit="GEO" aria-pressed="false">GEO</button><button data-orbit="HEO" aria-pressed="false">HEO</button>
+            </fieldset>
+            <!-- The GEO band keeps its second line of three types. What came
+                 off it is the sentence underneath explaining what the two
+                 named subsets are: "that additional text stating what they are
+                 needs to be deleted." The distinction it drew is not lost —
+                 an inclined geosynchronous craft says IGSO on its own card. -->
+            <div id="geo-subfilter" class="geo-subfilter" aria-hidden="true" inert>
+              <div class="geo-subfilter-inner">
+                <span class="field-label">GEO type</span>
+                <fieldset class="segmented geo-type-control" aria-label="GEO orbit type">
+                  <button class="is-active" data-geo-type="all" aria-pressed="true" disabled>All GSO</button>
+                  <button data-geo-type="geostationary" aria-pressed="false" disabled>Geostationary</button>
+                  <button data-geo-type="other-gso" aria-pressed="false" disabled>Other GSO</button>
+                </fieldset>
+              </div>
+            </div>
+            <!-- THE THREE LISTS ARE LINKED, and that is the whole interaction:
+                 tick one value in any of them and every value that goes with
+                 it is ticked in the other two, so one click plots a whole
+                 population. "say i click 'METOC' under mission type. under the
+                 other two filter categories, the constellations and owners
+                 will automatically be selected for all METOC satellites... a
+                 user can then go in and deselect what they don't want."
+
+                 Deselecting is a pure removal and never links: "i can click
+                 metoc and deselect the other countries and as i do the
+                 satellites will go off the viewer." Nothing is put back.
+
+                 They remain PEERS. Linking is a selection gesture, not a
+                 scoping rule: no list ever hides or removes a value because of
+                 what another list holds, and a row worth nothing right now is
+                 dimmed with its count on it rather than taken away. -->
+            <details class="facet-section" id="mission-section" open>
+              <summary>Mission Types <b class="facet-state" id="mission-facet-state">none</b></summary>
+              <div id="mission-filters" class="filter-grid"></div>
+            </details>
+            <details class="facet-section" id="constellation-section">
+              <summary>Constellations / Fleets <b class="facet-state" id="constellation-facet-state">none</b></summary>
+              <div id="constellation-filters" class="filter-grid filter-grid--constellations"></div>
+            </details>
+            <details class="facet-section" id="owner-section">
+              <summary>Owners / Organizations <b class="facet-state" id="owner-facet-state">none</b></summary>
+              <!-- ARRANGEMENT ONLY. The two SELECTION buttons that used to
+                   stand beside these are gone with their peers in the other
+                   lists; sorting moves rows and never ticks or unticks one.
+                   The toggles are independent — neither, either, or both — so
+                   "Sort by Number" alone gives count bands largest first,
+                   "Sort Alphabetically" alone gives A-Z, and both together
+                   gives bands with A-Z inside each of them. Every group ships
+                   shut. Sean asked for these by name; they stay. -->
+              <div class="filter-actions filter-actions--owner" role="group" aria-label="Owner and organization list arrangement">
+                <button type="button" id="owner-sort-count" aria-pressed="false">Sort by Number</button>
+                <button type="button" id="owner-sort-alpha" aria-pressed="false">Sort Alphabetically</button>
+              </div>
+              <div class="facet-search">
+                <input id="owner-search" type="search" placeholder="Filter this list…" autocomplete="off" aria-label="Filter the owner and organization list" />
+              </div>
+              <div id="owner-filters" class="filter-grid filter-grid--owners"></div>
+              <p class="facet-empty" id="owner-facet-empty" hidden>No organization in this list matches that text.</p>
+            </details>
+            </details>
+          </section>
+          <section class="rail-section search-section" data-rail-panel="satellites" data-mode-panel="satellites">
+            <!-- Folds, on the same `details` as Favorites below and the
+                 Satellite Catalog above. Open by default: a search box is the mode’s first move and a
+                 shut one cannot be typed into, so hiding it by default would
+                 cost a click on the commonest action in the rail. What it
+                 saves is for the reader who has finished searching — 96 px of
+                 rail measured at the Large text size.
+
+                 The summary row carries the NAME and nothing else. Favorites
+                 puts a count there because “nothing starred” is a fact worth
+                 seeing while shut; an empty search box has no such fact — a
+                 typed query is not state a reader can leave behind, because
+                 closing the fold does not clear it and reopening shows it
+                 again. So the honest summary is the name. -->
+            <details class="rail-details search-details" id="search-details" open>
+              <summary class="rail-head search-summary"><h2>Find a satellite</h2></summary>
+              <div class="search-box"><span aria-hidden="true">⌕</span><input id="satellite-search" type="search" placeholder="Name or NORAD ID" autocomplete="off" aria-label="Find a satellite by name or NORAD ID" /></div>
+              <div id="search-results" class="search-results" role="listbox" aria-label="Satellite catalog results" hidden></div>
+              <!-- TODAY'S FEATURED CONSTELLATION IS NOT SAID HERE ANY MORE.
+                   `#featured-line` used to sit on this row, reading
+                   "Today: Iridium - 31 Iridium spacecraft in LEO, near 800 km."
+                   It is now a popup over the globe: `#featured-toast`, in the
+                   scene shell. Sean asked for "a window that briefly pops up
+                   somewhere discreet but that will be seen", and the bottom of
+                   a search fold in a rail is the opposite of that - a reader
+                   who has just arrived is looking at the Earth.
+
+                   The pick itself is unchanged and still applied as a
+                   selection: `applyFeaturedConstellation` ticks the
+                   constellation and lets the link fill mission and owner to
+                   match, through exactly the code every reader click goes
+                   through. Only where it is SAID moved. -->
+            </details>
+          </section>
+
+          <!-- Starred satellites, directly under the search box, both of
+               them below the catalog now: "find a satellite and favorites
+               should come at the bottom." They stay adjacent because that is
+               the one place a visitor goes to reach a NAMED spacecraft, so a
+               short list of the ones they keep coming back to belongs beside
+               it and costs no clicks to see: the
+               alternative placements — a chip inside the catalog filters, or a
+               pinned group inside the search dropdown — both hide the list
+               behind an interaction. It is the same grammar as the sections
+               around it: kicker, heading, count on the right, rows that look
+               and behave exactly like search results. -->
+          <section class="rail-section favorites-section" data-rail-panel="satellites" data-mode-panel="satellites">
+            <!-- Collapsed by default, and a `details` rather than a bespoke
+                 toggle so the keyboard and screen-reader behaviour is the
+                 browser's. Empty, this section was five lines of explanation
+                 about a list with nothing in it, in the mode where a reader
+                 has come to find a satellite. The count
+                 stays on the summary row, so the one fact worth seeing while
+                 collapsed - whether anything is starred - is always visible. -->
+            <details class="rail-details favorites-details" id="favorites-details">
+              <summary class="rail-head favorites-summary"><h2>Favorites</h2><strong id="favorites-count">0 of 200</strong></summary>
+              <p class="favorites-empty" id="favorites-empty">Nothing starred yet. Use the ☆ beside any search result or open satellite to keep it here.</p>
+              <div id="favorites-list" class="favorites-list" role="listbox" aria-label="Starred satellites"></div>
+              <p class="favorites-status" id="favorites-status" role="status" hidden></p>
+              <p class="favorites-note">Stored only in this browser. Nothing is sent anywhere, and the list will not follow you to another computer or another browser.</p>
+            </details>
+          </section>
+
+          <section class="rail-section environment-section" data-rail-panel="environment" data-mode-panel="environment">
+            <!-- Folds, like the three satellite sections above it, and for a
+                 reason the others do not have. Sean: "We are going to have
+                 this combined with satellites in some cases. So we need that
+                 rail to be clean." Combined mode puts the whole catalog stack
+                 and the whole layer stack in ONE scrolling column, and this is
+                 the taller of the two; being able to put either away is what
+                 makes that mode readable rather than endless.
+
+                 Open by default, because it is this mode's only control
+                 surface. The count on the summary row is how many layers are
+                 drawn - the one fact a reader who has folded it away still
+                 needs, and the same fact the map key over the globe counts. -->
+            <details class="rail-details environment-details" id="environment-details" open>
+            <summary class="rail-head environment-summary"><h2>Space weather</h2><strong id="active-layer-count">0 on</strong></summary>
+            <!-- The label stays. Sean asked for the presets themselves to go
+                 and then took it back the same minute ("actually - leave
+                 simple/standard and full. That is okay."), which leaves three
+                 buttons reading Simple / Standard / Full in a mode where the
+                 catalog's own density control used to read Featured /
+                 Standard / Full catalog two sections away. Unlabelled they
+                 name nothing; two words in the LABEL role is the cheapest
+                 possible fix and it is what that role is for. -->
+            <span class="field-label">Layer preset</span>
+            <fieldset class="segmented layer-presets" aria-label="Space weather layer preset">
+              <button data-preset="simple">Simple</button><button data-preset="standard">Standard</button><button data-preset="full">Full</button>
+            </fieldset>
+            <!-- There is no switch for the Data Explorer here any more. It is
+                 not a preference, it is a consequence: it appears over the
+                 globe on its own the moment a layer is switched on, and
+                 disappears when the last one goes off — "you have to have it
+                 visible if you plot data." Reclaiming this row gives the
+                 space back to the layers, which is what it is for. -->
+            <!-- Control surface only. A layer's toggle, the caret that reveals
+                 its own settings, and the note on how that setting works live
+                 here. Everything the layer currently *says* — colour scale and
+                 units in the legend, numbers and validity in the data viewer —
+                 is over the globe, so values and settings are never
+                 interleaved. -->
+            <div class="layer-list" id="layer-list">
+              <div class="layer-block" data-layer-block="thermosphere">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-thermosphere" /><span class="layer-dot thermosphere"></span><span><strong>Thermosphere height</strong><small>NOAA WAM neutral density</small></span></label>
+                </div>
+              </div>
+              <div class="layer-block" data-layer-block="ionosphere">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-ionosphere" /><span class="layer-dot ionosphere"></span><span><strong>Ionosphere &mdash; electron density</strong><small>NOAA WAM-IPE, with the empirical D region</small></span></label>
+                </div>
+              </div>
+              <div class="layer-block" data-layer-block="tec">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-tec" /><span class="layer-dot tec"></span><span><strong>TEC surface</strong><small>NOAA GloTEC</small></span></label>
+                </div>
+              </div>
+              <div class="layer-block" data-layer-block="aurora">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-aurora" /><span class="layer-dot aurora"></span><span><strong>Auroral oval</strong><small>NOAA OVATION</small></span></label>
+                </div>
+              </div>
+              <!-- THE magnetosphere layer: the NOAA MHD plasma field itself.
+                   The bow shock, the magnetosheath, the magnetopause and the
+                   cusp region are jumps and gradients in this field — they
+                   appear in the colours, with nothing drawn on top. Every
+                   analytic boundary curve is an off-by-default annotation in
+                   this layer's own settings, never a layer of its own. -->
+              <div class="layer-block" data-layer-block="geospace">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-geospace" /><span class="layer-dot geospace"></span><span><strong>Magnetosphere</strong><small>NOAA MHD plasma field</small></span></label>
+                </div>
+              </div>
+              <!-- The plasma sheet is a LAYER, not a setting of the one above
+                   it, because it answers a different question about the same
+                   published cut: not how much plasma is there, but which
+                   pressure is in charge. NOAA publishes no plasma-sheet
+                   product; what it publishes is thermal pressure and |B| on
+                   the same grid, and their ratio — plasma beta — is the sheet.
+                   Nothing schematic is drawn: the sheet, the two lobes and the
+                   shocked sheath are all colours of one derived field.
+
+                   There is no <div> of its own here, and there was no opening
+                   tag for the </div> that used to close this comment either.
+                   That one stray end tag closed .layer-list, and then the
+                   matching </div> at the end of the list closed the nearest
+                   remaining div in scope - #app - which put the hidden
+                   layer-regions input, the "Radio propagation & advanced
+                   fields" fold, "How these layers are made" and the whole rail
+                   footer OUTSIDE the rail, as direct children of <body>, laid
+                   out below the viewport. Sean, 2026-08-28, on a phone: "there
+                   is content below the viewing area, but i can't move the
+                   contents of the screen to get to it. it looks like it starts
+                   off with 'radio propagation and advanced fields'." body is
+                   overflow: hidden at this breakpoint, so it was unreachable. -->
+              <!-- TWO populations, ONE toggle, because they are one injection
+                   seen at two radii. Sean: "Potentially ring current and plasma
+                   sheet as one option if they are that closely related." They
+                   are, and separate switches would let a reader turn off the
+                   cause and keep the effect.
+
+                   Neither is a measurement of a shape. There is no gridded
+                   ring-current product in any feed this site fetches; the only
+                   ring-current measurement here is Dst, which is one number and
+                   has no map. Nobody measures the plasma sheet's 3-D structure
+                   continuously either. What IS measured is the timing: the
+                   loading from southward Bz at Earth arrival, and the response
+                   in Dst. The card says which is which, and says out loud that
+                   no auroral-electrojet index is published live to this site, so
+                   the onset TIME is not claimed for the present. -->
+              <div class="layer-block" data-layer-block="ringCurrent">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-ring-current" /><span class="layer-dot ring-current"></span><span><strong>Plasma sheet &rarr; ring current</strong><small>Where the ions come from, and where they go</small></span></label>
+                </div>
+              </div>
+              <div class="layer-block" data-layer-block="solarWind">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-solar-wind" /><span class="layer-dot solar"></span><span><strong>Solar wind &amp; IMF</strong><small>Measured L1 density and speed</small></span></label>
+                </div>
+              </div>
+              <!-- The solar X-ray visual has no standing row here any more, and
+                   the control it is driven by is hidden rather than deleted -
+                   the same arrangement `layer-regions` uses, and for the same
+                   reason: the layer still exists, it just no longer earns a
+                   permanent slot in a column whose content is the layers.
+
+                   Sean: "for xray flux, I really don't know what to show...
+                   I don't know if it is useful." Two separate things were
+                   being asked of one row. The NUMBER is a data product and it
+                   is already in the right place - a driver tile on Current
+                   conditions with a sparkline and a flare-class axis. The
+                   GLOBE visual is not a data product at all: a single scalar
+                   cannot fill a globe, and at ordinary quiet-Sun flux the
+                   hemisphere tint is nearly transparent, so all a reader saw
+                   was streaks - "I see white 'particles' showering over
+                   earth."
+
+                   What the visual is genuinely good for is a CONTRAST, and it
+                   needs the solar wind on beside it to make it: everything
+                   charged is turned aside at the boundary and this one thing
+                   goes straight through. That is a taught moment, not a
+                   standing layer, so it is now a step in the guided chain
+                   walkthrough - its branch card X1 - which switches this box
+                   on, puts the wind and the boundary on with it, and frames
+                   all three together. -->
+              <input type="checkbox" id="layer-photons" hidden />
+              <div class="layer-block" data-layer-block="radiation">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-radiation" /><span class="layer-dot radiation"></span><span><strong>Radiation belts</strong><small>NOAA/NASA RBE electrons</small></span></label>
+                </div>
+              </div>
+              <!-- The only layer here that is not a field: 87 cited antennas,
+                   drawn where their operators publish them. It sits in this
+                   list rather than with the catalog filters because what the
+                   data viewer reports for a selected pin is the ionosphere and
+                   the HF absorption over that antenna — space weather at a
+                   place on the ground. The spacecraft side of the same record
+                   is in the satellite card, under "Ground stations". -->
+              <div class="layer-block" data-layer-block="groundStations">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-ground-stations" /><span class="layer-dot ground-stations"></span><span><strong>Ground stations</strong><small>Published antenna locations</small></span></label>
+                </div>
+              </div>
+            </div>
+            <input type="checkbox" id="layer-regions" hidden />
+            <details class="advanced-environment-details">
+              <summary>Radio propagation &amp; advanced fields</summary>
+              <div class="layer-block" data-layer-block="drap">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-drap" /><span class="layer-dot drap"></span><span><strong>D-region HF absorption</strong><small>NOAA D-RAP</small></span></label>
+                </div>
+              </div>
+              <div class="layer-block" data-layer-block="groundField">
+                <div class="layer-row">
+                  <label class="layer-control"><input type="checkbox" id="layer-groundField" /><span class="layer-dot ground-field"></span><span><strong>Ground magnetic perturbation</strong><small>NOAA SWMF surface d<i>B</i></small></span></label>
+                </div>
+              </div>
+            </details>
+            <button class="method-link" data-view="sources">How these layers are made →</button>
+            </details>
+          </section>
+
+          <footer class="rail-footer">
+            <button data-view="sources">Data &amp; methods</button>
+            <span>Educational—not for spacecraft operations or warnings.</span>
+          </footer>
+        </aside>
+      </main>
+
+      <section id="content-view" class="content-view" hidden tabindex="-1">
+        <button id="content-close" class="content-close">← Back to explorer</button>
+        <div id="content-body" class="content-body"></div>
+      </section>
+    </div>
+    <dialog class="site-dialog welcome-dialog" id="welcome-dialog" aria-labelledby="welcome-title">
+      <form method="dialog">
+        <button class="dialog-close" value="close" aria-label="Close welcome">×</button>
+        <p class="dialog-kicker">SPACE ENVIRONMENT EXPLORER</p>
+        <h1 id="welcome-title">Welcome aboard.</h1>
+        <p class="dialog-lead">Satellite tracks and space weather, in one picture — for the Navy Space Cadre and METOC community, and for anyone curious about the near-Earth environment.</p>
+        <p class="dialog-note"><strong>This is a work in progress.</strong> We build it in our own free time, so expect rough edges and things we have not finished yet.<span id="welcome-feedback-invite"> If you see something that needs clearing up, please tell us.</span></p>
+        <p class="dialog-caveat">A free, non-commercial personal project. It does not represent the U.S. Navy or the U.S. Government. It teaches; it is not for operational use. The full disclaimer is under About.</p>
+        <p class="dialog-signoff"><strong>LT Sean Egan, PhD, USN &amp; AG1 Derek Conklin, USN</strong></p>
+        <label class="dialog-preference"><input id="welcome-hide" type="checkbox" /> Don’t show this welcome again</label>
+        <div class="dialog-actions"><button type="button" class="secondary-button" id="welcome-feedback" data-informed-feedback>Something look wrong?</button><button value="close" class="secondary-button" id="welcome-about">About Sean &amp; Derek</button><button value="close" class="primary-button">Enter explorer</button></div>
+      </form>
+    </dialog>
+    <dialog class="site-dialog about-dialog" id="about-dialog" aria-labelledby="about-title">
+      <form method="dialog">
+        <button class="dialog-close" value="close" aria-label="Close about panel">×</button>
+        <p class="dialog-kicker">ABOUT THIS PROJECT</p>
+        <h1 id="about-title">We’re Derek and Sean.</h1>
+        <p class="dialog-lead">Space Environment Explorer is meant to do two jobs well: give you useful current data when you need it, and help you understand the satellite and space-weather concepts behind what you are seeing.</p>
+        <div class="creator-card">
+          <span>CREATORS</span>
+          <strong>AG1 Derek Conklin, USN</strong>
+          <strong>LT Sean Egan, PhD, USN</strong>
+          <p>We build this together in our own free time — Derek on operations and design, Sean on science and development — for fellow Space Cadre, METOC officers, Aerographer’s Mates, and curious learners.</p>
+        </div>
+        <p class="dialog-caveat">The site combines authoritative observations, assimilated products, operational model output, and clearly labeled teaching graphics.</p>
+        <section class="dialog-disclaimer" aria-label="Disclaimer">
+          <span class="section-kicker">DISCLAIMER</span>
+          <p>This is a <strong>free, non-commercial learning site</strong> and a personal project. We work on it constantly, so treat everything here as a work in progress.</p>
+          <p>We built it in our personal capacities. <strong>The views expressed on this site are those of the authors and do not reflect the official policy or position of the U.S. Navy, the Department of War / Department of Defense, or the U.S. Government.</strong></p>
+          <p><strong>Do not use this site for operations.</strong> Sean is a chemist by education, not a space-weather forecaster. This is a place to learn the concepts; operational decisions belong with official sources such as NOAA SWPC and your own service channels.</p>
+          <p>Everything is offered as-is, with no guarantee of accuracy or availability. <strong>Anyone who uses this site does so at their own risk</strong>—we cannot be responsible for errors.</p>
+        </section>
+        <div class="dialog-actions"><button type="button" class="secondary-button" id="about-feedback" data-informed-feedback>Send us a note</button><button value="close" class="primary-button">Back to the explorer</button></div>
+      </form>
+    </dialog>
+    <dialog class="site-dialog ground-track-dialog" id="ground-track-dialog" aria-labelledby="ground-track-title">
+      <form method="dialog">
+        <button class="dialog-close" value="close" aria-label="Close ground-track map">×</button>
+        <p class="dialog-kicker">EARTH-FIXED GEOMETRY · UTC</p>
+        <h1 id="ground-track-title">Satellite ground track</h1>
+        <p class="dialog-lead" id="ground-track-lead">The sub-satellite point mapped across the rotating Earth.</p>
+        <div class="ground-track-map" id="ground-track-map"></div>
+        <p class="dialog-caveat">Propagated from the displayed Space-Track OMM with SGP4. CelesTrak supplies optional catalog curation, not orbital elements. This is a teaching ephemeris—not telemetry, an assigned longitude determination, or a conjunction-quality product.</p>
+        <div class="dialog-actions"><button value="close" class="primary-button">Back to the globe</button></div>
+      </form>
+    </dialog>
+    <dialog class="site-dialog orbit-history-dialog" id="orbit-history-dialog" aria-labelledby="orbit-history-title">
+      <form method="dialog">
+        <button class="dialog-close" value="close" aria-label="Close orbit history">×</button>
+        <p class="dialog-kicker">ORBITAL HISTORY · INFERRED FROM PUBLIC ELEMENTS</p>
+        <h1 id="orbit-history-title">How this orbit has changed</h1>
+        <p class="dialog-lead" id="orbit-history-lead">Element sets archived on this machine, the changes that cleared the catalogue's own fit noise, and what each would have cost.</p>
+        <div id="orbit-history-host"></div>
+        <p class="dialog-caveat">These are fitted mean elements published every few hours, not measurements of where a satellite is. What we can see is how the fit moved. Nothing here is a report of what an operator did.</p>
+        <div class="dialog-actions"><button value="close" class="primary-button">Back to the globe</button></div>
+      </form>
+    </dialog>
+    <!-- ONE HISTORICAL EVENT, OPENED ON TOP OF THE GRID.
+         This used to be a <div id="event-player"> sitting ABOVE the six cards
+         inside the events page. Clicking a card filled it and called
+         scrollIntoView, so the page smooth-scrolled the reader all the way back
+         up past every other card to reach it. Sean, 2026-08-21: "it looks like
+         it opens all events and scrolls the page through all of them to the
+         correct one... This isn't good the way it is."
+
+         It is now a real <dialog> opened with showModal(), which is the grammar
+         the welcome, about, ground-track, orbit-history and outlook panels
+         already use here. That buys the behaviour rather than imitating it: the
+         browser puts it in the TOP LAYER, so nothing of ours can end up under it
+         - which is what mattered while the shell still floated a sticky "Back to
+         explorer" button over every content view (it no longer does; see
+         `.content-close` in src/styles.css). It also makes the page
+         behind inert, traps focus and closes on Escape. The grid never moves, so
+         closing leaves the reader on the card they clicked.
+
+         NO <form method="dialog"> HERE, deliberately, unlike its siblings. The
+         replay body carries a Play button and a range input; inside a dialog
+         form a default-type button submits and Enter on the slider submits, and
+         either one would close the replay the reader had just started.
+
+         The heading is supplied by eventPlayer() in src/content.ts, which is why
+         the accessible name is wired by id rather than to markup in this file. -->
+    <dialog class="site-dialog event-dialog" id="event-dialog" tabindex="-1" aria-labelledby="event-dialog-title">
+      <div class="event-dialog-shell">
+        <button type="button" class="dialog-close" data-close-event aria-label="Close this replay">×</button>
+        <div id="event-player" class="event-player"></div>
+      </div>
+    </dialog>
+    <dialog class="site-dialog swpc-dialog" id="swpc-dialog" aria-labelledby="swpc-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" value="close" aria-label="Close NOAA operational outlook">×</button>
+        <p class="dialog-kicker">NOAA SPACE WEATHER PREDICTION CENTER</p>
+        <h1 id="swpc-dialog-title">Operational space-weather outlook</h1>
+        <p class="dialog-lead">Current NOAA scales and separately issued forecast products, reformatted for quick reading without changing the underlying values.</p>
+        <div id="swpc-dialog-panels" hidden></div>
+        <fieldset class="segmented swpc-tabs" aria-label="Operational outlook section">
+          <button type="button" class="is-active" data-swpc-tab="conditions">Conditions</button>
+          <button type="button" data-swpc-tab="forecast">3-day outlook</button>
+          <button type="button" data-swpc-tab="geomagnetic">Geomagnetic</button>
+        </fieldset>
+        <section class="swpc-panel" id="swpc-panel-conditions" data-swpc-panel="conditions">
+          <div class="swpc-panel-heading"><div><span>LATEST OBSERVED</span><strong id="swpc-current-issued">—</strong></div><small>R/S/G describe severity, not a continuous field.</small></div>
+          <div class="swpc-condition-grid" id="swpc-current-grid"></div>
+          <div class="swpc-panel-heading swpc-panel-heading--secondary"><div><span>ROLLING 24-HOUR MAXIMUM</span><strong id="swpc-maximum-window">—</strong></div></div>
+          <div class="swpc-condition-grid swpc-condition-grid--maximum" id="swpc-maximum-grid"></div>
+          <details class="swpc-alerts">
+            <summary>Recent NOAA bulletins <span id="swpc-alert-count">—</span></summary>
+            <p>Recent feed messages are not necessarily active; valid windows, extensions, and cancellations remain in NOAA’s raw text.</p>
+            <div id="swpc-alert-list"></div>
+          </details>
+        </section>
+        <section class="swpc-panel" id="swpc-panel-forecast" data-swpc-panel="forecast" hidden>
+          <div class="swpc-panel-heading"><div><span>NOAA 3-DAY FORECAST</span><strong id="swpc-forecast-issued">—</strong></div><small>Daily probabilities are occurrence probabilities—not outage duration or exact onset time.</small></div>
+          <div class="swpc-day-grid" id="swpc-day-grid"></div>
+          <div class="swpc-rationales" id="swpc-rationales"></div>
+        </section>
+        <section class="swpc-panel" id="swpc-panel-geomagnetic" data-swpc-panel="geomagnetic" hidden>
+          <div class="swpc-panel-heading"><div><span>GEOMAGNETIC FORECAST</span><strong id="swpc-geomag-issued">—</strong></div><small>Kp is dimensionless, quasi-logarithmic, and forecast in three-hour blocks.</small></div>
+          <div class="swpc-ap-grid" id="swpc-ap-grid"></div>
+          <div class="swpc-probability-grid" id="swpc-probability-grid"></div>
+          <div class="swpc-kp-days" id="swpc-kp-days"></div>
+        </section>
+        <p class="dialog-caveat" id="swpc-data-note">Issue times are shown independently because NOAA products can update at different times. Educational display only; use NOAA SWPC for official warning decisions.</p>
+        <div class="swpc-source-actions">
+          <a href="https://www.spaceweather.gov/products/3-day-forecast" target="_blank" rel="noreferrer">Official 3-day forecast ↗</a>
+          <a href="https://www.spaceweather.gov/products/3-day-geomagnetic-forecast" target="_blank" rel="noreferrer">Official geomagnetic forecast ↗</a>
+          <a href="https://www.spaceweather.gov/products/d-region-absorption-predictions-d-rap" target="_blank" rel="noreferrer">NOAA radio-impact nowcast ↗</a>
+        </div>
+        <div class="dialog-actions"><button value="close" class="primary-button">Back to the explorer</button></div>
+      </form>
+    </dialog>
+    <noscript>This interactive teaching aid requires JavaScript.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+    <!-- "Follow the energy": the guided walkthrough of the coupled chain. Its
+         own entry point on purpose — it drives the explorer through the same
+         layer checkboxes, camera buttons and timeline a visitor uses, so it
+         needs no hold on the explorer's internals and this one line is the
+         whole of its wiring. -->
+    <script type="module" src="/src/energy-chain-view.ts"></script>
+    <script src="./feedback-widget.js" defer></script>
+  </body>
+</html>

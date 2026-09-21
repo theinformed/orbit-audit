@@ -1,0 +1,848 @@
+[
+ {
+  "stem": "dayside-reconnection",
+  "scene": "Reconnection",
+  "videoSeconds": 86.7,
+  "bytes": 3110272,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.23,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-01-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 9.474,
+    "nextLineSeconds": 12.9,
+    "slackSeconds": 3.076,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-01-direction",
+    "anchor": 1,
+    "at": null,
+    "caption": "The wind carries the Sun's own field with it. Everything depends on which way that field points.",
+    "startSeconds": 12.9,
+    "audioSeconds": 9.985,
+    "nextLineSeconds": 24.767,
+    "slackSeconds": 1.882,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-01-quiet-case",
+    "anchor": 3,
+    "at": null,
+    "caption": "On the earthward side, Earth's field points north.",
+    "startSeconds": 24.767,
+    "audioSeconds": 9.102,
+    "nextLineSeconds": 35.133,
+    "slackSeconds": 1.264,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-01-only-door",
+    "anchor": 7,
+    "at": null,
+    "caption": "Southward Bz: at the nose the two fields are exactly antiparallel.",
+    "startSeconds": 35.133,
+    "audioSeconds": 9.334,
+    "nextLineSeconds": 45.833,
+    "slackSeconds": 1.366,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 7.86,
+     "headMs": 30.0,
+     "speakingDb": -20.79,
+     "openingDb": -20.65,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9519
+    }
+   },
+   {
+    "id": "mech-01-catapult",
+    "anchor": 10,
+    "at": null,
+    "caption": "The bent field straightens and flings the plasma away. That is the energy release.",
+    "startSeconds": 45.833,
+    "audioSeconds": 10.356,
+    "nextLineSeconds": 57.7,
+    "slackSeconds": 1.511,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 10.91,
+     "headMs": 30.0,
+     "speakingDb": -20.65,
+     "openingDb": -19.31,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9583
+    }
+   },
+   {
+    "id": "mech-01-growth-phase",
+    "anchor": 14,
+    "at": null,
+    "caption": "The tail loads. This is the storing half of the cycle.",
+    "startSeconds": 57.7,
+    "audioSeconds": 10.031,
+    "nextLineSeconds": 69.667,
+    "slackSeconds": 1.936,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 10.05,
+     "headMs": 30.0,
+     "speakingDb": -20.66,
+     "openingDb": -19.85,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9519
+    }
+   },
+   {
+    "id": "mech-01-loop",
+    "anchor": 16,
+    "at": null,
+    "caption": "It reconnects. One piece leaves down-tail; the rest is fired straight back at Earth.",
+    "startSeconds": 69.667,
+    "audioSeconds": 10.635,
+    "nextLineSeconds": 86.7,
+    "slackSeconds": 6.398,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 7.37,
+     "headMs": 25.0,
+     "speakingDb": -19.97,
+     "openingDb": -19.4,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9522
+    }
+   }
+  ]
+ },
+ {
+  "stem": "chapman-layer",
+  "scene": "Chapman",
+  "videoSeconds": 69.167,
+  "bytes": 2340368,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.34,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-02-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 7.245,
+    "nextLineSeconds": 9.7,
+    "slackSeconds": 2.105,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-02-two-gradients",
+    "anchor": 1,
+    "at": null,
+    "caption": "Light is strongest at the top, and is used up on the way down.",
+    "startSeconds": 9.7,
+    "audioSeconds": 10.867,
+    "nextLineSeconds": 22.2,
+    "slackSeconds": 1.633,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-02-optical-depth",
+    "anchor": 4,
+    "at": null,
+    "caption": "At the top: light, but no air. At the bottom: air, but no light.",
+    "startSeconds": 22.2,
+    "audioSeconds": 10.217,
+    "nextLineSeconds": 34.0,
+    "slackSeconds": 1.583,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 18.46,
+     "headMs": 20.0,
+     "speakingDb": -20.73,
+     "openingDb": -20.86,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9537
+    }
+   },
+   {
+    "id": "mech-02-slant",
+    "anchor": 6,
+    "at": null,
+    "caption": "Now let the Sun go down.",
+    "startSeconds": 34.0,
+    "audioSeconds": 11.192,
+    "nextLineSeconds": 47.833,
+    "slackSeconds": 2.641,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-02-layers",
+    "anchor": 8,
+    "at": null,
+    "caption": "This is the shape a real daytime profile carries.",
+    "startSeconds": 47.833,
+    "audioSeconds": 6.966,
+    "nextLineSeconds": 55.567,
+    "slackSeconds": 0.768,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 14.42,
+     "headMs": 55.0,
+     "speakingDb": -21.36,
+     "openingDb": -21.19,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9523
+    }
+   },
+   {
+    "id": "mech-02-bands-open",
+    "anchor": 10,
+    "at": null,
+    "caption": "At sunset production stops. D and E collapse in minutes: dense air, fast recombination.",
+    "startSeconds": 55.567,
+    "audioSeconds": 11.749,
+    "nextLineSeconds": 69.167,
+    "slackSeconds": 1.851,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   }
+  ]
+ },
+ {
+  "stem": "hf-skip-blackout",
+  "scene": "HF",
+  "videoSeconds": 79.1,
+  "bytes": 2742561,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.28,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-03-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 11.006,
+    "nextLineSeconds": 14.967,
+    "slackSeconds": 3.611,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-03-one-hop",
+    "anchor": 2,
+    "at": null,
+    "caption": "The rest goes up, is bent back by the F2 layer, and lands a long way off. One hop.",
+    "startSeconds": 14.967,
+    "audioSeconds": 12.632,
+    "nextLineSeconds": 28.833,
+    "slackSeconds": 1.234,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-03-ceiling",
+    "anchor": 6,
+    "at": null,
+    "caption": "Push it too far and the layer cannot turn it back at all. The signal leaves.",
+    "startSeconds": 28.833,
+    "audioSeconds": 10.31,
+    "nextLineSeconds": 40.733,
+    "slackSeconds": 1.59,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 3.74,
+     "headMs": 15.0,
+     "speakingDb": -19.83,
+     "openingDb": -21.76,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9085
+    }
+   },
+   {
+    "id": "mech-03-sponge",
+    "anchor": 9,
+    "at": null,
+    "caption": "D stops being a mirror and starts being a sponge.",
+    "startSeconds": 40.733,
+    "audioSeconds": 13.142,
+    "nextLineSeconds": 56.367,
+    "slackSeconds": 2.492,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 4.71,
+     "headMs": 55.0,
+     "speakingDb": -20.09,
+     "openingDb": -22.87,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9502
+    }
+   },
+   {
+    "id": "mech-03-window",
+    "anchor": 12,
+    "at": null,
+    "caption": "Every HF path has a ceiling and a floor. You work between them.",
+    "startSeconds": 56.367,
+    "audioSeconds": 10.124,
+    "nextLineSeconds": 69.067,
+    "slackSeconds": 2.576,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 7.54,
+     "headMs": 30.0,
+     "speakingDb": -20.07,
+     "openingDb": -20.95,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9157
+    }
+   },
+   {
+    "id": "mech-03-blackout",
+    "anchor": 15,
+    "at": null,
+    "caption": "When the floor reaches the ceiling there is no usable frequency left.",
+    "startSeconds": 69.067,
+    "audioSeconds": 8.916,
+    "nextLineSeconds": 79.1,
+    "slackSeconds": 1.117,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 9.6,
+     "headMs": 85.0,
+     "speakingDb": -20.69,
+     "openingDb": -19.25,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9032
+    }
+   }
+  ]
+ },
+ {
+  "stem": "trapped-motion",
+  "scene": "Trapped",
+  "videoSeconds": 70.867,
+  "bytes": 2506797,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.46,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-04-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 10.475,
+    "nextLineSeconds": 11.6,
+    "slackSeconds": 0.775,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-04-flat-frame",
+    "anchor": 1,
+    "at": null,
+    "caption": "A charged particle circles its field line. Circling alone never carries it to another.",
+    "startSeconds": 11.6,
+    "audioSeconds": 7.837,
+    "nextLineSeconds": 20.567,
+    "slackSeconds": 1.13,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 23.94,
+     "headMs": 100.0,
+     "speakingDb": -22.2,
+     "openingDb": -23.25,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9554
+    }
+   },
+   {
+    "id": "mech-04-bounce",
+    "anchor": 2,
+    "at": null,
+    "caption": "Toward the feet the field crowds together, and the particle is turned around.",
+    "startSeconds": 20.567,
+    "audioSeconds": 11.285,
+    "nextLineSeconds": 33.667,
+    "slackSeconds": 1.815,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-04-drift",
+    "anchor": 4,
+    "at": null,
+    "caption": "Same particles, seen from above the north pole.",
+    "startSeconds": 33.667,
+    "audioSeconds": 9.639,
+    "nextLineSeconds": 44.0,
+    "slackSeconds": 0.694,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 14.77,
+     "headMs": 170.0,
+     "speakingDb": -20.62,
+     "openingDb": -21.08,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9508
+    }
+   },
+   {
+    "id": "mech-04-why-they-add",
+    "anchor": 6,
+    "at": null,
+    "caption": "Ions drift west. Electrons drift east.",
+    "startSeconds": 44.0,
+    "audioSeconds": 9.796,
+    "nextLineSeconds": 54.167,
+    "slackSeconds": 0.371,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 26.0,
+     "headMs": 80.0,
+     "speakingDb": -21.29,
+     "openingDb": -19.38,
+     "clampedAtCeiling": true,
+     "peakAfter": 0.9506
+    }
+   },
+   {
+    "id": "mech-04-dst-measured",
+    "anchor": 9,
+    "at": null,
+    "caption": "So the field measured at the ground goes down.",
+    "startSeconds": 54.167,
+    "audioSeconds": 14.707,
+    "nextLineSeconds": 70.867,
+    "slackSeconds": 1.993,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 8.13,
+     "headMs": 80.0,
+     "speakingDb": -19.52,
+     "openingDb": -19.1,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9465
+    }
+   }
+  ]
+ },
+ {
+  "stem": "eccentric-dipole-saa",
+  "scene": "SAA",
+  "videoSeconds": 60.533,
+  "bytes": 2161569,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.08,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-05-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 8.127,
+    "nextLineSeconds": 11.3,
+    "slackSeconds": 2.823,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 8.63,
+     "headMs": 70.0,
+     "speakingDb": -20.63,
+     "openingDb": -20.37,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.7146
+    }
+   },
+   {
+    "id": "mech-05-off-centre",
+    "anchor": 1,
+    "at": null,
+    "caption": "The second one is the whole story here.",
+    "startSeconds": 11.3,
+    "audioSeconds": 7.523,
+    "nextLineSeconds": 20.5,
+    "slackSeconds": 1.677,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 7.39,
+     "headMs": 40.0,
+     "speakingDb": -20.17,
+     "openingDb": -20.72,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9456
+    }
+   },
+   {
+    "id": "mech-05-sphere",
+    "anchor": 4,
+    "at": null,
+    "caption": "Field strength falls off with distance from the dipole \u2014 not from the Earth.",
+    "startSeconds": 20.5,
+    "audioSeconds": 9.195,
+    "nextLineSeconds": 31.4,
+    "slackSeconds": 1.705,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 6.97,
+     "headMs": 15.0,
+     "speakingDb": -19.23,
+     "openingDb": -20.3,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9359
+    }
+   },
+   {
+    "id": "mech-05-lopsided",
+    "anchor": 7,
+    "at": null,
+    "caption": "The gap between them is twice the offset. That is the whole anomaly.",
+    "startSeconds": 31.4,
+    "audioSeconds": 11.378,
+    "nextLineSeconds": 46.133,
+    "slackSeconds": 3.355,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 7.43,
+     "headMs": 25.0,
+     "speakingDb": -20.02,
+     "openingDb": -18.83,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9271
+    }
+   },
+   {
+    "id": "mech-05-upsets",
+    "anchor": 9,
+    "at": null,
+    "caption": "For most of the orbit it flies under that surface. Over one region it is above it.",
+    "startSeconds": 46.133,
+    "audioSeconds": 12.565,
+    "nextLineSeconds": 60.533,
+    "slackSeconds": 1.835,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 5.65,
+     "headMs": 10.0,
+     "speakingDb": -21.16,
+     "openingDb": -20.37,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9509
+    }
+   }
+  ]
+ },
+ {
+  "stem": "drag-orbit-decay",
+  "scene": "Drag",
+  "videoSeconds": 130.267,
+  "bytes": 4024222,
+  "loudness": {
+   "targetI": -18.0,
+   "targetTP": -2.0,
+   "targetLRA": 9.0,
+   "measuredIBefore": -19.05,
+   "perLine": [
+    "aresample=44100"
+   ]
+  },
+  "lines": [
+   {
+    "id": "mech-06-open",
+    "anchor": null,
+    "at": 0.35,
+    "caption": "(explicit time)",
+    "startSeconds": 0.35,
+    "audioSeconds": 12.957,
+    "nextLineSeconds": 14.433,
+    "slackSeconds": 1.126,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-06-one-speed",
+    "anchor": 0,
+    "at": null,
+    "caption": "One altitude, one speed, one period. A circular orbit has no choice about it.",
+    "startSeconds": 14.433,
+    "audioSeconds": 11.285,
+    "nextLineSeconds": 26.8,
+    "slackSeconds": 1.082,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 26.0,
+     "headMs": 85.0,
+     "speakingDb": -21.31,
+     "openingDb": -19.03,
+     "clampedAtCeiling": true,
+     "peakAfter": 0.9508
+    }
+   },
+   {
+    "id": "mech-06-thin-air",
+    "anchor": 1,
+    "at": null,
+    "caption": "Thin air. The drag force points backwards along the track.",
+    "startSeconds": 26.8,
+    "audioSeconds": 8.124,
+    "nextLineSeconds": 36.167,
+    "slackSeconds": 1.243,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-06-brake",
+    "anchor": 2,
+    "at": null,
+    "caption": "Backwards. So obviously it slows down.",
+    "startSeconds": 36.167,
+    "audioSeconds": 9.43,
+    "nextLineSeconds": 47.333,
+    "slackSeconds": 1.736,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 24.96,
+     "headMs": 200.0,
+     "speakingDb": -20.72,
+     "openingDb": -23.28,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9503
+    }
+   },
+   {
+    "id": "mech-06-reveal",
+    "anchor": 3,
+    "at": null,
+    "caption": "It does not. It ends up a hundred kilometres lower \u2014 and 57 metres a second faster.",
+    "startSeconds": 47.333,
+    "audioSeconds": 10.292,
+    "nextLineSeconds": 58.7,
+    "slackSeconds": 1.075,
+    "fits": true,
+    "leadingEdge": {
+     "applied": false,
+     "liftDb": 0.0,
+     "headMs": 0.0
+    }
+   },
+   {
+    "id": "mech-06-accounting",
+    "anchor": 4,
+    "at": null,
+    "caption": "The accounting is exact, and it is the reason.",
+    "startSeconds": 58.7,
+    "audioSeconds": 6.922,
+    "nextLineSeconds": 66.667,
+    "slackSeconds": 1.045,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 9.27,
+     "headMs": 30.0,
+     "speakingDb": -21.97,
+     "openingDb": -22.75,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9516
+    }
+   },
+   {
+    "id": "mech-06-bars",
+    "anchor": 5,
+    "at": null,
+    "caption": "Drag takes energy out of the orbit. Call it one unit.",
+    "startSeconds": 66.667,
+    "audioSeconds": 15.83,
+    "nextLineSeconds": 83.867,
+    "slackSeconds": 1.37,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 13.15,
+     "headMs": 35.0,
+     "speakingDb": -19.57,
+     "openingDb": -19.33,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9357
+    }
+   },
+   {
+    "id": "mech-06-runaway",
+    "anchor": 8,
+    "at": null,
+    "caption": "And it does not settle there.",
+    "startSeconds": 83.867,
+    "audioSeconds": 13.322,
+    "nextLineSeconds": 98.267,
+    "slackSeconds": 1.078,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 13.32,
+     "headMs": 90.0,
+     "speakingDb": -19.6,
+     "openingDb": -23.48,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.8441
+    }
+   },
+   {
+    "id": "mech-06-arrives-early",
+    "anchor": 10,
+    "at": null,
+    "caption": "What you notice first is not the altitude.",
+    "startSeconds": 98.267,
+    "audioSeconds": 10.397,
+    "nextLineSeconds": 110.833,
+    "slackSeconds": 2.169,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 15.99,
+     "headMs": 45.0,
+     "speakingDb": -20.3,
+     "openingDb": -18.96,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9552
+    }
+   },
+   {
+    "id": "mech-06-storm",
+    "anchor": 11,
+    "at": null,
+    "caption": "A geomagnetic storm heats the thermosphere.",
+    "startSeconds": 110.833,
+    "audioSeconds": 14.211,
+    "nextLineSeconds": 130.267,
+    "slackSeconds": 5.223,
+    "fits": true,
+    "leadingEdge": {
+     "applied": true,
+     "liftDb": 8.99,
+     "headMs": 35.0,
+     "speakingDb": -19.56,
+     "openingDb": -20.02,
+     "clampedAtCeiling": false,
+     "peakAfter": 0.9084
+    }
+   }
+  ]
+ }
+]

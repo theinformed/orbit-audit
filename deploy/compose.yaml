@@ -1,0 +1,49 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: deploy/web.Dockerfile
+    volumes:
+      - ./runtime/data:/usr/share/nginx/html/data:ro
+      # Operations pages (watchdog, discovery queue). Served ONLY behind the
+      # Caddy forward_auth route /space/ops/*, never from the public /space/*
+      # handler. Kept out of runtime/data so the artifact pruner and the
+      # manifest-only publish gate cannot reach it either.
+      - ./runtime/review:/usr/share/nginx/html/ops:ro
+      # The ONLY writable path in this container, and the only one that is not
+      # under the document root. It holds the cadence request: a file whose
+      # NAME is the whole message, written by the allow-listed PUT endpoints in
+      # deploy/nginx.conf and read by ops/cadence.py on bigmem after the
+      # publish cycle pulls it. Nothing is ever served from here -- the same
+      # `limit_except PUT` that allows the write forbids reading it back -- and
+      # nothing on this machine ever executes any part of it.
+      #
+      # nginx's workers run as uid 101, so the host directory has to be owned
+      # by 101 for the write to succeed:
+      #   install -d -o 101 -g 101 -m 755 runtime/cadence-requests
+      - ./runtime/cadence-requests:/var/lib/space-ops:rw
+    ports:
+      - "127.0.0.1:${SPACE_WEB_PORT:-8091}:8080"
+    networks:
+      default:
+      caddy:
+        aliases:
+          - space-web
+    mem_limit: 128m
+    memswap_limit: 160m
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx:size=32m,noexec,nosuid
+      - /var/run:size=2m,noexec,nosuid
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+networks:
+  caddy:
+    external: true
+    name: openclaw_default

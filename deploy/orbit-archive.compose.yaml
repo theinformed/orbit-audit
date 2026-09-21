@@ -1,0 +1,62 @@
+# The orbit-history archive server. Runs on bigmem-PC, NOT on the VPS.
+#
+#   cd ~/space-teaching-aid && docker compose \
+#     --project-directory /home/sdegan/space-teaching-aid \
+#     -f deploy/orbit-archive.compose.yaml up -d --build
+#
+# --project-directory IS REQUIRED and is not decoration. Compose resolves every
+# relative path in this file against the PROJECT directory, and without the
+# flag that is `deploy/`, not the repository root: the build context becomes
+# deploy/, the Dockerfile is looked for at deploy/deploy/... and the shard
+# mount points at a directory that does not exist. Measured, not guessed --
+# omitting it fails with `lstat .../deploy/deploy: no such file or directory`.
+#
+# THE BIND ADDRESS IS THE SECURITY BOUNDARY. `${ORBIT_ARCHIVE_BIND}:8096:8080`
+# publishes this on one private address ONLY. Docker's default (`8096:8080`)
+# would put it on 0.0.0.0, which on this machine means the home LAN and
+# anything the router forwards. Do not "simplify" this line, and do not set
+# ORBIT_ARCHIVE_BIND to 0.0.0.0. Verify after any change with
+#   ss -lntp | grep 8096
+# and expect exactly one row, reading the address you bound.
+#
+# A consequence worth knowing: if wg0 is down when this container starts, the
+# bind fails and the container will not come up, because the address does not
+# exist. That is the correct failure -- it cannot silently fall back to a
+# wider interface -- but it means WireGuard is a start-order dependency.
+# `restart: unless-stopped` retries once the interface returns.
+#
+# NO WIREGUARD CONFIGURATION IS INVOLVED IN THIS FILE. The tunnel is used as
+# found. This is a bind address in a service, nothing more.
+name: space-orbit-archive
+
+services:
+  orbit-archive:
+    build:
+      context: .
+      dockerfile: deploy/orbit-archive.Dockerfile
+    container_name: space-orbit-archive
+    volumes:
+      # The live publish workspace, read-only. The server's location regex,
+      # not this mount, is what decides that only the 256 orbit-history shards
+      # have a URL -- the mount is the whole ~30 GB artifact tree.
+      - ./public/data/artifacts:/srv/orbit-history:ro
+    ports:
+      - "${ORBIT_ARCHIVE_BIND:-127.0.0.1}:8096:8080"
+    mem_limit: 128m
+    memswap_limit: 160m
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx:size=32m,noexec,nosuid
+      - /var/run:size=2m,noexec,nosuid
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/healthz | grep -qx ok"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

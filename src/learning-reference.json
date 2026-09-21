@@ -1,0 +1,31 @@
+{
+  "purpose": "Fixed teaching calculations and explicit gaps; not a live data product or independent validation of quoted site samples.",
+  "calculations": {
+    "drag": {
+      "formula": "a = rho * (mu / (R + h)) / (2 * B)",
+      "rho_kg_m3": 2.5e-12,
+      "mu_m3_s2": 398600441800000.0,
+      "R_m": 6378137,
+      "h_m": 420000,
+      "B_kg_m2": 100,
+      "assumptions": "Circular speed; atmosphere rotation and winds omitted; quiet reference density has no epoch."
+    },
+    "plasma_frequency": "foF2_MHz = 8.98e-6 * sqrt(Ne_m-3)",
+    "gps_l1": "Range error = 40.3 * TEC / f^2; TEC = 1e16 electrons/m2; f = 1.57542e9 Hz; result approximately 0.1624 m.",
+    "adiabatic_energy": "10 keV * (8 / 4)^3 = 80 keV; ideal dipole adiabatic example, not all particle trajectories.",
+    "pressure": "Proton dynamic pressure n*m_p*V^2 = 1.6726e-6*n_cm-3*V_km-s^2 nPa; helium excluded.",
+    "drap_ratio": "(20 / 5)^1.5 = 8; same HAF and path convention.",
+    "ground_track": "360 degrees * 94 min / 1436.068 min sidereal day = 23.56 degrees; the legacy 23.7-degree quote is rounded more coarsely than this calculation supports.",
+    "footprint": "lambda = acos((R/(R+h))*cos(epsilon))-epsilon; R=6378.137 km, h=500 km; masks 0 and 10 degrees; compare spherical cap areas proportional to 1-cos(lambda).",
+    "orbit_speed": "v=sqrt(mu/(R+h)); T=2*pi*sqrt((R+h)^3/mu); mu=398600 km3/s2 and R=6378 km for mechanism video examples."
+  },
+  "provenance_gaps": [
+    "Thermosphere 2.27x Gannon ratio: exact WAM frame pair and averaging record absent.",
+    "Thermosphere 4.7x spatial spread: epoch and extrema locations absent.",
+    "Plasmasphere 2319 km movement: 25-frame window recorded on 2026-08-14 in src/plasmapause-chart.ts; original frames absent.",
+    "IGRF 18.3 microtesla at 500 km: epoch and minimisation record absent.",
+    "DPS factor-of-two accuracy: validation dataset absent.",
+    "Magnetopause quiet/strong 13.5 to 5.6 Re comparison: exact pressure/Bz pair absent.",
+    "Solar-wind latency sample: observation window absent."
+  ]
+}

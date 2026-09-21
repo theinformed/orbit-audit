@@ -1,0 +1,14 @@
+{
+  "evidence": "schematic",
+  "source": "NOAA WAM quiet-time reference values quoted in src/thermosphere-volume.ts",
+  "points": [
+    { "altitudeKm": 120, "densityKgM3": 1.67e-8, "label": "1.67×10⁻⁸" },
+    { "altitudeKm": 420, "densityKgM3": 2.50e-12, "label": "2.50×10⁻¹²" },
+    { "altitudeKm": 1000, "densityKgM3": 3.07e-15, "label": "3.07×10⁻¹⁵" }
+  ],
+  "headline": "Nearly seven orders of magnitude",
+  "interpolation": "Dashed line: log-linear interpolation",
+  "caveat": "No frame measures a particular moment.",
+  "durationSeconds": 20.9,
+  "posterSeconds": 8
+}

@@ -1,0 +1,43 @@
+{
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "lines": [
+  {
+   "id": "starlink-2022-chart-01",
+   "scene": "starlink-2022-chart",
+   "note": "Opens the scene. The altitude is the whole story, so it lands in the first sentence.",
+   "text": "On the third of February 2022, a Falcon 9 put forty-nine Starlink satellites into a deliberately low orbit — a perigee of about two hundred and ten kilometres."
+  },
+  {
+   "id": "starlink-2022-chart-02",
+   "scene": "starlink-2022-chart",
+   "note": "Answers the objection before it forms: why would anyone insert that low.",
+   "text": "That altitude is a choice. A satellite that checks out badly down there comes back on its own within weeks, instead of leaving broken hardware in a crowded shell."
+  },
+  {
+   "id": "starlink-2022-chart-03",
+   "scene": "starlink-2022-chart",
+   "note": "Beat: storm onset. The understatement is the point of the whole event. ROUND-TRIP MISMATCH IS EXPECTED HERE AND THE AUDIO IS GOOD: written \"a G one\", transcribed \"a G1\". The comparator runs on the spoken text, so the two can never agree, and the audio measures -19.5 dB mean / -0.4 dB peak, in family with the other five. Do not re-render to satisfy it: the cache key is the spoken text, so any rewording re-bills the line AND breaks the stitching chain for every line after it, to change nothing a listener can hear.",
+   "text": "The storm that arrived the next day was minor — a G one, the bottom of the scale, the kind of disturbance nobody plans around."
+  },
+  {
+   "id": "starlink-2022-chart-04",
+   "scene": "starlink-2022-chart",
+   "note": "The mechanism. Neutral density, not plasma -- the distinction this site exists to teach.",
+   "text": "But a geomagnetic storm heats the upper atmosphere, and heated air expands. The air got thicker at exactly the altitude these spacecraft were sitting at, and drag rose with it."
+  },
+  {
+   "id": "starlink-2022-chart-05",
+   "scene": "starlink-2022-chart",
+   "note": "Beat: divergence. The picture must reach separation exactly under 'watch the traces separate'.",
+   "text": "Watch the traces separate. Eleven climb out. The other thirty-eight never gain on the atmosphere — each pass costs more than the last, and the descent runs away."
+  },
+  {
+   "id": "starlink-2022-chart-06",
+   "scene": "starlink-2022-chart",
+   "note": "Beat: reentry, then the wrap-up. The one sentence a reader should still have next week.",
+   "text": "Thirty-eight reentered within days, and left no debris, because that was the point of the low insertion. They were not killed by radiation, or by particles hitting electronics. They were killed by air."
+  }
+ ]
+}

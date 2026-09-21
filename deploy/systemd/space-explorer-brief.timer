@@ -1,0 +1,12 @@
+[Unit]
+Description=Check every five minutes whether the teaching brief needs rewriting
+
+[Timer]
+OnBootSec=6min
+OnUnitActiveSec=5min
+RandomizedDelaySec=90
+Persistent=true
+Unit=space-explorer-brief.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,6221 @@
+{
+ "storm": {
+  "kind": "geomagnetic-storm-indices",
+  "status": "model-and-observed",
+  "validAt": "2026-08-08T02:41:20Z",
+  "drivers": {
+   "observedAt": "2026-08-08T02:34:00Z",
+   "propagatedArrivalAt": "2026-08-08T03:53:16Z",
+   "speedKps": 265.9,
+   "densityCm3": 7.77,
+   "temperatureK": 42524.0,
+   "bxNt": -1.32,
+   "byNt": -0.67,
+   "bzGsmNt": 1.5,
+   "btNt": 2.53,
+   "vxKps": -265.4,
+   "vyKps": -2.8,
+   "vzKps": -15.9,
+   "dynamicPressureNpa": 0.9189,
+   "magneticPressureNpa": 0.00255
+  },
+  "derived": {
+   "clockAngleDeg": 335.9,
+   "transverseImfNt": 1.643,
+   "newellCoupling": 36.4,
+   "newellUnits": "(km/s)^(4/3) nT^(2/3), unnormalised as published",
+   "newellCitation": "Newell et al. (2007) JGR 112 A01206, doi:10.1029/2006JA012015",
+   "newellCalibration": [
+    {
+     "label": "very quiet",
+     "value": 0,
+     "representativeBzNt": 3.0
+    },
+    {
+     "label": "quiet",
+     "value": 4773,
+     "representativeBzNt": -2.0
+    },
+    {
+     "label": "moderate",
+     "value": 10123,
+     "representativeBzNt": -5.0
+    },
+    {
+     "label": "storm",
+     "value": 27421,
+     "representativeBzNt": -15.0
+    },
+    {
+     "label": "severe",
+     "value": 60036,
+     "representativeBzNt": -30.0
+    },
+    {
+     "label": "extreme",
+     "value": 153333,
+     "representativeBzNt": -60.0
+    }
+   ],
+   "newellCalibrationNote": "A band scale of representative disturbed conditions, not a lookup table on IMF Bz: each published value implies a different solar-wind speed, rising from about 400 km/s at the quiet end to about 1000 km/s at the extreme end.",
+   "epsilonGw": 0.044,
+   "epsilonNote": "Akasofu 1981. Shown for historical context only: Lockwood (2019) identified an error in its theoretical basis and Finch & Lockwood (2007) found it performs worse than other coupling functions.",
+   "boyleCpcpKv": 7.3,
+   "boyleSaturationKv": 250.0,
+   "boyleNote": "The Boyle regression is linear; the observed cross-polar-cap potential saturates near 200-250 kV. The uncapped value is published so the saturation line can be drawn rather than hidden.",
+   "speedKps": 265.9
+  },
+  "dst": {
+   "modelled": {
+    "status": "model",
+    "label": "MODELLED Dst - a physics-model estimate, not a measurement",
+    "source": "NOAA Geospace SWMF dst_sm (US Government work, public domain)",
+    "url": "https://services.swpc.noaa.gov/json/geospace/geospace_dst_1_hour.json",
+    "cadenceMinutes": 1,
+    "latestNt": 3.01,
+    "latestAt": "2026-08-08T03:48:00Z",
+    "forwardLeadMinutes": 66.7,
+    "note": "The same operational Geospace/SWMF run whose magnetopause driver, cut planes and RBE electron fields this site already ingests.",
+    "series": [
+     {
+      "at": "2026-08-08T01:40:00Z",
+      "dstNt": 2.71907
+     },
+     {
+      "at": "2026-08-08T01:41:00Z",
+      "dstNt": 2.9593599
+     },
+     {
+      "at": "2026-08-08T01:42:00Z",
+      "dstNt": 3.1398399
+     },
+     {
+      "at": "2026-08-08T01:43:00Z",
+      "dstNt": 3.2994499
+     },
+     {
+      "at": "2026-08-08T01:44:00Z",
+      "dstNt": 3.46733
+     },
+     {
+      "at": "2026-08-08T01:45:00Z",
+      "dstNt": 3.6528101
+     },
+     {
+      "at": "2026-08-08T01:46:00Z",
+      "dstNt": 3.7871699
+     },
+     {
+      "at": "2026-08-08T01:47:00Z",
+      "dstNt": 3.87725
+     },
+     {
+      "at": "2026-08-08T01:48:00Z",
+      "dstNt": 3.8936999
+     },
+     {
+      "at": "2026-08-08T01:49:00Z",
+      "dstNt": 3.8617201
+     },
+     {
+      "at": "2026-08-08T01:50:00Z",
+      "dstNt": 3.8380201
+     },
+     {
+      "at": "2026-08-08T01:51:00Z",
+      "dstNt": 3.84305
+     },
+     {
+      "at": "2026-08-08T01:52:00Z",
+      "dstNt": 3.85709
+     },
+     {
+      "at": "2026-08-08T01:53:00Z",
+      "dstNt": 3.8768699
+     },
+     {
+      "at": "2026-08-08T01:54:00Z",
+      "dstNt": 3.92434
+     },
+     {
+      "at": "2026-08-08T01:55:00Z",
+      "dstNt": 4.0005498
+     },
+     {
+      "at": "2026-08-08T01:56:00Z",
+      "dstNt": 4.0795298
+     },
+     {
+      "at": "2026-08-08T01:57:00Z",
+      "dstNt": 4.1839499
+     },
+     {
+      "at": "2026-08-08T01:58:00Z",
+      "dstNt": 4.3027301
+     },
+     {
+      "at": "2026-08-08T01:59:00Z",
+      "dstNt": 4.3869801
+     },
+     {
+      "at": "2026-08-08T02:00:00Z",
+      "dstNt": 4.4463501
+     },
+     {
+      "at": "2026-08-08T02:01:00Z",
+      "dstNt": 4.4850202
+     },
+     {
+      "at": "2026-08-08T02:02:00Z",
+      "dstNt": 4.4951
+     },
+     {
+      "at": "2026-08-08T02:03:00Z",
+      "dstNt": 4.4790301
+     },
+     {
+      "at": "2026-08-08T02:04:00Z",
+      "dstNt": 4.4276299
+     },
+     {
+      "at": "2026-08-08T02:05:00Z",
+      "dstNt": 4.3455
+     },
+     {
+      "at": "2026-08-08T02:06:00Z",
+      "dstNt": 4.2588801
+     },
+     {
+      "at": "2026-08-08T02:07:00Z",
+      "dstNt": 4.17907
+     },
+     {
+      "at": "2026-08-08T02:08:00Z",
+      "dstNt": 4.1184702
+     },
+     {
+      "at": "2026-08-08T02:09:00Z",
+      "dstNt": 4.0680499
+     },
+     {
+      "at": "2026-08-08T02:10:00Z",
+      "dstNt": 4.0335302
+     },
+     {
+      "at": "2026-08-08T02:11:00Z",
+      "dstNt": 3.99019
+     },
+     {
+      "at": "2026-08-08T02:12:00Z",
+      "dstNt": 3.9556701
+     },
+     {
+      "at": "2026-08-08T02:13:00Z",
+      "dstNt": 3.9315
+     },
+     {
+      "at": "2026-08-08T02:14:00Z",
+      "dstNt": 3.9198301
+     },
+     {
+      "at": "2026-08-08T02:15:00Z",
+      "dstNt": 3.9075501
+     },
+     {
+      "at": "2026-08-08T02:16:00Z",
+      "dstNt": 3.89396
+     },
+     {
+      "at": "2026-08-08T02:17:00Z",
+      "dstNt": 3.8901999
+     },
+     {
+      "at": "2026-08-08T02:18:00Z",
+      "dstNt": 3.8815501
+     },
+     {
+      "at": "2026-08-08T02:19:00Z",
+      "dstNt": 3.8550301
+     },
+     {
+      "at": "2026-08-08T02:20:00Z",
+      "dstNt": 3.8122699
+     },
+     {
+      "at": "2026-08-08T02:21:00Z",
+      "dstNt": 3.78562
+     },
+     {
+      "at": "2026-08-08T02:22:00Z",
+      "dstNt": 3.74227
+     },
+     {
+      "at": "2026-08-08T02:23:00Z",
+      "dstNt": 3.70028
+     },
+     {
+      "at": "2026-08-08T02:24:00Z",
+      "dstNt": 3.6770899
+     },
+     {
+      "at": "2026-08-08T02:25:00Z",
+      "dstNt": 3.6660199
+     },
+     {
+      "at": "2026-08-08T02:26:00Z",
+      "dstNt": 3.65271
+     },
+     {
+      "at": "2026-08-08T02:27:00Z",
+      "dstNt": 3.6619699
+     },
+     {
+      "at": "2026-08-08T02:28:00Z",
+      "dstNt": 3.7052701
+     },
+     {
+      "at": "2026-08-08T02:29:00Z",
+      "dstNt": 3.7686501
+     },
+     {
+      "at": "2026-08-08T02:30:00Z",
+      "dstNt": 3.82828
+     },
+     {
+      "at": "2026-08-08T02:31:00Z",
+      "dstNt": 3.87519
+     },
+     {
+      "at": "2026-08-08T02:32:00Z",
+      "dstNt": 3.92448
+     },
+     {
+      "at": "2026-08-08T02:33:00Z",
+      "dstNt": 3.9832399
+     },
+     {
+      "at": "2026-08-08T02:34:00Z",
+      "dstNt": 4.0351701
+     },
+     {
+      "at": "2026-08-08T02:35:00Z",
+      "dstNt": 4.0576301
+     },
+     {
+      "at": "2026-08-08T02:36:00Z",
+      "dstNt": 4.1061401
+     },
+     {
+      "at": "2026-08-08T02:37:00Z",
+      "dstNt": 4.16327
+     },
+     {
+      "at": "2026-08-08T02:38:00Z",
+      "dstNt": 4.2027798
+     },
+     {
+      "at": "2026-08-08T02:39:00Z",
+      "dstNt": 4.2217202
+     },
+     {
+      "at": "2026-08-08T02:40:00Z",
+      "dstNt": 4.1989002
+     },
+     {
+      "at": "2026-08-08T02:41:00Z",
+      "dstNt": 4.1712599
+     },
+     {
+      "at": "2026-08-08T02:42:00Z",
+      "dstNt": 4.1512499
+     },
+     {
+      "at": "2026-08-08T02:43:00Z",
+      "dstNt": 4.1221199
+     },
+     {
+      "at": "2026-08-08T02:44:00Z",
+      "dstNt": 4.07054
+     },
+     {
+      "at": "2026-08-08T02:45:00Z",
+      "dstNt": 3.96806
+     },
+     {
+      "at": "2026-08-08T02:46:00Z",
+      "dstNt": 3.86922
+     },
+     {
+      "at": "2026-08-08T02:47:00Z",
+      "dstNt": 3.79527
+     },
+     {
+      "at": "2026-08-08T02:48:00Z",
+      "dstNt": 3.6760001
+     },
+     {
+      "at": "2026-08-08T02:49:00Z",
+      "dstNt": 3.4703701
+     },
+     {
+      "at": "2026-08-08T02:50:00Z",
+      "dstNt": 3.3117199
+     },
+     {
+      "at": "2026-08-08T02:51:00Z",
+      "dstNt": 3.2111399
+     },
+     {
+      "at": "2026-08-08T02:52:00Z",
+      "dstNt": 3.1131699
+     },
+     {
+      "at": "2026-08-08T02:53:00Z",
+      "dstNt": 3.1193099
+     },
+     {
+      "at": "2026-08-08T02:54:00Z",
+      "dstNt": 3.19927
+     },
+     {
+      "at": "2026-08-08T02:55:00Z",
+      "dstNt": 3.29965
+     },
+     {
+      "at": "2026-08-08T02:56:00Z",
+      "dstNt": 3.4043
+     },
+     {
+      "at": "2026-08-08T02:57:00Z",
+      "dstNt": 3.4599099
+     },
+     {
+      "at": "2026-08-08T02:58:00Z",
+      "dstNt": 3.5132999
+     },
+     {
+      "at": "2026-08-08T02:59:00Z",
+      "dstNt": 3.58004
+     },
+     {
+      "at": "2026-08-08T03:00:00Z",
+      "dstNt": 3.6299601
+     },
+     {
+      "at": "2026-08-08T03:01:00Z",
+      "dstNt": 3.63592
+     },
+     {
+      "at": "2026-08-08T03:02:00Z",
+      "dstNt": 3.6171701
+     },
+     {
+      "at": "2026-08-08T03:03:00Z",
+      "dstNt": 3.6266301
+     },
+     {
+      "at": "2026-08-08T03:04:00Z",
+      "dstNt": 3.6591699
+     },
+     {
+      "at": "2026-08-08T03:05:00Z",
+      "dstNt": 3.7339001
+     },
+     {
+      "at": "2026-08-08T03:06:00Z",
+      "dstNt": 3.8431599
+     },
+     {
+      "at": "2026-08-08T03:07:00Z",
+      "dstNt": 3.95821
+     },
+     {
+      "at": "2026-08-08T03:08:00Z",
+      "dstNt": 4.1107602
+     },
+     {
+      "at": "2026-08-08T03:09:00Z",
+      "dstNt": 4.2576199
+     },
+     {
+      "at": "2026-08-08T03:10:00Z",
+      "dstNt": 4.1198902
+     },
+     {
+      "at": "2026-08-08T03:11:00Z",
+      "dstNt": 3.8096001
+     },
+     {
+      "at": "2026-08-08T03:12:00Z",
+      "dstNt": 3.5855801
+     },
+     {
+      "at": "2026-08-08T03:13:00Z",
+      "dstNt": 3.4544799
+     },
+     {
+      "at": "2026-08-08T03:14:00Z",
+      "dstNt": 3.4709799
+     },
+     {
+      "at": "2026-08-08T03:15:00Z",
+      "dstNt": 3.5212901
+     },
+     {
+      "at": "2026-08-08T03:16:00Z",
+      "dstNt": 3.6229899
+     },
+     {
+      "at": "2026-08-08T03:17:00Z",
+      "dstNt": 3.71561
+     },
+     {
+      "at": "2026-08-08T03:18:00Z",
+      "dstNt": 3.77755
+     },
+     {
+      "at": "2026-08-08T03:19:00Z",
+      "dstNt": 3.8479199
+     },
+     {
+      "at": "2026-08-08T03:20:00Z",
+      "dstNt": 3.8870201
+     },
+     {
+      "at": "2026-08-08T03:21:00Z",
+      "dstNt": 3.77529
+     },
+     {
+      "at": "2026-08-08T03:22:00Z",
+      "dstNt": 3.4198401
+     },
+     {
+      "at": "2026-08-08T03:23:00Z",
+      "dstNt": 3.2133801
+     },
+     {
+      "at": "2026-08-08T03:24:00Z",
+      "dstNt": 3.0929201
+     },
+     {
+      "at": "2026-08-08T03:25:00Z",
+      "dstNt": 3.0224099
+     },
+     {
+      "at": "2026-08-08T03:26:00Z",
+      "dstNt": 2.98808
+     },
+     {
+      "at": "2026-08-08T03:27:00Z",
+      "dstNt": 2.9528699
+     },
+     {
+      "at": "2026-08-08T03:28:00Z",
+      "dstNt": 2.8929
+     },
+     {
+      "at": "2026-08-08T03:29:00Z",
+      "dstNt": 2.8389001
+     },
+     {
+      "at": "2026-08-08T03:30:00Z",
+      "dstNt": 2.9406199
+     },
+     {
+      "at": "2026-08-08T03:31:00Z",
+      "dstNt": 3.2246499
+     },
+     {
+      "at": "2026-08-08T03:32:00Z",
+      "dstNt": 3.35549
+     },
+     {
+      "at": "2026-08-08T03:33:00Z",
+      "dstNt": 3.4326401
+     },
+     {
+      "at": "2026-08-08T03:34:00Z",
+      "dstNt": 3.50211
+     },
+     {
+      "at": "2026-08-08T03:35:00Z",
+      "dstNt": 3.5299201
+     },
+     {
+      "at": "2026-08-08T03:36:00Z",
+      "dstNt": 3.4274299
+     },
+     {
+      "at": "2026-08-08T03:37:00Z",
+      "dstNt": 3.3089499
+     },
+     {
+      "at": "2026-08-08T03:38:00Z",
+      "dstNt": 3.2344501
+     },
+     {
+      "at": "2026-08-08T03:39:00Z",
+      "dstNt": 3.17607
+     },
+     {
+      "at": "2026-08-08T03:40:00Z",
+      "dstNt": 3.1405799
+     },
+     {
+      "at": "2026-08-08T03:41:00Z",
+      "dstNt": 3.1447301
+     },
+     {
+      "at": "2026-08-08T03:42:00Z",
+      "dstNt": 3.1280301
+     },
+     {
+      "at": "2026-08-08T03:43:00Z",
+      "dstNt": 3.0336001
+     },
+     {
+      "at": "2026-08-08T03:44:00Z",
+      "dstNt": 2.9084001
+     },
+     {
+      "at": "2026-08-08T03:45:00Z",
+      "dstNt": 2.8967099
+     },
+     {
+      "at": "2026-08-08T03:46:00Z",
+      "dstNt": 2.9549301
+     },
+     {
+      "at": "2026-08-08T03:47:00Z",
+      "dstNt": 3.0086
+     },
+     {
+      "at": "2026-08-08T03:48:00Z",
+      "dstNt": 3.0098901
+     }
+    ]
+   },
+   "observed": {
+    "status": "observed",
+    "label": "OBSERVED Dst3 - three USGS observatories (HON, SJG, GUA)",
+    "source": "USGS Geomagnetism Program (US Government work, public domain)",
+    "url": "https://geomag.usgs.gov/ws/data/?id=USGS&elements=Dst3,Dst4&format=json&sampling_period=60",
+    "cadenceMinutes": 1,
+    "publishedCadenceMinutes": 5,
+    "latestNt": 20.54,
+    "latestAt": "2026-08-08T02:37:00Z",
+    "latencySeconds": 260,
+    "note": "Dst3 uses a USGS-only station set and runs about fourteen minutes fresher than the four-observatory Dst4; the two differ by a couple of nT because they are different station sets, not because either is wrong.",
+    "series": [
+     {
+      "at": "2026-08-08T00:04:00Z",
+      "dstNt": 19.504
+     },
+     {
+      "at": "2026-08-08T00:09:00Z",
+      "dstNt": 19.372
+     },
+     {
+      "at": "2026-08-08T00:14:00Z",
+      "dstNt": 19.269
+     },
+     {
+      "at": "2026-08-08T00:19:00Z",
+      "dstNt": 19.207
+     },
+     {
+      "at": "2026-08-08T00:24:00Z",
+      "dstNt": 19.221
+     },
+     {
+      "at": "2026-08-08T00:29:00Z",
+      "dstNt": 19.255
+     },
+     {
+      "at": "2026-08-08T00:34:00Z",
+      "dstNt": 19.501
+     },
+     {
+      "at": "2026-08-08T00:39:00Z",
+      "dstNt": 19.978
+     },
+     {
+      "at": "2026-08-08T00:44:00Z",
+      "dstNt": 20.149
+     },
+     {
+      "at": "2026-08-08T00:49:00Z",
+      "dstNt": 20.161
+     },
+     {
+      "at": "2026-08-08T00:54:00Z",
+      "dstNt": 20.303
+     },
+     {
+      "at": "2026-08-08T00:59:00Z",
+      "dstNt": 20.346
+     },
+     {
+      "at": "2026-08-08T01:04:00Z",
+      "dstNt": 20.023
+     },
+     {
+      "at": "2026-08-08T01:09:00Z",
+      "dstNt": 19.879
+     },
+     {
+      "at": "2026-08-08T01:14:00Z",
+      "dstNt": 20.022
+     },
+     {
+      "at": "2026-08-08T01:19:00Z",
+      "dstNt": 19.822
+     },
+     {
+      "at": "2026-08-08T01:24:00Z",
+      "dstNt": 19.583
+     },
+     {
+      "at": "2026-08-08T01:29:00Z",
+      "dstNt": 19.302
+     },
+     {
+      "at": "2026-08-08T01:34:00Z",
+      "dstNt": 18.931
+     },
+     {
+      "at": "2026-08-08T01:39:00Z",
+      "dstNt": 18.886
+     },
+     {
+      "at": "2026-08-08T01:44:00Z",
+      "dstNt": 19.189
+     },
+     {
+      "at": "2026-08-08T01:49:00Z",
+      "dstNt": 19.806
+     },
+     {
+      "at": "2026-08-08T01:54:00Z",
+      "dstNt": 20.963
+     },
+     {
+      "at": "2026-08-08T01:59:00Z",
+      "dstNt": 21.245
+     },
+     {
+      "at": "2026-08-08T02:04:00Z",
+      "dstNt": 21.385
+     },
+     {
+      "at": "2026-08-08T02:09:00Z",
+      "dstNt": 21.509
+     },
+     {
+      "at": "2026-08-08T02:14:00Z",
+      "dstNt": 22.51
+     },
+     {
+      "at": "2026-08-08T02:19:00Z",
+      "dstNt": 23.116
+     },
+     {
+      "at": "2026-08-08T02:24:00Z",
+      "dstNt": 22.588
+     },
+     {
+      "at": "2026-08-08T02:29:00Z",
+      "dstNt": 21.529
+     },
+     {
+      "at": "2026-08-08T02:34:00Z",
+      "dstNt": 20.742
+     },
+     {
+      "at": "2026-08-08T02:37:00Z",
+      "dstNt": 20.544
+     }
+    ],
+    "dst4Series": [
+     {
+      "at": "2026-08-08T00:04:00Z",
+      "dstNt": 11.318
+     },
+     {
+      "at": "2026-08-08T00:09:00Z",
+      "dstNt": 11.153
+     },
+     {
+      "at": "2026-08-08T00:14:00Z",
+      "dstNt": 11.072
+     },
+     {
+      "at": "2026-08-08T00:19:00Z",
+      "dstNt": 11.064
+     },
+     {
+      "at": "2026-08-08T00:24:00Z",
+      "dstNt": 11.094
+     },
+     {
+      "at": "2026-08-08T00:29:00Z",
+      "dstNt": 11.266
+     },
+     {
+      "at": "2026-08-08T00:34:00Z",
+      "dstNt": 11.621
+     },
+     {
+      "at": "2026-08-08T00:39:00Z",
+      "dstNt": 12.257
+     },
+     {
+      "at": "2026-08-08T00:44:00Z",
+      "dstNt": 12.659
+     },
+     {
+      "at": "2026-08-08T00:49:00Z",
+      "dstNt": 12.902
+     },
+     {
+      "at": "2026-08-08T00:54:00Z",
+      "dstNt": 13.181
+     },
+     {
+      "at": "2026-08-08T00:59:00Z",
+      "dstNt": 13.326
+     },
+     {
+      "at": "2026-08-08T01:04:00Z",
+      "dstNt": 13.27
+     },
+     {
+      "at": "2026-08-08T01:09:00Z",
+      "dstNt": 13.357
+     },
+     {
+      "at": "2026-08-08T01:14:00Z",
+      "dstNt": 13.587
+     },
+     {
+      "at": "2026-08-08T01:19:00Z",
+      "dstNt": 13.458
+     },
+     {
+      "at": "2026-08-08T01:24:00Z",
+      "dstNt": 13.433
+     },
+     {
+      "at": "2026-08-08T01:29:00Z",
+      "dstNt": 13.42
+     },
+     {
+      "at": "2026-08-08T01:34:00Z",
+      "dstNt": 13.389
+     },
+     {
+      "at": "2026-08-08T01:39:00Z",
+      "dstNt": 13.648
+     },
+     {
+      "at": "2026-08-08T01:44:00Z",
+      "dstNt": 14.182
+     },
+     {
+      "at": "2026-08-08T01:49:00Z",
+      "dstNt": 14.818
+     },
+     {
+      "at": "2026-08-08T01:54:00Z",
+      "dstNt": 15.98
+     },
+     {
+      "at": "2026-08-08T01:59:00Z",
+      "dstNt": 16.469
+     },
+     {
+      "at": "2026-08-08T02:04:00Z",
+      "dstNt": 16.773
+     },
+     {
+      "at": "2026-08-08T02:09:00Z",
+      "dstNt": 17.112
+     },
+     {
+      "at": "2026-08-08T02:14:00Z",
+      "dstNt": 18.24
+     },
+     {
+      "at": "2026-08-08T02:19:00Z",
+      "dstNt": 19.139
+     }
+    ],
+    "dst4LatestNt": 19.14,
+    "dst4LatestAt": "2026-08-08T02:19:00Z"
+   },
+   "kyoto": {
+    "status": "observed",
+    "label": "Kyoto quicklook Dst, hourly - the index the world quotes",
+    "source": "WDC for Geomagnetism, Kyoto, republished by NOAA SWPC",
+    "url": "https://services.swpc.noaa.gov/products/kyoto-dst.json",
+    "cadenceMinutes": 60,
+    "latestNt": 7.0,
+    "latestAt": "2026-08-08T02:00:00Z",
+    "citation": "WDC for Geomagnetism, Kyoto - quicklook Dst, doi:10.17593/14515-74000",
+    "statusNote": "Quicklook: Kyoto states the real-time index is for monitoring only, not for scientific analysis, and that provisional-to-final revisions of 20-30 nT occur.",
+    "series": [
+     {
+      "at": "2026-08-01T03:00:00Z",
+      "dstNt": 21.0
+     },
+     {
+      "at": "2026-08-01T04:00:00Z",
+      "dstNt": 19.0
+     },
+     {
+      "at": "2026-08-01T05:00:00Z",
+      "dstNt": 17.0
+     },
+     {
+      "at": "2026-08-01T06:00:00Z",
+      "dstNt": 14.0
+     },
+     {
+      "at": "2026-08-01T07:00:00Z",
+      "dstNt": 11.0
+     },
+     {
+      "at": "2026-08-01T08:00:00Z",
+      "dstNt": 11.0
+     },
+     {
+      "at": "2026-08-01T09:00:00Z",
+      "dstNt": 13.0
+     },
+     {
+      "at": "2026-08-01T10:00:00Z",
+      "dstNt": 13.0
+     },
+     {
+      "at": "2026-08-01T11:00:00Z",
+      "dstNt": 9.0
+     },
+     {
+      "at": "2026-08-01T12:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-01T13:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-01T14:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-01T15:00:00Z",
+      "dstNt": 9.0
+     },
+     {
+      "at": "2026-08-01T16:00:00Z",
+      "dstNt": 17.0
+     },
+     {
+      "at": "2026-08-01T17:00:00Z",
+      "dstNt": 21.0
+     },
+     {
+      "at": "2026-08-01T18:00:00Z",
+      "dstNt": 22.0
+     },
+     {
+      "at": "2026-08-01T19:00:00Z",
+      "dstNt": 20.0
+     },
+     {
+      "at": "2026-08-01T20:00:00Z",
+      "dstNt": 16.0
+     },
+     {
+      "at": "2026-08-01T21:00:00Z",
+      "dstNt": 11.0
+     },
+     {
+      "at": "2026-08-01T22:00:00Z",
+      "dstNt": 8.0
+     },
+     {
+      "at": "2026-08-01T23:00:00Z",
+      "dstNt": 5.0
+     },
+     {
+      "at": "2026-08-02T00:00:00Z",
+      "dstNt": 5.0
+     },
+     {
+      "at": "2026-08-02T01:00:00Z",
+      "dstNt": 5.0
+     },
+     {
+      "at": "2026-08-02T02:00:00Z",
+      "dstNt": 9.0
+     },
+     {
+      "at": "2026-08-02T03:00:00Z",
+      "dstNt": 15.0
+     },
+     {
+      "at": "2026-08-02T04:00:00Z",
+      "dstNt": 16.0
+     },
+     {
+      "at": "2026-08-02T05:00:00Z",
+      "dstNt": 17.0
+     },
+     {
+      "at": "2026-08-02T06:00:00Z",
+      "dstNt": 14.0
+     },
+     {
+      "at": "2026-08-02T07:00:00Z",
+      "dstNt": 12.0
+     },
+     {
+      "at": "2026-08-02T08:00:00Z",
+      "dstNt": 14.0
+     },
+     {
+      "at": "2026-08-02T09:00:00Z",
+      "dstNt": 17.0
+     },
+     {
+      "at": "2026-08-02T10:00:00Z",
+      "dstNt": 20.0
+     },
+     {
+      "at": "2026-08-02T11:00:00Z",
+      "dstNt": 18.0
+     },
+     {
+      "at": "2026-08-02T12:00:00Z",
+      "dstNt": 26.0
+     },
+     {
+      "at": "2026-08-02T13:00:00Z",
+      "dstNt": 27.0
+     },
+     {
+      "at": "2026-08-02T14:00:00Z",
+      "dstNt": 27.0
+     },
+     {
+      "at": "2026-08-02T15:00:00Z",
+      "dstNt": 18.0
+     },
+     {
+      "at": "2026-08-02T16:00:00Z",
+      "dstNt": -1.0
+     },
+     {
+      "at": "2026-08-02T17:00:00Z",
+      "dstNt": -13.0
+     },
+     {
+      "at": "2026-08-02T18:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-02T19:00:00Z",
+      "dstNt": -13.0
+     },
+     {
+      "at": "2026-08-02T20:00:00Z",
+      "dstNt": -14.0
+     },
+     {
+      "at": "2026-08-02T21:00:00Z",
+      "dstNt": -17.0
+     },
+     {
+      "at": "2026-08-02T22:00:00Z",
+      "dstNt": -19.0
+     },
+     {
+      "at": "2026-08-02T23:00:00Z",
+      "dstNt": -20.0
+     },
+     {
+      "at": "2026-08-03T00:00:00Z",
+      "dstNt": -19.0
+     },
+     {
+      "at": "2026-08-03T01:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-03T02:00:00Z",
+      "dstNt": -31.0
+     },
+     {
+      "at": "2026-08-03T03:00:00Z",
+      "dstNt": -30.0
+     },
+     {
+      "at": "2026-08-03T04:00:00Z",
+      "dstNt": -28.0
+     },
+     {
+      "at": "2026-08-03T05:00:00Z",
+      "dstNt": -27.0
+     },
+     {
+      "at": "2026-08-03T06:00:00Z",
+      "dstNt": -26.0
+     },
+     {
+      "at": "2026-08-03T07:00:00Z",
+      "dstNt": -25.0
+     },
+     {
+      "at": "2026-08-03T08:00:00Z",
+      "dstNt": -24.0
+     },
+     {
+      "at": "2026-08-03T09:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-03T10:00:00Z",
+      "dstNt": -27.0
+     },
+     {
+      "at": "2026-08-03T11:00:00Z",
+      "dstNt": -28.0
+     },
+     {
+      "at": "2026-08-03T12:00:00Z",
+      "dstNt": -26.0
+     },
+     {
+      "at": "2026-08-03T13:00:00Z",
+      "dstNt": -26.0
+     },
+     {
+      "at": "2026-08-03T14:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-03T15:00:00Z",
+      "dstNt": -20.0
+     },
+     {
+      "at": "2026-08-03T16:00:00Z",
+      "dstNt": -20.0
+     },
+     {
+      "at": "2026-08-03T17:00:00Z",
+      "dstNt": -19.0
+     },
+     {
+      "at": "2026-08-03T18:00:00Z",
+      "dstNt": -20.0
+     },
+     {
+      "at": "2026-08-03T19:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-03T20:00:00Z",
+      "dstNt": -29.0
+     },
+     {
+      "at": "2026-08-03T21:00:00Z",
+      "dstNt": -39.0
+     },
+     {
+      "at": "2026-08-03T22:00:00Z",
+      "dstNt": -43.0
+     },
+     {
+      "at": "2026-08-03T23:00:00Z",
+      "dstNt": -45.0
+     },
+     {
+      "at": "2026-08-04T00:00:00Z",
+      "dstNt": -44.0
+     },
+     {
+      "at": "2026-08-04T01:00:00Z",
+      "dstNt": -35.0
+     },
+     {
+      "at": "2026-08-04T02:00:00Z",
+      "dstNt": -33.0
+     },
+     {
+      "at": "2026-08-04T03:00:00Z",
+      "dstNt": -34.0
+     },
+     {
+      "at": "2026-08-04T04:00:00Z",
+      "dstNt": -34.0
+     },
+     {
+      "at": "2026-08-04T05:00:00Z",
+      "dstNt": -30.0
+     },
+     {
+      "at": "2026-08-04T06:00:00Z",
+      "dstNt": -28.0
+     },
+     {
+      "at": "2026-08-04T07:00:00Z",
+      "dstNt": -30.0
+     },
+     {
+      "at": "2026-08-04T08:00:00Z",
+      "dstNt": -29.0
+     },
+     {
+      "at": "2026-08-04T09:00:00Z",
+      "dstNt": -28.0
+     },
+     {
+      "at": "2026-08-04T10:00:00Z",
+      "dstNt": -24.0
+     },
+     {
+      "at": "2026-08-04T11:00:00Z",
+      "dstNt": -21.0
+     },
+     {
+      "at": "2026-08-04T12:00:00Z",
+      "dstNt": -23.0
+     },
+     {
+      "at": "2026-08-04T13:00:00Z",
+      "dstNt": -28.0
+     },
+     {
+      "at": "2026-08-04T14:00:00Z",
+      "dstNt": -32.0
+     },
+     {
+      "at": "2026-08-04T15:00:00Z",
+      "dstNt": -30.0
+     },
+     {
+      "at": "2026-08-04T16:00:00Z",
+      "dstNt": -23.0
+     },
+     {
+      "at": "2026-08-04T17:00:00Z",
+      "dstNt": -16.0
+     },
+     {
+      "at": "2026-08-04T18:00:00Z",
+      "dstNt": -16.0
+     },
+     {
+      "at": "2026-08-04T19:00:00Z",
+      "dstNt": -19.0
+     },
+     {
+      "at": "2026-08-04T20:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-04T21:00:00Z",
+      "dstNt": -22.0
+     },
+     {
+      "at": "2026-08-04T22:00:00Z",
+      "dstNt": -20.0
+     },
+     {
+      "at": "2026-08-04T23:00:00Z",
+      "dstNt": -17.0
+     },
+     {
+      "at": "2026-08-05T00:00:00Z",
+      "dstNt": -18.0
+     },
+     {
+      "at": "2026-08-05T01:00:00Z",
+      "dstNt": -16.0
+     },
+     {
+      "at": "2026-08-05T02:00:00Z",
+      "dstNt": -13.0
+     },
+     {
+      "at": "2026-08-05T03:00:00Z",
+      "dstNt": -13.0
+     },
+     {
+      "at": "2026-08-05T04:00:00Z",
+      "dstNt": -12.0
+     },
+     {
+      "at": "2026-08-05T05:00:00Z",
+      "dstNt": -10.0
+     },
+     {
+      "at": "2026-08-05T06:00:00Z",
+      "dstNt": -11.0
+     },
+     {
+      "at": "2026-08-05T07:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-05T08:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-05T09:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-05T10:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-05T11:00:00Z",
+      "dstNt": -1.0
+     },
+     {
+      "at": "2026-08-05T12:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-05T13:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-05T14:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-05T15:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-05T16:00:00Z",
+      "dstNt": -1.0
+     },
+     {
+      "at": "2026-08-05T17:00:00Z",
+      "dstNt": -2.0
+     },
+     {
+      "at": "2026-08-05T18:00:00Z",
+      "dstNt": 0.0
+     },
+     {
+      "at": "2026-08-05T19:00:00Z",
+      "dstNt": -2.0
+     },
+     {
+      "at": "2026-08-05T20:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-05T21:00:00Z",
+      "dstNt": -7.0
+     },
+     {
+      "at": "2026-08-05T22:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-05T23:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-06T00:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-06T01:00:00Z",
+      "dstNt": -10.0
+     },
+     {
+      "at": "2026-08-06T02:00:00Z",
+      "dstNt": -10.0
+     },
+     {
+      "at": "2026-08-06T03:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-06T04:00:00Z",
+      "dstNt": -10.0
+     },
+     {
+      "at": "2026-08-06T05:00:00Z",
+      "dstNt": -11.0
+     },
+     {
+      "at": "2026-08-06T06:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-06T07:00:00Z",
+      "dstNt": -7.0
+     },
+     {
+      "at": "2026-08-06T08:00:00Z",
+      "dstNt": -5.0
+     },
+     {
+      "at": "2026-08-06T09:00:00Z",
+      "dstNt": -2.0
+     },
+     {
+      "at": "2026-08-06T10:00:00Z",
+      "dstNt": 0.0
+     },
+     {
+      "at": "2026-08-06T11:00:00Z",
+      "dstNt": -1.0
+     },
+     {
+      "at": "2026-08-06T12:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-06T13:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-06T14:00:00Z",
+      "dstNt": -9.0
+     },
+     {
+      "at": "2026-08-06T15:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-06T16:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-06T17:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-06T18:00:00Z",
+      "dstNt": -2.0
+     },
+     {
+      "at": "2026-08-06T19:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-06T20:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-06T21:00:00Z",
+      "dstNt": -10.0
+     },
+     {
+      "at": "2026-08-06T22:00:00Z",
+      "dstNt": -8.0
+     },
+     {
+      "at": "2026-08-06T23:00:00Z",
+      "dstNt": -6.0
+     },
+     {
+      "at": "2026-08-07T00:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-07T01:00:00Z",
+      "dstNt": -4.0
+     },
+     {
+      "at": "2026-08-07T02:00:00Z",
+      "dstNt": -1.0
+     },
+     {
+      "at": "2026-08-07T03:00:00Z",
+      "dstNt": 1.0
+     },
+     {
+      "at": "2026-08-07T04:00:00Z",
+      "dstNt": 3.0
+     },
+     {
+      "at": "2026-08-07T05:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-07T06:00:00Z",
+      "dstNt": 7.0
+     },
+     {
+      "at": "2026-08-07T07:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-07T08:00:00Z",
+      "dstNt": 8.0
+     },
+     {
+      "at": "2026-08-07T09:00:00Z",
+      "dstNt": 7.0
+     },
+     {
+      "at": "2026-08-07T10:00:00Z",
+      "dstNt": 5.0
+     },
+     {
+      "at": "2026-08-07T11:00:00Z",
+      "dstNt": 7.0
+     },
+     {
+      "at": "2026-08-07T12:00:00Z",
+      "dstNt": 3.0
+     },
+     {
+      "at": "2026-08-07T13:00:00Z",
+      "dstNt": 1.0
+     },
+     {
+      "at": "2026-08-07T14:00:00Z",
+      "dstNt": 2.0
+     },
+     {
+      "at": "2026-08-07T15:00:00Z",
+      "dstNt": 4.0
+     },
+     {
+      "at": "2026-08-07T16:00:00Z",
+      "dstNt": 8.0
+     },
+     {
+      "at": "2026-08-07T17:00:00Z",
+      "dstNt": 9.0
+     },
+     {
+      "at": "2026-08-07T18:00:00Z",
+      "dstNt": 11.0
+     },
+     {
+      "at": "2026-08-07T19:00:00Z",
+      "dstNt": 11.0
+     },
+     {
+      "at": "2026-08-07T20:00:00Z",
+      "dstNt": 10.0
+     },
+     {
+      "at": "2026-08-07T21:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-07T22:00:00Z",
+      "dstNt": 2.0
+     },
+     {
+      "at": "2026-08-07T23:00:00Z",
+      "dstNt": 1.0
+     },
+     {
+      "at": "2026-08-08T00:00:00Z",
+      "dstNt": 3.0
+     },
+     {
+      "at": "2026-08-08T01:00:00Z",
+      "dstNt": 6.0
+     },
+     {
+      "at": "2026-08-08T02:00:00Z",
+      "dstNt": 7.0
+     }
+    ]
+   },
+   "separationNote": "Three series, three evidence classes, never merged. The modelled series runs ahead of real time and the two observed series catch up to it at about four minutes and about fifty."
+  },
+  "ringCurrent": {
+   "status": "model-derived",
+   "energyJoules": 0.0,
+   "energySourceSeries": "usgs-dst3-observed",
+   "energyDstNt": 20.54,
+   "method": "Dessler-Parker-Sckopke: E = |Dst| * 2 pi B0 Re^3 / mu0 with B0 = 30100 nT, i.e. 3.892e+13 J per nT of depression.",
+   "joulesPerNt": 38918788723055.5,
+   "dipoleExternalFieldEnergyJ": 7.809703603759804e+17,
+   "relation": "Dst is not merely correlated with the ring current: the Dessler-Parker-Sckopke relation makes the low-latitude surface depression proportional to the total kinetic energy of the trapped particle population. Reading Dst IS reading the ring current.",
+   "uncertainty": "Good to about a factor of two. About 28% of the measured depression is induced inside the solid Earth; the magnetotail carries roughly a further quarter; and DPS counts particle kinetic energy only, while ionospheric Joule heating dominates the storm's actual energy budget (~81% of dissipation during the April 2023 main phase).",
+   "pressureCorrectedDst": {
+    "obrienMcPherronNt": 24.58461686354315,
+    "burtonNt": 25.398235047380407
+   },
+   "pressureCorrectionNote": "Two standard corrections for the compression contribution are published side by side. O'Brien & McPherron (2000) and Burton et al. (1975) agree at nominal solar wind and disagree by 18 nT at a 10 nPa shock. Neither is presented as the correction.",
+   "compositionModel": "The operational run's ring-current module is configured with a fixed 80% H+ / 20% O+ composition and a 10-hour decay timescale.",
+   "compositionReality": "O+ carries 6% of ring-current energy density when quiet and 21% when active, exceeds 50% in great storms, and reached over 65% at L = 5-7 in March 1991 (Daglis et al. 1999). The energy is unambiguously solar; during a big storm most of the particles carrying it came from Earth's own atmosphere."
+  },
+  "phase": {
+   "label": "quiet",
+   "rule": "Deterministic classification of the Dst trace. Initial phase: a rise of at least 10 nT above the median of the preceding six hours, with no storm minimum yet reached. Main phase: Dst at or below -30 nT and still falling over the last hour. Recovery: a minimum of -30 nT or deeper has already been reached and Dst is rising. Quiet otherwise. No model and no language model is consulted.",
+   "baselineNote": "Storm thresholds are defined on the Kyoto Dst index. Other station sets (such as USGS Dst3) carry their own baselines and can differ by 10-15 nT at the same instant, so the phase is classified from the Kyoto trace where one is available and the series used is named alongside the label.",
+   "series": "kyoto-quicklook",
+   "reason": "no Dst depression at or below -30 nT in the window",
+   "minimumNt": 1.0,
+   "minimumAt": "2026-08-07T03:00:00Z",
+   "baselineNt": 6.0,
+   "intensity": null
+  },
+  "limitations": [
+   "The modelled series is a physics-model estimate that runs ahead of real time. It is not a measurement and is never merged with the observed ones.",
+   "The Kyoto quicklook index is explicitly for monitoring only; its final values are routinely revised by 20-30 nT.",
+   "1-minute SYM-H is not available from any live public feed. Storm replay of an archived event gets a better index than this live page does.",
+   "The NOAA G-scale shown elsewhere on this site is Kp-based and cannot resolve storm onset; Dst is the physical measure."
+  ]
+ },
+ "driverSeries": [
+  {
+   "validAt": "2026-08-07T02:41:10Z",
+   "observedAt": "2026-08-07T01:25:00Z",
+   "speedKps": 276.2,
+   "densityCm3": 3.24,
+   "bzGsmNt": -0.83,
+   "bxNt": -1.21,
+   "byNt": 1.39,
+   "btNt": 2.03,
+   "dynamicPressureNpa": 0.4134,
+   "magneticPressureNpa": 0.00164,
+   "clockAngleDeg": 120.8,
+   "newellCoupling": 1709.0,
+   "subsolarStandoffRe": 12.971,
+   "flaringAlpha": 0.57339
+  },
+  {
+   "validAt": "2026-08-07T02:45:29Z",
+   "observedAt": "2026-08-07T01:30:00Z",
+   "speedKps": 278.7,
+   "densityCm3": 3.3,
+   "bzGsmNt": -0.75,
+   "bxNt": -1.56,
+   "byNt": 1.1,
+   "btNt": 2.04,
+   "dynamicPressureNpa": 0.4287,
+   "magneticPressureNpa": 0.00166,
+   "clockAngleDeg": 124.3,
+   "newellCoupling": 1586.4,
+   "subsolarStandoffRe": 12.905,
+   "flaringAlpha": 0.57335
+  },
+  {
+   "validAt": "2026-08-07T02:51:09Z",
+   "observedAt": "2026-08-07T01:35:00Z",
+   "speedKps": 276.5,
+   "densityCm3": 3.23,
+   "bzGsmNt": -0.1,
+   "bxNt": -1.08,
+   "byNt": 1.47,
+   "btNt": 1.83,
+   "dynamicPressureNpa": 0.413,
+   "magneticPressureNpa": 0.00133,
+   "clockAngleDeg": 93.9,
+   "newellCoupling": 1010.3,
+   "subsolarStandoffRe": 13.015,
+   "flaringAlpha": 0.56838
+  },
+  {
+   "validAt": "2026-08-07T02:56:29Z",
+   "observedAt": "2026-08-07T01:40:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 3.32,
+   "bzGsmNt": 0.41,
+   "bxNt": -0.57,
+   "byNt": 1.68,
+   "btNt": 1.82,
+   "dynamicPressureNpa": 0.4212,
+   "magneticPressureNpa": 0.00132,
+   "clockAngleDeg": 76.3,
+   "newellCoupling": 714.1,
+   "subsolarStandoffRe": 13.0,
+   "flaringAlpha": 0.56515
+  },
+  {
+   "validAt": "2026-08-07T03:01:25Z",
+   "observedAt": "2026-08-07T01:45:00Z",
+   "speedKps": 275.6,
+   "densityCm3": 3.32,
+   "bzGsmNt": 0.37,
+   "bxNt": -0.48,
+   "byNt": 1.63,
+   "btNt": 1.74,
+   "dynamicPressureNpa": 0.4218,
+   "magneticPressureNpa": 0.0012,
+   "clockAngleDeg": 77.2,
+   "newellCoupling": 718.1,
+   "subsolarStandoffRe": 12.995,
+   "flaringAlpha": 0.56545
+  },
+  {
+   "validAt": "2026-08-07T03:06:37Z",
+   "observedAt": "2026-08-07T01:50:00Z",
+   "speedKps": 275.0,
+   "densityCm3": 3.28,
+   "bzGsmNt": 0.19,
+   "bxNt": -0.47,
+   "byNt": 1.67,
+   "btNt": 1.74,
+   "dynamicPressureNpa": 0.4149,
+   "magneticPressureNpa": 0.0012,
+   "clockAngleDeg": 83.5,
+   "newellCoupling": 854.9,
+   "subsolarStandoffRe": 13.02,
+   "flaringAlpha": 0.56645
+  },
+  {
+   "validAt": "2026-08-07T03:11:36Z",
+   "observedAt": "2026-08-07T01:55:00Z",
+   "speedKps": 275.1,
+   "densityCm3": 3.28,
+   "bzGsmNt": -0.24,
+   "bxNt": -0.89,
+   "byNt": 1.34,
+   "btNt": 1.63,
+   "dynamicPressureNpa": 0.4152,
+   "magneticPressureNpa": 0.00106,
+   "clockAngleDeg": 100.2,
+   "newellCoupling": 1082.9,
+   "subsolarStandoffRe": 12.997,
+   "flaringAlpha": 0.56941
+  },
+  {
+   "validAt": "2026-08-07T03:17:03Z",
+   "observedAt": "2026-08-07T02:00:00Z",
+   "speedKps": 273.7,
+   "densityCm3": 3.29,
+   "bzGsmNt": -0.39,
+   "bxNt": -1.08,
+   "byNt": 1.23,
+   "btNt": 1.68,
+   "dynamicPressureNpa": 0.4122,
+   "magneticPressureNpa": 0.00112,
+   "clockAngleDeg": 107.6,
+   "newellCoupling": 1188.6,
+   "subsolarStandoffRe": 13.003,
+   "flaringAlpha": 0.57034
+  },
+  {
+   "validAt": "2026-08-07T03:20:53Z",
+   "observedAt": "2026-08-07T02:05:00Z",
+   "speedKps": 277.8,
+   "densityCm3": 2.78,
+   "bzGsmNt": -1.69,
+   "bxNt": -2.01,
+   "byNt": 0.46,
+   "btNt": 2.66,
+   "dynamicPressureNpa": 0.3588,
+   "magneticPressureNpa": 0.00282,
+   "clockAngleDeg": 164.8,
+   "newellCoupling": 2572.3,
+   "subsolarStandoffRe": 13.187,
+   "flaringAlpha": 0.57727
+  },
+  {
+   "validAt": "2026-08-07T03:25:51Z",
+   "observedAt": "2026-08-07T02:10:00Z",
+   "speedKps": 277.9,
+   "densityCm3": 2.89,
+   "bzGsmNt": -1.48,
+   "bxNt": -2.11,
+   "byNt": 0.25,
+   "btNt": 2.6,
+   "dynamicPressureNpa": 0.3733,
+   "magneticPressureNpa": 0.00269,
+   "clockAngleDeg": 170.4,
+   "newellCoupling": 2355.2,
+   "subsolarStandoffRe": 13.126,
+   "flaringAlpha": 0.5764
+  },
+  {
+   "validAt": "2026-08-07T03:31:13Z",
+   "observedAt": "2026-08-07T02:15:00Z",
+   "speedKps": 276.8,
+   "densityCm3": 2.82,
+   "bzGsmNt": -1.15,
+   "bxNt": -2.11,
+   "byNt": 0.69,
+   "btNt": 2.5,
+   "dynamicPressureNpa": 0.3614,
+   "magneticPressureNpa": 0.00249,
+   "clockAngleDeg": 149.0,
+   "newellCoupling": 1987.9,
+   "subsolarStandoffRe": 13.216,
+   "flaringAlpha": 0.57369
+  },
+  {
+   "validAt": "2026-08-07T03:36:44Z",
+   "observedAt": "2026-08-07T02:20:00Z",
+   "speedKps": 274.8,
+   "densityCm3": 3.18,
+   "bzGsmNt": -1.02,
+   "bxNt": -1.77,
+   "byNt": 0.87,
+   "btNt": 2.23,
+   "dynamicPressureNpa": 0.4017,
+   "magneticPressureNpa": 0.00198,
+   "clockAngleDeg": 139.5,
+   "newellCoupling": 1832.9,
+   "subsolarStandoffRe": 13.015,
+   "flaringAlpha": 0.57429
+  },
+  {
+   "validAt": "2026-08-07T03:41:36Z",
+   "observedAt": "2026-08-07T02:25:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 3.21,
+   "bzGsmNt": -1.23,
+   "bxNt": -1.62,
+   "byNt": 0.67,
+   "btNt": 2.14,
+   "dynamicPressureNpa": 0.4072,
+   "magneticPressureNpa": 0.00182,
+   "clockAngleDeg": 151.4,
+   "newellCoupling": 2062.7,
+   "subsolarStandoffRe": 12.973,
+   "flaringAlpha": 0.57592
+  },
+  {
+   "validAt": "2026-08-07T03:46:48Z",
+   "observedAt": "2026-08-07T02:30:00Z",
+   "speedKps": 274.6,
+   "densityCm3": 3.27,
+   "bzGsmNt": -1.25,
+   "bxNt": -1.69,
+   "byNt": 0.63,
+   "btNt": 2.2,
+   "dynamicPressureNpa": 0.4124,
+   "magneticPressureNpa": 0.00193,
+   "clockAngleDeg": 153.3,
+   "newellCoupling": 2075.5,
+   "subsolarStandoffRe": 12.946,
+   "flaringAlpha": 0.57623
+  },
+  {
+   "validAt": "2026-08-07T03:51:58Z",
+   "observedAt": "2026-08-07T02:35:00Z",
+   "speedKps": 274.1,
+   "densityCm3": 3.26,
+   "bzGsmNt": -1.43,
+   "bxNt": -1.65,
+   "byNt": 0.54,
+   "btNt": 2.25,
+   "dynamicPressureNpa": 0.4097,
+   "magneticPressureNpa": 0.00201,
+   "clockAngleDeg": 159.3,
+   "newellCoupling": 2261.6,
+   "subsolarStandoffRe": 12.946,
+   "flaringAlpha": 0.57737
+  },
+  {
+   "validAt": "2026-08-07T03:56:46Z",
+   "observedAt": "2026-08-07T02:40:00Z",
+   "speedKps": 274.7,
+   "densityCm3": 3.36,
+   "bzGsmNt": -1.37,
+   "bxNt": -1.76,
+   "byNt": 0.49,
+   "btNt": 2.29,
+   "dynamicPressureNpa": 0.4241,
+   "magneticPressureNpa": 0.00209,
+   "clockAngleDeg": 160.3,
+   "newellCoupling": 2204.0,
+   "subsolarStandoffRe": 12.883,
+   "flaringAlpha": 0.57745
+  },
+  {
+   "validAt": "2026-08-07T04:01:23Z",
+   "observedAt": "2026-08-07T02:45:00Z",
+   "speedKps": 276.4,
+   "densityCm3": 3.32,
+   "bzGsmNt": -1.89,
+   "bxNt": -1.2,
+   "byNt": 0.37,
+   "btNt": 2.27,
+   "dynamicPressureNpa": 0.4242,
+   "magneticPressureNpa": 0.00205,
+   "clockAngleDeg": 168.9,
+   "newellCoupling": 2752.4,
+   "subsolarStandoffRe": 12.839,
+   "flaringAlpha": 0.58102
+  },
+  {
+   "validAt": "2026-08-07T04:06:31Z",
+   "observedAt": "2026-08-07T02:50:00Z",
+   "speedKps": 275.8,
+   "densityCm3": 3.16,
+   "bzGsmNt": -1.84,
+   "bxNt": -1.38,
+   "byNt": 0.27,
+   "btNt": 2.32,
+   "dynamicPressureNpa": 0.402,
+   "magneticPressureNpa": 0.00214,
+   "clockAngleDeg": 171.7,
+   "newellCoupling": 2695.7,
+   "subsolarStandoffRe": 12.949,
+   "flaringAlpha": 0.57991
+  },
+  {
+   "validAt": "2026-08-07T04:11:34Z",
+   "observedAt": "2026-08-07T02:55:00Z",
+   "speedKps": 275.5,
+   "densityCm3": 3.17,
+   "bzGsmNt": -1.67,
+   "bxNt": -1.52,
+   "byNt": 0.14,
+   "btNt": 2.26,
+   "dynamicPressureNpa": 0.4024,
+   "magneticPressureNpa": 0.00203,
+   "clockAngleDeg": 175.2,
+   "newellCoupling": 2523.3,
+   "subsolarStandoffRe": 12.961,
+   "flaringAlpha": 0.57876
+  },
+  {
+   "validAt": "2026-08-07T04:16:38Z",
+   "observedAt": "2026-08-07T03:00:00Z",
+   "speedKps": 275.2,
+   "densityCm3": 3.13,
+   "bzGsmNt": -1.68,
+   "bxNt": -1.62,
+   "byNt": 0.04,
+   "btNt": 2.33,
+   "dynamicPressureNpa": 0.3965,
+   "magneticPressureNpa": 0.00216,
+   "clockAngleDeg": 178.6,
+   "newellCoupling": 2529.7,
+   "subsolarStandoffRe": 12.99,
+   "flaringAlpha": 0.57862
+  },
+  {
+   "validAt": "2026-08-07T04:21:35Z",
+   "observedAt": "2026-08-07T03:05:00Z",
+   "speedKps": 275.5,
+   "densityCm3": 3.01,
+   "bzGsmNt": -1.63,
+   "bxNt": -1.62,
+   "byNt": -0.25,
+   "btNt": 2.32,
+   "dynamicPressureNpa": 0.3821,
+   "magneticPressureNpa": 0.00214,
+   "clockAngleDeg": 188.7,
+   "newellCoupling": 2482.9,
+   "subsolarStandoffRe": 13.067,
+   "flaringAlpha": 0.57776
+  },
+  {
+   "validAt": "2026-08-07T04:26:02Z",
+   "observedAt": "2026-08-07T03:10:00Z",
+   "speedKps": 277.4,
+   "densityCm3": 3.02,
+   "bzGsmNt": -1.47,
+   "bxNt": -1.6,
+   "byNt": -0.35,
+   "btNt": 2.21,
+   "dynamicPressureNpa": 0.3887,
+   "magneticPressureNpa": 0.00194,
+   "clockAngleDeg": 193.4,
+   "newellCoupling": 2339.2,
+   "subsolarStandoffRe": 13.046,
+   "flaringAlpha": 0.5769
+  },
+  {
+   "validAt": "2026-08-07T04:31:10Z",
+   "observedAt": "2026-08-07T03:15:00Z",
+   "speedKps": 277.0,
+   "densityCm3": 3.17,
+   "bzGsmNt": -1.24,
+   "bxNt": -1.63,
+   "byNt": -0.38,
+   "btNt": 2.09,
+   "dynamicPressureNpa": 0.4068,
+   "magneticPressureNpa": 0.00174,
+   "clockAngleDeg": 197.0,
+   "newellCoupling": 2084.8,
+   "subsolarStandoffRe": 12.974,
+   "flaringAlpha": 0.57597
+  },
+  {
+   "validAt": "2026-08-07T04:36:25Z",
+   "observedAt": "2026-08-07T03:20:00Z",
+   "speedKps": 276.1,
+   "densityCm3": 3.19,
+   "bzGsmNt": -1.24,
+   "bxNt": -1.74,
+   "byNt": -0.28,
+   "btNt": 2.16,
+   "dynamicPressureNpa": 0.4067,
+   "magneticPressureNpa": 0.00186,
+   "clockAngleDeg": 192.7,
+   "newellCoupling": 2075.3,
+   "subsolarStandoffRe": 12.974,
+   "flaringAlpha": 0.57597
+  },
+  {
+   "validAt": "2026-08-07T04:41:38Z",
+   "observedAt": "2026-08-07T03:25:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 3.19,
+   "bzGsmNt": -1.26,
+   "bxNt": -1.74,
+   "byNt": -0.42,
+   "btNt": 2.19,
+   "dynamicPressureNpa": 0.4047,
+   "magneticPressureNpa": 0.00191,
+   "clockAngleDeg": 198.4,
+   "newellCoupling": 2091.2,
+   "subsolarStandoffRe": 12.983,
+   "flaringAlpha": 0.57604
+  },
+  {
+   "validAt": "2026-08-07T04:46:37Z",
+   "observedAt": "2026-08-07T03:30:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 3.1,
+   "bzGsmNt": -1.34,
+   "bxNt": -1.66,
+   "byNt": -0.67,
+   "btNt": 2.24,
+   "dynamicPressureNpa": 0.3933,
+   "magneticPressureNpa": 0.002,
+   "clockAngleDeg": 206.6,
+   "newellCoupling": 2182.3,
+   "subsolarStandoffRe": 13.033,
+   "flaringAlpha": 0.57618
+  },
+  {
+   "validAt": "2026-08-07T04:51:33Z",
+   "observedAt": "2026-08-07T03:35:00Z",
+   "speedKps": 275.6,
+   "densityCm3": 3.02,
+   "bzGsmNt": -1.28,
+   "bxNt": -1.69,
+   "byNt": -0.82,
+   "btNt": 2.28,
+   "dynamicPressureNpa": 0.3837,
+   "magneticPressureNpa": 0.00207,
+   "clockAngleDeg": 212.6,
+   "newellCoupling": 2124.8,
+   "subsolarStandoffRe": 13.087,
+   "flaringAlpha": 0.57542
+  },
+  {
+   "validAt": "2026-08-07T04:56:38Z",
+   "observedAt": "2026-08-07T03:40:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 2.92,
+   "bzGsmNt": -1.45,
+   "bxNt": -1.52,
+   "byNt": -0.92,
+   "btNt": 2.29,
+   "dynamicPressureNpa": 0.3704,
+   "magneticPressureNpa": 0.00209,
+   "clockAngleDeg": 212.4,
+   "newellCoupling": 2306.3,
+   "subsolarStandoffRe": 13.143,
+   "flaringAlpha": 0.57608
+  },
+  {
+   "validAt": "2026-08-07T05:01:37Z",
+   "observedAt": "2026-08-07T03:45:00Z",
+   "speedKps": 275.5,
+   "densityCm3": 3.05,
+   "bzGsmNt": -1.32,
+   "bxNt": -1.43,
+   "byNt": -1.15,
+   "btNt": 2.26,
+   "dynamicPressureNpa": 0.3872,
+   "magneticPressureNpa": 0.00203,
+   "clockAngleDeg": 221.1,
+   "newellCoupling": 2185.9,
+   "subsolarStandoffRe": 13.066,
+   "flaringAlpha": 0.57582
+  },
+  {
+   "validAt": "2026-08-07T05:06:45Z",
+   "observedAt": "2026-08-07T03:50:00Z",
+   "speedKps": 275.0,
+   "densityCm3": 2.84,
+   "bzGsmNt": -1.34,
+   "bxNt": -1.42,
+   "byNt": -1.02,
+   "btNt": 2.2,
+   "dynamicPressureNpa": 0.3592,
+   "magneticPressureNpa": 0.00193,
+   "clockAngleDeg": 217.3,
+   "newellCoupling": 2192.5,
+   "subsolarStandoffRe": 13.213,
+   "flaringAlpha": 0.5749
+  },
+  {
+   "validAt": "2026-08-07T05:11:48Z",
+   "observedAt": "2026-08-07T03:55:00Z",
+   "speedKps": 274.7,
+   "densityCm3": 2.92,
+   "bzGsmNt": -1.2,
+   "bxNt": -1.41,
+   "byNt": -1.34,
+   "btNt": 2.28,
+   "dynamicPressureNpa": 0.3685,
+   "magneticPressureNpa": 0.00207,
+   "clockAngleDeg": 228.2,
+   "newellCoupling": 2071.9,
+   "subsolarStandoffRe": 13.173,
+   "flaringAlpha": 0.5743
+  },
+  {
+   "validAt": "2026-08-07T05:16:46Z",
+   "observedAt": "2026-08-07T04:00:00Z",
+   "speedKps": 275.0,
+   "densityCm3": 2.86,
+   "bzGsmNt": -1.25,
+   "bxNt": -1.28,
+   "byNt": -1.57,
+   "btNt": 2.38,
+   "dynamicPressureNpa": 0.3618,
+   "magneticPressureNpa": 0.00225,
+   "clockAngleDeg": 231.5,
+   "newellCoupling": 2153.4,
+   "subsolarStandoffRe": 13.206,
+   "flaringAlpha": 0.57438
+  },
+  {
+   "validAt": "2026-08-07T05:21:27Z",
+   "observedAt": "2026-08-07T04:05:00Z",
+   "speedKps": 276.0,
+   "densityCm3": 2.95,
+   "bzGsmNt": -1.32,
+   "bxNt": -1.25,
+   "byNt": -1.31,
+   "btNt": 2.24,
+   "dynamicPressureNpa": 0.3759,
+   "magneticPressureNpa": 0.002,
+   "clockAngleDeg": 224.8,
+   "newellCoupling": 2204.9,
+   "subsolarStandoffRe": 13.125,
+   "flaringAlpha": 0.5754
+  },
+  {
+   "validAt": "2026-08-07T05:26:35Z",
+   "observedAt": "2026-08-07T04:10:00Z",
+   "speedKps": 275.5,
+   "densityCm3": 2.82,
+   "bzGsmNt": -1.07,
+   "bxNt": -1.26,
+   "byNt": -1.7,
+   "btNt": 2.38,
+   "dynamicPressureNpa": 0.358,
+   "magneticPressureNpa": 0.00225,
+   "clockAngleDeg": 237.8,
+   "newellCoupling": 2001.4,
+   "subsolarStandoffRe": 13.24,
+   "flaringAlpha": 0.57301
+  },
+  {
+   "validAt": "2026-08-07T05:31:37Z",
+   "observedAt": "2026-08-07T04:15:00Z",
+   "speedKps": 275.3,
+   "densityCm3": 2.73,
+   "bzGsmNt": -0.67,
+   "bxNt": -1.33,
+   "byNt": -1.92,
+   "btNt": 2.44,
+   "dynamicPressureNpa": 0.3461,
+   "magneticPressureNpa": 0.00237,
+   "clockAngleDeg": 250.8,
+   "newellCoupling": 1667.6,
+   "subsolarStandoffRe": 13.335,
+   "flaringAlpha": 0.5698
+  },
+  {
+   "validAt": "2026-08-07T05:36:42Z",
+   "observedAt": "2026-08-07T04:20:00Z",
+   "speedKps": 275.0,
+   "densityCm3": 2.66,
+   "bzGsmNt": -0.6,
+   "bxNt": -1.48,
+   "byNt": -2.0,
+   "btNt": 2.56,
+   "dynamicPressureNpa": 0.3365,
+   "magneticPressureNpa": 0.00261,
+   "clockAngleDeg": 253.3,
+   "newellCoupling": 1623.6,
+   "subsolarStandoffRe": 13.397,
+   "flaringAlpha": 0.56893
+  },
+  {
+   "validAt": "2026-08-07T05:41:27Z",
+   "observedAt": "2026-08-07T04:25:00Z",
+   "speedKps": 275.8,
+   "densityCm3": 2.79,
+   "bzGsmNt": -0.6,
+   "bxNt": -1.36,
+   "byNt": -1.8,
+   "btNt": 2.33,
+   "dynamicPressureNpa": 0.355,
+   "magneticPressureNpa": 0.00216,
+   "clockAngleDeg": 251.6,
+   "newellCoupling": 1575.0,
+   "subsolarStandoffRe": 13.289,
+   "flaringAlpha": 0.56968
+  },
+  {
+   "validAt": "2026-08-07T05:46:19Z",
+   "observedAt": "2026-08-07T04:30:00Z",
+   "speedKps": 276.2,
+   "densityCm3": 2.73,
+   "bzGsmNt": 0.41,
+   "bxNt": -1.19,
+   "byNt": -1.85,
+   "btNt": 2.24,
+   "dynamicPressureNpa": 0.3483,
+   "magneticPressureNpa": 0.002,
+   "clockAngleDeg": 282.5,
+   "newellCoupling": 789.7,
+   "subsolarStandoffRe": 13.379,
+   "flaringAlpha": 0.56252
+  },
+  {
+   "validAt": "2026-08-07T05:51:59Z",
+   "observedAt": "2026-08-07T04:35:00Z",
+   "speedKps": 274.1,
+   "densityCm3": 2.51,
+   "bzGsmNt": -0.81,
+   "bxNt": -1.31,
+   "byNt": -2.21,
+   "btNt": 2.69,
+   "dynamicPressureNpa": 0.3154,
+   "magneticPressureNpa": 0.00288,
+   "clockAngleDeg": 249.9,
+   "newellCoupling": 1854.6,
+   "subsolarStandoffRe": 13.515,
+   "flaringAlpha": 0.56945
+  },
+  {
+   "validAt": "2026-08-07T05:55:51Z",
+   "observedAt": "2026-08-07T04:40:00Z",
+   "speedKps": 278.3,
+   "densityCm3": 2.59,
+   "bzGsmNt": -1.32,
+   "bxNt": -0.68,
+   "byNt": -2.45,
+   "btNt": 2.87,
+   "dynamicPressureNpa": 0.3355,
+   "magneticPressureNpa": 0.00328,
+   "clockAngleDeg": 241.7,
+   "newellCoupling": 2393.8,
+   "subsolarStandoffRe": 13.352,
+   "flaringAlpha": 0.5738
+  },
+  {
+   "validAt": "2026-08-07T06:01:40Z",
+   "observedAt": "2026-08-07T04:45:00Z",
+   "speedKps": 275.4,
+   "densityCm3": 2.58,
+   "bzGsmNt": -1.47,
+   "bxNt": -1.03,
+   "byNt": -2.48,
+   "btNt": 3.07,
+   "dynamicPressureNpa": 0.3273,
+   "magneticPressureNpa": 0.00375,
+   "clockAngleDeg": 239.3,
+   "newellCoupling": 2494.9,
+   "subsolarStandoffRe": 13.391,
+   "flaringAlpha": 0.57447
+  },
+  {
+   "validAt": "2026-08-07T06:07:23Z",
+   "observedAt": "2026-08-07T04:50:00Z",
+   "speedKps": 273.1,
+   "densityCm3": 2.77,
+   "bzGsmNt": -1.84,
+   "bxNt": -1.39,
+   "byNt": -2.14,
+   "btNt": 3.14,
+   "dynamicPressureNpa": 0.3456,
+   "magneticPressureNpa": 0.00392,
+   "clockAngleDeg": 229.3,
+   "newellCoupling": 2742.3,
+   "subsolarStandoffRe": 13.249,
+   "flaringAlpha": 0.57776
+  },
+  {
+   "validAt": "2026-08-07T06:11:59Z",
+   "observedAt": "2026-08-07T04:55:00Z",
+   "speedKps": 274.4,
+   "densityCm3": 3.08,
+   "bzGsmNt": -2.41,
+   "bxNt": -1.54,
+   "byNt": -1.16,
+   "btNt": 3.14,
+   "dynamicPressureNpa": 0.3879,
+   "magneticPressureNpa": 0.00392,
+   "clockAngleDeg": 205.7,
+   "newellCoupling": 3211.0,
+   "subsolarStandoffRe": 12.964,
+   "flaringAlpha": 0.5833
+  },
+  {
+   "validAt": "2026-08-07T06:16:21Z",
+   "observedAt": "2026-08-07T05:00:00Z",
+   "speedKps": 276.6,
+   "densityCm3": 3.2,
+   "bzGsmNt": -2.23,
+   "bxNt": -0.72,
+   "byNt": -1.07,
+   "btNt": 2.58,
+   "dynamicPressureNpa": 0.4095,
+   "magneticPressureNpa": 0.00265,
+   "clockAngleDeg": 205.6,
+   "newellCoupling": 3081.6,
+   "subsolarStandoffRe": 12.876,
+   "flaringAlpha": 0.58285
+  },
+  {
+   "validAt": "2026-08-07T06:21:28Z",
+   "observedAt": "2026-08-07T05:05:00Z",
+   "speedKps": 276.2,
+   "densityCm3": 3.16,
+   "bzGsmNt": -1.83,
+   "bxNt": -0.93,
+   "byNt": -0.85,
+   "btNt": 2.22,
+   "dynamicPressureNpa": 0.4032,
+   "magneticPressureNpa": 0.00196,
+   "clockAngleDeg": 204.9,
+   "newellCoupling": 2695.4,
+   "subsolarStandoffRe": 12.944,
+   "flaringAlpha": 0.57989
+  },
+  {
+   "validAt": "2026-08-07T06:27:34Z",
+   "observedAt": "2026-08-07T05:10:00Z",
+   "speedKps": 272.3,
+   "densityCm3": 3.47,
+   "bzGsmNt": -2.26,
+   "bxNt": -1.37,
+   "byNt": -0.11,
+   "btNt": 2.64,
+   "dynamicPressureNpa": 0.4303,
+   "magneticPressureNpa": 0.00277,
+   "clockAngleDeg": 182.8,
+   "newellCoupling": 3039.5,
+   "subsolarStandoffRe": 12.776,
+   "flaringAlpha": 0.58376
+  },
+  {
+   "validAt": "2026-08-07T06:33:00Z",
+   "observedAt": "2026-08-07T05:15:00Z",
+   "speedKps": 270.6,
+   "densityCm3": 3.46,
+   "bzGsmNt": -1.26,
+   "bxNt": -1.91,
+   "byNt": 0.75,
+   "btNt": 2.4,
+   "dynamicPressureNpa": 0.4238,
+   "magneticPressureNpa": 0.00229,
+   "clockAngleDeg": 149.2,
+   "newellCoupling": 2049.6,
+   "subsolarStandoffRe": 12.893,
+   "flaringAlpha": 0.57669
+  },
+  {
+   "validAt": "2026-08-07T06:37:48Z",
+   "observedAt": "2026-08-07T05:20:00Z",
+   "speedKps": 271.3,
+   "densityCm3": 3.27,
+   "bzGsmNt": -1.81,
+   "bxNt": -1.48,
+   "byNt": 0.13,
+   "btNt": 2.35,
+   "dynamicPressureNpa": 0.4026,
+   "magneticPressureNpa": 0.0022,
+   "clockAngleDeg": 175.9,
+   "newellCoupling": 2608.4,
+   "subsolarStandoffRe": 12.949,
+   "flaringAlpha": 0.57973
+  },
+  {
+   "validAt": "2026-08-07T06:42:49Z",
+   "observedAt": "2026-08-07T05:25:00Z",
+   "speedKps": 271.0,
+   "densityCm3": 3.81,
+   "bzGsmNt": -1.68,
+   "bxNt": -1.05,
+   "byNt": 1.63,
+   "btNt": 2.55,
+   "dynamicPressureNpa": 0.468,
+   "magneticPressureNpa": 0.00259,
+   "clockAngleDeg": 135.9,
+   "newellCoupling": 2524.0,
+   "subsolarStandoffRe": 12.667,
+   "flaringAlpha": 0.58098
+  },
+  {
+   "validAt": "2026-08-07T06:48:15Z",
+   "observedAt": "2026-08-07T05:30:00Z",
+   "speedKps": 269.4,
+   "densityCm3": 4.36,
+   "bzGsmNt": -1.07,
+   "bxNt": -0.74,
+   "byNt": 1.66,
+   "btNt": 2.19,
+   "dynamicPressureNpa": 0.5293,
+   "magneticPressureNpa": 0.00191,
+   "clockAngleDeg": 122.8,
+   "newellCoupling": 1935.9,
+   "subsolarStandoffRe": 12.479,
+   "flaringAlpha": 0.57852
+  },
+  {
+   "validAt": "2026-08-07T06:53:17Z",
+   "observedAt": "2026-08-07T05:35:00Z",
+   "speedKps": 268.8,
+   "densityCm3": 4.5,
+   "bzGsmNt": -0.93,
+   "bxNt": -0.45,
+   "byNt": 1.53,
+   "btNt": 1.86,
+   "dynamicPressureNpa": 0.5438,
+   "magneticPressureNpa": 0.00138,
+   "clockAngleDeg": 121.3,
+   "newellCoupling": 1773.1,
+   "subsolarStandoffRe": 12.437,
+   "flaringAlpha": 0.57794
+  },
+  {
+   "validAt": "2026-08-07T06:59:05Z",
+   "observedAt": "2026-08-07T05:41:00Z",
+   "speedKps": 270.4,
+   "densityCm3": 3.66,
+   "bzGsmNt": -1.77,
+   "bxNt": -0.96,
+   "byNt": 1.21,
+   "btNt": 2.35,
+   "dynamicPressureNpa": 0.4476,
+   "magneticPressureNpa": 0.0022,
+   "clockAngleDeg": 145.6,
+   "newellCoupling": 2574.2,
+   "subsolarStandoffRe": 12.746,
+   "flaringAlpha": 0.58096
+  },
+  {
+   "validAt": "2026-08-07T07:04:33Z",
+   "observedAt": "2026-08-07T05:46:00Z",
+   "speedKps": 269.1,
+   "densityCm3": 3.86,
+   "bzGsmNt": -2.45,
+   "bxNt": -1.02,
+   "byNt": 0.37,
+   "btNt": 2.68,
+   "dynamicPressureNpa": 0.4675,
+   "magneticPressureNpa": 0.00286,
+   "clockAngleDeg": 171.4,
+   "newellCoupling": 3157.4,
+   "subsolarStandoffRe": 12.598,
+   "flaringAlpha": 0.58625
+  },
+  {
+   "validAt": "2026-08-07T07:08:44Z",
+   "observedAt": "2026-08-07T05:51:00Z",
+   "speedKps": 271.8,
+   "densityCm3": 3.24,
+   "bzGsmNt": -2.17,
+   "bxNt": -1.39,
+   "byNt": 0.93,
+   "btNt": 2.77,
+   "dynamicPressureNpa": 0.4003,
+   "magneticPressureNpa": 0.00305,
+   "clockAngleDeg": 156.8,
+   "newellCoupling": 2954.5,
+   "subsolarStandoffRe": 12.926,
+   "flaringAlpha": 0.58211
+  },
+  {
+   "validAt": "2026-08-07T07:13:54Z",
+   "observedAt": "2026-08-07T05:56:00Z",
+   "speedKps": 271.1,
+   "densityCm3": 3.45,
+   "bzGsmNt": -1.77,
+   "bxNt": -1.16,
+   "byNt": 1.34,
+   "btNt": 2.51,
+   "dynamicPressureNpa": 0.4241,
+   "magneticPressureNpa": 0.00251,
+   "clockAngleDeg": 142.9,
+   "newellCoupling": 2589.3,
+   "subsolarStandoffRe": 12.85,
+   "flaringAlpha": 0.58019
+  },
+  {
+   "validAt": "2026-08-07T07:19:04Z",
+   "observedAt": "2026-08-07T06:01:00Z",
+   "speedKps": 270.8,
+   "densityCm3": 3.7,
+   "bzGsmNt": -2.14,
+   "bxNt": -0.99,
+   "byNt": 1.19,
+   "btNt": 2.65,
+   "dynamicPressureNpa": 0.4538,
+   "magneticPressureNpa": 0.00279,
+   "clockAngleDeg": 150.9,
+   "newellCoupling": 2918.2,
+   "subsolarStandoffRe": 12.686,
+   "flaringAlpha": 0.5837
+  },
+  {
+   "validAt": "2026-08-07T07:24:04Z",
+   "observedAt": "2026-08-07T06:06:00Z",
+   "speedKps": 270.9,
+   "densityCm3": 3.49,
+   "bzGsmNt": -2.45,
+   "bxNt": -0.79,
+   "byNt": 1.1,
+   "btNt": 2.8,
+   "dynamicPressureNpa": 0.4284,
+   "magneticPressureNpa": 0.00312,
+   "clockAngleDeg": 155.8,
+   "newellCoupling": 3190.0,
+   "subsolarStandoffRe": 12.766,
+   "flaringAlpha": 0.585
+  },
+  {
+   "validAt": "2026-08-07T07:29:21Z",
+   "observedAt": "2026-08-07T06:11:00Z",
+   "speedKps": 270.2,
+   "densityCm3": 3.45,
+   "bzGsmNt": -2.43,
+   "bxNt": -1.04,
+   "byNt": 0.46,
+   "btNt": 2.71,
+   "dynamicPressureNpa": 0.4213,
+   "magneticPressureNpa": 0.00292,
+   "clockAngleDeg": 169.3,
+   "newellCoupling": 3157.4,
+   "subsolarStandoffRe": 12.8,
+   "flaringAlpha": 0.58462
+  },
+  {
+   "validAt": "2026-08-07T07:33:52Z",
+   "observedAt": "2026-08-07T06:16:00Z",
+   "speedKps": 271.8,
+   "densityCm3": 3.25,
+   "bzGsmNt": -2.1,
+   "bxNt": -0.91,
+   "byNt": -1.12,
+   "btNt": 2.56,
+   "dynamicPressureNpa": 0.4016,
+   "magneticPressureNpa": 0.00261,
+   "clockAngleDeg": 208.1,
+   "newellCoupling": 2894.7,
+   "subsolarStandoffRe": 12.927,
+   "flaringAlpha": 0.58168
+  },
+  {
+   "validAt": "2026-08-07T07:38:46Z",
+   "observedAt": "2026-08-07T06:21:00Z",
+   "speedKps": 272.1,
+   "densityCm3": 3.03,
+   "bzGsmNt": -1.97,
+   "bxNt": -1.07,
+   "byNt": -1.21,
+   "btNt": 2.55,
+   "dynamicPressureNpa": 0.3752,
+   "magneticPressureNpa": 0.00259,
+   "clockAngleDeg": 211.6,
+   "newellCoupling": 2782.7,
+   "subsolarStandoffRe": 13.073,
+   "flaringAlpha": 0.57982
+  },
+  {
+   "validAt": "2026-08-07T07:43:48Z",
+   "observedAt": "2026-08-07T06:26:00Z",
+   "speedKps": 271.9,
+   "densityCm3": 2.99,
+   "bzGsmNt": -1.95,
+   "bxNt": -1.14,
+   "byNt": -1.66,
+   "btNt": 2.81,
+   "dynamicPressureNpa": 0.3697,
+   "magneticPressureNpa": 0.00314,
+   "clockAngleDeg": 220.4,
+   "newellCoupling": 2783.5,
+   "subsolarStandoffRe": 13.104,
+   "flaringAlpha": 0.57947
+  },
+  {
+   "validAt": "2026-08-07T07:48:58Z",
+   "observedAt": "2026-08-07T06:31:00Z",
+   "speedKps": 271.5,
+   "densityCm3": 3.12,
+   "bzGsmNt": -2.36,
+   "bxNt": -1.1,
+   "byNt": -1.43,
+   "btNt": 2.97,
+   "dynamicPressureNpa": 0.3847,
+   "magneticPressureNpa": 0.00351,
+   "clockAngleDeg": 211.2,
+   "newellCoupling": 3128.9,
+   "subsolarStandoffRe": 12.985,
+   "flaringAlpha": 0.58284
+  },
+  {
+   "validAt": "2026-08-07T07:54:07Z",
+   "observedAt": "2026-08-07T06:36:00Z",
+   "speedKps": 271.1,
+   "densityCm3": 3.52,
+   "bzGsmNt": -2.56,
+   "bxNt": -0.77,
+   "byNt": -0.27,
+   "btNt": 2.69,
+   "dynamicPressureNpa": 0.4327,
+   "magneticPressureNpa": 0.00288,
+   "clockAngleDeg": 186.0,
+   "newellCoupling": 3283.4,
+   "subsolarStandoffRe": 12.735,
+   "flaringAlpha": 0.5859
+  },
+  {
+   "validAt": "2026-08-07T07:59:05Z",
+   "observedAt": "2026-08-07T06:41:00Z",
+   "speedKps": 271.3,
+   "densityCm3": 3.41,
+   "bzGsmNt": -2.51,
+   "bxNt": -0.84,
+   "byNt": -0.81,
+   "btNt": 2.77,
+   "dynamicPressureNpa": 0.4198,
+   "magneticPressureNpa": 0.00305,
+   "clockAngleDeg": 197.9,
+   "newellCoupling": 3245.0,
+   "subsolarStandoffRe": 12.799,
+   "flaringAlpha": 0.58512
+  },
+  {
+   "validAt": "2026-08-07T08:03:41Z",
+   "observedAt": "2026-08-07T06:46:00Z",
+   "speedKps": 272.7,
+   "densityCm3": 3.27,
+   "bzGsmNt": -2.47,
+   "bxNt": -0.74,
+   "byNt": -0.99,
+   "btNt": 2.77,
+   "dynamicPressureNpa": 0.4067,
+   "magneticPressureNpa": 0.00305,
+   "clockAngleDeg": 201.8,
+   "newellCoupling": 3234.2,
+   "subsolarStandoffRe": 12.864,
+   "flaringAlpha": 0.58439
+  },
+  {
+   "validAt": "2026-08-07T08:09:04Z",
+   "observedAt": "2026-08-07T06:51:00Z",
+   "speedKps": 271.3,
+   "densityCm3": 3.43,
+   "bzGsmNt": -2.69,
+   "bxNt": -1.05,
+   "byNt": -1.05,
+   "btNt": 3.08,
+   "dynamicPressureNpa": 0.4223,
+   "magneticPressureNpa": 0.00377,
+   "clockAngleDeg": 201.3,
+   "newellCoupling": 3399.8,
+   "subsolarStandoffRe": 12.767,
+   "flaringAlpha": 0.58644
+  },
+  {
+   "validAt": "2026-08-07T08:13:57Z",
+   "observedAt": "2026-08-07T06:56:00Z",
+   "speedKps": 271.6,
+   "densityCm3": 3.56,
+   "bzGsmNt": -2.62,
+   "bxNt": -1.02,
+   "byNt": -1.45,
+   "btNt": 3.17,
+   "dynamicPressureNpa": 0.4392,
+   "magneticPressureNpa": 0.004,
+   "clockAngleDeg": 209.0,
+   "newellCoupling": 3352.7,
+   "subsolarStandoffRe": 12.699,
+   "flaringAlpha": 0.58653
+  },
+  {
+   "validAt": "2026-08-07T08:18:50Z",
+   "observedAt": "2026-08-07T07:01:00Z",
+   "speedKps": 271.9,
+   "densityCm3": 3.26,
+   "bzGsmNt": -2.43,
+   "bxNt": -1.22,
+   "byNt": -1.69,
+   "btNt": 3.2,
+   "dynamicPressureNpa": 0.4031,
+   "magneticPressureNpa": 0.00407,
+   "clockAngleDeg": 214.8,
+   "newellCoupling": 3204.5,
+   "subsolarStandoffRe": 12.886,
+   "flaringAlpha": 0.58399
+  },
+  {
+   "validAt": "2026-08-07T08:21:51Z",
+   "observedAt": "2026-08-07T07:06:00Z",
+   "speedKps": 278.4,
+   "densityCm3": 2.49,
+   "bzGsmNt": -1.69,
+   "bxNt": -0.37,
+   "byNt": -3.04,
+   "btNt": 3.53,
+   "dynamicPressureNpa": 0.3228,
+   "magneticPressureNpa": 0.00496,
+   "clockAngleDeg": 240.9,
+   "newellCoupling": 2808.0,
+   "subsolarStandoffRe": 13.4,
+   "flaringAlpha": 0.57577
+  },
+  {
+   "validAt": "2026-08-07T08:28:09Z",
+   "observedAt": "2026-08-07T07:11:00Z",
+   "speedKps": 273.8,
+   "densityCm3": 3.46,
+   "bzGsmNt": -3.43,
+   "bxNt": -1.29,
+   "byNt": -0.95,
+   "btNt": 3.79,
+   "dynamicPressureNpa": 0.4338,
+   "magneticPressureNpa": 0.00572,
+   "clockAngleDeg": 195.5,
+   "newellCoupling": 4044.5,
+   "subsolarStandoffRe": 12.623,
+   "flaringAlpha": 0.5919
+  },
+  {
+   "validAt": "2026-08-07T08:32:37Z",
+   "observedAt": "2026-08-07T07:16:00Z",
+   "speedKps": 275.9,
+   "densityCm3": 3.19,
+   "bzGsmNt": -3.26,
+   "bxNt": -0.71,
+   "byNt": -1.95,
+   "btNt": 3.86,
+   "dynamicPressureNpa": 0.4061,
+   "magneticPressureNpa": 0.00593,
+   "clockAngleDeg": 210.9,
+   "newellCoupling": 3964.3,
+   "subsolarStandoffRe": 12.773,
+   "flaringAlpha": 0.58978
+  },
+  {
+   "validAt": "2026-08-07T08:37:47Z",
+   "observedAt": "2026-08-07T07:21:00Z",
+   "speedKps": 275.3,
+   "densityCm3": 3.08,
+   "bzGsmNt": -3.42,
+   "bxNt": -0.85,
+   "byNt": -1.62,
+   "btNt": 3.88,
+   "dynamicPressureNpa": 0.3904,
+   "magneticPressureNpa": 0.00599,
+   "clockAngleDeg": 205.3,
+   "newellCoupling": 4072.2,
+   "subsolarStandoffRe": 12.827,
+   "flaringAlpha": 0.59031
+  },
+  {
+   "validAt": "2026-08-07T08:42:52Z",
+   "observedAt": "2026-08-07T07:26:00Z",
+   "speedKps": 275.0,
+   "densityCm3": 3.17,
+   "bzGsmNt": -3.28,
+   "bxNt": -1.35,
+   "byNt": -1.5,
+   "btNt": 3.87,
+   "dynamicPressureNpa": 0.401,
+   "magneticPressureNpa": 0.00596,
+   "clockAngleDeg": 204.6,
+   "newellCoupling": 3953.7,
+   "subsolarStandoffRe": 12.795,
+   "flaringAlpha": 0.58974
+  },
+  {
+   "validAt": "2026-08-07T08:48:26Z",
+   "observedAt": "2026-08-07T07:31:00Z",
+   "speedKps": 273.2,
+   "densityCm3": 3.28,
+   "bzGsmNt": -3.2,
+   "bxNt": -1.26,
+   "byNt": -1.57,
+   "btNt": 3.78,
+   "dynamicPressureNpa": 0.4095,
+   "magneticPressureNpa": 0.00569,
+   "clockAngleDeg": 206.1,
+   "newellCoupling": 3856.9,
+   "subsolarStandoffRe": 12.765,
+   "flaringAlpha": 0.58949
+  },
+  {
+   "validAt": "2026-08-07T08:53:26Z",
+   "observedAt": "2026-08-07T07:36:00Z",
+   "speedKps": 273.0,
+   "densityCm3": 3.21,
+   "bzGsmNt": -3.26,
+   "bxNt": -1.26,
+   "byNt": -0.92,
+   "btNt": 3.61,
+   "dynamicPressureNpa": 0.4001,
+   "magneticPressureNpa": 0.00519,
+   "clockAngleDeg": 195.8,
+   "newellCoupling": 3894.6,
+   "subsolarStandoffRe": 12.801,
+   "flaringAlpha": 0.58957
+  },
+  {
+   "validAt": "2026-08-07T08:58:35Z",
+   "observedAt": "2026-08-07T07:41:00Z",
+   "speedKps": 272.5,
+   "densityCm3": 3.21,
+   "bzGsmNt": -3.23,
+   "bxNt": -1.17,
+   "byNt": -0.98,
+   "btNt": 3.57,
+   "dynamicPressureNpa": 0.3987,
+   "magneticPressureNpa": 0.00507,
+   "clockAngleDeg": 196.9,
+   "newellCoupling": 3861.5,
+   "subsolarStandoffRe": 12.813,
+   "flaringAlpha": 0.58931
+  },
+  {
+   "validAt": "2026-08-07T09:03:11Z",
+   "observedAt": "2026-08-07T07:46:00Z",
+   "speedKps": 273.7,
+   "densityCm3": 3.23,
+   "bzGsmNt": -3.33,
+   "bxNt": -1.07,
+   "byNt": -0.61,
+   "btNt": 3.56,
+   "dynamicPressureNpa": 0.4047,
+   "magneticPressureNpa": 0.00504,
+   "clockAngleDeg": 190.4,
+   "newellCoupling": 3962.9,
+   "subsolarStandoffRe": 12.77,
+   "flaringAlpha": 0.59021
+  },
+  {
+   "validAt": "2026-08-07T09:07:34Z",
+   "observedAt": "2026-08-07T07:51:00Z",
+   "speedKps": 275.7,
+   "densityCm3": 3.36,
+   "bzGsmNt": -3.63,
+   "bxNt": -0.58,
+   "byNt": 0.1,
+   "btNt": 3.69,
+   "dynamicPressureNpa": 0.4272,
+   "magneticPressureNpa": 0.00542,
+   "clockAngleDeg": 178.4,
+   "newellCoupling": 4238.2,
+   "subsolarStandoffRe": 12.624,
+   "flaringAlpha": 0.59305
+  },
+  {
+   "validAt": "2026-08-07T09:12:30Z",
+   "observedAt": "2026-08-07T07:56:00Z",
+   "speedKps": 276.1,
+   "densityCm3": 3.44,
+   "bzGsmNt": -3.65,
+   "bxNt": 0.27,
+   "byNt": 0.39,
+   "btNt": 3.69,
+   "dynamicPressureNpa": 0.4386,
+   "magneticPressureNpa": 0.00542,
+   "clockAngleDeg": 173.9,
+   "newellCoupling": 4262.0,
+   "subsolarStandoffRe": 12.571,
+   "flaringAlpha": 0.59357
+  },
+  {
+   "validAt": "2026-08-07T09:18:35Z",
+   "observedAt": "2026-08-07T08:01:00Z",
+   "speedKps": 272.2,
+   "densityCm3": 3.48,
+   "bzGsmNt": -3.41,
+   "bxNt": -0.62,
+   "byNt": 0.36,
+   "btNt": 3.5,
+   "dynamicPressureNpa": 0.4313,
+   "magneticPressureNpa": 0.00487,
+   "clockAngleDeg": 174.0,
+   "newellCoupling": 3996.5,
+   "subsolarStandoffRe": 12.637,
+   "flaringAlpha": 0.59168
+  },
+  {
+   "validAt": "2026-08-07T09:22:29Z",
+   "observedAt": "2026-08-07T08:06:00Z",
+   "speedKps": 276.2,
+   "densityCm3": 3.57,
+   "bzGsmNt": -3.46,
+   "bxNt": -0.31,
+   "byNt": 0.57,
+   "btNt": 3.54,
+   "dynamicPressureNpa": 0.4555,
+   "magneticPressureNpa": 0.00499,
+   "clockAngleDeg": 170.6,
+   "newellCoupling": 4114.9,
+   "subsolarStandoffRe": 12.526,
+   "flaringAlpha": 0.59282
+  },
+  {
+   "validAt": "2026-08-07T09:29:17Z",
+   "observedAt": "2026-08-07T08:11:00Z",
+   "speedKps": 270.0,
+   "densityCm3": 3.33,
+   "bzGsmNt": -3.06,
+   "bxNt": -0.97,
+   "byNt": -0.53,
+   "btNt": 3.27,
+   "dynamicPressureNpa": 0.406,
+   "magneticPressureNpa": 0.00425,
+   "clockAngleDeg": 189.8,
+   "newellCoupling": 3678.3,
+   "subsolarStandoffRe": 12.799,
+   "flaringAlpha": 0.58841
+  },
+  {
+   "validAt": "2026-08-07T09:33:54Z",
+   "observedAt": "2026-08-07T08:16:00Z",
+   "speedKps": 270.9,
+   "densityCm3": 3.67,
+   "bzGsmNt": -3.4,
+   "bxNt": -0.49,
+   "byNt": 0.02,
+   "btNt": 3.46,
+   "dynamicPressureNpa": 0.4505,
+   "magneticPressureNpa": 0.00476,
+   "clockAngleDeg": 179.7,
+   "newellCoupling": 3963.3,
+   "subsolarStandoffRe": 12.555,
+   "flaringAlpha": 0.59224
+  },
+  {
+   "validAt": "2026-08-07T09:39:17Z",
+   "observedAt": "2026-08-07T08:21:00Z",
+   "speedKps": 269.8,
+   "densityCm3": 3.5,
+   "bzGsmNt": -3.18,
+   "bxNt": -0.85,
+   "byNt": 0.76,
+   "btNt": 3.38,
+   "dynamicPressureNpa": 0.4261,
+   "magneticPressureNpa": 0.00455,
+   "clockAngleDeg": 166.6,
+   "newellCoupling": 3770.4,
+   "subsolarStandoffRe": 12.69,
+   "flaringAlpha": 0.58993
+  },
+  {
+   "validAt": "2026-08-07T09:44:51Z",
+   "observedAt": "2026-08-07T08:26:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 3.19,
+   "bzGsmNt": -2.82,
+   "bxNt": -0.99,
+   "byNt": -0.01,
+   "btNt": 2.99,
+   "dynamicPressureNpa": 0.3829,
+   "magneticPressureNpa": 0.00356,
+   "clockAngleDeg": 180.2,
+   "newellCoupling": 3447.1,
+   "subsolarStandoffRe": 12.943,
+   "flaringAlpha": 0.58592
+  },
+  {
+   "validAt": "2026-08-07T09:49:35Z",
+   "observedAt": "2026-08-07T08:31:00Z",
+   "speedKps": 268.7,
+   "densityCm3": 3.81,
+   "bzGsmNt": -2.99,
+   "bxNt": -0.33,
+   "byNt": 1.07,
+   "btNt": 3.2,
+   "dynamicPressureNpa": 0.4601,
+   "magneticPressureNpa": 0.00407,
+   "clockAngleDeg": 160.3,
+   "newellCoupling": 3600.8,
+   "subsolarStandoffRe": 12.568,
+   "flaringAlpha": 0.58973
+  },
+  {
+   "validAt": "2026-08-07T09:52:59Z",
+   "observedAt": "2026-08-07T08:36:00Z",
+   "speedKps": 274.8,
+   "densityCm3": 3.31,
+   "bzGsmNt": -3.32,
+   "bxNt": 0.07,
+   "byNt": 0.61,
+   "btNt": 3.39,
+   "dynamicPressureNpa": 0.4181,
+   "magneticPressureNpa": 0.00457,
+   "clockAngleDeg": 169.6,
+   "newellCoupling": 3976.1,
+   "subsolarStandoffRe": 12.709,
+   "flaringAlpha": 0.59061
+  },
+  {
+   "validAt": "2026-08-07T09:58:25Z",
+   "observedAt": "2026-08-07T08:41:00Z",
+   "speedKps": 273.2,
+   "densityCm3": 3.38,
+   "bzGsmNt": -3.37,
+   "bxNt": 0.1,
+   "byNt": 0.62,
+   "btNt": 3.43,
+   "dynamicPressureNpa": 0.422,
+   "magneticPressureNpa": 0.00468,
+   "clockAngleDeg": 169.6,
+   "newellCoupling": 3984.8,
+   "subsolarStandoffRe": 12.684,
+   "flaringAlpha": 0.59109
+  },
+  {
+   "validAt": "2026-08-07T10:04:01Z",
+   "observedAt": "2026-08-07T08:46:00Z",
+   "speedKps": 270.2,
+   "densityCm3": 4.11,
+   "bzGsmNt": -1.53,
+   "bxNt": -0.41,
+   "byNt": 1.96,
+   "btNt": 2.53,
+   "dynamicPressureNpa": 0.5019,
+   "magneticPressureNpa": 0.00255,
+   "clockAngleDeg": 128.0,
+   "newellCoupling": 2411.4,
+   "subsolarStandoffRe": 12.546,
+   "flaringAlpha": 0.58094
+  },
+  {
+   "validAt": "2026-08-07T10:08:30Z",
+   "observedAt": "2026-08-07T08:51:00Z",
+   "speedKps": 271.8,
+   "densityCm3": 3.72,
+   "bzGsmNt": -1.73,
+   "bxNt": 0.22,
+   "byNt": 2.52,
+   "btNt": 3.06,
+   "dynamicPressureNpa": 0.4597,
+   "magneticPressureNpa": 0.00373,
+   "clockAngleDeg": 124.5,
+   "newellCoupling": 2676.1,
+   "subsolarStandoffRe": 12.698,
+   "flaringAlpha": 0.58106
+  },
+  {
+   "validAt": "2026-08-07T10:13:28Z",
+   "observedAt": "2026-08-07T08:56:00Z",
+   "speedKps": 272.1,
+   "densityCm3": 3.38,
+   "bzGsmNt": -1.27,
+   "bxNt": 0.01,
+   "byNt": 3.11,
+   "btNt": 3.37,
+   "dynamicPressureNpa": 0.4186,
+   "magneticPressureNpa": 0.00452,
+   "clockAngleDeg": 112.2,
+   "newellCoupling": 2406.8,
+   "subsolarStandoffRe": 12.916,
+   "flaringAlpha": 0.57658
+  },
+  {
+   "validAt": "2026-08-07T10:18:53Z",
+   "observedAt": "2026-08-07T09:01:00Z",
+   "speedKps": 270.8,
+   "densityCm3": 2.82,
+   "bzGsmNt": -0.94,
+   "bxNt": -0.22,
+   "byNt": 3.42,
+   "btNt": 3.56,
+   "dynamicPressureNpa": 0.3459,
+   "magneticPressureNpa": 0.00504,
+   "clockAngleDeg": 105.4,
+   "newellCoupling": 2212.3,
+   "subsolarStandoffRe": 13.319,
+   "flaringAlpha": 0.57163
+  },
+  {
+   "validAt": "2026-08-07T10:23:29Z",
+   "observedAt": "2026-08-07T09:06:00Z",
+   "speedKps": 272.2,
+   "densityCm3": 3.21,
+   "bzGsmNt": -1.21,
+   "bxNt": 0.28,
+   "byNt": 3.11,
+   "btNt": 3.36,
+   "dynamicPressureNpa": 0.3978,
+   "magneticPressureNpa": 0.00449,
+   "clockAngleDeg": 111.3,
+   "newellCoupling": 2361.6,
+   "subsolarStandoffRe": 13.02,
+   "flaringAlpha": 0.57545
+  },
+  {
+   "validAt": "2026-08-07T10:28:55Z",
+   "observedAt": "2026-08-07T09:11:00Z",
+   "speedKps": 270.6,
+   "densityCm3": 2.83,
+   "bzGsmNt": -1.11,
+   "bxNt": 0.02,
+   "byNt": 3.3,
+   "btNt": 3.49,
+   "dynamicPressureNpa": 0.3466,
+   "magneticPressureNpa": 0.00485,
+   "clockAngleDeg": 108.6,
+   "newellCoupling": 2307.6,
+   "subsolarStandoffRe": 13.302,
+   "flaringAlpha": 0.57282
+  },
+  {
+   "validAt": "2026-08-07T10:34:07Z",
+   "observedAt": "2026-08-07T09:16:00Z",
+   "speedKps": 269.9,
+   "densityCm3": 2.69,
+   "bzGsmNt": -0.96,
+   "bxNt": -0.12,
+   "byNt": 3.38,
+   "btNt": 3.51,
+   "dynamicPressureNpa": 0.3278,
+   "magneticPressureNpa": 0.0049,
+   "clockAngleDeg": 105.9,
+   "newellCoupling": 2207.7,
+   "subsolarStandoffRe": 13.426,
+   "flaringAlpha": 0.57101
+  },
+  {
+   "validAt": "2026-08-07T10:39:14Z",
+   "observedAt": "2026-08-07T09:21:00Z",
+   "speedKps": 269.3,
+   "densityCm3": 3.29,
+   "bzGsmNt": -1.16,
+   "bxNt": -0.26,
+   "byNt": 3.34,
+   "btNt": 3.55,
+   "dynamicPressureNpa": 0.3991,
+   "magneticPressureNpa": 0.00501,
+   "clockAngleDeg": 109.2,
+   "newellCoupling": 2338.2,
+   "subsolarStandoffRe": 13.018,
+   "flaringAlpha": 0.57515
+  },
+  {
+   "validAt": "2026-08-07T10:44:12Z",
+   "observedAt": "2026-08-07T09:26:00Z",
+   "speedKps": 269.4,
+   "densityCm3": 3.06,
+   "bzGsmNt": -0.42,
+   "bxNt": -0.5,
+   "byNt": 3.15,
+   "btNt": 3.23,
+   "dynamicPressureNpa": 0.3715,
+   "magneticPressureNpa": 0.00415,
+   "clockAngleDeg": 97.6,
+   "newellCoupling": 1761.1,
+   "subsolarStandoffRe": 13.208,
+   "flaringAlpha": 0.56908
+  },
+  {
+   "validAt": "2026-08-07T10:49:26Z",
+   "observedAt": "2026-08-07T09:31:00Z",
+   "speedKps": 268.8,
+   "densityCm3": 2.78,
+   "bzGsmNt": -0.67,
+   "bxNt": -1.23,
+   "byNt": 3.1,
+   "btNt": 3.42,
+   "dynamicPressureNpa": 0.336,
+   "magneticPressureNpa": 0.00465,
+   "clockAngleDeg": 102.2,
+   "newellCoupling": 1918.8,
+   "subsolarStandoffRe": 13.395,
+   "flaringAlpha": 0.56938
+  },
+  {
+   "validAt": "2026-08-07T10:53:09Z",
+   "observedAt": "2026-08-07T09:36:00Z",
+   "speedKps": 273.9,
+   "densityCm3": 3.81,
+   "bzGsmNt": -0.97,
+   "bxNt": -0.19,
+   "byNt": 3.21,
+   "btNt": 3.51,
+   "dynamicPressureNpa": 0.4781,
+   "magneticPressureNpa": 0.0049,
+   "clockAngleDeg": 106.8,
+   "newellCoupling": 2219.1,
+   "subsolarStandoffRe": 12.679,
+   "flaringAlpha": 0.5764
+  },
+  {
+   "validAt": "2026-08-07T10:58:07Z",
+   "observedAt": "2026-08-07T09:41:00Z",
+   "speedKps": 274.4,
+   "densityCm3": 4.12,
+   "bzGsmNt": -3.0,
+   "bxNt": 0.79,
+   "byNt": 1.51,
+   "btNt": 3.47,
+   "dynamicPressureNpa": 0.5189,
+   "magneticPressureNpa": 0.00479,
+   "clockAngleDeg": 153.3,
+   "newellCoupling": 3716.9,
+   "subsolarStandoffRe": 12.34,
+   "flaringAlpha": 0.59154
+  },
+  {
+   "validAt": "2026-08-07T11:03:15Z",
+   "observedAt": "2026-08-07T09:46:00Z",
+   "speedKps": 273.8,
+   "densityCm3": 4.5,
+   "bzGsmNt": -2.59,
+   "bxNt": 0.83,
+   "byNt": 1.36,
+   "btNt": 3.04,
+   "dynamicPressureNpa": 0.5642,
+   "magneticPressureNpa": 0.00368,
+   "clockAngleDeg": 152.3,
+   "newellCoupling": 3361.3,
+   "subsolarStandoffRe": 12.229,
+   "flaringAlpha": 0.58992
+  },
+  {
+   "validAt": "2026-08-07T11:08:34Z",
+   "observedAt": "2026-08-07T09:51:00Z",
+   "speedKps": 273.0,
+   "densityCm3": 4.71,
+   "bzGsmNt": -2.76,
+   "bxNt": 1.19,
+   "byNt": 0.84,
+   "btNt": 3.12,
+   "dynamicPressureNpa": 0.5871,
+   "magneticPressureNpa": 0.00387,
+   "clockAngleDeg": 163.1,
+   "newellCoupling": 3485.7,
+   "subsolarStandoffRe": 12.138,
+   "flaringAlpha": 0.59166
+  },
+  {
+   "validAt": "2026-08-07T11:13:19Z",
+   "observedAt": "2026-08-07T09:56:00Z",
+   "speedKps": 273.8,
+   "densityCm3": 4.42,
+   "bzGsmNt": -2.94,
+   "bxNt": 1.09,
+   "byNt": 1.09,
+   "btNt": 3.32,
+   "dynamicPressureNpa": 0.5542,
+   "magneticPressureNpa": 0.00439,
+   "clockAngleDeg": 159.7,
+   "newellCoupling": 3651.2,
+   "subsolarStandoffRe": 12.224,
+   "flaringAlpha": 0.59207
+  },
+  {
+   "validAt": "2026-08-07T11:18:30Z",
+   "observedAt": "2026-08-07T10:01:00Z",
+   "speedKps": 273.1,
+   "densityCm3": 4.69,
+   "bzGsmNt": -2.86,
+   "bxNt": 1.12,
+   "byNt": 1.24,
+   "btNt": 3.31,
+   "dynamicPressureNpa": 0.5851,
+   "magneticPressureNpa": 0.00436,
+   "clockAngleDeg": 156.6,
+   "newellCoupling": 3574.4,
+   "subsolarStandoffRe": 12.133,
+   "flaringAlpha": 0.5923
+  },
+  {
+   "validAt": "2026-08-07T11:22:59Z",
+   "observedAt": "2026-08-07T10:06:00Z",
+   "speedKps": 275.1,
+   "densityCm3": 4.35,
+   "bzGsmNt": -3.09,
+   "bxNt": 1.32,
+   "byNt": 1.18,
+   "btNt": 3.57,
+   "dynamicPressureNpa": 0.5506,
+   "magneticPressureNpa": 0.00507,
+   "clockAngleDeg": 159.1,
+   "newellCoupling": 3798.6,
+   "subsolarStandoffRe": 12.218,
+   "flaringAlpha": 0.59301
+  },
+  {
+   "validAt": "2026-08-07T11:28:50Z",
+   "observedAt": "2026-08-07T10:11:00Z",
+   "speedKps": 271.8,
+   "densityCm3": 4.74,
+   "bzGsmNt": -3.19,
+   "bxNt": 1.67,
+   "byNt": 0.52,
+   "btNt": 3.65,
+   "dynamicPressureNpa": 0.5857,
+   "magneticPressureNpa": 0.0053,
+   "clockAngleDeg": 170.7,
+   "newellCoupling": 3815.3,
+   "subsolarStandoffRe": 12.092,
+   "flaringAlpha": 0.5946
+  },
+  {
+   "validAt": "2026-08-07T11:33:40Z",
+   "observedAt": "2026-08-07T10:16:00Z",
+   "speedKps": 272.7,
+   "densityCm3": 4.71,
+   "bzGsmNt": -2.85,
+   "bxNt": 1.26,
+   "byNt": 1.23,
+   "btNt": 3.34,
+   "dynamicPressureNpa": 0.5858,
+   "magneticPressureNpa": 0.00444,
+   "clockAngleDeg": 156.7,
+   "newellCoupling": 3559.0,
+   "subsolarStandoffRe": 12.132,
+   "flaringAlpha": 0.59225
+  },
+  {
+   "validAt": "2026-08-07T11:38:40Z",
+   "observedAt": "2026-08-07T10:21:00Z",
+   "speedKps": 272.4,
+   "densityCm3": 4.75,
+   "bzGsmNt": -2.96,
+   "bxNt": 1.35,
+   "byNt": 1.22,
+   "btNt": 3.48,
+   "dynamicPressureNpa": 0.5895,
+   "magneticPressureNpa": 0.00482,
+   "clockAngleDeg": 157.6,
+   "newellCoupling": 3644.0,
+   "subsolarStandoffRe": 12.108,
+   "flaringAlpha": 0.5931
+  },
+  {
+   "validAt": "2026-08-07T11:43:47Z",
+   "observedAt": "2026-08-07T10:26:00Z",
+   "speedKps": 271.9,
+   "densityCm3": 4.72,
+   "bzGsmNt": -2.9,
+   "bxNt": 1.11,
+   "byNt": 1.53,
+   "btNt": 3.47,
+   "dynamicPressureNpa": 0.5837,
+   "magneticPressureNpa": 0.00479,
+   "clockAngleDeg": 152.2,
+   "newellCoupling": 3591.1,
+   "subsolarStandoffRe": 12.133,
+   "flaringAlpha": 0.59254
+  },
+  {
+   "validAt": "2026-08-07T11:49:02Z",
+   "observedAt": "2026-08-07T10:31:00Z",
+   "speedKps": 270.9,
+   "densityCm3": 4.6,
+   "bzGsmNt": -3.05,
+   "bxNt": 1.15,
+   "byNt": 1.58,
+   "btNt": 3.62,
+   "dynamicPressureNpa": 0.5646,
+   "magneticPressureNpa": 0.00521,
+   "clockAngleDeg": 152.6,
+   "newellCoupling": 3695.1,
+   "subsolarStandoffRe": 12.177,
+   "flaringAlpha": 0.5931
+  },
+  {
+   "validAt": "2026-08-07T11:53:50Z",
+   "observedAt": "2026-08-07T10:36:00Z",
+   "speedKps": 271.6,
+   "densityCm3": 4.7,
+   "bzGsmNt": -2.82,
+   "bxNt": 1.07,
+   "byNt": 1.95,
+   "btNt": 3.59,
+   "dynamicPressureNpa": 0.5799,
+   "magneticPressureNpa": 0.00513,
+   "clockAngleDeg": 145.3,
+   "newellCoupling": 3533.1,
+   "subsolarStandoffRe": 12.154,
+   "flaringAlpha": 0.5919
+  },
+  {
+   "validAt": "2026-08-07T11:58:49Z",
+   "observedAt": "2026-08-07T10:41:00Z",
+   "speedKps": 271.5,
+   "densityCm3": 4.64,
+   "bzGsmNt": -2.76,
+   "bxNt": 1.08,
+   "byNt": 1.87,
+   "btNt": 3.52,
+   "dynamicPressureNpa": 0.5721,
+   "magneticPressureNpa": 0.00493,
+   "clockAngleDeg": 145.9,
+   "newellCoupling": 3479.7,
+   "subsolarStandoffRe": 12.186,
+   "flaringAlpha": 0.59129
+  },
+  {
+   "validAt": "2026-08-07T12:04:06Z",
+   "observedAt": "2026-08-07T10:46:00Z",
+   "speedKps": 270.5,
+   "densityCm3": 4.53,
+   "bzGsmNt": -2.97,
+   "bxNt": 0.97,
+   "byNt": 2.03,
+   "btNt": 3.73,
+   "dynamicPressureNpa": 0.5544,
+   "magneticPressureNpa": 0.00554,
+   "clockAngleDeg": 145.6,
+   "newellCoupling": 3636.7,
+   "subsolarStandoffRe": 12.22,
+   "flaringAlpha": 0.59228
+  },
+  {
+   "validAt": "2026-08-07T12:09:20Z",
+   "observedAt": "2026-08-07T10:51:00Z",
+   "speedKps": 269.7,
+   "densityCm3": 4.35,
+   "bzGsmNt": -2.81,
+   "bxNt": 1.0,
+   "byNt": 2.2,
+   "btNt": 3.71,
+   "dynamicPressureNpa": 0.5292,
+   "magneticPressureNpa": 0.00548,
+   "clockAngleDeg": 141.9,
+   "newellCoupling": 3502.9,
+   "subsolarStandoffRe": 12.325,
+   "flaringAlpha": 0.59051
+  },
+  {
+   "validAt": "2026-08-07T12:14:02Z",
+   "observedAt": "2026-08-07T10:56:00Z",
+   "speedKps": 270.5,
+   "densityCm3": 4.11,
+   "bzGsmNt": -2.92,
+   "bxNt": 1.31,
+   "byNt": 3.02,
+   "btNt": 4.39,
+   "dynamicPressureNpa": 0.503,
+   "magneticPressureNpa": 0.00767,
+   "clockAngleDeg": 134.0,
+   "newellCoupling": 3653.1,
+   "subsolarStandoffRe": 12.407,
+   "flaringAlpha": 0.59054
+  },
+  {
+   "validAt": "2026-08-07T12:19:05Z",
+   "observedAt": "2026-08-07T11:01:00Z",
+   "speedKps": 270.4,
+   "densityCm3": 4.14,
+   "bzGsmNt": -3.33,
+   "bxNt": 1.43,
+   "byNt": 2.96,
+   "btNt": 4.68,
+   "dynamicPressureNpa": 0.5063,
+   "magneticPressureNpa": 0.00871,
+   "clockAngleDeg": 138.4,
+   "newellCoupling": 3954.4,
+   "subsolarStandoffRe": 12.344,
+   "flaringAlpha": 0.59345
+  },
+  {
+   "validAt": "2026-08-07T12:24:24Z",
+   "observedAt": "2026-08-07T11:06:00Z",
+   "speedKps": 269.6,
+   "densityCm3": 3.73,
+   "bzGsmNt": -4.01,
+   "bxNt": 1.43,
+   "byNt": 2.88,
+   "btNt": 5.14,
+   "dynamicPressureNpa": 0.4535,
+   "magneticPressureNpa": 0.01051,
+   "clockAngleDeg": 144.3,
+   "newellCoupling": 4427.7,
+   "subsolarStandoffRe": 12.453,
+   "flaringAlpha": 0.59653
+  },
+  {
+   "validAt": "2026-08-07T12:29:17Z",
+   "observedAt": "2026-08-07T11:11:00Z",
+   "speedKps": 269.8,
+   "densityCm3": 4.13,
+   "bzGsmNt": -4.13,
+   "bxNt": 1.37,
+   "byNt": 2.98,
+   "btNt": 5.27,
+   "dynamicPressureNpa": 0.5028,
+   "magneticPressureNpa": 0.01105,
+   "clockAngleDeg": 144.2,
+   "newellCoupling": 4520.5,
+   "subsolarStandoffRe": 12.241,
+   "flaringAlpha": 0.59886
+  },
+  {
+   "validAt": "2026-08-07T12:34:06Z",
+   "observedAt": "2026-08-07T11:16:00Z",
+   "speedKps": 270.3,
+   "densityCm3": 4.0,
+   "bzGsmNt": -4.24,
+   "bxNt": 1.67,
+   "byNt": 3.53,
+   "btNt": 5.76,
+   "dynamicPressureNpa": 0.4888,
+   "magneticPressureNpa": 0.0132,
+   "clockAngleDeg": 140.2,
+   "newellCoupling": 4631.3,
+   "subsolarStandoffRe": 12.276,
+   "flaringAlpha": 0.59921
+  },
+  {
+   "validAt": "2026-08-07T12:39:59Z",
+   "observedAt": "2026-08-07T11:22:00Z",
+   "speedKps": 270.2,
+   "densityCm3": 3.35,
+   "bzGsmNt": 1.24,
+   "bxNt": 0.35,
+   "byNt": 5.37,
+   "btNt": 5.53,
+   "dynamicPressureNpa": 0.4091,
+   "magneticPressureNpa": 0.01217,
+   "clockAngleDeg": 77.0,
+   "newellCoupling": 1539.7,
+   "subsolarStandoffRe": 13.089,
+   "flaringAlpha": 0.55906
+  },
+  {
+   "validAt": "2026-08-07T12:45:15Z",
+   "observedAt": "2026-08-07T11:27:00Z",
+   "speedKps": 269.2,
+   "densityCm3": 4.0,
+   "bzGsmNt": 0.82,
+   "bxNt": 1.02,
+   "byNt": 4.93,
+   "btNt": 5.1,
+   "dynamicPressureNpa": 0.4848,
+   "magneticPressureNpa": 0.01035,
+   "clockAngleDeg": 80.6,
+   "newellCoupling": 1587.8,
+   "subsolarStandoffRe": 12.742,
+   "flaringAlpha": 0.56428
+  },
+  {
+   "validAt": "2026-08-07T12:50:52Z",
+   "observedAt": "2026-08-07T11:32:00Z",
+   "speedKps": 267.0,
+   "densityCm3": 3.73,
+   "bzGsmNt": 1.15,
+   "bxNt": 0.81,
+   "byNt": 4.84,
+   "btNt": 5.04,
+   "dynamicPressureNpa": 0.4448,
+   "magneticPressureNpa": 0.01011,
+   "clockAngleDeg": 76.6,
+   "newellCoupling": 1400.4,
+   "subsolarStandoffRe": 12.921,
+   "flaringAlpha": 0.56083
+  },
+  {
+   "validAt": "2026-08-07T12:55:12Z",
+   "observedAt": "2026-08-07T11:37:00Z",
+   "speedKps": 269.2,
+   "densityCm3": 4.12,
+   "bzGsmNt": 1.3,
+   "bxNt": 0.92,
+   "byNt": 4.56,
+   "btNt": 4.83,
+   "dynamicPressureNpa": 0.4994,
+   "magneticPressureNpa": 0.00928,
+   "clockAngleDeg": 74.1,
+   "newellCoupling": 1270.0,
+   "subsolarStandoffRe": 12.701,
+   "flaringAlpha": 0.56139
+  },
+  {
+   "validAt": "2026-08-07T13:04:40Z",
+   "observedAt": "2026-08-07T11:47:00Z",
+   "speedKps": 270.9,
+   "densityCm3": 4.13,
+   "bzGsmNt": 0.78,
+   "bxNt": 0.64,
+   "byNt": 4.66,
+   "btNt": 4.8,
+   "dynamicPressureNpa": 0.5069,
+   "magneticPressureNpa": 0.00917,
+   "clockAngleDeg": 80.5,
+   "newellCoupling": 1539.9,
+   "subsolarStandoffRe": 12.654,
+   "flaringAlpha": 0.56517
+  },
+  {
+   "validAt": "2026-08-07T13:10:19Z",
+   "observedAt": "2026-08-07T11:52:00Z",
+   "speedKps": 268.6,
+   "densityCm3": 3.39,
+   "bzGsmNt": 2.13,
+   "bxNt": 0.84,
+   "byNt": 4.43,
+   "btNt": 4.99,
+   "dynamicPressureNpa": 0.4091,
+   "magneticPressureNpa": 0.00991,
+   "clockAngleDeg": 64.3,
+   "newellCoupling": 932.4,
+   "subsolarStandoffRe": 13.113,
+   "flaringAlpha": 0.55297
+  },
+  {
+   "validAt": "2026-08-07T13:19:55Z",
+   "observedAt": "2026-08-07T12:02:00Z",
+   "speedKps": 270.0,
+   "densityCm3": 3.69,
+   "bzGsmNt": 1.8,
+   "bxNt": 1.21,
+   "byNt": 4.43,
+   "btNt": 4.93,
+   "dynamicPressureNpa": 0.4499,
+   "magneticPressureNpa": 0.00967,
+   "clockAngleDeg": 67.9,
+   "newellCoupling": 1047.1,
+   "subsolarStandoffRe": 12.917,
+   "flaringAlpha": 0.55652
+  },
+  {
+   "validAt": "2026-08-07T13:29:53Z",
+   "observedAt": "2026-08-07T12:12:00Z",
+   "speedKps": 270.0,
+   "densityCm3": 3.59,
+   "bzGsmNt": 3.0,
+   "bxNt": 0.47,
+   "byNt": 3.84,
+   "btNt": 4.89,
+   "dynamicPressureNpa": 0.4377,
+   "magneticPressureNpa": 0.00951,
+   "clockAngleDeg": 52.0,
+   "newellCoupling": 556.3,
+   "subsolarStandoffRe": 12.997,
+   "flaringAlpha": 0.54792
+  },
+  {
+   "validAt": "2026-08-07T13:35:39Z",
+   "observedAt": "2026-08-07T12:17:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 3.91,
+   "bzGsmNt": 2.81,
+   "bxNt": 0.53,
+   "byNt": 3.27,
+   "btNt": 4.36,
+   "dynamicPressureNpa": 0.4673,
+   "magneticPressureNpa": 0.00756,
+   "clockAngleDeg": 49.3,
+   "newellCoupling": 443.5,
+   "subsolarStandoffRe": 12.866,
+   "flaringAlpha": 0.5501
+  },
+  {
+   "validAt": "2026-08-07T13:41:21Z",
+   "observedAt": "2026-08-07T12:22:00Z",
+   "speedKps": 265.0,
+   "densityCm3": 4.19,
+   "bzGsmNt": 2.82,
+   "bxNt": 0.96,
+   "byNt": 2.78,
+   "btNt": 4.09,
+   "dynamicPressureNpa": 0.4922,
+   "magneticPressureNpa": 0.00666,
+   "clockAngleDeg": 44.6,
+   "newellCoupling": 321.4,
+   "subsolarStandoffRe": 12.765,
+   "flaringAlpha": 0.55073
+  },
+  {
+   "validAt": "2026-08-07T13:45:12Z",
+   "observedAt": "2026-08-07T12:27:00Z",
+   "speedKps": 269.0,
+   "densityCm3": 3.58,
+   "bzGsmNt": 2.97,
+   "bxNt": 1.21,
+   "byNt": 2.78,
+   "btNt": 4.25,
+   "dynamicPressureNpa": 0.4333,
+   "magneticPressureNpa": 0.00719,
+   "clockAngleDeg": 43.1,
+   "newellCoupling": 306.3,
+   "subsolarStandoffRe": 13.017,
+   "flaringAlpha": 0.54799
+  },
+  {
+   "validAt": "2026-08-07T13:50:14Z",
+   "observedAt": "2026-08-07T12:32:00Z",
+   "speedKps": 268.8,
+   "densityCm3": 3.36,
+   "bzGsmNt": 3.31,
+   "bxNt": 0.96,
+   "byNt": 2.39,
+   "btNt": 4.2,
+   "dynamicPressureNpa": 0.4061,
+   "magneticPressureNpa": 0.00702,
+   "clockAngleDeg": 35.8,
+   "newellCoupling": 191.1,
+   "subsolarStandoffRe": 13.151,
+   "flaringAlpha": 0.54479
+  },
+  {
+   "validAt": "2026-08-07T13:55:12Z",
+   "observedAt": "2026-08-07T12:37:00Z",
+   "speedKps": 269.0,
+   "densityCm3": 3.77,
+   "bzGsmNt": 3.29,
+   "bxNt": 0.42,
+   "byNt": 1.86,
+   "btNt": 3.8,
+   "dynamicPressureNpa": 0.4563,
+   "magneticPressureNpa": 0.00575,
+   "clockAngleDeg": 29.5,
+   "newellCoupling": 109.5,
+   "subsolarStandoffRe": 12.92,
+   "flaringAlpha": 0.54648
+  },
+  {
+   "validAt": "2026-08-07T14:00:17Z",
+   "observedAt": "2026-08-07T12:42:00Z",
+   "speedKps": 268.7,
+   "densityCm3": 3.67,
+   "bzGsmNt": 3.31,
+   "bxNt": 0.77,
+   "byNt": 1.83,
+   "btNt": 3.86,
+   "dynamicPressureNpa": 0.4432,
+   "magneticPressureNpa": 0.00593,
+   "clockAngleDeg": 28.9,
+   "newellCoupling": 104.2,
+   "subsolarStandoffRe": 12.978,
+   "flaringAlpha": 0.54596
+  },
+  {
+   "validAt": "2026-08-07T14:09:55Z",
+   "observedAt": "2026-08-07T12:52:00Z",
+   "speedKps": 270.0,
+   "densityCm3": 3.21,
+   "bzGsmNt": 3.16,
+   "bxNt": 2.11,
+   "byNt": 0.29,
+   "btNt": 3.83,
+   "dynamicPressureNpa": 0.3914,
+   "magneticPressureNpa": 0.00584,
+   "clockAngleDeg": 5.2,
+   "newellCoupling": 1.0,
+   "subsolarStandoffRe": 13.222,
+   "flaringAlpha": 0.54532
+  },
+  {
+   "validAt": "2026-08-07T14:14:22Z",
+   "observedAt": "2026-08-07T12:57:00Z",
+   "speedKps": 272.3,
+   "densityCm3": 3.27,
+   "bzGsmNt": 2.32,
+   "bxNt": 3.36,
+   "byNt": 0.05,
+   "btNt": 4.09,
+   "dynamicPressureNpa": 0.4055,
+   "magneticPressureNpa": 0.00666,
+   "clockAngleDeg": 1.2,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 13.135,
+   "flaringAlpha": 0.55155
+  },
+  {
+   "validAt": "2026-08-07T14:19:04Z",
+   "observedAt": "2026-08-07T13:02:00Z",
+   "speedKps": 273.2,
+   "densityCm3": 3.46,
+   "bzGsmNt": 2.08,
+   "bxNt": 2.82,
+   "byNt": 1.09,
+   "btNt": 3.66,
+   "dynamicPressureNpa": 0.4319,
+   "magneticPressureNpa": 0.00533,
+   "clockAngleDeg": 27.7,
+   "newellCoupling": 68.9,
+   "subsolarStandoffRe": 13.005,
+   "flaringAlpha": 0.55405
+  },
+  {
+   "validAt": "2026-08-07T14:24:21Z",
+   "observedAt": "2026-08-07T13:07:00Z",
+   "speedKps": 272.2,
+   "densityCm3": 3.27,
+   "bzGsmNt": 2.38,
+   "bxNt": 2.79,
+   "byNt": -0.03,
+   "btNt": 3.69,
+   "dynamicPressureNpa": 0.4052,
+   "magneticPressureNpa": 0.00542,
+   "clockAngleDeg": 359.3,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 13.138,
+   "flaringAlpha": 0.55113
+  },
+  {
+   "validAt": "2026-08-07T14:29:02Z",
+   "observedAt": "2026-08-07T13:12:00Z",
+   "speedKps": 273.3,
+   "densityCm3": 3.43,
+   "bzGsmNt": 2.04,
+   "bxNt": 2.75,
+   "byNt": 0.92,
+   "btNt": 3.55,
+   "dynamicPressureNpa": 0.4285,
+   "magneticPressureNpa": 0.00501,
+   "clockAngleDeg": 24.3,
+   "newellCoupling": 47.4,
+   "subsolarStandoffRe": 13.019,
+   "flaringAlpha": 0.55421
+  },
+  {
+   "validAt": "2026-08-07T14:34:14Z",
+   "observedAt": "2026-08-07T13:17:00Z",
+   "speedKps": 272.6,
+   "densityCm3": 3.44,
+   "bzGsmNt": 1.95,
+   "bxNt": 2.72,
+   "byNt": 0.98,
+   "btNt": 3.49,
+   "dynamicPressureNpa": 0.4276,
+   "magneticPressureNpa": 0.00485,
+   "clockAngleDeg": 26.7,
+   "newellCoupling": 59.6,
+   "subsolarStandoffRe": 13.021,
+   "flaringAlpha": 0.5548
+  },
+  {
+   "validAt": "2026-08-07T14:38:45Z",
+   "observedAt": "2026-08-07T13:22:00Z",
+   "speedKps": 274.4,
+   "densityCm3": 3.32,
+   "bzGsmNt": 1.81,
+   "bxNt": 3.08,
+   "byNt": 0.61,
+   "btNt": 3.63,
+   "dynamicPressureNpa": 0.4181,
+   "magneticPressureNpa": 0.00524,
+   "clockAngleDeg": 18.6,
+   "newellCoupling": 21.3,
+   "subsolarStandoffRe": 13.062,
+   "flaringAlpha": 0.55546
+  },
+  {
+   "validAt": "2026-08-07T14:45:34Z",
+   "observedAt": "2026-08-07T13:27:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 3.38,
+   "bzGsmNt": 2.71,
+   "bxNt": 1.49,
+   "byNt": 1.44,
+   "btNt": 3.41,
+   "dynamicPressureNpa": 0.4057,
+   "magneticPressureNpa": 0.00463,
+   "clockAngleDeg": 28.0,
+   "newellCoupling": 82.8,
+   "subsolarStandoffRe": 13.142,
+   "flaringAlpha": 0.54888
+  },
+  {
+   "validAt": "2026-08-07T14:51:25Z",
+   "observedAt": "2026-08-07T13:33:00Z",
+   "speedKps": 268.2,
+   "densityCm3": 3.38,
+   "bzGsmNt": 2.57,
+   "bxNt": 1.33,
+   "byNt": 1.9,
+   "btNt": 3.47,
+   "dynamicPressureNpa": 0.4067,
+   "magneticPressureNpa": 0.00479,
+   "clockAngleDeg": 36.5,
+   "newellCoupling": 169.4,
+   "subsolarStandoffRe": 13.135,
+   "flaringAlpha": 0.54987
+  },
+  {
+   "validAt": "2026-08-07T14:56:21Z",
+   "observedAt": "2026-08-07T13:38:00Z",
+   "speedKps": 268.4,
+   "densityCm3": 2.77,
+   "bzGsmNt": 3.28,
+   "bxNt": 2.02,
+   "byNt": 1.58,
+   "btNt": 4.17,
+   "dynamicPressureNpa": 0.3338,
+   "magneticPressureNpa": 0.00692,
+   "clockAngleDeg": 25.7,
+   "newellCoupling": 74.5,
+   "subsolarStandoffRe": 13.547,
+   "flaringAlpha": 0.54237
+  },
+  {
+   "validAt": "2026-08-07T15:01:20Z",
+   "observedAt": "2026-08-07T13:43:00Z",
+   "speedKps": 268.6,
+   "densityCm3": 3.21,
+   "bzGsmNt": 2.87,
+   "bxNt": 1.9,
+   "byNt": 1.94,
+   "btNt": 3.95,
+   "dynamicPressureNpa": 0.3874,
+   "magneticPressureNpa": 0.00621,
+   "clockAngleDeg": 34.1,
+   "newellCoupling": 150.1,
+   "subsolarStandoffRe": 13.238,
+   "flaringAlpha": 0.54717
+  },
+  {
+   "validAt": "2026-08-07T15:06:55Z",
+   "observedAt": "2026-08-07T13:48:00Z",
+   "speedKps": 266.7,
+   "densityCm3": 3.46,
+   "bzGsmNt": 2.58,
+   "bxNt": 1.57,
+   "byNt": 1.85,
+   "btNt": 3.54,
+   "dynamicPressureNpa": 0.4116,
+   "magneticPressureNpa": 0.00499,
+   "clockAngleDeg": 35.6,
+   "newellCoupling": 157.7,
+   "subsolarStandoffRe": 13.111,
+   "flaringAlpha": 0.54997
+  },
+  {
+   "validAt": "2026-08-07T15:11:32Z",
+   "observedAt": "2026-08-07T13:53:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 3.27,
+   "bzGsmNt": 2.51,
+   "bxNt": 1.48,
+   "byNt": 1.61,
+   "btNt": 3.33,
+   "dynamicPressureNpa": 0.3925,
+   "magneticPressureNpa": 0.00441,
+   "clockAngleDeg": 32.7,
+   "newellCoupling": 121.6,
+   "subsolarStandoffRe": 13.204,
+   "flaringAlpha": 0.54981
+  },
+  {
+   "validAt": "2026-08-07T15:16:59Z",
+   "observedAt": "2026-08-07T13:58:00Z",
+   "speedKps": 266.4,
+   "densityCm3": 3.04,
+   "bzGsmNt": 2.85,
+   "bxNt": 1.43,
+   "byNt": 1.53,
+   "btNt": 3.54,
+   "dynamicPressureNpa": 0.3609,
+   "magneticPressureNpa": 0.00499,
+   "clockAngleDeg": 28.2,
+   "newellCoupling": 87.0,
+   "subsolarStandoffRe": 13.38,
+   "flaringAlpha": 0.54635
+  },
+  {
+   "validAt": "2026-08-07T15:21:57Z",
+   "observedAt": "2026-08-07T14:03:00Z",
+   "speedKps": 266.5,
+   "densityCm3": 2.93,
+   "bzGsmNt": 3.03,
+   "bxNt": 1.41,
+   "byNt": 1.36,
+   "btNt": 3.61,
+   "dynamicPressureNpa": 0.3481,
+   "magneticPressureNpa": 0.00519,
+   "clockAngleDeg": 24.2,
+   "newellCoupling": 59.0,
+   "subsolarStandoffRe": 13.457,
+   "flaringAlpha": 0.54464
+  },
+  {
+   "validAt": "2026-08-07T15:27:08Z",
+   "observedAt": "2026-08-07T14:08:00Z",
+   "speedKps": 266.1,
+   "densityCm3": 3.14,
+   "bzGsmNt": 2.7,
+   "bxNt": 1.45,
+   "byNt": 1.55,
+   "btNt": 3.44,
+   "dynamicPressureNpa": 0.3719,
+   "magneticPressureNpa": 0.00471,
+   "clockAngleDeg": 29.9,
+   "newellCoupling": 98.1,
+   "subsolarStandoffRe": 13.317,
+   "flaringAlpha": 0.54778
+  },
+  {
+   "validAt": "2026-08-07T15:31:45Z",
+   "observedAt": "2026-08-07T14:13:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 2.95,
+   "bzGsmNt": 2.83,
+   "bxNt": 1.47,
+   "byNt": 1.29,
+   "btNt": 3.44,
+   "dynamicPressureNpa": 0.3525,
+   "magneticPressureNpa": 0.00471,
+   "clockAngleDeg": 24.5,
+   "newellCoupling": 58.8,
+   "subsolarStandoffRe": 13.427,
+   "flaringAlpha": 0.54617
+  },
+  {
+   "validAt": "2026-08-07T15:36:50Z",
+   "observedAt": "2026-08-07T14:18:00Z",
+   "speedKps": 267.1,
+   "densityCm3": 3.04,
+   "bzGsmNt": 2.67,
+   "bxNt": 1.62,
+   "byNt": 1.39,
+   "btNt": 3.42,
+   "dynamicPressureNpa": 0.3628,
+   "magneticPressureNpa": 0.00465,
+   "clockAngleDeg": 27.5,
+   "newellCoupling": 77.7,
+   "subsolarStandoffRe": 13.366,
+   "flaringAlpha": 0.54765
+  },
+  {
+   "validAt": "2026-08-07T15:42:19Z",
+   "observedAt": "2026-08-07T14:23:00Z",
+   "speedKps": 265.3,
+   "densityCm3": 3.12,
+   "bzGsmNt": 2.19,
+   "bxNt": 1.46,
+   "byNt": 0.84,
+   "btNt": 2.77,
+   "dynamicPressureNpa": 0.3673,
+   "magneticPressureNpa": 0.00305,
+   "clockAngleDeg": 21.0,
+   "newellCoupling": 32.1,
+   "subsolarStandoffRe": 13.331,
+   "flaringAlpha": 0.5511
+  },
+  {
+   "validAt": "2026-08-07T15:48:56Z",
+   "observedAt": "2026-08-07T14:28:00Z",
+   "speedKps": 260.3,
+   "densityCm3": 4.92,
+   "bzGsmNt": 1.14,
+   "bxNt": -1.03,
+   "byNt": -0.72,
+   "btNt": 1.91,
+   "dynamicPressureNpa": 0.5576,
+   "magneticPressureNpa": 0.00145,
+   "clockAngleDeg": 327.7,
+   "newellCoupling": 66.7,
+   "subsolarStandoffRe": 12.485,
+   "flaringAlpha": 0.564
+  },
+  {
+   "validAt": "2026-08-07T15:52:35Z",
+   "observedAt": "2026-08-07T14:33:00Z",
+   "speedKps": 265.7,
+   "densityCm3": 3.77,
+   "bzGsmNt": -0.71,
+   "bxNt": -1.3,
+   "byNt": -2.56,
+   "btNt": 2.98,
+   "dynamicPressureNpa": 0.4452,
+   "magneticPressureNpa": 0.00353,
+   "clockAngleDeg": 254.5,
+   "newellCoupling": 1783.1,
+   "subsolarStandoffRe": 12.834,
+   "flaringAlpha": 0.57361
+  },
+  {
+   "validAt": "2026-08-07T15:58:02Z",
+   "observedAt": "2026-08-07T14:38:00Z",
+   "speedKps": 263.9,
+   "densityCm3": 3.96,
+   "bzGsmNt": 0.33,
+   "bxNt": -1.36,
+   "byNt": -2.35,
+   "btNt": 2.75,
+   "dynamicPressureNpa": 0.4613,
+   "magneticPressureNpa": 0.00301,
+   "clockAngleDeg": 278.0,
+   "newellCoupling": 978.8,
+   "subsolarStandoffRe": 12.819,
+   "flaringAlpha": 0.56696
+  },
+  {
+   "validAt": "2026-08-07T16:03:23Z",
+   "observedAt": "2026-08-07T14:43:00Z",
+   "speedKps": 262.4,
+   "densityCm3": 3.99,
+   "bzGsmNt": -0.36,
+   "bxNt": -1.24,
+   "byNt": -2.4,
+   "btNt": 2.74,
+   "dynamicPressureNpa": 0.4595,
+   "magneticPressureNpa": 0.00299,
+   "clockAngleDeg": 261.5,
+   "newellCoupling": 1447.8,
+   "subsolarStandoffRe": 12.792,
+   "flaringAlpha": 0.57165
+  },
+  {
+   "validAt": "2026-08-07T16:07:21Z",
+   "observedAt": "2026-08-07T14:48:00Z",
+   "speedKps": 265.8,
+   "densityCm3": 3.77,
+   "bzGsmNt": -1.05,
+   "bxNt": -2.31,
+   "byNt": -1.64,
+   "btNt": 3.03,
+   "dynamicPressureNpa": 0.4455,
+   "magneticPressureNpa": 0.00365,
+   "clockAngleDeg": 237.4,
+   "newellCoupling": 1879.5,
+   "subsolarStandoffRe": 12.81,
+   "flaringAlpha": 0.57595
+  },
+  {
+   "validAt": "2026-08-07T16:11:45Z",
+   "observedAt": "2026-08-07T14:53:00Z",
+   "speedKps": 267.8,
+   "densityCm3": 3.56,
+   "bzGsmNt": -1.21,
+   "bxNt": -2.21,
+   "byNt": -1.86,
+   "btNt": 3.15,
+   "dynamicPressureNpa": 0.427,
+   "magneticPressureNpa": 0.00395,
+   "clockAngleDeg": 237.0,
+   "newellCoupling": 2082.0,
+   "subsolarStandoffRe": 12.881,
+   "flaringAlpha": 0.57645
+  },
+  {
+   "validAt": "2026-08-07T16:16:38Z",
+   "observedAt": "2026-08-07T14:58:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 3.42,
+   "bzGsmNt": -0.86,
+   "bxNt": -2.11,
+   "byNt": -2.09,
+   "btNt": 3.09,
+   "dynamicPressureNpa": 0.4105,
+   "magneticPressureNpa": 0.0038,
+   "clockAngleDeg": 247.6,
+   "newellCoupling": 1814.3,
+   "subsolarStandoffRe": 12.983,
+   "flaringAlpha": 0.5735
+  },
+  {
+   "validAt": "2026-08-07T16:21:42Z",
+   "observedAt": "2026-08-07T15:03:00Z",
+   "speedKps": 267.7,
+   "densityCm3": 3.49,
+   "bzGsmNt": -0.91,
+   "bxNt": -2.13,
+   "byNt": -2.0,
+   "btNt": 3.06,
+   "dynamicPressureNpa": 0.4183,
+   "magneticPressureNpa": 0.00373,
+   "clockAngleDeg": 245.5,
+   "newellCoupling": 1836.8,
+   "subsolarStandoffRe": 12.942,
+   "flaringAlpha": 0.57411
+  },
+  {
+   "validAt": "2026-08-07T16:26:31Z",
+   "observedAt": "2026-08-07T15:08:00Z",
+   "speedKps": 268.2,
+   "densityCm3": 3.62,
+   "bzGsmNt": -0.85,
+   "bxNt": -2.11,
+   "byNt": -1.98,
+   "btNt": 3.02,
+   "dynamicPressureNpa": 0.4355,
+   "magneticPressureNpa": 0.00363,
+   "clockAngleDeg": 246.8,
+   "newellCoupling": 1783.9,
+   "subsolarStandoffRe": 12.867,
+   "flaringAlpha": 0.57426
+  },
+  {
+   "validAt": "2026-08-07T16:31:37Z",
+   "observedAt": "2026-08-07T15:13:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 3.68,
+   "bzGsmNt": -1.09,
+   "bxNt": -2.09,
+   "byNt": -1.97,
+   "btNt": 3.07,
+   "dynamicPressureNpa": 0.4418,
+   "magneticPressureNpa": 0.00375,
+   "clockAngleDeg": 241.0,
+   "newellCoupling": 1993.1,
+   "subsolarStandoffRe": 12.824,
+   "flaringAlpha": 0.57611
+  },
+  {
+   "validAt": "2026-08-07T16:36:56Z",
+   "observedAt": "2026-08-07T15:18:00Z",
+   "speedKps": 266.8,
+   "densityCm3": 3.85,
+   "bzGsmNt": -1.11,
+   "bxNt": -2.35,
+   "byNt": -1.49,
+   "btNt": 2.99,
+   "dynamicPressureNpa": 0.4584,
+   "magneticPressureNpa": 0.00356,
+   "clockAngleDeg": 233.3,
+   "newellCoupling": 1923.6,
+   "subsolarStandoffRe": 12.751,
+   "flaringAlpha": 0.57677
+  },
+  {
+   "validAt": "2026-08-07T16:41:53Z",
+   "observedAt": "2026-08-07T15:23:00Z",
+   "speedKps": 267.0,
+   "densityCm3": 3.79,
+   "bzGsmNt": -0.93,
+   "bxNt": -2.2,
+   "byNt": -1.72,
+   "btNt": 2.97,
+   "dynamicPressureNpa": 0.4519,
+   "magneticPressureNpa": 0.00351,
+   "clockAngleDeg": 241.6,
+   "newellCoupling": 1792.3,
+   "subsolarStandoffRe": 12.791,
+   "flaringAlpha": 0.57533
+  },
+  {
+   "validAt": "2026-08-07T16:47:18Z",
+   "observedAt": "2026-08-07T15:28:00Z",
+   "speedKps": 265.7,
+   "densityCm3": 3.92,
+   "bzGsmNt": -1.08,
+   "bxNt": -1.97,
+   "byNt": -1.81,
+   "btNt": 2.9,
+   "dynamicPressureNpa": 0.4629,
+   "magneticPressureNpa": 0.00335,
+   "clockAngleDeg": 239.2,
+   "newellCoupling": 1934.5,
+   "subsolarStandoffRe": 12.734,
+   "flaringAlpha": 0.5767
+  },
+  {
+   "validAt": "2026-08-07T16:51:54Z",
+   "observedAt": "2026-08-07T15:33:00Z",
+   "speedKps": 267.1,
+   "densityCm3": 3.94,
+   "bzGsmNt": -1.05,
+   "bxNt": -1.67,
+   "byNt": -2.35,
+   "btNt": 3.07,
+   "dynamicPressureNpa": 0.4701,
+   "magneticPressureNpa": 0.00375,
+   "clockAngleDeg": 245.9,
+   "newellCoupling": 2023.1,
+   "subsolarStandoffRe": 12.706,
+   "flaringAlpha": 0.57671
+  },
+  {
+   "validAt": "2026-08-07T16:56:47Z",
+   "observedAt": "2026-08-07T15:38:00Z",
+   "speedKps": 267.5,
+   "densityCm3": 3.85,
+   "bzGsmNt": -0.23,
+   "bxNt": -1.35,
+   "byNt": -2.79,
+   "btNt": 3.11,
+   "dynamicPressureNpa": 0.4608,
+   "magneticPressureNpa": 0.00385,
+   "clockAngleDeg": 265.3,
+   "newellCoupling": 1509.5,
+   "subsolarStandoffRe": 12.794,
+   "flaringAlpha": 0.57079
+  },
+  {
+   "validAt": "2026-08-07T17:01:33Z",
+   "observedAt": "2026-08-07T15:43:00Z",
+   "speedKps": 268.2,
+   "densityCm3": 3.74,
+   "bzGsmNt": -0.61,
+   "bxNt": -1.5,
+   "byNt": -2.66,
+   "btNt": 3.11,
+   "dynamicPressureNpa": 0.45,
+   "magneticPressureNpa": 0.00385,
+   "clockAngleDeg": 257.1,
+   "newellCoupling": 1754.1,
+   "subsolarStandoffRe": 12.819,
+   "flaringAlpha": 0.57307
+  },
+  {
+   "validAt": "2026-08-07T17:06:49Z",
+   "observedAt": "2026-08-07T15:48:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 3.78,
+   "bzGsmNt": -1.4,
+   "bxNt": -1.76,
+   "byNt": -2.25,
+   "btNt": 3.19,
+   "dynamicPressureNpa": 0.4517,
+   "magneticPressureNpa": 0.00405,
+   "clockAngleDeg": 238.1,
+   "newellCoupling": 2303.5,
+   "subsolarStandoffRe": 12.758,
+   "flaringAlpha": 0.57855
+  },
+  {
+   "validAt": "2026-08-07T17:12:07Z",
+   "observedAt": "2026-08-07T15:53:00Z",
+   "speedKps": 266.5,
+   "densityCm3": 4.15,
+   "bzGsmNt": -0.21,
+   "bxNt": -0.47,
+   "byNt": -3.13,
+   "btNt": 3.18,
+   "dynamicPressureNpa": 0.493,
+   "magneticPressureNpa": 0.00402,
+   "clockAngleDeg": 266.2,
+   "newellCoupling": 1590.1,
+   "subsolarStandoffRe": 12.665,
+   "flaringAlpha": 0.5716
+  },
+  {
+   "validAt": "2026-08-07T17:17:36Z",
+   "observedAt": "2026-08-07T15:58:00Z",
+   "speedKps": 265.2,
+   "densityCm3": 3.1,
+   "bzGsmNt": 0.5,
+   "bxNt": -0.43,
+   "byNt": -3.85,
+   "btNt": 3.91,
+   "dynamicPressureNpa": 0.3647,
+   "magneticPressureNpa": 0.00608,
+   "clockAngleDeg": 277.4,
+   "newellCoupling": 1389.8,
+   "subsolarStandoffRe": 13.291,
+   "flaringAlpha": 0.56254
+  },
+  {
+   "validAt": "2026-08-07T17:22:43Z",
+   "observedAt": "2026-08-07T16:03:00Z",
+   "speedKps": 264.8,
+   "densityCm3": 3.02,
+   "bzGsmNt": 0.48,
+   "bxNt": -0.35,
+   "byNt": -3.87,
+   "btNt": 3.91,
+   "dynamicPressureNpa": 0.3542,
+   "magneticPressureNpa": 0.00608,
+   "clockAngleDeg": 277.1,
+   "newellCoupling": 1403.3,
+   "subsolarStandoffRe": 13.349,
+   "flaringAlpha": 0.56228
+  },
+  {
+   "validAt": "2026-08-07T17:27:18Z",
+   "observedAt": "2026-08-07T16:08:00Z",
+   "speedKps": 266.1,
+   "densityCm3": 3.11,
+   "bzGsmNt": 0.91,
+   "bxNt": 0.06,
+   "byNt": -3.55,
+   "btNt": 3.66,
+   "dynamicPressureNpa": 0.3683,
+   "magneticPressureNpa": 0.00533,
+   "clockAngleDeg": 284.4,
+   "newellCoupling": 1103.5,
+   "subsolarStandoffRe": 13.287,
+   "flaringAlpha": 0.55988
+  },
+  {
+   "validAt": "2026-08-07T17:31:55Z",
+   "observedAt": "2026-08-07T16:13:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 2.87,
+   "bzGsmNt": 1.03,
+   "bxNt": 0.26,
+   "byNt": -3.88,
+   "btNt": 4.04,
+   "dynamicPressureNpa": 0.343,
+   "magneticPressureNpa": 0.00649,
+   "clockAngleDeg": 284.9,
+   "newellCoupling": 1162.4,
+   "subsolarStandoffRe": 13.436,
+   "flaringAlpha": 0.55808
+  },
+  {
+   "validAt": "2026-08-07T17:36:50Z",
+   "observedAt": "2026-08-07T16:18:00Z",
+   "speedKps": 267.6,
+   "densityCm3": 2.93,
+   "bzGsmNt": 1.06,
+   "bxNt": 0.54,
+   "byNt": -3.78,
+   "btNt": 3.96,
+   "dynamicPressureNpa": 0.3509,
+   "magneticPressureNpa": 0.00624,
+   "clockAngleDeg": 285.7,
+   "newellCoupling": 1119.4,
+   "subsolarStandoffRe": 13.39,
+   "flaringAlpha": 0.55819
+  },
+  {
+   "validAt": "2026-08-07T17:41:50Z",
+   "observedAt": "2026-08-07T16:23:00Z",
+   "speedKps": 267.5,
+   "densityCm3": 3.17,
+   "bzGsmNt": 0.81,
+   "bxNt": 0.99,
+   "byNt": -3.56,
+   "btNt": 3.78,
+   "dynamicPressureNpa": 0.3794,
+   "magneticPressureNpa": 0.00569,
+   "clockAngleDeg": 282.8,
+   "newellCoupling": 1160.7,
+   "subsolarStandoffRe": 13.224,
+   "flaringAlpha": 0.56097
+  },
+  {
+   "validAt": "2026-08-07T17:47:02Z",
+   "observedAt": "2026-08-07T16:28:00Z",
+   "speedKps": 266.7,
+   "densityCm3": 3.0,
+   "bzGsmNt": 0.58,
+   "bxNt": 1.09,
+   "byNt": -3.84,
+   "btNt": 4.04,
+   "dynamicPressureNpa": 0.3569,
+   "magneticPressureNpa": 0.00649,
+   "clockAngleDeg": 278.6,
+   "newellCoupling": 1356.7,
+   "subsolarStandoffRe": 13.337,
+   "flaringAlpha": 0.5617
+  },
+  {
+   "validAt": "2026-08-07T17:52:00Z",
+   "observedAt": "2026-08-07T16:33:00Z",
+   "speedKps": 266.9,
+   "densityCm3": 3.09,
+   "bzGsmNt": 0.61,
+   "bxNt": 0.97,
+   "byNt": -3.73,
+   "btNt": 3.91,
+   "dynamicPressureNpa": 0.3682,
+   "magneticPressureNpa": 0.00608,
+   "clockAngleDeg": 279.3,
+   "newellCoupling": 1308.5,
+   "subsolarStandoffRe": 13.276,
+   "flaringAlpha": 0.56192
+  },
+  {
+   "validAt": "2026-08-07T17:56:57Z",
+   "observedAt": "2026-08-07T16:38:00Z",
+   "speedKps": 266.9,
+   "densityCm3": 3.17,
+   "bzGsmNt": 0.77,
+   "bxNt": 1.14,
+   "byNt": -3.63,
+   "btNt": 3.88,
+   "dynamicPressureNpa": 0.3777,
+   "magneticPressureNpa": 0.00599,
+   "clockAngleDeg": 282.0,
+   "newellCoupling": 1198.7,
+   "subsolarStandoffRe": 13.231,
+   "flaringAlpha": 0.56118
+  },
+  {
+   "validAt": "2026-08-07T18:02:36Z",
+   "observedAt": "2026-08-07T16:43:00Z",
+   "speedKps": 264.5,
+   "densityCm3": 4.78,
+   "bzGsmNt": -0.15,
+   "bxNt": -1.04,
+   "byNt": -2.47,
+   "btNt": 2.69,
+   "dynamicPressureNpa": 0.5593,
+   "magneticPressureNpa": 0.00288,
+   "clockAngleDeg": 266.5,
+   "newellCoupling": 1333.3,
+   "subsolarStandoffRe": 12.428,
+   "flaringAlpha": 0.57295
+  },
+  {
+   "validAt": "2026-08-07T18:06:53Z",
+   "observedAt": "2026-08-07T16:48:00Z",
+   "speedKps": 266.9,
+   "densityCm3": 4.41,
+   "bzGsmNt": 1.2,
+   "bxNt": 0.43,
+   "byNt": -2.86,
+   "btNt": 3.13,
+   "dynamicPressureNpa": 0.5254,
+   "magneticPressureNpa": 0.0039,
+   "clockAngleDeg": 292.8,
+   "newellCoupling": 755.4,
+   "subsolarStandoffRe": 12.6,
+   "flaringAlpha": 0.56277
+  },
+  {
+   "validAt": "2026-08-07T18:12:09Z",
+   "observedAt": "2026-08-07T16:53:00Z",
+   "speedKps": 266.0,
+   "densityCm3": 4.8,
+   "bzGsmNt": 0.87,
+   "bxNt": 0.0,
+   "byNt": -2.64,
+   "btNt": 2.78,
+   "dynamicPressureNpa": 0.5681,
+   "magneticPressureNpa": 0.00308,
+   "clockAngleDeg": 288.2,
+   "newellCoupling": 813.6,
+   "subsolarStandoffRe": 12.441,
+   "flaringAlpha": 0.56612
+  },
+  {
+   "validAt": "2026-08-07T18:16:11Z",
+   "observedAt": "2026-08-07T16:58:00Z",
+   "speedKps": 269.2,
+   "densityCm3": 4.58,
+   "bzGsmNt": 1.1,
+   "bxNt": 0.39,
+   "byNt": -2.73,
+   "btNt": 2.98,
+   "dynamicPressureNpa": 0.5551,
+   "magneticPressureNpa": 0.00353,
+   "clockAngleDeg": 291.9,
+   "newellCoupling": 759.1,
+   "subsolarStandoffRe": 12.492,
+   "flaringAlpha": 0.56422
+  },
+  {
+   "validAt": "2026-08-07T18:21:54Z",
+   "observedAt": "2026-08-07T17:03:00Z",
+   "speedKps": 266.9,
+   "densityCm3": 4.83,
+   "bzGsmNt": 1.02,
+   "bxNt": 0.44,
+   "byNt": -2.77,
+   "btNt": 3.0,
+   "dynamicPressureNpa": 0.5755,
+   "magneticPressureNpa": 0.00358,
+   "clockAngleDeg": 290.2,
+   "newellCoupling": 797.3,
+   "subsolarStandoffRe": 12.422,
+   "flaringAlpha": 0.56526
+  },
+  {
+   "validAt": "2026-08-07T18:27:12Z",
+   "observedAt": "2026-08-07T17:08:00Z",
+   "speedKps": 265.8,
+   "densityCm3": 5.0,
+   "bzGsmNt": 1.37,
+   "bxNt": 0.0,
+   "byNt": -2.33,
+   "btNt": 2.72,
+   "dynamicPressureNpa": 0.5908,
+   "magneticPressureNpa": 0.00294,
+   "clockAngleDeg": 300.5,
+   "newellCoupling": 512.7,
+   "subsolarStandoffRe": 12.383,
+   "flaringAlpha": 0.56321
+  },
+  {
+   "validAt": "2026-08-07T18:33:32Z",
+   "observedAt": "2026-08-07T17:13:00Z",
+   "speedKps": 261.4,
+   "densityCm3": 5.23,
+   "bzGsmNt": 1.66,
+   "bxNt": -1.1,
+   "byNt": -1.05,
+   "btNt": 2.26,
+   "dynamicPressureNpa": 0.5977,
+   "magneticPressureNpa": 0.00203,
+   "clockAngleDeg": 327.7,
+   "newellCoupling": 86.5,
+   "subsolarStandoffRe": 12.37,
+   "flaringAlpha": 0.56136
+  },
+  {
+   "validAt": "2026-08-07T18:37:12Z",
+   "observedAt": "2026-08-07T17:18:00Z",
+   "speedKps": 265.8,
+   "densityCm3": 4.67,
+   "bzGsmNt": 1.64,
+   "bxNt": 0.13,
+   "byNt": -2.33,
+   "btNt": 2.86,
+   "dynamicPressureNpa": 0.5518,
+   "magneticPressureNpa": 0.00325,
+   "clockAngleDeg": 305.1,
+   "newellCoupling": 434.8,
+   "subsolarStandoffRe": 12.52,
+   "flaringAlpha": 0.56041
+  },
+  {
+   "validAt": "2026-08-07T18:41:17Z",
+   "observedAt": "2026-08-07T17:23:00Z",
+   "speedKps": 269.0,
+   "densityCm3": 4.62,
+   "bzGsmNt": 1.79,
+   "bxNt": 0.93,
+   "byNt": -2.21,
+   "btNt": 3.0,
+   "dynamicPressureNpa": 0.5592,
+   "magneticPressureNpa": 0.00358,
+   "clockAngleDeg": 309.0,
+   "newellCoupling": 368.2,
+   "subsolarStandoffRe": 12.499,
+   "flaringAlpha": 0.55955
+  },
+  {
+   "validAt": "2026-08-07T18:46:24Z",
+   "observedAt": "2026-08-07T17:28:00Z",
+   "speedKps": 268.4,
+   "densityCm3": 4.52,
+   "bzGsmNt": 2.49,
+   "bxNt": 0.49,
+   "byNt": -1.67,
+   "btNt": 3.04,
+   "dynamicPressureNpa": 0.5446,
+   "magneticPressureNpa": 0.00368,
+   "clockAngleDeg": 326.2,
+   "newellCoupling": 134.0,
+   "subsolarStandoffRe": 12.565,
+   "flaringAlpha": 0.55437
+  },
+  {
+   "validAt": "2026-08-07T18:51:45Z",
+   "observedAt": "2026-08-07T17:33:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 4.6,
+   "bzGsmNt": 2.64,
+   "bxNt": 0.38,
+   "byNt": -1.34,
+   "btNt": 2.98,
+   "dynamicPressureNpa": 0.5497,
+   "magneticPressureNpa": 0.00353,
+   "clockAngleDeg": 333.1,
+   "newellCoupling": 72.7,
+   "subsolarStandoffRe": 12.55,
+   "flaringAlpha": 0.55346
+  },
+  {
+   "validAt": "2026-08-07T18:56:27Z",
+   "observedAt": "2026-08-07T17:38:00Z",
+   "speedKps": 268.2,
+   "densityCm3": 4.39,
+   "bzGsmNt": 2.44,
+   "bxNt": 0.65,
+   "byNt": -1.45,
+   "btNt": 2.92,
+   "dynamicPressureNpa": 0.5282,
+   "magneticPressureNpa": 0.00339,
+   "clockAngleDeg": 329.3,
+   "newellCoupling": 100.3,
+   "subsolarStandoffRe": 12.622,
+   "flaringAlpha": 0.5543
+  },
+  {
+   "validAt": "2026-08-07T19:01:38Z",
+   "observedAt": "2026-08-07T17:43:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 4.48,
+   "bzGsmNt": 1.65,
+   "bxNt": 0.4,
+   "byNt": -2.76,
+   "btNt": 3.24,
+   "dynamicPressureNpa": 0.5378,
+   "magneticPressureNpa": 0.00418,
+   "clockAngleDeg": 300.9,
+   "newellCoupling": 571.9,
+   "subsolarStandoffRe": 12.569,
+   "flaringAlpha": 0.55999
+  },
+  {
+   "validAt": "2026-08-07T19:06:27Z",
+   "observedAt": "2026-08-07T17:48:00Z",
+   "speedKps": 268.9,
+   "densityCm3": 4.81,
+   "bzGsmNt": 1.04,
+   "bxNt": 1.0,
+   "byNt": -2.88,
+   "btNt": 3.27,
+   "dynamicPressureNpa": 0.5817,
+   "magneticPressureNpa": 0.00425,
+   "clockAngleDeg": 289.9,
+   "newellCoupling": 835.2,
+   "subsolarStandoffRe": 12.402,
+   "flaringAlpha": 0.56527
+  },
+  {
+   "validAt": "2026-08-07T19:10:30Z",
+   "observedAt": "2026-08-07T17:53:00Z",
+   "speedKps": 271.9,
+   "densityCm3": 4.99,
+   "bzGsmNt": 2.39,
+   "bxNt": 2.44,
+   "byNt": -1.55,
+   "btNt": 3.75,
+   "dynamicPressureNpa": 0.617,
+   "magneticPressureNpa": 0.0056,
+   "clockAngleDeg": 327.0,
+   "newellCoupling": 123.0,
+   "subsolarStandoffRe": 12.327,
+   "flaringAlpha": 0.55674
+  },
+  {
+   "validAt": "2026-08-07T19:19:45Z",
+   "observedAt": "2026-08-07T18:03:00Z",
+   "speedKps": 274.5,
+   "densityCm3": 5.77,
+   "bzGsmNt": 2.06,
+   "bxNt": 2.61,
+   "byNt": 0.05,
+   "btNt": 3.33,
+   "dynamicPressureNpa": 0.7272,
+   "magneticPressureNpa": 0.00441,
+   "clockAngleDeg": 1.4,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.017,
+   "flaringAlpha": 0.56126
+  },
+  {
+   "validAt": "2026-08-07T19:24:55Z",
+   "observedAt": "2026-08-07T18:08:00Z",
+   "speedKps": 274.1,
+   "densityCm3": 5.64,
+   "bzGsmNt": 1.81,
+   "bxNt": 2.89,
+   "byNt": -0.44,
+   "btNt": 3.44,
+   "dynamicPressureNpa": 0.7087,
+   "magneticPressureNpa": 0.00471,
+   "clockAngleDeg": 346.3,
+   "newellCoupling": 9.2,
+   "subsolarStandoffRe": 12.058,
+   "flaringAlpha": 0.56264
+  },
+  {
+   "validAt": "2026-08-07T19:29:50Z",
+   "observedAt": "2026-08-07T18:13:00Z",
+   "speedKps": 274.4,
+   "densityCm3": 5.7,
+   "bzGsmNt": 1.89,
+   "bxNt": 2.9,
+   "byNt": -0.29,
+   "btNt": 3.48,
+   "dynamicPressureNpa": 0.7179,
+   "magneticPressureNpa": 0.00482,
+   "clockAngleDeg": 351.3,
+   "newellCoupling": 2.9,
+   "subsolarStandoffRe": 12.037,
+   "flaringAlpha": 0.56226
+  },
+  {
+   "validAt": "2026-08-07T19:35:00Z",
+   "observedAt": "2026-08-07T18:18:00Z",
+   "speedKps": 273.7,
+   "densityCm3": 5.62,
+   "bzGsmNt": 1.78,
+   "bxNt": 2.9,
+   "byNt": -0.66,
+   "btNt": 3.47,
+   "dynamicPressureNpa": 0.7042,
+   "magneticPressureNpa": 0.00479,
+   "clockAngleDeg": 339.7,
+   "newellCoupling": 26.7,
+   "subsolarStandoffRe": 12.069,
+   "flaringAlpha": 0.56276
+  },
+  {
+   "validAt": "2026-08-07T19:41:15Z",
+   "observedAt": "2026-08-07T18:23:00Z",
+   "speedKps": 269.3,
+   "densityCm3": 5.23,
+   "bzGsmNt": 2.64,
+   "bxNt": 1.88,
+   "byNt": -1.28,
+   "btNt": 3.5,
+   "dynamicPressureNpa": 0.6344,
+   "magneticPressureNpa": 0.00487,
+   "clockAngleDeg": 334.1,
+   "newellCoupling": 65.8,
+   "subsolarStandoffRe": 12.28,
+   "flaringAlpha": 0.55539
+  },
+  {
+   "validAt": "2026-08-07T19:46:17Z",
+   "observedAt": "2026-08-07T18:28:00Z",
+   "speedKps": 269.2,
+   "densityCm3": 5.03,
+   "bzGsmNt": 2.5,
+   "bxNt": 1.81,
+   "byNt": -1.72,
+   "btNt": 3.53,
+   "dynamicPressureNpa": 0.6097,
+   "magneticPressureNpa": 0.00496,
+   "clockAngleDeg": 325.5,
+   "newellCoupling": 142.8,
+   "subsolarStandoffRe": 12.352,
+   "flaringAlpha": 0.55582
+  },
+  {
+   "validAt": "2026-08-07T19:51:54Z",
+   "observedAt": "2026-08-07T18:33:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 5.33,
+   "bzGsmNt": 1.33,
+   "bxNt": 0.44,
+   "byNt": -2.82,
+   "btNt": 3.18,
+   "dynamicPressureNpa": 0.637,
+   "magneticPressureNpa": 0.00402,
+   "clockAngleDeg": 295.3,
+   "newellCoupling": 694.8,
+   "subsolarStandoffRe": 12.242,
+   "flaringAlpha": 0.56451
+  },
+  {
+   "validAt": "2026-08-07T19:57:16Z",
+   "observedAt": "2026-08-07T18:38:00Z",
+   "speedKps": 266.2,
+   "densityCm3": 5.13,
+   "bzGsmNt": 1.01,
+   "bxNt": -0.03,
+   "byNt": -3.03,
+   "btNt": 3.2,
+   "dynamicPressureNpa": 0.608,
+   "magneticPressureNpa": 0.00407,
+   "clockAngleDeg": 288.4,
+   "newellCoupling": 887.8,
+   "subsolarStandoffRe": 12.318,
+   "flaringAlpha": 0.56609
+  },
+  {
+   "validAt": "2026-08-07T20:03:29Z",
+   "observedAt": "2026-08-07T18:43:00Z",
+   "speedKps": 262.3,
+   "densityCm3": 5.72,
+   "bzGsmNt": 0.29,
+   "bxNt": -1.36,
+   "byNt": -2.52,
+   "btNt": 2.88,
+   "dynamicPressureNpa": 0.6582,
+   "magneticPressureNpa": 0.0033,
+   "clockAngleDeg": 276.6,
+   "newellCoupling": 1054.1,
+   "subsolarStandoffRe": 12.145,
+   "flaringAlpha": 0.57217
+  },
+  {
+   "validAt": "2026-08-07T20:06:26Z",
+   "observedAt": "2026-08-07T18:48:00Z",
+   "speedKps": 268.8,
+   "densityCm3": 4.71,
+   "bzGsmNt": 1.58,
+   "bxNt": 1.02,
+   "byNt": -3.11,
+   "btNt": 3.64,
+   "dynamicPressureNpa": 0.5692,
+   "magneticPressureNpa": 0.00527,
+   "clockAngleDeg": 296.9,
+   "newellCoupling": 708.5,
+   "subsolarStandoffRe": 12.459,
+   "flaringAlpha": 0.56125
+  },
+  {
+   "validAt": "2026-08-07T20:11:37Z",
+   "observedAt": "2026-08-07T18:53:00Z",
+   "speedKps": 268.3,
+   "densityCm3": 5.13,
+   "bzGsmNt": 1.7,
+   "bxNt": 0.63,
+   "byNt": -2.82,
+   "btNt": 3.36,
+   "dynamicPressureNpa": 0.6177,
+   "magneticPressureNpa": 0.00449,
+   "clockAngleDeg": 301.1,
+   "newellCoupling": 577.1,
+   "subsolarStandoffRe": 12.309,
+   "flaringAlpha": 0.56153
+  },
+  {
+   "validAt": "2026-08-07T20:16:49Z",
+   "observedAt": "2026-08-07T18:58:00Z",
+   "speedKps": 267.5,
+   "densityCm3": 4.96,
+   "bzGsmNt": 1.62,
+   "bxNt": 0.49,
+   "byNt": -2.68,
+   "btNt": 3.17,
+   "dynamicPressureNpa": 0.5936,
+   "magneticPressureNpa": 0.004,
+   "clockAngleDeg": 301.2,
+   "newellCoupling": 554.3,
+   "subsolarStandoffRe": 12.381,
+   "flaringAlpha": 0.56154
+  },
+  {
+   "validAt": "2026-08-07T20:21:37Z",
+   "observedAt": "2026-08-07T19:03:00Z",
+   "speedKps": 268.3,
+   "densityCm3": 5.0,
+   "bzGsmNt": 1.6,
+   "bxNt": 0.76,
+   "byNt": -2.64,
+   "btNt": 3.18,
+   "dynamicPressureNpa": 0.602,
+   "magneticPressureNpa": 0.00402,
+   "clockAngleDeg": 301.2,
+   "newellCoupling": 549.8,
+   "subsolarStandoffRe": 12.355,
+   "flaringAlpha": 0.56187
+  },
+  {
+   "validAt": "2026-08-07T20:27:37Z",
+   "observedAt": "2026-08-07T19:08:00Z",
+   "speedKps": 264.8,
+   "densityCm3": 5.37,
+   "bzGsmNt": 1.88,
+   "bxNt": -0.37,
+   "byNt": -1.91,
+   "btNt": 2.74,
+   "dynamicPressureNpa": 0.6298,
+   "magneticPressureNpa": 0.00299,
+   "clockAngleDeg": 314.5,
+   "newellCoupling": 259.7,
+   "subsolarStandoffRe": 12.278,
+   "flaringAlpha": 0.56055
+  },
+  {
+   "validAt": "2026-08-07T20:32:57Z",
+   "observedAt": "2026-08-07T19:13:00Z",
+   "speedKps": 263.4,
+   "densityCm3": 6.6,
+   "bzGsmNt": 2.37,
+   "bxNt": -0.08,
+   "byNt": 0.08,
+   "btNt": 2.42,
+   "dynamicPressureNpa": 0.7659,
+   "magneticPressureNpa": 0.00233,
+   "clockAngleDeg": 1.9,
+   "newellCoupling": 0.1,
+   "subsolarStandoffRe": 11.93,
+   "flaringAlpha": 0.5598
+  },
+  {
+   "validAt": "2026-08-07T20:36:12Z",
+   "observedAt": "2026-08-07T19:18:00Z",
+   "speedKps": 269.6,
+   "densityCm3": 4.72,
+   "bzGsmNt": 1.76,
+   "bxNt": 1.14,
+   "byNt": -2.46,
+   "btNt": 3.25,
+   "dynamicPressureNpa": 0.5738,
+   "magneticPressureNpa": 0.0042,
+   "clockAngleDeg": 305.6,
+   "newellCoupling": 452.0,
+   "subsolarStandoffRe": 12.449,
+   "flaringAlpha": 0.56011
+  },
+  {
+   "validAt": "2026-08-07T20:42:16Z",
+   "observedAt": "2026-08-07T19:23:00Z",
+   "speedKps": 265.8,
+   "densityCm3": 4.88,
+   "bzGsmNt": 2.4,
+   "bxNt": 0.24,
+   "byNt": -1.89,
+   "btNt": 3.08,
+   "dynamicPressureNpa": 0.5767,
+   "magneticPressureNpa": 0.00377,
+   "clockAngleDeg": 321.8,
+   "newellCoupling": 183.2,
+   "subsolarStandoffRe": 12.454,
+   "flaringAlpha": 0.55576
+  },
+  {
+   "validAt": "2026-08-07T20:47:37Z",
+   "observedAt": "2026-08-07T19:28:00Z",
+   "speedKps": 264.7,
+   "densityCm3": 4.88,
+   "bzGsmNt": 1.91,
+   "bxNt": -0.56,
+   "byNt": -1.74,
+   "btNt": 2.66,
+   "dynamicPressureNpa": 0.5719,
+   "magneticPressureNpa": 0.00282,
+   "clockAngleDeg": 317.7,
+   "newellCoupling": 211.6,
+   "subsolarStandoffRe": 12.459,
+   "flaringAlpha": 0.55903
+  },
+  {
+   "validAt": "2026-08-07T20:53:29Z",
+   "observedAt": "2026-08-07T19:33:00Z",
+   "speedKps": 262.0,
+   "densityCm3": 5.51,
+   "bzGsmNt": 1.98,
+   "bxNt": -0.96,
+   "byNt": -1.27,
+   "btNt": 2.54,
+   "dynamicPressureNpa": 0.6326,
+   "magneticPressureNpa": 0.00257,
+   "clockAngleDeg": 327.3,
+   "newellCoupling": 100.7,
+   "subsolarStandoffRe": 12.272,
+   "flaringAlpha": 0.55992
+  },
+  {
+   "validAt": "2026-08-07T20:57:46Z",
+   "observedAt": "2026-08-07T19:38:00Z",
+   "speedKps": 264.3,
+   "densityCm3": 5.6,
+   "bzGsmNt": 2.44,
+   "bxNt": -0.5,
+   "byNt": -0.81,
+   "btNt": 2.75,
+   "dynamicPressureNpa": 0.6543,
+   "magneticPressureNpa": 0.00301,
+   "clockAngleDeg": 341.6,
+   "newellCoupling": 23.8,
+   "subsolarStandoffRe": 12.219,
+   "flaringAlpha": 0.55719
+  },
+  {
+   "validAt": "2026-08-07T21:01:00Z",
+   "observedAt": "2026-08-07T19:43:00Z",
+   "speedKps": 270.3,
+   "densityCm3": 4.29,
+   "bzGsmNt": 2.74,
+   "bxNt": 1.8,
+   "byNt": -1.84,
+   "btNt": 3.76,
+   "dynamicPressureNpa": 0.5243,
+   "magneticPressureNpa": 0.00563,
+   "clockAngleDeg": 326.1,
+   "newellCoupling": 144.6,
+   "subsolarStandoffRe": 12.642,
+   "flaringAlpha": 0.55213
+  },
+  {
+   "validAt": "2026-08-07T21:06:35Z",
+   "observedAt": "2026-08-07T19:48:00Z",
+   "speedKps": 268.4,
+   "densityCm3": 4.78,
+   "bzGsmNt": 2.79,
+   "bxNt": 1.68,
+   "byNt": -1.83,
+   "btNt": 3.74,
+   "dynamicPressureNpa": 0.576,
+   "magneticPressureNpa": 0.00557,
+   "clockAngleDeg": 326.7,
+   "newellCoupling": 137.5,
+   "subsolarStandoffRe": 12.464,
+   "flaringAlpha": 0.55305
+  },
+  {
+   "validAt": "2026-08-07T21:11:19Z",
+   "observedAt": "2026-08-07T19:53:00Z",
+   "speedKps": 269.0,
+   "densityCm3": 4.45,
+   "bzGsmNt": 2.99,
+   "bxNt": 1.72,
+   "byNt": -1.7,
+   "btNt": 3.85,
+   "dynamicPressureNpa": 0.5386,
+   "magneticPressureNpa": 0.0059,
+   "clockAngleDeg": 330.4,
+   "newellCoupling": 104.1,
+   "subsolarStandoffRe": 12.595,
+   "flaringAlpha": 0.55077
+  },
+  {
+   "validAt": "2026-08-07T21:16:40Z",
+   "observedAt": "2026-08-07T19:58:00Z",
+   "speedKps": 267.9,
+   "densityCm3": 4.38,
+   "bzGsmNt": 3.31,
+   "bxNt": 1.6,
+   "byNt": -1.44,
+   "btNt": 3.95,
+   "dynamicPressureNpa": 0.5258,
+   "magneticPressureNpa": 0.00621,
+   "clockAngleDeg": 336.5,
+   "newellCoupling": 58.4,
+   "subsolarStandoffRe": 12.646,
+   "flaringAlpha": 0.54824
+  },
+  {
+   "validAt": "2026-08-07T21:21:54Z",
+   "observedAt": "2026-08-07T20:03:00Z",
+   "speedKps": 267.3,
+   "densityCm3": 4.76,
+   "bzGsmNt": 3.05,
+   "bxNt": 1.38,
+   "byNt": -1.66,
+   "btNt": 3.72,
+   "dynamicPressureNpa": 0.5688,
+   "magneticPressureNpa": 0.00551,
+   "clockAngleDeg": 331.4,
+   "newellCoupling": 94.5,
+   "subsolarStandoffRe": 12.492,
+   "flaringAlpha": 0.55109
+  },
+  {
+   "validAt": "2026-08-07T21:26:52Z",
+   "observedAt": "2026-08-07T20:08:00Z",
+   "speedKps": 267.2,
+   "densityCm3": 4.2,
+   "bzGsmNt": 3.19,
+   "bxNt": 1.62,
+   "byNt": -1.88,
+   "btNt": 4.05,
+   "dynamicPressureNpa": 0.5016,
+   "magneticPressureNpa": 0.00653,
+   "clockAngleDeg": 329.5,
+   "newellCoupling": 117.1,
+   "subsolarStandoffRe": 12.735,
+   "flaringAlpha": 0.54843
+  },
+  {
+   "validAt": "2026-08-07T21:31:29Z",
+   "observedAt": "2026-08-07T20:13:00Z",
+   "speedKps": 268.6,
+   "densityCm3": 4.32,
+   "bzGsmNt": 3.01,
+   "bxNt": 1.95,
+   "byNt": -1.93,
+   "btNt": 4.08,
+   "dynamicPressureNpa": 0.5213,
+   "magneticPressureNpa": 0.00662,
+   "clockAngleDeg": 327.3,
+   "newellCoupling": 137.6,
+   "subsolarStandoffRe": 12.658,
+   "flaringAlpha": 0.55019
+  },
+  {
+   "validAt": "2026-08-07T21:35:14Z",
+   "observedAt": "2026-08-07T20:18:00Z",
+   "speedKps": 272.8,
+   "densityCm3": 3.78,
+   "bzGsmNt": 3.09,
+   "bxNt": 2.17,
+   "byNt": -2.09,
+   "btNt": 4.32,
+   "dynamicPressureNpa": 0.4705,
+   "magneticPressureNpa": 0.00743,
+   "clockAngleDeg": 325.9,
+   "newellCoupling": 161.1,
+   "subsolarStandoffRe": 12.857,
+   "flaringAlpha": 0.54827
+  },
+  {
+   "validAt": "2026-08-07T21:40:38Z",
+   "observedAt": "2026-08-07T20:23:00Z",
+   "speedKps": 271.3,
+   "densityCm3": 4.11,
+   "bzGsmNt": 3.3,
+   "bxNt": 1.97,
+   "byNt": -1.67,
+   "btNt": 4.2,
+   "dynamicPressureNpa": 0.506,
+   "magneticPressureNpa": 0.00702,
+   "clockAngleDeg": 333.2,
+   "newellCoupling": 85.5,
+   "subsolarStandoffRe": 12.72,
+   "flaringAlpha": 0.54779
+  },
+  {
+   "validAt": "2026-08-07T21:46:45Z",
+   "observedAt": "2026-08-07T20:28:00Z",
+   "speedKps": 267.5,
+   "densityCm3": 4.03,
+   "bzGsmNt": 3.32,
+   "bxNt": 1.51,
+   "byNt": -1.98,
+   "btNt": 4.16,
+   "dynamicPressureNpa": 0.4823,
+   "magneticPressureNpa": 0.00689,
+   "clockAngleDeg": 329.2,
+   "newellCoupling": 123.8,
+   "subsolarStandoffRe": 12.813,
+   "flaringAlpha": 0.54702
+  },
+  {
+   "validAt": "2026-08-07T21:51:20Z",
+   "observedAt": "2026-08-07T20:33:00Z",
+   "speedKps": 269.1,
+   "densityCm3": 4.91,
+   "bzGsmNt": 2.87,
+   "bxNt": 1.53,
+   "byNt": -1.69,
+   "btNt": 3.69,
+   "dynamicPressureNpa": 0.5947,
+   "magneticPressureNpa": 0.00542,
+   "clockAngleDeg": 329.5,
+   "newellCoupling": 110.0,
+   "subsolarStandoffRe": 12.405,
+   "flaringAlpha": 0.55293
+  },
+  {
+   "validAt": "2026-08-07T21:56:52Z",
+   "observedAt": "2026-08-07T20:38:00Z",
+   "speedKps": 267.0,
+   "densityCm3": 4.43,
+   "bzGsmNt": 3.22,
+   "bxNt": 1.09,
+   "byNt": -1.51,
+   "btNt": 3.72,
+   "dynamicPressureNpa": 0.5282,
+   "magneticPressureNpa": 0.00551,
+   "clockAngleDeg": 334.9,
+   "newellCoupling": 68.5,
+   "subsolarStandoffRe": 12.636,
+   "flaringAlpha": 0.54892
+  },
+  {
+   "validAt": "2026-08-07T22:01:43Z",
+   "observedAt": "2026-08-07T20:43:00Z",
+   "speedKps": 267.4,
+   "densityCm3": 4.35,
+   "bzGsmNt": 3.46,
+   "bxNt": 0.98,
+   "byNt": -1.48,
+   "btNt": 3.91,
+   "dynamicPressureNpa": 0.5202,
+   "magneticPressureNpa": 0.00608,
+   "clockAngleDeg": 336.8,
+   "newellCoupling": 57.6,
+   "subsolarStandoffRe": 12.669,
+   "flaringAlpha": 0.54706
+  },
+  {
+   "validAt": "2026-08-07T22:07:17Z",
+   "observedAt": "2026-08-07T20:48:00Z",
+   "speedKps": 265.6,
+   "densityCm3": 4.71,
+   "bzGsmNt": 3.61,
+   "bxNt": 1.22,
+   "byNt": -1.24,
+   "btNt": 4.0,
+   "dynamicPressureNpa": 0.5557,
+   "magneticPressureNpa": 0.00637,
+   "clockAngleDeg": 341.0,
+   "newellCoupling": 34.0,
+   "subsolarStandoffRe": 12.545,
+   "flaringAlpha": 0.54691
+  },
+  {
+   "validAt": "2026-08-07T22:14:41Z",
+   "observedAt": "2026-08-07T20:53:00Z",
+   "speedKps": 259.1,
+   "densityCm3": 6.95,
+   "bzGsmNt": -0.55,
+   "bxNt": -1.26,
+   "byNt": 1.9,
+   "btNt": 2.43,
+   "dynamicPressureNpa": 0.7804,
+   "magneticPressureNpa": 0.00235,
+   "clockAngleDeg": 106.1,
+   "newellCoupling": 1432.6,
+   "subsolarStandoffRe": 11.796,
+   "flaringAlpha": 0.58038
+  },
+  {
+   "validAt": "2026-08-07T22:19:49Z",
+   "observedAt": "2026-08-07T20:58:00Z",
+   "speedKps": 257.9,
+   "densityCm3": 6.8,
+   "bzGsmNt": 0.87,
+   "bxNt": -1.53,
+   "byNt": 1.32,
+   "btNt": 2.21,
+   "dynamicPressureNpa": 0.7565,
+   "magneticPressureNpa": 0.00194,
+   "clockAngleDeg": 56.6,
+   "newellCoupling": 304.6,
+   "subsolarStandoffRe": 11.913,
+   "flaringAlpha": 0.57007
+  },
+  {
+   "validAt": "2026-08-07T22:25:18Z",
+   "observedAt": "2026-08-07T21:03:00Z",
+   "speedKps": 256.4,
+   "densityCm3": 6.88,
+   "bzGsmNt": 1.29,
+   "bxNt": -1.67,
+   "byNt": 1.09,
+   "btNt": 2.38,
+   "dynamicPressureNpa": 0.7565,
+   "magneticPressureNpa": 0.00225,
+   "clockAngleDeg": 40.2,
+   "newellCoupling": 133.8,
+   "subsolarStandoffRe": 11.926,
+   "flaringAlpha": 0.56715
+  },
+  {
+   "validAt": "2026-08-07T22:34:41Z",
+   "observedAt": "2026-08-07T21:13:00Z",
+   "speedKps": 258.2,
+   "densityCm3": 6.47,
+   "bzGsmNt": 1.32,
+   "bxNt": -1.68,
+   "byNt": 1.24,
+   "btNt": 2.47,
+   "dynamicPressureNpa": 0.7215,
+   "magneticPressureNpa": 0.00243,
+   "clockAngleDeg": 43.2,
+   "newellCoupling": 170.1,
+   "subsolarStandoffRe": 12.013,
+   "flaringAlpha": 0.56629
+  },
+  {
+   "validAt": "2026-08-07T22:40:03Z",
+   "observedAt": "2026-08-07T21:18:00Z",
+   "speedKps": 257.1,
+   "densityCm3": 6.27,
+   "bzGsmNt": 1.21,
+   "bxNt": -1.47,
+   "byNt": 1.62,
+   "btNt": 2.49,
+   "dynamicPressureNpa": 0.6932,
+   "magneticPressureNpa": 0.00247,
+   "clockAngleDeg": 53.2,
+   "newellCoupling": 307.4,
+   "subsolarStandoffRe": 12.082,
+   "flaringAlpha": 0.5665
+  },
+  {
+   "validAt": "2026-08-07T22:49:49Z",
+   "observedAt": "2026-08-07T21:28:00Z",
+   "speedKps": 257.7,
+   "densityCm3": 6.32,
+   "bzGsmNt": 2.13,
+   "bxNt": -1.34,
+   "byNt": 0.61,
+   "btNt": 2.59,
+   "dynamicPressureNpa": 0.702,
+   "magneticPressureNpa": 0.00267,
+   "clockAngleDeg": 16.0,
+   "newellCoupling": 14.5,
+   "subsolarStandoffRe": 12.083,
+   "flaringAlpha": 0.56029
+  },
+  {
+   "validAt": "2026-08-07T22:59:59Z",
+   "observedAt": "2026-08-07T21:38:00Z",
+   "speedKps": 257.1,
+   "densityCm3": 5.66,
+   "bzGsmNt": 2.23,
+   "bxNt": -1.57,
+   "byNt": 0.34,
+   "btNt": 2.75,
+   "dynamicPressureNpa": 0.6258,
+   "magneticPressureNpa": 0.00301,
+   "clockAngleDeg": 8.7,
+   "newellCoupling": 2.9,
+   "subsolarStandoffRe": 12.298,
+   "flaringAlpha": 0.55804
+  },
+  {
+   "validAt": "2026-08-07T23:05:10Z",
+   "observedAt": "2026-08-07T21:43:00Z",
+   "speedKps": 256.6,
+   "densityCm3": 5.72,
+   "bzGsmNt": 1.86,
+   "bxNt": -1.82,
+   "byNt": 0.57,
+   "btNt": 2.67,
+   "dynamicPressureNpa": 0.6299,
+   "magneticPressureNpa": 0.00284,
+   "clockAngleDeg": 17.0,
+   "newellCoupling": 15.6,
+   "subsolarStandoffRe": 12.277,
+   "flaringAlpha": 0.56069
+  },
+  {
+   "validAt": "2026-08-07T23:10:41Z",
+   "observedAt": "2026-08-07T21:48:00Z",
+   "speedKps": 255.0,
+   "densityCm3": 5.87,
+   "bzGsmNt": 1.63,
+   "bxNt": -1.85,
+   "byNt": 0.78,
+   "btNt": 2.59,
+   "dynamicPressureNpa": 0.6384,
+   "magneticPressureNpa": 0.00267,
+   "clockAngleDeg": 25.6,
+   "newellCoupling": 43.0,
+   "subsolarStandoffRe": 12.246,
+   "flaringAlpha": 0.56247
+  },
+  {
+   "validAt": "2026-08-07T23:15:43Z",
+   "observedAt": "2026-08-07T21:53:00Z",
+   "speedKps": 254.9,
+   "densityCm3": 6.28,
+   "bzGsmNt": 1.05,
+   "bxNt": -2.14,
+   "byNt": 1.4,
+   "btNt": 2.77,
+   "dynamicPressureNpa": 0.6825,
+   "magneticPressureNpa": 0.00305,
+   "clockAngleDeg": 53.1,
+   "newellCoupling": 274.5,
+   "subsolarStandoffRe": 12.106,
+   "flaringAlpha": 0.5674
+  },
+  {
+   "validAt": "2026-08-07T23:20:03Z",
+   "observedAt": "2026-08-07T21:58:00Z",
+   "speedKps": 256.9,
+   "densityCm3": 5.73,
+   "bzGsmNt": 1.25,
+   "bxNt": -2.28,
+   "byNt": 1.16,
+   "btNt": 2.85,
+   "dynamicPressureNpa": 0.6325,
+   "magneticPressureNpa": 0.00323,
+   "clockAngleDeg": 42.9,
+   "newellCoupling": 159.0,
+   "subsolarStandoffRe": 12.253,
+   "flaringAlpha": 0.56497
+  },
+  {
+   "validAt": "2026-08-07T23:25:56Z",
+   "observedAt": "2026-08-07T22:03:00Z",
+   "speedKps": 254.3,
+   "densityCm3": 5.85,
+   "bzGsmNt": 1.91,
+   "bxNt": -2.04,
+   "byNt": 0.44,
+   "btNt": 2.83,
+   "dynamicPressureNpa": 0.6328,
+   "magneticPressureNpa": 0.00319,
+   "clockAngleDeg": 13.0,
+   "newellCoupling": 7.5,
+   "subsolarStandoffRe": 12.27,
+   "flaringAlpha": 0.56041
+  },
+  {
+   "validAt": "2026-08-07T23:30:54Z",
+   "observedAt": "2026-08-07T22:08:00Z",
+   "speedKps": 254.4,
+   "densityCm3": 5.66,
+   "bzGsmNt": 2.03,
+   "bxNt": -2.14,
+   "byNt": 0.26,
+   "btNt": 2.97,
+   "dynamicPressureNpa": 0.6127,
+   "magneticPressureNpa": 0.00351,
+   "clockAngleDeg": 7.3,
+   "newellCoupling": 1.7,
+   "subsolarStandoffRe": 12.333,
+   "flaringAlpha": 0.55914
+  },
+  {
+   "validAt": "2026-08-07T23:35:42Z",
+   "observedAt": "2026-08-07T22:13:00Z",
+   "speedKps": 255.0,
+   "densityCm3": 5.92,
+   "bzGsmNt": 2.07,
+   "bxNt": -2.17,
+   "byNt": 0.55,
+   "btNt": 3.07,
+   "dynamicPressureNpa": 0.6439,
+   "magneticPressureNpa": 0.00375,
+   "clockAngleDeg": 14.9,
+   "newellCoupling": 11.5,
+   "subsolarStandoffRe": 12.241,
+   "flaringAlpha": 0.55953
+  },
+  {
+   "validAt": "2026-08-07T23:42:56Z",
+   "observedAt": "2026-08-07T22:23:00Z",
+   "speedKps": 263.4,
+   "densityCm3": 4.94,
+   "bzGsmNt": 2.55,
+   "bxNt": -1.77,
+   "byNt": 0.43,
+   "btNt": 3.16,
+   "dynamicPressureNpa": 0.5733,
+   "magneticPressureNpa": 0.00397,
+   "clockAngleDeg": 9.6,
+   "newellCoupling": 4.2,
+   "subsolarStandoffRe": 12.469,
+   "flaringAlpha": 0.55464
+  },
+  {
+   "validAt": "2026-08-07T23:51:01Z",
+   "observedAt": "2026-08-07T22:28:00Z",
+   "speedKps": 253.9,
+   "densityCm3": 5.54,
+   "bzGsmNt": 2.16,
+   "bxNt": -2.05,
+   "byNt": 0.4,
+   "btNt": 3.01,
+   "dynamicPressureNpa": 0.5973,
+   "magneticPressureNpa": 0.0036,
+   "clockAngleDeg": 10.5,
+   "newellCoupling": 4.6,
+   "subsolarStandoffRe": 12.383,
+   "flaringAlpha": 0.55789
+  },
+  {
+   "validAt": "2026-08-07T23:56:09Z",
+   "observedAt": "2026-08-07T22:33:00Z",
+   "speedKps": 253.6,
+   "densityCm3": 5.55,
+   "bzGsmNt": 1.87,
+   "bxNt": -2.36,
+   "byNt": 0.0,
+   "btNt": 3.03,
+   "dynamicPressureNpa": 0.597,
+   "magneticPressureNpa": 0.00365,
+   "clockAngleDeg": 0.0,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.377,
+   "flaringAlpha": 0.55989
+  },
+  {
+   "validAt": "2026-08-08T00:00:57Z",
+   "observedAt": "2026-08-07T22:38:00Z",
+   "speedKps": 254.1,
+   "densityCm3": 5.65,
+   "bzGsmNt": 2.21,
+   "bxNt": -1.75,
+   "byNt": 0.06,
+   "btNt": 2.82,
+   "dynamicPressureNpa": 0.6102,
+   "magneticPressureNpa": 0.00316,
+   "clockAngleDeg": 1.6,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.344,
+   "flaringAlpha": 0.55784
+  },
+  {
+   "validAt": "2026-08-08T00:06:11Z",
+   "observedAt": "2026-08-07T22:43:00Z",
+   "speedKps": 253.5,
+   "densityCm3": 6.18,
+   "bzGsmNt": 1.72,
+   "bxNt": -2.16,
+   "byNt": 0.82,
+   "btNt": 2.89,
+   "dynamicPressureNpa": 0.6643,
+   "magneticPressureNpa": 0.00332,
+   "clockAngleDeg": 25.5,
+   "newellCoupling": 43.8,
+   "subsolarStandoffRe": 12.175,
+   "flaringAlpha": 0.56238
+  },
+  {
+   "validAt": "2026-08-08T00:10:34Z",
+   "observedAt": "2026-08-07T22:48:00Z",
+   "speedKps": 255.2,
+   "densityCm3": 5.6,
+   "bzGsmNt": 0.57,
+   "bxNt": -2.12,
+   "byNt": 2.02,
+   "btNt": 3.0,
+   "dynamicPressureNpa": 0.61,
+   "magneticPressureNpa": 0.00358,
+   "clockAngleDeg": 74.2,
+   "newellCoupling": 690.2,
+   "subsolarStandoffRe": 12.297,
+   "flaringAlpha": 0.56918
+  },
+  {
+   "validAt": "2026-08-08T00:15:22Z",
+   "observedAt": "2026-08-07T22:53:00Z",
+   "speedKps": 256.1,
+   "densityCm3": 6.06,
+   "bzGsmNt": 0.34,
+   "bxNt": -1.96,
+   "byNt": 2.18,
+   "btNt": 2.96,
+   "dynamicPressureNpa": 0.6648,
+   "magneticPressureNpa": 0.00349,
+   "clockAngleDeg": 81.1,
+   "newellCoupling": 875.1,
+   "subsolarStandoffRe": 12.129,
+   "flaringAlpha": 0.57196
+  },
+  {
+   "validAt": "2026-08-08T00:20:17Z",
+   "observedAt": "2026-08-07T22:58:00Z",
+   "speedKps": 256.2,
+   "densityCm3": 6.15,
+   "bzGsmNt": 0.8,
+   "bxNt": -1.79,
+   "byNt": 1.79,
+   "btNt": 2.66,
+   "dynamicPressureNpa": 0.6752,
+   "magneticPressureNpa": 0.00282,
+   "clockAngleDeg": 65.9,
+   "newellCoupling": 502.8,
+   "subsolarStandoffRe": 12.117,
+   "flaringAlpha": 0.56899
+  },
+  {
+   "validAt": "2026-08-08T00:25:13Z",
+   "observedAt": "2026-08-07T23:03:00Z",
+   "speedKps": 256.4,
+   "densityCm3": 6.26,
+   "bzGsmNt": 0.48,
+   "bxNt": -1.7,
+   "byNt": 2.05,
+   "btNt": 2.7,
+   "dynamicPressureNpa": 0.6883,
+   "magneticPressureNpa": 0.0029,
+   "clockAngleDeg": 76.8,
+   "newellCoupling": 752.0,
+   "subsolarStandoffRe": 12.07,
+   "flaringAlpha": 0.57147
+  },
+  {
+   "validAt": "2026-08-08T00:34:10Z",
+   "observedAt": "2026-08-07T23:13:00Z",
+   "speedKps": 259.5,
+   "densityCm3": 5.6,
+   "bzGsmNt": 2.86,
+   "bxNt": -0.92,
+   "byNt": -0.27,
+   "btNt": 3.05,
+   "dynamicPressureNpa": 0.6307,
+   "magneticPressureNpa": 0.0037,
+   "clockAngleDeg": 354.6,
+   "newellCoupling": 1.0,
+   "subsolarStandoffRe": 12.295,
+   "flaringAlpha": 0.55379
+  },
+  {
+   "validAt": "2026-08-08T00:39:22Z",
+   "observedAt": "2026-08-07T23:18:00Z",
+   "speedKps": 259.0,
+   "densityCm3": 5.87,
+   "bzGsmNt": 2.83,
+   "bxNt": -1.12,
+   "byNt": -0.05,
+   "btNt": 3.05,
+   "dynamicPressureNpa": 0.6586,
+   "magneticPressureNpa": 0.0037,
+   "clockAngleDeg": 359.0,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.214,
+   "flaringAlpha": 0.55458
+  },
+  {
+   "validAt": "2026-08-08T00:44:12Z",
+   "observedAt": "2026-08-07T23:23:00Z",
+   "speedKps": 259.4,
+   "densityCm3": 5.57,
+   "bzGsmNt": 2.91,
+   "bxNt": -1.01,
+   "byNt": 0.02,
+   "btNt": 3.09,
+   "dynamicPressureNpa": 0.6269,
+   "magneticPressureNpa": 0.0038,
+   "clockAngleDeg": 0.4,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.307,
+   "flaringAlpha": 0.55336
+  },
+  {
+   "validAt": "2026-08-08T00:48:31Z",
+   "observedAt": "2026-08-07T23:28:00Z",
+   "speedKps": 261.7,
+   "densityCm3": 5.64,
+   "bzGsmNt": 2.98,
+   "bxNt": -0.93,
+   "byNt": 0.05,
+   "btNt": 3.13,
+   "dynamicPressureNpa": 0.6461,
+   "magneticPressureNpa": 0.0039,
+   "clockAngleDeg": 1.0,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.252,
+   "flaringAlpha": 0.55328
+  },
+  {
+   "validAt": "2026-08-08T00:53:44Z",
+   "observedAt": "2026-08-07T23:33:00Z",
+   "speedKps": 260.9,
+   "densityCm3": 5.54,
+   "bzGsmNt": 2.94,
+   "bxNt": -1.14,
+   "byNt": 0.19,
+   "btNt": 3.16,
+   "dynamicPressureNpa": 0.6307,
+   "magneticPressureNpa": 0.00397,
+   "clockAngleDeg": 3.7,
+   "newellCoupling": 0.4,
+   "subsolarStandoffRe": 12.296,
+   "flaringAlpha": 0.55323
+  },
+  {
+   "validAt": "2026-08-08T00:58:57Z",
+   "observedAt": "2026-08-07T23:38:00Z",
+   "speedKps": 260.2,
+   "densityCm3": 5.77,
+   "bzGsmNt": 3.03,
+   "bxNt": -1.21,
+   "byNt": 0.18,
+   "btNt": 3.29,
+   "dynamicPressureNpa": 0.6534,
+   "magneticPressureNpa": 0.00431,
+   "clockAngleDeg": 3.4,
+   "newellCoupling": 0.3,
+   "subsolarStandoffRe": 12.232,
+   "flaringAlpha": 0.55308
+  },
+  {
+   "validAt": "2026-08-08T01:04:10Z",
+   "observedAt": "2026-08-07T23:43:00Z",
+   "speedKps": 259.6,
+   "densityCm3": 5.56,
+   "bzGsmNt": 3.26,
+   "bxNt": -0.93,
+   "byNt": 0.39,
+   "btNt": 3.42,
+   "dynamicPressureNpa": 0.6267,
+   "magneticPressureNpa": 0.00465,
+   "clockAngleDeg": 6.8,
+   "newellCoupling": 2.0,
+   "subsolarStandoffRe": 12.313,
+   "flaringAlpha": 0.55093
+  },
+  {
+   "validAt": "2026-08-08T01:09:14Z",
+   "observedAt": "2026-08-07T23:48:00Z",
+   "speedKps": 259.5,
+   "densityCm3": 5.99,
+   "bzGsmNt": 3.2,
+   "bxNt": -1.27,
+   "byNt": 0.58,
+   "btNt": 3.49,
+   "dynamicPressureNpa": 0.6747,
+   "magneticPressureNpa": 0.00485,
+   "clockAngleDeg": 10.3,
+   "newellCoupling": 5.8,
+   "subsolarStandoffRe": 12.176,
+   "flaringAlpha": 0.55233
+  },
+  {
+   "validAt": "2026-08-08T01:13:07Z",
+   "observedAt": "2026-08-07T23:53:00Z",
+   "speedKps": 263.3,
+   "densityCm3": 6.01,
+   "bzGsmNt": 3.25,
+   "bxNt": -0.89,
+   "byNt": -0.12,
+   "btNt": 3.37,
+   "dynamicPressureNpa": 0.6969,
+   "magneticPressureNpa": 0.00452,
+   "clockAngleDeg": 357.9,
+   "newellCoupling": 0.1,
+   "subsolarStandoffRe": 12.117,
+   "flaringAlpha": 0.55242
+  },
+  {
+   "validAt": "2026-08-08T01:17:47Z",
+   "observedAt": "2026-08-07T23:58:00Z",
+   "speedKps": 264.2,
+   "densityCm3": 6.23,
+   "bzGsmNt": 3.35,
+   "bxNt": -0.75,
+   "byNt": 0.0,
+   "btNt": 3.44,
+   "dynamicPressureNpa": 0.7274,
+   "magneticPressureNpa": 0.00471,
+   "clockAngleDeg": 0.0,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.04,
+   "flaringAlpha": 0.5523
+  },
+  {
+   "validAt": "2026-08-08T01:22:44Z",
+   "observedAt": "2026-08-08T00:03:00Z",
+   "speedKps": 264.6,
+   "densityCm3": 6.25,
+   "bzGsmNt": 3.52,
+   "bxNt": -0.15,
+   "byNt": -0.1,
+   "btNt": 3.53,
+   "dynamicPressureNpa": 0.7319,
+   "magneticPressureNpa": 0.00496,
+   "clockAngleDeg": 358.4,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 12.031,
+   "flaringAlpha": 0.5512
+  },
+  {
+   "validAt": "2026-08-08T01:27:33Z",
+   "observedAt": "2026-08-08T00:08:00Z",
+   "speedKps": 265.2,
+   "densityCm3": 6.52,
+   "bzGsmNt": 3.36,
+   "bxNt": -0.82,
+   "byNt": 0.35,
+   "btNt": 3.49,
+   "dynamicPressureNpa": 0.767,
+   "magneticPressureNpa": 0.00485,
+   "clockAngleDeg": 5.9,
+   "newellCoupling": 1.4,
+   "subsolarStandoffRe": 11.944,
+   "flaringAlpha": 0.55294
+  },
+  {
+   "validAt": "2026-08-08T01:34:04Z",
+   "observedAt": "2026-08-08T00:13:00Z",
+   "speedKps": 260.1,
+   "densityCm3": 6.98,
+   "bzGsmNt": 3.22,
+   "bxNt": -0.87,
+   "byNt": 0.07,
+   "btNt": 3.35,
+   "dynamicPressureNpa": 0.7898,
+   "magneticPressureNpa": 0.00447,
+   "clockAngleDeg": 1.2,
+   "newellCoupling": 0.0,
+   "subsolarStandoffRe": 11.889,
+   "flaringAlpha": 0.5543
+  },
+  {
+   "validAt": "2026-08-08T01:41:36Z",
+   "observedAt": "2026-08-08T00:18:00Z",
+   "speedKps": 252.6,
+   "densityCm3": 7.2,
+   "bzGsmNt": -1.02,
+   "bxNt": -2.6,
+   "byNt": 1.33,
+   "btNt": 3.09,
+   "dynamicPressureNpa": 0.7684,
+   "magneticPressureNpa": 0.0038,
+   "clockAngleDeg": 127.5,
+   "newellCoupling": 1685.2,
+   "subsolarStandoffRe": 11.797,
+   "flaringAlpha": 0.58343
+  },
+  {
+   "validAt": "2026-08-08T01:46:03Z",
+   "observedAt": "2026-08-08T00:23:00Z",
+   "speedKps": 254.3,
+   "densityCm3": 7.04,
+   "bzGsmNt": -0.73,
+   "bxNt": -2.53,
+   "byNt": 1.72,
+   "btNt": 3.17,
+   "dynamicPressureNpa": 0.7615,
+   "magneticPressureNpa": 0.004,
+   "clockAngleDeg": 113.0,
+   "newellCoupling": 1505.6,
+   "subsolarStandoffRe": 11.83,
+   "flaringAlpha": 0.58128
+  },
+  {
+   "validAt": "2026-08-08T01:50:59Z",
+   "observedAt": "2026-08-08T00:28:00Z",
+   "speedKps": 254.5,
+   "densityCm3": 7.01,
+   "bzGsmNt": -0.4,
+   "bxNt": -2.47,
+   "byNt": 1.94,
+   "btNt": 3.17,
+   "dynamicPressureNpa": 0.7594,
+   "magneticPressureNpa": 0.004,
+   "clockAngleDeg": 101.7,
+   "newellCoupling": 1290.1,
+   "subsolarStandoffRe": 11.853,
+   "flaringAlpha": 0.57895
+  },
+  {
+   "validAt": "2026-08-08T01:56:40Z",
+   "observedAt": "2026-08-08T00:33:00Z",
+   "speedKps": 252.6,
+   "densityCm3": 7.08,
+   "bzGsmNt": -1.12,
+   "bxNt": -2.71,
+   "byNt": 0.39,
+   "btNt": 2.96,
+   "dynamicPressureNpa": 0.7556,
+   "magneticPressureNpa": 0.00349,
+   "clockAngleDeg": 160.8,
+   "newellCoupling": 1723.0,
+   "subsolarStandoffRe": 11.82,
+   "flaringAlpha": 0.58389
+  },
+  {
+   "validAt": "2026-08-08T02:01:30Z",
+   "observedAt": "2026-08-08T00:38:00Z",
+   "speedKps": 253.1,
+   "densityCm3": 7.01,
+   "bzGsmNt": -1.2,
+   "bxNt": -2.76,
+   "byNt": 0.43,
+   "btNt": 3.04,
+   "dynamicPressureNpa": 0.7511,
+   "magneticPressureNpa": 0.00368,
+   "clockAngleDeg": 160.3,
+   "newellCoupling": 1809.0,
+   "subsolarStandoffRe": 11.826,
+   "flaringAlpha": 0.58436
+  },
+  {
+   "validAt": "2026-08-08T02:06:30Z",
+   "observedAt": "2026-08-08T00:43:00Z",
+   "speedKps": 253.1,
+   "densityCm3": 7.28,
+   "bzGsmNt": -0.86,
+   "bxNt": -2.85,
+   "byNt": 0.96,
+   "btNt": 3.13,
+   "dynamicPressureNpa": 0.78,
+   "magneticPressureNpa": 0.0039,
+   "clockAngleDeg": 131.9,
+   "newellCoupling": 1487.6,
+   "subsolarStandoffRe": 11.779,
+   "flaringAlpha": 0.58253
+  },
+  {
+   "validAt": "2026-08-08T02:11:10Z",
+   "observedAt": "2026-08-08T00:48:00Z",
+   "speedKps": 254.1,
+   "densityCm3": 6.94,
+   "bzGsmNt": -0.78,
+   "bxNt": -3.1,
+   "byNt": 1.22,
+   "btNt": 3.42,
+   "dynamicPressureNpa": 0.7495,
+   "magneticPressureNpa": 0.00465,
+   "clockAngleDeg": 122.6,
+   "newellCoupling": 1452.1,
+   "subsolarStandoffRe": 11.856,
+   "flaringAlpha": 0.58141
+  },
+  {
+   "validAt": "2026-08-08T02:15:49Z",
+   "observedAt": "2026-08-08T00:53:00Z",
+   "speedKps": 255.3,
+   "densityCm3": 7.59,
+   "bzGsmNt": -0.74,
+   "bxNt": -3.27,
+   "byNt": 1.15,
+   "btNt": 3.55,
+   "dynamicPressureNpa": 0.8274,
+   "magneticPressureNpa": 0.00501,
+   "clockAngleDeg": 122.8,
+   "newellCoupling": 1409.6,
+   "subsolarStandoffRe": 11.682,
+   "flaringAlpha": 0.58252
+  },
+  {
+   "validAt": "2026-08-08T02:20:39Z",
+   "observedAt": "2026-08-08T00:58:00Z",
+   "speedKps": 255.8,
+   "densityCm3": 7.7,
+   "bzGsmNt": -0.71,
+   "bxNt": -3.4,
+   "byNt": 1.16,
+   "btNt": 3.66,
+   "dynamicPressureNpa": 0.8427,
+   "magneticPressureNpa": 0.00533,
+   "clockAngleDeg": 121.5,
+   "newellCoupling": 1384.9,
+   "subsolarStandoffRe": 11.651,
+   "flaringAlpha": 0.58257
+  },
+  {
+   "validAt": "2026-08-08T02:25:53Z",
+   "observedAt": "2026-08-08T01:03:00Z",
+   "speedKps": 255.2,
+   "densityCm3": 7.95,
+   "bzGsmNt": -0.69,
+   "bxNt": -3.42,
+   "byNt": 1.21,
+   "btNt": 3.69,
+   "dynamicPressureNpa": 0.866,
+   "magneticPressureNpa": 0.00542,
+   "clockAngleDeg": 119.7,
+   "newellCoupling": 1370.1,
+   "subsolarStandoffRe": 11.604,
+   "flaringAlpha": 0.58281
+  },
+  {
+   "validAt": "2026-08-08T02:31:05Z",
+   "observedAt": "2026-08-08T01:08:00Z",
+   "speedKps": 254.6,
+   "densityCm3": 7.89,
+   "bzGsmNt": -0.85,
+   "bxNt": -3.56,
+   "byNt": 1.04,
+   "btNt": 3.81,
+   "dynamicPressureNpa": 0.8554,
+   "magneticPressureNpa": 0.00578,
+   "clockAngleDeg": 129.3,
+   "newellCoupling": 1498.9,
+   "subsolarStandoffRe": 11.616,
+   "flaringAlpha": 0.58375
+  },
+  {
+   "validAt": "2026-08-08T02:36:05Z",
+   "observedAt": "2026-08-08T01:13:00Z",
+   "speedKps": 254.9,
+   "densityCm3": 7.62,
+   "bzGsmNt": -1.34,
+   "bxNt": -3.74,
+   "byNt": 0.67,
+   "btNt": 4.03,
+   "dynamicPressureNpa": 0.8281,
+   "magneticPressureNpa": 0.00646,
+   "clockAngleDeg": 153.4,
+   "newellCoupling": 1968.4,
+   "subsolarStandoffRe": 11.643,
+   "flaringAlpha": 0.58671
+  },
+  {
+   "validAt": "2026-08-08T02:41:07Z",
+   "observedAt": "2026-08-08T01:18:00Z",
+   "speedKps": 254.8,
+   "densityCm3": 7.71,
+   "bzGsmNt": -1.11,
+   "bxNt": -3.67,
+   "byNt": 0.18,
+   "btNt": 3.84,
+   "dynamicPressureNpa": 0.8372,
+   "magneticPressureNpa": 0.00587,
+   "clockAngleDeg": 170.8,
+   "newellCoupling": 1731.8,
+   "subsolarStandoffRe": 11.639,
+   "flaringAlpha": 0.58526
+  },
+  {
+   "validAt": "2026-08-08T02:45:34Z",
+   "observedAt": "2026-08-08T01:23:00Z",
+   "speedKps": 255.9,
+   "densityCm3": 7.23,
+   "bzGsmNt": -0.09,
+   "bxNt": -3.53,
+   "byNt": 0.38,
+   "btNt": 3.57,
+   "dynamicPressureNpa": 0.7919,
+   "magneticPressureNpa": 0.00507,
+   "clockAngleDeg": 103.3,
+   "newellCoupling": 454.2,
+   "subsolarStandoffRe": 11.793,
+   "flaringAlpha": 0.57738
+  },
+  {
+   "validAt": "2026-08-08T02:52:11Z",
+   "observedAt": "2026-08-08T01:29:00Z",
+   "speedKps": 254.5,
+   "densityCm3": 7.47,
+   "bzGsmNt": -0.66,
+   "bxNt": -3.63,
+   "byNt": -0.27,
+   "btNt": 3.74,
+   "dynamicPressureNpa": 0.8093,
+   "magneticPressureNpa": 0.00557,
+   "clockAngleDeg": 202.2,
+   "newellCoupling": 1223.8,
+   "subsolarStandoffRe": 11.725,
+   "flaringAlpha": 0.58165
+  },
+  {
+   "validAt": "2026-08-08T02:57:01Z",
+   "observedAt": "2026-08-08T01:34:00Z",
+   "speedKps": 255.4,
+   "densityCm3": 7.42,
+   "bzGsmNt": -2.06,
+   "bxNt": -3.47,
+   "byNt": -0.06,
+   "btNt": 4.04,
+   "dynamicPressureNpa": 0.8095,
+   "magneticPressureNpa": 0.00649,
+   "clockAngleDeg": 181.7,
+   "newellCoupling": 2623.4,
+   "subsolarStandoffRe": 11.628,
+   "flaringAlpha": 0.59141
+  },
+  {
+   "validAt": "2026-08-08T03:04:49Z",
+   "observedAt": "2026-08-08T01:44:00Z",
+   "speedKps": 262.8,
+   "densityCm3": 8.03,
+   "bzGsmNt": -3.06,
+   "bxNt": -2.19,
+   "byNt": -0.59,
+   "btNt": 3.84,
+   "dynamicPressureNpa": 0.9276,
+   "magneticPressureNpa": 0.00587,
+   "clockAngleDeg": 190.9,
+   "newellCoupling": 3548.1,
+   "subsolarStandoffRe": 11.293,
+   "flaringAlpha": 0.60034
+  },
+  {
+   "validAt": "2026-08-08T03:14:40Z",
+   "observedAt": "2026-08-08T01:54:00Z",
+   "speedKps": 261.7,
+   "densityCm3": 8.88,
+   "bzGsmNt": 0.28,
+   "bxNt": -2.69,
+   "byNt": 1.0,
+   "btNt": 2.92,
+   "dynamicPressureNpa": 1.0172,
+   "magneticPressureNpa": 0.00339,
+   "clockAngleDeg": 74.4,
+   "newellCoupling": 448.1,
+   "subsolarStandoffRe": 11.369,
+   "flaringAlpha": 0.57828
+  },
+  {
+   "validAt": "2026-08-08T03:18:14Z",
+   "observedAt": "2026-08-08T01:59:00Z",
+   "speedKps": 266.1,
+   "densityCm3": 9.51,
+   "bzGsmNt": 0.09,
+   "bxNt": -2.23,
+   "byNt": 1.45,
+   "btNt": 3.03,
+   "dynamicPressureNpa": 1.1263,
+   "magneticPressureNpa": 0.00365,
+   "clockAngleDeg": 86.4,
+   "newellCoupling": 800.0,
+   "subsolarStandoffRe": 11.187,
+   "flaringAlpha": 0.58102
+  },
+  {
+   "validAt": "2026-08-08T03:21:45Z",
+   "observedAt": "2026-08-08T02:04:00Z",
+   "speedKps": 271.1,
+   "densityCm3": 8.71,
+   "bzGsmNt": 1.72,
+   "bxNt": -0.46,
+   "byNt": 2.49,
+   "btNt": 3.07,
+   "dynamicPressureNpa": 1.0707,
+   "magneticPressureNpa": 0.00375,
+   "clockAngleDeg": 55.4,
+   "newellCoupling": 475.2,
+   "subsolarStandoffRe": 11.325,
+   "flaringAlpha": 0.56889
+  },
+  {
+   "validAt": "2026-08-08T03:26:16Z",
+   "observedAt": "2026-08-08T02:09:00Z",
+   "speedKps": 272.6,
+   "densityCm3": 8.23,
+   "bzGsmNt": 2.62,
+   "bxNt": 0.59,
+   "byNt": 2.64,
+   "btNt": 3.77,
+   "dynamicPressureNpa": 1.0229,
+   "magneticPressureNpa": 0.00566,
+   "clockAngleDeg": 45.2,
+   "newellCoupling": 331.6,
+   "subsolarStandoffRe": 11.422,
+   "flaringAlpha": 0.56197
+  },
+  {
+   "validAt": "2026-08-08T03:31:31Z",
+   "observedAt": "2026-08-08T02:14:00Z",
+   "speedKps": 271.8,
+   "densityCm3": 8.27,
+   "bzGsmNt": 2.31,
+   "bxNt": 0.42,
+   "byNt": 2.41,
+   "btNt": 3.36,
+   "dynamicPressureNpa": 1.0219,
+   "magneticPressureNpa": 0.00449,
+   "clockAngleDeg": 46.2,
+   "newellCoupling": 324.7,
+   "subsolarStandoffRe": 11.419,
+   "flaringAlpha": 0.56412
+  },
+  {
+   "validAt": "2026-08-08T03:36:52Z",
+   "observedAt": "2026-08-08T02:19:00Z",
+   "speedKps": 270.6,
+   "densityCm3": 8.71,
+   "bzGsmNt": 1.99,
+   "bxNt": 1.02,
+   "byNt": 2.65,
+   "btNt": 3.47,
+   "dynamicPressureNpa": 1.0668,
+   "magneticPressureNpa": 0.00479,
+   "clockAngleDeg": 53.1,
+   "newellCoupling": 454.3,
+   "subsolarStandoffRe": 11.338,
+   "flaringAlpha": 0.56695
+  },
+  {
+   "validAt": "2026-08-08T03:42:11Z",
+   "observedAt": "2026-08-08T02:24:00Z",
+   "speedKps": 269.5,
+   "densityCm3": 7.68,
+   "bzGsmNt": 2.77,
+   "bxNt": -0.1,
+   "byNt": 1.78,
+   "btNt": 3.31,
+   "dynamicPressureNpa": 0.933,
+   "magneticPressureNpa": 0.00436,
+   "clockAngleDeg": 32.7,
+   "newellCoupling": 131.4,
+   "subsolarStandoffRe": 11.585,
+   "flaringAlpha": 0.55968
+  },
+  {
+   "validAt": "2026-08-08T03:45:45Z",
+   "observedAt": "2026-08-08T02:29:00Z",
+   "speedKps": 274.3,
+   "densityCm3": 7.52,
+   "bzGsmNt": 3.02,
+   "bxNt": 0.86,
+   "byNt": 1.12,
+   "btNt": 3.34,
+   "dynamicPressureNpa": 0.9464,
+   "magneticPressureNpa": 0.00444,
+   "clockAngleDeg": 20.3,
+   "newellCoupling": 38.2,
+   "subsolarStandoffRe": 11.564,
+   "flaringAlpha": 0.55812
+  },
+  {
+   "validAt": "2026-08-08T03:53:16Z",
+   "observedAt": "2026-08-08T02:34:00Z",
+   "speedKps": 265.9,
+   "densityCm3": 7.77,
+   "bzGsmNt": 1.5,
+   "bxNt": -1.32,
+   "byNt": -0.67,
+   "btNt": 2.53,
+   "dynamicPressureNpa": 0.9189,
+   "magneticPressureNpa": 0.00255,
+   "clockAngleDeg": 335.9,
+   "newellCoupling": 36.4,
+   "subsolarStandoffRe": 11.585,
+   "flaringAlpha": 0.56834
+  }
+ ]
+}

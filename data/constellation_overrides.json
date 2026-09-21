@@ -1,0 +1,104 @@
+{
+ "what": "One researched paragraph per satellite fleet, printed as the SECOND paragraph of the Satellite Background section on every member card of that fleet, with its own Source link beneath it. It answers the question a card about one Starlink cannot: what is the fleet, and what is it for.",
+ "whoWroteThis": "Written by hand, once, by an agent research session with ordinary web search, and read in full before it shipped. NO MODEL WROTE ANY OF IT AND NONE MAY. A wrong fact in a fleet paragraph repeats on up to 4,648 cards, and there is nothing here for a grounding gate to check the prose against - which is the exact 'fluent, plausible, unsourceable' risk the 2026-08-27 study ruled out for this site. The sibling lane next door (narration/build_shaped_purposes.json) IS allowed a model precisely because it only ever shortens text that already exists and already has a citation.",
+ "rules": [
+  "AT MOST TEN ENTRIES, and only for fleets whose own member sentence is thin. A fleet whose members already carry good prose (GPS, at a median of 1,196 characters) must never get one, because it would duplicate what the card already says.",
+  "NO DIGITS ANYWHERE IN THE PROSE, enforced by tests/constellation-overrides.test.ts. Counts are the one fact that moves, and they are injected by code from the live catalogue at render time - never written here. This is the constellation-of-the-day lane's proven trap.",
+  "EVERY CLAIM MUST BE SUPPORTED BY THE ONE CITED PAGE, and `verifiedQuotes` holds the sentences that support it, copied from that page. They are checked into the repository so the next person does not have to take this on trust.",
+  "STATE NOMINAL ARCHITECTURE - what the fleet is for, who runs it, roughly where it flies, how it is built. Facts that move on decade timescales, never month to month.",
+  "IT MUST FIT. The paragraph plus the card's own sentence together may not pass the 368-character section ceiling measured in narration/build_shaped_purposes.py, which is Sean's 'max of maybe 6-8 lines' against the real card. `budgetChars` on each entry records what was left after its members' own sentence."
+ ],
+ "measuredOn": "the published catalogue of release 20260827T163249Z: 8,000 objects, 5,075 of them in these thin-sentenced fleets",
+ "citationsVerified": "2026-08-27, every URL fetched and every quote matched on the live page from this machine",
+ "leftOut": {
+  "BeiDou": "NO SOURCE THIS SITE CAN LINK. The only authoritative current page is the China Satellite Navigation Office's own, en.beidou.gov.cn, WHICH DOES NOT SERVE HTTPS - it answers on port 80 and refuses TLS on 443, checked from two machines on 2026-08-27. ESA's Navipedia BeiDou Space Segment page is https and stable but was last edited in September 2014 and still describes the constellation in the future tense, which is not a description of what is flying. So BeiDou's 50 cards keep their own sentence and gain nothing, which is the honest answer. SEPARATELY, AND WORTH FIXING: those 50 cards ALREADY carry a Source link to https://en.beidou.gov.cn/SYSTEMS/System/, and it does not resolve.",
+  "PWSA Transport Layer": "NO ROOM, AND NOTHING NEW TO SAY. Its 63 members already carry 260 characters - proliferated LEO mesh, resilient low-latency military data transport, optical inter-satellite links - which leaves 108 characters inside the section ceiling and is the same ground sda.mil covers. A second paragraph here would be the card repeating itself in a smaller font.",
+  "GPS, Iridium, Yaogan, Intelsat, Globalstar and the rest": "NOT THIN. Their members already carry 495 to 1,196 characters of researched prose, which is the opposite problem - see narration/shaped-purposes.json."
+ },
+ "constellations": {
+  "Starlink": {
+   "members": 4648,
+   "ownSentenceChars": 137,
+   "budgetChars": 231,
+   "fleetNote": "SpaceX's broadband constellation flies in several low orbital shells, working with ground stations and user terminals as one network. The satellites steer on krypton Hall-effect thrusters and avoid tracked debris on their own.",
+   "fleetNoteSource": "https://www.eoportal.org/satellite-missions/starlink",
+   "sourceTitle": "Starlink Satellite Constellation — eoPortal",
+   "verifiedQuotes": [
+    "Starlink is a low Earth orbit (LEO) satellite broadband constellation developed by SpaceX to provide high-speed, low-latency internet connectivity on a global scale.",
+    "The system consists of thousands of small satellites operating in multiple orbital shells, supported by ground stations and user terminals that together form a space-based communications network.",
+    "Hall-effect thrusters using krypton as the reaction mass, for position adjustment on orbit, altitude maintenance and deorbit",
+    "Able to use Department of Defense provided debris data to autonomously avoid collision"
+   ]
+  },
+  "OneWeb": {
+   "members": 242,
+   "ownSentenceChars": 136,
+   "budgetChars": 232,
+   "fleetNote": "Eutelsat's constellation of Airbus-built satellites is spread across polar planes in a Walker-Star pattern that holds coverage at high latitudes. Each carries a bent-pipe payload: Ka-band from the gateway, Ku-band to the user.",
+   "fleetNoteSource": "https://www.eoportal.org/satellite-missions/oneweb",
+   "sourceTitle": "OneWeb Minisatellite Constellation — eoPortal",
+   "verifiedQuotes": [
+    "OneWeb is a commercial mission operated by the Eutelsat Group",
+    "manufactured by Airbus Defence and Space",
+    "The constellation is arranged in 12 orbital planes, with an inclination of about 87°, following a Walker-Star pattern that ensures reliable coverage and uninterrupted service delivery, particularly in high-latitude regions.",
+    "Signals from ground gateways are received in the Ka-band and transmitted to users via the Ku-band."
+   ]
+  },
+  "GLONASS": {
+   "members": 28,
+   "ownSentenceChars": 123,
+   "budgetChars": 245,
+   "fleetNote": "Its satellites fly circular orbits in three planes, each completing one revolution in a little over eleven hours, and the constellation is laid out so that at least four are in view from anywhere on Earth at any time.",
+   "fleetNoteSource": "https://gssc.esa.int/navipedia/index.php/GLONASS_Space_Segment",
+   "sourceTitle": "GLONASS Space Segment — ESA Navipedia",
+   "sourceNote": "THE OBVIOUS SOURCE IS DOWN. Russia's own Information and Analysis Center, glonass-iac.ru, returns 502 Bad Gateway from both the VPS and bigmem on 2026-08-27 - and it is what the site's 28 GLONASS cards already cite for their own sentence, so that link is dead too and should be revisited. ESA's Navipedia page is https, is dated (last edited 15 August 2024), and covers the architecture; it says nothing about who operates GLONASS or what it is for, so this paragraph says nothing about that either. The card's own sentence already does.",
+   "verifiedQuotes": [
+    "The GLONASS space segment consists nominally of 24 operational satellites, distributed over three orbital planes.",
+    "GLONASS satellites operate in circular orbits at an altitude of 19100-km, an inclination of 64.8 deg and each satellite completes the orbit in approximately 11 hours 15 minutes.",
+    "ensure visibility of, at least, 4 satellites in view at any time and from anywhere on Earth"
+   ]
+  },
+  "Galileo": {
+   "members": 23,
+   "ownSentenceChars": 123,
+   "budgetChars": 245,
+   "fleetNote": "Europe's own navigation system runs under civilian control. Its satellites occupy three circular medium Earth orbit planes, reaching past the northern tip of Europe, and each relays distress calls to rescue coordination centres.",
+   "fleetNoteSource": "https://www.esa.int/Applications/Satellite_navigation/Galileo/What_is_Galileo",
+   "sourceTitle": "What is Galileo? — ESA",
+   "verifiedQuotes": [
+    "Galileo is Europe's own global navigation satellite system, providing a highly accurate, guaranteed global positioning service under civilian control.",
+    "All but two of these are positioned in three circular Medium Earth Orbit (MEO) planes at 23 222 km altitude above the Earth, and at an inclination of the orbital planes of 56 degrees to the equator.",
+    "Galileo navigation signals provide good coverage even at latitudes up to 75 degrees north, which corresponds to Norway's North Cape - the most northerly tip of Europe - and beyond.",
+    "Satellites are therefore equipped with a transponder, which is able to transfer the distress signals from the user transmitters to regional rescue co-ordination centres, which will then initiate the rescue operation."
+   ]
+  },
+  "Fengyun": {
+   "members": 11,
+   "ownSentenceChars": 228,
+   "budgetChars": 140,
+   "fleetNote": "Odd-numbered Fengyun series fly polar orbits and even-numbered series geostationary, each lettered by its place in the launch sequence.",
+   "fleetNoteSource": "https://www.nsmc.org.cn/nsmc/en/satellite/index.html",
+   "sourceTitle": "FengYun Series Satellites — National Satellite Meteorological Center",
+   "sourceNote": "The shortest paragraph here, because its members' own sentence is the longest of the six at 228 characters and already names the operator and the purpose. What it does not say is how the series are numbered, which is the one thing that makes the fleet legible.",
+   "verifiedQuotes": [
+    "The odd number series is the polar-orbiting satellite series, the even number series the geostationary.",
+    "Each satellite takes the alphabetic order according to its seat in launching sequence. For instance, the 'FY-4B' indicates the second satellite that has been launched in the FY-4 geostationary series."
+   ]
+  },
+  "Sentinel": {
+   "members": 10,
+   "ownSentenceChars": 136,
+   "budgetChars": 232,
+   "fleetNote": "The Sentinels are built for the operational needs of Copernicus, each mission a constellation sized to meet its revisit and coverage requirement. Some Sentinel instruments fly hosted on weather satellites instead.",
+   "fleetNoteSource": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/The_Sentinel_missions",
+   "sourceTitle": "The Sentinel missions — ESA",
+   "verifiedQuotes": [
+    "The Sentinel missions are developed specifically for the operational needs of the Copernicus programme.",
+    "Each Sentinel mission is based on a constellation of satellites to fulfil revisit and coverage requirements.",
+    "The current suite of missions carry a range of technologies, such as radar and multi-spectral imaging instruments for land, ocean and atmospheric monitoring.",
+    "Sentinel-4 is an ultraviolet, visible and near-infrared spectrometer carried on the Meteosat Third Generation Sounder (MTG-S) satellites.",
+    "Sentinel-5 is an advanced imaging spectrometer that will monitor the atmosphere from polar orbit hosted on a MetOp Second Generation (MetOp-SG) weather satellite."
+   ]
+  }
+ }
+}

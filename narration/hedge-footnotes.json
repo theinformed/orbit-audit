@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-08-27T11:14:21Z",
+  "note": "Built by narration/build_hedge_footnotes.py from narration/hedge-footnote-facts.json. One footnote per KIND of uncorroborated label, never one per spacecraft. `source` says who wrote each one: `local-35b` is the free home model's phrasing of this repo's own facts, re-checked here before it was allowed in; `deterministic` is those facts composed in code, which is what ships when no model has run or when its draft was refused. The site reads this file at BUILD time and asks no model anything at request time.",
+  "footnotes": {
+    "name-pattern": {
+      "text": "The label comes from this spacecraft's name matching a known programme, and nothing about this individual object was checked against an operator, a government or an independent observer. Read it as the job of spacecraft in that programme, not as confirmation for this specific craft.",
+      "source": "local-35b"
+    },
+    "assessed": {
+      "text": "Named independent analysts worked out what this spacecraft is for from its orbit and launch, and no operator or government has published what it does. Treat the label as a published assessment by analysts who lacked official confirmation, not as a statement from the country flying the spacecraft.",
+      "source": "local-35b"
+    },
+    "assessed-low": {
+      "text": "Named independent analysts worked out what this spacecraft is for from its orbit and launch, and no operator or government has published what it does while the reviewer marked the answer as unsettled. Read it as the best published reading of an unexplained object, not as a settled fact or a government statement.",
+      "source": "local-35b"
+    },
+    "source-group": {
+      "text": "The label comes from the category the orbit catalogue files this object under, and nothing was checked against the spacecraft itself. Take it to mean one catalogue sorts this object into this category, not that anyone examined the spacecraft and agreed with that sorting.",
+      "source": "local-35b"
+    },
+    "withdrawn-name-collision": {
+      "text": "This spacecraft's name matched a known programme, but two independent sources say that name belongs to a different spacecraft so the match was withdrawn and nothing replaced it. The label is the one the catalogue offers, and the site does not stand behind it; do not assume this object is the one the name points at.",
+      "source": "local-35b"
+    },
+    "unclassified": {
+      "text": "No source this site consulted establishes what this spacecraft is for, and no operator filing, independent observation or analyst reading was found for it. Read the label above as a placeholder for an object the site could not identify, not as a statement of what the spacecraft does.",
+      "source": "local-35b"
+    },
+    "low-confidence": {
+      "text": "A rule written for this specific object put the label on it, and the reviewer who wrote that rule recorded that the answer is still not settled. The label is this site's own reading of the object, written down as unsure, not a settled conclusion.",
+      "source": "local-35b"
+    },
+    "unknown": {
+      "text": "This release does not record how the label was arrived at, and nothing is recorded as having been checked against this spacecraft. The label is carried forward from the catalogue as it was found, and you should not assume that anything about it has been checked.",
+      "source": "local-35b"
+    }
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "E2_changepoints": {
+    "auditEligibleObjects": 4820,
+    "auditShiftEpisodes": 0,
+    "auditShiftEpisodesPerObject": 0.0,
+    "auditShifts": 0,
+    "auditShiftsPerObject": 0.0,
+    "auditStopEpisodes": 176,
+    "auditStopEpisodesPerObject": 0.036514522821576766,
+    "auditStops": 176,
+    "auditStopsPerObject": 0.036514522821576766,
+    "payloadEligibleObjects": 4172,
+    "payloadShiftEpisodes": 0,
+    "payloadShiftEpisodesPerObject": 0.0,
+    "payloadShifts": 0,
+    "payloadShiftsPerObject": 0.0,
+    "payloadStopEpisodes": 140,
+    "payloadStopEpisodesPerObject": 0.03355704697986577,
+    "payloadStops": 140,
+    "payloadStopsPerObject": 0.03355704697986577
+  },
+  "E3_bh": {
+    "passiveAudit": {
+      "fraction": 0.0,
+      "hits": 0,
+      "jeffreys95": [
+        0.0,
+        0.0004578402093816103
+      ],
+      "total": 5485
+    },
+    "payload": {
+      "fraction": 0.0,
+      "hits": 0,
+      "jeffreys95": [
+        0.0,
+        0.0003185519202058562
+      ],
+      "total": 7884
+    }
+  },
+  "E3_rawWindowThreshold": {
+    "passiveAudit": {
+      "fraction": 0.09316317228805834,
+      "hits": 511,
+      "jeffreys95": [
+        0.08568555917000786,
+        0.10106998658211136
+      ],
+      "total": 5485
+    },
+    "payload": {
+      "fraction": 0.03361237950279046,
+      "hits": 265,
+      "jeffreys95": [
+        0.029803627152146454,
+        0.03776343933842713
+      ],
+      "total": 7884
+    }
+  },
+  "E4_byOperator": {
+    "Astra (SES)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 23,
+      "significant": 0
+    },
+    "BeiDou": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 49,
+      "significant": 0
+    },
+    "Cosmos (Russian)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 1116,
+      "significant": 0
+    },
+    "GPS (NAVSTAR)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 69,
+      "significant": 0
+    },
+    "Galileo": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 27,
+      "significant": 0
+    },
+    "Gaofen (Chinese)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 32,
+      "significant": 0
+    },
+    "Globalstar": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 85,
+      "significant": 0
+    },
+    "Gonets": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 33,
+      "significant": 0
+    },
+    "Inmarsat": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 19,
+      "significant": 0
+    },
+    "Intelsat": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 96,
+      "significant": 0
+    },
+    "Iridium": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 101,
+      "significant": 0
+    },
+    "Lemur (Spire)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 10,
+      "significant": 0
+    },
+    "O3b": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 22,
+      "significant": 0
+    },
+    "OneWeb": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 618,
+      "significant": 0
+    },
+    "Orbcomm": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 59,
+      "significant": 0
+    },
+    "SkySat (Planet)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 14,
+      "significant": 0
+    },
+    "Starlink (SpaceX)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 2809,
+      "significant": 0
+    },
+    "Yaogan (Chinese)": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 110,
+      "significant": 0
+    },
+    "unclassified": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 2575,
+      "significant": 0
+    }
+  },
+  "E4_byRegime": {
+    "GEO": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 1248,
+      "p25PeriodDays": null,
+      "p75PeriodDays": null,
+      "significant": 0
+    },
+    "GEO-inclined": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 23,
+      "p25PeriodDays": null,
+      "p75PeriodDays": null,
+      "significant": 0
+    },
+    "GTO/HEO": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 82,
+      "p25PeriodDays": null,
+      "p75PeriodDays": null,
+      "significant": 0
+    },
+    "LEO": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 6200,
+      "p25PeriodDays": null,
+      "p75PeriodDays": null,
+      "significant": 0
+    },
+    "MEO": {
+      "fraction": 0.0,
+      "medianPeriodDays": null,
+      "objects": 331,
+      "p25PeriodDays": null,
+      "p75PeriodDays": null,
+      "significant": 0
+    }
+  },
+  "byWindowCountBand": {
+    "2-3": {
+      "audit": 665,
+      "auditSig": 0,
+      "payload": 3712,
+      "payloadSig": 0
+    },
+    "4-7": {
+      "audit": 665,
+      "auditSig": 0,
+      "payload": 853,
+      "payloadSig": 0
+    },
+    "8-15": {
+      "audit": 1298,
+      "auditSig": 0,
+      "payload": 696,
+      "payloadSig": 0
+    },
+    ">=16": {
+      "audit": 2857,
+      "auditSig": 0,
+      "payload": 2623,
+      "payloadSig": 0
+    }
+  },
+  "channel": "mean_motion",
+  "gates": {
+    "A": {
+      "limit": 0.02,
+      "passiveAuditFractionBH": 0.0,
+      "verdict": "CALIBRATED"
+    },
+    "B": {
+      "boundToBoundRatio": null,
+      "informativeAt": 10.0,
+      "passiveAuditUpper": 0.0004578402093816103,
+      "payloadLower": 0.0,
+      "verdict": "NOT EVALUABLE",
+      "weakAt": 3.0
+    },
+    "C": {
+      "payloadObjectsWithThreeSignificantWindows": 107,
+      "required": 20,
+      "verdict": "POWERED"
+    }
+  },
+  "harmonicAmbiguousPayloads": 77,
+  "matchRungs": {
+    "1": 2465,
+    "2": 3186,
+    "3": 917,
+    "4": 33,
+    "5": 1283
+  },
+  "nullByYear": {
+    "1994": {
+      "fraction": 0.0,
+      "objects": 130,
+      "significant": 0
+    },
+    "1995": {
+      "fraction": 0.0,
+      "objects": 104,
+      "significant": 0
+    },
+    "1996": {
+      "fraction": 0.0,
+      "objects": 54,
+      "significant": 0
+    },
+    "2004": {
+      "fraction": 0.0,
+      "objects": 69,
+      "significant": 0
+    },
+    "2005": {
+      "fraction": 0.0,
+      "objects": 65,
+      "significant": 0
+    },
+    "2006": {
+      "fraction": 0.0,
+      "objects": 92,
+      "significant": 0
+    },
+    "2007": {
+      "fraction": 0.0,
+      "objects": 187,
+      "significant": 0
+    },
+    "2008": {
+      "fraction": 0.0,
+      "objects": 163,
+      "significant": 0
+    },
+    "2009": {
+      "fraction": 0.0,
+      "objects": 156,
+      "significant": 0
+    },
+    "2010": {
+      "fraction": 0.0,
+      "objects": 53,
+      "significant": 0
+    },
+    "2011": {
+      "fraction": 0.0,
+      "objects": 135,
+      "significant": 0
+    },
+    "2012": {
+      "fraction": 0.0,
+      "objects": 62,
+      "significant": 0
+    },
+    "2013": {
+      "fraction": 0.0,
+      "objects": 69,
+      "significant": 0
+    },
+    "2014": {
+      "fraction": 0.0,
+      "objects": 71,
+      "significant": 0
+    },
+    "2015": {
+      "fraction": 0.0,
+      "objects": 218,
+      "significant": 0
+    },
+    "2016": {
+      "fraction": 0.0,
+      "objects": 463,
+      "significant": 0
+    },
+    "2017": {
+      "fraction": 0.0,
+      "objects": 979,
+      "significant": 0
+    },
+    "2018": {
+      "fraction": 0.0,
+      "objects": 614,
+      "significant": 0
+    },
+    "2019": {
+      "fraction": 0.0,
+      "objects": 281,
+      "significant": 0
+    },
+    "2020": {
+      "fraction": 0.0,
+      "objects": 261,
+      "significant": 0
+    },
+    "2021": {
+      "fraction": 0.0,
+      "objects": 241,
+      "significant": 0
+    },
+    "2022": {
+      "fraction": 0.0,
+      "objects": 513,
+      "significant": 0
+    },
+    "2023": {
+      "fraction": 0.0,
+      "objects": 154,
+      "significant": 0
+    }
+  },
+  "pValueAtFloorPayloads": 0,
+  "payloadExposureOnFallbackRungs": 0.2832318619989853,
+  "population": {
+    "passiveAuditObjects": 5485,
+    "passiveCalibrationObjects": 5627,
+    "payloadObjects": 7884,
+    "totalWindowsAnalysed": 316028
+  },
+  "registration": "docs/cadence-preregistration-20260921.md",
+  "thresholds": {
+    "cellsAtOrAboveMinimum": [
+      88,
+      64,
+      31,
+      8
+    ],
+    "objectNullBands": {
+      "2-3": 638,
+      "4-7": 703,
+      "8-15": 1318,
+      ">=16": 2968
+    },
+    "pooledCalibrationP99": 0.9640534269809724,
+    "sensitivityPercentiles": {
+      "95.0": 0.7267664432525633,
+      "99.9": 0.9871420826315881
+    }
+  }
+}

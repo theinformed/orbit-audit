@@ -1,0 +1,529 @@
+# Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt
+
+**Sean D. Egan and Derek Conklin**
+*(affiliations and corresponding author to be confirmed by the authors before submission; author order per operator decision 2026-09-21)*
+
+Draft, 2026-09-21. Target venue: AMOS (Advanced Maui Optical and Space Surveillance Technologies Conference).
+
+<!--
+AUTHORS' COMMENT — PROVENANCE.
+Every numeric claim in this draft is followed by an HTML comment naming the
+committed repository document or receipt it was taken from. Nothing here was
+recomputed, re-derived, or estimated while drafting. The three primary sources
+are:
+  docs/eol-policy-relaxation-20260920.md          (arm-1 published-artifact probe, commit 0aa04a4)
+  docs/eol-three-arm-20260920.md                  (full-archive census + arms 1-3, commit 0aa04a4)
+  docs/fuel-odometer-20260920.md                  (propulsion catalogue x manoeuvre ledger, commit 2575e4f)
+plus their pre-registrations and machine receipts, named where used.
+Scoping language follows the 2026-09-20 adversarial prior-art review. Two
+phrases are forbidden in this draft and do not appear: "physically guaranteed"
+and "first at catalogue scale". Where a number could not be traced to a
+committed source it carries a TODO marker rather than a value.
+A small number of comments are marked `derivation:` rather than `src:`. Those
+are arithmetic performed for this draft — orbital-mechanics factors, mass
+fractions and sample sizes — from numbers that are themselves traced. They are
+marked so that no reader mistakes a derivation for a receipt.
+-->
+
+---
+
+## Abstract
+
+Cessation of north-south station-keeping is not a retirement proxy, and the registered test of the folklore that motivates it came out **underpowered rather than positive or null**. Those are this paper's two results, in that order.
+
+It is operational folklore that a geostationary satellite relaxes its station-keeping as it approaches end of life: intervals between north-south corrections stretch, per-correction impulse falls, and the satellite drifts within a widened box until it is raised to a disposal orbit. The behaviour is described prescriptively in the operations literature and is detectable after the fact in clustering studies, but we are not aware of a published observational, population-scale test of cadence relaxation as a *predictor* of retirement with disposal ground truth attached. This paper reports such a test, registered in advance and executed on a 216.9-million-row two-line-element archive.
+
+The negative result is the one that matters for anyone building an end-of-life predictor. Among objects with an eligible detected north-south cessation, the registered post-cessation classification returns 3 inclined-operations-compatible, 1 abandonment-compatible, 2 raises within 24 months, 2 raises later than 24 months left explicitly unresolved, and 8 unresolved <!-- src: docs/eol-three-arm-20260920.md, "Arm 3: inclined-operation disambiguation" -->. Treating every cessation as a retirement would have mislabelled the inclined-operations cases. Sixteen eligible cessations, half of them unresolved, is a demonstration rather than an estimate: we report no precision for the proxy and the cohort is too small to supply one.
+
+We re-detected the entire retained history of every geostationary-capable object in the archive without a publication catalogue filter. Distinct payloads carrying a raise flag rise from 22 in the published artifact to 133 before any screen — a 6.0× increase, like for like — and to 113 after the pre-registered station-acquisition screen that excludes 30 payload raise flags within 18 calendar months of launch <!-- src: docs/eol-three-arm-20260920.md, "Verdict, stated first" and arm-0 census table -->. An external audit against operational and historical catalogues agreed with 79.7% of assessable object-level endpoints, Wilson 95% [0.688, 0.875], with all 14 contradictions retained and examined <!-- src: docs/eol-three-arm-20260920.md, "External agreement and what it establishes" -->.
+
+The registered outcome test did not run. Only 2 arm-1 and 1 arm-2 trajectories cleared the registered baseline-and-final-year cadence gate against a feasibility floor of 15 complete matched pairs, and no complete pair produced both outcome ratios, so no effect size, hypothesis test, equivalence result or confidence interval is reported <!-- src: docs/eol-three-arm-20260920.md, "The three-arm result" -->. The binding constraint is not the supply of retirements: it is detection recall. 97 of 113 candidates cannot have a baseline north-south cadence estimated at all, and 108 cannot have a final-year one <!-- src: docs/eol-three-arm-20260920.md, arm-1 eligibility failures -->. An independent propulsion-ledger integration on the same archive measures the size of that miss directly: for the 54 chemically station-kept geostationary satellites where the comparison is meaningful, detected station-keeping delta-v accounts for a median of 1.81% of the ~50 m/s/yr north-south budget, with 47 of 54 below 10% <!-- src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors"; perigee-priced primary, median 1.808803%, 47 of 54 below 10% -->. Both delta-v pricings are reported throughout this paper: the perigee-speed pricing registered at `62f98d3` is primary, and the circular-speed convention of the published odometer is retained beside it, where the same statistic is 1.809394% and 46 of 54 <!-- src: docs/repricing-20260921.md, control-arm table, which reproduces docs/fuel-odometer-20260920.md exactly on all eight registered checks -->.
+
+The contribution of this paper is therefore a registered and reproducible protocol, a census that corrects a six-fold undercount caused by a publication filter, a negative result on the cessation proxy that a predictor-builder needs, and a measured statement of the obstacle that stands between this archive and an answer.
+
+---
+
+## 1. Introduction
+
+### 1.1 The claim under test
+
+Geostationary station-keeping is a recurring expense in propellant. North-south keeping, which fights the lunisolar inclination drift of roughly 0.85 degrees per year, dominates that expense; east-west keeping, which holds longitude against the triaxiality of the Earth's gravity field and solar radiation pressure, is comparatively cheap. A common account of end of life holds that operators, as remaining propellant becomes uncertain, first relax and then abandon north-south keeping, continue east-west keeping for a period of inclined operation, and finally spend a reserve on a disposal manoeuvre above the geostationary ring.
+
+Every clause of that account is operationally plausible, and parts of it are simply true of individual satellites. What is missing is a population-scale observational test: given only the public catalogue of orbital element sets, does measured station-keeping cadence relax in a satellite's final year relative to its own earlier history, by how much, with what lead time, and at what base rate? A predictor needs the distribution, not the anecdote.
+
+### 1.2 Prior art, and the specific gap
+
+Our adversarial prior-art review identified four bodies of work adjacent to this question and one gap between them.
+
+*Prescriptive operations work* — represented by Yilmaz (2025) — describes end-of-life station-keeping policy from the operator's side: what a satellite should do as propellant runs out. It is a statement about intent, not a measurement of a catalogue.
+
+*Post-hoc transition detection* — Roberts et al., AMOS 2023 — detects the transition from controlled to uncontrolled after it has occurred, by clustering. Detecting a transition after the fact is not the same problem as predicting it from a precursor.
+
+*Single-object worked examples* — Decoto and Loerch, AMOS 2015 — demonstrate the analysis on one object. The method is sound and the sample size is one.
+
+*Outcome classification* — the ESA Space Environment Report series, and the earlier Jehn, Agapov and Hernandez (2005) analysis — classify retirement *outcomes*: compliant reorbit, insufficient reorbit, no attempt. They count what happened. They do not test a precursor.
+
+The gap is the predictor test itself: cadence relaxation measured against disposal ground truth, at population scale, with the lead-time distribution and base rate reported. This paper occupies that gap, and reports honestly that the archive as it stands does not close it.
+
+<!--
+AUTHORS' COMMENT — CITATIONS.
+Author/year attributions above were taken verbatim from the committed prior-art
+review (operator memory, space-publication-priorart-20260920), which did not
+carry full titles, pages or identifiers. Full bibliographic entries for
+Yilmaz 2025, Roberts et al. AMOS 2023 and Decoto & Loerch AMOS 2015 were
+located and verified against live sources on 2026-09-21 (publisher/venue
+record for Yilmaz; the AMOS technical-paper library for Roberts et al. and
+Decoto & Loerch) and now appear in the References section. All three match
+the prior-art review's description closely enough (subject, venue, year,
+author surnames) that we are confident in the identification, though the
+review itself did not carry a DOI or page range to cross-check against.
+The Jehn/Agapov/Hernandez and ESA report citations ARE traced; see section 3.8,
+and Jehn, Agapov & Hernandez now has a full entry in the References section too.
+RESOLVED 2026-09-21: no outstanding citation TODO remains in this paper; see
+the References section and the reproducibility TODO for the one item (external
+commit-anchoring) that is not a citation task and remains open.
+-->
+
+We note explicitly, following that review, that this paper does not claim discovery of the behaviour. The behaviour is folklore, stated as routine on public satellite-operations references. The contribution can only be the quantification — and where the quantification fails, an honest account of why.
+
+### 1.3 What this paper contributes
+
+1. A pre-registered protocol for testing cadence relaxation as a retirement predictor, with three arms designed against the three specific confounds that would otherwise kill the result: survivorship (successful disposal selects for satellites that still had fuel), inclined-operation disambiguation (cessation of north-south keeping may predict five more years of service, not retirement), and non-circular ground truth (detected raises must be audited against catalogues that did not come from the detector).
+2. A full-archive census that corrects a publication-filter undercount, taking distinct payloads carrying a raise flag from 22 to 133 unscreened, and to 113 after the registered launch screen.
+3. A measured negative result: north-south cessation classifies into at least three materially different outcomes on the 16 eligible cessations available, so it is not usable as a retirement proxy without a precision estimate this cohort cannot supply.
+4. A measurement of the obstacle — detection recall for small burns — that is independent of this study and quantifies exactly how far short the detector falls.
+
+### 1.4 Who this measurement is for
+
+Space-domain activity data exists today in three forms, and none of them is what a decision-maker outside government or a well-funded operator can obtain. Government space situational awareness is classified. Commercial awareness is accurate but proprietary, priced for institutional customers. Compliance reporting — the ESA Space Environment Report and its predecessors — is public but annual and retrospective: what happened to a population last year, not what is happening to an object today. Missing from all three is free, continuous, catalogue-scale activity characterisation carried alongside a published, continuously audited error rate.
+
+That last clause is load-bearing, and it is why the companion methods paper exists. A rate with no error bound is not usable for a decision, and "manoeuvre detected" with no stated wrongness rate is a rumour with better production values. Every event in this study therefore travels with the false-alarm control of §2.2, and none of them is called a manoeuvre.
+
+Two uses of this paper's own measurements follow, each tied to a decision and each stated with its limiter in the same breath.
+
+*Disposal-compliance monitoring.* Continuous detection of graveyard raises and of keeping abandonment complements annual outcome reporting rather than replacing it; the census here found 113 distinct payload retirement candidates once a publication-catalogue filter was removed, against 22 in the filtered artifact, with 79.7% external agreement among assessable cases. The limiter is this paper's own negative result: north-south cessation is not a retirement proxy on its own, so monitoring built on cessation alone would misclassify satellites that are still operating in an inclined orbit (§3.4). The detection threshold is also the bare constant term of the IADC floor rather than the full criterion (§3.8), so a crossing is a detection, not a finding of compliance.
+
+*Fleet finance and underwriting.* The odometer's remaining-propellant figure is an upper bound — catalogued capacity minus a burn integrated from detected events, quoted at the high-specific-impulse edge — and a conservative bound is usable for underwriting in a way a midpoint estimate is not, because it cannot argue a satellite has more service life than it has <!-- src: docs/fuel-odometer-20260920.md, "Directionality" table -->. The limiter is the whole of §4: routine station-keeping is detected at a median 1.81% of its budget, electric station-keeping is invisible to a step detector entirely, the transfer-phase check is a consistency check rather than a calibration, and the tangential channel, now priced at perigee speed, is a true infimum over burn points but a weaker bound than the circular convention it replaces (§4.1). The bound is safe in direction and weak in strength, and an underwriter may only use it where that is stated.
+
+One limiter belongs in the framing rather than in the limitations. Commercial providers, where affordable, exceed this data with proprietary sensors and tasked collection. The niche here is not best-possible accuracy; it is free, public and audited — and audited is the differentiator, because an unaudited better number is not comparable to an audited worse one in any decision that turns on knowing how often the number is wrong.
+
+---
+
+## 2. Data and method
+
+### 2.1 Archive
+
+The analysis reads a local archive of catalogued orbital element sets and derived per-object fit intervals. The frozen census pass covers 216,937,797 rows across 68,711 objects <!-- src: docs/eol-three-arm-20260920.md, arm-0 census table -->, read from a consistent SQLite backup taken from a connection opened read-only, and analysed through the same read-only opener with `query_only=1` <!-- src: docs/eol-three-arm-20260920.md, arm 0 provenance paragraph -->. Detection and exposure therefore use the same frozen rows. The snapshot SHA-256 is `ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3` <!-- src: docs/eol-three-arm-20260920.md, "Reproduction and evidence"; the same hash appears in docs/fuel-odometer-20260920.md provenance table -->.
+
+A conservative screen selected every object with any positive mean motion at or below 2 revolutions per day, yielding 3,475 objects, of which 1,929 have geostationary or near-geostationary intervals and 1,379 are payloads <!-- src: docs/eol-three-arm-20260920.md, arm-0 census table -->.
+
+The screen is applied per object and the claim it has to support is per interval, so the step between the two is worth stating. The detector's geostationary branch admits an interval only if its semi-major axis is within 300 km of 42,164 km, which gives a mean motion of about 1.01 rev/day, or if its perigee altitude exceeds 25,000 km, which requires a above 31,378 km and gives a mean motion below 1.56 rev/day. Either way at least one endpoint of the interval has a mean motion at or below 2 rev/day, that endpoint belongs to the object's own retained history, and arm 0 re-detects that history in full — so an object carrying such an interval is selected by the screen and the interval is then seen <!-- derivation: from the geostationary branch's admission constants in pipeline/orbit_events.py; mean motions computed for this draft -->.
+
+The companion methods paper reports the same 68,711 objects at 216,937,493 element rows for its live paired sweep, 304 fewer than the count above. The archive is a live ingest; this study copied it and froze the copy, and the two passes therefore read it at different moments. Neither figure corrects the other and the difference must not be interpreted as a discrepancy.
+
+The archive contains a small tail of fit epochs through 2026-09-24; these are catalogue fit epochs, not future observations <!-- src: docs/eol-three-arm-20260920.md, arm 0 provenance paragraph -->.
+
+### 2.2 Detector and its false-alarm control
+
+Events are produced by a self-history step detector: for each object, each adjacent pair of fitted element sets is compared against a rolling baseline built from that object's own recent history, and a channel (semi-major axis, eccentricity, inclination, node) trips when the standardised residual exceeds a threshold and survives a persistence test. Semi-major axis is derived Keplerian from the catalogue's mean motion with no Kozai-to-Brouwer transform; at the geostationary ring the resulting offset from the SGP4 mean semi-major axis is about +0.5 km, it is a smooth function of (*a*, *e*, *i*), and it cancels to well under a metre in the per-interval differences the detector tests — about 0.1 m for a real north-south correction against a 12.44 m fit floor <!-- derivation: a_Brouwer = a_Kepler(1 − δ₁/3 − …), δ₁ = ¾·J₂·(R_E/a)²·(3cos²i − 1)·(1−e²)^(−3/2); computed for this draft -->.
+
+A physical-cost check prices the cheapest impulse consistent with the element change and rejects any interval whose implied cost exceeds twice the speed at perigee. That screen is not the largest impulse a bound orbit admits — the true single-impulse supremum is (1 + √2)·*v*, about 2.414 times local speed, since what must stay below escape is the final speed rather than the impulse — and it is set at twice perigee speed because no real spacecraft manoeuvre approaches even that, so a priced total above it indicates an element pair that does not describe one orbit <!-- src: pipeline/orbit_events.py, "THE PHYSICAL SCREEN, AND WHAT IT IS NOT" comment; the (1 + √2) supremum is derived for this draft -->. Rejections are counted rather than silently dropped by the sweep's `implausible_costs` counter. As of commit 061539e (2026-09-21) that count is carried into the diagnostics block and the published control alongside `trackingGapDroppedIntervals` and `inclinationUncorroborated`, the same way its siblings already were — but the value will first materialise at the next production sweep, so no number is reported here, and the principle is not credited as discharged until a measured value appears in a committed artifact <!-- src: pipeline/orbit_campaigns.py, event assembly and diagnostics assembly; commit 061539e -->.
+
+The detector carries a standing false-alarm control built on a class-based negative reference: debris and spent rocket bodies are physically passive by class, so a flag raised on one is treated as a false alarm. The companion paper bounds the direction of the error in that treatment: mislabelled objects and unrecorded disposal or venting burns put real manoeuvres into the false-alarm numerator, which inflates the measured floor rather than deflating it. The companion methods paper describes that apparatus in full. For this paper the relevant facts are that the control is published alongside the events, that the published overall self-history passive rate for the release used in the first arm is 0.4471 per 1,000 usable intervals, Jeffreys 95% [0.4427, 0.4515], and that its bound separation of 6.86× sits below the site's 10× gate, so all 28 individual published raise records in that release carry `manoeuvreLabelPermitted=false` <!-- src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" -->. Every event in this study is a candidate, never a confirmed manoeuvre.
+
+A later full sweep of the current detector measures an overall passive rate of 0.1589 per 1,000, 95% [0.1563, 0.1615], and a raw-floor bound separation of 18.191× <!-- src: docs/eol-policy-relaxation-20260920.md, "False-alarm context"; docs/orbit-phase2b-corroboration-20260920.md, full-population paired acceptance table -->. That newer calibration is deliberately not assigned to the older per-object records in arm 1: a study must not inherit a calibration measured on different code.
+
+Two qualifications travel with that 18.191×, both from the companion paper, and neither is optional. First, it is a statement about large-excursion detection only: the payload rate in it is the rate of manoeuvres large enough for this detector to see, so it must not be read as "payloads manoeuvre eighteen times more often than debris false-alarm" — a reading this paper's own recall measurement (§4.1) contradicts directly. Second, a registered covariate-matched analysis measures that the passive floor does not transfer to the payload covariate mix, and composing its factor with the separation gives a covariate-matched separation of 8.83×, below the 10× requirement the companion detector gates on <!-- src: docs/paperb-results-20260920.md, "Analysis 1"; the composition is set out in the companion paper §5.2.1 -->. That composition has since been checked directly rather than by multiplication: a second registered analysis re-measured the reweighted floor on the entire retained archive — 89,402,955 passive and 63,018,120 payload usable intervals, no sampling modulus — and returned a registered FAIL at a reweighted separation of 5.3560×, with 9.8135× obtained when both sides are read at their point estimates, so the shortfall is a property of the two populations rather than of the sample size <!-- src: docs/phase3-results-20260921.json, clause2.boundRatio 5.35601797798307, meta.passiveIntervals 89,402,955, meta.payloadIntervals 63,018,120, accepted false; derivation: 2.704389 ÷ 0.275578 from payloadSide.ratePer1000 and primary.reweightedFloorPer1000, reported the same way in docs/phase3-results-20260921.md -->. Nothing in this study turns on the separation statistic — every event here is a candidate regardless — but a reader should not carry the larger number away unqualified.
+
+Neither calibration measures the positive predictive value of the *retirement interpretation* specifically <!-- src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" -->.
+
+### 2.3 Registration
+
+Two registrations were committed before the corresponding measurements.
+
+The first <!-- src: docs/eol-policy-relaxation-preregistration-20260920.md --> fixes the outcomes for the published-artifact probe: `R_interval`, the median final-year north-south inter-correction spacing divided by the same object's median prior-baseline spacing, as primary; `R_dv`, the analogous ratio of median lower-bound per-event delta-v, as secondary and explicitly unable to rescue a failed primary. Retirement time *T* is the start of the first published self-history graveyard-raise for an object; the final year is [*T* − 1 calendar year, *T*); the baseline is all earlier available history. Leap-day anniversaries clamp to 28 February. A cadence requires at least three events and two within-segment spacings per window. The stop rule is explicit: fewer than 15 usable distinct retirees means underpowered, and no controls, significance test, effect size or confidence interval may be computed after that stop.
+
+The second <!-- src: docs/eol-three-arm-preregistration-20260920.md --> extends this to the full archive and adds the three arms, the external audit protocol, the matching calipers (baseline median inclination within 5 degrees, baseline coverage fraction within 0.15, baseline north-south interval ratio in [0.5, 2]), the effect estimator (geometric mean within-pair ratio, 95% paired bootstrap, 10,000 draws, seed 20260920), and a TOST equivalence margin of [0.8, 1.25] fixed in advance <!-- src: docs/eol-three-arm-20260920.md, "The three-arm result" -->. Fifteen complete matched pairs remains the feasibility floor, and both registrations state plainly that 15 is a floor supplied by the investigator, not a formal power calculation for a specified effect size.
+
+A supplemental external-audit protocol <!-- src: docs/eol-external-audit-protocol-20260920.md --> was recorded while the census was running and before any outcome was computed, adding a second external classification source after the local operational catalogue was found to be operational-only. It changes no cohort threshold and no test margin.
+
+### 2.4 Arm 0: uncapped extraction, and the publication filter
+
+The first probe used the published event artifact and all 256 of its manifest-linked detail shards — 11,335 distinct detail objects, 105,523 total detail events, 91,197 self-history events including 2,845 north-south keeping events — not merely the ranked 1,500-event headline list <!-- src: docs/eol-policy-relaxation-20260920.md, "Census and provenance" -->. It nevertheless recovered only 28 raise flags on 22 payloads, against 152 payload raise flags in the same release's full-population aggregate counters: 124 payload raise flags, 81.6% of the aggregate, are absent from published detail histories <!-- src: docs/eol-policy-relaxation-20260920.md, census table and following paragraph -->.
+
+The cause is a publication catalogue filter, and it is worth stating precisely because it is a trap for anyone doing this kind of study on published artifacts: the sweep accumulates full-population control counters *before* its retention filter, and the teaching catalogue supplies that filter. All detail shards can therefore be complete for publication while omitting most archive raise events <!-- src: docs/eol-policy-relaxation-20260920.md, "Publication selection matters here" -->. A current-catalogue selection is particularly damaging for a retirement study, because retired satellites are exactly what a current catalogue drops.
+
+Arm 0 removes that filter. Scanning every archive row and re-detecting every selected object's full history yields 156 retained raise flags, 152 of them on payloads, carried by 133 distinct payloads <!-- src: docs/eol-three-arm-20260920.md, arm-0 census table -->.
+
+The two 152s are not the same number and the coincidence deserves a paragraph, because on the face of it arm 0 could look circular. The aggregate counter comes from the companion paper's full-population paired sweep: 68,711 objects and 216,937,493 live rows, every classified object in the catalogue, counted by the production sweep's own control accumulators <!-- src: docs/eol-policy-relaxation-20260920.md, census table, citing docs/orbit-phase2b-corroboration-20260920.md -->. Arm 0 is a different program over a different population: 3,475 objects selected by the mean-motion screen, re-detected across 18,922,604 of their own full-history rows on the frozen copy <!-- src: docs/eol-three-arm-20260920.md, "Reproduction and evidence" -->. They return identically 152 payload and 4 passive raise flags. That agreement is corroboration and we report it as such: it says the geostationary screen omits no raise flag the full-catalogue sweep found, which is the property §2.1 argues for and could not otherwise demonstrate. What arm 0 adds is not the count. It is the per-object detail history behind it — the thing the published artifact does not carry for 124 of the 152 — and it is that history, not the aggregate, which makes a cadence measurement possible at all.
+
+### 2.5 The launch-contamination rule
+
+A raise detected shortly after launch is station acquisition, not disposal. The registration fixes a single rule before the data are seen: a raise at or before 18 calendar months after launch is contamination for this study; an unknown launch date is unadjudicated, never silently accepted <!-- src: docs/eol-three-arm-preregistration-20260920.md, "Population and provenance" -->.
+
+Applied, the rule excludes 30 payload flags, leaves 0 flags with unknown launch date, and leaves 122 payload flags on 113 distinct candidate endpoints <!-- src: docs/eol-three-arm-20260920.md, arm-0 census table -->.
+
+The rule matters. In the published-artifact subset, 11 of the 22 first flags occur within 365 days of the archive-listed launch date, including QZS-4 at five days, SJ-23 at 14 days and INMARSAT 3-F2 at 19 days <!-- src: docs/eol-policy-relaxation-20260920.md, "Retirement labels and scientific limits" -->. Without an age screen, half of that cohort would have been "retirements" that were launch campaigns.
+
+### 2.6 Cadence, exposure, and what a gap does
+
+Cadence reuses the production interval builder, its segment logic and its `MAXIMUM_JOINABLE_GAP_DAYS = 3.0` <!-- src: docs/eol-policy-relaxation-20260920.md, "Coverage holes that mattered" -->. Two rules follow from that and both are load-bearing: a long spacing is retained when observations continue throughout — a long interval is not evidence of a missed correction if the object was being watched the whole time — and a spacing that crosses a broken observation segment is excluded, because the archive cannot say what happened inside the hole. No interpolation is performed and no missing value becomes a zero or an infinity.
+
+Observed exposure is summed from usable interval durations and is reported separately from calendar depth, because a long calendar span alone never demonstrates three years of usable history <!-- src: docs/eol-policy-relaxation-preregistration-20260920.md -->.
+
+### 2.7 The three arms
+
+**Arm 1** takes each payload's first uncontaminated raise as its endpoint and asks the registered cadence question against calendar-matched controls.
+
+Arm 2 is the survivorship arm demanded by the prior-art review: objects whose total detected keeping ceases with no later raise and no detected restart, followed for at least 24 calendar months of unbroken coverage. These are the satellites that never reached a graveyard orbit, and conditioning only on successful raises would select them out.
+
+**Arm 3** is the inclined-operation disambiguation. After an eligible north-south cessation — at least three preceding keeping events and two within-segment spacings in the preceding two years, followed by a cadence-free duration of at least max(180 days, three times the preceding median spacing) on one unbroken coverage segment — each object is classified into mutually exclusive outcomes in a fixed order: raise within 24 months; east-west keeping continuing at least 24 months with at least three post-cessation east-west events, an east-west event in the final 180 days, and a monthly-median inclination slope of 0.5–1.2 deg/yr; all keeping ceased with 24 months of uninterrupted follow-up and no later raise or restart; otherwise unresolved <!-- src: docs/eol-three-arm-preregistration-20260920.md, "Coverage, cessation and inclined operation" -->.
+
+The inclination-slope band is a prespecified operational filter. 0.85 deg/yr is a reference value, not a physical constant, and the registration says so before the data are seen.
+
+### 2.8 External audit
+
+Every one of the 156 raise flags received an external lookup, including non-payloads and launch-contaminated flags <!-- src: docs/eol-three-arm-20260920.md, "External agreement and what it establishes" -->. Three sources were used: a local operational satellite catalogue (operational-only, so absence is *unknown*, never proof of retirement), a launch/decay catalogue, and — added by the supplemental protocol — the ESA *Classification of Geosynchronous Objects*, issue 21, status 1 January 2019, restricted to records explicitly marked as TLE-derived and joined by S-ID to catalogue number, with Vimpel/ISON identifiers excluded from those joins because they are not catalogue numbers <!-- src: docs/eol-external-audit-protocol-20260920.md -->.
+
+The audit's interpretive rules were fixed in advance: current operational status contradicts a terminal retirement at an earlier raise, but historical service restoration can explain that and must be reported; inactive status plus a present perigee at least 235 km above the geostationary ring is supporting evidence, not independent confirmation of a historical event date — and note that this is a different element from the detection criterion, which is a rise in semi-major axis, so an object's satisfying both is agreement between two measurements of different quantities rather than a repeated measurement of one; decay alone is not a disposal confirmation; and no orbit-only corroboration is called independent ground truth. Externally confirmed historical retirement requires dated documentary evidence <!-- src: docs/eol-three-arm-preregistration-20260920.md, "External ground truth" -->.
+
+---
+
+## 3. Results
+
+### 3.1 The census
+
+| Census stage | Count |
+|---|---:|
+| Frozen archive rows / objects | 216,937,797 / 68,711 |
+| Mean-motion screen: selected objects | 3,475 |
+| Objects with GEO/near-GEO intervals / payloads | 1,929 / 1,379 |
+| All retained raise flags / payload flags | 156 / 152 |
+| Distinct payloads carrying a raise | 133 |
+| Payload flags excluded by the 18-month launch rule | 30 |
+| Payload flags with unknown launch date | 0 |
+| Remaining payload flags / distinct candidate endpoints | 122 / 113 |
+
+<!-- src: docs/eol-three-arm-20260920.md, "Arm 0: uncapped extraction" -->
+
+Distinct payloads carrying a raise flag rise from 22 in the published artifact to 133 in the uncapped extraction, a 6.0× increase. Both of those counts are unscreened, which is what makes them comparable: the 22 is taken before any screen and, by §2.5, contains at least 11 launch campaigns. After the registered 18-month launch screen the uncapped figure is 113 distinct candidate endpoints <!-- src: docs/eol-three-arm-20260920.md, "Verdict, stated first" and arm-0 census table -->.
+
+We avoid the ratio 113 ÷ 22 = 5.1×, which appeared in an earlier draft of this work and which compares a screened count against an unscreened one. It is conservative — the like-for-like increase is larger, and screening both ends would put it near tenfold — but a definitional mismatch in the paper's most-quoted number is not excused by running in the safe direction.
+
+### 3.2 The registered gates, and the stop
+
+| Arm | Candidate objects | Usable NSK trajectories | Complete matched pairs | Verdict |
+|---|---:|---:|---:|---|
+| 1 — first uncontaminated raise | 113 | 2 | 0 | underpowered |
+| 2 — total keeping ceases, no later raise/restart | 20 | 1 | 0 | underpowered |
+| 3 — NS cessation outcomes | see 3.4 | separate NS and total signals | not a two-group cadence test | retrospective classification only |
+
+<!-- src: docs/eol-three-arm-20260920.md, "The three-arm result" -->
+
+Against a registered feasibility floor of 15 complete matched pairs, neither arm produced a complete pair with both outcome ratios estimable. Accordingly no effect size, hypothesis test, TOST equivalence result or confidence interval is reported for either arm <!-- src: docs/eol-three-arm-20260920.md, "Verdict, stated first" -->.
+
+This must be read as underpowered, not null. The hypothesis that station-keeping relaxes before retirement is neither supported nor refuted by this work. No zero-effect estimate, no *p* = 1, and no artificial confidence interval is substituted for a test that did not run <!-- src: docs/eol-policy-relaxation-20260920.md, "Baseline versus final-year outcomes" -->. Zero detected corrections in a window does not establish zero true corrections or an infinitely long cadence.
+
+The earlier published-artifact probe reached the same stop earlier and harder: of its 22 candidates, only two had any pre-raise north-south detection reaching three calendar years back, and zero had estimable cadence in both windows <!-- src: docs/eol-policy-relaxation-20260920.md, opening verdict -->.
+
+### 3.3 Recall, not population, is the binding constraint
+
+The failure mode is specific and measurable. Arm-1 eligibility failures, which overlap:
+
+| Failure | Candidates |
+|---|---:|
+| NSK depth below three years | 44 |
+| Observed exposure below three years | 20 |
+| Baseline cadence not estimable | 97 |
+| Final-year cadence not estimable | 108 |
+
+<!-- src: docs/eol-three-arm-20260920.md, arm-1 eligibility failures line -->
+
+Arm 2 fails the same way: baseline cadence not estimable 17, final-year cadence not estimable 19, NSK depth below three years 5, out of 20 candidates <!-- src: docs/eol-three-arm-20260920.md, arm-2 eligibility failures line -->.
+
+Three north-south detections and two same-segment spacings per window is a modest requirement. The detector does not supply it for most geostationary payloads in this archive. Increasing the number of retirements helped very little: the census increased it six-fold and the gate count moved from 0 usable to 2. At the scale available to this archive, recall dominates population, and the next attempt at this study should spend its effort there rather than on more objects <!-- src: docs/eol-three-arm-20260920.md, "Verdict, stated first" -->. We do not claim the stronger form — a catalogue large enough to brute-force the requirement is not excluded by anything measured here, only shown to be a long way from the one we have.
+
+### 3.4 Arm 3: north-south cessation is not a retirement proxy
+
+| Post-cessation class | Payload objects |
+|---|---:|
+| inclined-operations-compatible | 3 |
+| abandonment-compatible | 1 |
+| raise within 24 months | 2 |
+| raise after 24 months, unresolved | 2 |
+| unresolved | 8 |
+| no eligible NS cessation | 1,363 |
+
+<!-- src: docs/eol-three-arm-20260920.md, "Arm 3: inclined-operation disambiguation" -->
+
+Sixteen objects carried an eligible detected north-south cessation. They do not share an outcome. Three satisfy the pre-registered inclined-operation signature — continued east-west keeping past 24 months with an east-west event in the final 180 days and an inclination slope inside the registered band — and two raised promptly. Treating north-south cessation as a retirement label would have assigned a retirement date to satellites whose post-cessation behaviour is compatible with continued inclined operation.
+
+The scope of that claim is bounded by arithmetic we state rather than leave to the reader. Six of the sixteen are classified; eight are unresolved; the sixteen come from 1,379 screened payloads. So this demonstrates, on six classified cessations, that the outcomes are materially different, which is enough to refuse the proxy as a label. It is not enough to establish that the proxy is useless, and we do not claim that: this work computes no precision, no base rate and no cost asymmetry, and a predictor with two-in-six precision may be perfectly usable under a base-rate correction and an asymmetric loss. What would settle it is a precision estimate. Pinning precision to ±10 percentage points at 95% confidence around a value near 0.3 needs of order 80 eligible cessations, five times what this archive supplied; ±5 points needs over 300 <!-- derivation: n = z²p(1−p)/w², p = 0.3; computed for this draft -->. That is the measurement a future study owes, and §3.3's recall problem is the reason this archive could not supply the cohort.
+
+This is the prior-art review's second design requirement discharged with data rather than argument, and it is the clearest positive contribution this paper makes. We state its scope exactly: the inclined-operations class is an *inclined-operation-compatible signature*, not proof of revenue service; the abandonment class is *abandonment-compatible*, never independently confirmed dead; a raise later than 24 months stays explicitly unresolved rather than being forced into the abandonment group <!-- src: docs/eol-three-arm-20260920.md, "Arm 3" narrative -->.
+
+An operator disclosure supports the interpretation independently of our detector: EchoStar III's 2 August 2017 release confirms more than three years of inclined operation before a relocation anomaly, and the company's Q3 2017 filing reports recovery of control and retirement in August <!-- src: docs/eol-three-arm-20260920.md, "Arm 3", with both source URLs preserved in docs/eol-external-documentary-evidence-20260920.json -->. Neither cessation of north-south keeping nor an anomaly implies immediate, unrecovered retirement.
+
+### 3.5 Arm 2: the survivorship check
+
+20 objects meet the registered detected-total-cessation rule; 2 of them still appear operational in the frozen operational catalogue <!-- src: docs/eol-three-arm-20260920.md, "Arm 2: survivorship check" -->. Those contradictions are retained, which is why the cohort is labelled abandonment-compatible rather than abandoned. An absence of detectable steps cannot establish that small, continuous, or geometrically different corrections stopped.
+
+The registered cessation rule — a preceding two-year cadence, then no detections for at least max(180 days, three preceding median spacings), then 24 months of unbroken coverage with no detected restart for a non-raise classification — deliberately declines to call every sparsely observed historical payload abandoned. The cost of that choice is that many real failures remain unresolved.
+
+### 3.6 Lead times: two observations, labelled as such
+
+| Signal → first uncontaminated raise | Objects | Median days | IQR days | Range days | Median 95% bootstrap CI |
+|---|---:|---:|---|---|---|
+| NS cessation → raise | 2 | 530.37 | [526.984, 533.756] | [523.598, 537.143] | — † |
+| Total cessation → raise | 0 | — | — | — | — |
+
+† At *n* = 2 every bootstrap resample is one of three multisets and the percentile interval is identically the range, so no interval is reported. The value the generator produced, [523.598, 537.143], is the range and carries no information beyond it. Nothing else in this paper is bootstrapped at small *n*: the only other bootstrap registered anywhere in this work is the paired effect estimator, which never ran.
+
+<!-- src: docs/eol-three-arm-20260920.md, "Two lead-time distributions" -->
+
+These are two anecdotes with an interval attached, and nothing more. We report them because the registration required both signals' lead distributions to be reported separately and because suppressing an inconveniently small *n* is the failure this whole apparatus exists to prevent. They are not a lead-time distribution, they do not support a prospective warning, and the apparent tightness of the interval is an artefact of *n* = 2.
+
+They are also measured end-of-last-detected-correction to start-of-raise-flag, not physical cessation to physical disposal. The retrospective confirmation date is retained separately from the last-event date in the evidence file, because a cessation cannot have been known on the day of the last event: any prospective warning would have to subtract that confirmation delay and avoid the detector's future-looking baseline information <!-- src: docs/eol-three-arm-20260920.md, "Two lead-time distributions" -->.
+
+By external status stratum, the NS lead of 537.143 days falls in the *support* stratum and the 523.598-day lead in the *unknown* stratum; no contradicting case contributed a lead <!-- src: docs/eol-three-arm-20260920.md, external status stratum table -->.
+
+### 3.7 External agreement, and every contradiction
+
+The primary agreement unit is one first uncontaminated raise per payload: 55 supporting, 14 contradicting, 44 unknown, out of 113. Among assessable cases agreement is 79.7%, Wilson 95% [0.688, 0.875]; support across all candidates, keeping unknowns in the denominator, is 48.7%, [0.397, 0.578] <!-- src: docs/eol-three-arm-20260920.md, "External agreement and what it establishes" -->.
+
+| Audit population | Support | Contradiction | Unknown | Total |
+|---|---:|---:|---:|---:|
+| All payload raises | 62 | 35 | 55 | 152 |
+| Uncontaminated payload raises | 58 | 16 | 48 | 122 |
+| First uncontaminated payload objects | 55 | 14 | 44 | 113 |
+
+<!-- src: docs/eol-three-arm-20260920.md, audit population table -->
+
+The difference between the first and second rows is the age screen working as registered: it drops contradictions from 35 to 16 while removing only 30 of 152 flags. The second-to-third step, 16 to 14, is per-object de-duplication rather than the screen.
+
+**This agreement rate is not the positive predictive value of the retirement label.** Most supporting evidence is orbit-state consistency — an inactive object presently sitting above the ring — which cannot confirm the date or the intent of a historical raise. Only a small number of cases carry dated documentary evidence: 5 first-candidate disposal years match ESA's explicitly named 2018 disposal list, 2 match supplemental operator retirement windows including 1 at day resolution, and NOAA's decommissioning date for GOES-10 (1 December 2009) agrees with the detected flag's calendar day, though not necessarily its firing timestamp <!-- src: docs/eol-three-arm-20260920.md, "External agreement", final paragraph -->. These are convenience audits, not a random validation sample.
+
+All 14 contradictions are retained and examined in the source report against age at launch, external control classification and all retained post-raise keeping <!-- src: docs/eol-three-arm-20260920.md, "Every external contradiction, retained for examination" -->. Two patterns account for most of them. Early flags on satellites that later kept station for years are consistent with station acquisition or relocation: INMARSAT 3-F2's 1996 flag is followed by 5 later keeping detections through 2019, DIRECTV 8's 2005 flag by 15 through 2023. Repeated threshold crossings on objects that continued operating are the other: BSAT-3B's 2013-01-23 raise is followed by 64 later keeping flags of all signatures in the full re-detection, extending to 2026, against 29 later north-south detections for the same object in the published subset <!-- src: docs/eol-three-arm-20260920.md, contradiction table, and docs/eol-policy-relaxation-20260920.md -->. The two figures differ for two compounding reasons, and we give both because neither source document states the second: the full re-detection sees history the publication filter dropped, and it counts every keeping signature where the published-subset figure counts north-south only. No alternative retirement date was substituted to improve any trajectory, and no object was hand-relabelled.
+
+### 3.8 ESA totals, engaged rather than matched
+
+The frequently quoted "37 abandoned out of 117 retirements" is for 1997–2004, from Jehn, Agapov and Hernandez (2005); the other outcomes in that period were 39 compliant and 41 insufficient reorbits. It is not a current archive-wide rate <!-- src: docs/eol-three-arm-20260920.md, "ESA totals: compatible definitions, not a fitted target" -->. The 2026 ESA Space Environment Report, figure 6.35, counts 357 north-south-and-east-west-controlled and 191 east-west-only-controlled payloads near the geostationary ring during 2025 <!-- src: same section -->.
+
+Our detector's fixed 235-km semi-major-axis crossing is not ESA's perigee/eccentricity/long-term-clearance criterion, and neither historical total supplies the number of *detectable transitions with adequate exposure* in this archive. The IADC protected-region floor is 235 km + 1000·*C_R*·(*A/m*), which for a communications satellite adds a further 20–60 km; the detector uses the bare constant term, as its own source comment states <!-- src: pipeline/orbit_events.py, GEO_GRAVEYARD_MINIMUM_RAISE_KM comment -->. It is therefore a detection threshold, not a compliance test, and an object crossing it has not thereby been shown to comply with anything. A semi-major-axis rise of 235 km accompanied by an eccentricity increase can also leave perigee below the ring plus 235 km, which is the second reason §2.8's supporting-evidence criterion and this detection criterion are different quantities. We report the comparison to situate the census, and we do not tune any threshold to reproduce a published count with a different denominator.
+
+---
+
+## 4. Discussion
+
+### 4.1 The obstacle, measured independently
+
+The reason this study is underpowered is not a shortage of retired satellites. It is that routine geostationary station-keeping corrections are small, and a step detector needs a step that stands out against a fitted baseline.
+
+A companion analysis on the same frozen archive measures the size of that miss without reference to this study. Integrating the detected manoeuvre ledger through the rocket equation against a source-cited propulsion and mass catalogue of 159 objects, 151 of which carry a catalogue number and form the detection cohort <!-- src: docs/fuel-odometer-20260920.md, "Cohort and detection" -->, gives:
+
+| Statistic | Perigee-priced (primary) | Circular-priced |
+|---|---:|---:|
+| Objects anchored (GEO, chemical station-keeping, observed exposure) | 54 | 54 |
+| Median fraction of the ~50 m/s/yr north-south budget explained by detected delta-v | 1.8088% | 1.8094% |
+| Quartiles | 0.761–7.112% | 0.761–7.113% |
+| Range | 0.00–68.98% | 0.00–68.98% |
+| Below 10% of the budget | 47 | 46 |
+| Above twice the budget | 0 | 0 |
+
+<!-- src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors", from docs/repricing-20260921-receipt.json arms.perigee and arms.circular; the circular column reproduces docs/fuel-odometer-20260920.md, "Sanity anchor 1", to every published digit -->
+
+The two columns differ by 0.033% relative, and the single object that crosses the 10% line is Intelsat 603, at 13.04% circular and 9.23% perigee <!-- src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors" -->. Nothing in this section's argument turns on which column a reader uses.
+
+The station-keeping odometer reads far too low by construction. That is a statement about detection recall, not about how much propellant these satellites burn, and it is one-sided in the event count, which omits sub-threshold, continuous and geometrically ambiguous burns <!-- src: docs/fuel-odometer-20260920.md, "Directionality" table -->.
+
+The per-event pricing is one-sided in the conservative direction for all three in-plane channels and for the out-of-plane one. The plane change is priced as 2*V*·sin(θ/2) at apogee, where *V* is smallest, so it is a true minimum over burn points; the eccentricity channel charges *v*_c·Δ*e*/2 against a true apsidal-tangential minimum of *v*_c·Δ*e*/(2√(1−*e*²)), so it charges less than the infimum; the apse-line channel is the exact impulse at the crossing point. **The tangential figures in this paper are priced at perigee speed**, which is where the derivation below puts the cheapest burn point. That re-pricing was made as a registered analysis re-run over the same frozen archive snapshot, not as a change to the shipped detector: the production pipeline and every published artifact still price at circular speed, and this paper reports both columns for exactly that reason <!-- src: docs/repricing-preregistration-20260921.md §2.4, which registers the production sweep, the published artifacts and the label gate as out of scope before the run -->.
+
+The derivation is the registration's, not an assertion. Differentiating vis-viva *v*² = μ(2/*r* − 1/*a*) at fixed *r* — an impulse is instantaneous, so the radius is the same on both sides of it — gives Δ*v* = μ·Δ*a*/(2*a*²*v*), which is also what the Gauss variational equation d*a*/d*t* = (2*a*²*v*/μ)·*f*_t integrates to for an impulse. The cost of a given Δ*a* is therefore inversely proportional to the speed at the burn point, so it is least where *v* is greatest, which is perigee. At *r* = *a* the same expression collapses to Δ*v* = *n*·Δ*a*/2, the circular-speed convention the published odometer and the production pipeline use; at perigee, where *v*_p = *v*_c√((1+*e*)/(1−*e*)), it is smaller by √((1−*e*)/(1+*e*)), which is 0.3951 at *e* = 0.73 <!-- derivation: vis-viva and the Gauss variational equation for a, set out in full in docs/repricing-preregistration-20260921.md §1, committed at 62f98d3 before any re-priced number existed -->.
+
+What the re-priced re-run then measured is smaller than that factor suggests, and the reason is worth stating here rather than in a limitations list. The pipeline charges the **largest** of the three in-plane channels, and on the transfer intervals where *e* is large the eccentricity channel is almost exactly as large as the tangential one — 1,467.6 m/s against 1,480.4 m/s on Türksat 3A's transfer burn, for instance. Dividing the tangential channel by 2.5 there simply hands the role of binding term to the eccentricity channel, so the event total moves by under 1%. Across the cohort, 115 of the 170 detected events at *e* > 0.5 are re-priced to exactly the same total, the summed detected delta-v falls by 5.62% and the integrated propellant by 3.23% <!-- src: docs/repricing-20260921.md, "The verdict, stated first" and "Per-event: where the re-pricing bites and where it does not" -->. **The 2.53 factor is a factor on the tangential channel, not on the event total.**
+
+The perigee-priced tangential figure **is** a lower bound: no single tangential impulse producing the observed Δ*a* could have cost less. That is what the re-pricing buys and it is all it buys. It does not make the number closer to the truth — a geostationary transfer orbit is circularised at **apogee**, where the same Δ*a* costs √((1+*e*)/(1−*e*)) times the circular price, 2.53× *more* rather than less — so on exactly the intervals §4.2 uses, perigee pricing moves the figure away from the physically expected burn point. The re-priced odometer is a valid but **weaker** lower bound than the circular one, and §4.2's recovered fractions fall for that reason rather than because the measurement improved <!-- src: docs/repricing-preregistration-20260921.md §7, registered before the run; docs/repricing-20260921.md, "The caveat, which has not changed" -->. The circular figure is retained beside it throughout, as an upper-side convention rather than a bound: *r* = *a* is a radius the spacecraft actually passes through twice per orbit. The truth is mixed and in between, per event, and this pipeline cannot see it, because it observes two element sets and never a burn.
+
+Worse, one large sub-population is structurally invisible rather than merely under-detected. 84 of the 151 catalogued satellites station-keep electrically, and a continuous low-thrust burn produces no step for a step detector to find; those objects are excluded from the anchor entirely <!-- src: docs/fuel-odometer-20260920.md, "Sanity anchor 1" narrative -->. Any future end-of-life study on this archive must treat electric station-keeping as a separate measurement problem, not as a low-recall corner of the same one.
+
+### 4.2 A consistency check on the transfer phase, and what it cannot establish
+
+The same analysis provides a check that runs the other way, and it is what licenses the diagnosis above rather than a general suspicion of the detector. Where a satellite raised itself out of a transfer orbit, the apogee burns are caught: the largest genuine single burns in the cohort cluster at 1,430–1,502 m/s <!-- src: docs/fuel-odometer-20260920.md, "The verdict, stated first" -->.
+
+That cluster brackets the *coplanar* circularisation from a standard 200 × 35,786 km geostationary transfer orbit, which is 1,477 m/s, and a 6° transfer, which is 1,495 m/s. It does not reach a 28.5°-class transfer from Cape Canaveral, which needs 1,836 m/s <!-- derivation: vis-viva at apogee of a 200 × 35,786 km transfer orbit against circular geostationary speed, with the plane change taken vectorially; computed for this draft -->. So the right description is the coplanar circularisation, not "the textbook apogee kick", and the cohort's own source notes that the gap between 1,502 and 2,622 m/s is empty. Two readings remain open and this work does not separate them: either the twelve transfer objects are all low-inclination transfers, which their launch sites would settle and which we do not report; or the plane-change component of the apogee kick is not being recovered, which would be a detector finding in its own right. Identifying the launch site or transfer inclination of each of the twelve is a small piece of work that this paper owes and has not done.
+
+Twelve satellites both show a detected transfer burn and carry a catalogued dry mass. For nine of them the integrated transfer burn recovers **45.5% to 105.5%** of the catalogued launch-to-dry mass drop under the perigee pricing, and 50.0% to 107.5% under the circular convention; the remaining three recover 1.4%–12.9% under both, which is what a transfer the archive only partly observed looks like, and their coverage and event lists are published <!-- src: docs/repricing-20260921.md, "Paper A §4.2's transfer anchor, re-priced", per-object table; circular column reproduces docs/fuel-odometer-20260920.md, "Sanity anchor 2" -->. Eight of the nine move by less than 2%; the exception is Spaceway-3, 61.3–62.5% to 45.5–46.4% <!-- src: docs/repricing-20260921.jsonl, norad 32018 -->.
+
+The denominator is the problem, and the odometer's own source document is clearer about it than an earlier draft of this paper was. That denominator is launch mass minus a catalogued "dry mass", and the source states that dry mass is *"semantically unstable across sources — structural dry mass for some objects, beginning-of-life mass in GEO for others"*, that the check "depends on which one a given row means, and the catalogue does not always say", and that nothing in the odometer is validated against an operator-published propellant figure, so none of it should be described as calibration <!-- src: docs/fuel-odometer-20260920.md, "Limitations a reviewer will go for first" -->. We checked the twelve rows individually: the catalogue records a mass-source confidence for each — three at datasheet confidence, nine at class-prior — but it records no dry-mass *semantics* for any of them, so the reviewer's preferred remedy of conditioning on the semantics and dropping unknown rows would drop all twelve.
+
+What can be done instead is to state the expected fraction under each reading and let the reader see that the measured band straddles them rather than validating against one.
+
+| Reading of the catalogued dry mass | Expected share of the drop recoverable by the transfer burn |
+|---|---:|
+| True structural dry mass, chemical station-keeping over 15 years | ≈ 72% |
+| True structural dry mass, electric station-keeping over 15 years | ≈ 96% |
+| Beginning-of-life mass in GEO | ≈ 100% |
+
+<!-- derivation: apogee kick 1,500 m/s at Isp 320 s burns 38.0% of launch mass; 15 yr x 52 m/s/yr at Isp 300 s burns a further 14.4%, or 1.6% at Isp 3,000 s; shares are the apogee kick's fraction of the total. Computed for this draft; the Isp and lifetime figures are round operational values, not catalogue rows. -->
+
+Ten of the twelve carry the odometer's `electric-station-keeping-step-detector-blind` flag, nine of those at class-prior confidence, so the middle row is the relevant expectation for most of the cohort if the catalogued mass is a true dry mass — but the flag is itself an inference from bus class for nine of them.
+
+Against that table, the band reads differently than "45.5% to 105.5% of capacity" suggests. Rows at 46–64% of a true dry-mass drop are recovering rather less than an apogee kick should even in the chemical reading. DirecTV-12's 105.5% — 107.5% before re-pricing — is an overshoot against every reading: about 5.5% against the beginning-of-life reading and about 10% against the electric reading that its own catalogue flag implies. The odometer reports it as an overshoot rather than clipping it, and its published remaining-propellant bound is correspondingly negative — which is the right behaviour. The obvious explanation, that the tangential channel was simply over-priced, has now been tested and does not account for it: re-pricing at the cheapest burn point removes only two percentage points and leaves the overshoot standing <!-- src: docs/repricing-20260921.md, "Paper A §4.2's transfer anchor, re-priced", norad 36131: 107.5–109.0% circular, 105.5–107.0% perigee -->. It still cannot be read as agreement between an independent measurement and a catalogue.
+
+The conclusion we draw is therefore narrower than an earlier draft's. This is a consistency check, not a demonstration that the pricing is sound: the detector recovers apogee-kick-scale burns to within a factor that is compatible with the catalogued masses under at least one reading of them, and its recall collapses where the excursion is small (§4.1). That is the wrong shape for a station-keeping cadence study and the right shape for detecting disposal raises, which is why the census works and the cadence measurement does not. Turning the check into a validation needs three things this work does not have: the dry-mass semantics per row, the transfer inclination per object, and a tangential channel priced beyond first order. The third of those replaces an earlier draft's "priced at perigee", which §4.1 has now done. The re-run's registered exact-impulse screen found the remaining gap to be larger than the burn point was: against the exact finite-impulse cost of the same Δ*a*, the shipped first-order relation agrees to a median of 5.4×10⁻⁵ relative but overstates the tangential channel by up to 127% on the largest transfer events, which are precisely the events this section integrates <!-- src: docs/repricing-20260921.md, "The first-order screen found something larger than the burn point"; docs/repricing-20260921-receipt.json, perEvent.firstOrderRelativeErrorAtCircular median 5.413e-05, max 1.26891595 over 4,146 events -->.
+
+### 4.3 What closing the recall gap requires
+
+Four steps, in the order they must be taken <!-- src: docs/eol-policy-relaxation-20260920.md, "What full-history re-detection would add"; extended by docs/eol-three-arm-20260920.md -->:
+
+1. Retain per-object records for all historical payloads, not for a current teaching catalogue. Arm 0 shows this is the difference between 22 and 113 candidate endpoints, and it is already done.
+2. Raise small-burn recall, which is now the sole binding constraint. This is a detector problem, not a data-volume problem: the archive already holds 216.9 million rows and the additional retirements it yielded moved the usable-trajectory count from 0 to 2.
+3. Audit retirement labels against independent dated evidence, with the adjudication blinded to the final-year ratio, and freeze a revised registration if the operational definition of retirement changes.
+4. Freeze detection and exposure on one archive snapshot, census usable exposure, repeat raises, launch contamination and cadence sample counts, and stop again if fewer than 15 usable retirees remain.
+
+Only after step 4 passes may the registered matching, windows, test and interval be executed.
+
+A fifth item was a pricing change rather than a recall change, and an earlier draft of this paper listed it here as registered future work: the tangential channel priced at circular speed, whose re-pricing at perigee speed would lower every eccentric-orbit cost by √((1−*e*)/(1+*e*)) and change §4.2's recovered fractions. **That item is now discharged.** It was pre-registered alone and before any result existed, at `62f98d3`, with the derivation, the estimand, the untouched surfaces, a control arm required to reproduce the published odometer exactly, and four directional predictions any one of which would have made the outcome a defect rather than a finding <!-- src: docs/repricing-preregistration-20260921.md -->. The re-run reproduced the control arm on all eight registered checks, all four predictions held, and the result is reported under the registration's own rule — perigee-priced primary, circular retained for comparability — in §4.1, §4.2 and §5 <!-- src: docs/repricing-20260921.md, "The control arm, which had to pass before any of the above could be read" and "Reproduction and evidence" -->. Its effect is smaller than this paragraph used to predict, for the reason §4.1 now gives.
+
+The pricing item that replaces it is the **order of the expansion**, not the burn point. The shipped tangential relation Δ*v* = *n*·Δ*a*/2 is first order in Δ*a*/*a*, which is exact to seven decimal places for a station-keeping correction and not exact at all for a transfer burn; the re-run's registered screen measured it overstating the channel by up to 127% on the cohort's largest events (§4.2). Correcting it is a detector change of the same kind, and it gets the same treatment: a pre-registration with an expected direction and an acceptance rule, committed before the re-run, and not a quiet edit.
+
+### 4.4 The accuracy frontier
+
+Confidence today is adequate for the claims this paper actually makes, and the apparatus's own behaviour is the evidence: the published control backing this study measured a bound separation of 6.86× against a 10× requirement, so the gate withheld the word "manoeuvre" from all 28 published graveyard-raise records in that release, and every event in this paper is a candidate accordingly <!-- src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" -->. The companion paper's registered covariate-matched analysis then shut the same gate a second way, at a matched separation of 8.83× <!-- src: docs/paperb-results-20260920.md, "Analysis 1", composed in the companion paper §5.2.1 -->. A further registered measurement on the entire retained archive confirmed that verdict by an independent route and settled its weakest point: at 89.4 million passive and 63.0 million payload usable intervals the reweighted separation is 5.3560× against the same unchanged 10× requirement, and 9.8135× when both sides are read at their point estimates, so no additional exposure can open that gate <!-- src: docs/phase3-results-20260921.json, clause2.boundRatio 5.35601797798307, meta.passiveIntervals 89,402,955, meta.payloadIntervals 63,018,120; derivation: 2.704389 ÷ 0.275578 from payloadSide.ratePer1000 and primary.reweightedFloorPer1000 -->.
+
+Accuracy is the frontier — not for today's claims, but for claims this same data could support with better recall. The ranking is set by what has been measured, not by intuition.
+
+First, sequence and matched-filter detection over correction cadences, aimed at the two gaps that define the current ceiling: 84 of 151 catalogued propulsion-cohort satellites station-keep electrically and are structurally invisible to a step detector, and among the 54 chemically kept satellites, detected delta-v explains a median 1.81% of the routine keeping budget (§4.1). This is the item that would let the registered test in this paper actually run. It needs compute over cadence sequences rather than a larger archive.
+
+Second, joint multi-element estimation with full covariance, replacing per-channel threshold tests with a single estimator over semi-major axis, eccentricity, inclination and node together.
+
+Third, a gate that survives covariate matching. The covariate-aware gate the companion paper registered as Phase 3 has now been measured on the whole archive and returned FAIL, and the failure is not one that more exposure buys off, so this item is no longer a measurement campaign but a detector question: what would have to change for the matched separation to exceed ten <!-- src: docs/phase3-results-20260921.md, "Why the gate is shut, and why more data will not open it" -->. The perigee repricing above belongs with it.
+
+Only then, better data — special-perturbations ephemerides, commercial feeds, denser tracking. Not first: the first two extract gains from data already held, and the measured bottleneck in this study is detection recall rather than data volume, which is exactly what a six-fold increase in candidates moving the usable count from 0 to 2 demonstrates.
+
+On feasibility: the paired detector experiment that produced the current calibration cost 20,825 worker wall-seconds / 10,604 CPU-seconds in accepted slices, with a parallel phase of 11,246 seconds and at most two concurrent readers <!-- src: docs/eol-policy-relaxation-20260920.md, final section; the same figures appear in docs/orbit-phase2b-corroboration-20260920.md -->. The census pass for this study cost 2,236.4 s wall / 816.8 s main-process CPU over 18,922,604 selected full-history rows, with 1,917 objects on the GPU and zero fallbacks <!-- src: docs/eol-three-arm-20260920.md, "Reproduction and evidence" -->. Whole-archive re-detection under snapshot control is therefore already affordable on a single host. Larger compute would support repeated snapshot-controlled sweeps, validation and uncertainty studies. It cannot repair missing orbital fits, establish retirement, or turn a lower-bound delta-v into a propellant gauge.
+
+### 4.5 What a positive result would, and would not, establish
+
+Were the gates to pass in a future study, the result would be an association in detected behaviour. It would not uniquely identify fuel state. Changes in burn direction, orbital geometry, fit noise, propulsion mode, mission policy, relocation, satellite reuse and detection threshold can all alter the measured lower-bound delta-v and event completeness, and the self-history detector's rolling baseline can absorb gradual changes entirely <!-- src: docs/eol-policy-relaxation-20260920.md, "Retirement labels and scientific limits" -->. Calendar-matched controls address common seasonal effects only under adequate coverage, comparable detection sensitivity, and defensible matching.
+
+We name the claim we would be entitled to make, so that it is on the record before the data could tempt us: *satellites with a detected disposal raise show a measurably longer detected north-south correction interval in their final year than matched controls over the same calendar window*, with a stated effect size and interval. Not a fuel gauge, and not a prediction, until a temporally held-out validation against independently dated labels exists.
+
+---
+
+## 5. Limitations
+
+These are reproduced from the source reports without softening.
+
+**Detection completeness is unmeasured, and its consequence is asymmetric.** The sparse, thresholded event process can miss real corrections; zero detected cadence is not zero actual cadence. Requiring an estimable final-year cadence also excludes the most extreme apparent relaxation — the satellites the hypothesis most predicts — which biases any future estimate toward the null <!-- src: docs/eol-three-arm-20260920.md, "What a reviewer still attacks" -->.
+
+**The arms address the design confounds but do not identify fuel state.** Propulsion mode, mission policy, relocation, reuse, failure, fit noise and natural inclination evolution can produce similar patterns <!-- src: same -->.
+
+**External status curation reduces circularity but is not independent sensing.** ESA and the launch/decay catalogue often share the same element-set inputs. Most cases lack operator-dated retirement evidence, and orbit-state agreement cannot validate the epoch or cause of a retirement <!-- src: same; and docs/eol-external-audit-protocol-20260920.md -->.
+
+**The inclination-slope band is a prespecified operational filter, not a law.** Genuine inclined operations can fall outside 0.5–1.2 deg/yr, and east-west-like element changes need not prove longitude control or a working payload <!-- src: docs/eol-three-arm-20260920.md -->.
+
+**Continuous-observation requirements select the best-covered survivors.** They reduce gap bias at the cost of representativeness: these cohorts are not an unbiased census of geostationary retirements or abandonments. Future-epoch fits and current-versus-historical status differences further limit temporal interpretation <!-- src: same -->.
+
+**Lead times are retrospective and interval-censored by fit epochs.** Future-looking detector baselines and confirmation delays prevent any prospective prediction claim. No held-out calibration, base-rate-adjusted precision, or usable end-of-life watch score has been demonstrated. Every record in the released evidence carries `watchEligible = false` <!-- src: docs/eol-three-arm-20260920.md, "Artifacts" paragraph -->.
+
+**Matching calipers and the equivalence margin were fixed beforehand, but covariates remain incompletely controlled.** Operator, propulsion, bus and mission are not in the archive. Small-sample bootstrap intervals, where they exist at all, are exploratory. A failed significance test never establishes equivalence <!-- src: docs/eol-three-arm-20260920.md -->.
+
+**Coverage holes are pervasive in the candidate population.** In the published-artifact subset alone there are 750 internal observation gaps across the candidates' baseline and final-year windows — per-object segment gaps, not archive-wide outages — and window edges reduce exposure further without appearing in that total. USA 176's final year holds only 136.9 observed days, including a 218.33-day internal hole <!-- src: docs/eol-policy-relaxation-20260920.md, "Coverage holes that mattered" -->. Month-level presence in the archive rollup emphatically does not imply complete coverage of an object.
+
+**This paper's tangential delta-v figures are priced at perigee speed; the circular-speed convention they are reported beside — and which the shipped detector and every published artifact still use — sits above the minimum on eccentric orbits.** The factor by which the old convention exceeded the true infimum is √((1+*e*)/(1−*e*)):
+
+| *e* | regime | circular convention ÷ true infimum |
+|---:|---|---:|
+| 0.001 | station-kept geostationary | 1.001 |
+| 0.01 | geostationary band edge | 1.010 |
+| 0.10 | drift and medium-Earth orbits | 1.106 |
+| 0.730 | standard geostationary transfer orbit | 2.53 |
+
+<!-- derivation: Δv_min = (n·Δa/2)·√((1−e)/(1+e)) from vis-viva; e = 0.7301 for a 200 × 35,786 km transfer orbit. Computed for this draft and re-derived in full at docs/repricing-preregistration-20260921.md §1. -->
+
+That table is a factor on **one channel**, and the measured effect on event totals is far smaller, because the pipeline charges the largest in-plane channel and the eccentricity channel takes over wherever *e* is large (§4.1). Measured over the 5,341-event cohort: the summed detected delta-v falls 5.62%, the integrated propellant 3.23%, the §4.1 station-keeping anchor 0.033% relative, and 115 of the 170 events at *e* > 0.5 do not move at all <!-- src: docs/repricing-20260921.md, "The verdict, stated first" -->.
+
+Three limitations survive the re-pricing and one is new. The perigee price is an infimum over burn points and therefore a **weaker** bound than the circular convention, not a more accurate number, and for §4.2's transfer intervals the physically expected burn point is apogee, in the opposite direction (§4.1). The eccentricity channel is still priced below its own apsidal-tangential minimum and the plane-change channel still at apogee, so both remain one-sided in the conservative direction and neither was re-priced. The apogee bracket edge, which would be the right comparison for a known apogee kick, cannot be used unmodified: at apogee pricing the transfer burns of three of the twelve §4.2 objects cross the odometer's registered 2,500 m/s own-propulsion ceiling and are removed by its rule 7 entirely <!-- src: docs/repricing-20260921.md, "The bracket does not survive rule 7" -->. And the new one: the shipped relation is first order in Δ*a*/*a*, which the re-run's registered screen found overstating the tangential channel by up to 127% on the largest transfer events — a larger error than the burn point, in the same direction, on the same events (§4.3).
+
+**Solar radiation pressure is not modelled outside the geostationary branch.** The classifier's argument that a rise in semi-major axis cannot be the atmosphere is sound — drag only removes energy — but the natural-cause floor enumerates catalogue fit scatter, lunisolar precession, geostationary triaxial libration and J2 model error, and not solar radiation pressure, at any altitude; the drag model is also switched off above 1,400 km. At 1,000 km altitude, an ordinary fragment at A/m = 0.02 m²/kg with 1% net along-track retention over a day gives Δ*a* ≈ 0.2 m/day against a 0.10 m floor in that band, and a high area-to-mass fragment at 1 m²/kg gives of order 10 m/day <!-- derivation: a_SRP = C_R·P_SR·(A/m), Δa = 2Δv/n; computed for this draft -->. This study is protected from that by scale rather than by a model: its detections are geostationary, where the 140 m/day triaxiality bound absorbs any plausible radiation-pressure Δ*a* and a 235 km raise inside a three-day interval is unmistakable. We state the protection rather than rely on it silently, and note that a future study extending this method below the geostationary ring inherits the gap.
+
+**Semi-major axis is Keplerian from the catalogue's mean motion, and the derived perigee carries the offset.** §2.2 states why the offset cancels in the differences the detector tests. It does not cancel in the derived perigee altitude, which inherits it with its inclination dependence — a spread of about 5 km at 500 km altitude. That does not affect this study, whose objects are geostationary, but it does affect any altitude-stratified use of the same pipeline.
+
+**Detected retirement labels are operational study labels.** They are not independent operator-confirmed ground truth, and this was stated in the registration before any label was assigned <!-- src: docs/eol-policy-relaxation-preregistration-20260920.md, final paragraph -->.
+
+**Two defects were found and fixed before the reported numbers were produced, and are disclosed rather than absorbed.** A bare date was being parsed in the host's local zone rather than UTC, affecting launch dates, calendar-year boundaries and catalogue dates but never event timestamps, which carry an explicit UTC marker; it is fixed, covered by a test, and the study was re-run from the same frozen census. Every figure in the three-arm report is identical before and after that fix — the affected boundaries are hours wide and no event fell inside one — and the defect was caught because a launch-day manoeuvre a few hours after midnight UTC was being classified as pre-launch in the companion odometer run. Separately, the extended evidence file was compacted under declared rules (hole enumerations truncated beyond 10 entries with exact counts and totals retained, full segment lists kept for cohort objects, delta-v component breakdowns dropped while totals are kept, empty calendar years omitted and counted, floats rounded to six decimals), reducing it from 64 MB to 15.8 MB without changing a measured value <!-- src: docs/eol-three-arm-20260920.md, "Two corrections made while finishing this run" -->.
+
+---
+
+## 6. Conclusion
+
+We set out to test a piece of operational folklore at population scale and we did not get to test it. That is the result, and we report it at the prominence the registration demands.
+
+What we can report is: a protocol registered before the data were seen, with a stop rule that fired; a census that shows a publication-catalogue filter had been hiding 81.6% of the relevant events, and that removing it multiplies distinct payloads carrying a raise by 6.0, to 133 before the launch screen and 113 after it; an external audit that agrees with 79.7% of assessable endpoints, [68.8, 87.5], with every contradiction preserved; a negative result, demonstrated on 16 eligible cessations of which 8 are unresolved, that north-south cessation resolves into at least three materially different outcomes and is therefore not usable as a retirement proxy without an explicit precision estimate this cohort is too small to supply; and an independent measurement showing that the obstacle is small-burn detection recall, at a median 1.81% of the routine station-keeping budget under either pricing, with the same detector recovering 45.5–105.5% of the transfer-phase mass drop where the excursion is large (50.0–107.5% under the circular convention) — a consistency check whose denominator, as §4.2 sets out, is not the transfer propellant under every reading of the catalogue.
+
+The experiment this work asks for is specific: raise small-burn recall on geostationary payloads, re-census under snapshot control, and run the registered test. Until then, the honest statement is that the geostationary catalogue, as this archive renders it, does not yet contain enough measurable north-south cadence to answer the question.
+
+---
+
+## 7. Reproducibility
+
+All analysis code, registrations, reports, per-object evidence files and machine receipts are committed to a single repository. Pre-registration commits function as timestamps within that repository: each registration is committed in its own commit, ahead of the analysis code and ahead of every result file, so the ordering is recorded in the history rather than asserted in prose.
+
+**The external anchor now exists, and this paragraph states exactly what it covers.** The pre-registration documents are anchored by OpenTimestamps: two SHA-256 manifests — listing each registration document's hash and, for the committed set, the working repository's registration commit identifiers — were stamped to the Bitcoin blockchain on 21 September 2026, and the manifests with their proof files are published, alongside the analysis code and every artefact this paper cites, in the public release repository at https://github.com/theinformed/orbit-audit, together with the verification commands. What the anchor proves is bounded and we state the bound: it establishes that every registration document existed, byte for byte, no later than the stamp date; it does not retroactively prove that each registration preceded its results, because the stamps postdate the experiments they govern. That finer ordering rests, as before, on the working repository's history, whose registration commit identifiers the anchored manifest names; the anchor ensures any future rewriting of that record cannot go unnoticed. Registrations made after the stamp date are stamped before their experiments run, which closes the gap prospectively. The word *verifiable* is accordingly reserved for what a reader can check themselves: the documents against the manifests, and the manifests against the Bitcoin attestations.
+
+| Artefact | Commit | Role |
+|---|---|---|
+| `docs/eol-policy-relaxation-preregistration-20260920.md` | 0aa04a4 | Registration for the published-artifact probe |
+| `docs/eol-policy-relaxation-20260920.md` (+ `.jsonl`, `-receipt.json`) | 0aa04a4 | Arm-1 probe report, per-object evidence, receipt |
+| `docs/eol-three-arm-preregistration-20260920.md` | 0aa04a4 | Registration for the full-archive census and three arms |
+| `docs/eol-external-audit-protocol-20260920.md` | 0aa04a4 | Supplemental external-audit protocol |
+| `docs/eol-three-arm-20260920.md` (+ `.jsonl`, `-receipt.json`) | 0aa04a4 | Census, three arms, external audit |
+| `docs/eol-external-documentary-evidence-20260920.json` | 0aa04a4 | Dated documentary evidence with source URLs |
+| `docs/fuel-odometer-20260920.md` (+ `.jsonl`, `-receipt.json`) | 2575e4f | Recall measurement and transfer-phase validation |
+| `tools/eol_policy_probe.py`, `tools/eol_archive_census.py`, `tools/eol_three_arm_study.py`, `tools/eol_esa_audit.py` | 0aa04a4 | Analysis programs |
+| `tools/fuel_odometer.py`, `tools/fuel_odometer_report.py` | 2575e4f | Odometer programs |
+
+<!-- src: commit hashes from `git log --oneline` on branch integration/space; 0aa04a4 = "EOL study: full-archive census plus arms 1-3, honestly underpowered", 2575e4f = "Fuel odometer: the propulsion catalogue through the rocket equation" -->
+
+**Receipts.** The machine receipts record source hashes, registration hashes, external file hashes, extraction hashes, false-alarm context, stop decisions and measured timings. The frozen archive snapshot SHA-256 is `ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3`; the selected manifest SHA-256 for the published-artifact probe is `006732fdc3cda78fa7eaea37960387d3d7ca83b3ba10b45e58f8cf45affba26c`; the reference receipt for the paired detector sweep is `a28ca4e25694fbc58b97af0e81f582a0c49dfd5bf40b9c4a1cb16a346d65b232` <!-- src: docs/eol-three-arm-20260920.md and docs/eol-policy-relaxation-20260920.md provenance sections -->.
+
+**Published artifacts.** The event artifact used by the arm-1 probe is `orbit-events-d7919fbbd28d8c62.json`, generated 2026-09-19T12:48:51Z, together with its 256 manifest-linked detail shards; all SHA-256 values were verified against the live public manifest at `https://sean.theinformed.org/space/data/manifest.json` <!-- src: docs/orbit-phase2b-corroboration-20260920.md, "Inputs and reproducibility"; the same artifact and shard verification is recorded in docs/eol-policy-relaxation-20260920.md -->.
+
+**Canonical commands** are reproduced verbatim in the source reports, including the census and three-arm invocations and the odometer's two-stage detect/integrate run <!-- src: docs/eol-three-arm-20260920.md and docs/fuel-odometer-20260920.md, reproduction sections -->. Output creation is exclusive, so a reproduction must select fresh output paths. The frozen archive copy and uncapped extraction are analysis working files under a temporary directory and are not an archival retention commitment; they must be preserved or relocated before that directory is cleaned if exact replay is required.
+
+**Compute.** The census ran through a GPU broker in the standard class at low CPU and I/O priority, with no CPU fallback permitted; the arm-1 probe ran on CPU at low priority in 153.27 s wall / 130.26 s CPU, reading 137,788 selected-object archive rows and verifying all 256 shards <!-- src: docs/eol-policy-relaxation-20260920.md, "Deliverables and verification" -->. No production detector run, timer, ingestion, release or deployment was exercised by any measurement reported here.
+
+**DONE 2026-09-21 — citation TODO closed.** Bibliographic entries for Yilmaz (2025), Roberts et al. (AMOS 2023) and Decoto & Loerch (AMOS 2015) were located and verified against live sources (publisher record; AMOS technical-paper library) and now appear in the References section below, alongside a full entry for Jehn, Agapov & Hernandez (2005). No committed source in this repository carries these citations — they were found externally on 2026-09-21 and are not themselves repository artefacts, so they carry no `src:` provenance comment; they are ordinary literature citations rather than measured claims. No bibliographic TODO remains open in this paper. The only outstanding items before submission are the external commit-anchor of §7 (not a citation task) and the standard author/affiliation front-matter noted at the top of this draft.
+
+---
+
+## Acknowledgments
+
+The authors used large language models to assist with manuscript preparation and analysis tooling, and take full responsibility for the content. The authors thank David Robinson and Taylor Wulff-Morrison for code development and draft review.
+
+## References
+
+Brouwer, D. (1959). Solution of the problem of artificial satellite theory without drag. *The Astronomical Journal*, 64, 378–397. https://doi.org/10.1086/107958
+
+Brown, L. D., Cai, T. T., & DasGupta, A. (2001). Interval estimation for a binomial proportion. *Statistical Science*, 16(2), 101–133. https://doi.org/10.1214/ss/1009213286
+
+Decoto, J., & Loerch, P. (2015). Technique for GEO RSO station-keeping characterization and maneuver detection. In *Proceedings of the Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS 2015)*. https://amostech.space/year/2015/technique-for-geo-rso-station-keeping-characterization-and-maneuver-detection/
+
+Inter-Agency Space Debris Coordination Committee (IADC). *IADC Space Debris Mitigation Guidelines*. Adopted October 2002 by the IADC member agencies. Cited here for the 235 km + 1000·C_R·(A/m) geostationary protected-region floor referenced in §3.8. The organisation, guideline title and 2002 adoption date are independently confirmed (NASA JSC, N. Johnson, "Recent Developments in Space Debris Mitigation Policy and Practices," NASA NTRS 20060052514, 2006); the specific document/revision number commonly cited elsewhere as `IADC-02-01` could not be independently re-confirmed against a live copy of the guidelines in this search session (iadc-home.org declined automated access), so it is omitted here rather than asserted.
+
+Jehn, R., Agapov, V., & Hernández, C. (2005). The situation in the geostationary ring. *Advances in Space Research*, 35(7), 1318–1327. https://doi.org/10.1016/j.asr.2005.03.022
+
+Jeffreys, H. (1946). An invariant form for the prior probability in estimation problems. *Proceedings of the Royal Society of London A*, 186, 453–461. https://doi.org/10.1098/rspa.1946.0056
+
+Kozai, Y. (1959). The motion of a close earth satellite. *The Astronomical Journal*, 64, 367–377. https://doi.org/10.1086/107957
+
+Roberts, T. G., Rodriguez-Fernandez, V., Siew, P. M., Solera, H., & Linares, R. (2023). End-to-end behavioral mode clustering for geosynchronous satellites. In *Proceedings of the Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS 2023)*. https://amostech.space/year/2023/end-to-end-behavioral-mode-clustering-for-geosynchronous-satellites/
+
+Vallado, D. A., Crawford, P., Hujsak, R., & Kelso, T. S. (2006). Revisiting Spacetrack Report #3. In *AIAA/AAS Astrodynamics Specialist Conference and Exhibit*. https://doi.org/10.2514/6.2006-6753
+
+Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. *Journal of the American Statistical Association*, 22(158), 209–212. https://doi.org/10.1080/01621459.1927.10502953
+
+Yilmaz, U. C. (2025). Extending GEO satellite operations: timing and challenges of inclined orbit transitions. *International Journal of Satellite Communications and Networking*, 43(4), 333–341. https://doi.org/10.1002/sat.1559
+
+<!-- Reference list compiled and each entry verified against a live external source (publisher/DOI record via Crossref, or the AMOS technical-paper library at amostech.space) on 2026-09-21. This is a bibliography, not a measured claim, so entries carry no docs/ src: provenance comment; verification method is stated inline above where it is not obvious from the entry itself. -->

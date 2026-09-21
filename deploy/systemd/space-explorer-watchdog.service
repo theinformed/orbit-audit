@@ -1,0 +1,28 @@
+[Unit]
+Description=Check every datastore and scheduled job, and tell Sean if something is wrong
+Documentation=file:/home/sdegan/space-teaching-aid/ops/watchdog.py
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+# --alert speaks ONLY when something is red, and then not again about the same
+# thing for six hours. Cron noise on this stack gets ignored, and an ignored
+# alert is the same as no alert.
+# --quiet keeps a healthy run silent in the journal too, so this unit's own
+# journal stays readable as a record of the times it DID find something.
+ExecStart=/usr/bin/python3 -m ops.watchdog --alert --quiet
+# It writes into public/data/review/, which the publish step structurally
+# cannot stage, so this unit can never put anything on the public site.
+Nice=15
+IOSchedulingClass=idle
+TimeoutStartSec=300
+# Non-zero exit means it found something red. SuccessExitStatus keeps systemd
+# from treating that as a unit fault - the finding is the point, not a crash -
+# while still recording the run.
+SuccessExitStatus=0 1
+
+[Install]
+WantedBy=multi-user.target

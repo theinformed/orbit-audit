@@ -1,0 +1,54 @@
+{
+ "scene": "Drag",
+ "duration": 130.267,
+ "lines": [
+  {
+   "t": 14.433,
+   "text": "One altitude, one speed, one period. A circular orbit has no choice about it."
+  },
+  {
+   "t": 26.8,
+   "text": "Thin air. The drag force points backwards along the track."
+  },
+  {
+   "t": 36.167,
+   "text": "Backwards. So obviously it slows down."
+  },
+  {
+   "t": 47.333,
+   "text": "It does not. It ends up a hundred kilometres lower \u2014 and 57 metres a second faster."
+  },
+  {
+   "t": 58.7,
+   "text": "The accounting is exact, and it is the reason."
+  },
+  {
+   "t": 66.667,
+   "text": "Drag takes energy out of the orbit. Call it one unit."
+  },
+  {
+   "t": 69.633,
+   "text": "The orbit drops, and the height it gives up is worth two units."
+  },
+  {
+   "t": 72.1,
+   "text": "One went to drag. The other had nowhere to go but into speed."
+  },
+  {
+   "t": 83.867,
+   "text": "And it does not settle there."
+  },
+  {
+   "t": 86.1,
+   "text": "Lower means denser air, which means more drag, which means lower still."
+  },
+  {
+   "t": 98.267,
+   "text": "What you notice first is not the altitude."
+  },
+  {
+   "t": 110.833,
+   "text": "A geomagnetic storm heats the thermosphere."
+  }
+ ]
+}

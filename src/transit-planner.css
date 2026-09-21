@@ -1,0 +1,973 @@
+/*
+ * Transit mission planner styles.
+ *
+ * A separate stylesheet rather than an addition to src/styles.css: that file is
+ * owned by another agent and this feature is self-contained. Every colour here
+ * comes from the custom properties already defined on :root in src/styles.css,
+ * so the planner tracks the site's palette (including the high-contrast media
+ * query at the bottom of that file) instead of forking it.
+ */
+
+.transit-planner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  container-type: inline-size;
+  /*
+   * This used to carry `padding-top: clamp(84px, 7vw, 106px)` as clearance for
+   * the shell's sticky "Back to explorer" button, which floated over the top of
+   * every content view and ate this view's title (it has no `.content-hero` of
+   * its own to pay the 100 px back with). That button is gone on desktop and is
+   * a laid-out strip on a phone, so there is nothing left to clear and the
+   * workaround comes out with it. What is left is ordinary breathing room at
+   * the top of a page whose first element is a heading.
+   */
+  padding-top: 28px;
+}
+
+/* --- Disclosure ---------------------------------------------------------- */
+
+.transit-disclosure {
+  border: 1px solid var(--amber);
+  border-left-width: 4px;
+  border-radius: 10px;
+  padding: 0.7rem 1.15rem;
+  background: rgba(245, 201, 106, 0.07);
+}
+
+.transit-disclosure > summary {
+  cursor: pointer;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.transit-disclosure > summary strong { color: var(--amber); }
+
+.transit-disclosure-more {
+  margin-left: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: underline dotted;
+}
+
+.transit-disclosure-body { margin-top: 0.7rem; }
+
+.transit-disclosure-lead {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.transit-disclosure-detail {
+  margin: 0.6rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* --- Layout -------------------------------------------------------------- */
+
+.transit-layout {
+  display: grid;
+  grid-template-columns: minmax(310px, 380px) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+@container (max-width: 900px) {
+  .transit-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+.transit-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/*
+ * The map follows you down the control column.
+ *
+ * The controls run about a thousand pixels; the map is 330. Without this the
+ * reader edits a waypoint with the map scrolled off the top of the window,
+ * which on a route planner is the wrong way round — the map is the answer and
+ * the controls are the question.
+ */
+.transit-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+  position: sticky;
+  top: 0.5rem;
+}
+
+@container (max-width: 900px) {
+  .transit-stage { position: static; }
+}
+
+.transit-view {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  min-height: 300px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #061a25;
+}
+
+.transit-map-svg { display: block; width: 100%; height: 100%; }
+
+/* --- Blocks -------------------------------------------------------------- */
+
+.transit-block {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.95rem 1.05rem;
+  background: rgba(255, 255, 255, 0.014);
+}
+
+.transit-block h3 {
+  margin: 0 0 0.55rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--cyan-bright);
+}
+
+.transit-block h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.transit-hint {
+  margin: 0 0 0.7rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.transit-hint-tight { margin: 0.5rem 0 0; }
+.transit-lead { margin: 0 0 0.7rem; font-size: 0.95rem; line-height: 1.5; }
+
+/* --- Mask control -------------------------------------------------------- */
+
+.transit-mask-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.transit-mask-row input[type="range"] { flex: 1; min-width: 0; accent-color: var(--amber); }
+
+.transit-mask-value {
+  min-width: 3.6rem;
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+/* --- Chips and buttons --------------------------------------------------- */
+
+.transit-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+
+.transit-chip {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.28rem 0.72rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+}
+
+.transit-chip:hover { border-color: var(--cyan); }
+.transit-chip.is-active { border-color: var(--cyan); color: var(--void); background: var(--cyan); font-weight: 600; }
+
+.transit-button {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+}
+
+.transit-button:hover { border-color: var(--cyan); }
+.transit-button[disabled] { opacity: 0.5; cursor: progress; }
+
+.transit-button-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-color: var(--cyan);
+  color: var(--void);
+  background: var(--cyan);
+  font-weight: 650;
+}
+
+.transit-icon-button {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* The same button as the satellite card's remove x, and it changes with it:
+   hover is a step up in the site's blue, never a flip to red (Sean,
+   2026-08-20). */
+.transit-icon-button:hover, .transit-icon-button:focus-visible { color: var(--cyan-bright); border-color: var(--cyan); }
+
+.transit-link-button {
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: inherit;
+  color: var(--cyan-bright);
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.transit-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.transit-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+.transit-inline input { width: 5.5rem; }
+
+/* --- Form controls ------------------------------------------------------- */
+
+.transit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.transit-row label,
+.transit-waypoint-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.transit-planner input,
+.transit-planner select {
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  padding: 0.3rem 0.45rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: rgba(2, 13, 19, 0.8);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.transit-planner input[type="range"] { padding: 0; border: 0; background: none; }
+.transit-planner input[type="checkbox"] { width: auto; accent-color: var(--cyan); }
+
+/* --- Waypoints ----------------------------------------------------------- */
+
+.transit-waypoints {
+  list-style: none;
+  margin: 0.6rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transit-waypoint {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+}
+
+.transit-waypoint.is-selected { border-left-color: var(--amber); background: rgba(245, 201, 106, 0.06); }
+
+.transit-waypoint-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.transit-waypoint-head input { flex: 1; min-width: 0; }
+
+.transit-waypoint-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  border-radius: 50%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--void);
+  background: var(--cyan);
+}
+
+.transit-waypoint-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+}
+
+.transit-waypoint-time { grid-column: 1 / -1; }
+
+.transit-waypoint-readout {
+  margin: 0.4rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+/* --- Legs table ---------------------------------------------------------- */
+
+.transit-legs {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.transit-legs caption {
+  text-align: left;
+  padding-bottom: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.transit-legs th,
+.transit-legs td {
+  padding: 0.25rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.transit-legs th { color: var(--muted); font-weight: 600; }
+.transit-legs td:first-child, .transit-legs th:first-child { text-align: left; }
+.transit-legs .is-warning { color: var(--coral); }
+
+.transit-issues {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+  color: var(--coral);
+}
+
+/* --- Solve status -------------------------------------------------------- */
+
+.transit-progress {
+  --progress: 0%;
+  height: 3px;
+  margin-top: 0.6rem;
+  border-radius: 2px;
+  background: var(--line);
+  background-image: linear-gradient(to right, var(--cyan) var(--progress), transparent var(--progress));
+}
+
+.transit-status {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.transit-status.is-warning { color: var(--amber); }
+
+/* --- Time scrubber ------------------------------------------------------- */
+
+.transit-scrub input[type="range"] { width: 100%; accent-color: var(--cyan); }
+
+.transit-scrub-readout {
+  margin-top: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.transit-scrub-readout strong { color: var(--text); }
+
+/* --- Coverage list. The dimming interaction lives here. ------------------ */
+
+.transit-answers,
+.transit-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transit-coverage {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.transit-coverage-row {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--muted);
+  border-radius: 8px;
+  transition: opacity 140ms ease;
+}
+
+.transit-coverage-row.is-entire-transit { border-left-color: var(--mint); }
+.transit-coverage-row.is-partial { border-left-color: var(--amber); }
+.transit-coverage-row.is-none { border-left-color: var(--coral); }
+
+/*
+ * Sean's interaction: a system with nothing overhead at the selected waypoint is
+ * dimmed, not removed. Opacity plus normal font weight against the undimmed
+ * rows' semibold is the whole signal, and it is reversible with one click.
+ */
+.transit-coverage-row.is-dimmed { opacity: 0.42; }
+.transit-coverage-row.is-dimmed .transit-coverage-name { font-weight: 400; }
+.transit-coverage-row.is-dimmed:hover,
+.transit-coverage-row.is-dimmed:focus-within { opacity: 0.85; }
+
+.transit-coverage summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.transit-coverage summary::-webkit-details-marker { display: none; }
+.transit-coverage summary::before { content: "▸"; color: var(--muted); font-size: 0.75rem; }
+.transit-coverage details[open] summary::before { content: "▾"; }
+
+.transit-coverage-name { flex: 1; min-width: 12rem; font-size: 0.9rem; font-weight: 650; }
+
+.transit-coverage-verdict {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.is-entire-transit .transit-coverage-verdict { color: var(--mint); }
+.is-partial .transit-coverage-verdict { color: var(--amber); }
+.is-none .transit-coverage-verdict { color: var(--coral); }
+
+.transit-coverage-overhead {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.transit-coverage-detail { padding: 0 0.7rem 0.75rem; font-size: 0.84rem; line-height: 1.5; }
+.transit-coverage-detail p { margin: 0 0 0.6rem; }
+
+.transit-coverage-detail dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.15rem 0.7rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+}
+
+.transit-coverage-detail dt { color: var(--muted); }
+.transit-coverage-detail dd { margin: 0; }
+
+.transit-gaps {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: var(--amber);
+}
+
+.transit-citations {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0.6rem 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.8rem;
+}
+
+.transit-citations q { color: var(--text); font-style: italic; }
+.transit-citations a { color: var(--cyan-bright); }
+
+.transit-service-band {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--void);
+  background: var(--cyan);
+}
+
+.transit-source-kind { color: var(--muted); font-size: 0.72rem; }
+
+.transit-caveat {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-left: 2px solid var(--amber);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/*
+ * Shown where the citation is an older official page because the current one
+ * has had the fact removed. Coral rather than amber: this is not a nuance, it is
+ * "the owner of this statement has stopped making it".
+ */
+.transit-superseded {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-left: 2px solid var(--coral);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.transit-superseded strong { color: var(--coral); }
+
+.transit-focus-note {
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--amber);
+  border-radius: 8px;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  background: rgba(245, 201, 106, 0.06);
+}
+
+.transit-absent, .transit-reasons {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.transit-absent li, .transit-reasons li { margin-bottom: 0.4rem; }
+.transit-absent strong { color: var(--text); }
+
+/* --- Areas of responsibility reference ----------------------------------- */
+
+.transit-aor { padding-top: 0.6rem; }
+.transit-aor-entry { margin-bottom: 1rem; }
+.transit-aor-entry h5 { margin: 0 0 0.3rem; font-size: 0.86rem; color: var(--text); }
+
+.transit-aor-entry blockquote {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--line-strong);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.transit-aor-source { margin: 0.3rem 0 0; font-size: 0.78rem; }
+.transit-aor-source a { color: var(--cyan-bright); }
+.transit-aor-note { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--muted); }
+
+/* --- Reduced motion ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .transit-coverage-row { transition: none; }
+}
+
+/* --- Header, lesson, and the two presentations -------------------------- */
+
+.transit-head h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.transit-standfirst {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/*
+ * The lesson. Public build only: Sean's ruling was to lead with why an orbit
+ * decides coverage and treat the route as the worked example, so this sits
+ * above the apparatus rather than below it.
+ */
+.transit-lesson {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.15rem 1.3rem;
+  background: linear-gradient(180deg, rgba(41, 212, 227, 0.05), transparent);
+}
+
+.transit-lesson { padding: 0.7rem 1.3rem; }
+
+.transit-lesson > summary {
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--cyan-bright);
+}
+
+.transit-lesson-body { margin-top: 0.8rem; }
+
+.transit-lesson p { margin: 0 0 0.7rem; max-width: 68ch; font-size: 0.93rem; line-height: 1.6; }
+
+.transit-lesson-points {
+  list-style: none;
+  counter-reset: lesson;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.transit-lesson-points li {
+  counter-increment: lesson;
+  border-left: 2px solid var(--cyan);
+  padding-left: 0.75rem;
+}
+
+.transit-lesson-points h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.transit-lesson-points h4::before {
+  content: counter(lesson) ". ";
+  color: var(--cyan);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.transit-lesson-points p { margin: 0; font-size: 0.85rem; color: var(--muted); }
+
+
+
+/*
+ * The gated build's extra disclosure. Louder than the standing notice, not
+ * softer: a .mil reader is MORE likely to mistake fitted public elements for
+ * something authoritative, because this build looks like tooling they trust.
+ */
+.transit-disclosure-gated {
+  margin: 0.75rem 0 0;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--coral);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: rgba(255, 123, 120, 0.09);
+}
+
+.transit-gated-link {
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+  padding: 0.95rem 1.15rem;
+}
+
+.transit-gated-link { padding: 0.6rem 1.15rem; }
+
+.transit-gated-link > summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--cyan-bright);
+}
+
+.transit-gated-link > p { margin-top: 0.5rem !important; }
+
+.transit-gated-link p { margin: 0; max-width: 68ch; font-size: 0.86rem; line-height: 1.55; color: var(--muted); }
+
+/* --- Element age -------------------------------------------------------- */
+
+.transit-age-banner {
+  margin: 0 0 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-left: 3px solid var(--muted);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.transit-age-banner strong { color: var(--text); display: block; margin-bottom: 0.2rem; }
+.transit-age-banner.is-fresh { border-left-color: var(--mint); }
+.transit-age-banner.is-aging { border-left-color: var(--cyan); }
+.transit-age-banner.is-stale { border-left-color: var(--amber); }
+.transit-age-banner.is-beyond-bound { border-left-color: var(--coral); }
+
+.transit-age-chip {
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.transit-age-chip.is-fresh { border-color: var(--mint); color: var(--mint); }
+.transit-age-chip.is-aging { border-color: var(--cyan); color: var(--cyan); }
+.transit-age-chip.is-stale { border-color: var(--amber); color: var(--amber); }
+.transit-age-chip.is-beyond-bound { border-color: var(--coral); color: var(--coral); }
+
+/* --- Areas of responsibility picker ------------------------------------- */
+
+/*
+ * Areas of responsibility. Sean asked for these overlays and then could not
+ * find them, because they were chips inside a shut <details>. They are a
+ * labelled control row now.
+ */
+.transit-boundary-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+/*
+ * A control caption, in the same treatment as every other control caption in
+ * this component (.transit-row label). NOT tracked uppercase monospace: on this
+ * site that names a SURFACE, and nothing subordinate to one is ever set that
+ * way — a chip row inside the map's own bar is about as subordinate as a thing
+ * gets.
+ */
+.transit-boundary-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.transit-boundary-picker .transit-chips { margin-top: 0; }
+
+.transit-boundary-cites { width: 100%; margin-top: 0.35rem; }
+
+.transit-boundary-cites > summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.transit-boundary-cite {
+  margin-top: 0.6rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--line-strong);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.transit-boundary-cite blockquote {
+  margin: 0 0 0.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.transit-boundary-cite p { margin: 0 0 0.35rem; }
+.transit-boundary-cite a { color: var(--cyan-bright); }
+.transit-boundary-cite ul { margin: 0; padding-left: 1.1rem; line-height: 1.5; }
+.transit-boundary-cite em { color: var(--amber); font-style: normal; }
+
+.transit-boundary-geometry {
+  padding: 0.3rem 0.5rem;
+  border-left: 2px solid var(--mint);
+  color: var(--muted);
+}
+
+.transit-boundary-geometry strong { color: var(--mint); }
+.transit-edge-numeric { color: var(--mint); }
+
+.transit-boundary-caveat {
+  margin-top: 0.4rem !important;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--amber);
+  line-height: 1.5;
+}
+
+/* --- Map zoom -------------------------------------------------------------
+ *
+ * Added 2026-08-19. Sean: "The map isn't zoomable. Why?" It had no zoom
+ * affordance of any kind. The controls sit inside the map's own frame, bottom
+ * right, so they cost no vertical space in a page that had too much of
+ * everything.
+ */
+
+.transit-map-wrap { position: relative; width: 100%; height: 100%; }
+
+.transit-map-wrap .transit-map-svg { touch-action: none; cursor: grab; }
+.transit-map-wrap.is-zoomed .transit-map-svg { cursor: grab; }
+
+.transit-map-zoom {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.3rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(2, 13, 19, 0.82);
+  backdrop-filter: blur(3px);
+}
+
+.transit-map-zoom button {
+  min-width: 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+}
+
+.transit-map-zoom button:hover { color: var(--void); background: var(--cyan); }
+
+.transit-map-scale {
+  min-width: 2.6rem;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  color: var(--cyan-bright);
+}
+
+/* --- Definitions on the term, not in a paragraph -------------------------
+ *
+ * Sean: "If the text is important, some of it needs to be in popups for
+ * definitions, or in places we can collapse." The card is BODY inside a
+ * surface: no new type treatment, and the term itself inherits whatever it is
+ * embedded in, so a term inside a section title stays a section title.
+ */
+
+.transit-term { position: relative; cursor: help; }
+
+.transit-term-word {
+  border-bottom: 1px dashed var(--line-strong);
+  text-underline-offset: 3px;
+}
+
+.transit-term:hover .transit-term-word,
+.transit-term:focus-visible .transit-term-word { border-bottom-color: var(--cyan); }
+
+.transit-term-card {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  display: none;
+  width: max(240px, 26ch);
+  max-width: 90vw;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  font: 400 0.78rem/1.5 var(--font-sans, inherit);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--text);
+  background: var(--surface-3, #09202b);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+
+.transit-term:hover .transit-term-card,
+.transit-term:focus .transit-term-card,
+.transit-term:focus-within .transit-term-card { display: block; }
+
+/* --- A computed consequence, not a paragraph about one ------------------- */
+
+.transit-consequence {
+  margin: 0.6rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.transit-consequence strong { color: var(--amber); font-size: 0.9rem; }
+.transit-consequence-delta { opacity: 0.7; }
+
+/* --- Route presets ------------------------------------------------------- */
+
+.transit-presets { margin-bottom: 0.7rem; }
+
+/* --- The track crosses land --------------------------------------------- */
+
+.transit-land-warning {
+  margin: 0.6rem 0 0;
+  padding: 0.45rem 0.65rem;
+  border-left: 3px solid var(--coral);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  background: rgba(255, 123, 120, 0.08);
+}
+
+.transit-land-warning strong { color: var(--coral); }
+
+/* --- The reference block, folded ---------------------------------------- */
+
+.transit-reference-fold > summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--cyan-bright);
+}
+
+.transit-reference-body { margin-top: 0.9rem; }

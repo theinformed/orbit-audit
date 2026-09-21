@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Coverage-cap rendering harness</title>
+    <style>html, body { margin: 0; background: #000; } #scene { position: relative; width: 720px; height: 720px; }</style>
+  </head>
+  <body>
+    <!--
+      Renders the real SpaceGlobe with nothing but a satellite coverage cap on
+      it, so a test can count the cap's pixels directly out of the WebGL
+      drawing buffer. Loaded through Vite by tests/footprint-fill.spec.ts.
+    -->
+    <div id="scene"></div>
+    <script type="module" src="./footprint-fill.harness.ts"></script>
+  </body>
+</html>

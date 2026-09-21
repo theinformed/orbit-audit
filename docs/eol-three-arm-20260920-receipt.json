@@ -1,0 +1,455 @@
+{
+  "schema": 2,
+  "censusReceipt": {
+    "complete": true,
+    "archive": "/tmp/eol-study-20260920/archive.sqlite3",
+    "archiveRows": 183283281,
+    "archiveObjects": 68051,
+    "prefilterObjects": 3475,
+    "selectedRows": 18922604,
+    "eventCounts": {
+      "geo-east-west-keeping": 18377,
+      "unclassified-change": 8775,
+      "geo-north-south-keeping": 4695,
+      "along-track-lower": 229,
+      "along-track-raise": 545,
+      "inclination-change": 1078,
+      "geo-graveyard-raise": 156,
+      "deorbit-lowering": 35
+    },
+    "raiseFlagsByType": {
+      "PAYLOAD": 152,
+      "DEBRIS": 1,
+      "ROCKET BODY": 3
+    },
+    "gpu": {
+      "mode": "gpu-execution",
+      "outcome": "gpu",
+      "objects": 1917,
+      "gpuObjects": 1917,
+      "fallbackObjects": 0,
+      "failures": [],
+      "devices": [
+        {
+          "device": 0,
+          "ceilingBytes": 335544320,
+          "poolPeakBytes": 11359232,
+          "contextReserveBytes": 268435456,
+          "chargedPeakBytes": 279794688,
+          "contextMeasurement": "unavailable per process under WSL; conservative 256 MiB reserve",
+          "telemetryGaps": [],
+          "objects": 1917,
+          "intervals": 11528103,
+          "wallSeconds": 1357.550498825236,
+          "cpuSeconds": 204.44824938199972
+        }
+      ]
+    },
+    "sourceHashes": {
+      "pipeline/orbit_campaigns.py": "1037ac43f14144cd519ef296005723369d0c3a26412b5608dd654e3800bb507b",
+      "pipeline/orbit_events.py": "56bc4fa3a4aa23a743eb368b5537e8e99f2e77867630f8f81b5d86b8885330de",
+      "pipeline/orbit_sweep_gpu.py": "c711e5b515ef42849ca04ad3f1d0ae41ec5181caf755133e12c50eddca24c8b8",
+      "pipeline/orbit_history.py": "f9beae5c4adc7d69ae1e573721972d57cb98dba13be2e452093b752f75c6d9e8"
+    },
+    "analysisSourceSha256": "5612b5d3346e97dd3f41e0162deea431cf56fed051b4e01a4d9f1b51840e28e0",
+    "registrationSha256": "c8e402dfef8164a443f2e5e5015494b5d75b8390661703c9515102c312a15e1e",
+    "selectedSha256": "e015bc1f7ae223208f1ffaddff8b5b2d90759c84513ddffec6b6e86dce8b5468",
+    "extractionSha256": "b72e1a0df5374e14a38d84b8c7a1846c498aedc61f402b19ccc6233caccec786",
+    "wallSeconds": 2236.3989983419888,
+    "cpuSeconds": 816.80398704,
+    "completedAt": "2026-09-20T19:01:47.539592+00:00"
+  },
+  "geoObjects": 1929,
+  "payloadObjects": 1379,
+  "sourceHashes": {
+    "celestrak": "e380f02a1676645ca9512ce1f0572f7e830f977dee5ab82fc3563741225936d1",
+    "spacetrack": "adf2ea40da7135ba19aba206397cf4072615654cda1df573c8adcca8014757cc",
+    "analysis": "4bb50a7108486bb56ea8ff9eb129d1338fd960e8d63e46e0b555fd8c3ddcd572",
+    "reusedProbe": "f858bc2919d764de15b3d93dbde7c27e8115f6e8fc3555ce261a1d4e1ed96b47",
+    "expectations": "3b09c73c6ef7eb8a1516391cb6727c0dd6985b82474561cc8365a715f2c15abb"
+  },
+  "cessationClasses": {
+    "no-eligible-ns-cessation": 1363,
+    "raise-after-24mo-unresolved": 2,
+    "raise-within-24mo": 2,
+    "unresolved": 8,
+    "inclined-operations-compatible": 3,
+    "abandonment-compatible": 1
+  },
+  "arms": {
+    "arm1": {
+      "candidates": 113,
+      "usable": 2,
+      "eligibleCaseCount": 2,
+      "matched": 2,
+      "effects": {
+        "R_interval": {
+          "n": 0,
+          "effect": null,
+          "ci95": null,
+          "tost": null,
+          "superiorityP": null,
+          "status": "underpowered"
+        },
+        "R_dv": {
+          "n": 1,
+          "effect": null,
+          "ci95": null,
+          "tost": null,
+          "superiorityP": null,
+          "status": "underpowered"
+        }
+      },
+      "candidateCount": 113,
+      "eligibilityFailures": {
+        "nsk-depth-below-three-years": 44,
+        "observed-exposure-below-three-years": 20,
+        "baseline-cadence-not-estimable": 97,
+        "final-year-cadence-not-estimable": 108
+      }
+    },
+    "arm2": {
+      "candidates": 20,
+      "usable": 1,
+      "eligibleCaseCount": 1,
+      "matched": 1,
+      "effects": {
+        "R_interval": {
+          "n": 0,
+          "effect": null,
+          "ci95": null,
+          "tost": null,
+          "superiorityP": null,
+          "status": "underpowered"
+        },
+        "R_dv": {
+          "n": 1,
+          "effect": null,
+          "ci95": null,
+          "tost": null,
+          "superiorityP": null,
+          "status": "underpowered"
+        }
+      },
+      "candidateCount": 20,
+      "eligibilityFailures": {
+        "baseline-cadence-not-estimable": 17,
+        "final-year-cadence-not-estimable": 19,
+        "nsk-depth-below-three-years": 5
+      },
+      "currentOperationalContradictions": 2
+    }
+  },
+  "leads": {
+    "nsToRaise": {
+      "n": 2,
+      "median": 530.3701157407406,
+      "iqr": [
+        526.9838136574074,
+        533.756417824074
+      ],
+      "range": [
+        523.597511574074,
+        537.1427199074074
+      ],
+      "medianCI95": [
+        523.597511574074,
+        537.1427199074074
+      ]
+    },
+    "totalToRaise": {
+      "n": 0,
+      "median": null,
+      "iqr": null,
+      "range": null,
+      "medianCI95": null
+    }
+  },
+  "archiveDirectCount": {
+    "rows": 216937797,
+    "objects": 68711,
+    "minEpoch": -346284636538,
+    "maxEpoch": 1790232022279,
+    "seconds": 58.15899109840393
+  },
+  "archiveCountCaveat": "Census receipt archiveRows/archiveObjects are stale rollup metadata; use archiveDirectCount.",
+  "satcatProvenance": {
+    "celestrak": {
+      "copiedFrom": "runtime/celestrak-mirror/satcat-active.json",
+      "capturedAt": "2026-09-20T18:23:29.438683+00:00",
+      "sha256": "e380f02a1676645ca9512ce1f0572f7e830f977dee5ab82fc3563741225936d1",
+      "providerEpoch": null,
+      "scope": "active operational payloads"
+    },
+    "spacetrack": {
+      "copiedFrom": "runtime/spacetrack-mirror/satcat-active.json",
+      "capturedAt": "2026-09-20T18:23:29.562684+00:00",
+      "sha256": "adf2ea40da7135ba19aba206397cf4072615654cda1df573c8adcca8014757cc",
+      "providerEpoch": null,
+      "scope": "undecayed catalogue objects"
+    }
+  },
+  "protocolProvenance": {
+    "path": "docs/eol-three-arm-preregistration-20260920.md",
+    "sha256": "c8e402dfef8164a443f2e5e5015494b5d75b8390661703c9515102c312a15e1e",
+    "filesystemCreatedOrModifiedAt": "2026-09-20T18:22:27.298152+00:00",
+    "censusStartedAfterRegistration": true,
+    "supplementalAudit": {
+      "path": "docs/eol-external-audit-protocol-20260920.md",
+      "sha256": "0ee820e31ec38bc7fbac6710a61b0ece90b4aca4bc13a285d1ff94b82aff725a"
+    }
+  },
+  "archiveStorageAudit": {
+    "cold_shard": [
+      {
+        "month": "2026-07",
+        "path": "/mnt/d/space-orbit-history/cold/orbit-history-2026-07.ohz",
+        "rows": 279,
+        "bytes": 10124,
+        "sha256": "f3fa770bd8c97743bc2bb86ae2f39c3d3695584bbf9942a7a0f0d1b946dbec99",
+        "exported_ms": 1786139714940,
+        "verified_ms": 1786139714938
+      }
+    ],
+    "decimated_day": [
+      {
+        "day": -4007,
+        "rows_in": 0,
+        "rows_kept": 0,
+        "done_ms": 1786523542834
+      },
+      {
+        "day": -3904,
+        "rows_in": 0,
+        "rows_kept": 0,
+        "done_ms": 1786553555585
+      },
+      {
+        "day": -3900,
+        "rows_in": 0,
+        "rows_kept": 0,
+        "done_ms": 1786594339354
+      },
+      {
+        "day": 20662,
+        "rows_in": 14,
+        "rows_kept": 14,
+        "done_ms": 1786138460034
+      },
+      {
+        "day": 20663,
+        "rows_in": 70,
+        "rows_kept": 70,
+        "done_ms": 1786138460143
+      },
+      {
+        "day": 20664,
+        "rows_in": 56,
+        "rows_kept": 56,
+        "done_ms": 1786138460244
+      },
+      {
+        "day": 20665,
+        "rows_in": 139,
+        "rows_kept": 139,
+        "done_ms": 1786138460349
+      },
+      {
+        "day": 20666,
+        "rows_in": 174,
+        "rows_kept": 174,
+        "done_ms": 1786138460454
+      },
+      {
+        "day": 20667,
+        "rows_in": 256,
+        "rows_kept": 256,
+        "done_ms": 1786138460569
+      },
+      {
+        "day": 20668,
+        "rows_in": 444,
+        "rows_kept": 444,
+        "done_ms": 1786138460696
+      },
+      {
+        "day": 20669,
+        "rows_in": 543,
+        "rows_kept": 543,
+        "done_ms": 1786138460835
+      },
+      {
+        "day": 20670,
+        "rows_in": 1221,
+        "rows_kept": 1221,
+        "done_ms": 1786138461044
+      },
+      {
+        "day": 20671,
+        "rows_in": 4813,
+        "rows_kept": 4813,
+        "done_ms": 1786138461242
+      }
+    ],
+    "pruned_month": [],
+    "recordedRowsRemovedByDailyDecimation": 0,
+    "interpretation": "No pruned months and no recorded decimation losses; cold export is not additional removed history."
+  },
+  "archiveSnapshotSha256": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+  "esaProvenance": {
+    "pdfSha256": "bcb5d193a484325b16f4ea97a56b1f59ad23f81b0e480b23f6a5798e4d8ba877",
+    "textSha256": "1a3b09f7bde20596305229d203f3e40697fe3445b020ed54baf6cd9ab080d8e6",
+    "url": "https://astronomer.ru/data/0128/Classification_of_Geosynchronous_Objects_I21R0.pdf",
+    "parsedObjects": 1363
+  },
+  "documentaryProvenance": {
+    "path": "docs/eol-external-documentary-evidence-20260920.json",
+    "sha256": "81acb6196aef25bb323cacc9f38af69551126930880a5c6f0c974df91810c08e",
+    "selection": "Supplemental convenience audits selected from raise identities while extraction ran, before cadence outcomes; not a representative validation sample."
+  },
+  "raiseFlow": {
+    "allFlags": 156,
+    "payloadFlags": 152,
+    "payloadObjects": 133,
+    "contaminatedFlags": 30,
+    "unknownLaunchFlags": 0,
+    "retainedFlags": 122
+  },
+  "external": {
+    "allPayloadRaises": {
+      "counts": {
+        "unknown": 55,
+        "support": 62,
+        "contradiction": 35
+      },
+      "n": 152,
+      "assessable": 97,
+      "agreementAssessable": 0.6391752577319587,
+      "agreementCI95": null,
+      "supportAll": 0.40789473684210525,
+      "supportAllCI95": null,
+      "intervalUnit": "repeat-flags-descriptive-only",
+      "historicalDatesConfirmed": 1,
+      "documentaryWindowsAgree": 2,
+      "satcatOnlyCounts": {
+        "unknown": 124,
+        "contradiction": 28
+      },
+      "disposalYearsConfirmed": 6
+    },
+    "uncontaminatedPayloadRaises": {
+      "counts": {
+        "unknown": 48,
+        "support": 58,
+        "contradiction": 16
+      },
+      "n": 122,
+      "assessable": 74,
+      "agreementAssessable": 0.7837837837837838,
+      "agreementCI95": null,
+      "supportAll": 0.47540983606557374,
+      "supportAllCI95": null,
+      "intervalUnit": "repeat-flags-descriptive-only",
+      "historicalDatesConfirmed": 1,
+      "documentaryWindowsAgree": 2,
+      "satcatOnlyCounts": {
+        "unknown": 110,
+        "contradiction": 12
+      },
+      "disposalYearsConfirmed": 6
+    },
+    "firstUncontaminatedPayloadObjects": {
+      "counts": {
+        "unknown": 44,
+        "support": 55,
+        "contradiction": 14
+      },
+      "n": 113,
+      "assessable": 69,
+      "agreementAssessable": 0.7971014492753623,
+      "agreementCI95": [
+        0.6877595975522071,
+        0.875106669320965
+      ],
+      "supportAll": 0.48672566371681414,
+      "supportAllCI95": [
+        0.3965321831240263,
+        0.5777919991458662
+      ],
+      "intervalUnit": "distinct-object-first-raise",
+      "historicalDatesConfirmed": 1,
+      "documentaryWindowsAgree": 2,
+      "satcatOnlyCounts": {
+        "unknown": 103,
+        "contradiction": 10
+      },
+      "disposalYearsConfirmed": 5
+    }
+  },
+  "leadsByExternal": {
+    "support": {
+      "nsToRaise": {
+        "n": 1,
+        "median": 537.1427199074074,
+        "iqr": [
+          537.1427199074074,
+          537.1427199074074
+        ],
+        "range": [
+          537.1427199074074,
+          537.1427199074074
+        ],
+        "medianCI95": null
+      },
+      "totalToRaise": {
+        "n": 0,
+        "median": null,
+        "iqr": null,
+        "range": null,
+        "medianCI95": null
+      }
+    },
+    "contradiction": {
+      "nsToRaise": {
+        "n": 0,
+        "median": null,
+        "iqr": null,
+        "range": null,
+        "medianCI95": null
+      },
+      "totalToRaise": {
+        "n": 0,
+        "median": null,
+        "iqr": null,
+        "range": null,
+        "medianCI95": null
+      }
+    },
+    "unknown": {
+      "nsToRaise": {
+        "n": 1,
+        "median": 523.597511574074,
+        "iqr": [
+          523.597511574074,
+          523.597511574074
+        ],
+        "range": [
+          523.597511574074,
+          523.597511574074
+        ],
+        "medianCI95": null
+      },
+      "totalToRaise": {
+        "n": 0,
+        "median": null,
+        "iqr": null,
+        "range": null,
+        "medianCI95": null
+      }
+    }
+  },
+  "jsonlCompaction": {
+    "internalGapCap": 10,
+    "note": "Hole lists longer than the cap are truncated to the cap with an exact count and total days retained; full observation-segment lists are kept for cohort objects (payloads carrying a raise or an eligible cessation) and reduced to first and last for the rest. Keeping events keep their total Delta-v and drop the component breakdown; calendar years with no observed exposure are omitted and counted. Floats are rounded to six decimal places. No measured quantity is affected."
+  }
+}

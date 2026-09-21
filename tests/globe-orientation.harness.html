@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Globe orientation harness</title>
+    <style>html, body { margin: 0; background: #000; } #scene { position: relative; width: 600px; height: 600px; }</style>
+  </head>
+  <body>
+    <!--
+      Builds the real globe over a map whose land is at longitudes the test
+      chooses, so "does a known longitude render over known land" can be
+      answered from the rendered pixels. Loaded by tests/globe-orientation.spec.ts.
+    -->
+    <div id="scene"></div>
+    <script type="module" src="./globe-orientation.harness.ts"></script>
+  </body>
+</html>

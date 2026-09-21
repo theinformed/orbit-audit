@@ -1,0 +1,428 @@
+/**
+ * SATELLITE FUNDAMENTALS — page-scoped presentation.
+ *
+ * Sean, 2026-08-21, on the page this replaces: "There is no content in there
+ * whatsoever. That is one of the most important parts of the site and it
+ * deserves a really solid treatment."
+ *
+ * What was there: ten `.lesson-card`s, each one paragraph followed by a
+ * `.diagram` div that src/styles.css:1254 renders as a 180 px box of radial
+ * glow containing three to five words of monospace. Ten summaries and ten
+ * empty boxes. Nothing on the page could be read at reading size and nothing
+ * in the boxes carried information.
+ *
+ * SCOPED ON PURPOSE, exactly as src/layer-pages.css is scoped, and for the
+ * same two reasons:
+ *
+ *   1. The sizes this file overrides live in SHARED rules. `.lesson-card p`
+ *      is 13 px for the events and sources pages too, and those pages are not
+ *      the complaint. Every selector here carries `.fundamentals-index` or
+ *      `.fundamentals-page`, the two wrappers src/satellite-fundamentals.ts
+ *      puts round these views, so nothing outside them moves.
+ *   2. src/styles.css has several agents editing it at once. A separate sheet
+ *      under a scoped root cannot collide with them.
+ *
+ * Specificity, not import order, is what makes these win: every rule is two
+ * classes deep against a one-class rule.
+ *
+ * READING PROPORTIONS are inherited from the ruling already made on the layer
+ * pages: body copy 16 px at 1.65 over a ~68-character measure. This is the
+ * second half of one learning system and must not read as a different site.
+ *
+ * THE ANTI-WALL RULE. Sean, of the sibling page: a "MOUNTAIN of text" "looks
+ * just god awful". So prose here is never allowed to run: the longest single
+ * block any rule in this file can produce is a `.fund-terms dd`, and the
+ * content module keeps those short deliberately. Everything else is a term
+ * row, an equation card, a figure, a numbered fact, or a "see it live"
+ * recipe. The measurement of that is in tests/satellite-fundamentals.test.ts.
+ */
+
+.fundamentals-index,
+.fundamentals-page {
+  --fund-measure: 68ch;
+  --fund-lead: 17px;
+  --fund-body: 16px;
+  --fund-support: 15px;
+  --fund-caption: 13.5px;
+  --fund-line: 1.65;
+  /* The reading column. The shared .content-body is 1120 px because Data &
+     methods puts two card columns in it; a page of prose and diagrams does
+     not want that much. Same number as the layer pages. */
+  max-width: 940px;
+}
+
+/* ── THE OPENING ───────────────────────────────────────────────────────── */
+
+.fundamentals-index .content-hero > p:last-child,
+.fundamentals-page .content-hero > p:last-child {
+  max-width: 64ch;
+  font-size: var(--fund-lead);
+  line-height: 1.6;
+}
+
+.fundamentals-index .method-section-head > p:last-child,
+.fundamentals-page .method-section-head > p:last-child {
+  max-width: var(--fund-measure);
+  font-size: var(--fund-support);
+  line-height: 1.6;
+}
+
+.fundamentals-index .teaching-callout,
+.fundamentals-page .teaching-callout {
+  font-size: var(--fund-support);
+  line-height: 1.6;
+}
+
+/* ── THE INDEX ─────────────────────────────────────────────────────────────
+   One card per chapter. The card keeps its number and its title, loses the
+   glow box, and gains the thing that was missing: a door. */
+
+.fundamentals-index .lesson-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.fundamentals-index .fund-index-card {
+  display: grid;
+  align-content: start;
+  gap: 0;
+}
+.fundamentals-index .fund-index-card h2 { font-size: 24px; letter-spacing: -.02em; }
+.fundamentals-index .fund-index-card p {
+  max-width: var(--fund-measure);
+  font-size: var(--fund-support);
+  line-height: var(--fund-line);
+}
+/* The contents of a chapter, printed on its door. A reader deciding whether
+   to open something is owed the list, not an adjective. */
+.fundamentals-index .fund-index-covers {
+  margin: 12px 0 4px;
+  color: var(--muted);
+  font: 500 12px/1.6 var(--font-mono, "IBM Plex Mono", monospace);
+}
+.fundamentals-index .fund-index-covers b {
+  color: #63b3c4;
+  font: 600 8.5px/1.25 "IBM Plex Mono", monospace;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+.fundamentals-index .fund-index-card .link-button,
+.fundamentals-page .fund-page-back {
+  justify-self: start;
+  width: auto;
+  margin-top: 14px;
+  padding: 8px 13px;
+  font-size: 13px;
+}
+.fundamentals-page .fund-page-back { margin: 0 0 18px; }
+/* The 56 px of margin-top that used to live here, below 1200 px, was this
+   track's private way around the shell's sticky #content-close: that button
+   floated over the top-left of every content view and covered this page's own
+   "All six chapters" button at its centre, so Playwright reported
+   "#content-close intercepts pointer events" and a reader tapping there had
+   exactly the same problem. The cause is fixed in src/styles.css - the shell no
+   longer draws a second back button over the page - so this track no longer
+   needs a private correction for it, and a page-specific rule that only existed
+   below one breakpoint comes out with it. */
+
+/* ── A CHAPTER PAGE ───────────────────────────────────────────────────────
+   Kicker, heading, one short lead, then blocks. Never a run of paragraphs. */
+
+.fundamentals-page .fund-section { margin-top: 54px; }
+.fundamentals-page .fund-section > h2 {
+  margin: 7px 0 0;
+  font-size: 25px;
+  letter-spacing: -.022em;
+}
+.fundamentals-page .fund-section > p {
+  max-width: var(--fund-measure);
+  margin: 14px 0 0;
+  color: #b3c7ce;
+  font-size: var(--fund-body);
+  line-height: var(--fund-line);
+}
+
+/* The term grid. This is the page's main instrument, and it exists because a
+   vocabulary is a list of things and reads worst as prose. Two columns of
+   term-and-meaning at desktop, one on a phone. */
+.fundamentals-page .fund-terms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 26px 0 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.fundamentals-page .fund-terms > div {
+  padding: 17px 18px;
+  background: var(--surface);
+}
+.fundamentals-page .fund-terms dt {
+  margin: 0 0 7px;
+  color: var(--cyan-bright);
+  font: 600 13px/1.3 var(--font-sans);
+  letter-spacing: -.005em;
+}
+.fundamentals-page .fund-terms dt small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font: 500 9px/1.3 "IBM Plex Mono", monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.fundamentals-page .fund-terms dd {
+  /* Measured at 1440 before this line existed: a single-column term row ran to
+     117 characters a line, because the two-column grid was the only thing
+     holding the measure and .is-single takes it away. The cap belongs on the
+     text, not on the grid. */
+  max-width: var(--fund-measure);
+  margin: 0;
+  color: #a8bec6;
+  font-size: var(--fund-caption);
+  line-height: 1.62;
+}
+.fundamentals-page .fund-terms dd + dd { margin-top: 8px; }
+/* The sentence that separates the textbook definition from the one used on a
+   watch floor. It is the reason an operator trusts the rest of the page, so
+   it is marked rather than buried. */
+.fundamentals-page .fund-terms .fund-operational {
+  display: block;
+  margin-top: 9px;
+  padding-left: 10px;
+  border-left: 2px solid var(--amber);
+  color: #d8c496;
+}
+.fundamentals-page .fund-terms .fund-operational b {
+  color: var(--amber);
+  font: 600 8px/1.3 "IBM Plex Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+}
+/* One column when a term list is really a sequence rather than a glossary. */
+.fundamentals-page .fund-terms.is-single { grid-template-columns: minmax(0, 1fr); }
+
+/* ── THE EQUATION CARD ────────────────────────────────────────────────────
+   An equation, what each symbol is, and — the part most sites omit — a number
+   that comes out of it. Every one of these is recomputed by the unit suite
+   from the same constants, so a figure here cannot drift from its formula. */
+.fundamentals-page .fund-equation {
+  margin: 26px 0 0;
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(145deg, rgba(9, 32, 43, .8), rgba(3, 14, 21, .95));
+}
+.fundamentals-page .fund-equation-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.fundamentals-page .fund-equation-head strong {
+  color: var(--text);
+  font: 600 13px/1.3 var(--font-sans);
+}
+.fundamentals-page .fund-equation-head span {
+  color: var(--muted);
+  font: 500 9px/1.3 "IBM Plex Mono", monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fundamentals-page .fund-formula {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  color: var(--cyan-bright);
+  font: 500 17px/1.6 "IBM Plex Mono", monospace;
+  white-space: pre;
+}
+.fundamentals-page .fund-where {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 10px 22px;
+  margin: 0;
+  padding: 0 20px 18px;
+}
+.fundamentals-page .fund-where > div { display: grid; grid-template-columns: max-content 1fr; gap: 9px; align-items: baseline; }
+.fundamentals-page .fund-where dt { color: var(--amber); font: 500 12px/1.5 "IBM Plex Mono", monospace; }
+.fundamentals-page .fund-where dd { margin: 0; color: #9db4bd; font-size: 12.5px; line-height: 1.5; }
+/* The worked number. Shown, with its assumptions, or not shown at all. */
+.fundamentals-page .fund-worked {
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+  background: rgba(41, 212, 227, .035);
+}
+.fundamentals-page .fund-worked b {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--cyan-bright);
+  font: 600 8px/1.3 "IBM Plex Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fundamentals-page .fund-worked p {
+  max-width: var(--fund-measure);
+  margin: 0;
+  color: #bdd0d7;
+  font-size: var(--fund-caption);
+  line-height: 1.62;
+}
+.fundamentals-page .fund-worked p + p { margin-top: 8px; }
+.fundamentals-page .fund-worked code {
+  color: var(--text);
+  font: 500 12.5px "IBM Plex Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── FIGURES ──────────────────────────────────────────────────────────────
+   Real drawings, in place of the 180 px box of glow that used to sit here.
+   Every one is inline SVG built from the geometry it describes; none is a
+   photograph and none is a data plot, so each carries the SCHEMATIC chip that
+   the rest of this site already uses for a drawn thing. */
+.fundamentals-page .fund-figure { margin: 28px 0 0; }
+.fundamentals-page .fund-figure-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.fundamentals-page .fund-figure-scroll:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.fundamentals-page .fund-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at 72% 12%, rgba(17, 62, 79, .35), transparent 55%), #030f16;
+}
+.fundamentals-page .fund-figcaption {
+  display: grid;
+  gap: 8px;
+  margin: 11px 0 0;
+}
+.fundamentals-page .fund-figcaption p {
+  max-width: var(--fund-measure);
+  margin: 0;
+  color: #9db4bd;
+  font-size: var(--fund-caption);
+  line-height: 1.6;
+}
+.fundamentals-page .fund-figure .layer-status { margin-left: 0; }
+
+/* SVG type. Set here rather than per-element so one change moves every
+   figure, and so the labels can never fall below legible size. */
+.fundamentals-page .fund-figure text { font-family: "IBM Plex Mono", monospace; fill: #a8bec6; font-size: 11px; }
+.fundamentals-page .fund-figure text.fund-svg-key { fill: var(--cyan-bright); font-weight: 600; }
+.fundamentals-page .fund-figure text.fund-svg-warm { fill: var(--amber); font-weight: 600; }
+.fundamentals-page .fund-figure text.fund-svg-hot { fill: var(--coral); font-weight: 600; }
+.fundamentals-page .fund-figure text.fund-svg-small,
+.fundamentals-page .fund-figure tspan.fund-svg-small { font-size: 9.5px; fill: #7f97a1; }
+.fundamentals-page .fund-figure text.fund-svg-num { fill: var(--text); font-weight: 600; }
+
+/* ── SEE IT LIVE ──────────────────────────────────────────────────────────
+   The site's strongest teaching move, borrowed from the Dungey-cycle recipes
+   on the sibling track: name the literal control, so the reader can follow it
+   without hunting. Every control named in one of these exists in index.html —
+   a recipe that names a control a reader cannot find is worse than none. */
+.fundamentals-page .fund-live {
+  margin: 26px 0 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--cyan);
+  background: rgba(41, 212, 227, .06);
+}
+.fundamentals-page .fund-live b {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--cyan-bright);
+  font: 600 8px/1.3 "IBM Plex Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fundamentals-page .fund-live p {
+  max-width: var(--fund-measure);
+  margin: 0;
+  color: #bdd0d7;
+  font-size: var(--fund-caption);
+  line-height: 1.62;
+}
+.fundamentals-page .fund-live p + p { margin-top: 8px; }
+.fundamentals-page .fund-live em { color: var(--text); font-style: normal; font-weight: 600; }
+.fundamentals-page .fund-live .link-button { width: auto; margin-top: 12px; padding: 7px 12px; font-size: 12.5px; }
+
+/* ── THE NUMBERS STRIP ────────────────────────────────────────────────────
+   Reuses .processing-facts from the shared sheet; only the caption size moves,
+   because 9 px was the complaint that produced src/layer-pages.css. */
+.fundamentals-page .processing-facts span { font-size: 11px; line-height: 1.5; }
+.fundamentals-page .processing-facts strong { font-size: 17px; }
+
+/* ── SOURCES ──────────────────────────────────────────────────────────────
+   Every figure and equation on a chapter page is traceable from the foot of
+   that chapter. This is the same contract the Data & methods page keeps, and
+   it is the reason a number here can be trusted. */
+.fundamentals-page .fund-sources { margin: 54px 0 0; padding-top: 26px; border-top: 1px solid var(--line); }
+.fundamentals-page .fund-sources h2 { margin: 0 0 4px; font-size: 19px; }
+.fundamentals-page .fund-sources > p { max-width: var(--fund-measure); margin: 0 0 16px; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+.fundamentals-page .fund-sources ol { margin: 0; padding-left: 22px; }
+.fundamentals-page .fund-sources li { max-width: 92ch; margin: 0 0 9px; color: #9db4bd; font-size: 12.5px; line-height: 1.6; }
+.fundamentals-page .fund-sources a { color: var(--cyan-bright); overflow-wrap: anywhere; }
+.fundamentals-page .fund-sources cite { color: #c4d6dc; font-style: normal; }
+
+/* ── THE CHAPTER FOOT ─────────────────────────────────────────────────────
+   Next chapter, and back to the index. A reader who finishes a chapter should
+   never have to scroll back up to move. */
+.fundamentals-page .fund-pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 40px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.fundamentals-page .fund-pager .link-button { width: auto; margin: 0; padding: 9px 14px; font-size: 13px; }
+
+/* ── NARROW ───────────────────────────────────────────────────────────────
+   Below 820 px there is no top nav and the content view is reached through
+   the two full-width doors. Nothing here may reintroduce a horizontal
+   scroll: the term grid and the equation "where" list both collapse, and the
+   formula line keeps its own overflow container rather than widening the
+   page. */
+@media (max-width: 900px) {
+  .fundamentals-index .lesson-grid { grid-template-columns: minmax(0, 1fr); }
+  .fundamentals-page .fund-terms { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .fundamentals-index,
+  .fundamentals-page { --fund-body: 15.5px; --fund-caption: 13px; --fund-lead: 16px; }
+  .fundamentals-page .fund-section { margin-top: 42px; }
+  .fundamentals-page .fund-section > h2 { font-size: 21px; }
+  .fundamentals-index .fund-index-card h2 { font-size: 21px; }
+  /* The floor width that keeps a diagram label legible. A 900-unit viewBox at
+     760 px renders an 11 px label at 9.3 px; at the 390 px phone width it
+     would have been 4.8 px. The figure scrolls inside .fund-figure-scroll. */
+  .fundamentals-page .fund-figure svg { min-width: 900px; }
+  /* Say that it scrolls. Phone browsers draw overlay scrollbars that are
+     invisible until touched, so a diagram wider than the screen looks simply
+     cropped, and a reader who does not know it moves never sees the right
+     hand half of it. Narrow viewports only — on a desktop it fits. */
+  .fundamentals-page .fund-figcaption::before {
+    content: "Drag the diagram sideways to see all of it \2192";
+    color: var(--cyan-bright);
+    font: 600 8px/1.4 "IBM Plex Mono", monospace;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .fundamentals-page .fund-formula { font-size: 14px; padding: 16px; }
+  .fundamentals-page .fund-where { padding: 0 16px 16px; }
+  .fundamentals-page .fund-worked,
+  .fundamentals-page .fund-live { padding: 15px 16px; }
+  .fundamentals-page .fund-pager .link-button { width: 100%; }
+}
+
+/* No breakpoint may shrink the overview below its native layout. The adjacent
+   values reflow at 16px. Enlargement preserves geometry and makes even a
+   9.5-unit annotation 16.89px (1600 / 900 × 9.5). */
+.fundamentals-page .fund-figure svg { min-width: 900px; }
+.fundamentals-page .fund-figure.is-enlarged svg { min-width: 1600px; }
+.fundamentals-page .figure-reading { margin: 18px 0; font-size: 16px; line-height: 1.65; }
+.fundamentals-page .figure-reading dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+.fundamentals-page .figure-reading dl > div { border-left: 2px solid var(--learning-axis-ink); padding-left: 12px; }
+.fundamentals-page .figure-reading dt { font-weight: 600; color: var(--text); }
+.fundamentals-page .figure-reading dd { margin: 4px 0 0; color: var(--learning-caption-ink); }
+.fundamentals-page .figure-reading p { font-size: 16px; }

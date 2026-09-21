@@ -1,0 +1,612 @@
+{
+  "$comment": [
+    "WHAT SERVICE EACH SATELLITE COMMUNICATIONS SYSTEM PUBLICLY PROVIDES.",
+    "",
+    "This file answers one question: 'a public source says this system provides this service,",
+    "and here is the sentence'. It deliberately does NOT record which spacecraft carry a hosted",
+    "payload - that lives in data/programme_participation.json, is owned by a different part of",
+    "this project, and reaches each catalog record as `programmes[]` via the release pipeline.",
+    "Systems whose membership is a hosted-payload fact match with {\"kind\":\"programme\"} and read",
+    "that file rather than restating it. GBS is the case that matters: it owns no spacecraft.",
+    "",
+    "THE RULE THIS FILE IS HELD TO. A capability appears only where a public source STATES it.",
+    "Band is never inferred from a spacecraft's name, owner, orbit, or manufacturer, and never",
+    "from what a system is obviously for. Several claims that 'everybody knows' were dropped",
+    "during research because no readable public source makes them - they are recorded in",
+    "`unsourced` with the reason, which is the honest half of this table.",
+    "",
+    "THREE THINGS RESEARCH TURNED UP THAT A READER SHOULD KNOW:",
+    "1. Current U.S. Space Force fact sheets have had band and host-satellite detail REMOVED",
+    "   relative to their predecessors. Milstar's 'extremely high frequency (EHF)' and the whole",
+    "   of GBS's band and host list survive only in earlier af.mil / AFSPC / U.S. Army captures.",
+    "   Where that is so, the older capture is cited and `supersededNote` says why.",
+    "2. Most Department of Defense hosts refuse automated requests. Where a page could not be",
+    "   read live, the quotation was taken from the Internet Archive's capture of that official",
+    "   page and `archiveSource` records exactly which capture, so any claim can be re-checked.",
+    "3. The strongest sources here are regulatory, not promotional. Starlink's bands come from an",
+    "   FCC Order and Globalstar's from an SEC filing on sec.gov - documents filed under legal",
+    "   obligation, which is a different quality of evidence from a marketing page.",
+    "",
+    "Fields: needs[]; systems[] (match, services[], caveat); unsourced[] (what is missing, why)."
+  ],
+  "schema": 1,
+  "revised": "2026-08-07",
+
+  "needs": [
+    {
+      "needId": "uhf-satcom",
+      "label": "UHF SATCOM",
+      "bandLabel": "Ultra high frequency, narrowband",
+      "summary": "Narrowband beyond-line-of-sight voice and low-rate data.",
+      "teachingNote": "Narrowband UHF is the least demanding thing to close a link on: small antennas, almost no pointing, and it works through weather and foliage that stop higher bands dead. That is why it survives, and why coverage geometry rather than link budget usually decides whether you have it."
+    },
+    {
+      "needId": "l-band-mobile",
+      "label": "L-band mobile",
+      "bandLabel": "L-band (and S-band return)",
+      "summary": "Commercial mobile satellite service: handhelds, safety traffic, low-rate data.",
+      "teachingNote": "The band that carries maritime distress and safety traffic. Low rate, but an omnidirectional antenna the size of a fist closes the link from a small boat in a seaway, which no Ka-band terminal will ever do."
+    },
+    {
+      "needId": "shf-satcom",
+      "label": "SHF / X-band",
+      "bandLabel": "Super high frequency, X-band",
+      "summary": "Wideband military satellite communications in X-band.",
+      "teachingNote": "The traditional military wideband workhorse: far more capacity than UHF, far less rain fade than Ka, and a dish big enough that pointing and the elevation mask start to matter a great deal. Note that the sources quoted under this heading use two names for one band: NATO writes 'SHF (7-8 GHz)' where CNES and the U.S. fact sheets write 'X-band'. They are the same allocation described by different conventions, not two different capabilities, and the rows below are grouped on that basis."
+    },
+    {
+      "needId": "ku-band",
+      "label": "Ku-band",
+      "bandLabel": "Ku-band",
+      "summary": "The commercial workhorse band for maritime and aeronautical broadband.",
+      "teachingNote": "Most commercial maritime VSAT has been Ku for decades. Enough capacity to matter, enough rain margin to be dependable, and a stabilised antenna small enough to fit on a mast."
+    },
+    {
+      "needId": "ka-wideband",
+      "label": "Ka-band",
+      "bandLabel": "Ka-band",
+      "summary": "High-capacity wideband service in Ka-band.",
+      "teachingNote": "Ka buys throughput and pays for it in rain fade and in a narrow beam that must be pointed accurately. On a moving ship that is a stabilised-antenna problem as much as a coverage problem."
+    },
+    {
+      "needId": "ehf-protected",
+      "label": "EHF protected",
+      "bandLabel": "Extremely high frequency",
+      "summary": "Survivable, jam-resistant, low probability of intercept communications.",
+      "teachingNote": "Protected systems trade throughput for the ability to keep working while somebody is trying to stop them. The geometry question is the same as any other band; what changes is how much the answer matters."
+    },
+    {
+      "needId": "broadcast",
+      "label": "Broadcast (GBS)",
+      "bandLabel": "One-way wideband broadcast",
+      "summary": "One-way, high-rate push of imagery, video and large files to deployed receive suites.",
+      "teachingNote": "A broadcast is not a link. There is no return path to negotiate and no capacity assigned to you individually: you are either inside the coverage of a transmitting satellite or you are not, which makes it the purest geometry question on this list."
+    },
+    {
+      "needId": "commercial-procurement",
+      "label": "Bought as a service",
+      "bandLabel": "Commercial capacity under contract",
+      "summary": "Capacity acquired from commercial operators rather than flown by the government.",
+      "teachingNote": "Most bytes at sea move over commercial capacity. What you can actually use is set by contract and by where an operator has pointed a beam, and neither of those is visible from an orbit - which is exactly the limit of what this planner can tell you."
+    }
+  ],
+
+  "systems": [
+    {
+      "systemId": "muos",
+      "name": "Mobile User Objective System",
+      "abbreviation": "MUOS",
+      "sponsor": "the U.S. Department of Defense",
+      "operator": "the U.S. Navy; the programme transferred to U.S. Space Force Space Systems Command in March 2023",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The Department of Defense's current narrowband satellite communications system. Each spacecraft carries two payloads at once: one that mimics a legacy UHF Follow-On satellite so old terminals keep working, and a newer wideband code-division payload that behaves much more like a mobile telephone network.",
+      "match": { "kind": "constellation", "constellation": "MUOS" },
+      "services": [
+        {
+          "needId": "uhf-satcom",
+          "statement": "MUOS is DOD's latest ultra high frequency (narrowband) military satellite communications system. ... Each of the five MUOS satellites has two sets of communication hardware on board: one dedicated to providing existing narrowband SATCOM and one dedicated to providing advanced MUOS capabilities.",
+          "source": "https://www.gao.gov/assets/gao-21-105283.pdf",
+          "archiveSource": "http://web.archive.org/web/20260723025008/https://www.gao.gov/assets/gao-21-105283.pdf",
+          "sourceName": "U.S. Government Accountability Office, GAO-21-105283",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "The Department of Defense's own operational test office describes the split precisely: 'Each satellite hosts two payloads: a legacy communications payload that mimics the capabilities of a single UHF Follow-On satellite and a MUOS communications payload' providing 'worldwide Wideband Code Division Multiple Access (WCDMA) communications to tactical users' (Director, Operational Test and Evaluation, FY2016 Annual Report). Which of the two a given terminal can use is a radio and waveform question that no orbit answers."
+    },
+
+    {
+      "systemId": "ufo",
+      "name": "UHF Follow-On",
+      "abbreviation": "UFO",
+      "sponsor": "the U.S. Department of Defense",
+      "operator": "the U.S. Navy",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The generation of U.S. Navy narrowband satellites that MUOS is replacing, and still part of the published narrowband architecture. Some of them were also built with an extra Ka-band package for the Global Broadcast Service.",
+      "match": { "kind": "constellation", "constellation": "UHF Follow-On (UFO)" },
+      "services": [
+        {
+          "needId": "uhf-satcom",
+          "statement": "Currently, DOD relies on narrowband SATCOM capabilities provided via three types of DOD satellites — (1) the Navy's Fleet Satellite, (2) UHF Follow-On, and (3) MUOS. ... Narrowband SATCOM. Communications in this band use the UHF band in the 300 MHz to 3 GHz range.",
+          "source": "https://www.gao.gov/assets/gao-21-105283.pdf",
+          "archiveSource": "http://web.archive.org/web/20260723025008/https://www.gao.gov/assets/gao-21-105283.pdf",
+          "sourceName": "U.S. Government Accountability Office, GAO-21-105283",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "No surviving first-party Navy or manufacturer page for this constellation could be found: every candidate returns a 404 with no archived capture. The narrowband role above rests on a Government Accountability Office report that names the constellation in the architecture. A secondary source describes an EHF package on some of these spacecraft; that claim is not carried here because no government source for it could be read."
+    },
+
+    {
+      "systemId": "wgs",
+      "name": "Wideband Global SATCOM",
+      "abbreviation": "WGS",
+      "sponsor": "the U.S. Space Force",
+      "operator": "the U.S. Space Force, Space Delta 8",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The backbone of U.S. military wideband satellite communications, shared with allied partners and NATO, and unusual in being able to cross-band between its two frequencies on board the satellite rather than on the ground.",
+      "match": { "kind": "constellation", "constellation": "WGS" },
+      "services": [
+        {
+          "needId": "shf-satcom",
+          "statement": "Each WGS satellite provides service in both the X and Ka frequency bands, with the unprecedented ability to cross-band between the two frequencies onboard the satellite. ... Payload: transponded, cross-banded-X and Ka-band communications suite",
+          "source": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104512/wideband-global-satcom-satellite/",
+          "archiveSource": "http://web.archive.org/web/20230131000457/https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104512/wideband-global-satcom-satellite/",
+          "sourceName": "United States Air Force",
+          "sourceKind": "us-government"
+        },
+        {
+          "needId": "ka-wideband",
+          "statement": "The space segment is a constellation of geo-synchronous military communications satellites that leverage cost-effective production methods to deliver high throughput Ka- and X-band Services.",
+          "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197740/wideband-global-satcom-satellite/",
+          "archiveSource": "http://web.archive.org/web/20241031165643/https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197740/wideband-global-satcom-satellite/",
+          "sourceName": "United States Space Force",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "The published satellite count depends on which vintage of fact sheet you read - six on the older Air Force sheet, ten launches on the current Space Force one, and an eleventh in production per Space Systems Command. This planner does not use any of those numbers: it counts the WGS spacecraft actually present in the published catalog and solves those. The same fact sheet notes terminals 'with antenna diameters ranging from .4 meters to 18.4 meters', and which of those a platform carries changes the usable elevation mask far more than anything on this page."
+    },
+
+    {
+      "systemId": "aehf",
+      "name": "Advanced Extremely High Frequency System",
+      "abbreviation": "AEHF",
+      "sponsor": "the U.S. Space Force",
+      "operator": "the U.S. Space Force, with international partners",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The protected end of the military satellite communications architecture: survivable, jam-resistant links meant to keep working through a conflict. It is the follow-on to Milstar and is fully backward compatible with it.",
+      "match": { "kind": "constellation", "constellation": "AEHF" },
+      "services": [
+        {
+          "needId": "ehf-protected",
+          "statement": "The Advanced Extremely High Frequency System (AEHF) is a joint service satellite communications system that provides survivable, global, secure, protected, and jam-resistant communications for high-priority military ground, sea and air assets. ... System uplinks and crosslinks will operate in the extremely high frequency range and downlinks in the super high frequency (SHF) range.",
+          "source": "https://www.losangeles.af.mil/About-Us/Fact-Sheets/Article/343735/advanced-extremely-high-frequency-aehf-system/",
+          "archiveSource": "https://web.archive.org/web/20190603171517/https://www.losangeles.af.mil/About-Us/Fact-Sheets/Article/343735/advanced-extremely-high-frequency-aehf-system/",
+          "sourceName": "United States Air Force, Los Angeles Air Force Base",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "Read the quoted sentence carefully: only the uplinks and crosslinks are EHF. The downlink is SHF, and the payload is described elsewhere on the same fact sheet as 'crossbanded EHF/SHF'. AEHF is not extremely high frequency end to end, and calling it that is a common error. Separately, the fact sheet claims 'continuous 24-hour coverage between north and south poles' - that is the owner describing the system as fielded, while this planner draws line-of-sight geometry from the catalogued geosynchronous spacecraft alone, and a geosynchronous satellite cannot be seen at a usable elevation from a high polar latitude. Where the two disagree, the fact sheet is describing capability this planner cannot see, which is the reason the Enhanced Polar System exists at all."
+    },
+
+    {
+      "systemId": "gbs",
+      "name": "Global Broadcast Service",
+      "abbreviation": "GBS",
+      "sponsor": "the Global Broadcast Service Joint Program",
+      "operator": "the U.S. Navy and the U.S. Space Force",
+      "orbitNote": "Carried on other programmes' geosynchronous spacecraft",
+      "status": "operational",
+      "summary": "A one-way, high-rate push of imagery, full-motion video and large files out to deployed receive suites. GBS owns no spacecraft: it rides on other systems' satellites, which is why the spacecraft it uses are resolved from the hosted-payload record rather than named here.",
+      "match": { "kind": "programme", "programmeId": "gbs" },
+      "services": [
+        {
+          "needId": "broadcast",
+          "statement": "GBS operates as a one-way, wideband transmission service capable of supporting timely delivery of classified and unclassified data and video products. ... Beginning in 1998, GBS broadcasts via communication payloads on two UFO Ka-Band augmented satellites and all WGS satellites (Ka- and X-Band).",
+          "source": "http://www.afspc.af.mil/About-Us/Fact-Sheets/Article/249021/global-broadcast-service-gbs-joint-program/",
+          "archiveSource": "https://web.archive.org/web/20171113003720/http://www.afspc.af.mil/About-Us/Fact-Sheets/Article/249021/global-broadcast-service-gbs-joint-program/",
+          "sourceName": "U.S. Air Force Space Command",
+          "sourceKind": "us-government"
+        },
+        {
+          "needId": "ka-wideband",
+          "statement": "Operates over the UFO Ka band military satellites and the WGS system, augmented as required by commercial Ku band satellites",
+          "source": "http://peoc3t.army.mil/wint/gbs.php",
+          "archiveSource": "https://web.archive.org/web/20180121100124/http://peoc3t.army.mil:80/wint/gbs.php",
+          "sourceName": "U.S. Army Program Executive Office C3T",
+          "sourceKind": "us-government"
+        }
+      ],
+      "supersededNote": "The band and host-satellite detail above has been REMOVED from the current U.S. Space Force GBS fact sheet, which now says only that GBS 'leverages other SATCOM constellations, as well as commercial satellite service providers'. The 2017 Air Force Space Command and U.S. Army captures cited here are the last public statements that identify the band and the hosts, and they agree with each other independently.",
+      "caveat": "GBS is not purely Ka-band: the Air Force Space Command sheet lists 'Ka/Ku-band' payloads and the Army notes augmentation by 'commercial Ku band satellites'. Commercial capacity carrying GBS traffic appears in no catalog, so the spacecraft shown here are only the military hosts the public hosted-payload record attaches to GBS."
+    },
+
+    {
+      "systemId": "cbsp",
+      "name": "Commercial Broadband Satellite Program",
+      "abbreviation": "CBSP",
+      "sponsor": "the U.S. Navy, Program Executive Office C4I",
+      "operator": "commercial satellite operators under contract",
+      "orbitNote": "Not applicable — capacity is bought, not flown",
+      "status": "operational",
+      "summary": "The Navy's programme for buying commercial satellite capacity as a service. The Navy owns the shipboard terminals; the satellites belong to somebody else and nothing Navy flies on them.",
+      "match": { "kind": "programme", "programmeId": "cbsp" },
+      "services": [
+        {
+          "needId": "commercial-procurement",
+          "statement": "In 2008, the U.S. Navy Communications Program Office, under the Program Executive Office for C4I, initiated the Commercial Broadband Satellite Program to acquire commercial SATCOM operating in the C-band, commercial X, Ku, and possibly other bands, as well as terrestrial and supporting requirements for three variants of CBSP terminals.",
+          "source": "https://www.doncio.navy.mil/CHIPS/ArticleDetails.aspx?ID=4213",
+          "archiveSource": "http://web.archive.org/web/20250820010657/https://www.doncio.navy.mil/CHIPS/ArticleDetails.aspx?ID=4213",
+          "sourceName": "U.S. Department of the Navy Chief Information Officer, CHIPS magazine",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "This row will always show no spacecraft and no coverage, and that is the correct answer rather than a missing one. The capacity is contractual: it moves between operators and beams as contracts change and leaves no trace in an orbital catalog. The Navy's own article makes the same point about the name — 'this is a misnomer because CBSP is a program and not a service or circuit'. It is the clearest demonstration on this page of the gap between what geometry can tell you and what a communications plan actually rests on."
+    },
+
+    {
+      "systemId": "asbm",
+      "name": "Arctic Satellite Broadband Mission",
+      "abbreviation": "ASBM",
+      "sponsor": "the U.S. Space Force, the Norwegian Armed Forces and Viasat",
+      "operator": "Space Norway",
+      "orbitNote": "Highly elliptical: apogee 43,500 km over the northern hemisphere, perigee 8,100 km over the southern",
+      "status": "operational",
+      "summary": "Two spacecraft that hang over the Arctic for most of each revolution, carrying separate military and commercial payloads for three customers at once. They exist because a satellite parked over the equator sits on the horizon from a high northern latitude — which is exactly the geometry this planner draws.",
+      "match": { "kind": "constellation", "constellation": "Arctic Satellite Broadband Mission" },
+      "services": [
+        {
+          "needId": "ehf-protected",
+          "statement": "EPS-R is an Extremely High Frequency (EHF) MILSATCOM system designed to extend EPS (legacy) services into the early/mid-2030s. Its mission serves to provide 24/7 protected satellite communications for U.S. polar forces operating in the Arctic region.",
+          "source": "https://www.ssc.spaceforce.mil/Newsroom/Article-Display/Article/2827813/ussfs-eps-r-program-on-schedule-for-historic-polar-mission",
+          "archiveSource": "https://web.archive.org/web/20221220200612/https://www.ssc.spaceforce.mil/Newsroom/Article-Display/Article/2827813/ussfs-eps-r-program-on-schedule-for-historic-polar-mission",
+          "sourceName": "U.S. Space Force, Space Systems Command",
+          "sourceKind": "us-government"
+        },
+        {
+          "needId": "shf-satcom",
+          "statement": "The two ASBM satellites host payloads for the Norwegian Ministry of Defense and Viasat, which will expand X-band and Ka-band connectivity across the Arctic region",
+          "source": "https://news.northropgrumman.com/news/releases/northrop-grumman-completes-activation-of-the-arctic-satellite-broadband-mission-capabilities-including-eps-r-payloads",
+          "sourceName": "Northrop Grumman, the spacecraft's manufacturer",
+          "sourceKind": "prime-contractor"
+        },
+        {
+          "needId": "ka-wideband",
+          "statement": "The two ASBM satellites host payloads for the Norwegian Ministry of Defense and Viasat, which will expand X-band and Ka-band connectivity across the Arctic region",
+          "source": "https://news.northropgrumman.com/news/releases/northrop-grumman-completes-activation-of-the-arctic-satellite-broadband-mission-capabilities-including-eps-r-payloads",
+          "sourceName": "Northrop Grumman, the spacecraft's manufacturer",
+          "sourceKind": "prime-contractor"
+        }
+      ],
+      "caveat": "Three tenants, one bus, and the orbit is the whole point. Space Norway's own spacecraft page lists the frequency bands as 'X-band, Ka-band, EPS-R' and states the commercial payload delivers service 'across the Arctic above 65°N latitude'. Note what the planner will and will not show you: it draws when these two spacecraft are above your mask, which for a high-latitude track is most of the time and for a low-latitude one is almost never — but it cannot tell you whether the payload you need is the one pointed at you."
+    },
+
+    {
+      "systemId": "skynet5",
+      "name": "Skynet 5",
+      "abbreviation": null,
+      "sponsor": "the United Kingdom Ministry of Defence",
+      "operator": "Airbus Defence and Space, under contract to the UK Ministry of Defence",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The United Kingdom's military satellite communications constellation, unusual in being owned and operated commercially on the Ministry of Defence's behalf.",
+      "match": { "kind": "norad", "norad": [30794, 32294, 33055, 39034] },
+      "services": [
+        {
+          "needId": "shf-satcom",
+          "statement": "The current constellation of four SKYNET 5 satellites provides X-Band Super High Frequency (SHF - strategic long-haul communications); and Ultra High Frequency (UHF - tactical communications) user services.",
+          "source": "https://www.gov.uk/guidance/skynet-6",
+          "sourceName": "United Kingdom Ministry of Defence",
+          "sourceKind": "allied-government"
+        },
+        {
+          "needId": "uhf-satcom",
+          "statement": "The current constellation of four SKYNET 5 satellites provides X-Band Super High Frequency (SHF - strategic long-haul communications); and Ultra High Frequency (UHF - tactical communications) user services.",
+          "source": "https://www.gov.uk/guidance/skynet-6",
+          "sourceName": "United Kingdom Ministry of Defence",
+          "sourceKind": "allied-government"
+        }
+      ],
+      "caveat": "No Ka-band claim appears here on purpose. Every Ka-band reference in the public record belongs to Skynet 6 and 6A, a different and later programme, and attaching it to Skynet 5 would be a common and specific error. Skynet 4C is in the catalog too but is not part of this row, because the Ministry of Defence statement is about the Skynet 5 constellation."
+    },
+
+    {
+      "systemId": "syracuse4",
+      "name": "Syracuse 4",
+      "abbreviation": null,
+      "sponsor": "the French Ministry of the Armed Forces",
+      "operator": "France",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The current generation of French military satellite communications, with wider bands and anti-jam features than the Syracuse 3 spacecraft it joins.",
+      "match": { "kind": "norad", "norad": [49333, 57214] },
+      "services": [
+        {
+          "needId": "shf-satcom",
+          "statement": "as well as larger frequency bands (X and Ka band) and an anti-jamming system to boost communications capacity, flexibility and resistance to jamming.",
+          "source": "https://cnes.fr/en/projects/syracuse-4",
+          "sourceName": "CNES, the French space agency",
+          "sourceKind": "allied-government"
+        },
+        {
+          "needId": "ka-wideband",
+          "statement": "as well as larger frequency bands (X and Ka band) and an anti-jamming system to boost communications capacity, flexibility and resistance to jamming.",
+          "source": "https://cnes.fr/en/projects/syracuse-4",
+          "sourceName": "CNES, the French space agency",
+          "sourceKind": "allied-government"
+        }
+      ],
+      "caveat": null
+    },
+
+    {
+      "systemId": "syracuse3",
+      "name": "Syracuse 3",
+      "abbreviation": null,
+      "sponsor": "the French Ministry of the Armed Forces",
+      "operator": "France",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The previous generation of French military satellite communications, named by NATO alongside Skynet and SICRAL as a national system providing hardened SHF service.",
+      "match": { "kind": "norad", "norad": [28885] },
+      "services": [
+        {
+          "needId": "shf-satcom",
+          "statement": "The SYRACUSE, SICRAL and Skynet 4/5 satellites can all provide SHF communications with military hardening features",
+          "source": "https://www.nato.int/cps/uk/natohq/topics_50092.htm",
+          "sourceName": "North Atlantic Treaty Organization",
+          "sourceKind": "allied-government"
+        }
+      ],
+      "caveat": "An EHF payload is claimed for Syracuse 3 by its manufacturer, in a press release readable only on a third-party host. No French government statement of this spacecraft's bands exists that could be read at all — the CNES project page for Syracuse 3 is a genuine 404. The SHF claim above therefore comes from NATO rather than from France, and no EHF claim is made."
+    },
+
+    {
+      "systemId": "athena-fidus",
+      "name": "Athena-Fidus",
+      "abbreviation": null,
+      "sponsor": "France and Italy jointly",
+      "operator": "France and Italy",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "A single French-Italian spacecraft carrying two national missions, used for broadband government and military traffic rather than for hardened strategic links.",
+      "match": { "kind": "norad", "norad": [39509] },
+      "services": [
+        {
+          "needId": "ka-wideband",
+          "statement": "To accomplish its mission, Athena-Fidus has 14 antennas operating in the government Ka band, which accommodates encrypted broadband transmissions.",
+          "source": "https://cnes.fr/en/projects/athena-fidus",
+          "sourceName": "CNES, the French space agency",
+          "sourceKind": "allied-government"
+        },
+        {
+          "needId": "ehf-protected",
+          "statement": "The system … is based on a geostationary satellite which operates in Ka and EHF band, implementing Italian and French independent, dedicated and proprietary communication missions.",
+          "source": "https://www.asi.it/en/tlc-and-navigation/athena-fidus/",
+          "sourceName": "ASI, the Italian Space Agency",
+          "sourceKind": "allied-government"
+        }
+      ],
+      "caveat": "The two sponsoring agencies describe this spacecraft differently: the Italian Space Agency says 'Ka and EHF band', the French space agency says only Ka. They are not in conflict — the Italian agency's own antenna list shows the EHF element is a 44 GHz military uplink alongside the 30/20 GHz civil and institutional antennas — but citing only one of them would misrepresent that source, so both are shown."
+    },
+
+    {
+      "systemId": "inmarsat",
+      "name": "Inmarsat",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Inmarsat (Viasat)",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "The oldest maritime satellite operator, and the one whose L-band service underpins maritime distress and safety traffic. Its Global Xpress network added a separate high-capacity Ka-band layer.",
+      "match": { "kind": "constellation", "constellation": "Inmarsat" },
+      "services": [
+        {
+          "needId": "l-band-mobile",
+          "statement": "Inmarsat's BGAN network is an L-band geostationary satellite-based network.",
+          "source": "https://developer.inmarsat.com/technology/",
+          "sourceName": "Inmarsat, the operator",
+          "sourceKind": "operator"
+        },
+        {
+          "needId": "ka-wideband",
+          "statement": "Global Xpress is Inmarsat's revolutionary mobile high-speed global Ka-band service … part of Inmarsat's hybrid Ka-band/L-band satellite and ground network",
+          "source": "https://developer.inmarsat.com/technology/gx/",
+          "sourceName": "Inmarsat, the operator",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "These are statements about the networks, not about individual spacecraft. No readable public source maps a band to a particular Inmarsat generation, so this planner cannot tell you which of the catalogued Inmarsat spacecraft carries L-band and which carries Ka — it can only tell you when each of them is above your mask. Read the coverage answer as 'an Inmarsat spacecraft is visible', not 'Global Xpress is available'."
+    },
+
+    {
+      "systemId": "iridium",
+      "name": "Iridium",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Iridium Communications",
+      "orbitNote": "Low Earth orbit, cross-linked",
+      "status": "operational",
+      "summary": "A low-orbit constellation with satellite-to-satellite cross-links, which is why it works at latitudes where a geostationary satellite is below the horizon — including both poles.",
+      "match": { "kind": "constellation", "constellation": "Iridium" },
+      "services": [
+        {
+          "needId": "l-band-mobile",
+          "statement": "Weather-resilient, L-band connectivity provides reliable critical communications with real-time delivery",
+          "source": "https://www.iridium.com/services/iridium-certus/",
+          "sourceName": "Iridium Communications, the operator",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "This is the constellation where the elevation mask does the most work in this planner. Low-orbit spacecraft rise and set in minutes, so raising the mask from 0° to 10° removes far more of the visibility than it does from a geostationary satellite — and the grid step matters, because a pass shorter than the sampling interval is a pass this planner never sees."
+    },
+
+    {
+      "systemId": "viasat",
+      "name": "Viasat",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Viasat",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "A commercial operator of high-capacity Ka-band satellites, which since acquiring Inmarsat also operates S-band and L-band spacecraft.",
+      "match": { "kind": "norad", "norad": [37843, 42740, 56370, 66454, 68893] },
+      "services": [
+        {
+          "needId": "ka-wideband",
+          "statement": "Our fleet of high-speed, high-capacity Ka-band satellites and resilient S-band and L-band satellites are a critical part of our multi-orbit ecosystem",
+          "source": "https://www.viasat.com/space-innovation/satellite-fleet/",
+          "sourceName": "Viasat, the operator",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "The same sentence claims S-band and L-band spacecraft as well, so Viasat is not a Ka-only operator and this row does not describe its whole fleet. The spacecraft matched here are the ViaSat-1, -2 and -3 series by catalog number."
+    },
+
+    {
+      "systemId": "starlink",
+      "name": "Starlink",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "SpaceX",
+      "orbitNote": "Low Earth orbit",
+      "status": "operational",
+      "summary": "The largest constellation in the catalog by a wide margin, in low orbit, with user links in Ku-band and gateway links in Ka.",
+      "match": { "kind": "constellation", "constellation": "Starlink" },
+      "services": [
+        {
+          "needId": "ku-band",
+          "statement": "SpaceX proposes communications between its satellites and user terminals in the Ku-band and between its satellites and both user terminals and gateway earth stations in the Ka-band.",
+          "source": "https://docs.fcc.gov/public/attachments/FCC-22-91A1.pdf",
+          "sourceName": "U.S. Federal Communications Commission, Order and Authorization FCC 22-91",
+          "sourceKind": "us-government"
+        }
+      ],
+      "caveat": "This is the best-sourced band claim on the page — a regulator's authorising order rather than anybody's description of themselves. It is also the row most likely to refuse to solve: several thousand low-orbit spacecraft on a 30-second grid is tens of millions of propagations, well past the planner's budget. Narrow the transit or pick a different need; the refusal is the honest answer, not a failure."
+    },
+
+    {
+      "systemId": "oneweb",
+      "name": "OneWeb",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Eutelsat OneWeb",
+      "orbitNote": "Low Earth orbit, near-polar",
+      "status": "operational",
+      "summary": "A near-polar low-orbit constellation, which gives it high-latitude coverage that a geostationary operator cannot match.",
+      "match": { "kind": "constellation", "constellation": "OneWeb" },
+      "services": [
+        {
+          "needId": "ku-band",
+          "statement": "The OneWeb system uses Ku-band for the RF links between the satellites and user terminals and Ka-band for the RF links between the satellites and gateway earth stations",
+          "source": "https://fcc.report/IBFS/SAT-LOI-20160428-00041/1134939.pdf",
+          "sourceName": "WorldVu Satellites Ltd (OneWeb), technical attachment to FCC filing SAT-LOI-20160428-00041",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "The document is the operator's own technical filing to the U.S. regulator, which is a stronger kind of statement than a marketing page — but it was read on a third-party mirror of the FCC's filing system, because the FCC's own licensing host refuses automated requests. The live Eutelsat OneWeb pages state no bands at all; oneweb.net now redirects to eutelsat.com."
+    },
+
+    {
+      "systemId": "globalstar",
+      "name": "Globalstar",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Globalstar Inc.",
+      "orbitNote": "Low Earth orbit",
+      "status": "operational",
+      "summary": "A low-orbit mobile satellite operator using L-band up and S-band down, best known now for carrying handset emergency messaging.",
+      "match": { "kind": "constellation", "constellation": "Globalstar" },
+      "services": [
+        {
+          "needId": "l-band-mobile",
+          "statement": "the FCC has authorized us to operate our HIBLEO-4 system between 1610-1618.725 MHz (L-Band) for 'Uplink' communications from user terminals to our satellites and between 2483.5-2500 MHz (S-Band) for 'Downlink' communications from our satellites to user terminals.",
+          "source": "https://www.sec.gov/Archives/edgar/data/1366868/000136686826000012/gsat-20251231.htm",
+          "sourceName": "Globalstar Inc., Form 10-K filed with the U.S. Securities and Exchange Commission",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "A statement made in an annual report filed under federal securities law, describing a Federal Communications Commission authorisation, and hosted on sec.gov. A company has a legal obligation to be accurate there that it does not have on its own website, which is why this citation is preferred over Globalstar's marketing material."
+    },
+
+    {
+      "systemId": "intelsat",
+      "name": "Intelsat",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "Intelsat (SES)",
+      "orbitNote": "Geosynchronous",
+      "status": "operational",
+      "summary": "One of the oldest and largest commercial geostationary fleets, now part of SES.",
+      "match": { "kind": "constellation", "constellation": "Intelsat" },
+      "services": [
+        {
+          "needId": "ku-band",
+          "statement": "Our combined satellite network utilizes C-, Ku- and Ka-bands, wide beams, spot beams, and frequency reuse technology to deliver global, resilient, high-throughput connectivity.",
+          "source": "https://www.intelsat.com/global-network/satellite-network/",
+          "archiveSource": "https://web.archive.org/web/20241230212841/https://www.intelsat.com/global-network/satellite-network/",
+          "sourceName": "Intelsat, the operator",
+          "sourceKind": "operator"
+        }
+      ],
+      "supersededNote": "intelsat.com now redirects to ses.com following the acquisition, and the live SES-hosted Intelsat pages carry no band statement. This claim is currently citable only from the archived capture, which is why the capture is given.",
+      "caveat": "A fleet-level statement covering C, Ku and Ka. It says nothing about which of the catalogued Intelsat spacecraft carries which, so read the coverage answer as 'an Intelsat spacecraft is visible'."
+    },
+
+    {
+      "systemId": "o3b-mpower",
+      "name": "O3b mPOWER",
+      "abbreviation": null,
+      "sponsor": "commercial",
+      "operator": "SES",
+      "orbitNote": "Medium Earth orbit",
+      "status": "operational",
+      "summary": "A medium-orbit constellation — much closer than geostationary, so much lower latency, and a moving target that a shipboard antenna has to track rather than park on.",
+      "match": { "kind": "constellation", "constellation": "O3b / mPOWER" },
+      "services": [
+        {
+          "needId": "commercial-procurement",
+          "statement": "O3b mPOWER is SES's next generation Medium Earth Orbit (MEO) system – an evolution of the proven O3b MEO constellation",
+          "source": "https://www.ses.com/o3b-mpower",
+          "sourceName": "SES, the operator",
+          "sourceKind": "operator"
+        }
+      ],
+      "caveat": "No band is claimed for this system, and the omission is deliberate. SES writes that for the earlier O3b constellation it 'started using the Ka-band', but no SES page found states that O3b mPOWER is Ka-band in so many words. That is one inferential step, and one step is the whole distance between a cited fact and a guess. What is verified is the orbit, and for a planner the orbit is the interesting part: a medium-orbit spacecraft rises and sets over hours rather than staying put, so its windows look nothing like a geostationary satellite's."
+    }
+  ],
+
+  "unsourced": [
+    {
+      "name": "Milstar",
+      "reason": "The band IS publicly stated — a 2023 capture of the U.S. Air Force fact sheet reads 'The LDR payload can transmit 75 to 2,400 bps of data over 192 channels in the extremely high frequency (EHF) range' and lists 'Payload: LDR, MDR, and UHF'. Two things kept it out of the table. No Milstar spacecraft appears in the published operational catalog, so the row would match nothing; and the current U.S. Space Force version of that same fact sheet has been redacted, with 'extremely high frequency (EHF)' removed so the sentence now reads 'over 192 channels in the range'. A row resting on a citation the owner has since withdrawn is not one to build on."
+    },
+    {
+      "name": "Defense Satellite Communications System (DSCS III)",
+      "reason": "Also publicly stated — the U.S. Air Force fact sheet reads 'The DSCS communications payload includes six independent Super High Frequency (SHF) transponder channels that cover a 500 MHz bandwidth'. No DSCS spacecraft is in the published operational catalog, so there is nothing to solve. Its operational status is also unresolvable from any readable primary source: seven operational in 2015, six in 2020, and a Space Force announcement of a retirement in December 2022 that no reachable host will serve and that the Internet Archive never captured."
+    },
+    {
+      "name": "SICRAL",
+      "reason": "NATO states that SICRAL provides SHF and UHF, and no SICRAL spacecraft is in the published catalog, so there is nothing to attach it to. Recording it here also corrects a common error: SICRAL 1B and 2 are UHF and SHF only. EHF appears for SICRAL nowhere in the public record, and Ka-band arrives with SICRAL 3, a later spacecraft."
+    },
+    {
+      "name": "XTAR",
+      "reason": "No XTAR spacecraft is present in the published operational catalog."
+    },
+    {
+      "name": "SES's own geostationary fleet, and Eutelsat",
+      "reason": "Both are in the catalog in numbers and both plainly operate commercial capacity, but no operator page was found that states a band for the fleet in a quotable sentence. The band claims that do exist belong to specific spacecraft or specific services rather than to the fleet, and attaching a service to a spacecraft on that basis would be inference."
+    },
+    {
+      "name": "The UHF Follow-On EHF package",
+      "reason": "A secondary source states that 'the EHF package on satellites four through nine have an Earth coverage beam and a steerable five-degree spot beam' and that it connects the UFO network to Milstar. It attributes this to an Air University handbook that could not be read. A named secondary source citing an unread primary is not enough to put a protected-communications capability against specific spacecraft on a public site."
+    },
+    {
+      "name": "Which Inmarsat generation carries which band, and whether O3b mPOWER is Ka-band",
+      "reason": "Both are things the trade takes for granted and neither is stated in any readable public source. They are listed here rather than assumed, because this is exactly the point at which a capability table stops being a record and starts being a guess with citations attached to the wrong sentences."
+    }
+  ]
+}

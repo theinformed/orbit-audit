@@ -1,0 +1,38 @@
+{
+  "validAt": "2026-08-17T12:00:00Z",
+  "grid": {
+    "altitudeKm": [
+      200.0,
+      300.0,
+      400.0,
+      500.0,
+      600.0
+    ],
+    "latitudeDeg": [
+      -60.0,
+      0.0,
+      60.0
+    ],
+    "longitudeDeg": [
+      0.0,
+      90.0,
+      180.0,
+      270.0
+    ]
+  },
+  "quantity": "neutral mass density",
+  "units": "kg m-3",
+  "encoding": {
+    "bits": 16,
+    "logFloor": -17.0,
+    "logCeiling": -5.5,
+    "quantumDex": 0.00017548142948698386,
+    "zeroMeans": "no value"
+  },
+  "codes": "FrIWshayFrIWshayFrIWshayFrIWshayAADAnsCewJ7AnsCewJ7AnsCewJ7AnsCeaotqi2qLaotqi2qLaotqi2qLaotqi2qLFXgVeBV4FXgVeBV4FXgVeBV4FXgVeBV4v2S/ZL9kv2S/ZL9kv2S/ZL9kv2S/ZL9k",
+  "validMask": "/+///////w8=",
+  "validFraction": 0.9833333333333333,
+  "sourceValidFraction": 1.0,
+  "codesDtype": "uint16",
+  "codesOrder": "altitude,latitude,longitude"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "space-orbit-drift",
+  "name": "Long-arc orbit drift (MANUAL verification; GPU fit awaiting Sean)",
+  "machine": "bigmem",
+  "resource": ["gpu-direct"],
+  "endpoint": "/home/sdegan/space-teaching-aid/.venv-gpu/bin/python -m pipeline.orbit_drift --backend gpu --devices 0 (or 0,1), explicit UTC window; direct CuPy",
+  "schedule": {"kind": "manual", "expr": null, "tz": "UTC", "quietWindow": null},
+  "scheduleNote": "No timer or automatic caller. Sean must release the card and authorize fitting. Only an 8 MiB allocation smoke test has run, on GPU 0. Each card has its own configurable ceiling, at most 1430 MiB (below 1.5 decimal GB).",
+  "expectedDurationSec": null,
+  "owner": "space program (Sean/operator)",
+  "fallbackWhenDown": "GPU mode fails visibly. The explicitly selected NumPy CPU verification path remains available; there is no silent fallback.",
+  "docs": "pc:/home/sdegan/space-teaching-aid/docs/orbit-drift.md",
+  "invocation": "on-demand",
+  "callerEvidence": [
+    {"type": "bigmem-file-grep", "target": "pc:/home/sdegan/space-teaching-aid/pipeline/orbit_drift.py", "pattern": "pool.submit\\(backend.fit"},
+    {"type": "bigmem-file-grep", "target": "pc:/home/sdegan/space-teaching-aid/pipeline/orbit_drift_gpu.py", "pattern": "def gpu_session"}
+  ],
+  "usageLedger": {
+    "kind": "bigmem-local",
+    "note": "state/space-orbit-drift-usage.jsonl in /home/sdegan/space-teaching-aid; ts, durationMs, device, ok, actual pool peak and sampled device delta. Latest 4096 lines / 4 MiB retained under a file lock. No periodic puller was changed or deployed: /brain/gpu shows this consumer but cannot yet draw spans from its local ledger. Allocation smoke on 2026-09-12 UTC recorded a 245 MiB peak including context, duration 2040 ms."
+  },
+  "category": "site-features",
+  "plainDescription": "Looks for gradual orbital drift that differs from nearby objects sharing the same atmosphere, using the GPU to fit robust trends while debris and spent stages measure false alarms."
+}

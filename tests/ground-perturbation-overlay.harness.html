@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ground magnetic perturbation overlay harness</title>
+    <style>html, body { margin: 0; background: #000; } #scene { position: relative; width: 600px; height: 600px; }</style>
+  </head>
+  <body>
+    <!--
+      Builds the real globe over the real vendored Natural Earth coastlines,
+      mounts the real ground-perturbation overlay from the currently published
+      artifact, and lets the test read back, in pixels, whether the disturbance
+      is drawn where the numbers say it is. Loaded by
+      tests/ground-perturbation-overlay.spec.ts and by the screenshot pass.
+    -->
+    <div id="scene"></div>
+    <script type="module" src="./ground-perturbation-overlay.harness.ts"></script>
+  </body>
+</html>

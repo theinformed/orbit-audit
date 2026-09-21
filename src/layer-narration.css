@@ -1,0 +1,97 @@
+/* Spoken narration on the layer pages.
+ *
+ * The layers work already styles the slot this drops into - the box, its cyan rule, the
+ * reading size and the button - in src/layer-pages.css under "THE SLOT FOR SPOKEN
+ * NARRATION". That file is not this lane's, and duplicating its rules here would give the
+ * two a chance to disagree. So this stylesheet only styles what the slot's contract does
+ * not already cover: the heading line, the state message, the transport, and the transcript.
+ *
+ * PHONE. Below 820px the layer pages lose the top nav and run one column. Nothing here sets
+ * a width, a float or a fixed position, and the control row wraps rather than pushing the
+ * column sideways, so the phone layout is inherited rather than re-fought.
+ */
+
+.layer-page .layer-narration .narration-head {
+  margin: 0 0 10px;
+  color: var(--ink-dim, #93a7b0);
+}
+
+.layer-page .layer-narration .narration-head strong {
+  color: var(--cyan-bright, #6ee7f2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* The promise that nothing starts on its own belongs beside the control that could break
+   it, not in a footnote. On a phone it drops to its own line rather than squeezing the
+   sentence above it. */
+.layer-page .layer-narration .narration-note {
+  display: inline-block;
+  margin-left: 8px;
+  color: #8fa8b1;
+  font-style: italic;
+}
+
+.layer-page .layer-narration .narration-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* A live region that is empty until something happens. It is announced by a screen reader
+   and read by everyone else, which is why it is text rather than a colour change. */
+.layer-page .layer-narration .narration-state {
+  color: #8fa8b1;
+}
+
+/* The button's own look comes from the slot contract. What is added here is the pressed
+   state, because "Stop narration" and "Play with narration" should not be the only signal
+   that something is running. */
+.layer-page .layer-narration button[aria-pressed="true"] {
+  border-color: var(--cyan-bright, #6ee7f2);
+  background: rgba(41, 212, 227, 0.12);
+}
+
+.layer-page .layer-narration button:focus-visible {
+  outline: 2px solid var(--cyan-bright, #6ee7f2);
+  outline-offset: 2px;
+}
+
+.layer-page .layer-narration .narration-transcript {
+  margin-top: 12px;
+}
+
+.layer-page .layer-narration .narration-transcript summary {
+  color: var(--cyan-bright, #6ee7f2);
+  cursor: pointer;
+}
+
+.layer-page .layer-narration .narration-transcript ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.layer-page .layer-narration .narration-transcript li {
+  margin: 8px 0 0;
+}
+
+/* The second the line is spoken at. A transcript of a timed narration that does not say
+   when each line lands is just the prose again; with the timecode a reader can watch the
+   picture and read the words at the same moment, which is the point of the whole lane. */
+.layer-page .layer-narration .narration-cue {
+  display: inline-block;
+  min-width: 3.4em;
+  color: #8fa8b1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* This module starts no motion of its own, so there is nothing here to switch off. The rule
+   exists so that a future addition cannot quietly introduce one. */
+@media (prefers-reduced-motion: reduce) {
+  .layer-page .layer-narration,
+  .layer-page .layer-narration * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

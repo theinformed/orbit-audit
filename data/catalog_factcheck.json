@@ -1,0 +1,277 @@
+{
+ "generatedAt": "2026-08-20T02:37:47Z",
+ "note": "Written by pipeline/catalog_factcheck.py. Every entry rests on a catalogue-number match in at least two independent sources, quoted below. Gap-filling only: build_release applies these where a card says nothing at all, and the curated override table outranks them.",
+ "objects": {
+  "26715": {
+   "checkedAt": "2026-08-20T02:36:21Z",
+   "citations": [
+    {
+     "quote": "Track USA 157 (MILSTAR-2 2) Live - NORAD 26715",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/26715"
+    },
+    {
+     "quote": "| NORAD ID | 26715 | | COSPAR ID | 2001-009A | | Alternative names | MILSTAR-2 2 |",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=26715"
+    },
+    {
+     "quote": "TSE - Milstar 2-2 TSE - Milstar 2-2 Main Chapters The Satellite Encyclopedia Ordering Information Order Now Focus --- Version 0.81 comes with a new web design! Please allow popups for navigation. --- # Milstar 2-2 Also called USA 157 --- ## General | Designation | 26715 / 01009A |",
+     "tier": "reference",
+     "url": "http://tbs-satellite.com/tse/online/sat_milstar_2_2.html"
+    }
+   ],
+   "designation": "Milstar 2-2",
+   "mission": "communications",
+   "name": "USA 157",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Milstar",
+   "programmeSource": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197755/milstar-satellite-communications-system/",
+   "programmeSourceTier": "primary",
+   "purpose": "A Milstar spacecraft: a hardened, jam-resistant military communications satellite carrying extremely-high-frequency and ultra-high-frequency links for United States strategic and tactical forces.",
+   "sector": "military"
+  },
+  "27168": {
+   "checkedAt": "2026-08-20T02:36:29Z",
+   "citations": [
+    {
+     "quote": "NORAD ID 27168 COSPAR ID 2002-001A Alternative names MILSTAR-2 3",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=27168"
+    },
+    {
+     "quote": "Milstar 2-3 Milstar 2-3 # Milstar 2-3 ### USA ### Spacecraft n\u00b0: ### USA satellite n\u00b0: Also called USA 164 --- ## Launch data: | Designation | 27168 / 02001A |",
+     "tier": "enthusiast",
+     "url": "https://weebau.com/satellite/M/milstar%202-3.htm"
+    }
+   ],
+   "designation": "Milstar 2-3",
+   "mission": "communications",
+   "name": "USA 164",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Milstar",
+   "programmeSource": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197755/milstar-satellite-communications-system/",
+   "programmeSourceTier": "primary",
+   "purpose": "A Milstar spacecraft: a hardened, jam-resistant military communications satellite carrying extremely-high-frequency and ultra-high-frequency links for United States strategic and tactical forces.",
+   "sector": "military"
+  },
+  "27691": {
+   "checkedAt": "2026-08-20T02:36:40Z",
+   "citations": [
+    {
+     "quote": "Track USA 167 Live - NORAD 27691 | KeepTrack Track USA 167 Live - NORAD 27691 | KeepTrack # USA 167 NORAD 27691 COSPAR 2003-008A DSCS III A-3 Payload Operational Orbit Geosynchronous (GEO) Apogee / Perigee 35808 / 35782 km Inclination 11.07\u00b0 Period 1436.16 min Launched Mar 11, 2003 Operator AFSMC/DISA Latitude ... Longitude ... Altitude ... Velocity ... Ground Track Latitude 54.358889 Longitude -0.669722 Next Pass Polar Plot Azimuth Elevation Time (Local) Time Until Pass Duration About USA 167 The USA 167 satellite, also known as DSCS III A-3, is a communication satellite launched on March 11, 2003, from the Air Force Eastern Test Range (AFETR) using a Delta 4M launch vehicle. It has a configuration of a DSCS-3 bus with 3-axis stabilization and was manufactured by LMVF for the AFSMC/DISA. The satellite measures 2.1 meters in length, 1.9 meters in diameter, and its span is 9.5 meters. It had a launch mass of 1244 kilograms and a dry mass of 900 kilograms. Its communication equipment includes six SHF transponders and one special purpose transponder (SHF and UHF). Power is supplied by two deployable solar arrays and batteries. The satellite's shape is described as \"Box +",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/27691"
+    },
+    {
+     "quote": "NORAD ID 27691 COSPAR ID 2003-008A Alternative names DSCS-3 A3",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=27691"
+    },
+    {
+     "quote": "USA 167 \ud83d\udef0 - DSCS-3 A3 - Satellite information \u2022 ISS Tracker USA 167 \ud83d\udef0 - DSCS-3 A3 - Satellite information \u2022 ISS Tracker # USA 167 DSCS-3 A3 - Norad ID: 27691 - Stats - TLE/OMM - Description - Details - Info ## USA 167 ##### 27691 Spacetrack Directory Number ##### 2003-03-11 Orbit launches ##### 35785.97 km Average height ##### 11069.03 km/h Average velocity --- --- #### Satellite information USA 167 - DSCS-3 A3 | Spacetrack Directory Name | USA 167 | | --- | --- | | Alternative name | DSCS-3 A3 | | Follow USA 167 | USA 167 Tracker | | Pass predictions USA 167 | Pass predictions USA 167 | | Orbit launches | 2003-03-11 (22 years ago) | | Days in orbit | 8379 | | Country/organisation of origin | USA (US) | | Starting point | AFETR (Kennedy Space Center/Cape Canaveral, USA) | | Categories | | Perigee | 35777 km | | Apogee | 35793 km | | Orbit slope (inclination) | 10.72\u00b0 | | Laps per day | 1 | | Orbit | GEO | | Height USA 167 | 35785.97 km | Suggest changes #### Additional information USA 167 USA 167, 27691 is an American payload satellite in GEO that was launched on Tue, 11 Mar 2003 UTC via a DELTA 4M launch vehicle from the Air Force Eastern Test Range (AFETR). Payloads include a variety of satellites, spacecraft, and rock",
+     "tier": "tracker",
+     "url": "https://isstracker.pl/en/satellites/27691"
+    },
+    {
+     "quote": "- USA 167 - . Payload: DSCS III A-3. Mass: 1,235 kg (2,722 lb). Nation: USA. Agency: USAF. Program: DSCS. Class: Communications. Type: Military communications satellite. Spacecraft: DSCS III. USAF Sat Cat: 27691 .",
+     "tier": "reference",
+     "url": "http://astronautix.com/d/delta4m.html"
+    }
+   ],
+   "designation": "DSCS III A-3",
+   "mission": "communications",
+   "name": "USA 167",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Defense Satellite Communications System",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/dscs/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Defense Satellite Communications System spacecraft: a geostationary super-high-frequency relay carrying long-haul communications for United States forces and allied government users. The public catalogue lists it only by its USA designation, which is how US military spacecraft are registered; the programme name comes from the sources cited beside this card.",
+   "sector": "military"
+  },
+  "27711": {
+   "checkedAt": "2026-08-20T02:36:48Z",
+   "citations": [
+    {
+     "quote": "USA-169 (also known as Milstar-2 4) is an American Communications satellite which was operated by the United States Air Force. Launched in April 2003, it is the last Milstar-2 communications satellite. | Launch of USA-169 | - | | --- | --- | | Mission type | Communications | | Operator | United States Air Force | | COSPAR ID | 2003-012A Edit this at Wikidata | | SATCAT no. | 27711Edit this on Wikidata | | Mission duration | 10 Years | | Spacecraft properties | - | | Spacecraft type | Milstar | | Manufacturer | Lockheed Martin | | Launch mass | 4500 Kg | | Start of mission | - | | Launch date | 8 April 2003 13:43 UTC | | Rocket | Titan IV (401)B/Centaur-T (B-35/TC-23) | | Launch site | Cape Canaveral, SLC-40 | | Contractor | Lockheed Martin | | Orbital parameters | - | | Reference system | Geocentric orbit | | Regime | Geosynchronous orbit | | Milstar Series, \u2190 USA-164 (Milstar-2 3) | - | ## Overview Artist's impression of a Milstar spacecraft Milstar-2 is a Communications satellite which provided tactical communication services to US Armed Force replaced the Milstar-1 satellite and Advanced Extremely High Frequency(AEHF) is the Successor of Milstar-2 Satellites. ## Se",
+     "tier": "reference",
+     "url": "https://en.wikipedia.org/wiki/USA-169"
+    },
+    {
+     "quote": "| NORAD ID | 27711 | | COSPAR ID | 2003-012A | | Alternative names | MILSTAR-2 4 |",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=27711"
+    },
+    {
+     "quote": "Track USA 169 (MILSTAR-2 4) Live - NORAD 27711",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/27711"
+    },
+    {
+     "quote": "USA 169 (MILSTAR-2 4) - Norad ID: 27711",
+     "tier": "tracker",
+     "url": "https://isstracker.pl/en/satellites/27711"
+    }
+   ],
+   "designation": "Milstar-2 4",
+   "mission": "communications",
+   "name": "USA 169",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Milstar",
+   "programmeSource": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197755/milstar-satellite-communications-system/",
+   "programmeSourceTier": "primary",
+   "purpose": "A Milstar spacecraft: a hardened, jam-resistant military communications satellite carrying extremely-high-frequency and ultra-high-frequency links for United States strategic and tactical forces.",
+   "sector": "military"
+  },
+  "27875": {
+   "checkedAt": "2026-08-20T02:36:57Z",
+   "citations": [
+    {
+     "quote": "Track USA 170 Live - NORAD 27875 | KeepTrack Track USA 170 Live - NORAD 27875 | KeepTrack # USA 170 NORAD 27875 COSPAR 2003-040A DSCS III B-6 Payload Operational Orbit Geosynchronous (GEO) Apogee / Perigee 35799 / 35789 km Inclination 10.61\u00b0 Period 1436.11 min Launched Aug 29, 2003 Operator AFSMC/DISA Latitude ... Longitude ... Altitude ... Velocity ... Ground Track Latitude 54.358889 Longitude -0.669722 Next Pass Polar Plot Azimuth Elevation Time (Local) Time Until Pass Duration About USA 170 USA 170 (also known as DSCS III B-6) is a communication satellite with a configuration of DSCS-3 Bus and uses 3-axis stabilization. It was launched by the United States on August 29, 2003, from SLC37B at AFETR using a Delta 4M launch vehicle. The spacecraft has dimensions of 2.1 meters in length, 1.9 meters in diameter, and a span of 9.5 meters. It had a launch mass of 1244 kg and a dry mass of 900 kg. Equipped with 6 SHF transponders and one special purpose transponder capable of operating on both SHF and UHF frequencies, the satellite is powered by two deployable solar arrays and batteries. Its mission is communication support for AFSMC/DISA, and it has a designed lifetime of",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/27875"
+    },
+    {
+     "quote": "NORAD ID 27875 COSPAR ID 2003-040A Alternative names DSCS-3 B6",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=27875"
+    },
+    {
+     "quote": "Find DSCS III B-6 \u2014 NORAD 27875",
+     "tier": "tracker",
+     "url": "https://satellitemap.space/sat/27875"
+    },
+    {
+     "quote": "USA 170 \ud83d\udef0 - DSCS-3 B6 - Satellite information \u2022 ISS Tracker USA 170 \ud83d\udef0 - DSCS-3 B6 - Satellite information \u2022 ISS Tracker # USA 170 DSCS-3 B6 - Norad ID: 27875",
+     "tier": "tracker",
+     "url": "https://isstracker.pl/en/satellites/27875"
+    },
+    {
+     "quote": "Orig PL Name: DSCS III B-6 (Defense Satellite Communications System)",
+     "tier": "enthusiast",
+     "url": "https://weebau.com/satellite/D/dscs%203-14.htm"
+    }
+   ],
+   "designation": "DSCS III B-6",
+   "mission": "communications",
+   "name": "USA 170",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Defense Satellite Communications System",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/dscs/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Defense Satellite Communications System spacecraft: a geostationary super-high-frequency relay carrying long-haul communications for United States forces and allied government users. The public catalogue lists it only by its USA designation, which is how US military spacecraft are registered; the programme name comes from the sources cited beside this card.",
+   "sector": "military"
+  },
+  "28158": {
+   "checkedAt": "2026-08-20T02:37:04Z",
+   "citations": [
+    {
+     "quote": "Track USA 176 (DSP 22) Live - NORAD 28158",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/28158"
+    },
+    {
+     "quote": "| NORAD ID | 28158 | | COSPAR ID | 2004-004A | | Alternative names | DSP 22 |",
+     "tier": "tracker",
+     "url": "https://in-the-sky.org/spacecraft.php?id=28158"
+    },
+    {
+     "quote": "DSP 22 DSP 22 # DSP 22 ### USA / US Air Force ### Spacecraft n\u00b0: ### USA satellite n\u00b0: Defense Support Program satelliteAlso known as IMEWS-22, USA 176 or DSP 3-9 --- ## Launch data: | Designation | 28158 / 04004A |",
+     "tier": "enthusiast",
+     "url": "https://weebau.com/satellite/D/dsp%2022.htm"
+    }
+   ],
+   "designation": "DSP 22",
+   "mission": "missile-warning",
+   "name": "USA 176",
+   "organization": "U.S. Space Force (formerly U.S. Air Force)",
+   "programme": "Defense Support Program",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/defense-support-program/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Defense Support Program spacecraft: the geostationary infrared early-warning constellation that has watched for ballistic-missile launches since 1970, and which also carries the optical, X-ray and radiation sensors of the US Nuclear Detonation Detection System. SBIRS augments and is replacing it. The public catalogue lists this object only by its USA designation, which is how US military spacecraft are registered.",
+   "sector": "military"
+  },
+  "41744": {
+   "checkedAt": "2026-08-20T02:37:14Z",
+   "citations": [
+    {
+     "quote": "TSE - GSSAP 3 TSE - GSSAP 3 Main Chapters The Satellite Encyclopedia Ordering Information Order Now Focus --- Version 0.81 comes with a new web design! Please allow popups for navigation. --- # GSSAP 3 Also called USA 270 --- ## General | Designation | 41744 / 16052A | | --- | --- | | Launch date | 19 Aug 2016 | | Country of origin | United States | | Mission | Military: mapping other satellites in orbit | | Geostationary orbit | 86\u00b0E or 67\u00b0E or 58\u00b0E | | Launch vehicle | Delta 4#375 | --- This document is part of The Satellite Encyclopedia, \u00a9 Tag's Broadcasting Services, all rights reserved, NO REPRODUCTION ALLOWED. Please notify (mailto:omissions-email-harvesting-prohibited-by-french-law-226-18@TBS-satellite.com) any errors, omissions, etc. V0.153 - Converted on Sat, 30 May 2026 09:52:31 GMT - Updated quarterly \u00a9 TBS Internet, all rights reserved. All reproduction, copy or mirroring prohibited. Legal notice",
+     "tier": "reference",
+     "url": "http://www.tbs-satellite.com/tse/online/sat_gssap_3.html"
+    },
+    {
+     "quote": "GSSAP 3 & GSSAP 4 satellites # GSSAP 3 & GSSAP 4 (USA 270 & USA 271, AFSPC 6) ### USA ### Spacecraft n\u00ba: ### US spacecraft n\u00ba: GSSAP = Geosynchronous Space Situational Awareness Program --- ### Launch data: | Type | GSSAP 3 | GSSAP 4 | | --- | --- | --- | | Designation | 41744 / 16052A | 41745 / 16052B |",
+     "tier": "enthusiast",
+     "url": "https://weebau.com/satellite/G/gssap3.htm"
+    },
+    {
+     "quote": "GSSAP 3 & GSSAP 4 satellites # GSSAP 3 & GSSAP 4 (USA 270 & USA 271, AFSPC 6) ### USA ### Spacecraft n\u00ba: ### US spacecraft n\u00ba: GSSAP = Geosynchronous Space Situational Awareness Program --- -- ### Launch data: | Type | GSSAP 3 | GSSAP 4 | | --- | --- | --- | | Designation | 41744 / 16052A | 41745 / 16052B |",
+     "tier": "enthusiast",
+     "url": "http://weebau.com/satellite/G/gssap3.htm"
+    }
+   ],
+   "designation": "GSSAP 3",
+   "mission": "other",
+   "name": "USA 270",
+   "organization": "U.S. Space Force",
+   "programme": "Geosynchronous Space Situational Awareness Program",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/gssap/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Geosynchronous Space Situational Awareness Program spacecraft: a manoeuvrable US Space Force inspector carrying electro-optical sensors, flown in a near-geosynchronous drift orbit so that it can close on and characterise other objects in the belt from short range. It is one of the few US space-surveillance systems the Space Force discusses openly, and the catalogue still lists it only by its USA designation.",
+   "sector": "military"
+  },
+  "41745": {
+   "checkedAt": "2026-08-20T02:37:20Z",
+   "citations": [
+    {
+     "quote": "# GSSAP 4 Also called USA 271",
+     "tier": "reference",
+     "url": "http://www.tbs-satellite.com/tse/online/sat_gssap_4.html"
+    },
+    {
+     "quote": "GSSAP 4 satellites # GSSAP 3 & GSSAP 4 (USA 270 & USA 271, AFSPC 6) ### USA ### Spacecraft n\u00ba: ### US spacecraft n\u00ba: GSSAP = Geosynchronous Space Situational Awareness Program --- -- ### Launch data: | Type | GSSAP 3 | GSSAP 4 | | --- | --- | --- | | Designation | 41744 / 16052A | 41745 / 16052B |",
+     "tier": "enthusiast",
+     "url": "http://weebau.com/satellite/G/gssap3.htm"
+    }
+   ],
+   "designation": "GSSAP 4",
+   "mission": "other",
+   "name": "USA 271",
+   "organization": "U.S. Space Force",
+   "programme": "Geosynchronous Space Situational Awareness Program",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/gssap/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Geosynchronous Space Situational Awareness Program spacecraft: a manoeuvrable US Space Force inspector carrying electro-optical sensors, flown in a near-geosynchronous drift orbit so that it can close on and characterise other objects in the belt from short range. It is one of the few US space-surveillance systems the Space Force discusses openly, and the catalogue still lists it only by its USA designation.",
+   "sector": "military"
+  },
+  "55263": {
+   "checkedAt": "2026-08-20T02:37:41Z",
+   "citations": [
+    {
+     "quote": "Track USA 342 Live - NORAD 55263 | KeepTrack Track USA 342 Live - NORAD 55263 | KeepTrack # USA 342 NORAD 55263 COSPAR 2023-008A CBAS 2",
+     "tier": "tracker",
+     "url": "https://keeptrack.space/satellite/55263"
+    },
+    {
+     "quote": "Find CBAS 2 \u2014 NORAD 55263",
+     "tier": "tracker",
+     "url": "https://satellitemap.space/sat/55263"
+    },
+    {
+     "quote": "USA 342 Continuous Broadcast Augmenting SATCOM, CBAS 2 ## General | Designation | 55263 / 23008A",
+     "tier": "reference",
+     "url": "http://tbs-satellite.com/tse/online/sat_usa_342.html"
+    }
+   ],
+   "designation": "CBAS 2",
+   "mission": "communications",
+   "name": "USA 342",
+   "organization": "U.S. Space Force",
+   "programme": "Continuous Broadcast Augmenting SATCOM",
+   "programmeSource": "https://www.airandspaceforces.com/weapons/continuous-broadcast-augmenting-satcom/",
+   "programmeSourceTier": "reference",
+   "purpose": "A Continuous Broadcast Augmenting SATCOM spacecraft: a geostationary relay that adds broadcast capacity for senior leaders and combatant commanders on top of the existing military SATCOM constellations rather than replacing any of them. The public catalogue lists it only by its USA designation.",
+   "sector": "military"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dungey coupling harness</title>
+    <style>html, body { margin: 0; background: #000; } #scene { position: relative; width: 1100px; height: 800px; }</style>
+  </head>
+  <body>
+    <!--
+      Renders the production globe with the solar-wind layer coupled
+      progressively to the magnetosphere, the plasma sheet and the auroral
+      oval, driven by a chosen IMF so the difference the measured coupling
+      makes can be screenshotted side by side. Loaded by
+      tests/dungey-coupling.spec.ts.
+    -->
+    <div id="scene"></div>
+    <script type="module" src="./dungey-coupling.harness.ts"></script>
+  </body>
+</html>

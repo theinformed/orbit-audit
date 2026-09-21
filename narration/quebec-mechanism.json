@@ -1,0 +1,42 @@
+{
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "lines": [
+  {
+   "id": "gic-01-field",
+   "note": "Section 1 of the GIC mechanism animation. Over the electrojet and the ground field. The number is measured at Ottawa.",
+   "text": "A hundred kilometres up, a sheet of current the width of a continent shifts south and strengthens. At Ottawa the magnetic field moved four hundred and thirty five nanotesla in one minute. On a quiet night it moves one."
+  },
+  {
+   "id": "gic-02-faraday",
+   "note": "Section 2. Over Faraday's law and the induced E field in the ground. The point is rate, not depth.",
+   "text": "A magnetic field that changes drives an electric field in the rock beneath it. Faraday's law has a time derivative in it, so what matters is the rate and not the depth. A few volts per kilometre."
+  },
+  {
+   "id": "gic-03-line",
+   "note": "Section 3. Over the transmission line with both neutrals grounded.",
+   "text": "Both ends of a long transmission line are bolted to the ground through a transformer neutral. Multiply a few volts per kilometre by a few hundred kilometres, and current flows up one neutral, along the line, and down the other."
+  },
+  {
+   "id": "gic-04-saturation",
+   "note": "Section 4. Over the B-H curve with the DC offset pushing one half cycle over the knee.",
+   "text": "That current is nearly direct, and a core built for sixty hertz has no answer to it. The offset pushes half of every cycle over the knee, where a small change in flux costs an enormous magnetising current."
+  },
+  {
+   "id": "gic-05-harmonics",
+   "note": "Section 5. Over the harmonic spectrum and the heating transformer tank.",
+   "text": "The current stops being a sine wave and becomes a spike. A spike is a stack of harmonics the network was tuned to exclude, and the flux that no longer fits inside the core goes into the steel around it as heat."
+  },
+  {
+   "id": "gic-06-relays",
+   "note": "Section 6. Over the seven static compensators tripping in turn.",
+   "text": "The protective relays saw distortion they were built to disconnect for, and they disconnected. Seven compensators tripped one after another, inside a minute."
+  },
+  {
+   "id": "gic-07-collapse",
+   "note": "Section 7. Over the voltage collapse and the ninety-two second clock.",
+   "text": "Five lines opened and the La Grande corridor was gone. Ninety two seconds later so was Quebec. Twenty one thousand five hundred megawatts, six million people, nine hours."
+  }
+ ]
+}

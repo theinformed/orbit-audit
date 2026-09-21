@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+dist/
+.DS_Store
+*.aux
+*.log
+*.out
+# runtime artifacts written by the pipeline and by test runs
+pipeline/.cache/
+state/

@@ -1,0 +1,98 @@
+[Unit]
+# The expensive half of the orbit-history feature, deliberately OUTSIDE the
+# five-minute publish cycle.
+#
+# It used to run inside it. `pipeline/orbit_release.publish()` scanned the whole
+# archive on every cycle, which cost 1.6 s when the archive held a few thousand
+# element sets and 9.3 GB resident and over five minutes once the 2004-2025
+# backfill had landed 15.5 million. `space-explorer-data.service` hit its
+# 240 s TimeoutStartSec, was killed, and every subsequent cycle died the same
+# way; the live site served four-hour-old data.
+#
+# The lesson is not "the archive got big". It is that a job whose cost scales
+# with the WHOLE HISTORY must not sit on a timer whose period is set by how
+# often the NEWEST data arrives. Element sets arrive hourly, so this runs
+# hourly, and the publish cycle reads the small manifest fragment it leaves
+# behind.
+#
+# AND THEN IT HAPPENED AGAIN, ONE LEVEL DOWN (2026-08-18)
+# ------------------------------------------------------
+# Moving the pass off the five-minute cycle fixed the period. It did not fix the
+# other half of the same sentence: the cost still scales with the whole history,
+# and the history kept growing. The back-fill took the archive to 181.3 M
+# element sets, one pass became 6 h 40 m, and this unit's own 3600 s ceiling
+# started killing it -- six consecutive nights from 2026-08-13, each one
+# discarding an hour or more of finished analysis because the pass had no way to
+# keep it.
+#
+# The general form of the rule, then, is stronger than the one above: a job
+# whose cost scales with the whole history must be able to STOP AND CONTINUE,
+# because there is no timer period that is safe from a history that keeps
+# growing. It now checkpoints on a wall-clock budget and resumes on the next
+# run; a sweep takes several runs and the artifacts are published only when one
+# finishes.
+Description=Rebuild the Space Environment Explorer orbit-history artifacts
+Documentation=file:///home/sdegan/space-teaching-aid/docs/orbit-browser-wiring.md
+After=spacetrack-ingest.service
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+# GPU ARITHMETIC (2026-09-12). The sweep maths runs on RTX 4080 device 0:
+# verified flag-for-flag against the CPU path over 1,074,766 real intervals
+# (zero disagreements), ~40% less CPU consumed, charged VRAM peak ~257 MiB
+# against a 1335 MiB in-process ceiling -- the point is giving CPU back to the
+# rest of this machine, not sweep latency. The interpreter is the GPU venv
+# because cupy lives only there; NVRTC is preloaded in-process so no
+# LD_LIBRARY_PATH is needed here. If the card is unavailable the run says so on
+# stderr and completes on CPU: slower, never different. Usage receipts:
+# state/space-orbit-sweep-gpu-usage.jsonl (registry row: space-orbit-release).
+# Through the GPU broker (Sean's ruling 2026-09-12): transients request
+# spare VRAM and QUEUE when it is full; the broker grants a card via
+# CUDA_VISIBLE_DEVICES, so device 0 below means "the granted card".
+ExecStart=/home/sdegan/gpu-broker/gpu-run --estimate-mib 320 --class priority -- /home/sdegan/space-teaching-aid/.venv-gpu/bin/python -m pipeline.orbit_release --build-cache --sweep-gpu 0
+# Below the publish cycle's priority on purpose. A slow orbit rebuild must never
+# be the reason fresh satellite, geospace, aurora and D-RAP data are late.
+Nice=15
+IOSchedulingClass=idle
+# WHY THIS IS 9000 AND NOT 3600, MEASURED 2026-08-18
+# --------------------------------------------------
+# 3600 was set when the archive held 55.2 M element sets and a whole run took
+# 32-45 minutes. The 2004-2025 back-fill has taken `element_set` to 181.3 M rows
+# and 13.75 GB, and this machine reads it through WSL drvfs 9p, where SQLite's
+# 4 KiB page reads cost about 8.7 ms each. Measured cold on the live archive:
+#
+#     ordered scan of element_set     7,557 rows/s  ->  6 h 40 m for one pass
+#     `dd bs=1M` over the same file   23 MB/s       ->  10 m, but it is not
+#                                                       the access pattern
+#                                                       SQLite has
+#
+# So the comment above was wrong about the thing that mattered. It said a run
+# "is not allowed to be killed half-way" and then set a ceiling a whole run had
+# no way to finish inside. From 2026-08-13 every run was SIGTERMed at 3600 s
+# having done one to two hours of work, and threw all of it away; six
+# consecutive nights failed and the published artifacts stood still from
+# 2026-08-08 to 2026-08-18.
+#
+# The fix is in the job, not in this number: the sweep is now budgeted and
+# resumable (`--budget-seconds`, default 2400), so each run stops itself,
+# checkpoints, and the next one continues. This number only has to be larger
+# than the WORST run, which is the one that finishes a sweep and then does the
+# tail:
+#
+#     sweep budget                                    2,400 s
+#     tail: read_series over the 8,000 catalogue
+#       objects, 16.6 M rows, measured per-object    ~2,800 s
+#     tail: cohort window, event cards, 256 shards     ~600 s
+#                                                    ---------
+#                                                    ~5,800 s
+#
+# 9000 s is that with room, and it is a backstop rather than a schedule: the
+# budget is what actually bounds a run. The tail is NOT resumable, so this is
+# the one number that must not be too small; if the tail ever grows past it, the
+# answer is to make the tail resumable too, not to raise this again.
+TimeoutStartSec=9000
+
+[Install]
+WantedBy=multi-user.target

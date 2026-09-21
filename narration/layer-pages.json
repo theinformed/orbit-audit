@@ -1,0 +1,104 @@
+{
+ "name": "Layer-page clip narration",
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "note": "One spoken line per layer-page clip. `source` says whether the free local 35B wrote it or whether it was assembled deterministically from the page copy; `wordBudget` is arithmetic on the clip's own duration, so no line can be spoken past the picture it describes. Facts: narration/layer-narration-facts.json.",
+ "lines": [
+  {
+   "id": "layer-thermosphere",
+   "clip": "thermosphere",
+   "source": "local-35b",
+   "clipSeconds": 20.9,
+   "wordBudget": 53,
+   "words": 28,
+   "note": "Spoken over the Thermosphere clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "This drawing shows density thinning by nearly seven orders of magnitude from one hundred twenty to one thousand kilometres. The line between the marked points is interpolated, not measured."
+  },
+  {
+   "id": "layer-ionosphere",
+   "clip": "ionosphere",
+   "source": "local-35b",
+   "clipSeconds": 22.6,
+   "wordBudget": 58,
+   "words": 22,
+   "note": "Spoken over the Ionosphere clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "This profile shows where the ionosphere regions sit, not what was measured. The thermosphere and ionosphere overlap, but neither contains the other."
+  },
+  {
+   "id": "layer-plasmasphere",
+   "clip": "plasmasphere",
+   "source": "local-35b",
+   "clipSeconds": 24.9,
+   "wordBudget": 60,
+   "words": 21,
+   "note": "Spoken over the Plasmasphere clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "This plan view shows the plasmasphere boundary moving inward as Kp rises. It is a model boundary, not a spacecraft crossing."
+  },
+  {
+   "id": "layer-radiation-belts",
+   "clip": "radiation-belts",
+   "source": "local-35b",
+   "clipSeconds": 29.9,
+   "wordBudget": 60,
+   "words": 19,
+   "note": "Spoken over the Radiation belts clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "The belt cross-section is schematic. The world map at the end shows the magnetic field strength, not particle flux."
+  },
+  {
+   "id": "layer-ring-current",
+   "clip": "ring-current",
+   "source": "local-35b",
+   "clipSeconds": 21.5,
+   "wordBudget": 55,
+   "words": 20,
+   "note": "Spoken over the Ring current clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "The drift geometry is model-derived. The Dst plot at the end is the only part directly measured by ground stations."
+  },
+  {
+   "id": "layer-magnetopause",
+   "clip": "magnetopause",
+   "source": "local-35b",
+   "clipSeconds": 20.6,
+   "wordBudget": 52,
+   "words": 23,
+   "note": "Spoken over the Magnetopause and bow shock clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "This surface is computed from a formula using real solar wind values. The bow shock is a schematic cone, not an instantaneous position."
+  },
+  {
+   "id": "layer-peak-surfaces",
+   "clip": "peak-surfaces",
+   "source": "local-35b",
+   "clipSeconds": 19.03,
+   "wordBudget": 47,
+   "words": 20,
+   "note": "Spoken over the Ionospheric peak surfaces clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "These curves are display transforms, not physical heights. They were removed because they placed satellites in the wrong visual location."
+  },
+  {
+   "id": "layer-d-region",
+   "clip": "d-region",
+   "source": "local-35b",
+   "clipSeconds": 24.66,
+   "wordBudget": 60,
+   "words": 19,
+   "note": "Spoken over the D-region absorption clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "These curves show absorption scaling, not propagation predictions. The absorbing layer drops lower during a flare, increasing collision rates."
+  },
+  {
+   "id": "layer-ground-track-footprint",
+   "clip": "ground-track-footprint",
+   "source": "local-35b",
+   "clipSeconds": 30.66,
+   "wordBudget": 60,
+   "words": 22,
+   "note": "Spoken over the Ground track and footprint clip on Learn > Layers. Drafted by the free local 35B and gated against this clip’s own page copy.",
+   "text": "This orbit is generic, not a real spacecraft. The footprint edge is line of sight, not a coverage boundary or antenna pattern."
+  },
+  {
+   "id": "solar-wind-corona",
+   "note": "Over the LASCO C3 loop on the solar-wind Learn page. The frame already prints what a coronagraph is and what the spokes are. What it does NOT say is the time compression, and that none of this is an event.",
+   "text": "Twenty-four hours pass in ten seconds here. Nothing in this picture is an event. The corona streams outward like this every hour of every day, and the plasma leaving along those spokes is still moving at hundreds of kilometres a second by the time it reaches us."
+  }
+ ]
+}

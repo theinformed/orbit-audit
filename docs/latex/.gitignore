@@ -1,0 +1,8 @@
+# LaTeX intermediates. The built PDFs of the two papers ARE tracked in this
+# release: they are the readable form of the papers.
+*.aux
+*.log
+*.out
+*.toc
+build*.log
+__pycache__/

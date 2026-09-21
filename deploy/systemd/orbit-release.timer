@@ -1,0 +1,64 @@
+[Unit]
+Description=Daily rebuild of the orbit-history artifacts, after the element ingest that feeds it
+
+[Timer]
+# ---------------------------------------------------------------------------
+# CADENCE IS A BANDWIDTH DECISION, NOT A FRESHNESS ONE
+#
+# This was hourly at :42 until 2026-08-08. It rebuilds all 256 catalogue shards
+# every time it runs, and because artifacts are content-addressed, every shard
+# gets a new filename and is shipped to the VPS in full. Measured on 2026-08-08:
+# 2.26 GB/h of raw shards, 0.53 GB/h once rsync has compressed them, which was
+# 71% of ALL traffic from bigmem to the VPS -- 12.7 GB a day, 382 GB a month,
+# against a 2 TB/month home allowance. The rest of the site put together
+# (aurora, geospace, ionosphere, catalog, D-RAP, space weather) was 5 GB a day.
+#
+# The shards are not fresh data. They are a months-long element archive whose
+# purpose is browsing orbit changes and manoeuvres over time. Rebuilding that
+# hourly bought a manoeuvre appearing within the hour instead of within the day,
+# on a feature nobody watches in real time, for 380 GB a month.
+#
+# Sean chose daily on 2026-08-08 and asked for the cadence to be settable from
+# the ops page, so treat this file as the DEFAULT rather than the authority --
+# see ops/ for the reconciler once that lands.
+#
+# 07:25 UTC is 03:25 local on bigmem, which is quiet, and it is chosen to clear
+# the hourly element ingest rather than to look tidy: that ingest runs at :17
+# plus up to six minutes of jitter, and a run of this takes 32-45 minutes. From
+# :25 it lands by about :10, ahead of the next :17. The margin is small on a
+# slow run, which is why the archive reader also has to be able to yield -- the
+# schedule reduces the chance of contention and is not what makes it safe.
+#
+# RUN FREQUENCY IS NO LONGER SHIP FREQUENCY (2026-08-18)
+# -----------------------------------------------------
+# Everything above was written when one firing of this timer did one whole
+# rebuild. It no longer does. The archive reached 181.3 M element sets and a
+# full sweep is 6 h 40 m of reading on this disk, so the job now sweeps on a
+# wall-clock budget (2,400 s by default), checkpoints, and continues on the next
+# firing; the shards are written only by the run that FINISHES a sweep.
+#
+# That splits this file's job in two, and only one half is still here:
+#
+#   * how often the job makes progress  -> this OnCalendar. About eleven runs
+#     finish a sweep, so every two hours completes one in roughly a day.
+#   * how often the shards SHIP         -> NOT here any more. It is
+#     `MINIMUM_SECONDS_BETWEEN_SWEEPS` in `pipeline/orbit_release.py`, 20 h,
+#     which is where Sean's 2026-08-08 bandwidth decision now lives. Firing this
+#     timer more often does not ship more data; it only finishes the sweep
+#     sooner and then waits.
+#
+# So the 2.26 GB/h finding above still holds and is still obeyed -- by that
+# constant, not by this line. Change this to change how promptly a sweep
+# completes. Change that to change the bandwidth, and that one is Sean's.
+# ---------------------------------------------------------------------------
+OnCalendar=*-*-* 00/2:25:00 UTC
+RandomizedDelaySec=120
+# Persistent so a machine that was asleep at a scheduled slot rebuilds once on waking
+# rather than serving a fragment that names artifacts a later prune may have
+# removed. This matters more at a daily cadence than it did at an hourly one:
+# a missed run is now a missed day.
+Persistent=true
+Unit=orbit-release.service
+
+[Install]
+WantedBy=timers.target

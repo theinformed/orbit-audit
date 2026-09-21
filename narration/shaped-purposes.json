@@ -1,0 +1,1263 @@
+{
+ "generatedAt": "2026-08-27T17:20:21+00:00",
+ "what": "Two-paragraph openings for the long satellite descriptions, keyed by the sha256 prefix of the published description they were made from. A card whose description is not in here renders it exactly as it always has.",
+ "format": {
+  "lineChars": 46,
+  "sectionMax": 368,
+  "paragraphMax": 230,
+  "sectionMin": 138
+ },
+ "shapeAbove": 800,
+ "distinctTexts": 139,
+ "objectsInScope": 835,
+ "shaped": 102,
+ "objectsShaped": 590,
+ "refused": [
+  {
+   "key": "4d61f5ef0e95cbe0",
+   "why": "TIANMU-1 03: this description is printed on 20 spacecraft, so naming \"TIANMU-1 03\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "5bbf4261a6b55aef",
+   "why": "CENTISPACE-1 S3: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "706e9924103e5825",
+   "why": "CENTISPACE-1 S1: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "de3c2adc16be6c26",
+   "why": "HJ-1A: this description is printed on 6 spacecraft, so naming \"HJ-1A\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "f375a351cadfca15",
+   "why": "HJS-4A: your version hedges a claim this description states plainly. Say it as plainly as the description does"
+  },
+  {
+   "key": "6d67faee3ae51009",
+   "why": "CHINASAT 9: \"PLA\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "53847d8854fd68e9",
+   "why": "STPSAT-6: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "16fab2a29a571b75",
+   "why": "GEESAT 1-01: \"GEESAT\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "05b1948be06e096a",
+   "why": "TIANHUI 1-04: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "16a2ee115bad9de2",
+   "why": "NAVSTAR 66 (USA 232): \"SV\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "4900c44899ef2689",
+   "why": "SES 14: \"NASA-sponsored\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "c1fcbeb144a7102e",
+   "why": "NINGXIA-1 1: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "cb6b22f1439dd35a",
+   "why": "ZHANGHENG 1: this description is printed on 2 spacecraft, so naming \"ZHANGHENG 1\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "39286a2c0386a0cc",
+   "why": "KOREASAT 5: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "624da93eed08f988",
+   "why": "HELLAS-SAT 3: 374 characters over both paragraphs; the ceiling is 368. Cut about 1 words -- take out a whole idea, do not compress every sentence"
+  },
+  {
+   "key": "cd35239c35bd90bb",
+   "why": "ASO-S: 387 characters over both paragraphs; the ceiling is 368. Cut about 3 words -- take out a whole idea, do not compress every sentence"
+  },
+  {
+   "key": "032335a0d75df157",
+   "why": "NAVSTAR 74 (USA 262): 133 characters; below 138 this is a deletion, not a trim"
+  },
+  {
+   "key": "66ee08f31e928077",
+   "why": "NAVSTAR 75 (USA 265): 133 characters; below 138 this is a deletion, not a trim"
+  },
+  {
+   "key": "821d1a7704172864",
+   "why": "SUPERBIRD 8: \"Ku-\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "863d83b4f02de0d7",
+   "why": "TIANTONG-1 1: this description is printed on 3 spacecraft, so naming \"TIANTONG-1 1\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "0531df5a4a2d6f81",
+   "why": "LT-1 01A: 369 characters over both paragraphs; the ceiling is 368. Cut about 1 words -- take out a whole idea, do not compress every sentence"
+  },
+  {
+   "key": "54ffaa76c40f9ea1",
+   "why": "TIANLIAN 1-04: this description is printed on 9 spacecraft, so naming \"TIANLIAN 1-04\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "55bc9c1bc9762dff",
+   "why": "HAISHAO 1: \"Sciences'\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "317e802ffa5fb4c6",
+   "why": "DAMPE: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "b8fe9fcdd1e2aaa1",
+   "why": "WGS F1 (USA 195): this description is printed on 8 spacecraft, so naming \"WGS F1 (USA 195)\" would put the wrong name on the others. Say \"this spacecraft\" instead"
+  },
+  {
+   "key": "2daf10c219a6a630",
+   "why": "COSMOS 2558: 386 characters over both paragraphs; the ceiling is 368. Cut about 2 words -- take out a whole idea, do not compress every sentence"
+  },
+  {
+   "key": "832ad8bdc8864e5d",
+   "why": "TIANHUI 2-01A: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "2b451a7ae1661d6e",
+   "why": "COSMOS 2502: \"Lotos-S\" does not appear in this description. Every name in your version must be one this description already uses"
+  },
+  {
+   "key": "17d67f0e4d765c98",
+   "why": "LING QIAO: this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  },
+  {
+   "key": "0315a0c451a81d3b",
+   "why": "BEIJING 1 (TSINGHUA): this description attributes or qualifies its claim and your version states it flatly. Keep the wording that says who reported it or that it is not confirmed"
+  }
+ ],
+ "notShaped": [
+  "d927d4a10b61cfcd",
+  "c863dd4d9fdbc042",
+  "9e62e1669787d0d7",
+  "8b41be78dddc50c5",
+  "d5cb2cf14e7523c0",
+  "b56f729f443ae9c4",
+  "30b0ac7e96198a5b"
+ ],
+ "entries": {
+  "54d8b5591bb382d1": {
+   "paragraphs": [
+    "An Arctic Satellite Broadband Mission spacecraft provides communications above the Arctic Circle by occupying a highly elliptical orbit that dwells over the north pole.",
+    "It carries payloads for the Norwegian Armed Forces, the U.S. Space Force, and Viasat, with the commercial Ka-band broadband being the largest tenant aboard."
+   ],
+   "chars": 324,
+   "sourceChars": 2425,
+   "members": 2,
+   "example": "ASBM-1",
+   "by": "model"
+  },
+  "edd0db6865ccdb4a": {
+   "paragraphs": [
+    "NAVSTAR 77 (USA 289) is a GPS III satellite operated by the U.S. Space Force, broadcasting weak one-way signals from about 20,200 km to provide global positioning.",
+    "It also carries a U.S. Nuclear Detonation Detection System payload sponsored by the Department of Energy, serving as a detonation detector for a different government mission."
+   ],
+   "chars": 337,
+   "sourceChars": 2101,
+   "members": 1,
+   "example": "NAVSTAR 77 (USA 289)",
+   "by": "model"
+  },
+  "188017bb380a8fb8": {
+   "paragraphs": [
+    "NAVSTAR 84 (USA 545) is a GPS III satellite operated by the U.S. Space Force, broadcasting weak one-way signals from about 20,200 km to provide global positioning.",
+    "It also carries a U.S. Nuclear Detonation Detection System payload sponsored by the Department of Energy, serving as a detonation detector for a different government mission."
+   ],
+   "chars": 337,
+   "sourceChars": 2074,
+   "members": 1,
+   "example": "NAVSTAR 84 (USA 545)",
+   "by": "model"
+  },
+  "322840486e94e512": {
+   "paragraphs": [
+    "NAVSTAR 82 (USA 343) is a GPS III satellite operated by the U.S. Space Force, broadcasting weak one-way signals from about 20,200 km to provide global positioning.",
+    "It also carries a U.S. Nuclear Detonation Detection System payload sponsored by the Department of Energy, serving as a detonation detector for a different government mission."
+   ],
+   "chars": 337,
+   "sourceChars": 2071,
+   "members": 1,
+   "example": "NAVSTAR 82 (USA 343)",
+   "by": "model"
+  },
+  "6a12cb6259cc95ae": {
+   "paragraphs": [
+    "NAVSTAR 81 (USA 319) is a GPS III navigation satellite operated by the U.S. Space Force, broadcasting from about 20,200 km to provide positioning services.",
+    "It also carries a payload for the U.S. Nuclear Detonation Detection System, sponsored by the National Nuclear Security Administration, allowing it to detect nuclear explosions."
+   ],
+   "chars": 331,
+   "sourceChars": 2071,
+   "members": 1,
+   "example": "NAVSTAR 81 (USA 319)",
+   "by": "model"
+  },
+  "c5ca70d56619ab32": {
+   "paragraphs": [
+    "NAVSTAR 79 (USA 304) is a GPS III navigation satellite operated by the U.S. Space Force, broadcasting from about 20,200 km to provide positioning services.",
+    "It also carries a payload for the U.S. Nuclear Detonation Detection System, sponsored by the National Nuclear Security Administration, allowing it to detect nuclear explosions."
+   ],
+   "chars": 331,
+   "sourceChars": 2071,
+   "members": 1,
+   "example": "NAVSTAR 79 (USA 304)",
+   "by": "model"
+  },
+  "4e26eeb6b2c0ef5c": {
+   "paragraphs": [
+    "NAVSTAR 83 (USA 440) is a GPS III navigation satellite operated by the U.S. Space Force, broadcasting from about 20,200 km to provide positioning services.",
+    "It also carries a payload for the U.S. Nuclear Detonation Detection System, sponsored by the National Nuclear Security Administration, allowing it to detect nuclear explosions."
+   ],
+   "chars": 331,
+   "sourceChars": 2067,
+   "members": 1,
+   "example": "NAVSTAR 83 (USA 440)",
+   "by": "model"
+  },
+  "6bba64132107aa15": {
+   "paragraphs": [
+    "NAVSTAR 80 (USA 309) is a GPS III navigation satellite operated by the U.S. Space Force, broadcasting from about 20,200 km to provide positioning services.",
+    "It also carries a payload for the U.S. Nuclear Detonation Detection System, sponsored by the National Nuclear Security Administration, allowing it to detect nuclear explosions."
+   ],
+   "chars": 331,
+   "sourceChars": 2066,
+   "members": 1,
+   "example": "NAVSTAR 80 (USA 309)",
+   "by": "model"
+  },
+  "15e759405bd58cfe": {
+   "paragraphs": [
+    "NAVSTAR 78 (USA 293) is a GPS III navigation satellite broadcasting pseudo-random-noise code PRN 18 in plane D, slot 6 of the constellation.",
+    "Operated by the U.S. Space Force, it also carries a payload for the U.S. Nuclear Detonation Detection System, sponsored by the National Nuclear Security Administration."
+   ],
+   "chars": 308,
+   "sourceChars": 2065,
+   "members": 1,
+   "example": "NAVSTAR 78 (USA 293)",
+   "by": "model"
+  },
+  "f06db6bf475eae17": {
+   "paragraphs": [
+    "This Shijian spacecraft is assessed as being used for space environment detection and related technology verification, part of a family containing both civil and military assets.",
+    "The US Air Force's China Aerospace Studies Institute assesses that Shijian sits later in China's development pipeline than Shiyan."
+   ],
+   "chars": 308,
+   "sourceChars": 1682,
+   "members": 22,
+   "example": "SJ-7",
+   "by": "model"
+  },
+  "f8f2e5cea85b5fdd": {
+   "paragraphs": [
+    "A Yunhai-1 spacecraft is used for atmospheric and marine environment surveys, space environment surveys, disaster prevention and scientific experiments.",
+    "The WMO's OSCAR satellite database states that CNSA operates the Yunhai system for the Chinese military, an assessment characterised by the absence of WMO station identifiers."
+   ],
+   "chars": 327,
+   "sourceChars": 1674,
+   "members": 4,
+   "example": "YUNHAI 1",
+   "by": "model"
+  },
+  "095958dcb71418b8": {
+   "paragraphs": [
+    "One of four Ludi Kancha Weixing spacecraft, this satellite is mainly used for remote sensing exploration of land resources.",
+    "Gunter Krebs, Henk Smid and Jonathan McDowell's GCAT assess it as military topographic reconnaissance, with the operator likely being a PLA entity."
+   ],
+   "chars": 270,
+   "sourceChars": 1646,
+   "members": 4,
+   "example": "LKW-1",
+   "by": "model"
+  },
+  "30ae9d7218f40334": {
+   "paragraphs": [
+    "A Yunhai-2 spacecraft, flown in batches of six, is assessed by the WMO's OSCAR database, Gunter Krebs and Henk Smid as a GNSS radio-occultation constellation for temperature and humidity sounding.",
+    "China characterises it as a satellite for atmospheric and marine environment survey, space environment survey, disaster prevention and scientific experiment."
+   ],
+   "chars": 353,
+   "sourceChars": 1582,
+   "members": 12,
+   "example": "YUNHAI 2-1A",
+   "by": "model"
+  },
+  "b65f075c1139e8cb": {
+   "paragraphs": [
+    "NAVSTAR 63 (USA 203) is a GPS Block IIR-M satellite that carried the demonstration payload for the L5 band, which left signal leakage reflecting off the filter.",
+    "It has never been set healthy for routine navigation service and is held in reserve, carrying no plane or slot assignment."
+   ],
+   "chars": 282,
+   "sourceChars": 1579,
+   "members": 1,
+   "example": "NAVSTAR 63 (USA 203)",
+   "by": "model"
+  },
+  "bfc30cb45af9db82": {
+   "paragraphs": [
+    "A Hulianwang Digui satellite in China's Guowang broadband constellation flies in the mid-inclination shell at about 1,156 km.",
+    "No mass, dimensions, or capability description has been published for any Guowang flight, so specific claims are treated as unsourced."
+   ],
+   "chars": 259,
+   "sourceChars": 1507,
+   "members": 126,
+   "example": "HULIANWANG DIGUI-11",
+   "by": "model"
+  },
+  "26fec281fd3b8f90": {
+   "paragraphs": [
+    "A Yunyao-1 spacecraft provides commercial weather data via GNSS radio occultation and reflectometry, sampling the tropics in low-inclination orbits.",
+    "Xinhua attributes the constellation to Tianjin Yunyao Aerospace Technology, a private Chinese company."
+   ],
+   "chars": 250,
+   "sourceChars": 1493,
+   "members": 3,
+   "example": "YUNYAO-1 18",
+   "by": "model"
+  },
+  "9f4a0eec9c27f0c1": {
+   "paragraphs": [
+    "A Tianqi satellite operates China's first operational low-Earth-orbit satellite Internet-of-Things network using UHF narrowband store-and-forward relays.",
+    "No source associates the system with the Chinese military, though it holds a commercial trial licence."
+   ],
+   "chars": 255,
+   "sourceChars": 1478,
+   "members": 4,
+   "example": "TIANQI-6",
+   "by": "model"
+  },
+  "8942c4c6881a6771": {
+   "paragraphs": [
+    "A Haiyang-2 ocean dynamics satellite measures sea surface height, winds, and waves using radar altimeters and scatterometers.",
+    "Its data reaches Western operational meteorology, with EUMETSAT distributing scatterometer winds since October 2024."
+   ],
+   "chars": 241,
+   "sourceChars": 1468,
+   "members": 4,
+   "example": "HAIYANG 2A",
+   "by": "model"
+  },
+  "bfce500a122a0046": {
+   "paragraphs": [
+    "A Yunyao-1 spacecraft provides commercial weather data via GNSS radio occultation and reflectometry, operating in sun-synchronous orbits.",
+    "Xinhua attributes the constellation to Tianjin Yunyao Aerospace Technology, a private Chinese company."
+   ],
+   "chars": 239,
+   "sourceChars": 1461,
+   "members": 6,
+   "example": "YUNYAO-1 43",
+   "by": "model"
+  },
+  "80f6607cd5575958": {
+   "paragraphs": [
+    "A Jilin-1 satellite delivers commercial optical imagery, with Gaofen models returning high-resolution panchromatic and multispectral data.",
+    "US Treasury designated the operator for supplying imagery to the Wagner Group, demonstrating commercial reach to combatants."
+   ],
+   "chars": 262,
+   "sourceChars": 1442,
+   "members": 28,
+   "example": "JILIN 1",
+   "by": "model"
+  },
+  "7752031784917342": {
+   "paragraphs": [
+    "This spacecraft is part of Guowang, China's state low-Earth-orbit broadband constellation operated by China Satellite Network Group.",
+    "Analysts claim the architecture supports strategic infrastructure with multiple payload types, though specific capabilities remain not published."
+   ],
+   "chars": 277,
+   "sourceChars": 1429,
+   "members": 60,
+   "example": "HULIANWANG DIGUI-01",
+   "by": "model"
+  },
+  "c78e808fcf487d9d": {
+   "paragraphs": [
+    "This Zhuhai-1 satellite is owned by Zhuhai Orbita Aerospace, the first private Chinese company to launch and operate its own constellation.",
+    "Assessment of its hyperspectral payloads reveals unusual spectral-spatial capabilities for a smallsat, despite calibration limitations."
+   ],
+   "chars": 274,
+   "sourceChars": 1427,
+   "members": 5,
+   "example": "ZHUHAI-1 OVS-02",
+   "by": "model"
+  },
+  "7376156ee49512ae": {
+   "paragraphs": [
+    "This Shiyan spacecraft is used for space environment detection and related technology tests, with no operator or payload ever named.",
+    "Analysts assess the series as China's space technology pipeline, where new payloads are piloted on a common bus for diverse missions."
+   ],
+   "chars": 265,
+   "sourceChars": 1400,
+   "members": 32,
+   "example": "SHIYAN 3 (SY-3)",
+   "by": "model"
+  },
+  "75192474a6292ea1": {
+   "paragraphs": [
+    "A Shijian spacecraft, part of a family that assesses operational practice for systems already adopted rather than piloting new ones.",
+    "The programme is described as deliberately dual-use, with missions ranging from recoverable capsules to geostationary proximity operations."
+   ],
+   "chars": 271,
+   "sourceChars": 1308,
+   "members": 10,
+   "example": "SHIJIAN 6 01A (SJ-6 01A)",
+   "by": "model"
+  },
+  "dc0a9e902857cc8d": {
+   "paragraphs": [
+    "One of five satellites in the High-Speed Laser Diamond Constellation Test System, launched together on 12 December 2024 from Jiuquan.",
+    "SpaceNews assesses that the focus is inter-satellite laser communication links, which would reduce dependence on overseas ground stations."
+   ],
+   "chars": 271,
+   "sourceChars": 1295,
+   "members": 5,
+   "example": "GJZ 01",
+   "by": "model"
+  },
+  "8b9fde0553172064": {
+   "paragraphs": [
+    "A Chuangxin spacecraft, where the designation tells you which institute built the satellite rather than necessarily what it does.",
+    "The name covers both a genuine Chinese Academy of Sciences microsatellite programme and secondary designations for satellites announced under other names."
+   ],
+   "chars": 283,
+   "sourceChars": 1294,
+   "members": 11,
+   "example": "CHUANG XIN 1 (CZ-1)",
+   "by": "model"
+  },
+  "46b9a2fb37b998f6": {
+   "paragraphs": [
+    "A geostationary satellite of SES, the Luxembourg operator that flies the largest combined GEO and MEO commercial fleet.",
+    "This spacecraft also carried a payload for the Commercially Hosted Infrared Payload, sponsored by the U.S. Air Force Space and Missile Systems Center."
+   ],
+   "chars": 269,
+   "sourceChars": 1284,
+   "members": 1,
+   "example": "SES 2",
+   "by": "model"
+  },
+  "93ee03e36dd60a11": {
+   "paragraphs": [
+    "A satellite in the Tianqi constellation, China's first low-Earth-orbit satellite Internet-of-Things network to reach operational service.",
+    "It is built and run by Beijing Guodian Gaoke Technology, carrying a UHF narrowband store-and-forward relay for short text and voice clips."
+   ],
+   "chars": 275,
+   "sourceChars": 1261,
+   "members": 4,
+   "example": "TIANQI 21",
+   "by": "model"
+  },
+  "deb47b53a63a2438": {
+   "paragraphs": [
+    "A GPS satellite, part of the Global Positioning System's constellation flown by the U.S. Space Force's 2nd Space Operations Squadron.",
+    "This Block IIR flight 3 has been held as an on-orbit spare since 10 November 2020 rather than occupying an active slot."
+   ],
+   "chars": 252,
+   "sourceChars": 1253,
+   "members": 1,
+   "example": "NAVSTAR 46 (USA 145)",
+   "by": "model"
+  },
+  "92f7cab316762dfe": {
+   "paragraphs": [
+    "One of two Shiyan-12 spacecraft launched in December 2021 for space environment detection, these 3,000 kg satellites are assessed by analysts as geostationary inspector satellites.",
+    "Their observed behaviour, including manoeuvring near US military assets, characterises them as such, though no Chinese source confirms this attribution."
+   ],
+   "chars": 332,
+   "sourceChars": 1250,
+   "members": 2,
+   "example": "SHIYAN 12 01 (SY-12 01)",
+   "by": "model"
+  },
+  "2d35a4b94a28da6d": {
+   "paragraphs": [
+    "This Ku-band communications satellite carries a payload for GAGAN, India's satellite-based augmentation system for civil aviation navigation.",
+    "Operated by ISRO, it broadcasts GPS corrections and integrity messages sponsored by the Airports Authority of India to improve accuracy and signal trust."
+   ],
+   "chars": 294,
+   "sourceChars": 1243,
+   "members": 2,
+   "example": "GSAT 8",
+   "by": "model"
+  },
+  "524a82186f4e4c74": {
+   "paragraphs": [
+    "NAVSTAR 65 is a Block IIF GPS satellite broadcasting the L5 civil signal, the first of its generation to do so operationally.",
+    "Built by Boeing with a 12-year design life, it orbits at 20,200 km to provide positioning services despite being jammable and spoofable."
+   ],
+   "chars": 261,
+   "sourceChars": 1243,
+   "members": 1,
+   "example": "NAVSTAR 65 (USA 213)",
+   "by": "model"
+  },
+  "a9749153834199ab": {
+   "paragraphs": [
+    "This SuperView Neo spacecraft is part of China's commercial very-high-resolution imaging constellation owned by CASC subsidiary China Siwei.",
+    "Analysts attribute dual-use potential to the platform due to state ownership, though no named analyst has published a specific military attribution."
+   ],
+   "chars": 288,
+   "sourceChars": 1242,
+   "members": 12,
+   "example": "SUPERVIEW NEO-1 01",
+   "by": "model"
+  },
+  "8578f800d5dd7907": {
+   "paragraphs": [
+    "NAVSTAR 57 is a Block IIR-M GPS satellite, the first to broadcast the jam-resistant M-code signal for electronic-warfare environments.",
+    "Launched between 2005 and 2009, it orbits at 20,200 km to provide positioning services that remain usable under heavy interference."
+   ],
+   "chars": 265,
+   "sourceChars": 1234,
+   "members": 1,
+   "example": "NAVSTAR 57 (USA 183)",
+   "by": "model"
+  },
+  "1f04e81fedd0e8d9": {
+   "paragraphs": [
+    "LUDI TANCE-4 01A is a L-band radar satellite associated with the Earth observation programme Ludi Tance, despite its geostationary orbit.",
+    "The site records the programme attribution while noting the inconsistency, as Earth-imaging spacecraft typically fly in low, high-inclination orbits."
+   ],
+   "chars": 286,
+   "sourceChars": 1229,
+   "members": 1,
+   "example": "LUDI TANCE-4 01A",
+   "by": "model"
+  },
+  "1c2129e2f644e613": {
+   "paragraphs": [
+    "A Ziyuan spacecraft, part of China's civil land-resources imaging programme, carries high-resolution imaging instruments for global mapping.",
+    "Data is distributed by CRESDA, a member of the Committee on Earth Observation Satellites, though access is noted as constrained."
+   ],
+   "chars": 268,
+   "sourceChars": 1222,
+   "members": 5,
+   "example": "ZY 1",
+   "by": "model"
+  },
+  "d8618bf515e7176e": {
+   "paragraphs": [
+    "NAVSTAR 49 (USA 154) is a Block IIR GPS satellite built by Lockheed Martin, broadcasting legacy civil and military signals from orbit.",
+    "It has been held as an on-orbit spare since January 2023, maintaining coverage for the U.S. Space Force's navigation constellation."
+   ],
+   "chars": 265,
+   "sourceChars": 1215,
+   "members": 1,
+   "example": "NAVSTAR 49 (USA 154)",
+   "by": "model"
+  },
+  "e2e67364ee046232": {
+   "paragraphs": [
+    "NAVSTAR 55 (USA 178) is a Block IIR GPS satellite built by Lockheed Martin, broadcasting legacy civil and military signals from orbit.",
+    "It has been held as an on-orbit spare since March 2020, maintaining coverage for the U.S. Space Force's navigation constellation."
+   ],
+   "chars": 263,
+   "sourceChars": 1213,
+   "members": 1,
+   "example": "NAVSTAR 55 (USA 178)",
+   "by": "model"
+  },
+  "aa14d88cc6448175": {
+   "paragraphs": [
+    "CFOSAT is a joint China–France oceanography satellite carrying two radars to measure ocean surface wind vectors and directional wave spectra.",
+    "Its data is assimilated into operational wave models, supporting maritime forecasting and naval hydrographic services in the West."
+   ],
+   "chars": 271,
+   "sourceChars": 1211,
+   "members": 1,
+   "example": "CFOSAT",
+   "by": "model"
+  },
+  "6ca2f58816f7f54b": {
+   "paragraphs": [
+    "A PIESAT-2 commercial radar satellite flies in an interferometric formation to measure surface height and movement with millimeter sensitivity.",
+    "Reconnaissance use is asserted for this constellation, though the site records this only as an unattributed assessment."
+   ],
+   "chars": 262,
+   "sourceChars": 1205,
+   "members": 4,
+   "example": "PIESAT-2 09",
+   "by": "model"
+  },
+  "97596186102bd259": {
+   "paragraphs": [
+    "NAVSTAR 76 (USA 266) is a Block IIF GPS satellite built by Boeing, adding a protected civil signal on L5 to the navigation constellation.",
+    "It is the twelfth and last Block IIF spacecraft, completing that generation with advanced atomic clocks and a 12-year design life."
+   ],
+   "chars": 267,
+   "sourceChars": 1204,
+   "members": 1,
+   "example": "NAVSTAR 76 (USA 266)",
+   "by": "model"
+  },
+  "dedbbe7499a9c601": {
+   "paragraphs": [
+    "QZS-3 is the geostationary member of Japan's Michibiki constellation, carrying the satellite-based augmentation broadcast for the Ministry of Land, Infrastructure, Transport and Tourism.",
+    "Since April 2020, it has transmitted SBAS signals providing aircraft range-error corrections and anomaly warnings over Japanese airspace from geostationary orbit."
+   ],
+   "chars": 348,
+   "sourceChars": 1201,
+   "members": 1,
+   "example": "QZS-3",
+   "by": "model"
+  },
+  "33da19c437a61c9d": {
+   "paragraphs": [
+    "COSPAR 2013-037C is Shijian-15, the manoeuvring member of a trio of Chinese spacecraft launched in July 2013 for observation of space debris.",
+    "The Secure World Foundation assesses that it used rendezvous capabilities against Chuangxin-3 in 2013, 2014, and 2016, rather than the satellite with the robotic arm."
+   ],
+   "chars": 307,
+   "sourceChars": 1198,
+   "members": 1,
+   "example": "PAYLOAD C",
+   "by": "model"
+  },
+  "f3d306f57b9ff72a": {
+   "paragraphs": [
+    "NAVSTAR 85 (USA 581) is a GPS III satellite, the newest in this catalogue, broadcasting pseudo-random-noise code PRN 20 in plane F, slot 5.",
+    "GPS III adds the interoperable L1C civil signal, has no Selective Availability, and is built for a 15-year life to counter jamming and spoofing."
+   ],
+   "chars": 283,
+   "sourceChars": 1196,
+   "members": 1,
+   "example": "NAVSTAR 85 (USA 581)",
+   "by": "model"
+  },
+  "57c391f28e08fe5f": {
+   "paragraphs": [
+    "INTELSAT 14 is an Intelsat geostationary communications satellite that carried the first commercial flight of the Internet Routing In Space payload.",
+    "Sponsored by the U.S. Department of Defense, the router's defence demonstration concluded in 2010 before the payload passed to commercial use."
+   ],
+   "chars": 290,
+   "sourceChars": 1191,
+   "members": 1,
+   "example": "INTELSAT 14",
+   "by": "model"
+  },
+  "304b34348b2d6422": {
+   "paragraphs": [
+    "A Taijing commercial remote-sensing satellite built by MinoSpace, a Beijing smallsat manufacturer. The constellation includes optical imagers and an X-band synthetic aperture radar satellite.",
+    "One spacecraft in the line was reportedly transferred on orbit to a Russian company and now operates as Stilsat 1."
+   ],
+   "chars": 305,
+   "sourceChars": 1164,
+   "members": 4,
+   "example": "TAIJING-2 04",
+   "by": "model"
+  },
+  "9ce4d7da2e2029e7": {
+   "paragraphs": [
+    "Haiyang-4A is China's ocean salinity detection satellite, launched 13 November 2024. It carries an interferometric microwave radiometer and MICAP, a combined active and passive microwave imager.",
+    "The mission aims to fill China's gap in high-accuracy global salinity measurement. It flies a 654 km sun-synchronous dawn-dusk orbit with a 06:00 descending node."
+   ],
+   "chars": 356,
+   "sourceChars": 1157,
+   "members": 1,
+   "example": "HAIYANG 4A",
+   "by": "model"
+  },
+  "641172ddd43278f0": {
+   "paragraphs": [
+    "NAVSTAR 54 is a GPS satellite, part of the Global Positioning System's constellation. It is a Block IIR flight, built by Lockheed Martin, broadcasting legacy civil and military signals.",
+    "The U.S. Space Force's 2nd Space Operations Squadron flies it in six orbital planes at about 20,200 km. This specific satellite is SVN 59, broadcasting PRN 19 in plane C, slot 5."
+   ],
+   "chars": 363,
+   "sourceChars": 1154,
+   "members": 1,
+   "example": "NAVSTAR 54 (USA 177)",
+   "by": "model"
+  },
+  "d0c75ad5bfe8eb39": {
+   "paragraphs": [
+    "NAVSTAR 56 is a GPS satellite, part of the Global Positioning System's constellation. It is a Block IIR flight, built by Lockheed Martin, broadcasting legacy civil and military signals.",
+    "The U.S. Space Force's 2nd Space Operations Squadron flies it in six orbital planes at about 20,200 km. This specific satellite is SVN 61, broadcasting PRN 02 in plane D, slot 1."
+   ],
+   "chars": 363,
+   "sourceChars": 1154,
+   "members": 1,
+   "example": "NAVSTAR 56 (USA 180)",
+   "by": "model"
+  },
+  "2e9d3d08464ef194": {
+   "paragraphs": [
+    "NAVSTAR 51 is a GPS satellite, part of the Global Positioning System's constellation. It is a Block IIR flight, built by Lockheed Martin, broadcasting legacy civil and military signals.",
+    "The U.S. Space Force's 2nd Space Operations Squadron flies it in six orbital planes at about 20,200 km. This specific satellite is SVN 56, broadcasting PRN 16 in plane B, slot 1."
+   ],
+   "chars": 363,
+   "sourceChars": 1153,
+   "members": 1,
+   "example": "NAVSTAR 51 (USA 166)",
+   "by": "model"
+  },
+  "83b954437d3e671a": {
+   "paragraphs": [
+    "NAVSTAR 48 is a GPS satellite, part of the Global Positioning System's constellation. It is a Block IIR flight, built by Lockheed Martin, broadcasting legacy civil and military signals.",
+    "The U.S. Space Force's 2nd Space Operations Squadron flies it in six orbital planes at about 20,200 km. This specific satellite is SVN 44, broadcasting PRN 22 in plane B, slot 3."
+   ],
+   "chars": 363,
+   "sourceChars": 1153,
+   "members": 1,
+   "example": "NAVSTAR 48 (USA 151)",
+   "by": "model"
+  },
+  "609d4ef9710fcec8": {
+   "paragraphs": [
+    "NAVSTAR 61 (USA 199) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 61 (USA 199)",
+   "by": "model"
+  },
+  "9b72baefe4aa43b6": {
+   "paragraphs": [
+    "NAVSTAR 62 (USA 201) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 62 (USA 201)",
+   "by": "model"
+  },
+  "a35550e6dbbdd366": {
+   "paragraphs": [
+    "NAVSTAR 64 (USA 206) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 64 (USA 206)",
+   "by": "model"
+  },
+  "ac10e9669ed9e63c": {
+   "paragraphs": [
+    "NAVSTAR 58 (USA 190) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 58 (USA 190)",
+   "by": "model"
+  },
+  "dea70514734ec945": {
+   "paragraphs": [
+    "NAVSTAR 59 (USA 192) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 59 (USA 192)",
+   "by": "model"
+  },
+  "f2756fe26143302a": {
+   "paragraphs": [
+    "NAVSTAR 60 (USA 196) is a Block IIR-M GPS satellite broadcasting the jam-resistant M-code signal for use in electronic-warfare environments."
+   ],
+   "chars": 140,
+   "sourceChars": 1130,
+   "members": 1,
+   "example": "NAVSTAR 60 (USA 196)",
+   "by": "model"
+  },
+  "93d0f7a9a1b7d07e": {
+   "paragraphs": [
+    "A Tianping calibration satellite serves as a reference target for ground radar and optical tracker calibration.",
+    "China uses the programme to support imaging experiments and correct orbital prediction models."
+   ],
+   "chars": 205,
+   "sourceChars": 1127,
+   "members": 4,
+   "example": "TIANPING 3A-01",
+   "by": "model"
+  },
+  "4cbf432268f875af": {
+   "paragraphs": [
+    "NAVSTAR 71 (USA 256) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 7 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 71 (USA 256)",
+   "by": "model"
+  },
+  "510a6bdadec37926": {
+   "paragraphs": [
+    "NAVSTAR 67 (USA 239) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 3 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 67 (USA 239)",
+   "by": "model"
+  },
+  "590465c52181bea1": {
+   "paragraphs": [
+    "NAVSTAR 70 (USA 251) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 6 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 70 (USA 251)",
+   "by": "model"
+  },
+  "8de53ba0045233a4": {
+   "paragraphs": [
+    "NAVSTAR 69 (USA 248) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 5 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 69 (USA 248)",
+   "by": "model"
+  },
+  "a6881d0ea0ccd40a": {
+   "paragraphs": [
+    "NAVSTAR 68 (USA 242) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 4 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 68 (USA 242)",
+   "by": "model"
+  },
+  "b11ada5d063840eb": {
+   "paragraphs": [
+    "NAVSTAR 72 (USA 258) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 8 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 72 (USA 258)",
+   "by": "model"
+  },
+  "b4ea2238b081ae47": {
+   "paragraphs": [
+    "NAVSTAR 73 (USA 260) is a GPS satellite broadcasting from the U.S. Space Force's constellation.",
+    "This Block IIF flight 9 adds the third civil signal on L5 with advanced atomic clocks."
+   ],
+   "chars": 181,
+   "sourceChars": 1126,
+   "members": 1,
+   "example": "NAVSTAR 73 (USA 260)",
+   "by": "model"
+  },
+  "e1fc800a18677ab8": {
+   "paragraphs": [
+    "Shiyan-7 is one of three Chinese spacecraft launched on 19 July 2013, identified as the object carrying a teleoperated robotic arm.",
+    "The Secure World Foundation assesses that Shijian-15, not Shiyan-7, conducted the proximity operations against Chuangxin-3."
+   ],
+   "chars": 254,
+   "sourceChars": 1119,
+   "members": 1,
+   "example": "PAYLOAD A",
+   "by": "model"
+  },
+  "d99a866dbcf7d253": {
+   "paragraphs": [
+    "Michibiki No. 6 is the first of three satellites added to grow QZSS from four to seven, reaching its operational position in February 2025.",
+    "It carries the Japanese satellite-based augmentation service (MSAS) on an allocated share of its payload, sponsored by the Ministry of Land, Infrastructure, Transport and Tourism."
+   ],
+   "chars": 318,
+   "sourceChars": 1104,
+   "members": 1,
+   "example": "QZS-6",
+   "by": "model"
+  },
+  "8ac02dd6af5caa4d": {
+   "paragraphs": [
+    "A BRO satellite is a smallsat carrying a single wide-band RF payload to detect and geolocate the radio-frequency emissions of ships at sea.",
+    "Unseenlabs characterises the data as complementing AIS, VMS, SAR and optical rather than replacing them."
+   ],
+   "chars": 243,
+   "sourceChars": 1064,
+   "members": 16,
+   "example": "BRO-5",
+   "by": "model"
+  },
+  "1e25fd86e7b81145": {
+   "paragraphs": [
+    "Yuxing-3 06 is China's first commercial experimental satellite carrying a flexible robotic arm, launched in March 2026.",
+    "It exists to test the manipulation problem behind on-orbit servicing, including simulated refuelling operations and precision control."
+   ],
+   "chars": 253,
+   "sourceChars": 1055,
+   "members": 1,
+   "example": "YUXING-3 06",
+   "by": "model"
+  },
+  "25f3c6afa7f82ff6": {
+   "paragraphs": [
+    "Shijian-21 is a Chinese spacecraft launched in October 2021 to test and verify space debris mitigation technologies.",
+    "Analysts characterise its January 2022 demonstration of docking with and moving a defunct satellite as potentially hostile or benign."
+   ],
+   "chars": 249,
+   "sourceChars": 1051,
+   "members": 1,
+   "example": "SJ-21",
+   "by": "model"
+  },
+  "7884f689fd1b89b2": {
+   "paragraphs": [
+    "Shijian-17 is a roughly 4,000 kg CAST spacecraft launched in November 2016, known for free manoeuvre across the geostationary belt.",
+    "US Space Command assessed it carries a robotic arm, though China has never described the spacecraft's payload."
+   ],
+   "chars": 241,
+   "sourceChars": 1039,
+   "members": 1,
+   "example": "SJ-17",
+   "by": "model"
+  },
+  "b1a9728368039894": {
+   "paragraphs": [
+    "Shijian-25 is a satellite launched in January 2025 to validate the technology for satellite refuelling and life extension.",
+    "Whether propellant actually transferred during its proximity operations with Shijian-21 is not established by anybody."
+   ],
+   "chars": 240,
+   "sourceChars": 1033,
+   "members": 1,
+   "example": "SJ-25",
+   "by": "model"
+  },
+  "d6bec965a82d2658": {
+   "paragraphs": [
+    "YAOGAN-41 is a Chinese spacecraft in the Yaogan series, assessed by the U.S. Department of Defense as an intelligence, surveillance and reconnaissance platform.",
+    "China characterises it as civil remote sensing for land surveys and disaster relief, while the site records the U.S. assessment and notes the orbital inconsistency with Earth observation."
+   ],
+   "chars": 347,
+   "sourceChars": 1030,
+   "members": 1,
+   "example": "YAOGAN-41",
+   "by": "model"
+  },
+  "8870950e1ab84b2f": {
+   "paragraphs": [
+    "This Haiyang-1 spacecraft is the ocean-colour half of China's civil ocean observation programme, built by CAST and operated by the National Satellite Ocean Application Service.",
+    "Its primary instrument, COCTS, provides daily global coverage, while additional sensors monitor coastal zones and ship positions via an AIS receiver."
+   ],
+   "chars": 325,
+   "sourceChars": 1025,
+   "members": 3,
+   "example": "HAIYANG 1B",
+   "by": "model"
+  },
+  "9df8b41fdad338ee": {
+   "paragraphs": [
+    "UFO 10 (USA 146) is a UHF Follow-On spacecraft operated by the U.S. Navy to carry narrowband tactical satellite communications from geostationary orbit.",
+    "It also carries a Ka-band broadcast package for the Global Broadcast Service, sponsored by the Global Broadcast Service Joint Program and led by the U.S. Space Force."
+   ],
+   "chars": 318,
+   "sourceChars": 1023,
+   "members": 1,
+   "example": "UFO 10 (USA 146)",
+   "by": "model"
+  },
+  "f9f8a7bb0f756528": {
+   "paragraphs": [
+    "XINZHENGCHENG 01 is a technology-demonstration microsatellite from the CAS Satellite Technology Group, flown on the maiden launch of the Kinetica-2 rocket.",
+    "It serves as a miniature space laboratory with commercial equipment, and SpaceMapper reports it participated in a long-range approach test with Xinzhengcheng-02 in April 2026."
+   ],
+   "chars": 330,
+   "sourceChars": 997,
+   "members": 1,
+   "example": "XINZHENGCHENG 01",
+   "by": "model"
+  },
+  "6ca85ed7f7188034": {
+   "paragraphs": [
+    "PRC TEST SPACECRAFT 4 is China's reusable experimental spaceplane, launched on a Long March 2F and returned to a runway.",
+    "It has conducted missions lasting up to 276 days and released companion objects, drawing comparison to the US X-37B."
+   ],
+   "chars": 236,
+   "sourceChars": 956,
+   "members": 1,
+   "example": "PRC TEST SPACECRAFT 4",
+   "by": "model"
+  },
+  "af9d483b34833ba6": {
+   "paragraphs": [
+    "Optus and Defence C1 is a geostationary spacecraft carrying commercial Ku-band services for Optus and military communications for the Australian Department of Defence.",
+    "It shares its bus with Australian Defence Force satellite communications, with the commercial operator holding the prime contract for the military side."
+   ],
+   "chars": 319,
+   "sourceChars": 951,
+   "members": 1,
+   "example": "OPTUS C1",
+   "by": "model"
+  },
+  "1677a743f8b4b487": {
+   "paragraphs": [
+    "YAOGAN-46 is a spacecraft in China's Yaogan series, assessed by the U.S. Department of Defense as People's Liberation Army intelligence, surveillance and reconnaissance.",
+    "China characterises it as civil remote sensing, while the object flies in medium Earth orbit, an orbit not typically used for imaging missions."
+   ],
+   "chars": 312,
+   "sourceChars": 948,
+   "members": 1,
+   "example": "YAOGAN-46",
+   "by": "model"
+  },
+  "3feb1f196bab602f": {
+   "paragraphs": [
+    "YAOGAN 45 is a spacecraft in China's Yaogan series, assessed by the U.S. Department of Defense as People's Liberation Army intelligence, surveillance and reconnaissance.",
+    "China characterises it as civil remote sensing, while the object flies in medium Earth orbit, an orbit not typically used for imaging missions."
+   ],
+   "chars": 312,
+   "sourceChars": 948,
+   "members": 1,
+   "example": "YAOGAN 45",
+   "by": "model"
+  },
+  "202163daf5c0d08e": {
+   "paragraphs": [
+    "PAYLOAD B is Chuangxin-3, a small store-and-forward communications satellite developed by the Chinese Academy of Sciences.",
+    "The Secure World Foundation assesses that Shijian-15 conducted rendezvous and proximity operations against it, using it as a target."
+   ],
+   "chars": 254,
+   "sourceChars": 940,
+   "members": 1,
+   "example": "PAYLOAD B",
+   "by": "model"
+  },
+  "0109ca309c6a6e09": {
+   "paragraphs": [
+    "JB-3 C is Ziyuan-2 03, the third of China's Ziyuan-2 imaging satellites, launched in November 2004 and built by CAST.",
+    "Gunter Krebs assesses it was China's first high-resolution military imaging satellite, though Chinese officials denied a military mission."
+   ],
+   "chars": 255,
+   "sourceChars": 936,
+   "members": 1,
+   "example": "JB-3 C",
+   "by": "model"
+  },
+  "15a60fc0a0bc67b7": {
+   "paragraphs": [
+    "A Zhihui Tianwang-1 spacecraft is China's first medium Earth orbit broadband communications satellite, launched in May 2024 into an orbit near 20,000 km.",
+    "The pair carries multi-beam microwave and laser inter-satellite links to relay data for China's Antarctic and Arctic stations, ocean shipping, and aircraft."
+   ],
+   "chars": 309,
+   "sourceChars": 920,
+   "members": 2,
+   "example": "ZHIHUI TIANWANG-1 01A",
+   "by": "model"
+  },
+  "d5ada3660c612e23": {
+   "paragraphs": [
+    "Tansuo-1 is a 204 kg Chinese small satellite launched in April 2004, designed for land resource photographic survey and geographic environment monitoring.",
+    "It was the country's first transmission-type satellite able to downlink digital imagery directly, a capability assessed as important for proving technology for military reconnaissance."
+   ],
+   "chars": 338,
+   "sourceChars": 917,
+   "members": 1,
+   "example": "TANSUO 1",
+   "by": "model"
+  },
+  "5297b4ea05ceb22b": {
+   "paragraphs": [
+    "This polar-orbiting communications satellite relays mobile voice and data through Iridium's cross-linked global constellation.",
+    "It also carries a payload for Aireon space-based aircraft surveillance, a claim attached to these catalog numbers because the original 1990s satellites never carried them."
+   ],
+   "chars": 297,
+   "sourceChars": 915,
+   "members": 31,
+   "example": "IRIDIUM 103",
+   "by": "model"
+  },
+  "afe60da09e0aec85": {
+   "paragraphs": [
+    "An Air Force Research Laboratory subsatellite released near the geostationary belt by EAGLE, this object flies just below geostationary altitude and drifts steadily eastward.",
+    "Analysts assess it variously as an experimental subsatellite or an inspector satellite, with Gunter Krebs marking the USA 285 identification as tentative."
+   ],
+   "chars": 328,
+   "sourceChars": 894,
+   "members": 1,
+   "example": "USA 285",
+   "by": "model"
+  },
+  "3116562de252f16b": {
+   "paragraphs": [
+    "A Xingchi-1 satellite from the Chinese commercial operator EllipSpace is the first networking pair of a constellation the company plans to grow past a hundred spacecraft.",
+    "The satellites are built for wide-field guided imaging and autonomous mission planning, with the significant claim that they extract targets on-board rather than on the ground."
+   ],
+   "chars": 346,
+   "sourceChars": 884,
+   "members": 2,
+   "example": "XINGCHI-1 02A",
+   "by": "model"
+  },
+  "dfbaf6c0752b835d": {
+   "paragraphs": [
+    "A Xingyun narrowband satellite Internet-of-Things demonstrator, this low-Earth-orbit machine-to-machine project is led by CASIC's Fourth Academy.",
+    "The intended service relays short data messages from unattended sensors and vessels, with laser inter-satellite links tested on the Xingyun-2 pair."
+   ],
+   "chars": 292,
+   "sourceChars": 876,
+   "members": 2,
+   "example": "XINGYUN-2 01",
+   "by": "model"
+  },
+  "31839439e41156fc": {
+   "paragraphs": [
+    "A Hulianwang Gaogui spacecraft, this Ka-band very-high-throughput geostationary communications satellite is built by CAST to complement China's low-orbit broadband effort.",
+    "The system is designed to provide coverage for the whole of China and key areas along the Belt and Road, with the first launch placed in context as the Chinese equivalent of ViaSat-3."
+   ],
+   "chars": 354,
+   "sourceChars": 865,
+   "members": 3,
+   "example": "HG-01",
+   "by": "model"
+  },
+  "1c00ce6d524120ea": {
+   "paragraphs": [
+    "The Hard X-ray Modulation Telescope, named Insight in English and Huiyan in Chinese, is China's first X-ray astronomy satellite operated by the Institute of High Energy Physics.",
+    "It uses direct demodulation of a scanning collimator to survey the Galactic plane and monitor black hole and neutron star binaries through outbursts."
+   ],
+   "chars": 326,
+   "sourceChars": 862,
+   "members": 1,
+   "example": "HXMT",
+   "by": "model"
+  },
+  "d11e7a83b82abd23": {
+   "paragraphs": [
+    "Taiji-1, catalogued under the launch designation KX-09, is China's first technology-verification satellite for space-based gravitational wave detection, launched in August 2019.",
+    "It carries a laser interferometer demonstrating displacement accuracy at the 100-picometre level, micro-thrusters, and drag-free attitude control to measure changes in test mass separation."
+   ],
+   "chars": 366,
+   "sourceChars": 845,
+   "members": 1,
+   "example": "KX-09",
+   "by": "model"
+  },
+  "0cb769e60b5fe565": {
+   "paragraphs": [
+    "A Rassvet-3 satellite, this is the first operational generation of Bureau 1440's low-orbit broadband constellation, Russia's answer to Starlink and OneWeb.",
+    "Each 370 kg spacecraft carries optical inter-satellite terminals so traffic can cross the constellation without touching the ground, with commercial service aiming for 2027."
+   ],
+   "chars": 328,
+   "sourceChars": 843,
+   "members": 31,
+   "example": "RASSVET-3 1",
+   "by": "model"
+  },
+  "40609a2d5bb97fda": {
+   "paragraphs": [
+    "Assessed to be a Strela-3 military communications satellite, this object is a store-dump system that records messages and replays them to a ground station later in the orbit.",
+    "It flies in clusters of two or three in a 1,400-1,500 km, 82.5-degree plane to buy global reach for units with no line of sight to a relay."
+   ],
+   "chars": 313,
+   "sourceChars": 837,
+   "members": 15,
+   "example": "COSMOS 2385",
+   "by": "model"
+  },
+  "9bb6ebcd4b2181b8": {
+   "paragraphs": [
+    "Analysts assess this object as a second-generation Parcae, or NOSS, cluster satellite launched by a Titan IV for National Reconnaissance Office ocean surveillance.",
+    "Attribution is contested: Jonathan McDowell characterises it as the SLDCOM 4 dispenser, while Gunter Krebs assesses it as Parcae 13A, a subsatellite locating ships by triangulating radio emissions."
+   ],
+   "chars": 360,
+   "sourceChars": 836,
+   "members": 1,
+   "example": "USA 119",
+   "by": "model"
+  },
+  "d50673b5222fbc5c": {
+   "paragraphs": [
+    "A Michibiki satellite of Japan's Quasi-Zenith Satellite System, the regional positioning system operated by the Cabinet Office to complement GPS.",
+    "Flying in a quasi-zenith orbit that parks the satellite high over Japan, it provides better accuracy than GPS alone through sub-metre and centimetre-level augmentation signals."
+   ],
+   "chars": 321,
+   "sourceChars": 834,
+   "members": 2,
+   "example": "QZS-2",
+   "by": "model"
+  },
+  "0dd5b76521b34810": {
+   "paragraphs": [
+    "Assessed to be a Tundra spacecraft of the EKS early-warning system, the Russian counterpart to SBIRS, watching for ballistic missile infrared plumes.",
+    "Its twelve-hour Molniya ellipse places apogee over the northern hemisphere, loitering for hours over polar approaches where geostationary satellites see only a grazing edge."
+   ],
+   "chars": 322,
+   "sourceChars": 825,
+   "members": 6,
+   "example": "COSMOS 2510",
+   "by": "model"
+  },
+  "58e75c661f69fd34": {
+   "paragraphs": [
+    "A Weina nanosatellite of unknown purpose and configuration, believed to belong to the Shanghai Micro Satellite Engineering Center.",
+    "It flew as a secondary payload alongside Yaogan reconnaissance satellites, distinct from the primary missions of electromagnetic environment detection published for those launches."
+   ],
+   "chars": 310,
+   "sourceChars": 821,
+   "members": 3,
+   "example": "WEINA 1A",
+   "by": "model"
+  },
+  "718501053e2606bb": {
+   "paragraphs": [
+    "An ION Satellite Carrier, an orbital transfer vehicle built by D-Orbit that releases customer satellites one at a time into specific slots.",
+    "After deployment, the vehicle becomes a hosting platform running third-party payloads and edge-computing experiments, usually carrying other operators' hardware rather than its own mission."
+   ],
+   "chars": 328,
+   "sourceChars": 821,
+   "members": 16,
+   "example": "ION SCV-004",
+   "by": "model"
+  },
+  "f4e4e5901442e2f8": {
+   "paragraphs": [
+    "One of four small military satellites launched on an Angara-1.2, attributed with a question mark to optical reconnaissance by Gunter Krebs.",
+    "They fly in a very low sun-synchronous orbit where drag is severe, forming a proliferated imaging constellation flown cheaply and replaced often."
+   ],
+   "chars": 284,
+   "sourceChars": 811,
+   "members": 8,
+   "example": "COSMOS 2591",
+   "by": "model"
+  },
+  "bd9a5090659548b3": {
+   "paragraphs": [
+    "Luch (Olymp) 2 shares a name with Russia's civil data-relay satellites but behaves differently, manoeuvring to park near Western commercial communications satellites.",
+    "Slingshot Aerospace has published these movements, leading to the inference that it is listening to uplinks, though Russia has never described the payload."
+   ],
+   "chars": 321,
+   "sourceChars": 809,
+   "members": 1,
+   "example": "LUCH (OLYMP) 2",
+   "by": "model"
+  },
+  "835ea9f85c616c4c": {
+   "paragraphs": [
+    "Skykraft is building the world's first full-service space-enabled air traffic management constellation, with these satellites serving as prototype and pre-production blocks.",
+    "Each carries an ADS-B receiver and a VHF payload relaying controller-pilot voice and data link communications, closing the surveillance gap over oceanic and remote airspace."
+   ],
+   "chars": 346,
+   "sourceChars": 807,
+   "members": 8,
+   "example": "SKYKRAFT-1",
+   "by": "model"
+  },
+  "b4264a25ea274cb8": {
+   "paragraphs": [
+    "An APSTAR geostationary communications satellite operated by APT Satellite Holdings of Hong Kong serves Asia, the Middle East, Africa, Europe and Australia with television distribution and connectivity services. The fleet includes APSTAR-6D, a high-throughput satellite at 134 degrees east with about 90 user beams and more than 50 Gbps of capacity."
+   ],
+   "chars": 349,
+   "sourceChars": 801,
+   "members": 6,
+   "example": "APSTAR 7",
+   "by": "model"
+  }
+ }
+}

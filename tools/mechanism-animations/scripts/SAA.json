@@ -1,0 +1,50 @@
+{
+ "scene": "SAA",
+ "duration": 60.533,
+ "lines": [
+  {
+   "t": 6.533,
+   "text": "Earth's field is very close to a bar magnet. Two things about it are not obvious."
+  },
+  {
+   "t": 11.3,
+   "text": "The second one is the whole story here."
+  },
+  {
+   "t": 14.367,
+   "text": "The best-fit dipole sits 610 kilometres from Earth's centre."
+  },
+  {
+   "t": 16.633,
+   "text": "A tenth of an Earth radius. Small enough that you can barely see it here."
+  },
+  {
+   "t": 20.5,
+   "text": "Field strength falls off with distance from the dipole \u2014 not from the Earth."
+  },
+  {
+   "t": 23.067,
+   "text": "So a surface of equal field strength rides off centre with the dipole."
+  },
+  {
+   "t": 27.933,
+   "text": "On one side that surface is fifteen hundred kilometres up. On the other, three hundred."
+  },
+  {
+   "t": 31.4,
+   "text": "The gap between them is twice the offset. That is the whole anomaly."
+  },
+  {
+   "t": 35.367,
+   "text": "Now fly something at five hundred kilometres."
+  },
+  {
+   "t": 46.133,
+   "text": "For most of the orbit it flies under that surface. Over one region it is above it."
+  },
+  {
+   "t": 49.8,
+   "text": "That region is the antipode of the offset \u2014 and it is over Brazil."
+  }
+ ]
+}

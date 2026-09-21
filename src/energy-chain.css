@@ -1,0 +1,424 @@
+/*
+ * "Follow the energy" — the walkthrough panel.
+ *
+ * It sits in the one part of the scene that is not already an instrument: the
+ * upper left. The timeline owns the lower left, the legend and data viewer own
+ * the lower right, and the control rail owns the right-hand edge, so nothing
+ * here overlaps a control the reader may need while the walkthrough is open.
+ *
+ * EVERY SIZE, WEIGHT AND COLOUR HERE IS A ROLE FROM styles.css. That is new,
+ * and it is the whole of the fix Sean asked for when he said the card was
+ * "quite busy and hard to follow". The panel used to reach for the raw --fs-*
+ * scale and pick its own weights and letter-spacings, and the result was eight
+ * separate treatments of tracked uppercase monospace inside 430 px: the chain
+ * rail, the step's role line, every reading label, both figure captions, the
+ * handoff heading, the limits summary, the replay button and the step counter.
+ * styles.css reserves that treatment for the NAME OF A SURFACE, and nothing
+ * subordinate to a surface is ever set that way — so the panel was announcing
+ * eight surfaces and giving the reader no way to tell a heading from a caption.
+ * There is now exactly one: `.chain-walk__kicker`.
+ *
+ * The evidence chips reuse `.layer-status` from styles.css rather than
+ * declaring a second vocabulary, which is the point: a walkthrough that graded
+ * its own honesty on a private scale would not be honest. They keep the
+ * tracked-uppercase-mono treatment, which is the one deliberate exception the
+ * type system documents — a stamp, not a heading — and nothing in this file is
+ * allowed to make one quieter or smaller.
+ */
+
+.chain-walk {
+  position: absolute;
+  /* Above the two scene windows — the satellite list and the data viewer, both
+     at 15. While the walkthrough is open it owns the scene: it is driving the
+     layers those windows are reporting on. On a phone, where all three want the
+     top of the screen, the data viewer was landing on this panel's own close
+     button and there was no way out of the walkthrough. */
+  z-index: 20;
+  top: 14px;
+  left: 18px;
+  width: min(452px, 36vw);
+  /* 128 px, not 150: the timeline strip is 58 px and the panel was giving the
+     step 295 px of a 682 px panel. Every 20 px reclaimed here is a line of the
+     card the reader no longer has to scroll for. */
+  max-height: calc(100% - 128px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) var(--space-3);
+  overflow: hidden;
+  background: rgba(2, 10, 16, .93);
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .55);
+  backdrop-filter: blur(14px);
+  font: var(--type-body);
+  color: var(--type-body-color);
+  outline: none;
+}
+
+.chain-walk[hidden] { display: none; }
+
+/* Everything except the step itself keeps its natural height. Without this the
+   browser squeezes the controls to fit and the Next button ends up clipped by
+   the panel's own bottom edge. */
+.chain-walk__head, .chain-walk__verdict, .chain-walk__rail,
+.chain-walk__step-head, .chain-walk__foot { flex: 0 0 auto; }
+
+/* ---------------------------------------------------------------------------
+   The header: the panel's name, where the reader is, and the way out. One row.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__head { display: flex; align-items: center; gap: var(--space-2); }
+/* THE ONE SURFACE NAME IN THIS PANEL. */
+.chain-walk__kicker {
+  flex: 1 1 auto; min-width: 0;
+  color: var(--type-kicker-color); font: var(--type-kicker);
+  letter-spacing: var(--type-kicker-tracking); text-transform: uppercase;
+}
+/* A position, which is a number, so it is a readout — but a quiet one: it is
+   the smallest thing in the header because it is the least of what the reader
+   came for. */
+.chain-walk__counter {
+  flex: 0 0 auto; font: var(--type-readout); font-size: var(--fs-micro);
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.chain-walk__close {
+  flex: 0 0 auto; width: 24px; height: 24px; border: 1px solid var(--line);
+  border-radius: 4px; background: transparent; color: var(--muted); cursor: pointer; line-height: 1;
+}
+.chain-walk__close:hover { color: var(--text); border-color: var(--line-strong); }
+
+/* ---------------------------------------------------------------------------
+   The chain, as a track. A line with nodes on it reads as a sequence and
+   carries progress; eight bordered chips carrying their own role words wrapped
+   onto three rows and read as a list of topics.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__rail { min-width: 0; }
+.chain-walk__track {
+  display: flex; align-items: center; gap: 0;
+  margin: 0; padding: 0; list-style: none;
+}
+.chain-walk__track-item {
+  display: flex; align-items: center; flex: 1 1 auto; min-width: 0;
+}
+/* The line between the nodes is the chain. It is drawn by the item rather
+   than by the node so it ends at the panel's padding, not past it. */
+.chain-walk__track-item + .chain-walk__track-item::before {
+  content: ""; flex: 1 1 auto; height: 1px; background: var(--line);
+}
+/* The branch is drawn as a branch: a gap, then a dashed lead-in. It is
+   deliberately not numbered into the chain, because it is not in it. */
+.chain-walk__track-item--branch-start { margin-left: var(--space-2); }
+.chain-walk__track-item--branch-start::before {
+  border-top: 1px dashed var(--line-strong); background: none; height: 0;
+}
+.chain-walk__track-item.is-branch + .chain-walk__track-item.is-branch::before {
+  border-top: 1px dashed var(--line-strong); background: none; height: 0;
+}
+
+.chain-walk__node {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 26px; height: 26px; padding: 0;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: var(--surface); color: var(--muted); cursor: pointer;
+  /* Mono because it is a number in a sequence, not tracked and not uppercase
+     because it names nothing. */
+  font: 600 var(--fs-micro)/1 var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.chain-walk__node:hover { color: var(--text); border-color: var(--line-strong); }
+.chain-walk__node:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+/* Behind you, ahead of you, and where you are: three states, so the track
+   answers "how far through am I" without being read. */
+.chain-walk__node.is-done { color: var(--cyan); border-color: rgba(41, 212, 227, .45); background: rgba(41, 212, 227, .09); }
+.chain-walk__node.is-active {
+  width: 30px; height: 30px;
+  color: #041318; border-color: var(--cyan); background: var(--cyan);
+  font-size: var(--fs-small);
+}
+.chain-walk__track-item.is-branch .chain-walk__node { border-style: dashed; color: var(--amber); }
+.chain-walk__track-item.is-branch .chain-walk__node.is-active { color: #1a1204; background: var(--amber); border-color: var(--amber); }
+
+/* ---------------------------------------------------------------------------
+   The step's own heading. This is the panel's title now: there is no constant
+   one above it. Role captions the title directly beneath it, which is what
+   LABEL means, so it is set as one — sans, not the tracked mono it used to be.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__step-head { display: flex; flex-direction: column; gap: 2px; }
+/* Role and badge share the row above the title. The badge beside the title was
+   taking nearly half of it, and the longest badges - "GOES XRS OBSERVED ·
+   BEAM ILLUSTRATIVE" - broke a title over three lines. The badge never
+   shrinks and never wraps into the title's space; the title moves. */
+.chain-walk__step-meta { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); }
+.chain-walk__step-role {
+  margin: 0; flex: 0 1 auto; min-width: 0;
+  font: var(--type-label); letter-spacing: var(--type-label-tracking);
+  color: var(--type-label-color); text-transform: uppercase;
+}
+.chain-walk__step-badge { flex: 0 0 auto; margin-left: 0; white-space: normal; line-height: 1.3; text-align: right; }
+.chain-walk__step-title {
+  margin: 0; font: var(--type-title); letter-spacing: var(--type-title-tracking);
+  color: var(--type-title-color);
+}
+
+/* ---------------------------------------------------------------------------
+   The whole-chain verdict. One sentence of state, and it is context for the
+   step rather than a second heading — so it sits UNDER the step's title, not
+   above it, and it is body text with a coloured edge.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__verdict {
+  margin: 0; padding: var(--space-2) var(--space-2);
+  border-left: 2px solid var(--muted);
+  background: rgba(9, 32, 43, .6); border-radius: 0 4px 4px 0;
+}
+/* The headline is a fold that always shows its own answer, which is what
+   DISCLOSE is for - but it carries the state of the whole chain, so it is set
+   at text weight rather than at the quieter sub level. */
+.chain-walk__verdict-headline {
+  cursor: pointer; font: var(--type-disclose-sub); color: var(--text);
+}
+.chain-walk__verdict-detail { margin: var(--space-1) 0 0; font: var(--type-body); color: var(--type-body-color); }
+.chain-walk__verdict[data-state="driven"] { border-left-color: var(--coral); }
+.chain-walk__verdict[data-state="relaxing"] { border-left-color: var(--mint); }
+.chain-walk__verdict[data-state="unknown"] { border-left-color: var(--amber); }
+
+/* ---------------------------------------------------------------------------
+   The step. It scrolls; the heading, the track and the controls never do — a
+   reader three readings down a long card must still be able to see which link
+   they are on and press Next without hunting for it.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__body {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto; padding-right: var(--space-1);
+}
+/* Say that the card continues, rather than stopping mid-word at the fold with
+   no cue at all. The mask is removed at the end of the scroll so the last line
+   is never the faded one. */
+.chain-walk__body.is-clipped {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 34px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 34px), transparent);
+}
+.chain-walk__step { display: flex; flex-direction: column; gap: var(--space-2); }
+
+/* The one idea. Slightly larger than the notes around it, because it is the
+   sentence the step exists for. */
+.chain-walk__what { margin: 0; font: var(--type-disclose-sub); color: var(--text); line-height: 1.5; }
+
+/* What the reader is actually looking at, which is the caption for the picture
+   the step just built. */
+.chain-walk__globe {
+  margin: 0; padding-left: var(--space-2); border-left: 2px solid var(--line-strong);
+  font: var(--type-body); color: var(--type-body-color);
+}
+.chain-walk__globe b { display: block; font: var(--type-label); letter-spacing: var(--type-label-tracking); color: var(--type-label-color); text-transform: uppercase; }
+
+.chain-walk__missing {
+  margin: 0; padding: var(--space-2); border: 1px solid var(--amber); border-radius: 4px;
+  font: var(--type-body); color: var(--type-body-color);
+}
+.chain-walk__missing b { color: var(--amber); }
+
+/* A number that is the newest sample while the timeline is somewhere else, or
+   a clock the explorer moved out from under the step. Distinct from "not
+   published": the value is real, it is just not the reader's chosen instant,
+   and saying so is cheaper than pretending. */
+.chain-walk__timenote {
+  margin: 0; padding: var(--space-2); border-left: 2px solid var(--violet);
+  background: rgba(169, 140, 255, .08); border-radius: 0 4px 4px 0;
+  font: var(--type-body); color: var(--type-body-color);
+}
+.chain-walk__timenote b { color: var(--violet); }
+
+.chain-walk__absent {
+  margin: 0; padding-left: var(--space-2); border-left: 2px dashed var(--line-strong);
+  font: var(--type-body); color: var(--type-body-color);
+}
+.chain-walk__absent b { color: var(--amber); }
+
+/* ---------------------------------------------------------------------------
+   The readings.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__readings { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; }
+/* A reading's label captions the value directly beneath it. That is LABEL, and
+   it used to be tracked uppercase monospace — the treatment reserved for the
+   name of a surface — which is why a card with six readings looked like a card
+   with six sections. */
+.chain-walk__reading-label {
+  display: flex; align-items: baseline; gap: var(--space-1); flex-wrap: wrap;
+  padding-top: var(--space-2); border-top: 1px solid var(--line);
+  font: var(--type-label); letter-spacing: var(--type-label-tracking);
+  color: var(--type-label-color); text-transform: uppercase;
+}
+.chain-walk__reading-value { margin: var(--space-1) 0 var(--space-2); }
+/* A number that changes: READOUT, exactly as the system defines it. */
+.chain-walk__reading-number {
+  display: block; font: var(--type-readout); color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+/* A value that is a WORD: the same rank, the other voice. See --type-answer in
+   styles.css for why this role exists. */
+.chain-walk__reading-name { display: block; font: var(--type-answer); color: var(--type-answer-color); }
+.chain-walk__reading-at {
+  display: block; font: var(--type-readout); font-size: var(--fs-nano); font-weight: 500;
+  color: var(--cyan); font-variant-numeric: tabular-nums;
+}
+.chain-walk__reading-note { display: block; margin-top: 3px; font: var(--type-body); color: var(--type-body-color); }
+
+/* ---------------------------------------------------------------------------
+   The drawn numbers.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__figure { margin: 0; }
+.chain-walk__figure-caption {
+  margin-top: 2px; font: var(--type-body); color: var(--type-body-color);
+}
+.chain-walk__spark-chart, .chain-walk__scale-chart { width: 100%; height: auto; overflow: visible; }
+.chain-walk__spark-trace { fill: none; stroke: var(--cyan-bright); stroke-width: 1.2; stroke-linejoin: round; }
+.chain-walk__spark-zero { stroke: var(--line-strong); stroke-width: .7; stroke-dasharray: 3 3; }
+.chain-walk__spark-southward { fill: rgba(255, 123, 120, .28); stroke: none; }
+.chain-walk__spark-now { stroke: var(--amber); stroke-width: 1; }
+.chain-walk__spark-axis { fill: var(--muted); font: 500 8px var(--font-mono); letter-spacing: .04em; }
+
+/* The standoff scale. The live value is the only thing in the site's live
+   colour; the fixed references are the line colour, because a definition is
+   not a reading and must not look like one. */
+.chain-walk__scale-axis { stroke: var(--line-strong); stroke-width: 1; }
+.chain-walk__scale-mark { stroke: var(--line-strong); stroke-width: 1; }
+.chain-walk__scale-band { fill: rgba(118, 230, 165, .16); }
+.chain-walk__scale-live { stroke: var(--cyan-bright); stroke-width: 2; }
+.chain-walk__scale-tick { fill: var(--muted); font: 500 8px var(--font-mono); }
+.chain-walk__scale-value { fill: var(--cyan-bright); font: 600 11px var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* The handoff is the lesson: it is the sentence that makes eight cards one
+   chain, so it is the most prominent block on the card. */
+.chain-walk__handoff {
+  margin: 0; padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--cyan); background: rgba(41, 212, 227, .07);
+  border-radius: 0 4px 4px 0;
+  font: var(--type-body); color: var(--text);
+}
+.chain-walk__handoff b {
+  display: block; font: var(--type-label); letter-spacing: var(--type-label-tracking);
+  color: var(--cyan); text-transform: uppercase;
+}
+
+/* A fold, so it is set as one. */
+.chain-walk__limit { border-top: 1px solid var(--line); padding-top: var(--space-2); }
+.chain-walk__limit summary { cursor: pointer; font: var(--type-disclose-sub); color: var(--type-disclose-sub-color); }
+.chain-walk__limit p { margin: var(--space-1) 0 0; font: var(--type-body); color: var(--type-body-color); }
+.chain-walk__sources { margin: var(--space-1) 0 0; padding-left: 15px; font: var(--type-body); }
+.chain-walk__sources a { color: var(--cyan-bright); }
+
+/* ---------------------------------------------------------------------------
+   The controls. Back, replay and Next on one row: the counter that used to
+   occupy the middle of it has moved into the header, beside the panel's name,
+   where "where am I" belongs.
+   --------------------------------------------------------------------------- */
+
+.chain-walk__foot {
+  display: flex; align-items: center; gap: var(--space-2);
+  border-top: 1px solid var(--line); padding-top: var(--space-2);
+}
+.chain-walk__nav {
+  flex: 0 0 auto;
+  padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 4px;
+  background: transparent; color: var(--text); cursor: pointer;
+  font: var(--type-disclose-sub);
+}
+.chain-walk__nav:hover { border-color: var(--cyan); }
+.chain-walk__nav--primary { border-color: var(--cyan); background: rgba(41, 212, 227, .12); }
+.chain-walk__replay {
+  flex: 1 1 auto; min-width: 0;
+  padding: 6px 8px; border: 1px dashed var(--line-strong); border-radius: 4px;
+  background: transparent; color: var(--muted); cursor: pointer;
+  font: var(--type-label); letter-spacing: var(--type-label-tracking);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.chain-walk__replay:hover, .chain-walk__replay.is-playing { color: var(--text); border-color: var(--cyan); border-style: solid; }
+
+/* ---------------------------------------------------------------------------
+   The way in.
+   --------------------------------------------------------------------------- */
+
+/* In the lessons view it is a proper offer, because that is where a reader has
+   just been told what the chain is and is ready to walk it. */
+.chain-walk__launch {
+  display: block; width: 100%; margin: 0 0 var(--space-3); padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border: 1px solid var(--cyan); border-radius: 5px; background: rgba(41, 212, 227, .1);
+  color: var(--text); cursor: pointer; font: var(--type-disclose);
+}
+.chain-walk__launch:hover { background: rgba(41, 212, 227, .18); }
+.chain-walk__launch small { display: block; margin-top: 3px; font: var(--type-body); color: var(--type-body-color); }
+.chain-walk__launch--floating { position: absolute; z-index: 12; left: 18px; top: 18px; width: min(360px, 60vw); }
+.chain-walk__launch--lesson { margin-bottom: var(--space-4); }
+
+/* In the magnetosphere layer's own card it belongs to that layer, so it is
+   subordinate to it: no border, no fill, and indented to line up with the
+   layer's own descriptive line rather than with its title. The rail rule
+   stands — the layers are the content of that column, and everything else is
+   smaller than the layers. */
+.chain-walk__launch--card {
+  /* 60 px lines it up with the layer's OWN text rather than with its toggle:
+     `.layer-control` is a 9 px-padded grid of a 27 px switch, a 6 px colour
+     dot and the text, with 9 px gaps, so its third column starts at
+     9 + 27 + 9 + 6 + 9. Left of that it reads as a sibling of the layer;
+     level with it, it reads as part of it, which is what it is. */
+  width: auto; margin: 0 0 var(--space-2) 60px; padding: var(--space-1) 0;
+  border: 0; border-radius: 0; background: transparent;
+  color: var(--cyan-bright); font: var(--type-disclose-sub);
+}
+.chain-walk__launch--card:hover { background: transparent; color: var(--text); }
+.chain-walk__launch--card:hover small { color: var(--type-body-color); }
+.chain-walk__launch--card:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+@media (max-width: 1100px) {
+  .chain-walk { width: min(420px, 50vw); }
+}
+
+/* On a phone the rail becomes a sheet and the scene is short. The panel took
+   64% of an 844 px screen, the whole of it scrolled as one, and the reader saw
+   a header, a five-line verdict, four rows of chips and four lines of the
+   paragraph — with the Next button, the counter and the globe all off screen.
+   A guided walkthrough whose globe is a 100 px sliver at the bottom is not
+   showing anybody anything.
+   So: the cap comes down, and the panel goes back to scrolling only the step,
+   the way it does on a desktop. Pinning the head, the track and the controls
+   is what puts Next back on screen; it is worth more than the extra line of
+   prose that letting the whole panel scroll buys. */
+@media (max-width: 760px) {
+  .chain-walk {
+    left: 10px; right: 10px; width: auto;
+    top: 8px;
+    /* 54%, measured: at 46% the step had about 140 px - seven lines - and the
+       reader was scrolling a card that could have been twice as tall against a
+       globe that did not need the extra 80 px. Below about half the screen the
+       card stops being readable; above about 60% the globe stops being worth
+       showing, which is the whole point of driving it. */
+    max-height: min(54%, calc(100% - 150px));
+    overflow: hidden;
+    padding: var(--space-2);
+    gap: var(--space-1);
+  }
+  .chain-walk__body { flex: 1 1 auto; min-height: 64px; overflow-y: auto; }
+  /* The verdict keeps its coloured edge and loses its box: at this width the
+     padding and the fill were costing two lines of the card to say the same
+     thing the edge already says. */
+  .chain-walk__verdict { padding: var(--space-1) 0 var(--space-1) var(--space-2); background: none; }
+  /* At 370 px the role and the badge cannot share a row without one of them
+     wrapping to three lines, so they stack. */
+  .chain-walk__step-meta { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .chain-walk__step-badge { text-align: left; }
+  .chain-walk__node { width: 22px; height: 22px; }
+  .chain-walk__node.is-active { width: 26px; height: 26px; }
+}
+
+/* If this build has no scene shell to sit inside, the panel is attached to the
+   document instead and has to clear the top bar itself. It is never left
+   unreachable. */
+.chain-walk--detached { position: fixed; top: calc(var(--topbar-height) + 14px); max-height: calc(100vh - var(--topbar-height) - 150px); }

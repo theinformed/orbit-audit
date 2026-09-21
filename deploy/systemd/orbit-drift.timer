@@ -1,0 +1,15 @@
+[Unit]
+Description=Nightly orbit drift, between the orbit release and ingest slots
+
+[Timer]
+# 05:40 UTC = 01:40 EDT / 00:40 EST. Odd hour avoids the even-hour :25
+# release starts; :40 clears :17 ingest plus six-minute jitter. A normal
+# 10-15 min run ends before the next :17. Long release tails can still overlap;
+# low priority and bounded GPU memory, not the clock, contain that contention.
+OnCalendar=*-*-* 05:40:00 UTC
+AccuracySec=30s
+Persistent=true
+Unit=orbit-drift.service
+
+[Install]
+WantedBy=timers.target

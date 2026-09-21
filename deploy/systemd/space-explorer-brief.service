@@ -1,0 +1,37 @@
+[Unit]
+Description=Write the Space Environment Explorer teaching brief with the local model
+Documentation=file:/home/sdegan/space-teaching-aid/docs/space-weather-teaching-spec.md
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+# This unit is the lowest-priority consumer of a GPU it does not own. The
+# llama.cpp server on 8080 has two slots and is shared with Bob's night lane,
+# Bob's live traffic, and a second teaching site. Measured over the 24 hours to
+# 2026-08-08 this unit held it for 8,590 seconds — a 9.9% duty cycle, and the
+# largest single share of everything the machine generated. Four controls, all
+# of them in pipeline/enrich_qwen.py, bring that to a measured 349 seconds a
+# day; read that module's docstring before changing any of them.
+#
+#   --skip-if-valid              do not rewrite a brief that is still true
+#   --quiet-window 22:45-05:45   silent across Bob's whole night lane, Eastern
+#                                wall clock so it follows daylight saving
+#   --min-write-interval 120     at most one write every two hours
+#   (yield is on by default)     skip the tick if a slot is already busy
+#
+# Nice and the idle IO class do nothing for GPU contention: the work happens in
+# a Windows process this unit only talks to over a socket. They stay because
+# they still keep the JSON handling off Sean's CPU.
+ExecStart=/usr/bin/python3 -m pipeline.enrich_qwen --skip-if-valid \
+    --quiet-window 22:45-05:45 --min-write-interval-minutes 120
+Nice=15
+IOSchedulingClass=idle
+# One call, capped at 8,192 tokens, measured at 37.7 s. 600 s is ~16x the
+# measured run and covers a retry plus a fully saturated server.
+TimeoutStartSec=600
+
+[Install]
+WantedBy=multi-user.target

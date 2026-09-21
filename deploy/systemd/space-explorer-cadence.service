@@ -1,0 +1,45 @@
+[Unit]
+# The bigmem half of the operations page's cadence control.
+#
+# It reads runtime/cadence-requests/, which pipeline/publish_vps.sh pulls from
+# the VPS on the publish cycle, and makes orbit-release.timer match. The whole
+# of its input is WHICH FILENAME EXISTS, out of a fixed set written in
+# ops/cadence.py; the files' contents are never opened.
+#
+# This runs as root because the timer it edits is a system unit. That is the
+# only reason, and it is why the drop-in it writes is built entirely from
+# constants inside ops/cadence.py rather than from anything that crossed the
+# network. It validates the requested value against its own allow-list a second
+# time before acting, on the principle that an endpoint having validated
+# something is not a validation this program performed.
+Description=Match the orbit-history rebuild cadence to what the operations page asked for
+Documentation=file:///home/sdegan/space-teaching-aid/ops/cadence.py
+After=space-explorer-data.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sdegan/space-teaching-aid
+ExecStart=/usr/bin/python3 -m ops.cadence
+# It writes its own log outside the project checkout on purpose: a root process
+# writing into a uid-1000 tree is how file ownership quietly breaks everything
+# else that reads it.
+StateDirectory=space-explorer-cadence
+Nice=15
+IOSchedulingClass=idle
+TimeoutStartSec=120
+# Everything it is allowed to touch, and nothing else. If a future edit tries
+# to write anywhere but the one drop-in directory and its own state, systemd
+# stops it rather than the code review.
+ProtectSystem=strict
+ReadWritePaths=/etc/systemd/system/orbit-release.timer.d /var/lib/space-explorer-cadence
+ProtectHome=read-only
+PrivateTmp=true
+NoNewPrivileges=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+# It reads the request directory and the repository timer under /home, and
+# ProtectHome=read-only leaves both readable while making them unwritable.
+
+[Install]
+WantedBy=multi-user.target

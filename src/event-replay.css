@@ -1,0 +1,608 @@
+/* The measured event replay.
+ *
+ * This file exists so the replay can be styled without touching
+ * `src/styles.css`, which several agents are editing at once. Everything here
+ * is scoped under `.replay`, and every colour comes from the site's own
+ * custom properties so the replay cannot drift away from the rest of the page.
+ */
+
+.replay {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 6px;
+}
+
+.replay-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.replay-clock {
+  font: 600 var(--fs-title) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--text);
+  letter-spacing: .04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.replay-tallies {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.replay-tally {
+  display: grid;
+  gap: 3px;
+  justify-items: start;
+}
+
+.replay-tally b {
+  font: 600 var(--fs-title) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.replay-tally span {
+  font: 500 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.replay-tally.is-raised b { color: var(--cyan-bright); }
+.replay-tally.is-lost b { color: var(--coral); }
+.replay-tally.is-driver b { color: var(--amber); }
+
+.replay-canvas-wrap {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--void);
+}
+
+.replay-canvas-wrap canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.replay-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.replay-controls button {
+  min-width: 74px;
+  padding: 9px 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-2);
+  color: var(--text);
+  font: 500 var(--fs-small) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.replay-controls button:hover { border-color: var(--cyan); color: var(--cyan-bright); }
+
+.replay-controls input[type="range"] {
+  flex: 1;
+  accent-color: var(--cyan);
+}
+
+/* One short paragraph of orientation, above the picture: what the axes are,
+ * what one mark is, and what a reader is being asked to watch. It is the
+ * answer to "people don't know what they are looking at" and it belongs above
+ * the drawing rather than in the method block below it, which is where the
+ * provenance goes. */
+.replay-lede {
+  margin: 0;
+  max-width: 82ch;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #a8bec6;
+}
+
+/* The caption plate.
+ *
+ * IN THE FLOW, never over the picture. A caption floated on the canvas has to
+ * be positioned around traces that move, at every width, and on a 390 px phone
+ * it would cover the thing it describes. A plate between the picture and the
+ * scrubber cannot overlap the plot, the axes, the in-chart labels, the
+ * controls or the next caption, because there is no overlap to get wrong.
+ *
+ * `min-height` is what stops the page twitching as the text changes length:
+ * the plate is already as tall as its longest caption, so a shorter one leaves
+ * space rather than moving the controls up. */
+.replay-captions {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-height: 96px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--cyan);
+  background: var(--surface-2);
+}
+
+/* A replay with nothing sourced to say at a stated time carries the plate in
+ * its markup and hides it. `display: grid` above beats the user agent's own
+ * `[hidden] { display: none }` on specificity, so without this rule the
+ * attribute does nothing and every uncaptioned replay draws an empty 96 px box
+ * with a lit cyan edge between its picture and its scrubber. Measured: it was
+ * on all five of the events that carry no captions. Every other hideable
+ * component in this project states the same rule -- `.map-key[hidden]`,
+ * `.data-viewer[hidden]`, `.storm-chip[hidden]` -- and this one had missed it. */
+.replay-captions[hidden] { display: none; }
+
+.replay-caption-step {
+  margin: 0;
+  font: 500 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.replay-caption-line {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #cfe3ea;
+}
+
+.replay-caption-line strong { color: var(--text); }
+.replay-caption-line strong:not(:empty)::after { content: " \2014 "; color: var(--muted); }
+
+/* The claim the picture is allowed to support, printed under the picture
+ * rather than in a tooltip, because on this site the limitation travels with
+ * the drawing and is not an optional disclosure. */
+.replay-method {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.replay-method div {
+  display: grid;
+  grid-template-columns: minmax(88px, 128px) 1fr;
+  gap: 4px 16px;
+  align-items: baseline;
+}
+
+.replay-method dt,
+.replay-method b {
+  font: 500 var(--fs-nano) / 1.4 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.replay-method p {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #a8bec6;
+}
+
+@media (max-width: 620px) {
+  /* Four lines of caption instead of two, so the scrubber still does not move. */
+  .replay-captions { min-height: 152px; }
+  .replay-method div { grid-template-columns: 1fr; }
+  .replay-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .replay-tallies { gap: 12px; }
+  .replay-controls button { min-width: 62px; }
+}
+
+/* The documented sequence, beside the measured picture.
+ *
+ * These are the same milestone titles and descriptions the stepper used to
+ * reveal one at a time. With a real replay carrying the clock there is no
+ * reason to hide five of six paragraphs behind a slider, so they are simply
+ * readable. */
+/* The list had no name on it. A reader arriving at a numbered column of prose
+ * under a chart had to work out for themselves that it was the same story the
+ * chart is telling, and that the replay's captions are its first lines. */
+.event-milestones-head {
+  margin: 22px 0 0;
+  font: 500 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.event-milestones {
+  list-style: none;
+  counter-reset: milestone;
+  display: grid;
+  gap: 0;
+  margin: 12px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.event-milestones li {
+  counter-increment: milestone;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 4px 14px;
+  padding: 14px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-milestones li::before {
+  content: counter(milestone, decimal-leading-zero);
+  grid-row: span 2;
+  font: 500 var(--fs-nano) / 1.5 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .1em;
+  color: var(--cyan);
+}
+
+.event-milestones strong {
+  font-size: var(--fs-lead);
+  color: var(--text);
+}
+
+.event-milestones p {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: #a8bec6;
+}
+
+/* Said plainly, where the picture used to be. */
+.event-no-replay {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--amber);
+  background: var(--surface-2);
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: #a8bec6;
+}
+
+/* ---------------------------------------------------------------------------
+ * Three more replays: a map beside a chart, an arrivals list, and a video.
+ *
+ * Everything below is still scoped under `.replay` and still takes its colours
+ * from the site's own custom properties, for the same reason as everything
+ * above: this file exists so the replays can be styled without touching
+ * `src/styles.css`, which several agents are editing at once.
+ * ------------------------------------------------------------------------ */
+
+/* The Gannon replay puts a model field beside a measured curve. Side by side
+ * on a desktop, because the argument is the comparison; stacked on a phone,
+ * because two 340-pixel panels side by side are two illegible panels. */
+.replay-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 14px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .replay-panels { grid-template-columns: 1fr; }
+}
+
+.replay-panel {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--void);
+  min-width: 0;
+}
+
+.replay-panel canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.replay-panel figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+  font-size: var(--fs-nano);
+  line-height: 1.5;
+  color: #a8bec6;
+}
+
+/* The evidence class, on the picture rather than in a footnote. A measured
+ * curve and a model field are different kinds of claim and the page is not
+ * allowed to let them look the same. */
+.replay-badge {
+  font: 600 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.replay-badge.is-measured { color: var(--cyan-bright); }
+.replay-badge.is-model { color: var(--amber); }
+.replay-badge.is-schematic { color: var(--violet); }
+
+/* The three or four numbers a reader should leave with. */
+.replay-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.replay-figures div {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  padding: 13px 15px;
+  background: var(--surface-2);
+}
+
+.replay-figures b {
+  font: 600 var(--fs-title) / 1.05 "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--cyan-bright);
+}
+
+.replay-figures span {
+  font-size: var(--fs-nano);
+  line-height: 1.55;
+  color: #a8bec6;
+}
+
+/* The three clocks, as a list that lights up as the replay passes each one. */
+.replay-arrivals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.replay-arrivals li {
+  display: grid;
+  grid-template-columns: minmax(120px, 150px) minmax(88px, 110px) 1fr;
+  gap: 4px 16px;
+  padding: 12px 15px;
+  background: var(--surface-2);
+  opacity: .42;
+  transition: opacity .18s ease, border-color .18s ease;
+  border-left: 2px solid transparent;
+}
+
+.replay-arrivals li.is-passed {
+  opacity: 1;
+  border-left-color: var(--violet);
+}
+
+.replay-arrivals b {
+  font: 600 var(--fs-small) / 1.3 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--violet);
+}
+
+.replay-arrivals em {
+  font: 600 var(--fs-small) / 1.3 "IBM Plex Mono", ui-monospace, monospace;
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.replay-arrivals span {
+  font: 500 var(--fs-nano) / 1.4 "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--muted);
+}
+
+.replay-arrivals p {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #a8bec6;
+}
+
+@media (max-width: 620px) {
+  .replay-arrivals li { grid-template-columns: 1fr auto; }
+  .replay-arrivals span { grid-column: 1 / -1; }
+}
+
+/* The mechanism animation. `preload="none"` so opening the event costs a
+ * poster image and nothing else; the megabytes are spent only if somebody
+ * presses play. */
+.replay-video {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--void);
+}
+
+.replay-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--void);
+}
+
+.replay-video figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+  font-size: var(--fs-nano);
+  line-height: 1.55;
+  color: #a8bec6;
+}
+
+.replay-transcript {
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.replay-transcript summary {
+  padding: 10px 14px;
+  cursor: pointer;
+  font: 500 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.replay-transcript ol {
+  margin: 0;
+  padding: 0 16px 14px 34px;
+  display: grid;
+  gap: 7px;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #a8bec6;
+}
+
+.replay-video-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.replay-video-head strong {
+  font-size: var(--fs-lead);
+  color: var(--text);
+}
+
+.replay-video-caption {
+  margin: 0;
+  padding: 11px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #a8bec6;
+}
+
+.replay-transcript ol li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+}
+
+.replay-transcript ol li b {
+  font: 500 var(--fs-nano) / 1.6 "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--cyan);
+}
+
+/* THE NARRATED WALKTHROUGH.
+ *
+ * Under the scrubber, not over the picture, for the same reason the caption
+ * plate is: there is no position to get wrong at any width. It is a block a
+ * reader can ignore entirely — the chart's own Play and scrubber are untouched
+ * above it — and it says so in its own first line rather than only in a title
+ * attribute nobody reads.
+ *
+ * The <audio> keeps its native `controls`. That bar is not decoration: the
+ * audio is the clock this walkthrough runs on, so dragging it is the supported
+ * way to move about inside the clip, and the picture follows it. */
+.replay-narration:empty { display: none; }
+
+.replay-narration {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--cyan);
+  background: var(--surface-2);
+}
+
+.replay-narration-head {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: #cfe3ea;
+}
+
+.replay-narration-head strong { color: var(--text); }
+
+.replay-narration-note {
+  display: block;
+  color: var(--muted);
+}
+
+.replay-narration-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.replay-narration-controls button {
+  padding: 9px 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+  font: 500 var(--fs-small) / 1.2 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.replay-narration-controls button:hover { border-color: var(--cyan); color: var(--cyan-bright); }
+
+.replay-narration-state {
+  font-size: var(--fs-nano);
+  color: var(--muted);
+}
+
+.replay-narration-audio {
+  width: 100%;
+  max-width: 520px;
+}
+
+.replay-narration-transcript {
+  font-size: var(--fs-small);
+  color: #cfe3ea;
+}
+
+.replay-narration-transcript summary {
+  cursor: pointer;
+  color: var(--cyan);
+  font: 500 var(--fs-nano) / 1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.replay-narration-transcript ol {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+.replay-narration-cue {
+  display: inline-block;
+  min-width: 3.4em;
+  color: var(--muted);
+  font: 500 var(--fs-nano) / 1.6 "IBM Plex Mono", ui-monospace, monospace;
+}

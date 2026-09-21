@@ -1,0 +1,1083 @@
+{
+  "ISS (ZARYA)": {
+    "match": "norad",
+    "norad": [
+      25544
+    ],
+    "noradNames": [
+      "ISS (ZARYA)"
+    ],
+    "individual": true,
+    "organization": "International Space Station partners",
+    "mission": "human-spaceflight",
+    "sector": "civil",
+    "purpose": "A continuously inhabited orbital laboratory used for microgravity research, technology demonstrations, Earth observation, and international human-spaceflight operations.",
+    "source": "https://www.nasa.gov/international-space-station/"
+  },
+  "HST": {
+    "match": "norad",
+    "norad": [
+      20580
+    ],
+    "noradNames": [
+      "HST"
+    ],
+    "individual": true,
+    "organization": "NASA / ESA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "The Hubble Space Telescope observes the universe in ultraviolet, visible, and near-infrared light from above most of Earth's atmosphere.",
+    "source": "https://science.nasa.gov/mission/hubble/"
+  },
+  "GOES": {
+    "match": "prefix",
+    "organization": "NOAA / NASA",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A geostationary environmental satellite providing continuous weather imagery and measurements used for forecasting and space-weather monitoring.",
+    "source": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/geostationary-satellites"
+  },
+  "NOAA": {
+    "match": "prefix",
+    "organization": "NOAA",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A NOAA environmental satellite measuring the atmosphere, oceans, land, and near-Earth space to support weather and climate services.",
+    "source": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system"
+  },
+  "METOP": {
+    "match": "prefix",
+    "organization": "EUMETSAT",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A polar-orbiting EUMETSAT meteorological satellite providing global atmospheric and surface observations for numerical weather prediction.",
+    "source": "https://www.eumetsat.int/our-satellites/metop-series"
+  },
+  "METEOSAT": {
+    "match": "prefix",
+    "organization": "EUMETSAT",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A EUMETSAT geostationary meteorological satellite providing rapid imagery and environmental observations over Europe, Africa, and adjacent oceans.",
+    "source": "https://www.eumetsat.int/our-satellites/meteosat-series"
+  },
+  "HIMAWARI": {
+    "match": "prefix",
+    "organization": "Japan Meteorological Agency",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A Japanese geostationary meteorological satellite providing rapid multispectral imagery across the Asia-Pacific region.",
+    "source": "https://www.data.jma.go.jp/mscweb/en/general/general.html"
+  },
+  "SENTINEL": {
+    "match": "prefix",
+    "organization": "European Union / ESA",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "Part of Europe's Copernicus Earth-observation program, carrying sensors for environmental monitoring, mapping, and climate applications.",
+    "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus"
+  },
+  "LANDSAT": {
+    "match": "prefix",
+    "organization": "USGS / NASA",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A long-running U.S. Earth-imaging mission that records land cover and surface change for science and public applications.",
+    "source": "https://landsat.gsfc.nasa.gov/"
+  },
+  "TERRA": {
+    "match": "norad",
+    "norad": [
+      25994
+    ],
+    "noradNames": [
+      "TERRA"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A NASA Earth-observing mission carrying multiple instruments to study the atmosphere, land, oceans, and Earth's energy balance.",
+    "source": "https://terra.nasa.gov/"
+  },
+  "AQUA": {
+    "match": "norad",
+    "norad": [
+      27424
+    ],
+    "noradNames": [
+      "AQUA"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A NASA Earth-observing mission focused on the water cycle, including clouds, precipitation, ocean properties, and atmospheric moisture.",
+    "source": "https://aqua.nasa.gov/"
+  },
+  "GPS": {
+    "match": "prefix",
+    "organization": "U.S. Space Force",
+    "mission": "navigation",
+    "sector": "military",
+    "purpose": "A Global Positioning System spacecraft broadcasting precise timing and navigation signals for military and civil users worldwide.",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Article/2197765/global-positioning-system/"
+  },
+  "GALILEO": {
+    "match": "prefix",
+    "organization": "European Union / ESA",
+    "mission": "navigation",
+    "sector": "civil",
+    "purpose": "A spacecraft in Europe's Galileo global navigation constellation, broadcasting positioning, navigation, and timing signals.",
+    "source": "https://www.euspa.europa.eu/eu-space-programme/galileo"
+  },
+  "BEIDOU": {
+    "match": "prefix",
+    "organization": "China Satellite Navigation Office",
+    "mission": "navigation",
+    "sector": "mixed",
+    "purpose": "A spacecraft in China's BeiDou navigation constellation, providing global positioning, navigation, and timing services.",
+    "source": "https://en.beidou.gov.cn/SYSTEMS/System/"
+  },
+  "GLONASS": {
+    "match": "token",
+    "organization": "Russian Federation",
+    "mission": "navigation",
+    "sector": "mixed",
+    "purpose": "A spacecraft in Russia's GLONASS global navigation constellation, broadcasting positioning, navigation, and timing signals.",
+    "source": "https://glonass-iac.ru/en/about_glonass/"
+  },
+  "STARLINK": {
+    "match": "prefix",
+    "organization": "SpaceX",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A low-Earth-orbit spacecraft in SpaceX's Starlink constellation, relaying broadband internet traffic through a large distributed network.",
+    "source": "https://www.starlink.com/technology"
+  },
+  "ONEWEB": {
+    "match": "prefix",
+    "organization": "Eutelsat OneWeb",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A low-Earth-orbit communications satellite in the OneWeb constellation, providing broadband connectivity through a global relay network.",
+    "source": "https://oneweb.net/"
+  },
+  "IRIDIUM": {
+    "match": "prefix",
+    "organization": "Iridium Communications",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A polar-orbiting communications satellite relaying mobile voice and data through Iridium's cross-linked global constellation.",
+    "source": "https://www.iridium.com/network/"
+  },
+  "AEHF": {
+    "match": "norad",
+    "organization": "U.S. Space Force",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "An Advanced Extremely High Frequency spacecraft: protected, survivable, jam-resistant communications for United States and allied strategic and tactical forces, and the successor to Milstar.",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197713/advanced-extremely-high-frequency-system/",
+    "norad": [
+      36868,
+      38254,
+      39256,
+      43651,
+      44481,
+      45465
+    ],
+    "noradNames": [
+      "AEHF 1 (USA 214)",
+      "AEHF 2 (USA 235)",
+      "AEHF 3 (USA 246)",
+      "AEHF 4 (USA 288)",
+      "AEHF 5 (USA 292)",
+      "AEHF 6 (USA 298)"
+    ]
+  },
+  "MUOS": {
+    "match": "norad",
+    "organization": "U.S. Space Force / U.S. Navy",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Mobile User Objective System spacecraft: the narrowband ultra-high-frequency system that gives dismounted and on-the-move US forces voice and data beyond line of sight, using a waveform closer to a cellular network than to legacy UHF SATCOM. It is replacing the UHF Follow-On satellites also in this catalogue.",
+    "source": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2242429/mobile-user-objective-system-muos/",
+    "norad": [
+      38093,
+      39206,
+      40374,
+      40887,
+      41622
+    ],
+    "noradNames": [
+      "MUOS 1",
+      "MUOS 2",
+      "MUOS 3",
+      "MUOS 4",
+      "MUOS 5"
+    ]
+  },
+  "WGS": {
+    "match": "norad",
+    "organization": "U.S. Space Force",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Wideband Global SATCOM spacecraft: the high-capacity X- and Ka-band backbone of United States military satellite communications, and the system that replaced DSCS. Australia bought the sixth satellite into the constellation and a partner group of allies uses it alongside US forces.",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197740/wideband-global-satcom-satellite/",
+    "norad": [
+      32258,
+      34713,
+      36108,
+      38070,
+      39168,
+      39222,
+      40746,
+      41879,
+      42075,
+      44071
+    ],
+    "noradNames": [
+      "WGS F1 (USA 195)",
+      "WGS F2 (USA 204)",
+      "WGS F3 (USA 211)",
+      "WGS F4 (USA 233)",
+      "WGS 5 (USA 243)",
+      "WGS 6 (USA 244)",
+      "WGS 7 (USA 263)",
+      "WGS 8 (USA 272)",
+      "WGS 9 (USA 275)",
+      "WGS 10 (USA 291)"
+    ]
+  },
+  "SBIRS": {
+    "match": "prefix",
+    "organization": "U.S. Space Force",
+    "mission": "missile-warning",
+    "sector": "military",
+    "purpose": "A Space Based Infrared System spacecraft supporting strategic and theater missile warning with persistent infrared sensing.",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Article/2197769/space-based-infrared-system/"
+  },
+  "DSP": {
+    "match": "prefix",
+    "organization": "U.S. Space Force",
+    "mission": "missile-warning",
+    "sector": "military",
+    "purpose": "A Defense Support Program spacecraft using infrared sensors for strategic missile-launch warning.",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Article/2197765/defense-support-program-satellites/"
+  },
+  "DMSP": {
+    "match": "prefix",
+    "organization": "U.S. Space Force / NOAA",
+    "mission": "weather",
+    "sector": "military",
+    "purpose": "A Defense Meteorological Satellite Program spacecraft collecting global weather and space-environment observations for military operations.",
+    "source": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/defense-meteorological-satellite-program"
+  },
+  "NAVSTAR": {
+    "match": "prefix",
+    "organization": "U.S. Space Force",
+    "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Article/2197765/global-positioning-system/"
+  },
+  "ALOS": {
+    "match": "prefix",
+    "organization": "JAXA",
+    "source": "https://global.jaxa.jp/projects/sat/alos4/"
+  },
+  "GCOM": {
+    "match": "prefix",
+    "organization": "JAXA",
+    "source": "https://global.jaxa.jp/projects/sat/gcom_w/"
+  },
+  "GOSAT": {
+    "match": "prefix",
+    "organization": "JAXA",
+    "source": "https://global.jaxa.jp/projects/sat/gosat/"
+  },
+  "XRISM": {
+    "match": "prefix",
+    "organization": "JAXA",
+    "source": "https://global.jaxa.jp/projects/sat/xrism/"
+  },
+  "SWARM": {
+    "match": "prefix",
+    "organization": "European Space Agency",
+    "source": "https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm"
+  },
+  "CRYOSAT": {
+    "match": "prefix",
+    "organization": "European Space Agency",
+    "source": "https://www.esa.int/Applications/Observing_the_Earth/FutureEO/CryoSat"
+  },
+  "SMAP": {
+    "match": "norad",
+    "norad": [
+      40376
+    ],
+    "noradNames": [
+      "SMAP"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "civil",
+    "organization": "NASA",
+    "purpose": "NASA's Soil Moisture Active Passive observatory measures how much water sits in the top few centimetres of soil worldwide, and whether that ground is frozen or thawed \u2014 inputs to weather forecasting, drought and flood analysis, and carbon-cycle science. It flew two L-band instruments, an active radar and a passive radiometer; the radar's high-power amplifier failed on 7 July 2015 and was declared unrecoverable. The radiometer has run ever since, so SMAP still maps global soil moisture, at coarser resolution than the mission was designed for.",
+    "source": "https://www.jpl.nasa.gov/news/nasa-soil-moisture-radar-ends-operations-mission-science-continues/"
+  },
+  "YAOGAN": {
+    "match": "prefix",
+    "organization": "People's Republic of China",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "A spacecraft in China's Yaogan series, assessed by the U.S. Department of Defense as People's Liberation Army intelligence, surveillance and reconnaissance.",
+    "source": "https://media.defense.gov/2024/Dec/18/2003615520/-1/-1/0/MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2024.PDF",
+    "contestedAttribution": {
+      "recorded": {
+        "value": "military intelligence, surveillance and reconnaissance",
+        "attributedTo": "the U.S. Department of Defense",
+        "source": "https://media.defense.gov/2024/Dec/18/2003615520/-1/-1/0/MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2024.PDF"
+      },
+      "alternate": {
+        "value": "civil remote sensing for land surveys, crop-yield estimation and disaster relief",
+        "attributedTo": "China",
+        "source": "https://www.gov.cn/zhengce/content/2016-12/27/content_5153378.htm"
+      }
+    }
+  },
+  "FENGYUN": {
+    "match": "prefix",
+    "organization": "China Meteorological Administration",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A Chinese Fengyun meteorological satellite operated by the China Meteorological Administration, supplying imagery and soundings to national forecasting and to the World Meteorological Organization's space-based observing system.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/fy_3"
+  },
+  "CYGFM": {
+    "match": "prefix",
+    "organization": "NASA",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A CYGNSS microsatellite. The constellation measures ocean surface winds inside tropical cyclones by reading GPS signals reflected off the sea surface, which penetrates the heavy rain that blinds conventional scatterometers.",
+    "source": "https://www.nasa.gov/mission/cygnss/"
+  },
+  "FORMOSAT7": {
+    "match": "prefix",
+    "organization": "NSPO / NOAA",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A FORMOSAT-7/COSMIC-2 spacecraft, jointly operated by Taiwan's National Space Organization and NOAA. It profiles atmospheric temperature and moisture by radio occultation, timing GNSS signals as they bend through the atmosphere.",
+    "source": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/cosmic-2"
+  },
+  "SKYNET": {
+    "match": "norad",
+    "organization": "UK Ministry of Defence",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Skynet 5 spacecraft: the hardened X-band constellation that carries beyond-line-of-sight communications for the British armed forces and, under NATO arrangements, for allies. The Ministry of Defence describes SKYNET as its own satellite-communications capability and the Skynet 5 satellites as the generation currently in service.",
+    "source": "https://www.gov.uk/guidance/skynet-6",
+    "norad": [
+      30794,
+      32294,
+      33055,
+      39034
+    ],
+    "noradNames": [
+      "SKYNET 5A",
+      "SKYNET 5B",
+      "SKYNET 5C",
+      "SKYNET 5D"
+    ]
+  },
+  "SYRACUSE": {
+    "match": "norad",
+    "organization": "Direction générale de l'armement (DGA) / French armed forces",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Syracuse spacecraft: the French military communications system that keeps the Army, Navy and Air and Space Force in contact with decision-making centres in mainland France in peacetime, crisis and major disaster. CNES records Syracuse IV as two geostationary satellites, 4A and 4B, built for the DGA to replace Syracuse 3A and 3B.",
+    "source": "https://cnes.fr/en/projects/syracuse-4",
+    "norad": [
+      28885,
+      49333,
+      57214
+    ],
+    "noradNames": [
+      "SYRACUSE 3A",
+      "SYRACUSE 4A",
+      "SYRACUSE 4B"
+    ]
+  },
+  "INSAT": {
+    "match": "prefix",
+    "organization": "Indian Space Research Organisation",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "An INSAT geostationary spacecraft operated by India, carrying meteorological imaging and sounding payloads used for regional forecasting and cyclone warning.",
+    "source": "https://www.isro.gov.in/INSAT_Satellites.html"
+  },
+  "CARTOSAT": {
+    "match": "prefix",
+    "organization": "Indian Space Research Organisation",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A Cartosat Earth-imaging satellite operated by ISRO, supplying high-resolution panchromatic and multispectral imagery for cartography, urban planning and infrastructure mapping.",
+    "source": "https://www.isro.gov.in/Earth_Observation_Satellites.html"
+  },
+  "GAOFEN": {
+    "match": "prefix",
+    "organization": "China National Space Administration",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A Gaofen spacecraft in China's High-definition Earth Observation System, a national civil Earth-observation programme spanning optical, radar and geostationary imaging.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/gaofen"
+  },
+  "TDRS": {
+    "match": "prefix",
+    "organization": "NASA",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "A Tracking and Data Relay Satellite. TDRS spacecraft in geostationary orbit relay communications between NASA missions in low Earth orbit and the ground, giving near-continuous coverage that ground stations alone cannot provide.",
+    "source": "https://www.nasa.gov/directorates/space-operations/space-communications-and-navigation-program/tracking-and-data-relay-satellites/"
+  },
+  "LAGEOS 1": {
+    "match": "norad",
+    "norad": [
+      8820
+    ],
+    "noradNames": [
+      "LAGEOS 1"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "A passive laser-ranging sphere: a solid brass ball covered in retroreflectors, with no power, sensors or transmitter. Ground stations bounce laser pulses off it to measure Earth's shape, rotation and gravity field, and the motion of the tectonic plates the stations stand on.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/lag1_general.html"
+  },
+  "LAGEOS 2": {
+    "match": "norad",
+    "norad": [
+      22195
+    ],
+    "noradNames": [
+      "LAGEOS 2"
+    ],
+    "individual": true,
+    "organization": "NASA / ASI",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "The second passive laser-ranging sphere, built by the Italian space agency and placed in a different orbital plane from LAGEOS 1 to improve the geometry of geodetic solutions. It carries no instruments; it is a target.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/lag2_general.html"
+  },
+  "STELLA": {
+    "match": "norad",
+    "norad": [
+      22824
+    ],
+    "noradNames": [
+      "STELLA"
+    ],
+    "individual": true,
+    "organization": "CNES",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "A passive French laser-ranging sphere in a low near-polar orbit, used to study the short-wavelength part of Earth's gravity field. Like the LAGEOS spheres it has no power and no payload.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/stel_general.html"
+  },
+  "STARLETTE": {
+    "match": "norad",
+    "norad": [
+      7646
+    ],
+    "noradNames": [
+      "STARLETTE"
+    ],
+    "individual": true,
+    "organization": "CNES",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "A dense passive laser-ranging sphere launched in 1975, still tracked today. Its high mass-to-area ratio makes its orbit unusually insensitive to drag, which is what makes it useful for gravity-field work.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/star_general.html"
+  },
+  "EGS (AJISAI)": {
+    "match": "norad",
+    "norad": [
+      16908
+    ],
+    "noradNames": [
+      "EGS (AJISAI)"
+    ],
+    "individual": true,
+    "organization": "JAXA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "A Japanese geodetic satellite covered in mirrors and retroreflectors. Sunlight glinting off it makes it visible from the ground, and laser ranging to it fixes the positions of Japanese survey stations.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/ajis_general.html"
+  },
+  "CXO": {
+    "match": "norad",
+    "norad": [
+      25867
+    ],
+    "noradNames": [
+      "CXO"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "The Chandra X-ray Observatory. Its highly elliptical orbit carries it well beyond the radiation belts so it can observe uninterrupted for most of each 64-hour revolution, imaging the X-ray sky from supernova remnants to matter falling into black holes.",
+    "source": "https://science.nasa.gov/mission/chandra/"
+  },
+  "IRIS": {
+    "match": "norad",
+    "norad": [
+      39197
+    ],
+    "noradNames": [
+      "IRIS"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "The Interface Region Imaging Spectrograph. It observes the thin, turbulent layer between the Sun's visible surface and its corona -- the region where the energy that drives space weather is released.",
+    "source": "https://science.nasa.gov/mission/iris/"
+  },
+  "HINODE (SOLAR B)": {
+    "match": "norad",
+    "norad": [
+      29479
+    ],
+    "noradNames": [
+      "HINODE (SOLAR B)"
+    ],
+    "individual": true,
+    "organization": "JAXA / NASA / UKSA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "A solar observatory carrying optical, X-ray and ultraviolet telescopes that watch how magnetic fields emerge through the Sun's surface and heat the corona.",
+    "source": "https://science.nasa.gov/mission/hinode/"
+  },
+  "GPM": {
+    "match": "norad",
+    "norad": [
+      39574
+    ],
+    "noradNames": [
+      "GPM"
+    ],
+    "individual": true,
+    "organization": "NASA / JAXA",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "The Global Precipitation Measurement Core Observatory. It carries the only spaceborne dual-frequency precipitation radar, and calibrates a wider constellation of microwave sensors so that rain and snowfall can be measured consistently worldwide.",
+    "source": "https://gpm.nasa.gov/missions/GPM"
+  },
+  "SAPPHIRE": {
+    "match": "norad",
+    "norad": [
+      39088
+    ],
+    "noradNames": [
+      "SAPPHIRE"
+    ],
+    "individual": true,
+    "organization": "Canadian Armed Forces",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Canada's dedicated space-surveillance satellite. It does not observe Earth: it tracks other objects in deep space, contributing observations to the U.S. Space Surveillance Network. Note that the registry also holds an unrelated 2001 U.S. student satellite of the same name, which this entry does not claim.",
+    "source": "https://www.canada.ca/en/department-national-defence/services/operations/military-operations/current-operations/sapphire.html"
+  },
+  "METEOR": {
+    "match": "prefix",
+    "organization": "Roshydromet",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A Meteor-M polar-orbiting meteorological satellite operated by Russia's hydrometeorological service, carrying imaging and sounding instruments for numerical weather prediction.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/meteor_m"
+  },
+  "UHF FOLLOW-ON": {
+    "match": "norad",
+    "norad": [
+      22787,
+      23467,
+      25967,
+      28117
+    ],
+    "noradNames": [
+      "UFO 2 (USA 95)",
+      "UFO 4 (USA 108)",
+      "UFO 10 (USA 146)",
+      "UFO 11 (USA 174)"
+    ],
+    "individual": true,
+    "organization": "U.S. Navy",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A UHF Follow-On spacecraft. The UFO constellation carried the U.S. Navy's narrowband tactical satellite communications from geostationary orbit, serving ships, submarines and aircraft, and is being replaced by the Mobile User Objective System.",
+    "source": "https://www.history.navy.mil/research/library/online-reading-room/title-list-alphabetically/f/from-sea-stars.html"
+  },
+  "TACSAT 4": {
+    "match": "norad",
+    "norad": [
+      37818
+    ],
+    "noradNames": [
+      "TACSAT 4"
+    ],
+    "individual": true,
+    "organization": "U.S. Navy / Naval Research Laboratory",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Naval Research Laboratory tactical communications experiment. Its highly elliptical orbit dwells over high latitudes, giving communications-on-the-move coverage to users for whom a geostationary satellite sits too low on the horizon.",
+    "source": "https://www.nrl.navy.mil/Media/News/Article/2573803/nrl-tacsat-4-launches-to-augment-communications-needs/"
+  },
+  "ATHENA-FIDUS": {
+    "match": "norad",
+    "norad": [
+      39509
+    ],
+    "noradNames": [
+      "ATHENA-FIDUS"
+    ],
+    "individual": true,
+    "organization": "France / Italy",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Franco-Italian military telecommunications satellite providing broadband services to the armed forces and civil-security agencies of both countries.",
+    "source": "https://www.colsbleus.defense.gouv.fr/fr/mer-espace-un-enjeu-de-securite-mondiale"
+  },
+  "ISS MODULE": {
+    "match": "norad",
+    "norad": [
+      25575,
+      26400,
+      26700,
+      49044,
+      36086
+    ],
+    "noradNames": [
+      "ISS (UNITY)",
+      "ISS (ZVEZDA)",
+      "ISS (DESTINY)",
+      "ISS (NAUKA)",
+      "POISK"
+    ],
+    "individual": true,
+    "organization": "International Space Station partners",
+    "mission": "human-spaceflight",
+    "sector": "civil",
+    "purpose": "A pressurised module of the International Space Station. The registry catalogues several ISS elements separately even though they fly as one joined structure, so this object shares the station's orbit and is not an independent spacecraft.",
+    "source": "https://www.nasa.gov/international-space-station/"
+  },
+  "CSS": {
+    "match": "norad",
+    "norad": [
+      48274
+    ],
+    "noradNames": [
+      "CSS (TIANHE-1)"
+    ],
+    "individual": true,
+    "organization": "China Manned Space Agency",
+    "mission": "human-spaceflight",
+    "sector": "civil",
+    "purpose": "Tianhe, the core module of China's Tiangong space station. It provides the crew quarters, control and propulsion for a continuously inhabited three-module station.",
+    "source": "http://en.cmse.gov.cn/"
+  },
+  "XMM": {
+    "match": "norad",
+    "norad": [
+      25989
+    ],
+    "noradNames": [
+      "XMM"
+    ],
+    "individual": true,
+    "organization": "European Space Agency",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "XMM-Newton, ESA's X-ray observatory. Its long, highly elliptical orbit keeps it outside the radiation belts for most of each revolution, allowing uninterrupted exposures of X-ray sources.",
+    "source": "https://www.esa.int/Science_Exploration/Space_Science/XMM-Newton"
+  },
+  "MMS": {
+    "match": "norad",
+    "norad": [
+      40482,
+      40483,
+      40484,
+      40485
+    ],
+    "noradNames": [
+      "MMS 1",
+      "MMS 2",
+      "MMS 3",
+      "MMS 4"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "One of four identical Magnetospheric Multiscale spacecraft flying in a tight tetrahedron. By sampling the same region at four points at once they resolve magnetic reconnection - the process that couples the solar wind to Earth's magnetosphere and drives geomagnetic storms.",
+    "source": "https://science.nasa.gov/mission/mms/"
+  },
+  "SAR LUPE": {
+    "match": "norad",
+    "norad": [
+      31797
+    ],
+    "noradNames": [
+      "SAR LUPE 2"
+    ],
+    "individual": true,
+    "organization": "German Armed Forces",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "A SAR-Lupe radar reconnaissance satellite operated by the German armed forces. Synthetic-aperture radar images through cloud and darkness, which optical reconnaissance cannot.",
+    "source": "https://www.bundeswehr.de/de/organisation/streitkraeftebasis"
+  },
+  "NPP": {
+    "match": "norad",
+    "norad": [
+      37849
+    ],
+    "noradNames": [
+      "NPP"
+    ],
+    "individual": true,
+    "organization": "NOAA / NASA",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "Suomi NPP, the first of the Joint Polar Satellite System spacecraft. Its afternoon sun-synchronous orbit supplies the imagery, temperature and moisture soundings that anchor global numerical weather prediction.",
+    "source": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system"
+  },
+  "ELEKTRO-L": {
+    "match": "norad",
+    "norad": [
+      41105,
+      44903,
+      55506
+    ],
+    "noradNames": [
+      "ELEKTRO-L 2",
+      "ELEKTRO-L 3",
+      "ELEKTRO-L 4"
+    ],
+    "individual": true,
+    "organization": "Roshydromet",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "An Elektro-L geostationary meteorological satellite operated by Russia's hydrometeorological service, imaging the full disc of the Earth over Europe, Asia and the Indian Ocean.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/electro_l"
+  },
+  "ARKTIKA-M": {
+    "match": "norad",
+    "norad": [
+      47719,
+      58584
+    ],
+    "noradNames": [
+      "ARKTIKA-M 1",
+      "ARKTIKA-M 2"
+    ],
+    "individual": true,
+    "organization": "Roshydromet",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "An Arktika-M satellite in a highly elliptical Molniya orbit. Geostationary satellites see the Arctic only at a grazing angle, so this orbit is used instead: it dwells over high latitudes for most of each revolution, and a pair of them can image the polar regions continuously.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/arktika_m"
+  },
+  "GEO-KOMPSAT": {
+    "match": "norad",
+    "norad": [
+      43823,
+      45246
+    ],
+    "noradNames": [
+      "GEO-KOMPSAT-2A",
+      "GEO-KOMPSAT-2B"
+    ],
+    "individual": true,
+    "organization": "Korea Aerospace Research Institute",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "A GEO-KOMPSAT-2 geostationary satellite operated by Korea. 2A carries meteorological imaging and a space-weather instrument package; 2B carries ocean-colour and atmospheric-chemistry instruments. Earth observation from geostationary orbit is unusual, and these are among the few genuine cases.",
+    "source": "https://www.wmo-sat.info/oscar/satelliteprogrammes/view/gk_2a"
+  },
+  "SPOT": {
+    "match": "norad",
+    "norad": [
+      38755,
+      40053
+    ],
+    "noradNames": [
+      "SPOT 6",
+      "SPOT 7"
+    ],
+    "individual": true,
+    "organization": "Airbus Defence and Space",
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "purpose": "A SPOT optical imaging satellite operated commercially by Airbus, supplying wide-swath medium-resolution imagery for mapping, agriculture and land-cover monitoring.",
+    "source": "https://www.intelligence-airbusds.com/imagery/constellation/spot/"
+  },
+  "CBERS": {
+    "match": "norad",
+    "norad": [
+      40336,
+      44883
+    ],
+    "noradNames": [
+      "CBERS-4",
+      "CBERS 4A"
+    ],
+    "individual": true,
+    "organization": "INPE / CAST",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A China-Brazil Earth Resources Satellite, built and operated jointly by the Brazilian and Chinese space agencies. Its imagery is distributed free of charge and is widely used for monitoring deforestation in the Amazon basin.",
+    "source": "http://www.cbers.inpe.br/"
+  },
+  "VICTUS": {
+    "match": "norad",
+    "norad": [
+      69646
+    ],
+    "noradNames": [
+      "VICTUS HAZE PUMA"
+    ],
+    "individual": true,
+    "organization": "U.S. Space Force",
+    "mission": "technology",
+    "sector": "military",
+    "purpose": "A VICTUS responsive-space demonstration. The programme exercises how quickly the U.S. Space Force can prepare, launch and operate a spacecraft on short notice, so the mission being demonstrated is the speed itself.",
+    "source": "https://www.ssc.spaceforce.mil/"
+  },
+  "COSMIC (KSLV-II, 2025)": {
+    "match": "norad",
+    "norad": [
+      66658
+    ],
+    "noradNames": [
+      "COSMIC"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "commercial",
+    "purpose": "A 3U CubeSat that launched on South Korea's Nuri (KSLV-II) rocket on 26 November 2025. It carries a post-mission disposal device intended to shorten how long a small satellite lingers in orbit once its work is done, and an onboard computer with motor drivers being flight-proven for Korean lunar rovers. The mission exists to give small Korean firms and startups in-orbit heritage for their own hardware; the platform was designed, built and integrated by the Department of Satellite Systems at Yonsei University. It shares a name with the American-Taiwanese COSMIC radio-occultation constellation and has nothing to do with it.",
+    "source": "https://db.satnogs.org/satellite/XFCX-7274-9992-0205-7857"
+  },
+  "THEMIS": {
+    "match": "norad",
+    "norad": [
+      30580,
+      30581,
+      30582,
+      30797,
+      30798
+    ],
+    "noradNames": [
+      "THEMIS A",
+      "THEMIS B",
+      "THEMIS C",
+      "THEMIS D",
+      "THEMIS E"
+    ],
+    "individual": true,
+    "organization": "NASA",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "One of NASA's THEMIS spacecraft - Time History of Events and Macroscale Interactions during Substorms - flying a highly elliptical orbit that carries it far down the magnetotail to find where and how a substorm begins, the sudden release of stored magnetic energy that lights the aurora. The five identical probes fly in a line so the same disturbance is measured at several distances at once, which is what separates a reconnection onset from a current-disruption onset. Two of the original five were redirected to lunar orbit in 2010 and renamed ARTEMIS. THEMIS appears in CelesTrak's TDRSS group because it uses that relay network to get its data down, not because it is a communications satellite.",
+    "source": "https://science.nasa.gov/mission/themis/"
+  },
+  "KINEIS": {
+    "match": "prefix",
+    "organization": "Kinéis",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A Kinéis nanosatellite, one of a French constellation of 25 that relays short messages from low-power beacons on the ground, at sea and on animals, and receives AIS from ships. It carries the next generation of the ARGOS data-collection payload, which is why CelesTrak files it under ARGOS - but the spacecraft collects transmissions from beacons rather than observing the Earth itself.",
+    "source": "https://www.argos-system.org/kineis-unique-constellation/"
+  },
+  "EOS-06 (Oceansat-3)": {
+    "match": "norad",
+    "norad": [
+      54361
+    ],
+    "noradNames": [
+      "EOS-6"
+    ],
+    "individual": true,
+    "organization": "Indian Space Research Organisation",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "Oceansat-3, ISRO's ocean-colour and wind mission, carrying an ocean-colour monitor, a sea surface temperature radiometer and a scatterometer that reads wind speed and direction from the roughness of the sea. It also carries an ARGOS data-collection transponder for CNES, which is why CelesTrak files it under ARGOS - that is a passenger, not the mission.",
+    "source": "https://www.isro.gov.in/EOS06.html"
+  },
+  "GAZELLE (OTB-3)": {
+    "match": "norad",
+    "norad": [
+      54023
+    ],
+    "noradNames": [
+      "OTB-3-GAZELLE"
+    ],
+    "individual": true,
+    "organization": "General Atomics Electromagnetic Systems",
+    "mission": "technology",
+    "sector": "commercial",
+    "purpose": "GAzelle, formerly Orbital Test Bed 3, is a commercial hosted-payload bus built and owned by General Atomics: customers buy a ride and flight heritage for new hardware rather than a dedicated launch. Its principal passenger is Argos-4, the NOAA/CNES data-collection instrument that reads transmissions from beacons on animals, buoys and ships. The card describes the spacecraft; the instrument it carries belongs to somebody else.",
+    "source": "https://www.ga.com/ga-gazelle-satellite-with-argos4-payload"
+  },
+  "COMSATBW": {
+    "match": "norad",
+    "norad": [
+      35943,
+      36582
+    ],
+    "noradNames": [
+      "COMSATBW-1",
+      "COMSATBW-2"
+    ],
+    "organization": "German Bundeswehr (SATCOMBw)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A COMSATBw spacecraft: one of the two geostationary satellites of SATCOMBw Stage 2, the German armed forces' own secure communications system for deployed operations. DLR's German Space Operations Centre flew the launch and early-orbit phase and continues to operate the pair on behalf of the Bundeswehr's service company.",
+    "source": "https://www.dlr.de/en/rb/research-operation/missions/communications/satcombw"
+  },
+  "SPAINSAT": {
+    "match": "norad",
+    "norad": [
+      28945,
+      62852
+    ],
+    "noradNames": [
+      "SPAINSAT",
+      "SPAINSAT NG1"
+    ],
+    "organization": "Hisdesat, for the Spanish Ministry of Defence",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A SpainSat spacecraft: Spain's governmental and military X- and Ka-band communications system, operated by Hisdesat, which states that it has carried secure traffic for the Ministry of Defence in support of the international deployments of the Spanish armed forces. SpainSat NG I is the replacement generation and entered service in 2025.",
+    "source": "https://www.hisdesat.es/en/satelites_comunicaciones/"
+  },
+  "OPTUS C1": {
+    "match": "norad",
+    "norad": [
+      27831
+    ],
+    "noradNames": [
+      "OPTUS C1"
+    ],
+    "individual": true,
+    "organization": "Optus / Australian Department of Defence",
+    "mission": "communications",
+    "sector": "mixed",
+    "purpose": "Optus and Defence C1 is one geostationary spacecraft carrying two payloads for two owners: commercial Ku-band services for Optus, and UHF, X- and Ka-band military communications for the Australian Department of Defence. It was built under a contract placed by Optus and the Department jointly, and the site records it as mixed rather than military for that reason.",
+    "source": "https://space.skyrocket.de/doc_sdat/optus-c.htm"
+  },
+  "GONETS": {
+    "match": "prefix",
+    "organization": "Gonets Satellite System / ISS Reshetnev",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "A Gonets spacecraft: a small low-orbit store-and-forward messaging satellite that records a message as it passes over the sender and drops it to a ground station later, which is how remote Russian sites with no terrestrial link are served. Gonets is the civilian derivative of the military Strela-3 system and is flown as a civil constellation.",
+    "source": "https://www.reshetnev.com/satellites/communications-broadcasting/gonets-m"
+  },
+  "CHINASAT 2 (SHENTONG-2)": {
+    "match": "norad",
+    "norad": [
+      38352,
+      41021,
+      43920,
+      49062
+    ],
+    "noradNames": [
+      "CHINASAT 2A",
+      "CHINASAT 2C",
+      "CHINASAT 2D",
+      "CHINASAT 2E"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and the China Space Report",
+    "organization": "People's Liberation Army (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be a Shentong-2 (ST-2) spacecraft: the second generation of the PLA's secure geostationary communications network, flown under a civil ChinaSat designation. Gunter's Space Page calls the ST-2 series reportedly Chinese military comsats providing Ku-band communications-on-the-move through steerable spot beams, and the China Space Report describes Fenghuo and Shentong as CAST-built military families carrying secured voice and data for military users. No Chinese source says so, and this site does not pretend one does. Only the four ChinaSat 2 satellites are named here; the sixteen other ChinaSat spacecraft in this catalogue are China Satcom commercial broadcast birds and are left alone.",
+    "source": "https://space.skyrocket.de/doc_sdat/st-2_china.htm"
+  },
+  "TJS": {
+    "match": "prefix",
+    "evidence": "assessed",
+    "assessedBy": "open-source analysts, summarised on Wikipedia and in SpaceNews reporting",
+    "organization": "People's Liberation Army (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "A Tongxin Jishu Shiyan (\"communication technology experiment\") spacecraft. China announces these launches only afterwards and in general terms; independent analysts read TJS as a cover name spanning several classified geostationary military programmes, with individual flights assessed variously as signals intelligence, missile early warning, or genuinely communications technology. This site records what those readings agree on -- that the programme is military -- and declines to name a mission, because they do not agree on one.",
+    "source": "https://en.wikipedia.org/wiki/Tongxin_Jishu_Shiyan"
+  },
+  "MERIDIAN": {
+    "match": "prefix",
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb) and Gunter Krebs (Gunter's Space Page)",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be a Meridian (14F112) military communications satellite: the highly elliptical Molniya-orbit half of Russia's Integrated Satellite Communications System, working with the geostationary Raduga-1M satellites and replacing the Molniya and Parus series. RussianSpaceWeb reports that official Russian media describe it as linking ships and aircraft in the Arctic to ground stations in Siberia and the Far East, and that the Russian government has confirmed the military role. There is no operator fact sheet to point at.",
+    "source": "https://www.russianspaceweb.com/meridian.html"
+  },
+  "RADUGA 1M": {
+    "match": "norad",
+    "norad": [
+      39375
+    ],
+    "noradNames": [
+      "RADUGA 1M-3"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb) and Gunter Krebs (Gunter's Space Page)",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be Raduga-1M (Globus-1M, 17F15M): the geostationary half of Russia's Integrated Satellite Communications System, carrying L-, C-, X- and Ka-band military traffic and working with the Meridian satellites in highly elliptical orbit. The programme was classified and no imagery or fact sheet was released when it was deployed; this description is the reading of two independent reference works.",
+    "source": "https://space.skyrocket.de/doc_sdat/raduga-1m.htm"
+  },
+  "COSMOS (BLAGOVEST)": {
+    "match": "norad",
+    "norad": [
+      42907,
+      43432,
+      43867,
+      44457
+    ],
+    "noradNames": [
+      "COSMOS 2520",
+      "COSMOS 2526",
+      "COSMOS 2533",
+      "COSMOS 2539"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), agreeing with Wikipedia's cited article",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be one of the four Blagovest (14F149) satellites launched between 2017 and 2019 under Kosmos designations, which is how Russia catalogues military spacecraft. RussianSpaceWeb describes Blagovest as a constellation of military communications spacecraft in geostationary orbit; the satellites carry Ka- and Q-band transponders on an Ekspress-2000 bus and are reported to support Russian Armed Forces communications. The Kosmos number is the whole of what the public catalogue records, so the identification itself rests on those sources too.",
+    "source": "https://www.russianspaceweb.com/blagovest14l.html"
+  },
+  "COSMOS (GARPUN)": {
+    "match": "norad",
+    "norad": [
+      41121
+    ],
+    "noradNames": [
+      "COSMOS 2513"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb) and Gunter Krebs (Gunter's Space Page)",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be Garpun No. 12L (14F136), a Russian military data-relay satellite: a communications satellite whose users are other satellites, carrying imagery and signals from reconnaissance spacecraft in low orbit down to ground stations that cannot see them directly. SpaceNews reported at the time that Russian officials did not disclose the mission and that the description came from outside observers, which is exactly the evidence class this card is marked with.",
+    "source": "https://www.russianspaceweb.com/garpun.html"
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "version": "2026-09-04.1",
+  "note": "What is ORDINARY for a class of object, so that departure from it is the signal. This table is hand-authored data, not model output, and it is the only thing that decides whether a manoeuvre is unremarkable. Every figure is either derived from orbital mechanics here (with the derivation written out, so it can be checked) or taken from a published source (with a URL). Nothing in this file is an estimate someone remembered. Matching is by properties of ONE object -- its own catalog type, its own name, its own altitude, its own inclination, its own nodal rate. No entry compares two objects; see docs/mission-speculation-design.md section 1.6.",
+  "specificityNote": "Higher `specificity` wins when several entries match. 0 is the regime default, 10 is a named constellation, 20 is a single named object.",
+  "deltaVBudgets": [
+    {
+      "id": "geo-north-south",
+      "label": "Geostationary north-south station-keeping",
+      "figure": "40 to 51 m/s per year",
+      "kind": "derived",
+      "derivation": "Solar and lunar gravity torque the orbit plane of a geostationary satellite away from the equator at roughly 0.75 to 0.95 deg/yr, the rate varying over the 18.6-year lunar nodal cycle. Rotating the plane back costs dv = 2 V sin(di/2) with V = sqrt(mu/a) = 3074.7 m/s at a = 42164 km. At 0.75 deg/yr that is 40.25 m/s/yr; at 0.85, 45.61; at 0.95, 50.98.",
+      "teaching": "This is the expensive half of holding a geostationary slot, and it is the reason a satellite's usable life is usually set by propellant rather than by electronics. Operators sometimes stop north-south keeping near end of life and let inclination grow, which is what an inclined-orbit lease is.",
+      "published": {
+        "figure": "50 m/s per year, and about 95 per cent of a geostationary satellite's station-keeping propellant",
+        "sources": [
+          {
+            "url": "https://iopscience.iop.org/article/10.1088/1757-899X/29/1/012010/pdf",
+            "quote": "The variation of velocity is 50 m.s-1 (North-South) and 5 m.s-1 (East-West) per year.",
+            "cite": "Dundeck et al., IOP Conf. Ser. Mater. Sci. Eng. 29 012010 (2012)"
+          },
+          {
+            "url": "https://www.daviddarling.info/encyclopedia/S/station-keeping.html",
+            "quote": "North-south station-keeping maneuvers about once every two weeks, with an annual delta v of about 50 meters per second, which represents 95% of the total station-keeping propellant budget."
+          }
+        ],
+        "agreement": "The derivation above gives 40 to 51 m/s/yr from the luni-solar drift rate alone, and the published figure is 50. Two independent routes to the same number is the strongest form this table can take."
+      }
+    },
+    {
+      "id": "geo-east-west",
+      "label": "Geostationary east-west station-keeping",
+      "figure": "about 2 m/s per year, in burns of a few cm/s every one to four weeks",
+      "kind": "derived",
+      "derivation": "The Earth's equatorial ellipticity (the J22 term) gives the geostationary ring two stable longitudes near 75.1E and 104.9W and two unstable ones. A satellite away from a stable point accelerates in longitude at up to about 0.0018 deg/day^2, and holding a deadband of +/-0.05 to 0.1 deg against it costs of order 2 m/s per year. A single correction inside that deadband is a few centimetres per second, which changes the semi-major axis by of order a kilometre.",
+      "teaching": "East-west keeping is cheap because it is an in-plane change; north-south is expensive because it is a plane change. The same satellite pays both, and the ratio between them is about 25 to 1.",
+      "published": {
+        "figure": "between 2 and 5 m/s per year, corrections roughly weekly",
+        "sources": [
+          {
+            "url": "https://www.daviddarling.info/encyclopedia/S/station-keeping.html",
+            "quote": "East-west station-keeping maneuvers about once a week, with an annual delta v of less than 2 meters per second, to keep the satellite within 0.05 degrees of its assigned longitude."
+          },
+          {
+            "url": "https://iopscience.iop.org/article/10.1088/1757-899X/29/1/012010/pdf",
+            "quote": "The variation of velocity is 50 m.s-1 (North-South) and 5 m.s-1 (East-West) per year."
+          }
+        ],
+        "conflict": "The two published figures disagree: under 2 m/s/yr against 5 m/s/yr. The range is shown rather than a choice being made. Either way the ratio to north-south keeping is between ten and twenty-five to one, which is the point worth teaching, and the derivation above lands inside the range."
+      }
+    },
+    {
+      "id": "geo-disposal",
+      "label": "Geostationary end-of-life disposal raise",
+      "figure": "8.5 to 11 m/s for a 235 to 300 km raise",
+      "kind": "derived",
+      "derivation": "A two-burn transfer from a = 42164 km to a = 42399 km (a 235 km raise) costs 8.53 m/s; to 42464 km (300 km), 10.88 m/s. The IADC disposal guideline asks for a perigee at least 235 km above the geostationary ring plus a term proportional to the solar-radiation-pressure area-to-mass ratio, so the required raise is object-dependent and 235 km is the floor.",
+      "teaching": "Disposal costs about three months of north-south keeping. That is the trade an operator makes at end of life, and it is why a satellite that is abandoned in the ring rather than raised is a lasting hazard.",
+      "published": {
+        "figure": "11 m/s for a 300 km raise, about three months of station-keeping propellant",
+        "sources": [
+          {
+            "url": "https://www.esa.int/ESA_Multimedia/Images/2008/03/Mitigation_scenarios_Graveyard_orbit_300_km_above_GEO",
+            "quote": "The change in velocity that is required to raise the orbit altitude by 300 km is 11 meter/sec, and the required propellant corresponds to that necessary for three months of station keeping."
+          },
+          {
+            "url": "https://orbitaldebris.jsc.nasa.gov/library/iadc-space-debris-guidelines-revision-2.pdf",
+            "quote": "235 km is the sum of the upper altitude of the GEO protected region (200 km) and the maximum descent of a re-orbited spacecraft due to luni-solar and geopotential perturbations (35 km).",
+            "cite": "IADC-02-01 Rev.2, section 5.3.1; the required height is 235 + 1000*Cr*(A/M) km with e < 0.003, also ITU-R S.1003-2"
+          }
+        ],
+        "agreement": "The derivation above gives 10.88 m/s for a 300 km raise against ESA's published 11."
+      }
+    },
+    {
+      "id": "leo-plane-change-vs-raise",
+      "label": "Why inclination changes are the loud signal in low Earth orbit",
+      "figure": "at 550 km, 1 degree of plane change costs 132.4 m/s, while raising the orbit by 1 km costs 0.547 m/s",
+      "kind": "derived",
+      "derivation": "At a = 6928 km the circular speed is 7585 m/s. A plane rotation costs dv = 2 V sin(di/2) = 132.4 m/s per degree. A tangential raise costs dv = n da / 2 with n = sqrt(mu/a^3), which is 0.547 m/s per km. The ratio is 242 to 1.",
+      "teaching": "This is the single most useful number for reading an orbital history. Maintenance is in-plane and cheap; a plane change is a decision. An operator who spends 130 m/s to move one degree has changed what the spacecraft is for, not merely kept it where it was."
+    },
+    {
+      "id": "leo-drag-make-up",
+      "label": "Low Earth orbit drag make-up, and how much the solar cycle changes it",
+      "figure": "0.089 m/s/yr at solar minimum rising to 1.75 m/s/yr at solar maximum, at about 786 km -- a factor of nearly twenty, at a fixed altitude, for a fixed spacecraft",
+      "kind": "published",
+      "sources": [
+        {
+          "url": "https://eopro.esa.int/wp-content/uploads/2020/10/Guidelines-for-DeltaV-and-propellant-budget-computation.pdf",
+          "cite": "ESA, Guidelines for the computation of Delta-V and propellant budget, EOP-PhiMP/2019-07-2155, 11 November 2019",
+          "quote": "Annual drag compensation for a 730 kg spacecraft with Cd 3 and 4.5 m2 area at about 786 km, 2029 to 2038: 0.107, 0.089, 0.103, 0.335, 1.020, 1.747, 1.644, 1.241, 0.631, 0.283 m/s per year."
+        }
+      ],
+      "teaching": "This is the single best number on the page for connecting space weather to operations. Nothing about the satellite changes across that table -- same mass, same area, same altitude. The atmosphere it is flying through changes, because the Sun changed, and the propellant bill moves by a factor of twenty. It is also the reason NASA widened the ISS altitude band in March 2025: the old one was, in their words, difficult to maintain with monthly reboosts during solar maximum."
+    },
+    {
+      "id": "iss-reboost",
+      "label": "Crewed station reboost at about 410 km",
+      "figure": "0.24 to 2.3 m/s per burn, roughly monthly, so of order 12 m/s per year",
+      "kind": "published",
+      "sources": [
+        {
+          "url": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+          "cite": "NASA Glenn PIMS ISS Handbook, one document per reboost since 2010",
+          "quote": "Each reboost document states the GMT ignition time, the burn duration, the delta-v and the altitude change, giving both the planned value and the value derived independently from the SAMS accelerometers."
+        }
+      ],
+      "teaching": "Compare against the ESA figure above: the same physics at 410 km instead of 786 km, and the same spacecraft area-to-mass ratio to within twenty per cent, costs about ten times as much per year. The difference is entirely altitude, because neutral density falls roughly exponentially with a scale height of tens of kilometres."
+    }
+  ],
+  "classes": [
+    {
+      "id": "passive-debris",
+      "label": "Debris fragment",
+      "specificity": 5,
+      "cannotManoeuvre": true,
+      "match": {
+        "objectType": [
+          "DEBRIS"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay"
+      ],
+      "citations": [
+        {
+          "kind": "definition",
+          "text": "space-track's OBJECT_TYPE of DEBRIS denotes a fragment, not a spacecraft. It has no propulsion by definition, so any propulsive signature on it is a false alarm."
+        }
+      ]
+    },
+    {
+      "id": "passive-rocket-body",
+      "label": "Spent rocket stage",
+      "specificity": 5,
+      "cannotManoeuvre": true,
+      "match": {
+        "objectType": [
+          "ROCKET BODY"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay"
+      ],
+      "citations": [
+        {
+          "kind": "definition",
+          "text": "A catalogued ROCKET BODY is a spent upper stage. Some stages perform a disposal burn shortly after separation, but a stage that has been catalogued and tracked for more than a few days is inert. Treated here as unable to manoeuvre, which is the conservative direction for a false-alarm control: any real late disposal burn inflates the measured false-alarm rate rather than hiding it."
+        }
+      ]
+    },
+    {
+      "id": "leo-payload-default",
+      "label": "Low Earth orbit payload",
+      "specificity": 1,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "regime": [
+          "LEO"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay",
+        "drag-make-up",
+        "along-track-raise",
+        "along-track-lower"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 25.0,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "A low Earth orbit payload maintains its altitude against drag with small in-plane burns. The ceiling of 25 m/s per event is set so that anything larger is flagged for a reader's attention: at 550 km, 25 m/s is a 46 km altitude change or a fifth of a degree of plane change, both of which are campaigns rather than maintenance."
+        }
+      ]
+    },
+    {
+      "id": "sun-synchronous-imager",
+      "label": "Sun-synchronous payload",
+      "specificity": 6,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "regime": [
+          "LEO"
+        ],
+        "sunSynchronous": true
+      },
+      "ordinarySignatures": [
+        "drag-decay",
+        "drag-make-up",
+        "along-track-raise",
+        "along-track-lower",
+        "inclination-change"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 15.0,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "A sun-synchronous orbit's whole value is that its J2 nodal regression equals the mean sun's apparent motion, +0.9856 deg/day, which fixes the local solar time of every pass. That rate depends on both altitude and inclination, so an operator holding the local time constant must adjust BOTH -- small inclination corrections are ordinary maintenance for this class, and only for this class. Elsewhere an inclination change is a mission change."
+        }
+      ]
+    },
+    {
+      "id": "starlink",
+      "label": "Starlink",
+      "specificity": 10,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "namePattern": "^STARLINK",
+        "regime": [
+          "LEO"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay",
+        "drag-make-up",
+        "along-track-raise",
+        "along-track-lower",
+        "orbit-raising",
+        "thrust-excess",
+        "orbit-lowering",
+        "deorbit-lowering",
+        "inclination-change"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 10.0,
+      "manoeuvresRoutinely": true,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+        }
+      ]
+    },
+    {
+      "id": "oneweb",
+      "label": "OneWeb",
+      "specificity": 10,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "namePattern": "^ONEWEB",
+        "regime": [
+          "LEO"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay",
+        "drag-make-up",
+        "along-track-raise",
+        "along-track-lower",
+        "orbit-raising",
+        "thrust-excess"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 5.0,
+      "manoeuvresRoutinely": true,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "OneWeb flies a near-polar shell at about 1,200 km, where atmospheric drag is negligible on the timescale of an element set. Station-keeping there is about holding a slot within the constellation's own geometry, not about fighting the atmosphere, so corrections are very small -- of order a centimetre per second -- and a raise of even tens of metres in semi-major axis is a real, deliberate act."
+        }
+      ]
+    },
+    {
+      "id": "geo-payload-default",
+      "label": "Geostationary payload",
+      "specificity": 3,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "regime": [
+          "GEO",
+          "near-GEO"
+        ]
+      },
+      "ordinarySignatures": [
+        "geo-east-west-keeping",
+        "geo-north-south-keeping",
+        "geo-graveyard-raise"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 5.0,
+      "citations": [
+        {
+          "kind": "reference",
+          "budget": "geo-east-west"
+        },
+        {
+          "kind": "reference",
+          "budget": "geo-north-south"
+        }
+      ]
+    },
+    {
+      "id": "meo-navigation",
+      "label": "Medium Earth orbit navigation payload",
+      "specificity": 8,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "regime": [
+          "MEO"
+        ],
+        "mission": [
+          "navigation"
+        ]
+      },
+      "ordinarySignatures": [
+        "along-track-raise",
+        "along-track-lower"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 3.0,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "A navigation constellation at about 20,000 km sees no meaningful drag and only slow luni-solar plane drift, and its orbits are chosen so the ground track repeats. Station-keeping is therefore infrequent and small, and its purpose is to hold the repeat -- which is a property of the semi-major axis, so the corrections are in-plane."
+        }
+      ]
+    },
+    {
+      "id": "human-spaceflight",
+      "label": "Crewed vehicle or station",
+      "specificity": 12,
+      "match": {
+        "objectType": [
+          "PAYLOAD"
+        ],
+        "regime": [
+          "LEO"
+        ],
+        "mission": [
+          "human-spaceflight"
+        ]
+      },
+      "ordinarySignatures": [
+        "drag-decay",
+        "drag-make-up",
+        "along-track-raise",
+        "along-track-lower"
+      ],
+      "perEventDeltaVCeilingMetresPerSecond": 3.0,
+      "manoeuvresRoutinely": true,
+      "citations": [
+        {
+          "kind": "derived",
+          "text": "A crewed station in low Earth orbit loses altitude continuously and is reboosted by a visiting vehicle. Reboosts are large enough to be unmistakable in the elements, are announced in advance, and are the best-documented manoeuvres in orbit -- which is why this class is the anchor of the positive control in data/orbit_manoeuvre_truth.json."
+        },
+        {
+          "kind": "published",
+          "url": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+          "text": "Measured across forty published ISS reboosts from 2020 to 2026, the per-event delta-v runs from 0.24 to 2.3 m/s. The ceiling of 3.0 m/s here is set just above the largest one NASA has published, so a larger burn is flagged for a reader rather than passed over."
+        }
+      ]
+    }
+  ]
+}

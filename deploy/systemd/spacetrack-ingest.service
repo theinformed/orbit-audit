@@ -1,0 +1,32 @@
+[Unit]
+Description=Space-Track orbital element ingest (bigmem-PC only, personal account)
+Documentation=https://www.space-track.org/documentation#api
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+ExecStart=/usr/bin/python3 /home/sdegan/space-teaching-aid/ingest/spacetrack_ingest.py
+# Archive the elements we just fetched. Runs AFTER the fetch and never gates it:
+# a broken archive must not stop the site's element ingest. Every hour this does
+# not run is orbital history permanently lost, because the mirror is overwritten
+# in place. Deduplicates on (NORAD_CAT_ID, EPOCH); re-running is a no-op.
+# The leading '-' was removed 2026-08-08. With it, a failed archive step left the
+# unit green: two hourly GP captures were lost to a database lock while the mirror
+# sat fresh on disk and systemd reported success. A fresh gp-active.json is NOT
+# evidence the archive received it, and those hours cannot be recovered.
+ExecStartPost=/usr/bin/python3 -m pipeline.orbit_history --capture --from-manifest /home/sdegan/space-teaching-aid/runtime/data
+Nice=10
+# Twenty minutes, raised from ten on 2026-08-08, and it has to stay above
+# pipeline/orbit_history.py's DEFAULT_BUSY_TIMEOUT_SECONDS (900 s). The capture
+# now waits fifteen minutes for the archive lock rather than one, because the
+# release's own whole-table queries hold the archive for up to five. If systemd
+# killed the unit at the ten-minute mark the capture would die mid-wait without
+# printing its report, and the report - which hour was lost, and that it cannot
+# be recovered - is the entire reason for waiting rather than failing fast.
+TimeoutStartSec=1200
+
+[Install]
+WantedBy=multi-user.target

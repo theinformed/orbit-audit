@@ -1,0 +1,70 @@
+{
+ "scene": "HF",
+ "duration": 79.1,
+ "lines": [
+  {
+   "t": 7.933,
+   "text": "Three ionised layers over one transmitter. The heights are to scale with each other."
+  },
+  {
+   "t": 11.1,
+   "text": "A little power crawls along the ground and is gone within a couple of hundred miles."
+  },
+  {
+   "t": 14.967,
+   "text": "The rest goes up, is bent back by the F2 layer, and lands a long way off. One hop."
+  },
+  {
+   "t": 18.633,
+   "text": "Between the two there is nothing at all."
+  },
+  {
+   "t": 20.5,
+   "text": "The station five hundred miles away can be unreachable; the one two thousand miles away is loud."
+  },
+  {
+   "t": 25.067,
+   "text": "Raise the frequency and the ray goes deeper before it turns, and lands further away."
+  },
+  {
+   "t": 28.833,
+   "text": "Push it too far and the layer cannot turn it back at all. The signal leaves."
+  },
+  {
+   "t": 34.4,
+   "text": "Now a flare goes off on the Sun."
+  },
+  {
+   "t": 36.967,
+   "text": "Its X-rays cross in eight minutes and stop in the D region \u2014 the lowest layer."
+  },
+  {
+   "t": 40.733,
+   "text": "D stops being a mirror and starts being a sponge."
+  },
+  {
+   "t": 47.133,
+   "text": "Absorption goes as one over frequency squared. Four megahertz never gets out of the D region."
+  },
+  {
+   "t": 49.9,
+   "text": "Seven is badly weakened. Fourteen is still working."
+  },
+  {
+   "t": 56.367,
+   "text": "Every HF path has a ceiling and a floor. You work between them."
+  },
+  {
+   "t": 58.633,
+   "text": "The flare barely moves the ceiling. It lifts the floor."
+  },
+  {
+   "t": 64.5,
+   "text": "The low end goes first, then the middle."
+  },
+  {
+   "t": 69.067,
+   "text": "When the floor reaches the ceiling there is no usable frequency left."
+  }
+ ]
+}

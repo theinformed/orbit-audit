@@ -1,0 +1,174 @@
+{
+  "note": "One orbit-classification rule, written three times: classifyOrbit() in src/orbit.ts, derive_orbit() in pipeline/build_release.py, and regime_from_elements() in pipeline/catalog_audit.py. The audit copy is deliberately independent -- an audit that imports what it audits audits nothing -- so the copies cannot be collapsed, and this fixture is what keeps them one rule instead. Both tests/orbit-classifier-parity.test.ts and tests/test_orbit_classifier_parity.py read THIS file, so a change to the rule in any one language fails in the other two. A disagreement between the artifact's published `orbit` field and the client's own classifier would be a silent split-brain: nothing on the page shows it.",
+  "inputs": "meanMotion (rev/day), eccentricity, inclinationDeg -- each side derives perigee, apogee and period itself",
+  "cases": [
+    {
+      "why": "ISS-class low Earth orbit",
+      "meanMotion": 15.5,
+      "eccentricity": 0.0007,
+      "inclinationDeg": 51.6,
+      "expect": "LEO"
+    },
+    {
+      "why": "GPS-class medium Earth orbit",
+      "meanMotion": 2.005571031,
+      "eccentricity": 0.005,
+      "inclinationDeg": 55.0,
+      "expect": "MEO"
+    },
+    {
+      "why": "a parked geostationary spacecraft",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.0001,
+      "inclinationDeg": 0.05,
+      "expect": "GEO"
+    },
+    {
+      "why": "SHIYAN 9 -- the most inclined object the catalog still calls GEO, 16.4 deg",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.0006,
+      "inclinationDeg": 16.376,
+      "expect": "GEO"
+    },
+    {
+      "why": "AMC-14 -- the least inclined IGSO in the catalog, 24.1 deg",
+      "meanMotion": 1.004474796,
+      "eccentricity": 0.00363,
+      "inclinationDeg": 24.093,
+      "expect": "IGSO"
+    },
+    {
+      "why": "BEIDOU 3 IGSO-1 -- the class at its centre",
+      "meanMotion": 1.002716387,
+      "eccentricity": 0.00271,
+      "inclinationDeg": 58.797,
+      "expect": "IGSO"
+    },
+    {
+      "why": "BEIDOU 8 -- the most inclined IGSO in the catalog, 62.5 deg",
+      "meanMotion": 1.002529996,
+      "eccentricity": 0.0037,
+      "inclinationDeg": 62.497,
+      "expect": "IGSO"
+    },
+    {
+      "why": "IRNSS 1B (NavIC)",
+      "meanMotion": 1.002773644,
+      "eccentricity": 0.00192,
+      "inclinationDeg": 28.812,
+      "expect": "IGSO"
+    },
+    {
+      "why": "QZS-2 (MICHIBIKI-2) -- the eccentric end of the class at e = 0.075",
+      "meanMotion": 1.002659834,
+      "eccentricity": 0.07529,
+      "inclinationDeg": 39.328,
+      "expect": "IGSO"
+    },
+    {
+      "why": "SDO -- inclined geosynchronous and not a navigation satellite at all",
+      "meanMotion": 1.002760376,
+      "eccentricity": 0.00015,
+      "inclinationDeg": 34.793,
+      "expect": "IGSO"
+    },
+    {
+      "why": "a Molniya highly elliptical orbit",
+      "meanMotion": 2.005571031,
+      "eccentricity": 0.72,
+      "inclinationDeg": 63.4,
+      "expect": "HEO"
+    },
+    {
+      "why": "IPM 2/BREEZE-M -- near-circular 25.2 h disposal orbit ABOVE the belt",
+      "meanMotion": 0.952982869,
+      "eccentricity": 0.00834,
+      "inclinationDeg": 5.543,
+      "expect": "OTHER"
+    },
+    {
+      "why": "RADIO ROSTO -- near-circular, straddling the 2,000 km LEO/MEO line",
+      "meanMotion": 11.275811036,
+      "eccentricity": 0.01585,
+      "inclinationDeg": 64.815,
+      "expect": "OTHER"
+    },
+    {
+      "why": "EXPRESS MD2 -- stranded 258 x 2,688 km after a 2011 upper-stage failure",
+      "meanMotion": 12.479633931,
+      "eccentricity": 0.15481,
+      "inclinationDeg": 49.821,
+      "expect": "OTHER"
+    },
+    {
+      "why": "19.999 deg is still GEO",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.0001,
+      "inclinationDeg": 19.999,
+      "expect": "GEO"
+    },
+    {
+      "why": "20.0 deg is IGSO -- one threshold, not two",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.0001,
+      "inclinationDeg": 20.0,
+      "expect": "IGSO"
+    },
+    {
+      "why": "e = 0.14 inclined: IGSO only because the branch precedes HEO",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.14,
+      "inclinationDeg": 45.0,
+      "expect": "IGSO"
+    },
+    {
+      "why": "e = 0.14 equatorial: GEO for the same reason -- the twin case",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.14,
+      "inclinationDeg": 5.0,
+      "expect": "GEO"
+    },
+    {
+      "why": "e = 0.15 exactly: outside the box, and HEO catches it with no gap",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.15,
+      "inclinationDeg": 45.0,
+      "expect": "HEO"
+    },
+    {
+      "why": "e = 0.30 inclined geosynchronous is a Tundra orbit, and reads HEO",
+      "meanMotion": 1.002715688,
+      "eccentricity": 0.3,
+      "inclinationDeg": 63.4,
+      "expect": "HEO"
+    },
+    {
+      "why": "1380.5 min is inside the geosynchronous window",
+      "meanMotion": 1.043100326,
+      "eccentricity": 0.001,
+      "inclinationDeg": 45.0,
+      "expect": "IGSO"
+    },
+    {
+      "why": "1379.0 min falls out of the window and lands in MEO",
+      "meanMotion": 1.044234953,
+      "eccentricity": 0.001,
+      "inclinationDeg": 45.0,
+      "expect": "MEO"
+    },
+    {
+      "why": "1499.5 min is inside the window",
+      "meanMotion": 0.960320107,
+      "eccentricity": 0.001,
+      "inclinationDeg": 45.0,
+      "expect": "IGSO"
+    },
+    {
+      "why": "1501.0 min falls out and is a legitimate OTHER, above the belt",
+      "meanMotion": 0.959360426,
+      "eccentricity": 0.001,
+      "inclinationDeg": 45.0,
+      "expect": "OTHER"
+    }
+  ]
+}

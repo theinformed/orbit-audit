@@ -1,0 +1,26 @@
+{
+  "_comment": "NORAD catalogue id to registry name, for every object named in data/ground_stations.json. Checked in so the guard runs offline and so a change to a link's noradId shows up as a diff here that a reviewer has to approve. Generated from the space-track.org SATCAT mirror the release pipeline already keeps; this tree must not call space-track.org or celestrak.org directly (docs/OPEN-WORK.md section 0). Regenerate with tools/add_ground_stations_2026_08_08.py, which stamps the same names onto the table itself.",
+  "registry": "space-track.org SATCAT (offline mirror)",
+  "retrieved": "2026-08-08",
+  "names": {
+    "37849": "NPP",
+    "38771": "METOP-B",
+    "39084": "LANDSAT 8",
+    "39634": "SENTINEL 1A",
+    "40319": "HAYABUSA 2",
+    "40697": "SENTINEL 2A",
+    "41240": "JASON 3",
+    "41335": "SENTINEL 3A",
+    "42063": "SENTINEL 2B",
+    "43013": "NOAA 20",
+    "43215": "PAZ",
+    "43437": "SENTINEL 3B",
+    "43653": "BEPICOLOMBO",
+    "43689": "METOP-C",
+    "46984": "S6 MICHAEL FREILICH",
+    "49260": "LANDSAT 9",
+    "54234": "NOAA 21",
+    "60989": "SENTINEL-2C",
+    "66315": "SENTINEL-1D"
+  }
+}

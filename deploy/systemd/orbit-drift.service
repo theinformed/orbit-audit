@@ -1,0 +1,26 @@
+[Unit]
+Description=Nightly long-arc orbit drift and its full-catalogue control
+Documentation=file:///home/sdegan/space-teaching-aid/docs/orbit-drift.md
+After=spacetrack-ingest.service
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+# Never fall back to the cold HDD for this daily raw-element pass.
+Environment=SPACE_EXPLORER_ORBIT_DB_ROOT=/home/sdegan/space-orbit-history
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+# Fixed trailing 120 COMPLETE UTC days: 24 five-day blocks, >=80% coverage.
+# The preceding 240 days are optional context only. Long enough for sustained
+# slopes; short campaigns may disappear in the fit. This window earns its OWN
+# full-catalogue gate every night; it cannot borrow the 2024 acceptance rates.
+ExecStart=/home/sdegan/gpu-broker/gpu-run --estimate-mib 320 --class priority -- /home/sdegan/space-teaching-aid/.venv-gpu/bin/python -m pipeline.orbit_drift --build-cache --backend gpu --devices 0
+Nice=15
+IOSchedulingClass=idle
+# Stateless recompute: generous headroom over 10-15 min; the 2024 evaluation
+# also took 39 min under contention. Partial work never replaces the fragment.
+TimeoutStartSec=7200
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,44 @@
+{
+ "name": "Historical-event clip narration facts",
+ "sourceOfRecord": "/home/sdegan/space-teaching-aid/narration/event-narration-facts.json on bigmem-PC",
+ "takenFrom": "data/events.json milestones and summary, src/observed-imagery.ts EVENT_MEDIA captions, and docs/MEDIA-AND-NARRATION.md, at commit 0a3b4c9",
+ "note": "Every field here is copied verbatim from the page the clip already sits on and from the event's own published milestones. The model that drafts narration is shown NOTHING ELSE, so a number it writes that is not in this file is an invented number and is thrown away. Two events were added to the site on 2026-08-21 with imagery and no voice; these are those two.",
+ "clips": [
+  {
+   "n": 1,
+   "id": "bastille-2000-cme",
+   "name": "Bastille Day 2000, the instrument being hit by the storm it was recording",
+   "wordBudget": 50,
+   "onScreen": "Forty-eight frames covering 14 July 2000 from nine in the morning to twenty to midnight UTC. SOHO's ultraviolet camera at 195 angstroms is composited with the LASCO C2 and C3 coronagraphs. The corona is quiet at the start. From about eleven in the morning white speckle fills the frame and gets worse.",
+   "lead": "The white speckle that fills the frame partway through is not noise in the recording and not an artefact of this harvest. It is protons from this event striking the coronagraph's detector, arriving at the spacecraft within the hour of the flare. SOHO sits upstream of the Earth, so the picture degrades before anything reaches the ground.",
+   "facts": [
+    "The flare peaks at 10:24 UT and is an X5.7.",
+    "Active region 9077 sits at the centre of the visible disk, so whatever it throws is aimed at Earth.",
+    "GOES-8's greater-than-ten mega-electron-volt proton channel crosses NOAA's radiation-storm threshold at 10:45 UT, forty minutes after the light.",
+    "The proton flux goes on rising for a day to twenty-four thousand particle flux units, a severe radiation storm, measured at geostationary altitude.",
+    "The field reaches its floor thirty-eight hours after the light, at three hundred nanotesla below quiet.",
+    "In the Halloween storms of 2003 the same two intervals were two hours and twenty-two minutes and sixty hours.",
+    "The window opens eighty-four minutes before the flare peak, so the quiet corona is on screen first.",
+    "SOHO is upstream of the Earth, so it is hit before anything reaches the ground."
+   ],
+   "doNotInfer": "The speckle is not a defect in the video, the camera or the harvest, and it is not the cloud. The interval between the flash and the consequence is not a constant that can be looked up."
+  },
+  {
+   "n": 2,
+   "id": "stpatricks-2015-cme",
+   "name": "St Patrick's Day 2015, two days before the storm the cloud leaves",
+   "wordBudget": 50,
+   "onScreen": "A hundred and ninety-three frames covering 15 March 2015 from midnight to just before noon UTC. SDO's camera at 304 angstroms is composited with the LASCO C2 and C3 coronagraphs. A cloud leaves the disk and crosses the coronagraph field. Every frame has its own date and time burned into it by the archive.",
+   "lead": "The date burned into these frames is 15 March. The storm this event is named for is the 17th. What separates them is transit time across a hundred and fifty million kilometres, and nothing in this picture tells you the cloud was pointed at us.",
+   "facts": [
+    "The flare was a modest C-class one and the coronal mass ejection was unremarkable.",
+    "The storm that followed was the largest geomagnetic storm of its solar cycle, rated G4 by NOAA.",
+    "What made it severe was the direction of the magnetic field the cloud was carrying, not how fast it was going.",
+    "The ring current takes nine and a half hours to fill after the arriving field turns south.",
+    "The solar wind was still speeding up a full day after the storm had passed its worst.",
+    "The date in the frames is 15 March and the storm is on the 17th."
+   ],
+   "doNotInfer": "Nothing on screen shows the cloud was aimed at Earth, and nothing on screen shows how severe the storm will be. A fast wind does nothing until the field turns south."
+  }
+ ]
+}

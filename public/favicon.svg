@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Space Environment Explorer">
+  <!--
+    Family resemblance to theinformed.org, which uses a 32x32 rounded plate at
+    rx=7 filled #0b0f14 behind a single flat mark. Same plate, same geometry;
+    only the mark and its colour change, so the sites read as siblings in a row
+    of browser tabs rather than as unrelated pages.
+
+    The mark is this site's own .brand-mark from the header, reduced until it
+    survives 16px: a filled body with one tilted orbit ring. The header version
+    carries two rings, at minus 22 and 65 degrees, plus an inset shadow. At
+    favicon size the second ring and the shadow turn to mud, so they are
+    dropped rather than scaled down. A favicon is read at a glance or not read.
+
+    Colours are the site's own tokens: cyan #29d4e3 for the body and bright
+    cyan #5ce8f1 for the ring, matching how the header separates the two.
+  -->
+  <rect width="32" height="32" rx="7" fill="#0b0f14"/>
+  <circle cx="16" cy="16" r="5.5" fill="#29d4e3"/>
+  <ellipse cx="16" cy="16" rx="13" ry="4.6" fill="none" stroke="#5ce8f1" stroke-width="2"
+           transform="rotate(-22 16 16)"/>
+</svg>

@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "measuredAt": "2026-09-20T19:42:32.205708+00:00",
+  "detectionReceipt": {
+    "complete": true,
+    "phase": "detect",
+    "archive": "/tmp/eol-study-20260920/archive.sqlite3",
+    "archiveSnapshotSha256": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+    "executionMode": "cpu",
+    "kappa": 32,
+    "cohortObjects": 151,
+    "catalogueObjects": 159,
+    "selectedRows": 1257404,
+    "objectsWithNoArchiveRows": [],
+    "eventCounts": {
+      "unclassified-change": 449,
+      "geo-north-south-keeping": 792,
+      "geo-east-west-keeping": 2556,
+      "deorbit-lowering": 4,
+      "inclination-change": 315,
+      "along-track-raise": 953,
+      "along-track-lower": 250,
+      "geo-graveyard-raise": 22
+    },
+    "gpu": null,
+    "sourceHashes": {
+      "pipeline/orbit_campaigns.py": "1037ac43f14144cd519ef296005723369d0c3a26412b5608dd654e3800bb507b",
+      "pipeline/orbit_events.py": "56bc4fa3a4aa23a743eb368b5537e8e99f2e77867630f8f81b5d86b8885330de",
+      "pipeline/orbit_history.py": "f9beae5c4adc7d69ae1e573721972d57cb98dba13be2e452093b752f75c6d9e8"
+    },
+    "analysisSourceSha256": "bd73945e93b7a9d5a18bce33c922cf70825a39ad30b9e68867a119e04a827e61",
+    "catalogueSha256": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+    "extractionSha256": "9e75b035a64b27d24bb5a9636876e62348f46e10344c4347fd792b09653637d4",
+    "wallSeconds": 118.39590557999327,
+    "cpuSeconds": 103.308808772,
+    "completedAt": "2026-09-20T19:41:58.880820+00:00"
+  },
+  "catalogue": {
+    "path": "/home/sdegan/space-teaching-aid/data/propulsion-catalog-v1.json",
+    "sha256": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+    "version": "1",
+    "policy": "commercial-civil-only",
+    "objects": 159,
+    "withNorad": 151
+  },
+  "sourceHashes": {
+    "integration": "bd73945e93b7a9d5a18bce33c922cf70825a39ad30b9e68867a119e04a827e61",
+    "reusedProbe": "f858bc2919d764de15b3d93dbde7c27e8115f6e8fc3555ce261a1d4e1ed96b47",
+    "reusedStudy": "4bb50a7108486bb56ea8ff9eb129d1338fd960e8d63e46e0b555fd8c3ddcd572",
+    "expectations": "3b09c73c6ef7eb8a1516391cb6727c0dd6985b82474561cc8365a715f2c15abb"
+  },
+  "preRegisteredRules": "The fuel odometer: propulsion catalogue x detected manoeuvre ledger.\n\nTwo phases, deliberately separate so the expensive one runs once:\n\n  detect     Re-detect the FULL history of every catalogued NORAD with current\n             code, over a frozen read-only archive snapshot, cohort-only\n             (`stream_object_rows(only=...)`). Never reads a published artifact.\n  integrate  Walk each object's retained events through the rocket equation\n             from launch mass, with an Isp band instead of a point estimate.\n\nPRE-REGISTERED RULES, frozen in this module before the cohort run. Every\nalternative below is reported alongside its primary, so none of them can be\nselected after seeing an outcome.\n\n1. Propulsive events are those whose signature is not in the repository's\n   existing `orbit_events.NON_PROPULSIVE_SIGNATURES` (drag decay, re-entry\n   decay, not-separable, and unclassified-change). That set is pre-existing\n   project doctrine, not a choice made for this study. The `unclassified-change`\n   inclusion is reported as a labelled sensitivity for every object.\n2. An event is priced on the RAISING leg's Isp only when BOTH hold: its start is\n   at or before launch + 18 calendar months, AND its signature is one of\n   orbit-raising, along-track-raise or inclination-change - the transfer-orbit\n   signatures. Everything else, including station-keeping detected during the\n   same early window, is priced on the station-keeping leg. The 18-month\n   boundary is the same station-acquisition rule the EOL study registered.\n   A satellite whose catalogue names no raising leg prices everything on the\n   station-keeping leg.\n3. Mass integrates sequentially, event by event:\n   m_i = m_(i-1) * exp(-dv_i / (Isp_i * g0)), starting at the catalogued launch\n   mass. Two parallel integrations carry the Isp band's two ends. A LOW Isp\n   burns MORE mass, so the low-Isp integration is the band's high-burn edge.\n4. DIRECTIONALITY. Detected Delta-v is a LOWER bound (the cheapest manoeuvre\n   consistent with the element change), and the step detector misses burns\n   entirely. Therefore burned propellant is a LOWER BOUND at BOTH ends of the\n   Isp band; the band is the Isp uncertainty only, never an upper bound on fuel\n   spent. Where dry mass is known, propellant REMAINING is an UPPER BOUND, and\n   only the high-Isp (low-burn) edge is quotable as that bound.\n5. Any archive coverage hole inside an object's observed span makes its\n   cumulative sum an \"at least\" figure. Every object carries its hole count and\n   hole days; no cadence is fitted across a hole and no hole is interpolated.\n6. The station-keeping sanity anchor compares priced station-keeping-era\n   Delta-v against 50 m/s/yr * GAP-AWARE observed years on station. Observed\n   years never use calendar span across a hole.\n7. NOT EVERY DETECTED DELTA-V IS THE SATELLITE'S OWN FUEL. Two classes are\n   excluded from the primary integration, both for physical reasons stated\n   before the run, and both listed per object in the output so nothing is\n   silently dropped:\n     (a) any event starting before the catalogued launch date - an element\n         pair that predates the satellite cannot be its manoeuvre;\n     (b) any single event whose Delta-v exceeds 2,500 m/s. The largest burn a\n         GEO satellite performs with its own propulsion is the apogee kick out\n         of a standard transfer orbit, about 1,500-1,800 m/s. An interval\n         priced above 2,500 m/s is a launch-vehicle burn sequence, a\n         mis-associated element set, or a fit artefact, not one satellite burn.\n   The unfiltered integration is reported for EVERY object as `withoutCeiling`,\n   so the effect of this rule is always visible and never chosen after the fact.\n8. PLAUSIBILITY IS CHECKED, NOT ENFORCED. The largest propellant fraction in\n   this catalogue's own dry-mass rows is computed at run time and used as a\n   plausibility ceiling; an object whose integrated burn exceeds it is FLAGGED,\n   never corrected, because the correct reading is that its detected Delta-v is\n   over-priced, not that it carried impossible propellant.\n\nAnalysis only. No archive writes, no production artifacts, no network.\n",
+  "singleEventCeilingMps": 2500.0,
+  "plausibilityCeilingFraction": 0.6075778078484438,
+  "plausibilityCeilingSource": "largest propellant fraction among the catalogue's 21 dry-mass rows",
+  "catalogueObjects": 151,
+  "pricedObjects": 151,
+  "excluded": {},
+  "objectsWithoutArchiveRows": 0,
+  "objectsWithNoPropulsiveEvents": 5,
+  "objectsWithCoverageHoles": 151,
+  "ispUnresolvedObjects": 7,
+  "objectsWithExcludedEvents": 4,
+  "eventsExcludedAsNotOwnPropulsion": 4,
+  "excludedEventReasons": {
+    "single-event-delta-v-above-ceiling": 3,
+    "starts-before-catalogued-launch-date": 1
+  },
+  "objectsAbovePlausibilityCeiling": 0,
+  "objectsAbovePlausibilityCeilingWithoutCeilingRule": 4,
+  "electricStationKeepingObjects": 84,
+  "totalBurnedKgLowerBound": 130740.94059513918,
+  "medianBurnedFractionLowerBound": 0.05983443478224004,
+  "geoObjects": 136,
+  "folkloreAnchoredObjects": 54,
+  "folkloreExplainedFraction": {
+    "n": 54,
+    "median": 0.018093698225745372,
+    "quartiles": [
+      0.007614088835272352,
+      0.07112510031574099
+    ],
+    "range": [
+      0.0,
+      0.6898266214118847
+    ],
+    "belowTenPercent": 46,
+    "aboveTwice": 0
+  },
+  "sanityFlags": {
+    "electric-station-keeping-step-detector-blind": 82,
+    "far-below-folklore-detection-gap": 46,
+    "not-geo-folklore-does-not-apply": 15,
+    "within-order-of-folklore": 8
+  },
+  "dryMassObjects": 21,
+  "dryMassCapacityExceeded": 1,
+  "graveyardRetirees": 16,
+  "retireeBurnedFractionOfLaunchMass": {
+    "n": 16,
+    "median": 0.008472539654637568,
+    "maxHighIspEdge": 0.3773447335438889
+  },
+  "unclassifiedChangeSensitivity": {
+    "description": "Same integration including unclassified-change events (project doctrine excludes them from propulsive claims); reported so the exclusion is visible.",
+    "extraEvents": 449,
+    "totalBurnedKgLowerBound": 131229.32617842092,
+    "medianRatio": 1.0014607809931055
+  }
+}

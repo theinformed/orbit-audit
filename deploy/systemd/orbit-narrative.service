@@ -1,0 +1,30 @@
+[Unit]
+# The model-written paragraph for an orbit event. Decoration only: every number,
+# every classification, every candidate cause and every honesty statement is
+# computed before this runs, and `pipeline/orbit_narrative.py` rejects any reply
+# that steps outside the computed list. If this never runs, the browser is
+# unchanged except that the wording is the deterministic one.
+#
+# It reads the artifact `orbit-release.service` published rather than
+# recomputing the events, so it costs no archive access at all.
+Description=Write the local-model paragraphs for published orbit events
+Documentation=file:///home/sdegan/space-teaching-aid/docs/orbit-browser-wiring.md
+After=orbit-release.service
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+ExecStart=/usr/bin/python3 -m pipeline.enrich_orbit_events --max-events 12
+# Writing one paragraph costs tens of seconds of local GPU on the same server
+# Bob answers from, so this yields to everything.
+Nice=19
+TimeoutStartSec=1800
+# A dead endpoint must not become a retry storm: the script writes a shared
+# unreachable marker and both local-model lanes back off for thirty minutes.
+# Retrying a dead upstream on a short timer is the anti-pattern that got this
+# project firewalled by CelesTrak once.
+SuccessExitStatus=0 1
+
+[Install]
+WantedBy=multi-user.target

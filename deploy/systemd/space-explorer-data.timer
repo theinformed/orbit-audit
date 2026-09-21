@@ -1,0 +1,12 @@
+[Unit]
+Description=Refresh Space Environment Explorer every five minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+RandomizedDelaySec=30
+Persistent=true
+Unit=space-explorer-data.service
+
+[Install]
+WantedBy=timers.target

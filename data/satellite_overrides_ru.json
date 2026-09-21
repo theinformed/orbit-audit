@@ -1,0 +1,1186 @@
+{
+  "COSMOS (STRELA-3)": {
+    "match": "norad",
+    "norad": [
+      27056,
+      27057,
+      27464,
+      27465,
+      27868,
+      27869,
+      28419,
+      28420,
+      32954,
+      32955,
+      32956,
+      35498,
+      35500,
+      37152,
+      38733
+    ],
+    "noradNames": [
+      "COSMOS 2385",
+      "COSMOS 2386",
+      "COSMOS 2390",
+      "COSMOS 2391",
+      "COSMOS 2400",
+      "COSMOS 2401",
+      "COSMOS 2408",
+      "COSMOS 2409",
+      "COSMOS 2437",
+      "COSMOS 2438",
+      "COSMOS 2439",
+      "COSMOS 2451",
+      "COSMOS 2453",
+      "COSMOS 2467",
+      "COSMOS 2481"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be a Strela-3 military communications satellite. Kosmos is a designation rather than a programme -- Russia files most military spacecraft and many civil ones under it, so the number deliberately tells a reader nothing -- and the identification here comes from outside analysts reading the orbit, the launch manifest and the radio emissions. Strela-3 is a store-dump system: the satellite records a message as it passes over the sender, carries it, and replays it to a ground station later in the orbit. That buys global reach for units with no line of sight to a relay, at the cost of a delay measured in tens of minutes, and it is why these satellites fly in clusters of two or three in a 1,400-1,500 km, 82.5-degree plane. Gonets, the civil constellation flying in the same shell, is the civilian derivative of this system.",
+    "source": "https://space.skyrocket.de/doc_sdat/strela-3.htm"
+  },
+  "COSMOS (STRELA-3M RODNIK-S)": {
+    "match": "norad",
+    "norad": [
+      28908,
+      37154,
+      39057,
+      39058,
+      39059,
+      39483,
+      39484,
+      39485,
+      39761,
+      39762,
+      39763,
+      40920,
+      40921,
+      40922,
+      43751,
+      43752,
+      43753,
+      63288,
+      63289,
+      63290,
+      66647,
+      66648,
+      66649
+    ],
+    "noradNames": [
+      "COSMOS 2416",
+      "COSMOS 2468",
+      "COSMOS 2482",
+      "COSMOS 2483",
+      "COSMOS 2484",
+      "COSMOS 2488",
+      "COSMOS 2489",
+      "COSMOS 2490",
+      "COSMOS 2496",
+      "COSMOS 2497",
+      "COSMOS 2498",
+      "COSMOS 2507",
+      "COSMOS 2508",
+      "COSMOS 2509",
+      "COSMOS 2530",
+      "COSMOS 2531",
+      "COSMOS 2532",
+      "COSMOS 2585",
+      "COSMOS 2586",
+      "COSMOS 2587",
+      "COSMOS 2597",
+      "COSMOS 2598",
+      "COSMOS 2599"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "Assessed to be a Strela-3M, also called Rodnik-S (14F132): the current generation of Russia's store-dump military communications satellites, flown under a Kosmos number because that is how Russia catalogues military spacecraft. The satellite records traffic while it is over one correspondent and replays it when it is over the other, which is how deployed units and intelligence collectors far from any Russian ground station are served without a geostationary relay in view. They are launched three at a time into a 1,480-by-1,510 km orbit at 82.5 degrees, and Gunter Krebs numbers each flight in the series; the launches through 2018 used Rokot from Plesetsk and those from 2025 used Angara-1.2. No Russian source describes the payload.",
+    "source": "https://space.skyrocket.de/doc_sdat/strela-3m.htm"
+  },
+  "COSMOS (LOTOS-S)": {
+    "match": "norad",
+    "norad": [
+      36095
+    ],
+    "noradNames": [
+      "COSMOS 2455"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Assessed to be Lotos-S No. 801 (14F138), the development prototype of Russia's Lotos electronic intelligence satellite and the first spacecraft of the Liana system. Liana was built to replace two Soviet-era collectors at once -- the land-facing Tselina-2 and the naval US-PM -- with a single family: Lotos against emitters on land, Pion-NKS against ships. RussianSpaceWeb's Liana table lists this November 2009 flight as No. 801, the first of the series, and Gunter Krebs separates the prototype index 14F138 from the 14F145 index carried by the operational satellites that followed. Nothing about the payload has been published by its operator, so this card names the programme and leaves the mission unset rather than asserting a collection capability for a development vehicle.",
+    "source": "https://www.russianspaceweb.com/liana.html"
+  },
+  "COSMOS (LOTOS-S1 LIANA)": {
+    "match": "norad",
+    "norad": [
+      40358,
+      43032,
+      43657,
+      47546,
+      52202,
+      54381,
+      58148,
+      62216
+    ],
+    "noradNames": [
+      "COSMOS 2502",
+      "COSMOS 2524",
+      "COSMOS 2528",
+      "COSMOS 2549",
+      "COSMOS 2554",
+      "COSMOS 2565",
+      "COSMOS 2570",
+      "COSMOS 2580"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Assessed to be a Lotos-S1 (14F145) electronic intelligence satellite -- the operational half of Russia's Liana system, built by KB Arsenal and flown under Kosmos numbers that conceal which programme each flight belongs to. Lotos-S1 listens rather than looks: it locates and characterises radars and radio transmitters on land, and it pairs with the radar-carrying Pion-NKS satellites that do the same job against ships. The whole series flies the same circular orbit, about 900 km up at 67.1 degrees, which is the strongest single clue that ties an unlabelled Kosmos number to this programme; RussianSpaceWeb and Gunter Krebs both number the flights 802 onward and agree with each other. For an operator this is the Russian counterpart to a national SIGINT constellation, and its revisit over any given emitter is set by that orbit, not by anything Russia has published.",
+    "source": "https://space.skyrocket.de/doc_sdat/lotos-s1.htm"
+  },
+  "COSMOS (LOTOS CO-PASSENGER)": {
+    "match": "norad",
+    "norad": [
+      54383,
+      58172
+    ],
+    "noradNames": [
+      "COSMOS 2566",
+      "COSMOS 2571"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "A second object catalogued from a Lotos-S1 launch, in essentially the Lotos orbit but not identified as the primary satellite. Gunter Krebs lists Kosmos 2566 alongside Kosmos 2565 and Kosmos 2571 alongside Kosmos 2570 without saying what either is; no Russian source acknowledges them. What can honestly be said is the association -- same launch, same 900 km, 67-degree plane as an assessed electronic intelligence satellite -- and that is recorded here as military without a mission, because the alternatives (a companion payload, a deployed subsatellite, or a piece of the launch stack that the catalogue has classed as a payload) have not been separated by anyone in public.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosmos-2566.htm"
+  },
+  "COSMOS (PARUS)": {
+    "match": "norad",
+    "norad": [
+      28380,
+      28521,
+      36519
+    ],
+    "noradNames": [
+      "COSMOS 2407",
+      "COSMOS 2414",
+      "COSMOS 2463"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "navigation",
+    "sector": "military",
+    "purpose": "Assessed to be a Parus (11F627) satellite, the military half of the Soviet-era Tsiklon-B navigation network and the last of a line that ran to ninety-nine flights. Parus gave the Soviet Navy and its ballistic-missile submarines a Doppler position fix -- the same principle as the American Transit -- and doubled as a store-dump communications relay, including for the ocean surveillance satellites. Gunter Krebs notes that once GLONASS was working the relay role probably became the primary one. These are the last three still in orbit; the constellation was not replenished after 2010, and Russia's positioning service now rests on GLONASS.",
+    "source": "https://space.skyrocket.de/doc_sdat/parus.htm"
+  },
+  "COSMOS (TSELINA-2)": {
+    "match": "norad",
+    "norad": [
+      31792
+    ],
+    "noradNames": [
+      "COSMOS 2428"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Assessed to be the last Tselina-2 (11F644) electronic intelligence satellite ever launched. Tselina was the Soviet Union's land-facing SIGINT constellation, built by Yuzhnoye in Dnipro and launched on Ukrainian-built Zenit rockets -- a supply chain that ended with the programme. Pavel Podvig recorded this June 2007 flight at the time as the last of the series, and its replacement, Lotos, did not fly until 2009. It sits in the Tselina-2 orbit of roughly 850 km at 71 degrees, which is the orbital signature that separates it from the Kosmos numbers around it.",
+    "source": "https://russianforces.org/blog/2007/06/launch_of_cosmos2428_the_last.shtml"
+  },
+  "COSMOS (PERSONA)": {
+    "match": "norad",
+    "norad": [
+      39177,
+      40699
+    ],
+    "noradNames": [
+      "COSMOS 2486",
+      "COSMOS 2506"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "Assessed to be a Persona (14F137) optical reconnaissance satellite -- Russia's first digital high-resolution imaging spacecraft, built by TsSKB-Progress with a telescope from LOMO, and the successor to the film-return Yantar satellites that physically dropped their exposed rolls back through the atmosphere. Persona No. 1 failed within months of its 2008 launch; these are numbers 2 and 3, and the published record of which Kosmos number is which flight comes from analysts rather than from Russia. The orbit is the giveaway: a sun-synchronous 700-by-715 km pass at 98 degrees, which fixes the local solar time of every image and is what an imaging satellite needs and a communications satellite does not.",
+    "source": "https://en.wikipedia.org/wiki/Persona_(satellite)"
+  },
+  "COSMOS (BARS-M)": {
+    "match": "norad",
+    "norad": [
+      40420,
+      41394,
+      52713,
+      55978,
+      58614,
+      61730
+    ],
+    "noradNames": [
+      "COSMOS 2503",
+      "COSMOS 2515",
+      "COSMOS 2556",
+      "COSMOS 2567",
+      "COSMOS 2573",
+      "COSMOS 2579"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "Assessed to be a Bars-M (14F148) satellite: Russia's digital cartographic imager, carrying the LOMO-built Karat camera system and a pair of laser altimeters. The job is not to photograph individual targets but to survey area and terrain height -- the geodetic and topographic products that underpin mapping and weapon guidance -- which is why RussianSpaceWeb calls Bars-M Russia's first digital cartographer and why it replaced the film-return Yantar-1KFT. Six have flown since 2015, all from Plesetsk on Soyuz-2-1a into a sun-synchronous orbit near 500-570 km. As with every Kosmos-numbered military spacecraft, the programme name is not on any Russian document a reader can check; it is the consistent reading of the launch profile and orbit by independent analysts.",
+    "source": "https://space.skyrocket.de/doc_sdat/bars-m.htm"
+  },
+  "COSMOS (EKS TUNDRA)": {
+    "match": "norad",
+    "norad": [
+      41032,
+      42719,
+      44552,
+      45608,
+      49503,
+      54223
+    ],
+    "noradNames": [
+      "COSMOS 2510",
+      "COSMOS 2518",
+      "COSMOS 2541",
+      "COSMOS 2546",
+      "COSMOS 2552",
+      "COSMOS 2563"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "missile-warning",
+    "sector": "military",
+    "purpose": "Assessed to be a Tundra (14F142) spacecraft of the EKS or Kupol early-warning system -- the Russian counterpart to the American SBIRS, watching for the infrared plume of a ballistic missile launch. The orbit is the whole design: a twelve-hour Molniya ellipse inclined near 63 degrees, apogee close to 39,000 km over the northern hemisphere, so that each satellite loiters for hours over the polar approaches where a geostationary satellite sees only a grazing edge. EKS replaced the Soviet Oko network, which had lapsed entirely by 2014, and analysts have identified the flights as Tundra 11L through 16L. For a watch officer the practical point is that these satellites are the sensor behind Russian launch-detection timelines, and that their coverage is a function of a known orbit rather than of anything Russia publishes.",
+    "source": "https://space.skyrocket.de/doc_sdat/tundra.htm"
+  },
+  "COSMOS (PION-NKS)": {
+    "match": "norad",
+    "norad": [
+      48865
+    ],
+    "noradNames": [
+      "COSMOS 2550"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Assessed to be Pion-NKS No. 901 (14F139), the first of the naval half of Russia's Liana system. Where the Lotos satellites listen to emitters on land, Pion-NKS is the ocean-surveillance element: it is the successor to the Soviet US-PM, whose task was to find and track surface ships across open ocean and hand a targeting-quality position to anti-ship missile shooters. Pavel Podvig recorded this June 2021 launch as the first Pion-NKS, and it flies lower than the Lotos satellites, around 460 km at 67 degrees. Nothing about its sensor has been published by Russia, and no second Pion-NKS has been positively identified in orbit, so what this card claims is the identification of one spacecraft and the documented purpose of the programme it is assessed to belong to.",
+    "source": "https://russianforces.org/blog/2021/06/launch_of_cosmos-2550_-_the_fi.shtml"
+  },
+  "COSMOS (NIVELIR-L INSPECTOR)": {
+    "match": "norad",
+    "norad": [
+      53323,
+      59773,
+      64095
+    ],
+    "noradNames": [
+      "COSMOS 2558",
+      "COSMOS 2576",
+      "COSMOS 2588"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Marco Langbroek (SatTrackCam Leiden) and Gunter Krebs (Gunter's Space Page)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Assessed to be a Nivelir-L satellite inspector. This is the most operationally interesting class in the Russian catalogue and also the least documented: Russia announces nothing beyond a Kosmos number, and the identification rests on what the object then does. Each of these three was launched into a plane matching an American reconnaissance satellite -- Kosmos 2576 into the plane of the KH-11 USA 314 in May 2024, and Kosmos 2588 into the plane of USA 338 in May 2025, both measured and published by Marco Langbroek from optical tracking. Earlier members of the family deployed subsatellites of their own, one of which US officials said displayed the characteristics of a space-based anti-satellite weapon. Krebs marks his own programme attribution with a question mark, and this site keeps that uncertainty: what is measured is the orbital behaviour, and what is inferred from it is the mission.",
+    "source": "https://sattrackcam.blogspot.com/2025/05/kosmos-2588-has-been-placed-in-same.html"
+  },
+  "COSMOS (NIVELIR SUBSATELLITE)": {
+    "match": "norad",
+    "norad": [
+      40555
+    ],
+    "noradNames": [
+      "COSMOS 2504"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb) and U.S. Strategic Command, as reported by SpaceNews",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Kosmos 2504, the third of a small trio of manoeuvring objects that entered orbit as apparent afterthoughts on Gonets communications launches -- Kosmos 2491 in 2013, Kosmos 2499 in 2014, and this one in March 2015 -- and then began changing orbit. SpaceNews reported at the time that U.S. Strategic Command was watching it after it manoeuvred back to its own spent upper stage and approached a piece of debris. Its orbit still shows what that behaviour cost: a 579-by-1,482 km ellipse, badly out of family with the circular 1,500 km shell its launch companions occupy. Gunter Krebs files it under Nivelir with a question mark and RussianSpaceWeb heads its page \"secret mission\"; nobody outside Russia knows what it was for, and Russia has not said.",
+    "source": "https://spacenews.com/maneuvering-russian-satellite-has-everyones-attention/"
+  },
+  "COSMOS (NAPRYAZHENIE)": {
+    "match": "norad",
+    "norad": [
+      42986
+    ],
+    "noradNames": [
+      "COSMOS 2523"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Kosmos 2523, the third object of a nested 2017 mission that is worth understanding whatever it turns out to have been: Kosmos 2519 released Kosmos 2521, Russian media called that one a \"sputnik-inspektor\", it flew a long series of rendezvous with its parent down to one-kilometre passes -- and then it released this object in turn. Unlike its parents, Kosmos 2523 has never manoeuvred. Gunter Krebs tentatively files it as Napryazheniye No. 1 and marks the attribution with a question mark. A satellite deployed from a satellite deployed from a satellite is a capability demonstration whoever built it, and that is what this card claims; the programme name is not established.",
+    "source": "https://space.skyrocket.de/doc_sdat/nivelir-l.htm"
+  },
+  "COSMOS (RAZBEG)": {
+    "match": "norad",
+    "norad": [
+      58929
+    ],
+    "noradNames": [
+      "COSMOS 2575"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb), Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "Kosmos 2575, assessed to be the second Razbeg (14F169) satellite: a small, cheap optical reconnaissance spacecraft flown on the light Soyuz-2-1v and intended to give Russian forces imagery at a tempo the large Persona and Bars-M satellites cannot. Pavel Podvig recorded the February 2024 launch under that name. It is a weaker identification than most on this site -- Gunter Krebs groups the same object with the EO-MKA or EMKA small imagers and calls the Razbeg attribution speculation -- so the programme is named here as the leading reading rather than as a settled fact. Its very low 340 km orbit is consistent with a small telescope trading altitude for resolution.",
+    "source": "https://russianforces.org/blog/2024/02/cosmos-2575_second_razbeg_opti.shtml"
+  },
+  "COSMOS (OO-MKA)": {
+    "match": "norad",
+    "norad": [
+      65267,
+      65268,
+      65269,
+      65270,
+      68826,
+      68827,
+      68828,
+      68829
+    ],
+    "noradNames": [
+      "COSMOS 2591",
+      "COSMOS 2592",
+      "COSMOS 2593",
+      "COSMOS 2594",
+      "COSMOS 2615",
+      "COSMOS 2616",
+      "COSMOS 2617",
+      "COSMOS 2618"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "One of a group of four small military satellites launched together on an Angara-1.2 from Plesetsk and given consecutive Kosmos numbers -- 2591 to 2594 in August 2025, 2615 to 2618 in April 2026. RussianSpaceWeb lists the first group under the index 14F178 and the working name OO-MKA, and Gunter Krebs believes the type is optical reconnaissance, but he writes the attribution with a question mark and the sensor has never been described. What is solid is the pattern: four near-identical spacecraft per launch in a very low sun-synchronous orbit around 285-330 km, where drag is severe and orbital life is short. That is the signature of a proliferated imaging constellation flown cheaply and replaced often, rather than of a few exquisite satellites, and it is a change in how Russia is buying reconnaissance.",
+    "source": "https://space.skyrocket.de/doc_sdat/oo-mka.htm"
+  },
+  "COSMOS (2026-023 GROUP)": {
+    "match": "norad",
+    "norad": [
+      67674,
+      67675,
+      67676,
+      67677,
+      67678,
+      67679,
+      67680,
+      67681,
+      67682
+    ],
+    "noradNames": [
+      "COSMOS 2600",
+      "COSMOS 2601",
+      "COSMOS 2602",
+      "COSMOS 2603",
+      "COSMOS 2604",
+      "COSMOS 2605",
+      "COSMOS 2606",
+      "COSMOS 2607",
+      "COSMOS 2608"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "One of nine spacecraft, Kosmos 2600 through 2608, put up by a single Soyuz-2-1b from Plesetsk on 5 February 2026 and left unexplained. Pavel Podvig published the orbits: eight of them in a sun-synchronous 480-by-505 km shell and one, Kosmos 2600, alone at about 320 km. Gunter Krebs describes the eight as small military satellites possibly for optical reconnaissance and records that no orbital manoeuvres have been observed. The one genuinely independent observation comes from radio amateurs, who have logged LoRa transmissions from several of them near 430-431 MHz. This site records what those sources support -- a military launch, nine objects, two orbital shells, an unusual radio signature -- and declines to name a mission, because nobody has established one.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosmos-2601.htm"
+  },
+  "COSMOS (2026-083 GROUP)": {
+    "match": "norad",
+    "norad": [
+      68754,
+      68758,
+      68759,
+      68762,
+      68763,
+      68764
+    ],
+    "noradNames": [
+      "COSMOS 2609",
+      "COSMOS 2610",
+      "COSMOS 2611",
+      "COSMOS 2612",
+      "COSMOS 2613",
+      "COSMOS 2614"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "One of six small military satellites, Kosmos 2609 to 2614, launched together on a Soyuz-2-1b from Plesetsk in April 2026 into a sun-synchronous orbit near 540-555 km. Gunter Krebs calls their purpose unknown, and records the one behaviour that has been observed: they manoeuvred, and five of them -- Kosmos 2610 through 2614 -- moved into the orbital plane of ICEYE-X36, a Finnish commercial radar imaging satellite reported to be supporting Ukraine. Plane-matching is what an inspection or shadowing mission looks like from the ground, and it is also what a coincidence of launch geometry can look like; this site states the manoeuvre because it was measured, and does not state a purpose, because that has not been.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosmos-2609.htm"
+  },
+  "COSMOS (2561)": {
+    "match": "norad",
+    "norad": [
+      54109
+    ],
+    "noradNames": [
+      "COSMOS 2561"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Kosmos 2561, one of two classified payloads launched together on a Soyuz-2-1v from Plesetsk on 21 October 2022. This is one of the small number of objects in this catalogue where honest research ends in nothing: Gunter Krebs's entry reads, in full, that it is a classified military satellite of unknown purpose, RussianSpaceWeb reports that the Russian authorities released no advance information, and Pavel Podvig's contemporaneous note says the same. The Kosmos number, the launcher and the 400-by-415 km sun-synchronous orbit are the whole of the public record. It is recorded here as military because the operator is the Ministry of Defence, and with no mission at all, which is the accurate answer rather than a hedge.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosmos-2561.htm"
+  },
+  "COSMOS (2572)": {
+    "match": "norad",
+    "norad": [
+      58435
+    ],
+    "noradNames": [
+      "COSMOS 2572"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "earth-observation",
+    "sector": "military",
+    "purpose": "Kosmos 2572, launched alone on a Soyuz-2-1b from Plesetsk in November 2023 and assessed to be an optical reconnaissance satellite. Pavel Podvig titled his note on the launch a new optical reconnaissance satellite and Gunter Krebs files the type as optical reconnaissance while calling the satellite itself one of unknown purpose -- an ordinary state of affairs for this catalogue, and the reason the mission is recorded as assessed rather than known. The 300 km near-circular sun-synchronous orbit is very low even for an imager and implies either a short life or a propulsion budget spent on holding altitude.",
+    "source": "https://russianforces.org/blog/2023/11/cosmos-2572_-_a_new_optical_re.shtml"
+  },
+  "COSMOS (2581-2583)": {
+    "match": "norad",
+    "norad": [
+      62902,
+      62903,
+      62904
+    ],
+    "noradNames": [
+      "COSMOS 2581",
+      "COSMOS 2582",
+      "COSMOS 2583"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "One of three satellites, Kosmos 2581, 2582 and 2583, launched together in February 2025 on the thirteenth and final flight of the light Soyuz-2-1v -- the end of a launcher, which is the most concrete thing that can be said about the mission. Gunter Krebs records all three as classified military satellites of unknown purpose. They share a 575-by-589 km orbit at 82 degrees, an inclination associated with Russian military communications rather than with imaging, but no source makes that identification and this site does not make it either.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosmos-2581.htm"
+  },
+  "COSMOS (2538)": {
+    "match": "norad",
+    "norad": [
+      44424
+    ],
+    "noradNames": [
+      "COSMOS 2538"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "One of four classified payloads -- Kosmos 2535 to 2538 -- launched together on a Soyuz-2-1v/Volga from Plesetsk in July 2019. RussianSpaceWeb covers the mission as an inspector flight, and the group subsequently conducted proximity operations, but the public record does not reliably say which catalogue number is which spacecraft: independent trackers have swapped the identities of the objects in this launch more than once. This card therefore claims only what the launch establishes -- a Ministry of Defence mission of four spacecraft with demonstrated close-approach behaviour -- and no mission for this object in particular.",
+    "source": "https://www.russianspaceweb.com/Cosmos-2535-2536-2537-2538.html"
+  },
+  "COSMOS (14F166A)": {
+    "match": "norad",
+    "norad": [
+      64467,
+      64527
+    ],
+    "noradNames": [
+      "COSMOS 2589",
+      "COSMOS 2590"
+    ],
+    "evidence": "assessed",
+    "assessedBy": "Anatoly Zak (RussianSpaceWeb) and Gunter Krebs (Gunter's Space Page)",
+    "assessedConfidence": "low",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Kosmos 2589 and Kosmos 2590, a pair put into the geostationary belt by an Angara-A5 in June 2025 and identified in launch coverage only by the industrial index 14F166A. The second object separated from the first after launch. Pavel Podvig recorded both as deployed onto highly eccentric orbits with a perigee near 20,000 km; the catalogue now shows one of them circularised at geostationary altitude and the other still on a 20,000-by-51,000 km ellipse that crosses the geostationary ring twice a day. That change of orbit is a measurement, not an interpretation, and it is the interesting fact about this pair. No mission has been established and none is claimed.",
+    "source": "https://russianforces.org/blog/2025/06/angara_a5_deploys_two_satellit.shtml"
+  },
+  "COSMOS (ETALON)": {
+    "match": "norad",
+    "norad": [
+      19751,
+      20026
+    ],
+    "noradNames": [
+      "COSMOS 1989 (ETALON 1)",
+      "COSMOS 2024 (ETALON 2)"
+    ],
+    "organization": "Roscosmos / International Laser Ranging Service",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "Etalon-1 and Etalon-2: two passive spheres, 1.3 m across and covered in laser retroreflectors, launched in 1989 as extra passengers on GLONASS missions and left in the GLONASS orbit ever since. They carry no power, no radio and no instruments -- a ground station fires a laser at them and times the return, and the range is good to centimetres. That gives geodesists a target whose motion is governed by gravity alone, which is what you need to separate the Earth's gravity field and the orientation of its rotation axis from the behaviour of a spacecraft that manoeuvres. The International Laser Ranging Service still tracks both, thirty-seven years on, and they are the reason a Kosmos number in medium Earth orbit is not automatically a navigation satellite.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/eta1_general.html"
+  },
+  "COSMOS (SKRL-756)": {
+    "match": "norad",
+    "norad": [
+      39490,
+      39491
+    ],
+    "noradNames": [
+      "COSMOS 2493 (SKRL 756)",
+      "COSMOS 2494 (SKRL 756)"
+    ],
+    "organization": "Russian Aerospace Defence Forces",
+    "mission": "technology",
+    "sector": "military",
+    "purpose": "One of two SKRL-756 radar calibration spheres, flown as the payload on the maiden flight of the Soyuz-2-1v in December 2013. A calibration sphere has no mission of its own: it is a target of precisely known size and shape, so that a ground radar can compare the echo it measures against the echo it should see and correct its own range, power and cross-section scales. That makes these two objects the opposite of the rest of the Kosmos catalogue -- fully documented, entirely uninteresting in themselves, and important only to the accuracy of everything else the radar reports.",
+    "source": "https://space.skyrocket.de/doc_sdat/skrl-756.htm"
+  },
+  "COSMOS (GEO-IK-2)": {
+    "match": "norad",
+    "norad": [
+      41579,
+      44517
+    ],
+    "noradNames": [
+      "COSMOS 2517 (GEO-IK)",
+      "COSMOS 2540"
+    ],
+    "organization": "Russian Ministry of Defence / ISS Reshetnev",
+    "mission": "science",
+    "sector": "military",
+    "purpose": "A Geo-IK-2 satellite, also called Musson-2 (14F31): a geodetic spacecraft built by ISS Reshetnev to measure the shape of the Earth and the motion of its crust to centimetre accuracy. It carries a laser retroreflector array, a radar altimeter and precise onboard positioning, and the International Laser Ranging Service publishes its tracking campaigns. Geodesy of this kind is dual use by nature -- the same reference frame that supports plate-tectonic studies is what a ballistic missile needs to know where its target actually is -- which is why the programme is a Ministry of Defence one and the satellites carry Kosmos numbers. The first of the series was lost in 2011 when its Rokot upper stage misfired; these are the second and third.",
+    "source": "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/past_missions/gik2_general.html"
+  },
+  "COSMOS (ERA-1)": {
+    "match": "norad",
+    "norad": [
+      47230
+    ],
+    "noradNames": [
+      "COSMOS 2548"
+    ],
+    "individual": true,
+    "organization": "Russian Ministry of Defence",
+    "mission": "technology",
+    "sector": "military",
+    "purpose": "Kosmos 2548, a small developmental satellite called ERA-1 that rode to orbit as a secondary payload on a Gonets communications launch in December 2020. It is one of the rare Kosmos numbers Russia explained: Pavel Podvig recorded that the Ministry of Defence itself described it as a technology demonstrator, and Gunter Krebs names the likely builder as CNIIHM. It shares the 1,480-by-1,507 km, 82.5-degree orbit of the Gonets and Strela spacecraft it launched with, which is a consequence of the ride rather than of its own mission.",
+    "source": "https://russianforces.org/blog/2020/12/cosmos-2548_-_a_small_developm.shtml"
+  },
+  "COSMOS (MOZHAYETS 6)": {
+    "match": "norad",
+    "norad": [
+      65589
+    ],
+    "noradNames": [
+      "COSMOS 2596"
+    ],
+    "individual": true,
+    "organization": "Mozhaisky Military Space Academy",
+    "mission": "technology",
+    "sector": "military",
+    "purpose": "Mozhayets-6, a small research and training satellite built by the Mozhaisky Military Space Academy in St Petersburg and launched in September 2025 alongside a GLONASS navigation satellite. Take the naming carefully: Pavel Podvig recorded Kosmos-2596 as Mozhayets-6 in the 2025-206A slot and Kosmos-2595 as the GLONASS spacecraft in 2025-206B, while CelesTrak's table for the same launch carries the two names the other way round. This site follows the space-track designation the catalogue is built from, and states the disagreement rather than hiding it -- if the mission on this card looks wrong for the orbit, the name swap is why. The orbit itself is the tell: a GLONASS satellite sits in a tightly maintained 19,100 km circular slot, and this object does not.",
+    "source": "https://russianforces.org/blog/2025/09/launch_of_glonass-k_and_mozhay.shtml"
+  },
+  "RASSVET-3": {
+    "match": "prefix",
+    "organization": "Bureau 1440",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A Rassvet-3 satellite: the first operational generation of Bureau 1440's low-orbit broadband constellation, Russia's answer to Starlink and OneWeb. Bureau 1440 is a private company inside X Holding rather than a Roscosmos programme; it flew the experimental Rassvet-1 in 2023 and Rassvet-2 in 2024, and began launching operational batches of sixteen on Soyuz-2-1b from Plesetsk in March 2026, aiming at 288 satellites and commercial service in 2027. Each 370 kg spacecraft carries optical inter-satellite terminals, so traffic can cross the constellation without touching the ground -- the same architectural choice, and the same strategic consequence, as the Western systems it copies. Newly launched batches are still climbing: the spread of altitudes across these objects in the catalogue is orbit raising in progress, not a designed shell.",
+    "source": "https://space.skyrocket.de/doc_sdat/rassvet-3.htm"
+  },
+  "EXPRESS": {
+    "match": "prefix",
+    "organization": "Russian Satellite Communications Company (RSCC)",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "An Ekspress geostationary communications satellite operated by the Russian Satellite Communications Company, the state operator that carries federal television, telephony and government communications across Russia's eleven time zones. RSCC holds slots from 14 degrees West to 145 degrees East -- an arc chosen so that the whole national territory, including the Arctic coast and the Far East, is in view of something. The satellites are built by ISS Reshetnev, in recent years on the Ekspress-2000 and Ekspress-1000 buses, and the AM, AMU, AT and numbered variants differ in payload and slot rather than in purpose. This is civil infrastructure, and it is also the backbone the Russian state uses when it needs one.",
+    "source": "https://en.wikipedia.org/wiki/List_of_Ekspress_satellites"
+  },
+  "EXPRESS MD2 (STRANDED)": {
+    "match": "norad",
+    "norad": [
+      38745
+    ],
+    "noradNames": [
+      "EXPRESS MD2"
+    ],
+    "individual": true,
+    "organization": "Russian Satellite Communications Company (RSCC)",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "Ekspress-MD2, an RSCC communications satellite that never reached its station. The Briz-M upper stage of its 2012 Proton launch failed, leaving the spacecraft stranded in a useless 258-by-2,694 km orbit inclined 50 degrees, and it was written off. It is kept in this catalogue as a payload because that is what the registry calls it, but it does no work: what a reader is looking at is the wreckage of a launch failure crossing the inner radiation belt twice per revolution.",
+    "source": "https://space.skyrocket.de/doc_sdat/ekspress-md.htm"
+  },
+  "YAMAL": {
+    "match": "prefix",
+    "organization": "Gazprom Space Systems",
+    "mission": "communications",
+    "sector": "commercial",
+    "purpose": "A Yamal geostationary communications satellite operated by Gazprom Space Systems. The system started as the gas company's own answer to a practical problem -- keeping contact with extraction sites in the Arctic where there is no terrestrial infrastructure of any kind -- and then became a commercial operator in its own right, leasing C-, Ku- and Ka-band capacity and carrying public broadcasting. Alongside RSCC's Ekspress fleet it is one of the two Russian geostationary communications systems. Gazprom Space Systems publishes the fleet and its orbital slots, which is why this description does not need to be an assessment.",
+    "source": "https://www.gazprom-spacesystems.ru/en/infrastructure/"
+  },
+  "LUCH 5 RELAY": {
+    "match": "norad",
+    "norad": [
+      37951,
+      38977,
+      39727
+    ],
+    "noradNames": [
+      "LUCH 5A",
+      "LUCH 5B",
+      "LUCH 5V"
+    ],
+    "organization": "Roscosmos / ISS Reshetnev",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "A Luch-5 spacecraft of Russia's Multifunctional Space Relay System -- the equivalent of NASA's TDRS network. A satellite in low orbit can see a given ground station for only a few minutes per revolution; a relay parked in geostationary orbit can see that satellite for most of its orbit and pass the traffic down continuously. Luch-5 restored a capability Russia had lost when the Soviet Altair relays were retired, and it carries data from the Russian segment of the International Space Station, from Soyuz and Progress vehicles, and from other spacecraft, as well as GLONASS differential correction signals. Three were built by ISS Reshetnev on the Ekspress-1000A bus.",
+    "source": "https://en.wikipedia.org/wiki/Luch_5A"
+  },
+  "LUCH (OLYMP)": {
+    "match": "norad",
+    "norad": [
+      55841
+    ],
+    "noradNames": [
+      "LUCH (OLYMP) 2"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Slingshot Aerospace, reported by SpaceNews and Breaking Defense",
+    "assessedConfidence": "medium",
+    "organization": "Russian Federation (assessed)",
+    "mission": "other",
+    "sector": "military",
+    "purpose": "Luch (Olymp) 2, launched in March 2023, and the clearest case on this site of behaviour speaking louder than a designation. It shares a name with Russia's civil data-relay satellites but does not behave like one: the commercial space-tracking firm Slingshot Aerospace has repeatedly published its manoeuvres from slot to slot along the geostationary arc, parking within a few tenths of a degree of Western commercial communications satellites -- Eutelsat 3B and Intelsat among them -- for weeks at a time and then moving on. Its predecessor Olymp-K-1 did the same for years. The widely reported inference is that it is listening to the uplinks of the satellites it sits beside; Russia has never described the payload, so this card records the manoeuvres, which are measured, and not the mission, which is not.",
+    "source": "https://www.slingshot.space/news/russian-luch-olymp-2-satellite-approaching-multiple-geo-spacecraft"
+  },
+  "KANOPUS-V": {
+    "match": "prefix",
+    "organization": "Roscosmos / NPP VNIIEM",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A Kanopus-V satellite: a small Russian optical Earth-observation spacecraft built by NPP VNIIEM and flown for the ministries that need pictures quickly rather than perfectly -- civil defence and emergencies, natural resources, agriculture. It images in panchromatic and multispectral bands from a sun-synchronous orbit near 500 km, and its standing tasks are wildfire and flood detection, monitoring of ice and coastal waters, and mapping the aftermath of disasters. Alongside Resurs-P and Aist-2D it is one of the three pillars of the Russian civil remote-sensing constellation.",
+    "source": "https://space.skyrocket.de/doc_sdat/kanopus-v.htm"
+  },
+  "KANOPUS-V-IK": {
+    "match": "norad",
+    "norad": [
+      42825
+    ],
+    "noradNames": [
+      "KANOPUS-V-IK"
+    ],
+    "individual": true,
+    "organization": "Roscosmos / NPP VNIIEM",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "Kanopus-V-IK, the infrared member of the Kanopus family. It carries the same optical imager as its siblings plus a mid-infrared radiometer, and the reason is fire: a wildfire small enough to be invisible in a visible-light image is bright and unmistakable in the mid-infrared, so the IR channel turns the constellation from something that photographs a burn scar afterwards into something that can find an ignition of a few tens of metres across while it still matters.",
+    "source": "https://space.skyrocket.de/doc_sdat/kanopus-v-ik.htm"
+  },
+  "RESURS P": {
+    "match": "prefix",
+    "organization": "Roscosmos / RKTs Progress",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A Resurs-P satellite, the high-resolution end of Russia's civil Earth-observation fleet. Built by RKTs Progress in Samara on the same lineage as the Yantar reconnaissance satellites, it carries a large panchromatic and multispectral telescope plus a hyperspectral instrument, and its imagery is sold commercially and used by the Russian ministries of agriculture, fisheries, transport and emergencies. The distinction between this and the Kosmos-numbered Persona and Bars-M satellites is one of customer and disclosure rather than of technology, which is a fair thing for an operator to keep in mind about the Russian remote-sensing sector generally.",
+    "source": "https://www.russianspaceweb.com/resurs_p.html"
+  },
+  "RESURS DK-1": {
+    "match": "norad",
+    "norad": [
+      29228
+    ],
+    "noradNames": [
+      "RESURS DK-1"
+    ],
+    "individual": true,
+    "organization": "Roscosmos / RKTs Progress",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "Resurs-DK1, launched in 2006 and the predecessor of the whole Resurs-P line: Russia's first civil high-resolution digital imaging satellite, and the one that ended the era of returning film capsules. It flies an unusual low-inclination 70-degree, mildly elliptical orbit rather than a sun-synchronous one, which trades consistent lighting for more frequent passes over mid-latitude Russia. It also carried PAMELA, an Italian-Russian cosmic-ray and antimatter spectrometer that produced a decade of measurements of the trapped and galactic particle populations -- a genuine space-physics instrument riding a mapping satellite.",
+    "source": "https://space.skyrocket.de/doc_sdat/resurs-dk.htm"
+  },
+  "IONOSFERA-M": {
+    "match": "prefix",
+    "organization": "Roscosmos / NPP VNIIEM",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "An Ionosfera-M satellite, part of Roscosmos's Ionozond project: four spacecraft in two orbital planes at about 820 km, launched in pairs in 2024 and 2025, whose job is to measure the ionosphere rather than to look through it. They carry topside sounders, plasma and electric-field probes and particle detectors, and the reason a navy cares is that the ionosphere is what refracts and delays GNSS signals, bends HF, and absorbs radio during solar events. This is one of the few operational constellations anywhere dedicated to the medium this site is about.",
+    "source": "https://space.oscar.wmo.int/satelliteprogrammes/view/ionozond"
+  },
+  "KONDOR FKA": {
+    "match": "prefix",
+    "organization": "Roscosmos / NPO Mashinostroyeniya",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A Kondor-FKA radar imaging satellite, built by NPO Mashinostroyeniya as the civil counterpart of the Kondor-E it exports. Its S-band synthetic aperture radar images through cloud and darkness, which is the point of a radar satellite over Russia: the optical Kanopus and Resurs spacecraft are blind for much of the Arctic year. It works in strip mode at 1-3 m resolution over a 10 km swath and in spotlight mode at 1-2 m, and the published tasks are disaster and sea-surface monitoring, ice reconnaissance and land survey. The WMO's satellite register records the mission as surveillance for civilian and military users alike.",
+    "source": "https://www.eoportal.org/satellite-missions/kondor-fka"
+  },
+  "OBZOR-R": {
+    "match": "prefix",
+    "organization": "Roscosmos / RKTs Progress",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "Obzor-R No. 1, launched in December 2025 after more than a decade of delay -- it replaced the cancelled Arkon-2M in 2012 and was originally meant to fly in the middle of that decade. It carries the BRLK X-band synthetic aperture radar and is intended for all-weather operational monitoring of Russian territory and of disasters. X-band gives finer resolution than the S-band Kondor-FKA at the cost of more atmospheric attenuation, so the two are complementary rather than duplicative.",
+    "source": "https://www.russianspaceweb.com/obzor-r1.html"
+  },
+  "SKIF-D": {
+    "match": "norad",
+    "norad": [
+      54153
+    ],
+    "noradNames": [
+      "SKIF-D"
+    ],
+    "individual": true,
+    "organization": "Roscosmos / ISS Reshetnev",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "Skif-D, the demonstrator that opened Roscosmos's Sfera federal programme in October 2022 and the first Russian satellite in a polar medium-Earth orbit at 8,070 km. Sfera plans a broadband constellation in that shell -- higher than the LEO systems, so far fewer satellites are needed for coverage, at the cost of more latency and a harder radiation environment, since 8,000 km is inside the outer electron belt. ISS Reshetnev used the 148 kg spacecraft to prove the link, including video conferencing between two of its own facilities, and reported the completion of its three-year mission. It is a useful object to look at on this site precisely because of where it sits.",
+    "source": "https://www.reshetnev.com/satellites/communications-broadcasting/skif-d"
+  },
+  "KAZSAT": {
+    "match": "prefix",
+    "organization": "Republican Center of Space Communications (Kazakhstan)",
+    "mission": "communications",
+    "sector": "civil",
+    "purpose": "A KazSat geostationary communications satellite, Kazakhstan's national telecommunications and broadcasting system, operated from the space communications centres at Akkol and Kokterek. KazSat-2 was built by Khrunichev and KazSat-3 by ISS Reshetnev, both with payloads from Thales Alenia Space, and between them they carry the country's television distribution, telephony and internet backhaul. For a country the size of Western Europe with a scattered population, two geostationary satellites are cheaper than terrestrial coverage, which is the whole argument for the system.",
+    "source": "https://www.rcsc.kz/Infrastructure/KSat2Eng"
+  },
+  "KAZEOSAT": {
+    "match": "prefix",
+    "organization": "Kazakhstan Gharysh Sapary / Kazcosmos",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "A KazEOSat satellite, one of the pair that makes up Kazakhstan's national Earth-observation system. Both were built by Airbus (then Astrium) and they are deliberately different: KazEOSat-1 is a high-resolution imager for detailed work, KazEOSat-2 a medium-resolution wide-swath imager for covering ground quickly. The tasked applications are land survey, agriculture, mineral exploration and disaster monitoring, and the ground segment is operated in Kazakhstan rather than abroad, which was the point of buying the system.",
+    "source": "https://space.oscar.wmo.int/satelliteprogrammes/view/kazeosat"
+  },
+  "PROGRESS MS": {
+    "match": "prefix",
+    "organization": "Roscosmos / RSC Energia",
+    "mission": "human-spaceflight",
+    "sector": "civil",
+    "purpose": "A Progress MS cargo ship on its way to, or docked with, the International Space Station. Progress is the uncrewed derivative of Soyuz and has been resupplying stations since 1978: it carries propellant, water, air and dry cargo up, and it is also the vehicle that reboosts the station's orbit against atmospheric drag using its own engines. It is not recovered -- at the end of its stay it is loaded with waste and deorbited over the Pacific -- so a Progress in this catalogue is a temporary object, and its 413-by-423 km orbit at 51.6 degrees is the station's.",
+    "source": "https://en.wikipedia.org/wiki/Progress_(spacecraft)"
+  },
+  "SOYUZ MS": {
+    "match": "prefix",
+    "organization": "Roscosmos / RSC Energia",
+    "mission": "human-spaceflight",
+    "sector": "civil",
+    "purpose": "A Soyuz MS crew vehicle, docked to the International Space Station. Soyuz carries three people up and back and then stays attached for the duration of the increment as the crew's lifeboat, which is why one is almost always in this catalogue and why its orbit is exactly the station's. The MS series is the current digital-avionics generation of a design that first flew in 1967 and has been the only continuously available crew transport to orbit for most of that time.",
+    "source": "https://en.wikipedia.org/wiki/Soyuz_MS"
+  },
+  "LARETS": {
+    "match": "norad",
+    "norad": [
+      27944
+    ],
+    "noradNames": [
+      "LARETS"
+    ],
+    "individual": true,
+    "organization": "Institute for Precision Instrument Engineering (IPIE)",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "Larets: a 21 cm metal sphere studded with sixty laser retroreflectors and nothing else -- no power, no radio, no attitude control. Its operator states two jobs for it: calibrating ground radars against a target of exactly known size, and supplying a gravity-only trajectory for geodesy and geodynamics. Its small size and high density make it unusually insensitive to atmospheric drag and radiation pressure, which is precisely why it is useful as a reference: almost everything that moves it is gravity, so what is left over can be attributed to the Earth rather than to the spacecraft.",
+    "source": "https://npk-spp.ru/en/space/larets/"
+  },
+  "MOZHAYETS 4": {
+    "match": "norad",
+    "norad": [
+      27939
+    ],
+    "noradNames": [
+      "MOZHAYETS 4"
+    ],
+    "individual": true,
+    "organization": "Mozhaisky Military Space Academy",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "Mozhayets-4, a training and technology satellite built by cadets and staff of the Mozhaisky Military Space Academy in St Petersburg and launched in 2003. It carries the amateur radio designation RS-22 and has been used for equipment trials and for teaching satellite operations to officer cadets -- the spacecraft is the syllabus. It is one of the small number of Russian military spacecraft flown under its own name rather than a Kosmos number, which is itself an indication of how little sensitivity attaches to it.",
+    "source": "http://tbs-satellite.com/tse/online/sat_mozhayets_4.html"
+  },
+  "YUBELEINY": {
+    "match": "norad",
+    "norad": [
+      32953
+    ],
+    "noradNames": [
+      "YUBELEINY"
+    ],
+    "individual": true,
+    "organization": "ISS Reshetnev",
+    "mission": "technology",
+    "sector": "civil",
+    "purpose": "Yubileiny, a 48 kg satellite built by NPO PM (now ISS Reshetnev) and launched in 2008 to mark fifty years of Soviet and Russian spaceflight. It carries an amateur radio payload that retransmits the call signals of Sputnik 1 for radio amateurs to receive, alongside technology experiments. It rode up with three Strela-3 military communications satellites and shares their 1,480 km, 82.5-degree orbit, which is why it sits in the middle of a cluster of Kosmos numbers it has nothing to do with.",
+    "source": "https://space.skyrocket.de/doc_sdat/yubileyniy.htm"
+  },
+  "STRELA 3 (NAMED)": {
+    "match": "norad",
+    "norad": [
+      37153
+    ],
+    "noradNames": [
+      "STRELA 3"
+    ],
+    "individual": true,
+    "evidence": "assessed",
+    "assessedBy": "Gunter Krebs (Gunter's Space Page) and Pavel Podvig (russianforces.org)",
+    "assessedConfidence": "medium",
+    "organization": "Russian Ministry of Defence (assessed)",
+    "mission": "communications",
+    "sector": "military",
+    "purpose": "A Strela-3 military store-dump communications satellite from the September 2010 Rokot launch, and a useful illustration of how untidy this catalogue is: three payloads went up together and the public sources do not fully agree on which object is Kosmos 2467, which is Kosmos 2468, and which is the improved Strela-3M -- Gunter Krebs flags exactly that ambiguity. The registry has left this one under the bare programme name rather than a Kosmos number. The system itself is the same as the rest of the family: the satellite stores a message picked up over one correspondent and replays it over another, giving global reach without a relay in view.",
+    "source": "https://russianforces.org/blog/2010/09/gonets-m_strela-3_and_strela-3.shtml"
+  },
+  "MKA-FKI 1": {
+    "match": "norad",
+    "norad": [
+      38711
+    ],
+    "noradNames": [
+      "MKA-FKI 1"
+    ],
+    "individual": true,
+    "organization": "NPO Lavochkin / Space Research Institute (IKI)",
+    "mission": "science",
+    "sector": "civil",
+    "purpose": "MKA-FKI No. 1, also called Zond-PP: the first of a series of small science satellites built by NPO Lavochkin on a common bus so that individual instruments could fly cheaply. This one carries an L-band microwave radiometer testing the retrieval of soil moisture and ocean salinity from orbit -- the technique that Europe's SMOS and NASA's SMAP were built around -- and NASA's catalogue records the mission in those terms. It sits in a sun-synchronous orbit near 800 km.",
+    "source": "https://space.skyrocket.de/doc_sdat/zond-pp.htm"
+  },
+  "RADIO ROSTO": {
+    "match": "norad",
+    "norad": [
+      23439
+    ],
+    "noradNames": [
+      "RADIO ROSTO"
+    ],
+    "individual": true,
+    "organization": "ROSTO (Russian Defence Sports and Technical Organisation)",
+    "mission": "communications",
+    "sector": "academic",
+    "purpose": "Radio-ROSTO, also known as RS-15: an amateur radio satellite launched in 1994 for the Russian Defence Sports and Technical Organisation, the successor to DOSAAF, which ran technical training clubs including amateur radio. It carried a linear transponder for amateur use and a beacon, and has long been silent or intermittent. Its orbit is the interesting part on this site: an unusual 1,889-by-2,155 km ellipse that spends its whole life inside the inner edge of the outer radiation belt, a region most operators design to cross quickly rather than to live in.",
+    "source": "https://space.skyrocket.de/doc_sdat/radio-rosto.htm"
+  },
+  "DX 1": {
+    "match": "norad",
+    "norad": [
+      40071
+    ],
+    "noradNames": [
+      "DX 1"
+    ],
+    "individual": true,
+    "organization": "Dauria Aerospace",
+    "mission": "technology",
+    "sector": "commercial",
+    "purpose": "DX-1, a 27 kg experimental satellite from Dauria Aerospace and, at its 2014 launch, the first Russian spacecraft funded entirely by domestic private capital. It was built to prove a small commercial satellite bus, and it carried an Automatic Identification System receiver -- picking up the VHF position broadcasts that ships transmit, which from orbit gives a picture of maritime traffic far beyond coastal receiver range.",
+    "source": "https://space.skyrocket.de/doc_sdat/dx-1.htm"
+  },
+  "PERSEUS M": {
+    "match": "prefix",
+    "organization": "Dauria Aerospace / Canopus Systems",
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "purpose": "A Perseus-M maritime surveillance microsatellite, one of a pair launched in 2014 by Dauria Aerospace through its American affiliate Canopus Systems. Each is a 6U cubesat carrying an Automatic Identification System receiver: ships broadcast their identity, position and course on VHF for collision avoidance, and a satellite in low orbit can hear those broadcasts hundreds of kilometres offshore where no coastal station can. They were among the first commercial cubesats to do this.",
+    "source": "https://space.skyrocket.de/doc_sdat/perseus-m.htm"
+  },
+  "DEKART": {
+    "match": "norad",
+    "norad": [
+      46493
+    ],
+    "noradNames": [
+      "DEKART"
+    ],
+    "individual": true,
+    "organization": "Moscow State University (SINP MSU)",
+    "mission": "science",
+    "sector": "academic",
+    "purpose": "Dekart, a 3U cubesat built by Moscow State University and its Skobeltsyn Institute of Nuclear Physics to measure the radiation environment in polar orbit -- the trapped and precipitating particles that a spacecraft crossing the auroral zone and the South Atlantic Anomaly actually encounters. It carries a magnetometer that has been calibrated in flight and written up in the Russian literature. Small university payloads like this are a large fraction of the in-situ radiation measurements that exist at all.",
+    "source": "https://space.skyrocket.de/doc_sdat/dekart.htm"
+  },
+  "NORBI": {
+    "match": "norad",
+    "norad": [
+      46494
+    ],
+    "noradNames": [
+      "NORBI"
+    ],
+    "individual": true,
+    "organization": "Novosibirsk State University",
+    "mission": "science",
+    "sector": "academic",
+    "purpose": "Norbi, a 6U cubesat built by Novosibirsk State University and launched in 2020. It carries instruments for measuring the ionospheric plasma and the energetic particle environment along its polar orbit, and it transmits on amateur bands, so its telemetry is received and archived by the SatNOGS ground station network -- which is why an object this small appears in public catalogues with real data behind it at all.",
+    "source": "https://space.skyrocket.de/doc_sdat/norbi.htm"
+  },
+  "IPM 2": {
+    "match": "norad",
+    "norad": [
+      47242
+    ],
+    "noradNames": [
+      "IPM 2/BREEZE-M"
+    ],
+    "individual": true,
+    "organization": "Khrunichev State Research and Production Space Center",
+    "mission": "technology",
+    "sector": "civil",
+    "purpose": "IPM-2, a mass simulator flown on the December 2020 Angara-A5 test launch from Plesetsk. It is not a working satellite: an inert dummy of the right mass and dimensions is used to prove that a new launcher and its Briz-M upper stage can place a real payload where they claim, without risking one. It was left in a 36,878-by-37,605 km orbit above the geostationary belt, where a spent test article cannot interfere with operational satellites -- which is the correct disposal, and worth noticing when the object appears on a plot.",
+    "source": "https://space.skyrocket.de/doc_sdat/ipm.htm"
+  },
+  "DUMMY SAT 3/ORION": {
+    "match": "norad",
+    "norad": [
+      59479
+    ],
+    "noradNames": [
+      "DUMMY SAT 3/ORION"
+    ],
+    "individual": true,
+    "organization": "Khrunichev State Research and Production Space Center",
+    "mission": "technology",
+    "sector": "civil",
+    "purpose": "GMM-KA, the mass-and-dimension model carried on the first Angara-A5 launch from the new Vostochny cosmodrome in April 2024. Like IPM-2 before it, it is ballast with a purpose: a stand-in for a geostationary satellite, flown so that a new pad and a new upper stage can be qualified against a real trajectory. It was left drifting near, but deliberately not in, the geostationary ring.",
+    "source": "https://space.skyrocket.de/doc_sdat/gmm-ka.htm"
+  },
+  "COLIBRI-S": {
+    "match": "norad",
+    "norad": [
+      61746
+    ],
+    "noradNames": [
+      "COLIBRI-S"
+    ],
+    "individual": true,
+    "organization": "Samara National Research University / Space-Pi",
+    "mission": "earth-observation",
+    "sector": "academic",
+    "purpose": "Colibri-S, a cubesat built by Samara National Research University under Space-Pi, the Russian programme that puts school and university payloads in orbit as rideshares. It carries a hyperspectral imager -- a camera that records a full spectrum in every pixel rather than three colour bands -- and its builders and Geoscan have reported working imaging results from orbit. Hyperspectral sensing is how vegetation stress, water quality and mineral composition are read from space, and doing it on a cubesat budget is the experiment.",
+    "source": "https://spacepi.space/satellites/colibri-s/"
+  },
+  "VIZARD-ION": {
+    "match": "norad",
+    "norad": [
+      61749
+    ],
+    "noradNames": [
+      "VIZARD-ION"
+    ],
+    "individual": true,
+    "organization": "MSU-Standart / Space-Pi",
+    "mission": "science",
+    "sector": "academic",
+    "purpose": "Vizard-ion, a small satellite of the Space-Pi programme built by the company MSU-Standart to study the ionosphere. It transmits on 436.87 MHz and 10.475 GHz, and it is the transmissions themselves that carry much of the science: a signal at two widely separated frequencies is delayed differently by the plasma it passes through, so measuring the difference on the ground measures the total electron content along the path. That is the same physical effect that degrades GNSS positioning and HF propagation.",
+    "source": "https://en.spacepi.space/satellites/vizard-ion/"
+  },
+  "RTU MIREA 1": {
+    "match": "norad",
+    "norad": [
+      61785
+    ],
+    "noradNames": [
+      "RTU MIREA 1"
+    ],
+    "individual": true,
+    "organization": "MIREA - Russian Technological University / Space-Pi",
+    "mission": "science",
+    "sector": "academic",
+    "purpose": "RTU MIREA1, a cubesat built by MIREA - Russian Technological University for ionospheric research, launched from Vostochny in November 2024. It carries a visible-range optical-electronic camera, a GLONASS/GPS navigation receiver and 436 MHz and 10 GHz transmitters; as with its Space-Pi companions, the dual-frequency downlink is itself a probe of the plasma between the spacecraft and the ground station.",
+    "source": "https://en.spacepi.space/satellites/rtu-mirea-1/"
+  },
+  "SIT-HSE": {
+    "match": "norad",
+    "norad": [
+      61763
+    ],
+    "noradNames": [
+      "SIT-HSE"
+    ],
+    "individual": true,
+    "organization": "Bonch-Bruevich St Petersburg State University of Telecommunications / Space-Pi",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "SIT-HSE, a cubesat of the Bonch-Bruevich St Petersburg State University of Telecommunications, flown under the Space-Pi educational programme and launched from Vostochny in November 2024 on the rideshare that also carried the first two Ionosfera-M satellites. Space-Pi exists to give students a spacecraft to build, operate and receive rather than to fly a particular instrument, and that is what this satellite is.",
+    "source": "https://spacepi.space/satellites/sit-hse/"
+  },
+  "SIT-2086": {
+    "match": "norad",
+    "norad": [
+      61764
+    ],
+    "noradNames": [
+      "SIT-2086"
+    ],
+    "individual": true,
+    "organization": "Moscow School No. 2086 / Space-Pi",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "SIT-2086, a cubesat built with pupils of Moscow school No. 2086 under the Space-Pi programme and launched from Vostochny in November 2024. It transmits in the 400-402 MHz band and on 8175-8215 MHz. It is included here for the same reason as the rest of its cohort: a school satellite is a real object in a real orbit, and a catalogue that quietly omitted the small ones would be misrepresenting what is actually up there.",
+    "source": "https://spacepi.space/satellites/sit-2086/"
+  },
+  "POLYTECH UNIVERSE": {
+    "match": "prefix",
+    "organization": "Peter the Great St Petersburg Polytechnic University / Space-Pi",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "A Polytech Universe cubesat from Peter the Great St Petersburg Polytechnic University, flown under the Space-Pi educational programme on the November 2024 Vostochny rideshare. The university has now put five of these small spacecraft in orbit; they carry student-built subsystems and amateur-band transmitters, and their purpose is to train people who will build larger ones.",
+    "source": "https://spacepi.space/satellites/politeh-yunivers-4/"
+  },
+  "MSU ALTAIR": {
+    "match": "norad",
+    "norad": [
+      61779
+    ],
+    "noradNames": [
+      "MSU ALTAIR"
+    ],
+    "individual": true,
+    "organization": "Moscow State University / Space-Pi",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "Altair, a Moscow State University cubesat launched from Vostochny in November 2024 and operating under the amateur call sign RS65S. It is part of the Space-Pi educational constellation, and its amateur-band downlink means its signals are received and logged by volunteer ground stations rather than only by its owners.",
+    "source": "https://en.spacepi.space/"
+  },
+  "ELEKTRO-L 5": {
+    "match": "norad",
+    "norad": [
+      67756
+    ],
+    "noradNames": [
+      "ELEKTRO-L 5"
+    ],
+    "individual": true,
+    "organization": "Roshydromet / NPO Lavochkin",
+    "mission": "weather",
+    "sector": "civil",
+    "purpose": "Elektro-L No. 5, the fifth of Russia's geostationary weather satellites, launched in February 2026 on the last Proton-M to fly with a Blok-DM upper stage. It carries the MSU-GS multispectral imager for full-disc pictures of Europe, Asia and the Indian Ocean, and the WMO's satellite register notes that it makes a substantial contribution to space-weather monitoring as well -- these spacecraft carry particle and magnetic-field instruments alongside the camera, and their data goes into the same international exchange as GOES and Meteosat. Its imagery is distributed in real time by HRIT and LRIT, and it relays data-collection platform reports and search-and-rescue alerts.",
+    "source": "https://space.oscar.wmo.int/satellites/view/electro_l_n5"
+  },
+  "KAZSTSAT": {
+    "match": "norad",
+    "norad": [
+      43783
+    ],
+    "noradNames": [
+      "KAZSTSAT"
+    ],
+    "individual": true,
+    "organization": "Ghalam LLP (Kazakhstan) / SSTL",
+    "mission": "earth-observation",
+    "sector": "civil",
+    "purpose": "KazSTSAT, a 105 kg Earth-observation satellite built jointly by Surrey Satellite Technology and the Kazakh joint venture Ghalam, and launched in December 2018 on the SSO-A rideshare. It carries an SSTL SLIM-6 imager producing multispectral imagery at about 19 m ground sample distance across a 275 km swath -- deliberately wide rather than sharp, because the intended work is covering Kazakhstan's very large area quickly. The build was as much technology transfer as procurement: it is one of the satellites through which Kazakhstan acquired its own spacecraft assembly capability.",
+    "source": "https://www.sstl.co.uk/space-portfolio/launched-missions/2010-2019/kazstsat-launched-2018"
+  },
+  "HOKUSHIN1": {
+    "match": "norad",
+    "norad": [
+      69648
+    ],
+    "noradNames": [
+      "HOKUSHIN1"
+    ],
+    "individual": true,
+    "organization": "Tohoku University, Hokkaido University and Muroran Institute of Technology",
+    "mission": "technology",
+    "sector": "academic",
+    "purpose": "HOKUSHIN-1, a Japanese university cubesat developed jointly by Tohoku University, Hokkaido University and the Muroran Institute of Technology, and released into orbit from the Kibo module of the International Space Station on JAXA's thirty-seventh J-SSOD deployment. Its registry entry on this site is worth reading carefully: because it was deployed from the station it inherits the station's own 1998-067 COSPAR series, and with it the Russian owner code that the 1998 Zarya launch carries. The spacecraft is Japanese; the CIS label beside it is an artefact of how the registry numbers anything that leaves the ISS.",
+    "source": "https://www.tohoku.ac.jp/japanese/newimg/pressimg/tohokuuniv-press20260226_03web_HOKUSHIN.pdf"
+  },
+  "TRISAT (OKB-5)": {
+    "match": "norad",
+    "norad": [
+      67298,
+      67482
+    ],
+    "noradNames": [
+      "TRISAT-2",
+      "TRISAT-4"
+    ],
+    "organization": "AO OKB-5",
+    "mission": "technology",
+    "sector": "commercial",
+    "purpose": "A TriSat picosatellite built by the Russian design bureau AO OKB-5 and launched on the December 2025 Vostochny rideshare. TriSat is a single-board spacecraft of half a kilogram that folds into a triangular prism for launch and unfolds into a flat panel in orbit; the series is a technology demonstration, and one of the units was flown for the hosting company RUVDS to let software developers and radio amateurs run their own code on an operating satellite. Note that these are not the Slovenian TRISAT and TRISAT-R nanosatellites of the University of Maribor, which are a different programme sharing the name.",
+    "source": "https://space.skyrocket.de/doc_sdat/trisat-1.htm"
+  },
+  "MULE 4T": {
+    "match": "norad",
+    "norad": [
+      67286
+    ],
+    "noradNames": [
+      "MULE 4T"
+    ],
+    "individual": true,
+    "organization": "AO OKB-5",
+    "mission": "technology",
+    "sector": "commercial",
+    "purpose": "Mule 4T, a small technology satellite of the Russian design bureau AO OKB-5, deployed on the December 2025 Vostochny rideshare that put thirty-three spacecraft in orbit through Aerospace Capital dispensers. What is publicly established about it is thin and is limited to its radio: the SatNOGS database records it transmitting LoRa on the UHF amateur band with a 250 kHz bandwidth, which is an unusual choice for a satellite and is the kind of low-power, long-range link intended for machine-to-machine and sensor traffic. No operator description of the mission has been published, and this card does not invent one.",
+    "source": "https://db.satnogs.org/satellite/WVCI-2338-9266-5261-4671/"
+  }
+}

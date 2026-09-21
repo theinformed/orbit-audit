@@ -1,0 +1,51 @@
+{
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "lines": [
+  {
+   "id": "gannon-2024-cme",
+   "note": "Over the LASCO C2/C3 loop of 8-9 May 2024. Not obvious from the picture: the black disc is deliberate, and the cloud takes two days to arrive.",
+   "text": "The black disc is a mask. Without it the Sun would burn out every detail around it. The cloud escaping past that mask crossed a hundred and fifty million kilometres in about two days, and it was still moving near a thousand kilometres a second when it reached us."
+  },
+  {
+   "id": "gannon-2024-region",
+   "note": "Over the AIA 193 loop of 8-10 May 2024. Not obvious: the scale of the region, and that rotation kept it aimed at Earth.",
+   "text": "The knot of bright loops near the centre is one active region, about fifteen Earth diameters across. It fired off flare after flare for a week, and the Sun's rotation held it pointed at us for most of them."
+  },
+  {
+   "id": "halloween-2003-cme",
+   "note": "Over the EIT 195 + LASCO loop of 28 Oct 2003. Not obvious: different spacecraft, older camera, well past design life.",
+   "text": "Different spacecraft, older camera. SOHO was almost eight years into a two year design life when it recorded this, and it is still returning coronagraph frames today."
+  },
+  {
+   "id": "starlink-2022-sun",
+   "note": "Over the AIA 193 loop of 29 Jan - 3 Feb 2022. THE lesson: the storm was small. Understated delivery.",
+   "text": "Nothing on this disc looks alarming, and nothing about it was. The storm that followed rated near the bottom of the scale, and it still pulled thirty eight satellites out of the sky."
+  },
+  {
+   "id": "quebec-1989-no-imagery",
+   "note": "Plays where an image would be for Quebec 1989. The absence is the teaching point.",
+   "text": "There is no picture of this storm. SOHO would not launch for another seven years, and the solar observatories watching today did not exist in nineteen eighty nine. The record for this one is written in ground magnetometers and a failed power grid."
+  },
+  {
+   "id": "thermosphere-descent",
+   "note": "Over the GENERATED illustration. Must open by disclaiming measurement.",
+   "text": "Nothing in this one is measured. It is drawn to carry a single point. There is no altitude where the air stops and space starts. It only ever gets thinner, and a satellite in low orbit is flying through it, not above it."
+  },
+  {
+   "id": "bastille-2000-cme",
+   "note": "Over the SOHO EIT 195 + LASCO loop of 14 Jul 2000. The caption beside it already explains the speckle, so the voice says the thing the caption does not: the interval, and that the interval is not a constant. Drafted by the FREE local 35B on bigmem (scaffold tool space-event-narration) from narration/event-narration-facts.json, then fact-gated by hand here. The draft said 'the protons hit the detector forty minutes later', which conflates SOHO's detector being struck with GOES-8 crossing NOAA's threshold at Earth; the two are different measurements and the line now says which one it means.",
+   "source": "local-35b, hand-corrected",
+   "seed": 101,
+   "text": "The flare peaks at ten twenty four, and forty minutes later the protons are already over the radiation storm threshold at Earth. That interval is not fixed. In the Halloween storms of two thousand three it was two hours and twenty two minutes."
+  },
+  {
+   "id": "stpatricks-2015-cme",
+   "note": "Over the SDO AIA 304 + LASCO loop of 15 Mar 2015. The caption already says the frames are two days before the storm, so the voice says why a modest-looking event became the largest storm of its cycle. Drafted by the FREE local 35B on bigmem (scaffold tool space-event-narration) and fact-gated here; every number is in the event's own published milestones.",
+   "source": "local-35b",
+   "seed": 101,
+   "text": "The flare was modest and the cloud was unremarkable. The storm it caused was the largest of its solar cycle because the magnetic field it carried turned south. The ring current took nine and a half hours to fill."
+  }
+ ]
+}

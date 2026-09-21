@@ -1,0 +1,14 @@
+[Unit]
+Description=Hourly space-track GP poll, at an off-peak minute as their guidance requires
+
+[Timer]
+# "Please randomly choose a minute that is not at the top or bottom of the hour
+# for your hourly scripts to send this query." Base minute 17 plus up to 6
+# minutes of jitter keeps every run inside :17-:23 - never the top or bottom.
+OnCalendar=*-*-* *:17:00
+RandomizedDelaySec=360
+Persistent=true
+Unit=spacetrack-ingest.service
+
+[Install]
+WantedBy=timers.target

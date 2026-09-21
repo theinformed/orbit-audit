@@ -1,0 +1,14 @@
+[Unit]
+Description=Re-check the Space Explorer datastores every fifteen minutes
+
+[Timer]
+OnBootSec=4min
+OnUnitActiveSec=15min
+RandomizedDelaySec=60
+# Persistent so that a machine which was asleep overnight still runs the check
+# once on waking, rather than silently skipping the window Sean is asking about.
+Persistent=true
+Unit=space-explorer-watchdog.service
+
+[Install]
+WantedBy=timers.target

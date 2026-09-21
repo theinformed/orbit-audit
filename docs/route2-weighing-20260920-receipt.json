@@ -1,0 +1,5059 @@
+{
+  "registrationSha256": "560d190c78848b3290649ef1bfa01ca86acc56de8dcf71c0328f9faa4defc595",
+  "scriptSha256": "c55f601c284752aad27acee61142ee730169cf4aad7e8d06249c9c3bbd0a46b6",
+  "catalogPath": "public/data/artifacts/catalog-03ed3498fc4406b6.json",
+  "catalogSha256": "03ed3498fc4406b67d3d01564c82af93c28704eb1c72893f5899f5e78a9616a2",
+  "manifestGeneratedAt": "2026-09-20T18:27:01Z",
+  "archive": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+  "queryOnly": 1,
+  "journalMode": "wal",
+  "interval": [
+    "2015-01-01",
+    "2026-01-01"
+  ],
+  "selection": {
+    "candidateLeo": 120,
+    "candidateGeo": 135,
+    "passiveMetadataRows": 12631,
+    "referenceGeometryRows": 12232,
+    "normalizerControlOverlap": 0
+  },
+  "fullHistoryObjects": 755,
+  "rawRowsRead": 3678326,
+  "normalizerCoverage": {
+    "1583": {
+      "rawRows": 7841,
+      "rawDigestSha256": "743c59c89f5462fb63f423d8265fb9f9c701da74295813bc109cf86f5d9e9c07",
+      "observedDays": 3927,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "1883": {
+      "rawRows": 5086,
+      "rawDigestSha256": "605348ee6b1205d3e6007b5b4781de1f204d2e37c3e9444d590923a015b86cf1",
+      "observedDays": 3536,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "1961": {
+      "rawRows": 5497,
+      "rawDigestSha256": "326db198efd02a9d24d5fe3a3d37df9aa95138d9e6f198999c378c23e433f281",
+      "observedDays": 3578,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "2118": {
+      "rawRows": 5371,
+      "rawDigestSha256": "a1dabe39f49114c25982be27885aac736967df1fb5a4731ad0a4555f835166b0",
+      "observedDays": 3528,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "2154": {
+      "rawRows": 5894,
+      "rawDigestSha256": "16757968ce9c78a80f4c5fe707a8c34d471eb3ef29385a450a8d6027f678ab2f",
+      "observedDays": 3761,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "2422": {
+      "rawRows": 7561,
+      "rawDigestSha256": "84a11c9b722c06c6a9ab9c5021c4c38970a6054c095c0ac34b569606b12c276f",
+      "observedDays": 3926,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "3230": {
+      "rawRows": 7809,
+      "rawDigestSha256": "7369f262a7775679c0c87d5b9c1353204fa9cab4e0c93ae704b61c85eda24d3a",
+      "observedDays": 3955,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "3271": {
+      "rawRows": 7213,
+      "rawDigestSha256": "8cd8184d433172e13e9677d1c45dd426d685ed0bf016357a94806321165041f9",
+      "observedDays": 3916,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "4157": {
+      "rawRows": 7411,
+      "rawDigestSha256": "033b663245cd423d8bd52c5f100a150df54c472f6c766692d4a8bd79b36c7cd1",
+      "observedDays": 3922,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "6127": {
+      "rawRows": 8086,
+      "rawDigestSha256": "d13cf700e9b97d28b40efa61fa03c55ab2bc75f3988b00ae9bfb74276c55b5b4",
+      "observedDays": 3938,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "6218": {
+      "rawRows": 7864,
+      "rawDigestSha256": "64255376eda0191b5c4e51069f2e0586a2a69121a72d4d0eea821100babe7522",
+      "observedDays": 3922,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "7412": {
+      "rawRows": 7260,
+      "rawDigestSha256": "7ed000c9cebb45a4194c8bb90c4d7cbae9bb3f19fc980540344fc7160372852d",
+      "observedDays": 3914,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "7850": {
+      "rawRows": 7466,
+      "rawDigestSha256": "3eb7e9150c2e420f1f09d2b582cbbc41ef3fa3798a3473da5c5f47d931acde7b",
+      "observedDays": 3912,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "7890": {
+      "rawRows": 6578,
+      "rawDigestSha256": "7633671630b4f887dfdffce917e588af4a07164fe5047623b2a5606d76dae01d",
+      "observedDays": 3812,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8004": {
+      "rawRows": 6731,
+      "rawDigestSha256": "e9d7c588740872b5aebdd211a3de663789e0470e878e042f4666e28e795d403f",
+      "observedDays": 3858,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8951": {
+      "rawRows": 6546,
+      "rawDigestSha256": "0bd78126fa1cb4b55eff95252de923a3124f4cd9f5fc0282d0e835554664e230",
+      "observedDays": 3806,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8956": {
+      "rawRows": 6964,
+      "rawDigestSha256": "59e9d3c0eb418de71034a39ba35cb13d8405282fae5a816bd0b519d1d37d0dc0",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8959": {
+      "rawRows": 6824,
+      "rawDigestSha256": "182c6bd2806377488705cf787706513de859221c71037b2d4545e2923cc1e39d",
+      "observedDays": 3826,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8964": {
+      "rawRows": 6998,
+      "rawDigestSha256": "59325cb0c0dbc69c8b3868fd206400816326d4dc687edc3506f8ef70b94018dc",
+      "observedDays": 3826,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8969": {
+      "rawRows": 6184,
+      "rawDigestSha256": "af9bf4edffe75e2618e5b9b4373b39124f3967f9b5c0465636950232e7cc5a15",
+      "observedDays": 3786,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "8978": {
+      "rawRows": 6786,
+      "rawDigestSha256": "0389277ac3be09921a0b1a54a7d237e8088c658e73b789876285d8e0a8421e00",
+      "observedDays": 3804,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "8980": {
+      "rawRows": 7442,
+      "rawDigestSha256": "5a752d58aed86b791e3595a715f9a62ff6e49d3265fbbbc113dfa2aa279ef601",
+      "observedDays": 3805,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "8981": {
+      "rawRows": 6751,
+      "rawDigestSha256": "01f425c4f286f8dd58e05f93ad2ab454632827e03fcdcb92c668c9f17587f241",
+      "observedDays": 3839,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "9003": {
+      "rawRows": 7194,
+      "rawDigestSha256": "3e319a959b0d040228248ada5ff29f1d1f7797163981649f9afe466571c8eac3",
+      "observedDays": 3909,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "9293": {
+      "rawRows": 6775,
+      "rawDigestSha256": "b4f7459263e74e2c7ad1684857ce7c0dcacb3327ebc426b7c3b364ccfcc77b57",
+      "observedDays": 3810,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "12177": {
+      "rawRows": 6243,
+      "rawDigestSha256": "80ec5ac944ac302bc07bbf575f0c46a227d58e05c3b2ed857e4c3c389c4f9457",
+      "observedDays": 3821,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "12269": {
+      "rawRows": 7206,
+      "rawDigestSha256": "a9d56e9e80a0b4d230d6baa4a9d2884398915ebbb968133458f4ab465abdf05e",
+      "observedDays": 3878,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "12372": {
+      "rawRows": 4240,
+      "rawDigestSha256": "026da89cdfba534470847bced1d80dc9334b2ee33aa2ff98413eb8ef36667f4e",
+      "observedDays": 3100,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "12559": {
+      "rawRows": 8656,
+      "rawDigestSha256": "4d71f3c451ffdef8e41dc1060097a624a95717238334fde9a7f54b020a5f3457",
+      "observedDays": 3937,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "12586": {
+      "rawRows": 8712,
+      "rawDigestSha256": "ad10d9200fb958cc3425ff40e57b289edf080bc73b3e31886fa79a57dac44b83",
+      "observedDays": 3931,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "13571": {
+      "rawRows": 5830,
+      "rawDigestSha256": "75efa376692d7dedef81131a5a7dd08fa153a1c16695b958c5ae4e75b7e53dc6",
+      "observedDays": 3727,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "13827": {
+      "rawRows": 6431,
+      "rawDigestSha256": "4e4b591f01db46b4b00ccfec3cf230441b08133256ca5f3de46d9728ed8f66fd",
+      "observedDays": 3759,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "14229": {
+      "rawRows": 6712,
+      "rawDigestSha256": "db04120893ed1c43652b410e09dc256ede5d1168c10a2f1516d22a490ea8bdc8",
+      "observedDays": 3812,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "14818": {
+      "rawRows": 6064,
+      "rawDigestSha256": "a85b35693f82adc10e5f508e99abc0e541dfec57c275299abd084e3564de980c",
+      "observedDays": 3774,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "17153": {
+      "rawRows": 7905,
+      "rawDigestSha256": "bdf43269ae2bdf037199488b8868cfb806a33ba98969dcb515506e8133a3786f",
+      "observedDays": 3923,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "17219": {
+      "rawRows": 6380,
+      "rawDigestSha256": "a672d7f6d1a30117be752019e52cc5f79495f60cd236c7f39937cd9e4a08c38a",
+      "observedDays": 3796,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "17768": {
+      "rawRows": 4454,
+      "rawDigestSha256": "e8d57c92516fc05d0c95afa19a6a3a1e80b809f28ba2b1f042e8599770d23a4f",
+      "observedDays": 3249,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "18290": {
+      "rawRows": 5179,
+      "rawDigestSha256": "0a4950e73ff484028e55b98b0b5c73206c893c5219926480bcc1053574d4ce7f",
+      "observedDays": 3471,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "18475": {
+      "rawRows": 4971,
+      "rawDigestSha256": "4119782496e74dea5b8fd91d9634a934e82e0098c634ce0fc6086c7a1340db16",
+      "observedDays": 3439,
+      "rawGapsOver45Days": [],
+      "firstDay": 16440,
+      "lastDay": 20453
+    },
+    "19311": {
+      "rawRows": 3811,
+      "rawDigestSha256": "9261ccfb44802cc77b63107ddf17e69272e935df0e3114256efe1a11752348fd",
+      "observedDays": 2860,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "19365": {
+      "rawRows": 3699,
+      "rawDigestSha256": "2daa331a54112ed8e85b196a1f568219935ff1bff2a895dd5d371403cd8db19e",
+      "observedDays": 2817,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "20576": {
+      "rawRows": 3760,
+      "rawDigestSha256": "424f81ac804ed0ff8d2efadc5ca7ff0e9cbaafd567fde71b6c4ff9f122e7db0e",
+      "observedDays": 2293,
+      "rawGapsOver45Days": [],
+      "firstDay": 18045,
+      "lastDay": 20453
+    },
+    "20853": {
+      "rawRows": 7187,
+      "rawDigestSha256": "7921f49cd9203483dbf15bf2af9f7dfbddd7c023cea8651a4980ce5ffc9ff166",
+      "observedDays": 3824,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "20861": {
+      "rawRows": 7728,
+      "rawDigestSha256": "c7aaf866fe58e58412177dd0b04013fec2babd5b182966059be58a083e2656be",
+      "observedDays": 3910,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "20893": {
+      "rawRows": 6598,
+      "rawDigestSha256": "426b06ca318e2118909d7e260a0b44d083c178b31edc335c9af90490980dfe3f",
+      "observedDays": 3794,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "20895": {
+      "rawRows": 6358,
+      "rawDigestSha256": "e2b18796c9f559780efa669dc62520743d7fad93111a757af96bd00e16567c4a",
+      "observedDays": 3757,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "20899": {
+      "rawRows": 6205,
+      "rawDigestSha256": "8ea5a1cc922dc7cdd2e94ba785f6d76001f492b6a5900a8f72df503a319db98c",
+      "observedDays": 3765,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "20913": {
+      "rawRows": 6764,
+      "rawDigestSha256": "2c4a4147ff7b27c397072a0db502cef5f3258d5f7c7083ba4018e28ebc6fc106",
+      "observedDays": 3834,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "22327": {
+      "rawRows": 6889,
+      "rawDigestSha256": "e61e0d7bc89e69f79405c4e9ffaf892e5a3741daafe69ae08381b52033a703a7",
+      "observedDays": 3823,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "22392": {
+      "rawRows": 7135,
+      "rawDigestSha256": "97f715af073a3ebadc34caf8ee77535d166c1e285bb80ed980de0e100d4353c2",
+      "observedDays": 3904,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "22706": {
+      "rawRows": 5786,
+      "rawDigestSha256": "681147fb92fe120b1191c102741a31bc50dbbd7936856124d3723caf558beca9",
+      "observedDays": 3709,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "23250": {
+      "rawRows": 6925,
+      "rawDigestSha256": "6966a07dd4ecabe69b16de1ab0c9c35c56a73ebf1481ef3ceb63def427ca91ef",
+      "observedDays": 3828,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "23343": {
+      "rawRows": 7901,
+      "rawDigestSha256": "4626df18e31116714db03f6508b9c87fc6296ee218b2aefe8ef548c2aeecc614",
+      "observedDays": 3950,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "23344": {
+      "rawRows": 6687,
+      "rawDigestSha256": "8e6ae4b398d3cca6fadfd75a3a0713fb145d038f5872c440f29472bd180dcf96",
+      "observedDays": 3802,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "23345": {
+      "rawRows": 6610,
+      "rawDigestSha256": "ff1b710cfacd199573667c2d56f4defc3c1c9e5b32ecf28a941955779bed951d",
+      "observedDays": 3817,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "23608": {
+      "rawRows": 9014,
+      "rawDigestSha256": "f24f70c64b60419ec9a5013a45eea8bb85fc7b4a6c3cb0f42109a08e6ee98573",
+      "observedDays": 3960,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "24893": {
+      "rawRows": 7552,
+      "rawDigestSha256": "15ca98635d9176781d33db3d1236c05ee22c9d2b8c0f66fe52a23b4611a7297b",
+      "observedDays": 3929,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "25401": {
+      "rawRows": 6592,
+      "rawDigestSha256": "bfd2cd1d2fd941f56b91cb4dbbeb14c73662fd8a87adde813a6d55f14aee4b34",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "25561": {
+      "rawRows": 7768,
+      "rawDigestSha256": "90153bf91b5a2b717a590a5be30f8d907ab7853f23ac178dbaf007f35244dde5",
+      "observedDays": 3935,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "25655": {
+      "rawRows": 6694,
+      "rawDigestSha256": "529c3df98e80e215f3c52548501cd2d3d30c8e5e99c584e87a9adac23a1b011b",
+      "observedDays": 3797,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "25759": {
+      "rawRows": 7845,
+      "rawDigestSha256": "58a71ace3a19f46fb7f4e6b46d3d8d1dfc2ca9f86da779e3e40432273d44727a",
+      "observedDays": 3934,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "25862": {
+      "rawRows": 6568,
+      "rawDigestSha256": "1fd6568396f4031f40cc6fb5387b5982d315895374a07845522e3eb262226357",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "25864": {
+      "rawRows": 6827,
+      "rawDigestSha256": "6f0162275ea2376c10422b105960b84a90200819bcc6b27500bf07538ffa3f81",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "25979": {
+      "rawRows": 7989,
+      "rawDigestSha256": "bce904a6512f0cb3d840f34db4a50fa379f536551fa798b8a63b06bc3028b2ae",
+      "observedDays": 3955,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26123": {
+      "rawRows": 5948,
+      "rawDigestSha256": "26e7b8c8412ebe1ce353802726c49da5038c4022e3208bc596fbe967882882b5",
+      "observedDays": 3714,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20452
+    },
+    "26126": {
+      "rawRows": 6723,
+      "rawDigestSha256": "8251947a87f9db63901c3a38db28caf29e6d37a79d5d19f9357f1e999d66b02a",
+      "observedDays": 3815,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26127": {
+      "rawRows": 6445,
+      "rawDigestSha256": "29893b89b976155c8086c176716edde6bf0c14eb35ac3f70877cc957fbf53395",
+      "observedDays": 3790,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26128": {
+      "rawRows": 6428,
+      "rawDigestSha256": "998ddc05caf4afa31fffaafdc58e63c6e663b13e6ab0cea2c495fce2f6bd06d8",
+      "observedDays": 3798,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26155": {
+      "rawRows": 6702,
+      "rawDigestSha256": "81434f4aedbb0abb99702913fa50b90cf76e71bf4ff640db77b0eb526a3a8ba5",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26181": {
+      "rawRows": 7106,
+      "rawDigestSha256": "29a8ae680afa776d2eb4dae8a32d1b77eaab82e904e575000a1521ea2b119307",
+      "observedDays": 3883,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26184": {
+      "rawRows": 6748,
+      "rawDigestSha256": "59898ebb76e39627cd24b420e10cd6de9bac1fb440f148f7277d029d43f2a9c0",
+      "observedDays": 3810,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26191": {
+      "rawRows": 7014,
+      "rawDigestSha256": "10e203153d7d627472b0694f616957f4b99cea732d8ec8af7fd25d201ddf66b6",
+      "observedDays": 3883,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26194": {
+      "rawRows": 6545,
+      "rawDigestSha256": "3a49fef772a2525344daf3409ee3699155b73ea2cd2b9da92e3f5476f8afdffc",
+      "observedDays": 3774,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26198": {
+      "rawRows": 6795,
+      "rawDigestSha256": "4f52cdf212e511343a2df9601ea5e45db0d0b45201cb685cfe1013da568ca0c4",
+      "observedDays": 3822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26200": {
+      "rawRows": 6490,
+      "rawDigestSha256": "e5caeb4d56c81cb9ac61adca08316ac4f1ee59d51c7bbdd2e4174ab801b33a2a",
+      "observedDays": 3788,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26202": {
+      "rawRows": 6168,
+      "rawDigestSha256": "933e5ba8a5475fd9f0449a85eed453eb5bdb4e045bed2f8fa0fc7ebd0b43595d",
+      "observedDays": 3769,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26203": {
+      "rawRows": 6635,
+      "rawDigestSha256": "2007a46abb1e4c9a9defddb5b4d79d40f61937b4d434239ebd3ea2db2072ffc7",
+      "observedDays": 3823,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26207": {
+      "rawRows": 7315,
+      "rawDigestSha256": "d4ca2d4ba78f001330592edd73ca366969b82a7241f1659e2d466f8d028e255e",
+      "observedDays": 3909,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26234": {
+      "rawRows": 6369,
+      "rawDigestSha256": "350c35585da4467cd51829cc5d110447030cd32833100cf0b972f53fd8343c36",
+      "observedDays": 3779,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26235": {
+      "rawRows": 6706,
+      "rawDigestSha256": "fc84ec83c146bee3ec681dc41bbc0228ed05841bf1b13567fd7c643b9221c85d",
+      "observedDays": 3806,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26259": {
+      "rawRows": 6510,
+      "rawDigestSha256": "65fb2194acd9fcf23c3b7416c3be9bf6c732610f800d93c93a25a3ee8e634d79",
+      "observedDays": 3813,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26260": {
+      "rawRows": 7526,
+      "rawDigestSha256": "951145808b5dec6d332be12f66199de824ff4b5ff90afa95f4fb34efac407168",
+      "observedDays": 3922,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26262": {
+      "rawRows": 7221,
+      "rawDigestSha256": "092adfe94efd548bd7d05e05f775d83bfab7514d2962c17ed1a3fde176e0fe1a",
+      "observedDays": 3910,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26266": {
+      "rawRows": 7153,
+      "rawDigestSha256": "1a1f2ee10de512afbac996e8e14089bf34070b585edfe6a6899e9c1beb1e7d86",
+      "observedDays": 3911,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26272": {
+      "rawRows": 6337,
+      "rawDigestSha256": "719dd78b65b578cfeda292722f254c073cbfced64c449881603b66a7ce1372bc",
+      "observedDays": 3773,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26283": {
+      "rawRows": 5912,
+      "rawDigestSha256": "7da0c09de1c09183ce7bd4ec172741d19913b349d6468d118279e04b1a5cb40f",
+      "observedDays": 3736,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26310": {
+      "rawRows": 6535,
+      "rawDigestSha256": "ac9b421a9e41758a9001e19e36de566d17daf4a07000b39277a12ab376b6c149",
+      "observedDays": 3804,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26313": {
+      "rawRows": 6388,
+      "rawDigestSha256": "3cf90ba906255a3b3dffc296220ae51e5452d3b110a67484c7014c0edce59672",
+      "observedDays": 3797,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26336": {
+      "rawRows": 6681,
+      "rawDigestSha256": "80f0806a4e3dc86e6e8671422e8349abbc06aee2ce34e4f26ee7417548894e42",
+      "observedDays": 3814,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "26347": {
+      "rawRows": 4218,
+      "rawDigestSha256": "6281a26bf893d5e6a1cbc737910e83c490d1ad847278193b199e20ccbd4035e9",
+      "observedDays": 3196,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26387": {
+      "rawRows": 8043,
+      "rawDigestSha256": "df6765ea72e917575fd1acba2a785feedcf27adc7e82d4f3df371e0367596403",
+      "observedDays": 3942,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26432": {
+      "rawRows": 4787,
+      "rawDigestSha256": "ba69cc211d5031ac590ca077d577e9e00ed9dccc32c79e56ccd5f2b1093a16e1",
+      "observedDays": 3373,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20453
+    },
+    "26442": {
+      "rawRows": 6818,
+      "rawDigestSha256": "e05a1b7eee41d8e32e9fcb8a1a167165cc3483f8191dc8246af81e00092e4ba7",
+      "observedDays": 3863,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26443": {
+      "rawRows": 4925,
+      "rawDigestSha256": "dea6cc5e9b2b80482e857a499a2a41465a2a4994f20b14eff3b3a77f1763d136",
+      "observedDays": 3457,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26454": {
+      "rawRows": 6335,
+      "rawDigestSha256": "7e7a26f51c385d31c7616c328e3caa9e77fc3ac12b370a09705dba75c7f67629",
+      "observedDays": 3775,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "26474": {
+      "rawRows": 7921,
+      "rawDigestSha256": "40c2047efc2aac5a055022d7bca19413b273b3c6a06bad3af0788056aa6e8ea5",
+      "observedDays": 3952,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "26703": {
+      "rawRows": 8665,
+      "rawDigestSha256": "27766705f7bf44863bb16792f38eb236a7a652c3e9bed151c13e81a925960cea",
+      "observedDays": 3961,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27089": {
+      "rawRows": 6925,
+      "rawDigestSha256": "e71f658499bd73e2839a35f8aad5dfdf9a81e6cf3fa25ad407ae9cf9a95f0e61",
+      "observedDays": 3823,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "27124": {
+      "rawRows": 8289,
+      "rawDigestSha256": "daf274a901f6172d5ebb8f01f91cd98f882dbd67c4664f0dc6aacb3af8f2a884",
+      "observedDays": 3950,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27130": {
+      "rawRows": 7895,
+      "rawDigestSha256": "8f01824b25373bfbb3af7173861a0acd00bd180e554140b493470fffe9c52307",
+      "observedDays": 3945,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "27133": {
+      "rawRows": 7278,
+      "rawDigestSha256": "da0cd37e86adaafaa3e01c4a69b4df89e3cca79f10861a62ea3972eb864f5ae2",
+      "observedDays": 3915,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27141": {
+      "rawRows": 7883,
+      "rawDigestSha256": "ed095cb68ba616c550e49245d57b81e2b7b0422726c968f756952269edbd786c",
+      "observedDays": 3953,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "27146": {
+      "rawRows": 7868,
+      "rawDigestSha256": "4c4019dfb712d07f88a16c48097b2baad10d147bcec866aa1b4b3328817746a9",
+      "observedDays": 3942,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "27153": {
+      "rawRows": 7245,
+      "rawDigestSha256": "8a0085980484eae80fa8d6ba89437c76c8561a97f6bfcaebc310c617b5ec10bf",
+      "observedDays": 3937,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27160": {
+      "rawRows": 6976,
+      "rawDigestSha256": "f9198c11e4f835958306f01eec029f884ca4af719d66bade311ac05256066506",
+      "observedDays": 3896,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27305": {
+      "rawRows": 4957,
+      "rawDigestSha256": "57775e30d4f03985843c035ac4a71c6d311edcb9e89a46e65835e947959a0e7e",
+      "observedDays": 3504,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27469": {
+      "rawRows": 5084,
+      "rawDigestSha256": "79606f7de573d0cfeed68cb33aeaa2c23bdc99b55c987499f1fd4910e85c5c7e",
+      "observedDays": 3555,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "27493": {
+      "rawRows": 4594,
+      "rawDigestSha256": "2201491036ccb78b78b71360c3518869e39ca16271f1e10b3a55f2f25d908e56",
+      "observedDays": 3268,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "27580": {
+      "rawRows": 2040,
+      "rawDigestSha256": "9bf2072b175ff417aea177e21a73df48b028a2a9714349a4028a23ef0dd747e2",
+      "observedDays": 1740,
+      "rawGapsOver45Days": [],
+      "firstDay": 16443,
+      "lastDay": 20453
+    },
+    "27582": {
+      "rawRows": 3879,
+      "rawDigestSha256": "7fa92521defdb65f193e18b7e71ffb6efe900846f9cfebb6d43591af176688c1",
+      "observedDays": 3017,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "27585": {
+      "rawRows": 4722,
+      "rawDigestSha256": "a1ca9335724d06eeae9f4b4348085df176a7b9767e0ef33f995983403252ef4c",
+      "observedDays": 3387,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "27653": {
+      "rawRows": 4881,
+      "rawDigestSha256": "fac65e7847b06c5272cff83e0573d8a6f0ca8140a11f8b77fbfcd8d395964e13",
+      "observedDays": 3426,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "27676": {
+      "rawRows": 2513,
+      "rawDigestSha256": "ccf75af0759feab7a3f5f20d4785504c36c9bd2a7ae5fb92c5927924a4dd76d4",
+      "observedDays": 2151,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20451
+    },
+    "28059": {
+      "rawRows": 7529,
+      "rawDigestSha256": "7d3f6d9d23e8f8e47b28ddd5c7c1b0b2679b20dfa0c58279e578a9dd40e1e54d",
+      "observedDays": 3931,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28070": {
+      "rawRows": 4102,
+      "rawDigestSha256": "42b94c7e88f984364df82a4483d39ded51fcb00e82c2da637d842f41c53bb453",
+      "observedDays": 3031,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28071": {
+      "rawRows": 2926,
+      "rawDigestSha256": "852cbb08e162fcd58c04056b6b8008f47b4f3132b158cbf3b08c220c2e151d90",
+      "observedDays": 2493,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20450
+    },
+    "28072": {
+      "rawRows": 4423,
+      "rawDigestSha256": "e17351e11c546b21137642b725ea27a0dfbf88dd9d03d61707a94fe522f44380",
+      "observedDays": 3123,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "28073": {
+      "rawRows": 4546,
+      "rawDigestSha256": "104ba28c1eb7ccc0b83e17c3bd70556e847742fc1fab6ee986440abb50741516",
+      "observedDays": 3216,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20453
+    },
+    "28081": {
+      "rawRows": 7128,
+      "rawDigestSha256": "044bcfc31e96dbcd650392007172e642b8021f8a066d2ededb6984a77a765f81",
+      "observedDays": 3852,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28325": {
+      "rawRows": 3443,
+      "rawDigestSha256": "0b4dc491a8d2d91b91ebd508ec1e93e60e5d2c4f72d9c1ae10e0ff59eb38abd7",
+      "observedDays": 2780,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "28345": {
+      "rawRows": 3310,
+      "rawDigestSha256": "e62a4db1c51ebb492776bb5b1021ee95eeb39a35da29a880508ed2ea67793cb8",
+      "observedDays": 2676,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "28374": {
+      "rawRows": 6916,
+      "rawDigestSha256": "78181e7815a81f477a093dbb54162b7be3a5403cea55aa795b6a32f4512a6bb2",
+      "observedDays": 3815,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "28481": {
+      "rawRows": 6815,
+      "rawDigestSha256": "759c205c1ce0d87e27c67bb64df3257ba5550e4e7e5ef4ca7dcbb7078c208648",
+      "observedDays": 3821,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28483": {
+      "rawRows": 6848,
+      "rawDigestSha256": "9e44a609cd85c2cdfaf2230961ff0aa406e73f524611b19f843bf8da934cfea5",
+      "observedDays": 3822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "28484": {
+      "rawRows": 6867,
+      "rawDigestSha256": "f269496b383a26dd208500635a6682262595215cfc8597dbed1e2f2dda865751",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "28499": {
+      "rawRows": 7886,
+      "rawDigestSha256": "9edffc1ae573be281001aff1df0c1df66b69d625fb48e0e31dcfebc40c365664",
+      "observedDays": 3947,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28651": {
+      "rawRows": 7520,
+      "rawDigestSha256": "381fb288485b42eeed40647e1599bbd99842aa5ae108231afd1e4bf1e2978643",
+      "observedDays": 3941,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "28853": {
+      "rawRows": 2452,
+      "rawDigestSha256": "e0d01a68dba3c588ec799b06ef7a335ab0ff36ecb2fa30a048dc94355df01414",
+      "observedDays": 2092,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20452
+    },
+    "28897": {
+      "rawRows": 8012,
+      "rawDigestSha256": "f9eba32b873cc7baf231304e727ab5ba2ed5a7fadcbe0e20b36a33a372a87f76",
+      "observedDays": 3930,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "28932": {
+      "rawRows": 7887,
+      "rawDigestSha256": "f4bf716a8a9f4ac49f386dadaa3424827d5d7b104c0f2388d2d66792364aa805",
+      "observedDays": 3951,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29039": {
+      "rawRows": 3420,
+      "rawDigestSha256": "8a877c83f1d3ecf3fd29a5a34711811e408ddb51cbace16b4ad2a144ad3cd234",
+      "observedDays": 2620,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20451
+    },
+    "29042": {
+      "rawRows": 3144,
+      "rawDigestSha256": "0fbc0addd8884d71da9f00f095233396d075e6b6974562e958205b840f062290",
+      "observedDays": 2610,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "29043": {
+      "rawRows": 3084,
+      "rawDigestSha256": "34402bc4cc75911f498c30f97473a79a9411c8bd2ed166bd76fc875cefc77163",
+      "observedDays": 2587,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29054": {
+      "rawRows": 7208,
+      "rawDigestSha256": "975babfb8ec210f88f833da213f1d8465c8fca85eee98f716da0bd4abca062d9",
+      "observedDays": 3816,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "29110": {
+      "rawRows": 7828,
+      "rawDigestSha256": "9bf611120ff99e8e6f3482a2c21649370f6d8cd318894176f059f86aa1dc1ed7",
+      "observedDays": 3824,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29269": {
+      "rawRows": 7915,
+      "rawDigestSha256": "f117b1b611adc8df8f78e255516648184d80866b8d5d4ef5e2102760c8533de8",
+      "observedDays": 3959,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "29507": {
+      "rawRows": 8308,
+      "rawDigestSha256": "738dd9efbbd1622189ee381ead3466c547f9fc9f58f5a68ba1bc417af396327b",
+      "observedDays": 3949,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29600": {
+      "rawRows": 7558,
+      "rawDigestSha256": "6e473c7fa0a852b19caa2b7c970ac3c8a55eafecbcc90405cf9dd2c8eb4a672b",
+      "observedDays": 3907,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29713": {
+      "rawRows": 8887,
+      "rawDigestSha256": "c073b79fdef562901480dbc171b2ef3079d31e170a04584b154c73e4f7e8711f",
+      "observedDays": 3954,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "29802": {
+      "rawRows": 6129,
+      "rawDigestSha256": "caac6bc849853dd168f34d0300ee55cb31ff32405f7279529299ebdbb9a40a59",
+      "observedDays": 3768,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "29815": {
+      "rawRows": 6686,
+      "rawDigestSha256": "4f68e35944be55ce0f0f75b087f13ec203316c63717538d3ef1cb5d7e498699d",
+      "observedDays": 3835,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "29818": {
+      "rawRows": 6852,
+      "rawDigestSha256": "0e5b95be0d85b52a047e88c2df37ea78ece47513204536d0f4da6f2058fd8708",
+      "observedDays": 3842,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29832": {
+      "rawRows": 7524,
+      "rawDigestSha256": "e01a532f57a2c5719fb79dead232c6dbc70aad278d006229ff04e81f6fdb8309",
+      "observedDays": 3923,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "29836": {
+      "rawRows": 5178,
+      "rawDigestSha256": "a83f1a8d8bb8745847522233b5c5409f0f2b9f50250ea037ef5f5a217dbe7a33",
+      "observedDays": 3614,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "29842": {
+      "rawRows": 6727,
+      "rawDigestSha256": "347df1d32828e1837ec93a9b739e7fca60a693fd90df971b2b4f2383ade5035c",
+      "observedDays": 3860,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29936": {
+      "rawRows": 7452,
+      "rawDigestSha256": "14a090efd2f0113e928fd79ad2fa3d116a34f0495e0fb952db4323b4e37ba398",
+      "observedDays": 3927,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29970": {
+      "rawRows": 7730,
+      "rawDigestSha256": "560e2fdcd27cd01eb0dd41705e58280f0d5707da67ffb4bcb2473e334d232f79",
+      "observedDays": 3930,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "29999": {
+      "rawRows": 7584,
+      "rawDigestSha256": "90dd579c122c4e14085e6cd8c3b5e2462c4528c0aff312943649c1ee0b18a809",
+      "observedDays": 3897,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30028": {
+      "rawRows": 6907,
+      "rawDigestSha256": "23389ff2b57fc0ac3245a8abf42d9ba7d6f8aa7365615ad6efcd97aefa11ac85",
+      "observedDays": 3852,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30036": {
+      "rawRows": 6810,
+      "rawDigestSha256": "f1c458d0560e3fe7e63547288197a100eae79e8ab9d954f8b430b9f74a01eb24",
+      "observedDays": 3848,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30037": {
+      "rawRows": 7039,
+      "rawDigestSha256": "5dc476705a622401e669154c4f2c6f3853e99e8ae6cfe9c66d2f5fe54489793e",
+      "observedDays": 3872,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30044": {
+      "rawRows": 7228,
+      "rawDigestSha256": "c7e835d19bd03e6b2347a0e66409725456b1b2fa4656f321a882f66e46b1e4be",
+      "observedDays": 3908,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30082": {
+      "rawRows": 7235,
+      "rawDigestSha256": "abf31a23dab98a3728351b765748adf3c0ff64d075dcec11c1c4c7090fb9d625",
+      "observedDays": 3908,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30108": {
+      "rawRows": 6772,
+      "rawDigestSha256": "283400a9310465728fe7393269ba1b41470194e31b1bff27b063c64445ea9b20",
+      "observedDays": 3840,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30173": {
+      "rawRows": 5998,
+      "rawDigestSha256": "7e5f4d302ea55e37ccf05e3634bfb3023488c7b18e7c68ec49fa567e72f81e74",
+      "observedDays": 3690,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30206": {
+      "rawRows": 7075,
+      "rawDigestSha256": "36f750f9df21bf8292597ee1554dc520a2891e5707c078323aeff029aa73ac77",
+      "observedDays": 3882,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "30284": {
+      "rawRows": 4984,
+      "rawDigestSha256": "3dd5d0c6413320680c54dea707a6148316d594a4b68732177b31748d0791161e",
+      "observedDays": 3505,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30291": {
+      "rawRows": 5539,
+      "rawDigestSha256": "af89443c0ffafd466877a2a2595903f7606e3a44b12097dcc0f082bb54d1b8b1",
+      "observedDays": 3679,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30301": {
+      "rawRows": 6637,
+      "rawDigestSha256": "470d2ad68a60f6a3aade6a9481ca350ba83e5c33156cc889ee8bf4a5c7f9dfb0",
+      "observedDays": 3844,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "30369": {
+      "rawRows": 6305,
+      "rawDigestSha256": "1c12501da4803861e0dac9138d28390db4ef578f60ef8111d7efc1dd3bfbdb7c",
+      "observedDays": 3801,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30382": {
+      "rawRows": 6493,
+      "rawDigestSha256": "343bdce49bc3bdca2397af1cc97dff76da973155d38bc45bd0e4c3d3b0d73aff",
+      "observedDays": 3805,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30496": {
+      "rawRows": 5957,
+      "rawDigestSha256": "3ea38b2a1c63f7bfd98c9322bcad73dc1883e7a3feaa6f34cb2f23feac0ac608",
+      "observedDays": 3761,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30514": {
+      "rawRows": 7053,
+      "rawDigestSha256": "4b0ad5ea1961552b774415da2e7be40daad2662cfaab454309de6d9e37efa781",
+      "observedDays": 3904,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30521": {
+      "rawRows": 6779,
+      "rawDigestSha256": "162c87b9fd2cf7686fc70401cac2c91f74776d7f254d3cf49d8eb775fa74e234",
+      "observedDays": 3869,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30546": {
+      "rawRows": 5899,
+      "rawDigestSha256": "42823a13b39dddb1c0abb588c64dbcce1b0733eb227f5310a104dc0e3cd863b0",
+      "observedDays": 3770,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30662": {
+      "rawRows": 3591,
+      "rawDigestSha256": "9ac28361e127591e38734a6328bf3adca2309d6c00f8acdb491cd8d3092e9868",
+      "observedDays": 2835,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30696": {
+      "rawRows": 6594,
+      "rawDigestSha256": "6e185ea358b98f141f60d211454553dfa91255ab54186cecf5c7894f6184f8af",
+      "observedDays": 3822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "30744": {
+      "rawRows": 6298,
+      "rawDigestSha256": "93eddb82a39c8220be0c3d50b8af0b49abf5bdc28aee4c1c93ed392bc3596eeb",
+      "observedDays": 3795,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30755": {
+      "rawRows": 4677,
+      "rawDigestSha256": "480734685639a001ed2ebbc5709d75e109a2874bcf04ec10a36040f7db7e84a4",
+      "observedDays": 3344,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "30820": {
+      "rawRows": 4569,
+      "rawDigestSha256": "47d4265b071cb6780b4b0a88514f1b1fc8db1ba15c1c7c0bfc885724eeddde40",
+      "observedDays": 3250,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "30843": {
+      "rawRows": 4390,
+      "rawDigestSha256": "332af4ebc185699c771d25af8101b7dff14d309fa640a9bb46a6cf35e49be904",
+      "observedDays": 3099,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "30847": {
+      "rawRows": 5005,
+      "rawDigestSha256": "4c93d31cc1a79f1f9a0208d37d8bb54c06068a49d0c099194999c269d4860555",
+      "observedDays": 3456,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30880": {
+      "rawRows": 6367,
+      "rawDigestSha256": "a42a8bce1bd9e4ee8dd4fa115ef32a82e0ad32dd7e7b2de6c24ed6c52020ad6e",
+      "observedDays": 3769,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30882": {
+      "rawRows": 2993,
+      "rawDigestSha256": "2f51ad2b9e546723dadd4df68dae923beea761b38cb81aafd37e2630499b95ef",
+      "observedDays": 2428,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20449
+    },
+    "30918": {
+      "rawRows": 4375,
+      "rawDigestSha256": "66e58bbd6b53010fad4aa8ce78c5ca2aac6bd276cb89d1fcd97815000ff02b77",
+      "observedDays": 3299,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20450
+    },
+    "30926": {
+      "rawRows": 5587,
+      "rawDigestSha256": "2abf05a42b1d04ef7aac3d31027d0be34862e7357c6d25cf4c0d554c9bb03151",
+      "observedDays": 3681,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30930": {
+      "rawRows": 4299,
+      "rawDigestSha256": "36a7f70df68a3a2debf7ac2b18a16ba66cf397b2c9722be8b434b97f6289c7a0",
+      "observedDays": 3110,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "30938": {
+      "rawRows": 5690,
+      "rawDigestSha256": "ea32212be96b65fbaffd339d5e21ab26e7ef3df50a8a991d586abdf4efe0d497",
+      "observedDays": 3705,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "30944": {
+      "rawRows": 4371,
+      "rawDigestSha256": "83b617d64e40c728fb4c995618d955abdee8a3ac7c7806911a6073e41c13ed10",
+      "observedDays": 3193,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30967": {
+      "rawRows": 3892,
+      "rawDigestSha256": "5fceba7b7c81240c35e95bff562497bd5f37ac3d3335b9965e645e2d6d16ab4a",
+      "observedDays": 2934,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "30982": {
+      "rawRows": 3567,
+      "rawDigestSha256": "24550ffa09ff11cda52b7ee7ed6944930cf4cab8e77082d1762d63090f4c71c8",
+      "observedDays": 2721,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "30984": {
+      "rawRows": 3769,
+      "rawDigestSha256": "7df5684949d77ef2f82bed2af9f234e08212d1d2a9e8aa293ac37394f5c658dc",
+      "observedDays": 2870,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31007": {
+      "rawRows": 4079,
+      "rawDigestSha256": "fa58301e4605a6da55836659e727af45010367226f33bcd8b40d995e2f5f2a27",
+      "observedDays": 3049,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31025": {
+      "rawRows": 1953,
+      "rawDigestSha256": "8621f7ea772e6ba17d69bd0219c557e7eb253e2143a08e8f8c5b87f36c8a3d19",
+      "observedDays": 1754,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "31071": {
+      "rawRows": 2924,
+      "rawDigestSha256": "40ea07861598835c146b3b6394ca3bb1ba038dba5689d08ce9b122b9a1d37ba8",
+      "observedDays": 2393,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31087": {
+      "rawRows": 4162,
+      "rawDigestSha256": "58ec1b62b89bb2385e071b47a35078a88a9d4038991198bfdda548ab55535a6f",
+      "observedDays": 3066,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20452
+    },
+    "31120": {
+      "rawRows": 6990,
+      "rawDigestSha256": "68d38bd7a8518aa4d8202f360f6f8ac6c89009164c0767ba7634918658c604eb",
+      "observedDays": 3821,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "31152": {
+      "rawRows": 4834,
+      "rawDigestSha256": "a837af96fe4072f569bfa555bad373b773cbd831a71533cb16ceae019674ed91",
+      "observedDays": 3285,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20451
+    },
+    "31168": {
+      "rawRows": 4211,
+      "rawDigestSha256": "fbc5ce1d3772703b6f5ba86df1d60d43d4d50b48dae88a4d815b5ed549c0aed2",
+      "observedDays": 3184,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "31171": {
+      "rawRows": 4052,
+      "rawDigestSha256": "22b22400aea51a7bb21c7fb5dcfa7ac8c2216feaa7e40dff45b785c2d94cfbfe",
+      "observedDays": 3067,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "31224": {
+      "rawRows": 1484,
+      "rawDigestSha256": "e82bf1a5b928c41610d0da660f7447dd8d56d0308e054c91fea52cf7668b26be",
+      "observedDays": 1354,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20450
+    },
+    "31231": {
+      "rawRows": 2060,
+      "rawDigestSha256": "5daa983d8adbb31d2f0629298f2a6e6a91af3c6409ad229d65d61ea1056b39ae",
+      "observedDays": 1802,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20449
+    },
+    "31297": {
+      "rawRows": 4830,
+      "rawDigestSha256": "5ea98a1cc65762b1e18e34cf390671f01984708469a18ad11130f66a40c6f1df",
+      "observedDays": 3470,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "31305": {
+      "rawRows": 7382,
+      "rawDigestSha256": "f374d5d7a6747c6d5a25e735acf03645fa2db1b1a74f4a0f91f7d42fb6ff5897",
+      "observedDays": 3942,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "31342": {
+      "rawRows": 2827,
+      "rawDigestSha256": "5fbb9ef434bfc38d462b1671394078fd34c5aa5f9825290d510e4f9be1b837f1",
+      "observedDays": 2428,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31360": {
+      "rawRows": 1317,
+      "rawDigestSha256": "a318022a7ce54f7f1abd95166e80f754594a15e86c105ef4923fea890afafa7b",
+      "observedDays": 1241,
+      "rawGapsOver45Days": [
+        [
+          1667754938867,
+          1674270651618
+        ],
+        [
+          1705930980266,
+          1710462073752
+        ],
+        [
+          1725922735980,
+          1756375720447
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 20328
+    },
+    "31419": {
+      "rawRows": 970,
+      "rawDigestSha256": "8408a4a3699efa2a3db2199a40e2f19a1b6b518d9efc5f1372b75701d7703847",
+      "observedDays": 896,
+      "rawGapsOver45Days": [
+        [
+          1422404011181,
+          1427150692600
+        ],
+        [
+          1662001894776,
+          1666577899511
+        ],
+        [
+          1696735232819,
+          1700626947122
+        ],
+        [
+          1701400244967,
+          1705289312962
+        ],
+        [
+          1707319580926,
+          1714919095658
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 19848
+    },
+    "31449": {
+      "rawRows": 2703,
+      "rawDigestSha256": "268a82d0e71f283b3b495a3a0b4293d972c35d500085b589527bf7a301eee079",
+      "observedDays": 2267,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "31467": {
+      "rawRows": 1254,
+      "rawDigestSha256": "23a8dd55aadaf2fae0851d1d69eb7100f094f2ec9fbe0d5996bce671cc1b37a6",
+      "observedDays": 1169,
+      "rawGapsOver45Days": [
+        [
+          1608864942054,
+          1613063943833
+        ],
+        [
+          1670336497500,
+          1674740935379
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 19867
+    },
+    "31468": {
+      "rawRows": 1500,
+      "rawDigestSha256": "daebae9dbca9663c2acba53a7e7e00727b5910d10eabc789b7274c845d6a8f91",
+      "observedDays": 1275,
+      "rawGapsOver45Days": [
+        [
+          1479942162425,
+          1487547701578
+        ]
+      ],
+      "firstDay": 16445,
+      "lastDay": 20450
+    },
+    "31507": {
+      "rawRows": 4661,
+      "rawDigestSha256": "91c1d5ce242ac4fd74849b364481729663590ba3702f27900952567f0088320a",
+      "observedDays": 3265,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "31508": {
+      "rawRows": 2051,
+      "rawDigestSha256": "a243a383a838405abe03da63d705161e8cb84d813f2c54f6cd4b0253b2bc2022",
+      "observedDays": 1784,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20450
+    },
+    "31516": {
+      "rawRows": 3129,
+      "rawDigestSha256": "dd4ac73afc2411383da0860f62f43a3f74b6a0d71077bd187ed345d0752f79af",
+      "observedDays": 2583,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31540": {
+      "rawRows": 1926,
+      "rawDigestSha256": "db0ba606c6e0890c7d7e2c7a9e844fd55c5ed89dda526f748a6281941355b368",
+      "observedDays": 1690,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20448
+    },
+    "31550": {
+      "rawRows": 2838,
+      "rawDigestSha256": "c80ac6c2f4486971f680671d6259a04417cf4e01234ab0a69ffca771f9d9c409",
+      "observedDays": 2282,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "31563": {
+      "rawRows": 4210,
+      "rawDigestSha256": "981757a2209be2f539a0dd30d8a8c6d9e9a5444c767b45268c986fd48e82d1be",
+      "observedDays": 3232,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31608": {
+      "rawRows": 1760,
+      "rawDigestSha256": "9d94a00c38ed3391dba7a6308e7ecf756bef990a07516bb7c7bc2a0f6516b13c",
+      "observedDays": 1559,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31619": {
+      "rawRows": 4201,
+      "rawDigestSha256": "dfffce611a8e3367d44e63e70d89dba16c7a9944c29f25720fcc7068572b0396",
+      "observedDays": 3108,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "31625": {
+      "rawRows": 4180,
+      "rawDigestSha256": "d6a13a7747f5f95c8f128e4bb24254e34533cf3416c54b252861f9fe34af6642",
+      "observedDays": 3122,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "31644": {
+      "rawRows": 1654,
+      "rawDigestSha256": "d0fd7c545fb83e844849df0f24626ea8b63c9dfd2c73a471cc26cec6cce0ec3f",
+      "observedDays": 1541,
+      "rawGapsOver45Days": [
+        [
+          1701544099180,
+          1708544756460
+        ],
+        [
+          1729134242226,
+          1738056662523
+        ]
+      ],
+      "firstDay": 16437,
+      "lastDay": 20446
+    },
+    "31647": {
+      "rawRows": 1058,
+      "rawDigestSha256": "6610e52db48c4a5678d38c95dd9d444e8e7fc609bc7d700818b6de15a1f6f581",
+      "observedDays": 991,
+      "rawGapsOver45Days": [
+        [
+          1467391410704,
+          1480126533640
+        ],
+        [
+          1608880447140,
+          1612804684066
+        ],
+        [
+          1667965531182,
+          1682340688366
+        ],
+        [
+          1701516745379,
+          1713956748420
+        ],
+        [
+          1718496498966,
+          1723074656722
+        ]
+      ],
+      "firstDay": 16437,
+      "lastDay": 19959
+    },
+    "31666": {
+      "rawRows": 2263,
+      "rawDigestSha256": "0a29cec5ea279c06e2d6c8a698ce6dea85e310e823fd8c0ed565d0eb14710d4c",
+      "observedDays": 1905,
+      "rawGapsOver45Days": [
+        [
+          1489310742454,
+          1493522683288
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "31724": {
+      "rawRows": 3262,
+      "rawDigestSha256": "82771d9f60a7d48c352a1e59b319c6b717845f605e050ad375620092f221a4f7",
+      "observedDays": 2531,
+      "rawGapsOver45Days": [],
+      "firstDay": 16442,
+      "lastDay": 20452
+    },
+    "31737": {
+      "rawRows": 3740,
+      "rawDigestSha256": "0182b346bf77127a4e3074ab4d3f4ff2c464420e1ab43a44b833533906bdb993",
+      "observedDays": 2812,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "31746": {
+      "rawRows": 2445,
+      "rawDigestSha256": "2a57ac4562697dd5a7060364ed76fbe6b29ddf81a067e2041ab0aa9bcdd9cef1",
+      "observedDays": 2074,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "31780": {
+      "rawRows": 3698,
+      "rawDigestSha256": "83ef34bc9695e8fdda535c5cb9af492a0afa3df24421041b51175dfbbbd8cab0",
+      "observedDays": 2902,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "31820": {
+      "rawRows": 2618,
+      "rawDigestSha256": "d57b939b3eb05f5d8ce388e0b6bd3a708b56ac68ec096f63116517c43fa20713",
+      "observedDays": 2219,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "31837": {
+      "rawRows": 2494,
+      "rawDigestSha256": "cabe54b03b38ce889554a3908bb8c1d4860f2bc1e94a410fbc53b7d9978907d0",
+      "observedDays": 2097,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "31877": {
+      "rawRows": 3359,
+      "rawDigestSha256": "93b74e96c231e24bf3ab2d13f8ac0075d2f66a20cd1b853873bc9346378a1869",
+      "observedDays": 2703,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20450
+    },
+    "31893": {
+      "rawRows": 3265,
+      "rawDigestSha256": "327ba69fb84d092e77d6bb25debb96aec9e8be014c95dcbadf9e990983b29c7d",
+      "observedDays": 2673,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "31902": {
+      "rawRows": 2935,
+      "rawDigestSha256": "4e0527d0a16bd9abbc979a94970ff1fbfccbb3353e679376a57bd9a70f9fb2f2",
+      "observedDays": 2414,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20445
+    },
+    "32063": {
+      "rawRows": 7748,
+      "rawDigestSha256": "347a2a3bfee8fc305eb4343e2a5ce46a8610c5f131303a70d714a01fb1845ad6",
+      "observedDays": 3922,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "32098": {
+      "rawRows": 1797,
+      "rawDigestSha256": "315273951e396b0b3b75fa6ebaff01fef6e5070655e51aab18e16b9c52688b9c",
+      "observedDays": 1582,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20449
+    },
+    "32111": {
+      "rawRows": 3001,
+      "rawDigestSha256": "82a1f6d2f50eedb7d82b880b1c3cb7fddf15890b3abc910bf148ca3f29e17c6d",
+      "observedDays": 2426,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20449
+    },
+    "32123": {
+      "rawRows": 4430,
+      "rawDigestSha256": "619db09f9972f1e2d7c62d083c787f4cf5a23ff2f6e2f408782a47b5fdc71811",
+      "observedDays": 3234,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20449
+    },
+    "32167": {
+      "rawRows": 1367,
+      "rawDigestSha256": "0cbcd551a9a1317ae0933227d9eba760975a679575fe6546f21e385f327fff97",
+      "observedDays": 1261,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20445
+    },
+    "32169": {
+      "rawRows": 3596,
+      "rawDigestSha256": "f55cfb45a2121646041727255ddba30ce4a575b9cf867b9e866410c04a99e369",
+      "observedDays": 2842,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20449
+    },
+    "32218": {
+      "rawRows": 3891,
+      "rawDigestSha256": "73d3ba7044838b3052f6bae50ad496891582c509411a2f8df25181cde8b422f8",
+      "observedDays": 3085,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "32221": {
+      "rawRows": 4051,
+      "rawDigestSha256": "99d18f64346a549d8d4aed9af7dbd515ff7b3b946579b2386e4c022658a488cb",
+      "observedDays": 3236,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "33318": {
+      "rawRows": 7084,
+      "rawDigestSha256": "69644aa02666ac9d0f1bd23dea1f82eb46b4b36682cbddaf04c7932ab1cec30d",
+      "observedDays": 3823,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "33398": {
+      "rawRows": 6976,
+      "rawDigestSha256": "a0b0eb2aa7f7945f009489271a7565a293de19943ac9ab0029694d468769e763",
+      "observedDays": 3823,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "33500": {
+      "rawRows": 7861,
+      "rawDigestSha256": "cbf36c6cb6b973fb3698da7457c84fedd566f8248079d7d98e22e37cc83352c6",
+      "observedDays": 3945,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "33618": {
+      "rawRows": 3568,
+      "rawDigestSha256": "9da56ea9accddc4634e16b73efb6617be12ecfadfba3ad8f5f1bdeb22a65ed8d",
+      "observedDays": 2807,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "33663": {
+      "rawRows": 2321,
+      "rawDigestSha256": "029796344a26452839c84092952658d39e7df197daa899c5e45f3abb935a9a63",
+      "observedDays": 1964,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20452
+    },
+    "33691": {
+      "rawRows": 1491,
+      "rawDigestSha256": "7d57d80312d3aa15e59a781aa6a5b46ef152d03693f6a51f7090db017dae41b5",
+      "observedDays": 1334,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 19741
+    },
+    "33720": {
+      "rawRows": 1298,
+      "rawDigestSha256": "a6a848ecd82319c53cfd44a06fc582faf996cb06d6b368f9a5b3a8ba753580a2",
+      "observedDays": 1202,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20001
+    },
+    "33765": {
+      "rawRows": 6785,
+      "rawDigestSha256": "fad31bcb0a7252c44294ccc083d6607d819ed38a483b9edf6db73f3251edaaea",
+      "observedDays": 3824,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "34410": {
+      "rawRows": 5168,
+      "rawDigestSha256": "fda6cc2cb9d98889fa41fa724476953e584c26d434c7740da2fde12dd9e18f56",
+      "observedDays": 3575,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "34752": {
+      "rawRows": 6311,
+      "rawDigestSha256": "c1570a5a05a486f4a4e57ac707e8ec84e7ac494ceaefd9dc31462fc01e02bf46",
+      "observedDays": 3803,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "34955": {
+      "rawRows": 2750,
+      "rawDigestSha256": "30a50458640fabb05e6456239c141965568f7cd6542a05e5c084393e9c00f717",
+      "observedDays": 2323,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "35071": {
+      "rawRows": 1760,
+      "rawDigestSha256": "bf9b5a1be57de55b00489727eb7522a96d8370df12d9d8658bff11c36b9963ca",
+      "observedDays": 1548,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20449
+    },
+    "35175": {
+      "rawRows": 1214,
+      "rawDigestSha256": "13c6f79a3f9a9096d9185a85b8f6ebb5a6f76a1df1d5b47e3b8e502984d155f3",
+      "observedDays": 1079,
+      "rawGapsOver45Days": [
+        [
+          1422910373329,
+          1430081091855
+        ],
+        [
+          1488145059357,
+          1495485866593
+        ]
+      ],
+      "firstDay": 16439,
+      "lastDay": 20445
+    },
+    "35207": {
+      "rawRows": 2053,
+      "rawDigestSha256": "b9a25eeea095152cd48a5e131e291480abb2cea1ab876995fb3ba1da6c0d2d75",
+      "observedDays": 1810,
+      "rawGapsOver45Days": [
+        [
+          1724803383800,
+          1762346938045
+        ]
+      ],
+      "firstDay": 16439,
+      "lastDay": 20446
+    },
+    "35223": {
+      "rawRows": 2706,
+      "rawDigestSha256": "90c651e635c8f44b63c992b199b89c67713603dc72ab5725d19b96b87e1e4ceb",
+      "observedDays": 2331,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "35234": {
+      "rawRows": 3250,
+      "rawDigestSha256": "b7c9d5d38635a0d50261268a970224c06b7a577cc90a6bff21378d2676ef544a",
+      "observedDays": 2557,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20450
+    },
+    "35236": {
+      "rawRows": 906,
+      "rawDigestSha256": "1ddce3e441a88030eb7b665d77c29109897bf6d35ab321c3599dbb852068c91f",
+      "observedDays": 840,
+      "rawGapsOver45Days": [
+        [
+          1550128344424,
+          1615663575814
+        ],
+        [
+          1677063898541,
+          1682857093064
+        ],
+        [
+          1725885844247,
+          1740871717307
+        ]
+      ],
+      "firstDay": 16439,
+      "lastDay": 20148
+    },
+    "35248": {
+      "rawRows": 5206,
+      "rawDigestSha256": "c66a30dbe74a6a4815ae12ec237c18b9f461048cd54765781c2cef17e08e5b6b",
+      "observedDays": 3582,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "35251": {
+      "rawRows": 4511,
+      "rawDigestSha256": "6253aeba3fcc8fdcbd80ed6f41dd7a36362bd9819658e1798e4d32b70c1aff3a",
+      "observedDays": 3264,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "35259": {
+      "rawRows": 5361,
+      "rawDigestSha256": "1cb7d56e4453c32b7dd13a4dfd0344662c2943f4c4e489185baac5ca7cc74254",
+      "observedDays": 3584,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "35260": {
+      "rawRows": 5255,
+      "rawDigestSha256": "db8d78df81df075c425345e443a6bd88c34a1ba5cc4ee640bb5d1f1a33e3f710",
+      "observedDays": 3645,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "35270": {
+      "rawRows": 4444,
+      "rawDigestSha256": "64f9401f8fa0b5590ef384545bd346df50e4e9fbaef500404384440be81551f9",
+      "observedDays": 3315,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "35327": {
+      "rawRows": 1270,
+      "rawDigestSha256": "5cbb493304c6679433b88e2557d3b1ebbe8d1d81d6d9b958357e6b6d70fae36d",
+      "observedDays": 1133,
+      "rawGapsOver45Days": [
+        [
+          1743852324687,
+          1748045127536
+        ]
+      ],
+      "firstDay": 16439,
+      "lastDay": 20439
+    },
+    "35329": {
+      "rawRows": 3243,
+      "rawDigestSha256": "130f2bd33b457f000e1262bd51316c6e9c785dc8eca31ca2c94cf763b39ae06f",
+      "observedDays": 2689,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "35330": {
+      "rawRows": 3530,
+      "rawDigestSha256": "e49fc1f52377e1e1430f8f1a9c3d621bc4dc52172eddeb0e3fdd408ee55f1de0",
+      "observedDays": 2822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20449
+    },
+    "35334": {
+      "rawRows": 3785,
+      "rawDigestSha256": "68371220580c58cb753d69a0fd947ec86876dffa517186d419df90170900bf48",
+      "observedDays": 2821,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "35375": {
+      "rawRows": 5729,
+      "rawDigestSha256": "464781d8b8e3596e201ff40984f6697647a104d66f63a4d53783b45dded68791",
+      "observedDays": 3737,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "35378": {
+      "rawRows": 4419,
+      "rawDigestSha256": "7b807a0f1be926962fd28b774a3bf201a26a3450f5bb5bb818e1409be4c8da52",
+      "observedDays": 3337,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "35381": {
+      "rawRows": 4675,
+      "rawDigestSha256": "a924ae606ea12dc5fc1fff566f42a0f87ce05b7f702e219545bc7aaf65c47079",
+      "observedDays": 3444,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "35397": {
+      "rawRows": 4814,
+      "rawDigestSha256": "9c4e371062897220bba6efe1b2a054b8703ab7293911e74fd7d6d7b8baea1bcc",
+      "observedDays": 3415,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "35415": {
+      "rawRows": 5124,
+      "rawDigestSha256": "c4c973abf2224dcbbb1c1da9c6aa9f5e924374bc83e470b93584b6912bed723c",
+      "observedDays": 3548,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "35571": {
+      "rawRows": 4522,
+      "rawDigestSha256": "e17cfcdfae10642f90bd6694e333bd659e5de8d210f45b2340e85617c564fc91",
+      "observedDays": 3281,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "35573": {
+      "rawRows": 4425,
+      "rawDigestSha256": "d8b2acbb9fb5ff8b391a8a126a5aa717b2c64f695f5710f1223a2ad808d3ad95",
+      "observedDays": 3314,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20452
+    },
+    "35661": {
+      "rawRows": 3073,
+      "rawDigestSha256": "d8b40cf23456cd89f06eb79265f5796a45b55e63e0d729678a7aaa5f68e21c0e",
+      "observedDays": 2525,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20453
+    },
+    "35898": {
+      "rawRows": 1870,
+      "rawDigestSha256": "3c87adecf63b861b10863e582246109627e82591bfe9eadad7a588fca4e23b60",
+      "observedDays": 1653,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "36090": {
+      "rawRows": 6820,
+      "rawDigestSha256": "871228ed503b662cb71506b81b327b055a5af7a2de9855814e4c37532da8c309",
+      "observedDays": 3813,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "36152": {
+      "rawRows": 2176,
+      "rawDigestSha256": "91a5c5f6730668cda22e1056944eded0463eacb234be6e87ea0bb46126851886",
+      "observedDays": 1917,
+      "rawGapsOver45Days": [],
+      "firstDay": 16440,
+      "lastDay": 20452
+    },
+    "36167": {
+      "rawRows": 2082,
+      "rawDigestSha256": "765ff630789e38b8d237ecef618618ce6236a425e1cb6c67b135a4564011868e",
+      "observedDays": 1868,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20451
+    },
+    "36173": {
+      "rawRows": 1653,
+      "rawDigestSha256": "310bb7ad7ffdb94cc1842b2913c38cfc42d47b50b7b75bf7c9ffa76dac91b98f",
+      "observedDays": 1478,
+      "rawGapsOver45Days": [
+        [
+          1432919007155,
+          1438759375818
+        ],
+        [
+          1464793532999,
+          1469909986184
+        ],
+        [
+          1481809350641,
+          1488945084859
+        ],
+        [
+          1559821269485,
+          1566621266443
+        ]
+      ],
+      "firstDay": 16442,
+      "lastDay": 20444
+    },
+    "36188": {
+      "rawRows": 1956,
+      "rawDigestSha256": "bc76e27cbdbb609db5fac061041674cb8638599f7b15e8fb3ecb16021a094a15",
+      "observedDays": 1683,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20450
+    },
+    "36225": {
+      "rawRows": 3122,
+      "rawDigestSha256": "1443ee940914be1c745437a7e14a6b1fa211f9cb8c45d052d441667d2162d6be",
+      "observedDays": 2553,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20450
+    },
+    "36247": {
+      "rawRows": 2415,
+      "rawDigestSha256": "f28b67131eb27d5373dcd5bd034f38540d1f35839b4c48d25c68e7cebc2471d2",
+      "observedDays": 1985,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20453
+    },
+    "36290": {
+      "rawRows": 3213,
+      "rawDigestSha256": "965ca494ed20d13f0dba16d80e2999e66863cf45f3a50a5fe9991ce4ecaf076a",
+      "observedDays": 2610,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "36365": {
+      "rawRows": 8052,
+      "rawDigestSha256": "3a9ea5d06bf397dd01dcd3a00e9c6a79eaff72d39e25099738c4f4e151b2bef4",
+      "observedDays": 3938,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "36551": {
+      "rawRows": 3299,
+      "rawDigestSha256": "d48009b5a57b46140703bce7d0048cc0dc83eb0b84011c55ac0c2cfa888da1d7",
+      "observedDays": 2684,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "36602": {
+      "rawRows": 6584,
+      "rawDigestSha256": "6617b9535a12319af3f206de0c948f7cf4eeb8d6eb1ad49a8f5e4aa7341b99bb",
+      "observedDays": 3814,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "36678": {
+      "rawRows": 1686,
+      "rawDigestSha256": "4e28fd58cec93afd0238eeca80a164202c5abb5e1d607d62b89034d7fbf16f43",
+      "observedDays": 1535,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20418
+    },
+    "36680": {
+      "rawRows": 2423,
+      "rawDigestSha256": "f04a12074997689861734e73021669463d84a5658ab2297211d29d764fb154bf",
+      "observedDays": 2064,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20451
+    },
+    "36710": {
+      "rawRows": 1316,
+      "rawDigestSha256": "e9f10815d7e58aa62610ce2672950e3b1c7d095949bdd34c24db62d5debb293f",
+      "observedDays": 1191,
+      "rawGapsOver45Days": [
+        [
+          1701507475299,
+          1705829950827
+        ]
+      ],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "37077": {
+      "rawRows": 2638,
+      "rawDigestSha256": "0bd090a8c5bfee498c1c889d6a2a3fce57cceefdcec078797c1a9d5c6dcf8f64",
+      "observedDays": 2155,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20451
+    },
+    "37432": {
+      "rawRows": 1277,
+      "rawDigestSha256": "70b23a4d2b9008380c7c7172c223ed5940e45b4416cc75cea77037a1aac58bd4",
+      "observedDays": 1120,
+      "rawGapsOver45Days": [
+        [
+          1458460013940,
+          1464038300464
+        ],
+        [
+          1467620623095,
+          1477122985851
+        ],
+        [
+          1477123034134,
+          1497218867973
+        ],
+        [
+          1701290714758,
+          1715626986235
+        ]
+      ],
+      "firstDay": 16453,
+      "lastDay": 20446
+    },
+    "37567": {
+      "rawRows": 4623,
+      "rawDigestSha256": "b3dcbec3585e73436506650da23a0216cf5e6db2cf3c941d5c0472cbb0adbfac",
+      "observedDays": 3446,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "37568": {
+      "rawRows": 4529,
+      "rawDigestSha256": "83a177e04dda9acb4f88653b8cbef01dfadcc78197b22e0f5cd3aa15debd2cf6",
+      "observedDays": 3298,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "37569": {
+      "rawRows": 4653,
+      "rawDigestSha256": "66c80d4b38074f11f90dd7f2f23ecf16850ec9e61102f27626f557cd4a2df74a",
+      "observedDays": 3405,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "37570": {
+      "rawRows": 4504,
+      "rawDigestSha256": "43c143d2fd39d5a06f3ab4a76e248290ad91817e2286ebba193a6602192817d8",
+      "observedDays": 3260,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20450
+    },
+    "37588": {
+      "rawRows": 686,
+      "rawDigestSha256": "c51e66e39f9640d9411d507a8c7507b4b8838bfd33f7f86e2581744d1fdbe443",
+      "observedDays": 652,
+      "rawGapsOver45Days": [
+        [
+          1459145509282,
+          1463720959869
+        ],
+        [
+          1479062730232,
+          1484414052369
+        ],
+        [
+          1486353757280,
+          1492397234004
+        ],
+        [
+          1496806114230,
+          1501256130360
+        ],
+        [
+          1526088539230,
+          1532351588930
+        ],
+        [
+          1722427367685,
+          1733742952741
+        ],
+        [
+          1733742952741,
+          1744627385781
+        ]
+      ],
+      "firstDay": 16437,
+      "lastDay": 20226
+    },
+    "37666": {
+      "rawRows": 1205,
+      "rawDigestSha256": "a1c53dfbcda8c882c8d7a1c343cb8054ff033a6ce3b40c2e565238a27b2c613e",
+      "observedDays": 1106,
+      "rawGapsOver45Days": [
+        [
+          1433645058571,
+          1437796184928
+        ],
+        [
+          1557074844643,
+          1586885880883
+        ],
+        [
+          1719258488817,
+          1724308899924
+        ]
+      ],
+      "firstDay": 16441,
+      "lastDay": 20448
+    },
+    "37731": {
+      "rawRows": 7861,
+      "rawDigestSha256": "d53476fc44acfa60d083621e4688b1174e6ffc770168230b38ad273efb504ecc",
+      "observedDays": 3938,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "37732": {
+      "rawRows": 6715,
+      "rawDigestSha256": "4bd3aad090e731ee6449e345e80d3cd6cb90f5ab2c13b15aeeb16d97d883c9a2",
+      "observedDays": 3815,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "37734": {
+      "rawRows": 6793,
+      "rawDigestSha256": "009330ba46d4b91038d4164b87f50532fcf941aa2c73be9215b8804b5ff50751",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "37770": {
+      "rawRows": 6730,
+      "rawDigestSha256": "854403165449da03098a680eab4d7e3c44f198c578c7897faf43048ecc4e0a67",
+      "observedDays": 3813,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "37796": {
+      "rawRows": 7614,
+      "rawDigestSha256": "45d3366a4684a0732ee1a47fb15c027a5c50194b0e2eca4b55aa7468008d5143",
+      "observedDays": 3820,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "37831": {
+      "rawRows": 6934,
+      "rawDigestSha256": "21e4f14de760c5942ba0c74241e52b9c90de7e62a902a813a8ef16bfb28dbdfb",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "37926": {
+      "rawRows": 4880,
+      "rawDigestSha256": "06d20be46348ff9b6d4bcf92b4ea283708a820398f2e9e7b14a8a4f9823dc28a",
+      "observedDays": 3489,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "37968": {
+      "rawRows": 1412,
+      "rawDigestSha256": "9b294a42e3234045591c6837d6eaeffc8eba76fc42f09367bb46ec3150105664",
+      "observedDays": 1260,
+      "rawGapsOver45Days": [
+        [
+          1492162726809,
+          1496336635714
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "38147": {
+      "rawRows": 2161,
+      "rawDigestSha256": "f6b8ec3e377b32d166b974eb4ff4a81319c968d6796957fc04f4f802c5060d65",
+      "observedDays": 1903,
+      "rawGapsOver45Days": [],
+      "firstDay": 16439,
+      "lastDay": 20449
+    },
+    "38177": {
+      "rawRows": 4645,
+      "rawDigestSha256": "64e6befd1b6ee87cf8407e57aa66b34cef53bb79009c40d5e1c7acb0c547d2d9",
+      "observedDays": 3268,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38184": {
+      "rawRows": 5003,
+      "rawDigestSha256": "0c7cd131fc2438420f3c622fd782ed3ea5272ab55510c616578576a78869921f",
+      "observedDays": 3495,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20452
+    },
+    "38262": {
+      "rawRows": 4611,
+      "rawDigestSha256": "40f48df60ab65162714fa3f99401a152904b3c70f0b6d7308ed4445653a71f10",
+      "observedDays": 3260,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38299": {
+      "rawRows": 4402,
+      "rawDigestSha256": "d55f3240819beb08e3f1372685b83bb44eaea36478bfad4134ba90041fe23bd3",
+      "observedDays": 3327,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38302": {
+      "rawRows": 4517,
+      "rawDigestSha256": "4d227b0fc8a612424304dacef311084f47e15cc17ee15780031caf81a5891442",
+      "observedDays": 3372,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38326": {
+      "rawRows": 4344,
+      "rawDigestSha256": "d02994ae356228d37c54b3fe119b5308149465b4c247b3bdea31b8b6d15b5c5d",
+      "observedDays": 3252,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20452
+    },
+    "38341": {
+      "rawRows": 7808,
+      "rawDigestSha256": "6ad283576ff15df3af9967a75ddf9e714c9ba59e6b24ee0cf302c030b269abfc",
+      "observedDays": 3943,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38347": {
+      "rawRows": 6949,
+      "rawDigestSha256": "fb11974a09754c1d31f2341159692e495e40d20642ba2131b4aa5d23c60e9ac9",
+      "observedDays": 3817,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "38487": {
+      "rawRows": 2255,
+      "rawDigestSha256": "5977a688929093c3a0fa232c78e439f3280f2ea84654d9ec54dd71b3a94c1e40",
+      "observedDays": 1931,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "38516": {
+      "rawRows": 1797,
+      "rawDigestSha256": "4046ff0eee55f15816a4034145b435d6e4894aa87fc39af6f2c43197c0e7c93b",
+      "observedDays": 1587,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20446
+    },
+    "38732": {
+      "rawRows": 7514,
+      "rawDigestSha256": "c7e25c5081c10131d18b62ceacc4ec4e44c7e51e0f75f965078c35b28242929d",
+      "observedDays": 3923,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "38818": {
+      "rawRows": 1286,
+      "rawDigestSha256": "110936e3baf10bcab9ce5163fd15cfb27fb3700cb0d4b5ae5814eff8fbbef6a7",
+      "observedDays": 1218,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20452
+    },
+    "38842": {
+      "rawRows": 2532,
+      "rawDigestSha256": "a72385ce6480a952c827cee1e1dfb19a0606982d0af23627a174e87d4cfeda61",
+      "observedDays": 2126,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20449
+    },
+    "38863": {
+      "rawRows": 7788,
+      "rawDigestSha256": "9fcd99f5af6796293645482ff7aa0a0a0c17daabc2c0463dc8df9eb20b478b2d",
+      "observedDays": 3827,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39106": {
+      "rawRows": 938,
+      "rawDigestSha256": "508e71d822170561cdfc05455d6f9939a4b121a0d28d41ae94f5b4444de81386",
+      "observedDays": 843,
+      "rawGapsOver45Days": [
+        [
+          1544745751279,
+          1552175047284
+        ],
+        [
+          1553162381055,
+          1593300383044
+        ]
+      ],
+      "firstDay": 16446,
+      "lastDay": 20447
+    },
+    "39162": {
+      "rawRows": 6988,
+      "rawDigestSha256": "30f33dfc57de38d3f80ce90dedffc20c92cd66009fc2478c566234ff3cb34610",
+      "observedDays": 3829,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "39203": {
+      "rawRows": 7586,
+      "rawDigestSha256": "9489cbb1306589da83aac24ebf81ce67971932ec8ecbb170f0bfbf7c9a21e8a6",
+      "observedDays": 3929,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39204": {
+      "rawRows": 6654,
+      "rawDigestSha256": "df085a5adf5f7347a2375a37feb63a5ea1510bf783d63724b7c4dd4ebf83b9d7",
+      "observedDays": 3814,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39205": {
+      "rawRows": 6791,
+      "rawDigestSha256": "fbdd855a40e947f60f02ffc0c20ef5abd385bce8281a8f20d2f4945ac10641af",
+      "observedDays": 3807,
+      "rawGapsOver45Days": [],
+      "firstDay": 16438,
+      "lastDay": 20453
+    },
+    "39212": {
+      "rawRows": 7688,
+      "rawDigestSha256": "549cc4bb2a11d0f00478af18528e80af34d0eb7d3bfefcafdb11ce3b8c06849c",
+      "observedDays": 3822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39214": {
+      "rawRows": 5733,
+      "rawDigestSha256": "3dd6dd9871c675040655675ec891c7dbfac4c5eaa074bc4afee2c7f20b9e3759",
+      "observedDays": 3643,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "39224": {
+      "rawRows": 6660,
+      "rawDigestSha256": "34ee66bb4faaaf3ca9f33febb6b13e0e6b6287705a2e7c42c4acda7c862f955c",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39225": {
+      "rawRows": 6850,
+      "rawDigestSha256": "2b6e8edd292f1773c44dd9c5c8d0be6b4719f37ade0b6a061ab3ac2412023004",
+      "observedDays": 3825,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39357": {
+      "rawRows": 8289,
+      "rawDigestSha256": "d105ad4e608cc39f6662cddc466e618214ed6f8f3f8bc6fa591a07244106f015",
+      "observedDays": 3687,
+      "rawGapsOver45Days": [
+        [
+          1651570537678,
+          1672097097135
+        ]
+      ],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39450": {
+      "rawRows": 7529,
+      "rawDigestSha256": "7101143a04912d4ab16a312d6b208bdd0cb406cbb2fef835aeafbb6cacd8abf8",
+      "observedDays": 3932,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39626": {
+      "rawRows": 6918,
+      "rawDigestSha256": "9d916ae680aeca74b0f1b830a1566c917ff9c9d1a00d4a5184a5f652e435af1e",
+      "observedDays": 3819,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39627": {
+      "rawRows": 6711,
+      "rawDigestSha256": "171e4aa48b0db9733a001e14502a6add988d2915c74a67e9be89b624068ee452",
+      "observedDays": 3814,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39629": {
+      "rawRows": 6908,
+      "rawDigestSha256": "9e74c1948578a173a07bb16b18cbb7b82ff136a8c76b5df990276035b2d5c160",
+      "observedDays": 3813,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39708": {
+      "rawRows": 2441,
+      "rawDigestSha256": "b428415af39d0a975db211eeaadff27251cb43103f55d55ab78232583bb84127",
+      "observedDays": 2125,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "39771": {
+      "rawRows": 7802,
+      "rawDigestSha256": "6d91e234e5690d0a985be1528d0debd8ef1c289b46d8efad695a08510aa86313",
+      "observedDays": 3953,
+      "rawGapsOver45Days": [],
+      "firstDay": 16437,
+      "lastDay": 20453
+    },
+    "40058": {
+      "rawRows": 7848,
+      "rawDigestSha256": "07a1c299ad8117088ba279da4b665a20dc611846129720f3163e8ed7a294dd33",
+      "observedDays": 3958,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40262": {
+      "rawRows": 7793,
+      "rawDigestSha256": "0da43d946f92358687e0baab31713ce858b92ac8f95d3834080e797d30b4fe63",
+      "observedDays": 3952,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40263": {
+      "rawRows": 6729,
+      "rawDigestSha256": "9f8875b0df22f910c1891f2c4d1b1b3c340ee9e8ea2f9c3a8924376cdfa78bab",
+      "observedDays": 3850,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40265": {
+      "rawRows": 6707,
+      "rawDigestSha256": "55c60fab63b8f1abaf2c1ba7d63e247881f49c429fd77a45b441cd61734ec6d6",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40266": {
+      "rawRows": 6878,
+      "rawDigestSha256": "577f48212f21778eed5c0e8d61301f0b8c47ee02964f877ff49003296de0f120",
+      "observedDays": 3818,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40289": {
+      "rawRows": 7332,
+      "rawDigestSha256": "561bd30b0fc61edfcc66b3b16f41f8ce8ae0276f2f5c22bc535cf7d1fa930876",
+      "observedDays": 3852,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40290": {
+      "rawRows": 7333,
+      "rawDigestSha256": "310b876d47a61ca73cef36816154916e1c3205a70da3c20c1b63c2c18ff275f1",
+      "observedDays": 3836,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40291": {
+      "rawRows": 7344,
+      "rawDigestSha256": "e43754bc21063dba3c54ceae4726b6ba6daca552314ebd521d6d8c15c00ce23c",
+      "observedDays": 3834,
+      "rawGapsOver45Days": [],
+      "firstDay": 16436,
+      "lastDay": 20453
+    },
+    "40395": {
+      "rawRows": 7142,
+      "rawDigestSha256": "8347a738cbad9aa6e8126840abe4f02562ea3ef7e5d2bd8b16b5783b7de13275",
+      "observedDays": 3827,
+      "rawGapsOver45Days": [],
+      "firstDay": 16491,
+      "lastDay": 20453
+    },
+    "40402": {
+      "rawRows": 6015,
+      "rawDigestSha256": "b92c4447f9669fa890335d3550a72da7c931dcc7158ec2454bf3cb945daa6329",
+      "observedDays": 3632,
+      "rawGapsOver45Days": [],
+      "firstDay": 16491,
+      "lastDay": 20453
+    },
+    "40470": {
+      "rawRows": 2565,
+      "rawDigestSha256": "869a6ad18dd1ee684d1f709736f4eae425862e1fe24fd3aadb00419723236244",
+      "observedDays": 1954,
+      "rawGapsOver45Days": [
+        [
+          1432837950345,
+          1438282027628
+        ],
+        [
+          1438282027628,
+          1443610652032
+        ],
+        [
+          1728379605734,
+          1737217354755
+        ]
+      ],
+      "firstDay": 16502,
+      "lastDay": 20452
+    },
+    "40487": {
+      "rawRows": 3448,
+      "rawDigestSha256": "9db40bb0e4635be9d4105394ec80d17e53eb887fa659f4037b832d26498ae145",
+      "observedDays": 2579,
+      "rawGapsOver45Days": [],
+      "firstDay": 16507,
+      "lastDay": 20453
+    },
+    "40508": {
+      "rawRows": 3148,
+      "rawDigestSha256": "381fd35f738be32bcacae86a1aecd27982bd29a08fd542a956f6a8b559b748f9",
+      "observedDays": 2416,
+      "rawGapsOver45Days": [],
+      "firstDay": 16516,
+      "lastDay": 20452
+    },
+    "40528": {
+      "rawRows": 5084,
+      "rawDigestSha256": "7f149c15101f76fed0e6da3125c5f6375a82720e3088059d6228f5961f596829",
+      "observedDays": 3500,
+      "rawGapsOver45Days": [],
+      "firstDay": 16517,
+      "lastDay": 20453
+    },
+    "40564": {
+      "rawRows": 3421,
+      "rawDigestSha256": "efc02488a5602e38d3acacd2fd175cc299bf2ef441ddaffc2abbf02584f01ebb",
+      "observedDays": 2592,
+      "rawGapsOver45Days": [],
+      "firstDay": 16527,
+      "lastDay": 20452
+    },
+    "40720": {
+      "rawRows": 7533,
+      "rawDigestSha256": "12384d0877e1c5ec2f0da3042503ca68e5fd14e4c26383c407d571aab5f49996",
+      "observedDays": 3791,
+      "rawGapsOver45Days": [],
+      "firstDay": 16626,
+      "lastDay": 20453
+    },
+    "41069": {
+      "rawRows": 6230,
+      "rawDigestSha256": "be6ac658be00f2ceaf99e480cd8c6c366733e1cc594602c7da78794b0b1a93c2",
+      "observedDays": 3599,
+      "rawGapsOver45Days": [],
+      "firstDay": 16773,
+      "lastDay": 20453
+    },
+    "41150": {
+      "rawRows": 3901,
+      "rawDigestSha256": "3775818cf1c1110aa82e71fba721fc5510a1f6526e1031a4d94d8cc78192a04d",
+      "observedDays": 2906,
+      "rawGapsOver45Days": [],
+      "firstDay": 16784,
+      "lastDay": 20450
+    },
+    "41156": {
+      "rawRows": 3834,
+      "rawDigestSha256": "adeb172ab8d3266b8533dec107374bd247471503cca46b98e29ed7dfed5875ab",
+      "observedDays": 2813,
+      "rawGapsOver45Days": [],
+      "firstDay": 16784,
+      "lastDay": 20453
+    },
+    "41164": {
+      "rawRows": 2701,
+      "rawDigestSha256": "c4b524201f75172af7361ef1acfd606acf5d2fb061fea23ff7659f827e80d319",
+      "observedDays": 2141,
+      "rawGapsOver45Days": [],
+      "firstDay": 16783,
+      "lastDay": 20452
+    },
+    "41197": {
+      "rawRows": 3235,
+      "rawDigestSha256": "158b5ce644759d5c3e0dd40ba3b014b3165cd58de81fedd7513801a97c1adbf5",
+      "observedDays": 2433,
+      "rawGapsOver45Days": [],
+      "firstDay": 16799,
+      "lastDay": 20451
+    },
+    "41231": {
+      "rawRows": 3897,
+      "rawDigestSha256": "380a95a1bf3966657498ee64c6af8f7cad22552296d0c9c8bb2d22cbc5d8c487",
+      "observedDays": 2822,
+      "rawGapsOver45Days": [],
+      "firstDay": 16798,
+      "lastDay": 20453
+    },
+    "41341": {
+      "rawRows": 6395,
+      "rawDigestSha256": "b6085a8d36ad2e5a9891a70830a2b27668f452a110a037d0bc28165ce820cb4a",
+      "observedDays": 3539,
+      "rawGapsOver45Days": [],
+      "firstDay": 16848,
+      "lastDay": 20453
+    },
+    "41343": {
+      "rawRows": 3064,
+      "rawDigestSha256": "00babd063a90e6a1d8fc32a64e2fd260545f694876733518a13c6c8f368928a1",
+      "observedDays": 2277,
+      "rawGapsOver45Days": [],
+      "firstDay": 16862,
+      "lastDay": 20453
+    },
+    "41356": {
+      "rawRows": 3230,
+      "rawDigestSha256": "74213285bc800842e44789f1b81ed5594d7988ac5097be5bb5c57c997f7067f1",
+      "observedDays": 2414,
+      "rawGapsOver45Days": [],
+      "firstDay": 16862,
+      "lastDay": 20450
+    },
+    "41364": {
+      "rawRows": 2681,
+      "rawDigestSha256": "a6a5d9f22801ff910fae64724486850bd08ff9b48471606f535e28ea02a1181b",
+      "observedDays": 2043,
+      "rawGapsOver45Days": [],
+      "firstDay": 16861,
+      "lastDay": 20453
+    },
+    "41715": {
+      "rawRows": 2223,
+      "rawDigestSha256": "3eb8cfee4997712ad6bd7e7392ec6269ab716466dda85c26e1ceaeebce7c7f20",
+      "observedDays": 1880,
+      "rawGapsOver45Days": [],
+      "firstDay": 17009,
+      "lastDay": 20448
+    },
+    "41728": {
+      "rawRows": 6974,
+      "rawDigestSha256": "fb68340ac16f6b8c04539b2def7dafde5f21e3d71ac6a6c61da44a2144d8e0ee",
+      "observedDays": 3397,
+      "rawGapsOver45Days": [],
+      "firstDay": 17023,
+      "lastDay": 20453
+    },
+    "41791": {
+      "rawRows": 6856,
+      "rawDigestSha256": "8207149a1dec633ba9882c0a1c476aceea33b744627bb40f53a2c9b972d61bdd",
+      "observedDays": 3344,
+      "rawGapsOver45Days": [],
+      "firstDay": 17070,
+      "lastDay": 20453
+    },
+    "41792": {
+      "rawRows": 6351,
+      "rawDigestSha256": "6b67c0c197c10001405437af7b54a4d9c41fcdb32cbe8abfc066e0a0f199fd37",
+      "observedDays": 3313,
+      "rawGapsOver45Days": [],
+      "firstDay": 17070,
+      "lastDay": 20453
+    },
+    "41826": {
+      "rawRows": 2336,
+      "rawDigestSha256": "476fa554abd22be82e14f1c217e70b610580061bfdd1695687ee4eaddc4c6ed4",
+      "observedDays": 1806,
+      "rawGapsOver45Days": [],
+      "firstDay": 17095,
+      "lastDay": 20453
+    },
+    "42261": {
+      "rawRows": 1192,
+      "rawDigestSha256": "5b01bc60893c408f8aeaea7f5ddbcae0f949401988b75c19acc9691267641b6c",
+      "observedDays": 1060,
+      "rawGapsOver45Days": [
+        [
+          1700088186509,
+          1708765190466
+        ]
+      ],
+      "firstDay": 17255,
+      "lastDay": 20453
+    },
+    "42262": {
+      "rawRows": 2713,
+      "rawDigestSha256": "520da52a3f868e0cf26c6340ac71184a184a1068ca11c8c3d6291137eb206bbd",
+      "observedDays": 2106,
+      "rawGapsOver45Days": [],
+      "firstDay": 17255,
+      "lastDay": 20452
+    },
+    "42265": {
+      "rawRows": 1956,
+      "rawDigestSha256": "1d702bbdf1c14a0ceb68d77b1b7341d5fab7d95ed9c5c67a55218d804d43075a",
+      "observedDays": 1596,
+      "rawGapsOver45Days": [],
+      "firstDay": 17252,
+      "lastDay": 20451
+    },
+    "42299": {
+      "rawRows": 2442,
+      "rawDigestSha256": "db87e00f7f1ea336dd85765cf8a0c128c70e6dbd11624d8ae8a4ddeb524bace7",
+      "observedDays": 1914,
+      "rawGapsOver45Days": [],
+      "firstDay": 17255,
+      "lastDay": 20452
+    },
+    "42341": {
+      "rawRows": 2552,
+      "rawDigestSha256": "d5bbdd4c8eb52214df82265c7345e3cedfa52983e599be5474c01c9ac1da3f2a",
+      "observedDays": 2097,
+      "rawGapsOver45Days": [],
+      "firstDay": 17255,
+      "lastDay": 20452
+    },
+    "42345": {
+      "rawRows": 1249,
+      "rawDigestSha256": "fd48d6fd10b8fcc70987978a0ef766dee73f8a5a688a22904295356957945510",
+      "observedDays": 1106,
+      "rawGapsOver45Days": [
+        [
+          1703331702068,
+          1708261229805
+        ]
+      ],
+      "firstDay": 17253,
+      "lastDay": 20452
+    },
+    "42376": {
+      "rawRows": 886,
+      "rawDigestSha256": "4210c8504bc7ae0456afef89709760f9f533c20232ea491a013ad7916549d4a1",
+      "observedDays": 801,
+      "rawGapsOver45Days": [
+        [
+          1669828865490,
+          1673891233368
+        ],
+        [
+          1720017484512,
+          1729001165665
+        ]
+      ],
+      "firstDay": 17253,
+      "lastDay": 20453
+    },
+    "42390": {
+      "rawRows": 4421,
+      "rawDigestSha256": "e19766abed15b81092b1740bfedb102bd41912810e5c001b7f537cfff09117a3",
+      "observedDays": 2913,
+      "rawGapsOver45Days": [],
+      "firstDay": 17255,
+      "lastDay": 20453
+    },
+    "42418": {
+      "rawRows": 2745,
+      "rawDigestSha256": "314997dd655f7fbdf86975a268aaeaf004fc3fd4e3f42ba32c199a1dbd988817",
+      "observedDays": 2098,
+      "rawGapsOver45Days": [],
+      "firstDay": 17255,
+      "lastDay": 20453
+    },
+    "42555": {
+      "rawRows": 898,
+      "rawDigestSha256": "bb0646de9ebc7c7a11a6d136190a06fd09cdbc65f8e524d75c490912f4e5d9d3",
+      "observedDays": 801,
+      "rawGapsOver45Days": [],
+      "firstDay": 17262,
+      "lastDay": 20450
+    },
+    "42562": {
+      "rawRows": 1928,
+      "rawDigestSha256": "9fcc71c2806619b86eb5033c5baf68cadcbc8a2d8712bc80483637399926178f",
+      "observedDays": 1687,
+      "rawGapsOver45Days": [],
+      "firstDay": 17264,
+      "lastDay": 20453
+    },
+    "42565": {
+      "rawRows": 1302,
+      "rawDigestSha256": "b5c247b05ef88e1e3e5cbc6f3d906e24de2e8cf7e86a6d129ad3f9cf21852005",
+      "observedDays": 1177,
+      "rawGapsOver45Days": [
+        [
+          1700291665831,
+          1708237646769
+        ]
+      ],
+      "firstDay": 17257,
+      "lastDay": 20450
+    },
+    "42567": {
+      "rawRows": 2614,
+      "rawDigestSha256": "2d84ea7f46097a8fe47661cfe4ef536d9fac4e3c7d82b284aa07fe05b9862793",
+      "observedDays": 2070,
+      "rawGapsOver45Days": [],
+      "firstDay": 17265,
+      "lastDay": 20452
+    },
+    "42659": {
+      "rawRows": 1186,
+      "rawDigestSha256": "a1b44fb8d771f6522181d7d4ebdcf3f1590b292b9d82d255fb0c46e82ec6c79a",
+      "observedDays": 1068,
+      "rawGapsOver45Days": [
+        [
+          1663930008231,
+          1675296582054
+        ]
+      ],
+      "firstDay": 17265,
+      "lastDay": 20452
+    },
+    "42671": {
+      "rawRows": 3686,
+      "rawDigestSha256": "71cb56c7d068e34e7cd49078ab1f4742f390d2a7f867e479db17d88ffe52b261",
+      "observedDays": 2640,
+      "rawGapsOver45Days": [],
+      "firstDay": 17270,
+      "lastDay": 20452
+    },
+    "42672": {
+      "rawRows": 3729,
+      "rawDigestSha256": "ec43bb0f8f14a14528fcc9a329e59af85a8f58ffe54324114ef0bb6e5ef6d20d",
+      "observedDays": 2629,
+      "rawGapsOver45Days": [],
+      "firstDay": 17269,
+      "lastDay": 20453
+    },
+    "42673": {
+      "rawRows": 3083,
+      "rawDigestSha256": "b69512dd206aeb599b322a09a2ed0eadda683a2006ba2f7866a11cb20bacc7ba",
+      "observedDays": 2357,
+      "rawGapsOver45Days": [],
+      "firstDay": 17269,
+      "lastDay": 20453
+    },
+    "43012": {
+      "rawRows": 6128,
+      "rawDigestSha256": "c450da787b14e75994d5b1ef5a01a47d9bfe4377f41d5f3fb45a7218da72356f",
+      "observedDays": 2933,
+      "rawGapsOver45Days": [],
+      "firstDay": 17484,
+      "lastDay": 20453
+    },
+    "43213": {
+      "rawRows": 2658,
+      "rawDigestSha256": "c5b0950dde3de74af4f9a9c2b825d9b77b4a1b769e3f32a76189283d70945e98",
+      "observedDays": 2063,
+      "rawGapsOver45Days": [],
+      "firstDay": 17578,
+      "lastDay": 20451
+    },
+    "43261": {
+      "rawRows": 5339,
+      "rawDigestSha256": "194bc658d99244edc1262e78ace3685facec092433c09e05ebb83506a7fd6ad3",
+      "observedDays": 2762,
+      "rawGapsOver45Days": [],
+      "firstDay": 17621,
+      "lastDay": 20453
+    },
+    "43263": {
+      "rawRows": 4303,
+      "rawDigestSha256": "3b28474dee2aecaa29a37b1a075aa7d6ada5fe3cf6c9aa74a8bd36bcf673441e",
+      "observedDays": 2676,
+      "rawGapsOver45Days": [],
+      "firstDay": 17621,
+      "lastDay": 20452
+    },
+    "43265": {
+      "rawRows": 5248,
+      "rawDigestSha256": "cad8cb31a41b87902f10550d0ba7b1b2c53b068edf4d77cf328323920b323be6",
+      "observedDays": 2761,
+      "rawGapsOver45Days": [],
+      "firstDay": 17621,
+      "lastDay": 20453
+    },
+    "43266": {
+      "rawRows": 4534,
+      "rawDigestSha256": "2abc318d2008084cdc27970cea229ddb881382c2f553348f1efd03446e379360",
+      "observedDays": 2717,
+      "rawGapsOver45Days": [],
+      "firstDay": 17621,
+      "lastDay": 20453
+    },
+    "43270": {
+      "rawRows": 1290,
+      "rawDigestSha256": "ae4087ecbb6e10344edb493ace9b4be74f705486da848eb39b9f067ce8e7285b",
+      "observedDays": 1111,
+      "rawGapsOver45Days": [
+        [
+          1566558735454,
+          1570582078086
+        ],
+        [
+          1570582078086,
+          1574986063978
+        ]
+      ],
+      "firstDay": 17624,
+      "lastDay": 20450
+    },
+    "43413": {
+      "rawRows": 3192,
+      "rawDigestSha256": "9023265956a68b049ddab3fd38655a5c349f29ce9269156b69ad9c45bcc223b7",
+      "observedDays": 2251,
+      "rawGapsOver45Days": [],
+      "firstDay": 17638,
+      "lastDay": 20453
+    },
+    "43430": {
+      "rawRows": 3045,
+      "rawDigestSha256": "a40376b57561a8a89d2e43b089a8c78b795fea2bfae5b17c02fd4dbdde2c4177",
+      "observedDays": 2305,
+      "rawGapsOver45Days": [],
+      "firstDay": 17636,
+      "lastDay": 20453
+    },
+    "43431": {
+      "rawRows": 2939,
+      "rawDigestSha256": "5023a39b8081d9b3a7ca03a41225c38d3a213945319f2d6fdc87cf64535ee40f",
+      "observedDays": 2254,
+      "rawGapsOver45Days": [],
+      "firstDay": 17638,
+      "lastDay": 20453
+    },
+    "43486": {
+      "rawRows": 4546,
+      "rawDigestSha256": "d35986b3b1090dc118f9c1fcdd263e266be526bde8022dacd168d7fa15cb2f7c",
+      "observedDays": 2618,
+      "rawGapsOver45Days": [],
+      "firstDay": 17684,
+      "lastDay": 20453
+    },
+    "43487": {
+      "rawRows": 4282,
+      "rawDigestSha256": "8cfd6710b78283166afca014fad64df49c59af938cf5f981e58f21640bd1ad8a",
+      "observedDays": 2616,
+      "rawGapsOver45Days": [],
+      "firstDay": 17684,
+      "lastDay": 20453
+    },
+    "43490": {
+      "rawRows": 4176,
+      "rawDigestSha256": "a7c930fb684315aba691c8f6133d7276eccd3e092891dd6c6a039a1a3451c8a7",
+      "observedDays": 2632,
+      "rawGapsOver45Days": [],
+      "firstDay": 17686,
+      "lastDay": 20453
+    },
+    "43534": {
+      "rawRows": 5214,
+      "rawDigestSha256": "cae9d0c34287a83a1631a92d616ce0030bc9ab2600588bae8a5589c49c7622b2",
+      "observedDays": 2669,
+      "rawGapsOver45Days": [],
+      "firstDay": 17721,
+      "lastDay": 20453
+    },
+    "43610": {
+      "rawRows": 5560,
+      "rawDigestSha256": "a2ad846db0224c5932602b459b7bf532509da1476bc3bf6243c091ee5e034961",
+      "observedDays": 2634,
+      "rawGapsOver45Days": [],
+      "firstDay": 17781,
+      "lastDay": 20453
+    },
+    "43620": {
+      "rawRows": 5605,
+      "rawDigestSha256": "fd5ba1ec3df79a66c76526b4e260f9d31358886e53afb68bf1e8cd96f1c5cd1e",
+      "observedDays": 2633,
+      "rawGapsOver45Days": [],
+      "firstDay": 17790,
+      "lastDay": 20453
+    },
+    "44589": {
+      "rawRows": 1564,
+      "rawDigestSha256": "4b1c929793330492e06e857f0e197c1a5d1561f65a9a2cfbbea50e360e9164f5",
+      "observedDays": 1293,
+      "rawGapsOver45Days": [],
+      "firstDay": 18170,
+      "lastDay": 20452
+    },
+    "44593": {
+      "rawRows": 1770,
+      "rawDigestSha256": "31e8662e2b8febe7e6ed4dab3e906a9f7d16eeeb74044b5e425fe6ce83cb5e7c",
+      "observedDays": 1397,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20453
+    },
+    "44600": {
+      "rawRows": 2437,
+      "rawDigestSha256": "b2457550feb3d43d74a15e3db4c2bb07733328c266fa7cd2255368989566b461",
+      "observedDays": 1703,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20451
+    },
+    "44609": {
+      "rawRows": 3606,
+      "rawDigestSha256": "c6cdc24714a9c037be58baf8cc4ccf4b95ed2b653a01a555b262fe8e84da772e",
+      "observedDays": 2152,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20453
+    },
+    "44610": {
+      "rawRows": 3535,
+      "rawDigestSha256": "1b0d83a03c32d2828a32d0c8df262b811e10f89309477a4ab704a9c06a48307c",
+      "observedDays": 2167,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20453
+    },
+    "44611": {
+      "rawRows": 3604,
+      "rawDigestSha256": "cf387109611033d67a55671da08f8fabf8539341dd5e5b9d23469f1ee839f0a5",
+      "observedDays": 2182,
+      "rawGapsOver45Days": [],
+      "firstDay": 18170,
+      "lastDay": 20453
+    },
+    "44612": {
+      "rawRows": 3982,
+      "rawDigestSha256": "fc62ed47754a44bbb88689674300f22ac3ebe25aecee0c234375162a696a1de1",
+      "observedDays": 2176,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20452
+    },
+    "44616": {
+      "rawRows": 1230,
+      "rawDigestSha256": "94542df65d9f33eee06ac765780165ca99b485d301cf7043239dfeb30fac891a",
+      "observedDays": 1032,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20451
+    },
+    "44619": {
+      "rawRows": 4036,
+      "rawDigestSha256": "b4706be77b2078b26df1a5b784c469d0c8d763d286fc9fdd3633ae434b7f9fc4",
+      "observedDays": 2212,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20453
+    },
+    "44621": {
+      "rawRows": 1845,
+      "rawDigestSha256": "2f4968a51c7bc5ea7ca7f66a1ed7abfb071dcd6a3fd190d3b471db6d283f78de",
+      "observedDays": 1426,
+      "rawGapsOver45Days": [],
+      "firstDay": 18171,
+      "lastDay": 20452
+    },
+    "44631": {
+      "rawRows": 2909,
+      "rawDigestSha256": "42d06e8d2df0a94496c66e8f3726d073705c43f29290817efa17fe306dc14072",
+      "observedDays": 1959,
+      "rawGapsOver45Days": [],
+      "firstDay": 18184,
+      "lastDay": 20453
+    },
+    "44633": {
+      "rawRows": 2293,
+      "rawDigestSha256": "4b1b17e37b6cf944d156fcea517962f78536e1a7db910e98809a9115e307d5f4",
+      "observedDays": 1655,
+      "rawGapsOver45Days": [],
+      "firstDay": 18184,
+      "lastDay": 20452
+    },
+    "44640": {
+      "rawRows": 2444,
+      "rawDigestSha256": "0e0a9e2f17a720ad19113532c918131ebfc29f42787876bbc09eea245443ede8",
+      "observedDays": 1764,
+      "rawGapsOver45Days": [],
+      "firstDay": 18191,
+      "lastDay": 20453
+    },
+    "44641": {
+      "rawRows": 2573,
+      "rawDigestSha256": "b8dc0441d6a0d58aa2dab30113f52462e6d5105b4b52eb6f8c0ae1113e93e5a2",
+      "observedDays": 1871,
+      "rawGapsOver45Days": [],
+      "firstDay": 18191,
+      "lastDay": 20453
+    },
+    "46480": {
+      "rawRows": 3797,
+      "rawDigestSha256": "45a0560797166c3f9a3c45f401e364ac577902c0ca1e1e815a098a45d66a5848",
+      "observedDays": 1863,
+      "rawGapsOver45Days": [],
+      "firstDay": 18532,
+      "lastDay": 20453
+    },
+    "46484": {
+      "rawRows": 2919,
+      "rawDigestSha256": "e850601419bc93d4fc3b98cd9882dc99a113f754f50092502351e1d51884d86c",
+      "observedDays": 1784,
+      "rawGapsOver45Days": [],
+      "firstDay": 18534,
+      "lastDay": 20453
+    },
+    "47015": {
+      "rawRows": 1174,
+      "rawDigestSha256": "322603cde296d4a49def20f8f75d0d1c342959e9f741268fbb642942249ed8c0",
+      "observedDays": 947,
+      "rawGapsOver45Days": [],
+      "firstDay": 18589,
+      "lastDay": 20451
+    },
+    "47041": {
+      "rawRows": 1071,
+      "rawDigestSha256": "7d7bc8635bd9a01b7d68dddbe4053207bea2f019bff0d65c435f718957cb64b5",
+      "observedDays": 845,
+      "rawGapsOver45Days": [],
+      "firstDay": 18589,
+      "lastDay": 20453
+    },
+    "47104": {
+      "rawRows": 603,
+      "rawDigestSha256": "c97b0c3de47a2139f5dd5281a706e3e67e085b83954fbb079a59130e68368e1f",
+      "observedDays": 516,
+      "rawGapsOver45Days": [
+        [
+          1690005558139,
+          1697870057820
+        ],
+        [
+          1697870057820,
+          1705819120058
+        ],
+        [
+          1705819120058,
+          1712389927373
+        ],
+        [
+          1735765969760,
+          1740207177449
+        ]
+      ],
+      "firstDay": 18589,
+      "lastDay": 20453
+    },
+    "47212": {
+      "rawRows": 1594,
+      "rawDigestSha256": "4e937d5f2b02ef098268b98f08cb67b09867ae7e11d1956856d2e2aa4397a8de",
+      "observedDays": 1128,
+      "rawGapsOver45Days": [],
+      "firstDay": 18596,
+      "lastDay": 20452
+    },
+    "47304": {
+      "rawRows": 3843,
+      "rawDigestSha256": "a730b06eafe67ae12f62f9011ed3795fdc0dd9c7e16401d4c00494ba0fe0667e",
+      "observedDays": 1809,
+      "rawGapsOver45Days": [],
+      "firstDay": 18623,
+      "lastDay": 20453
+    },
+    "48080": {
+      "rawRows": 3875,
+      "rawDigestSha256": "249dc9819701fc49d07daa81f6febcb5136a1f0082b7765a5ca6ab031e3a88a0",
+      "observedDays": 1708,
+      "rawGapsOver45Days": [],
+      "firstDay": 18717,
+      "lastDay": 20453
+    },
+    "48551": {
+      "rawRows": 2680,
+      "rawDigestSha256": "9d8bb1516e1850d4e0eeddc822c5bd2d07c8b4fc4deda56f27b6a48e757e88d0",
+      "observedDays": 1579,
+      "rawGapsOver45Days": [],
+      "firstDay": 18759,
+      "lastDay": 20453
+    },
+    "48715": {
+      "rawRows": 1567,
+      "rawDigestSha256": "5c0f3a597e68892de246e96563b9b7aa3d2c70c34cf4bc827aa17dd30b59517e",
+      "observedDays": 1122,
+      "rawGapsOver45Days": [],
+      "firstDay": 18772,
+      "lastDay": 20452
+    },
+    "48724": {
+      "rawRows": 1516,
+      "rawDigestSha256": "e816ce3cd4bb4d3a6b2401dfc5961133b8d1ff323bf7abf01b591f7218eadd10",
+      "observedDays": 1084,
+      "rawGapsOver45Days": [],
+      "firstDay": 18773,
+      "lastDay": 20453
+    },
+    "48737": {
+      "rawRows": 1741,
+      "rawDigestSha256": "75dacef6ea56dd7ac494d3568f1369b087d1cd5555b113de990bd23c42c5c619",
+      "observedDays": 1244,
+      "rawGapsOver45Days": [],
+      "firstDay": 18773,
+      "lastDay": 20452
+    },
+    "48862": {
+      "rawRows": 3420,
+      "rawDigestSha256": "fb7eba604f7725b5161196e92acc012120273678c8f9069cd32728dd82179816",
+      "observedDays": 1624,
+      "rawGapsOver45Days": [],
+      "firstDay": 18796,
+      "lastDay": 20453
+    },
+    "49010": {
+      "rawRows": 3536,
+      "rawDigestSha256": "bf6a2ca20db2c65fa21b878f294d085eb8d71e247a07ae9b9586427fe85aa382",
+      "observedDays": 1611,
+      "rawGapsOver45Days": [],
+      "firstDay": 18813,
+      "lastDay": 20453
+    },
+    "49046": {
+      "rawRows": 2382,
+      "rawDigestSha256": "d9c212d239cb1157a6ded2775d1dce66474b6c66e48d2e72be818114b428c739",
+      "observedDays": 1482,
+      "rawGapsOver45Days": [],
+      "firstDay": 18830,
+      "lastDay": 20452
+    },
+    "49385": {
+      "rawRows": 3066,
+      "rawDigestSha256": "cb9052cb28dd3ed2c418d8f0e339c33fb9282c04493b55c2540d7b4d30c03b63",
+      "observedDays": 1472,
+      "rawGapsOver45Days": [],
+      "firstDay": 18934,
+      "lastDay": 20453
+    },
+    "49479": {
+      "rawRows": 737,
+      "rawDigestSha256": "1b43a5961226ce7e532bcf03e8f43c4befb52a78e5ac221bf8d02fc811196d9a",
+      "observedDays": 607,
+      "rawGapsOver45Days": [],
+      "firstDay": 18948,
+      "lastDay": 20452
+    },
+    "49487": {
+      "rawRows": 1383,
+      "rawDigestSha256": "8ebd1243f91630dd024a54f4ba12693c79638be15ef8f5b51aec672e5f90413e",
+      "observedDays": 967,
+      "rawGapsOver45Days": [],
+      "firstDay": 18950,
+      "lastDay": 20453
+    },
+    "50032": {
+      "rawRows": 2982,
+      "rawDigestSha256": "e5d926f4d587564445f3bcdb50e260d205c64611024e769336589fd83f45761f",
+      "observedDays": 1447,
+      "rawGapsOver45Days": [],
+      "firstDay": 18974,
+      "lastDay": 20453
+    },
+    "50058": {
+      "rawRows": 2645,
+      "rawDigestSha256": "fc1809ceca33dba86f18c36fb9f0f4d3e582d3ee6bb287725eba7e5760bc36c5",
+      "observedDays": 1422,
+      "rawGapsOver45Days": [],
+      "firstDay": 18974,
+      "lastDay": 20453
+    },
+    "50467": {
+      "rawRows": 3134,
+      "rawDigestSha256": "1b971e5b9ddf715edb2b441b7019f1e910e74c97b3dd5a857d50c8d0413cf524",
+      "observedDays": 1431,
+      "rawGapsOver45Days": [],
+      "firstDay": 18987,
+      "lastDay": 20453
+    },
+    "50621": {
+      "rawRows": 2534,
+      "rawDigestSha256": "55e7e0e3e1765239ea15965832eb4749ccc847b990d7882259965d90580ae006",
+      "observedDays": 1394,
+      "rawGapsOver45Days": [],
+      "firstDay": 18991,
+      "lastDay": 20453
+    },
+    "52152": {
+      "rawRows": 2872,
+      "rawDigestSha256": "b7bfa7ed153e825eaaa42a09e398947d912b850d1763e0c069edcbeaafdca39e",
+      "observedDays": 1354,
+      "rawGapsOver45Days": [],
+      "firstDay": 19080,
+      "lastDay": 20453
+    },
+    "52201": {
+      "rawRows": 2995,
+      "rawDigestSha256": "2510f67b8000c521f3a0b4d4a98391864988525798cd218e535ec9654bdb271f",
+      "observedDays": 1334,
+      "rawGapsOver45Days": [],
+      "firstDay": 19089,
+      "lastDay": 20453
+    },
+    "52258": {
+      "rawRows": 3007,
+      "rawDigestSha256": "796927d3cefe94194f98d9cacd6b72dfcb691986a7fa4620d560968c2ed9be40",
+      "observedDays": 1339,
+      "rawGapsOver45Days": [],
+      "firstDay": 19097,
+      "lastDay": 20453
+    },
+    "52794": {
+      "rawRows": 2297,
+      "rawDigestSha256": "63d193c383a484a661d1f2b530dc04567e0674c14c6bacf5747c1ef529699ded",
+      "observedDays": 1223,
+      "rawGapsOver45Days": [],
+      "firstDay": 19145,
+      "lastDay": 20453
+    },
+    "53104": {
+      "rawRows": 1329,
+      "rawDigestSha256": "45b2a8a592d293073ca331e6b65da6fb2f5650681fa47c90453342c922a93236",
+      "observedDays": 596,
+      "rawGapsOver45Days": [],
+      "firstDay": 19850,
+      "lastDay": 20453
+    },
+    "53699": {
+      "rawRows": 2790,
+      "rawDigestSha256": "45082a4d642f478f0a49daa7772be4b9cd0a5ef17e89b3653ccbaf105c7d9028",
+      "observedDays": 1198,
+      "rawGapsOver45Days": [],
+      "firstDay": 19238,
+      "lastDay": 20453
+    },
+    "53817": {
+      "rawRows": 2483,
+      "rawDigestSha256": "047a051f1face72909a19e7b8c10edbd857f7a42118c2bc0dace553836af4bbb",
+      "observedDays": 1173,
+      "rawGapsOver45Days": [],
+      "firstDay": 19251,
+      "lastDay": 20453
+    },
+    "53878": {
+      "rawRows": 2664,
+      "rawDigestSha256": "5c104b7b8b117a378646e562aec1bb30490edef3f3201cfc9d7a661ce969878c",
+      "observedDays": 1177,
+      "rawGapsOver45Days": [],
+      "firstDay": 19256,
+      "lastDay": 20453
+    },
+    "54024": {
+      "rawRows": 2704,
+      "rawDigestSha256": "36bb17c5c53d8aa0f2f48ccaa375f1a213ff0a3f1e138f14b4c8a20aa8bc41a3",
+      "observedDays": 1162,
+      "rawGapsOver45Days": [],
+      "firstDay": 19272,
+      "lastDay": 20453
+    },
+    "54030": {
+      "rawRows": 2707,
+      "rawDigestSha256": "d61d53152dc1a757ff29f0520e2b9e501830ae9f30996d516a6e7ddb4ae0dfc3",
+      "observedDays": 1158,
+      "rawGapsOver45Days": [],
+      "firstDay": 19274,
+      "lastDay": 20453
+    },
+    "54228": {
+      "rawRows": 2556,
+      "rawDigestSha256": "6ff33a898670eb5bcb6426be8ba8d7664de8cb8aeae641e52e38297d81ad2a4e",
+      "observedDays": 1133,
+      "rawGapsOver45Days": [],
+      "firstDay": 19300,
+      "lastDay": 20453
+    },
+    "54272": {
+      "rawRows": 2192,
+      "rawDigestSha256": "fdf3f3b6f4e95a0270fd63e657868b32eef3de64c1de7d30ff3336de804d3d59",
+      "observedDays": 1093,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54281": {
+      "rawRows": 2255,
+      "rawDigestSha256": "8aae4bc06e69daa7a3d9b5d586cef0e9ebc466a32c6357e74c2354c77097b7af",
+      "observedDays": 1084,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54286": {
+      "rawRows": 1391,
+      "rawDigestSha256": "e82366c6ffe9ff2ed8474a4986b74e4a9e64d43a2d4f98726455c0460168de94",
+      "observedDays": 944,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54295": {
+      "rawRows": 1849,
+      "rawDigestSha256": "f96619c19c9bceb3941254806e4ff0e84ebb682de12f8e9a1e2aa278814ecbb6",
+      "observedDays": 1057,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54302": {
+      "rawRows": 1851,
+      "rawDigestSha256": "09d16e3ce4450aaa26a0dec6e6a0de51c0c97155dfc5ea90999044865ac1f06d",
+      "observedDays": 1074,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54307": {
+      "rawRows": 1729,
+      "rawDigestSha256": "715810bc8d3a67484912b95bb05644aecd0937b58d9ee9e6fe63bf3adca33480",
+      "observedDays": 1022,
+      "rawGapsOver45Days": [],
+      "firstDay": 19320,
+      "lastDay": 20453
+    },
+    "54328": {
+      "rawRows": 1670,
+      "rawDigestSha256": "b3c60f4808c76f80f0345e6a69382c8d375077776e7aea0d31bfbe24a982c99c",
+      "observedDays": 1011,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54329": {
+      "rawRows": 1943,
+      "rawDigestSha256": "ae0c71024e09f9622d1b36494f19fedea3797dac44be69ee27f2dae3eb2050e5",
+      "observedDays": 1077,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54334": {
+      "rawRows": 1814,
+      "rawDigestSha256": "a7455338b234db70685bb55af4177e534d1c0a7af224a2c4899eae2e4ddd464b",
+      "observedDays": 1053,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54340": {
+      "rawRows": 1964,
+      "rawDigestSha256": "4cba3613e346d114a58c1c14c76c9417ab9c0ded6dbc384b6df8ae4706d36aef",
+      "observedDays": 1090,
+      "rawGapsOver45Days": [],
+      "firstDay": 19320,
+      "lastDay": 20453
+    },
+    "54354": {
+      "rawRows": 1686,
+      "rawDigestSha256": "085fb201cf4f1d51e7d2350678ce97bcfe1ab3e3432dff274808c8b318ce4963",
+      "observedDays": 1032,
+      "rawGapsOver45Days": [],
+      "firstDay": 19319,
+      "lastDay": 20453
+    },
+    "54358": {
+      "rawRows": 1617,
+      "rawDigestSha256": "801a188845908d1289b59b1311103e19266f297b6a217f6e5d46fa23b432e301",
+      "observedDays": 986,
+      "rawGapsOver45Days": [],
+      "firstDay": 19320,
+      "lastDay": 20453
+    },
+    "54405": {
+      "rawRows": 2393,
+      "rawDigestSha256": "77471b55b712e764cf4a9f8e873ede6f2d2ab669ed989ec4574d30520ff4cfdb",
+      "observedDays": 1097,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54406": {
+      "rawRows": 2107,
+      "rawDigestSha256": "83b9c87e837c0ae08f3e9444f2234a6af0f143660e3a1b3c47b52b7d6b4eb1d1",
+      "observedDays": 1070,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54412": {
+      "rawRows": 1938,
+      "rawDigestSha256": "c3c9763cbee474da57d08524d546ac5e59116d4a8ceebe0a01ef20ed33a3fdc1",
+      "observedDays": 1063,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54413": {
+      "rawRows": 2242,
+      "rawDigestSha256": "17d4359f013ecad86c61362c9f8cf1cbc653b80baa1bcee30e3d8c8aacf84fa0",
+      "observedDays": 1096,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54425": {
+      "rawRows": 2232,
+      "rawDigestSha256": "608f3131685e36b550de340a076b11f635bea4902f4bb4f79dc098920106d5b7",
+      "observedDays": 1094,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54437": {
+      "rawRows": 1710,
+      "rawDigestSha256": "ba6b6a56a7f7a34acd23c9c21f81f7a36789bf4b06b825fa3bb5e0b5e5f7a19c",
+      "observedDays": 1039,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54440": {
+      "rawRows": 1824,
+      "rawDigestSha256": "8040415555d8a24b0ed7f4ba855c0460caab7a655a10bddd8191b2dd4ef08444",
+      "observedDays": 1035,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54450": {
+      "rawRows": 2231,
+      "rawDigestSha256": "57a50eda16e26d682afcaf19f85e329a66408041c7acf31dfbc22c37504b0a2b",
+      "observedDays": 1095,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54460": {
+      "rawRows": 2138,
+      "rawDigestSha256": "6b7372fbff377605cf68dda294e7befbe4f7b5d3c0e008a762dc0fadca7f6fd5",
+      "observedDays": 1084,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54467": {
+      "rawRows": 2176,
+      "rawDigestSha256": "44dec9dc1a3c04e2b890d71ebff4eda56636dc8f208151eeb4052803878301c5",
+      "observedDays": 1081,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54471": {
+      "rawRows": 1818,
+      "rawDigestSha256": "04f63eac12de03f007753adc9096c79f7a73f01e6afc5305692c2ca948c577e9",
+      "observedDays": 1057,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54479": {
+      "rawRows": 1696,
+      "rawDigestSha256": "ea9563177887a7115fce8ec67f8773bdbad2cb9a554d63583da1c86c3e450628",
+      "observedDays": 1018,
+      "rawGapsOver45Days": [],
+      "firstDay": 19327,
+      "lastDay": 20453
+    },
+    "54480": {
+      "rawRows": 2140,
+      "rawDigestSha256": "3043e9f851efa57095c8070d54fc74a9bce1f77e771cb6e909c093cae30c07ec",
+      "observedDays": 1081,
+      "rawGapsOver45Days": [],
+      "firstDay": 19328,
+      "lastDay": 20453
+    },
+    "54499": {
+      "rawRows": 2440,
+      "rawDigestSha256": "32972dd5049cd13b04957c10d797db6b18e6dfc16c3383a35e10bfcee66d4713",
+      "observedDays": 1099,
+      "rawGapsOver45Days": [],
+      "firstDay": 19328,
+      "lastDay": 20453
+    },
+    "54513": {
+      "rawRows": 1691,
+      "rawDigestSha256": "ee6d31f5264d4c9b167acabbee29750fc0e4b3c936dd638336ec889f5d33067f",
+      "observedDays": 968,
+      "rawGapsOver45Days": [],
+      "firstDay": 19328,
+      "lastDay": 20453
+    },
+    "54528": {
+      "rawRows": 2280,
+      "rawDigestSha256": "0a3c8b64ac2a7bc2ce613a3a2facc37c50494a7e22a8a2c9d11500fc5cbe1312",
+      "observedDays": 1091,
+      "rawGapsOver45Days": [],
+      "firstDay": 19328,
+      "lastDay": 20453
+    },
+    "54548": {
+      "rawRows": 1915,
+      "rawDigestSha256": "37b1bf041af760f0220c167a1d9659374e01c2ce458e9da342562db8774b349d",
+      "observedDays": 1051,
+      "rawGapsOver45Days": [],
+      "firstDay": 19331,
+      "lastDay": 20453
+    },
+    "54557": {
+      "rawRows": 2454,
+      "rawDigestSha256": "d6ba6a4945aa200fdd8684355f244faa7d67f58fb1f34697216d0ac2e791d507",
+      "observedDays": 1099,
+      "rawGapsOver45Days": [],
+      "firstDay": 19331,
+      "lastDay": 20453
+    },
+    "54569": {
+      "rawRows": 1790,
+      "rawDigestSha256": "329dc08c3bb0775a1f2f5ebd97aefcbae18764a01c8f5a0a7a01b2cfa3909d97",
+      "observedDays": 1023,
+      "rawGapsOver45Days": [],
+      "firstDay": 19331,
+      "lastDay": 20453
+    },
+    "54575": {
+      "rawRows": 1622,
+      "rawDigestSha256": "6f412cffd365e6d0c9c1fb8bd67a7a516c63903e24587052ec4525ecc15fab32",
+      "observedDays": 1002,
+      "rawGapsOver45Days": [],
+      "firstDay": 19331,
+      "lastDay": 20453
+    },
+    "54595": {
+      "rawRows": 2068,
+      "rawDigestSha256": "2aa3900ad8cd6e87f708505910cb998af6274afb43021df0f0dd668fc825046a",
+      "observedDays": 1066,
+      "rawGapsOver45Days": [],
+      "firstDay": 19333,
+      "lastDay": 20453
+    },
+    "54600": {
+      "rawRows": 1613,
+      "rawDigestSha256": "45e01f60fcb18b8ad27a1c88d53dd2347fbf75d110bfda2ba2d181716d0611eb",
+      "observedDays": 1001,
+      "rawGapsOver45Days": [],
+      "firstDay": 19333,
+      "lastDay": 20453
+    },
+    "54633": {
+      "rawRows": 1786,
+      "rawDigestSha256": "9e0fda937807169ba60c6efc41985117b35d6a45acbfa96a13e93c8e837e45ba",
+      "observedDays": 1055,
+      "rawGapsOver45Days": [],
+      "firstDay": 19333,
+      "lastDay": 20453
+    },
+    "54641": {
+      "rawRows": 3034,
+      "rawDigestSha256": "5cb624ba6a740060de2e2cf7ff9744eed5eddc21f606c8baf0f05ed9b2a72962",
+      "observedDays": 1088,
+      "rawGapsOver45Days": [],
+      "firstDay": 19335,
+      "lastDay": 20453
+    },
+    "54881": {
+      "rawRows": 1364,
+      "rawDigestSha256": "0ca99878cd20fe53fdc6caa99cf6550c97c8442913077e3d13e41a448f274b13",
+      "observedDays": 907,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54888": {
+      "rawRows": 1531,
+      "rawDigestSha256": "de734d84af59aee72672b03d86d8f522d688770e676227b97f5eaec91d7ddf9f",
+      "observedDays": 968,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54897": {
+      "rawRows": 1673,
+      "rawDigestSha256": "67eee73d5071a5bcf065a5474f37ad9c81aaf39ab84321fb5a3a2a3fc8a1a958",
+      "observedDays": 1010,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54930": {
+      "rawRows": 1184,
+      "rawDigestSha256": "cada5be3ac5af5d92bcb001db6fcccbb3d8378d7b3a8358056dc01b805c5d85c",
+      "observedDays": 833,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54949": {
+      "rawRows": 1648,
+      "rawDigestSha256": "1109a37e41318d892d3ef4f3c8e9cbedd44d4155f2f20af59b3cc75088b12462",
+      "observedDays": 995,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54951": {
+      "rawRows": 1251,
+      "rawDigestSha256": "7fd0f0321fb2a2e8fd71c0d28a4975656f321fe654cf9c0e3c3d0a9901e060b6",
+      "observedDays": 772,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54954": {
+      "rawRows": 1807,
+      "rawDigestSha256": "353ba5ca6111bf6f6a9122847df44c5ae2d4e622b56f695763f55e490d7cbfa2",
+      "observedDays": 1025,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54955": {
+      "rawRows": 1560,
+      "rawDigestSha256": "c1a8d30e8f0024525d4dcc39551bdb479d73273f8b494619c1e329c2d2e55f2d",
+      "observedDays": 971,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54962": {
+      "rawRows": 2052,
+      "rawDigestSha256": "8b791338e93f8874d4c430bcb6009bba0b978996b2dfe82c930d89a219e3dcdd",
+      "observedDays": 1060,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "54968": {
+      "rawRows": 1698,
+      "rawDigestSha256": "8957dddf6d935c4960c21b6a06d8b214c47b37a87180248a39ce451cb42c4781",
+      "observedDays": 1018,
+      "rawGapsOver45Days": [],
+      "firstDay": 19356,
+      "lastDay": 20453
+    },
+    "55204": {
+      "rawRows": 1556,
+      "rawDigestSha256": "c6871f43af1a3a65e5bd4ec3d8114515f8de553fc1b35477e3a6048b187dc6d5",
+      "observedDays": 949,
+      "rawGapsOver45Days": [],
+      "firstDay": 19368,
+      "lastDay": 20453
+    },
+    "55214": {
+      "rawRows": 1236,
+      "rawDigestSha256": "d8bca042f4e92c7005d88708989f501ca6b45fc40405a65441b6d137bd03c59e",
+      "observedDays": 854,
+      "rawGapsOver45Days": [],
+      "firstDay": 19368,
+      "lastDay": 20453
+    },
+    "55219": {
+      "rawRows": 1336,
+      "rawDigestSha256": "a2f506a227f83cc8d44f961ee54d9a583bb835d8bd06250f4387ba5461feb835",
+      "observedDays": 894,
+      "rawGapsOver45Days": [],
+      "firstDay": 19368,
+      "lastDay": 20453
+    },
+    "55514": {
+      "rawRows": 1018,
+      "rawDigestSha256": "1c758b2fcd5e08709120c26153da2c9824a897b2f2a2c7cb106b66547cc2fe38",
+      "observedDays": 747,
+      "rawGapsOver45Days": [],
+      "firstDay": 19396,
+      "lastDay": 20453
+    },
+    "55523": {
+      "rawRows": 1577,
+      "rawDigestSha256": "8435076b919602385a3127ff6c7a69063732cd4b795977843e9aa2b6b97f4c29",
+      "observedDays": 950,
+      "rawGapsOver45Days": [],
+      "firstDay": 19396,
+      "lastDay": 20453
+    },
+    "55534": {
+      "rawRows": 1723,
+      "rawDigestSha256": "1936e45a18f1ed9ff2817199942cabdf155d9a20e18f560407cdc9a386be1049",
+      "observedDays": 967,
+      "rawGapsOver45Days": [],
+      "firstDay": 19396,
+      "lastDay": 20453
+    },
+    "55546": {
+      "rawRows": 978,
+      "rawDigestSha256": "b5197530186336d5c4f9f989d25f0094ca0ebf507503dcd1d52cdf39360a8d73",
+      "observedDays": 697,
+      "rawGapsOver45Days": [],
+      "firstDay": 19396,
+      "lastDay": 20450
+    },
+    "55883": {
+      "rawRows": 918,
+      "rawDigestSha256": "e8323edffbb1a4a619732d557d9cbec6bb5b8c6898c496ebe5a9034e65bbf48f",
+      "observedDays": 668,
+      "rawGapsOver45Days": [],
+      "firstDay": 19431,
+      "lastDay": 20451
+    },
+    "55908": {
+      "rawRows": 1959,
+      "rawDigestSha256": "19eb95f4ad4b738412a7260fdcebfbe23f0532bfa6f706e87cf90e79133953f7",
+      "observedDays": 997,
+      "rawGapsOver45Days": [],
+      "firstDay": 19433,
+      "lastDay": 20453
+    },
+    "56247": {
+      "rawRows": 895,
+      "rawDigestSha256": "cb0a8b51696b1c3c689e30044316fd443943d356c66b77294d4e071fd04ddb53",
+      "observedDays": 639,
+      "rawGapsOver45Days": [],
+      "firstDay": 19465,
+      "lastDay": 20452
+    },
+    "56250": {
+      "rawRows": 1297,
+      "rawDigestSha256": "866c9b8b9fbe1a4d2be0b39bf9b4deb38a623a937d55255d7bad7ca5595c3ce8",
+      "observedDays": 801,
+      "rawGapsOver45Days": [],
+      "firstDay": 19465,
+      "lastDay": 20452
+    },
+    "56256": {
+      "rawRows": 1458,
+      "rawDigestSha256": "b323e8c3da9fb8daff77011807d35f80e74b9d58cef77b585b081b4ba61bf0d1",
+      "observedDays": 851,
+      "rawGapsOver45Days": [],
+      "firstDay": 19466,
+      "lastDay": 20453
+    },
+    "56271": {
+      "rawRows": 1614,
+      "rawDigestSha256": "4694c10719b9a607de9729b2fa3e26cd8614d6ee2cf2bf0caaa0d5e8f27c4ab6",
+      "observedDays": 905,
+      "rawGapsOver45Days": [],
+      "firstDay": 19465,
+      "lastDay": 20453
+    },
+    "56273": {
+      "rawRows": 954,
+      "rawDigestSha256": "e85f7ad865db13ab7e07882da59657535bdf999832ccb256e62f1b26f1fbc33d",
+      "observedDays": 675,
+      "rawGapsOver45Days": [],
+      "firstDay": 19465,
+      "lastDay": 20452
+    },
+    "56651": {
+      "rawRows": 507,
+      "rawDigestSha256": "9438746bff9fd00e6d4e81f6ac33d2508e3a5fa2c26954eee73a0d3f1ef31f0e",
+      "observedDays": 401,
+      "rawGapsOver45Days": [],
+      "firstDay": 19494,
+      "lastDay": 20452
+    },
+    "56653": {
+      "rawRows": 483,
+      "rawDigestSha256": "032d8cb42cefa1b5f72fb1caff294be6029b5e77ed837b4f4193a8799606d886",
+      "observedDays": 403,
+      "rawGapsOver45Days": [],
+      "firstDay": 19494,
+      "lastDay": 20450
+    },
+    "56661": {
+      "rawRows": 685,
+      "rawDigestSha256": "0235763713ac244db8aa8347d8212a5d58643a32335d23a0f3764aca376363d0",
+      "observedDays": 542,
+      "rawGapsOver45Days": [],
+      "firstDay": 19494,
+      "lastDay": 20453
+    },
+    "56674": {
+      "rawRows": 847,
+      "rawDigestSha256": "d8474f1a3dd99235676292e798fafe01c9d3d3a038fc5c8906e496287d75e25e",
+      "observedDays": 610,
+      "rawGapsOver45Days": [],
+      "firstDay": 19494,
+      "lastDay": 20453
+    },
+    "57491": {
+      "rawRows": 1884,
+      "rawDigestSha256": "54cbde731edd1479a7323bb11285d241ad019a6e3fc6f92b66aa9b83031599ff",
+      "observedDays": 866,
+      "rawGapsOver45Days": [],
+      "firstDay": 19572,
+      "lastDay": 20453
+    },
+    "57798": {
+      "rawRows": 1859,
+      "rawDigestSha256": "96b37017635760b71265d6bd71f881f51ffeb1c86d25243da98c2c4b28fb6e4f",
+      "observedDays": 842,
+      "rawGapsOver45Days": [],
+      "firstDay": 19606,
+      "lastDay": 20453
+    },
+    "57959": {
+      "rawRows": 1872,
+      "rawDigestSha256": "9fa85cfcbaf76685874aab00a3018b2572a046b055133ba7f3761d9a300fa1f1",
+      "observedDays": 818,
+      "rawGapsOver45Days": [],
+      "firstDay": 19626,
+      "lastDay": 20453
+    },
+    "58200": {
+      "rawRows": 1919,
+      "rawDigestSha256": "7da97abbac8a15428d3195a2c234a30a53ed1f4263ec7981fc57ddf78b14399c",
+      "observedDays": 783,
+      "rawGapsOver45Days": [],
+      "firstDay": 19662,
+      "lastDay": 20453
+    },
+    "58202": {
+      "rawRows": 1772,
+      "rawDigestSha256": "092c1b2661baaa1cc38e66cf10f2d37ab1e7f523285a11ba58d662395c04f373",
+      "observedDays": 784,
+      "rawGapsOver45Days": [],
+      "firstDay": 19662,
+      "lastDay": 20453
+    },
+    "58430": {
+      "rawRows": 204,
+      "rawDigestSha256": "77b9d227f5d756d865c9287b799514af6b2b96dfc5842d957e157c08bbb7972c",
+      "observedDays": 155,
+      "rawGapsOver45Days": [
+        [
+          1701040242309,
+          1733351737759
+        ]
+      ],
+      "firstDay": 19685,
+      "lastDay": 20451
+    },
+    "58499": {
+      "rawRows": 2828,
+      "rawDigestSha256": "eea37950ab7fcd79ed1e7eaec70a06af972048fad97f08d23c604abaf1b8080c",
+      "observedDays": 750,
+      "rawGapsOver45Days": [],
+      "firstDay": 19695,
+      "lastDay": 20453
+    },
+    "58501": {
+      "rawRows": 1502,
+      "rawDigestSha256": "a30a27d2b3e53450099543603d83d5db809f38a4d1e53df90faaeaf87fd39c39",
+      "observedDays": 742,
+      "rawGapsOver45Days": [],
+      "firstDay": 19695,
+      "lastDay": 20452
+    },
+    "58579": {
+      "rawRows": 1407,
+      "rawDigestSha256": "2768892da78feba7c2039ab4a464d672b1b98cd8be6a27dac13aa5eb48fc5f1f",
+      "observedDays": 707,
+      "rawGapsOver45Days": [],
+      "firstDay": 19706,
+      "lastDay": 20453
+    },
+    "58901": {
+      "rawRows": 1364,
+      "rawDigestSha256": "9aaed217b1aee1144189728efe8fdd65eb757205649dbe95752a792426dc153c",
+      "observedDays": 682,
+      "rawGapsOver45Days": [],
+      "firstDay": 19753,
+      "lastDay": 20453
+    },
+    "58993": {
+      "rawRows": 1535,
+      "rawDigestSha256": "4a30324b8beeb14dde8dba6e8360b0435b5ef379f4dfb3c86df3050129eeabc1",
+      "observedDays": 672,
+      "rawGapsOver45Days": [],
+      "firstDay": 19771,
+      "lastDay": 20453
+    },
+    "59225": {
+      "rawRows": 1317,
+      "rawDigestSha256": "f72dfb44067993f9f5f57412998d10839b9e085612ccd98866b1a60cfb5141fe",
+      "observedDays": 602,
+      "rawGapsOver45Days": [],
+      "firstDay": 19794,
+      "lastDay": 20453
+    },
+    "60085": {
+      "rawRows": 1308,
+      "rawDigestSha256": "c2b736e2c74818747a86830e75bddbee9c4bac3698ec665662ff4b4405afc8d1",
+      "observedDays": 551,
+      "rawGapsOver45Days": [],
+      "firstDay": 19895,
+      "lastDay": 20453
+    },
+    "60213": {
+      "rawRows": 1204,
+      "rawDigestSha256": "ef9bc2e62ce23786b6ecc2a0d2d4af0cc350bd1a4faef7edea773b5467995a8a",
+      "observedDays": 531,
+      "rawGapsOver45Days": [],
+      "firstDay": 19909,
+      "lastDay": 20453
+    },
+    "60630": {
+      "rawRows": 1032,
+      "rawDigestSha256": "8baac920161b68170e30f7357d59156c15f9ff809cb5016870fc75f7cc25131f",
+      "observedDays": 487,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20453
+    },
+    "60634": {
+      "rawRows": 1088,
+      "rawDigestSha256": "2698efbe746a968144970e623c5aca66eca458eb98e8627af10b0d23229925d7",
+      "observedDays": 479,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20453
+    },
+    "60643": {
+      "rawRows": 725,
+      "rawDigestSha256": "34d2a2db41b9f3c61507158716cd47c8eb0755fe82ae147f0d644c9d23201822",
+      "observedDays": 432,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20452
+    },
+    "60672": {
+      "rawRows": 1078,
+      "rawDigestSha256": "c8fdd6d36457b94566f1e0bb275b87f116654c3cfeb671686772e4dafde6c803",
+      "observedDays": 485,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20453
+    },
+    "60703": {
+      "rawRows": 980,
+      "rawDigestSha256": "5c79b71b1c2bedcb6f879dd0f090a0c47dcee0237afe80ffd4f8ded1b5f6885c",
+      "observedDays": 479,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20453
+    },
+    "60711": {
+      "rawRows": 1121,
+      "rawDigestSha256": "da052df97f30e66ca1a7cc6a405967b6a3eab95e2cb90cbd9313269b8ccf0035",
+      "observedDays": 490,
+      "rawGapsOver45Days": [],
+      "firstDay": 19957,
+      "lastDay": 20453
+    },
+    "60771": {
+      "rawRows": 790,
+      "rawDigestSha256": "5d3b919977ac00c394fb24c36a8d0dbcbd4d63cf12b129fabc7f690c4578a30e",
+      "observedDays": 441,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60780": {
+      "rawRows": 797,
+      "rawDigestSha256": "cef6edbc4f15faac3bfd3ec5eb3a98845fb5d8632beb631f0cf61ebebfe4a0c8",
+      "observedDays": 451,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60792": {
+      "rawRows": 1078,
+      "rawDigestSha256": "8837f44f35fc17a1cd4b2c2c352b3409a37df1c9f5426581488290e9e4d2afe3",
+      "observedDays": 482,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60801": {
+      "rawRows": 842,
+      "rawDigestSha256": "1fe0719624484a543af6f8e413251490ed4475793a680b7a5bbb269c83a594e9",
+      "observedDays": 467,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60803": {
+      "rawRows": 980,
+      "rawDigestSha256": "eb6bda1fade3954feec4f790c2f818b10da909d7c56da3f470cfdab56f6e3e10",
+      "observedDays": 474,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60811": {
+      "rawRows": 1044,
+      "rawDigestSha256": "3e2d0c33397c21c8ff1b9dd97f61957cdc540e7c8b1ce5c3da03918eb0973b2c",
+      "observedDays": 478,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60818": {
+      "rawRows": 1030,
+      "rawDigestSha256": "87628a55bc2d5433711915d96538929736226d9153f1340848d9090ff82510db",
+      "observedDays": 470,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60825": {
+      "rawRows": 958,
+      "rawDigestSha256": "34477811bacd662501226ee797c3e720d97c8d996783d81965072d112a43c44f",
+      "observedDays": 481,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60842": {
+      "rawRows": 929,
+      "rawDigestSha256": "2856d8c768547c91105e51c7a87342b302dbc983e223ecd43575dd4495e39fe0",
+      "observedDays": 467,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60859": {
+      "rawRows": 887,
+      "rawDigestSha256": "06ac83424ef09c998b8f69220bc1e10a7607edbbd193d71f4b5d3fb34b2ef091",
+      "observedDays": 469,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60861": {
+      "rawRows": 986,
+      "rawDigestSha256": "ecae09ea8618e12fded1bef3008f590f22fe68429d36a5f331814f4631de6635",
+      "observedDays": 475,
+      "rawGapsOver45Days": [],
+      "firstDay": 19965,
+      "lastDay": 20453
+    },
+    "60976": {
+      "rawRows": 907,
+      "rawDigestSha256": "5295f38f174237987aabf0bda3975f4a6b129dee8c19331741820f3a2079657d",
+      "observedDays": 464,
+      "rawGapsOver45Days": [],
+      "firstDay": 19970,
+      "lastDay": 20453
+    },
+    "60983": {
+      "rawRows": 907,
+      "rawDigestSha256": "e3f0160526fed9831379e064e0a8a4897356f23f6c92afaf0c8ae32b0fe2ef41",
+      "observedDays": 458,
+      "rawGapsOver45Days": [],
+      "firstDay": 19970,
+      "lastDay": 20453
+    },
+    "61102": {
+      "rawRows": 887,
+      "rawDigestSha256": "401ab8d2655586e41a2da705ba18fd2a3947399f8aa91f81e31ede688ad2224a",
+      "observedDays": 451,
+      "rawGapsOver45Days": [],
+      "firstDay": 19982,
+      "lastDay": 20453
+    },
+    "61121": {
+      "rawRows": 813,
+      "rawDigestSha256": "839eb5b1013d4f967a1b9c217489d1adc5caf4ab6981ccf562eccb39296c04a5",
+      "observedDays": 438,
+      "rawGapsOver45Days": [],
+      "firstDay": 19982,
+      "lastDay": 20453
+    },
+    "61124": {
+      "rawRows": 920,
+      "rawDigestSha256": "0956dadb6fd4a761ebc2e9a9c01ed4697e19b6823f951e935d355dca94ea4318",
+      "observedDays": 455,
+      "rawGapsOver45Days": [],
+      "firstDay": 19982,
+      "lastDay": 20453
+    },
+    "61159": {
+      "rawRows": 767,
+      "rawDigestSha256": "e1d54a1b0d9e5da5a8568a5bd466af80835c49c30443a3169cf259755c7c9137",
+      "observedDays": 437,
+      "rawGapsOver45Days": [],
+      "firstDay": 19983,
+      "lastDay": 20453
+    },
+    "61163": {
+      "rawRows": 725,
+      "rawDigestSha256": "5b62553d59879a04b1304f779e28074886a061ed685385231988d8803f70083c",
+      "observedDays": 431,
+      "rawGapsOver45Days": [],
+      "firstDay": 19982,
+      "lastDay": 20453
+    },
+    "61281": {
+      "rawRows": 771,
+      "rawDigestSha256": "019c71255e8e4908638c7251a1a18671fcd76618f7d7d28c83a57ab24d3d30af",
+      "observedDays": 428,
+      "rawGapsOver45Days": [],
+      "firstDay": 19991,
+      "lastDay": 20453
+    },
+    "61311": {
+      "rawRows": 739,
+      "rawDigestSha256": "ecd89b67ac72b2b9f3fd391f6a5495a63b24fd831a799d49df34ab7a5235c1ad",
+      "observedDays": 427,
+      "rawGapsOver45Days": [],
+      "firstDay": 19992,
+      "lastDay": 20453
+    },
+    "61347": {
+      "rawRows": 824,
+      "rawDigestSha256": "456f98385a8bf7a9bfd5c2d76f8280b17fade5ed2a988b577060225b2fc7d32d",
+      "observedDays": 442,
+      "rawGapsOver45Days": [],
+      "firstDay": 19992,
+      "lastDay": 20453
+    },
+    "61432": {
+      "rawRows": 865,
+      "rawDigestSha256": "68b553957137ce70a3b97c7565462509f739a3375e7343684127c6ce5c5d3302",
+      "observedDays": 443,
+      "rawGapsOver45Days": [],
+      "firstDay": 19992,
+      "lastDay": 20453
+    },
+    "61434": {
+      "rawRows": 744,
+      "rawDigestSha256": "a517ed8aeaa7dfd4660ab6f047a7a0a8f8672fe83d9c04aaa138db08e3e23462",
+      "observedDays": 431,
+      "rawGapsOver45Days": [],
+      "firstDay": 19992,
+      "lastDay": 20453
+    },
+    "61452": {
+      "rawRows": 392,
+      "rawDigestSha256": "0505e54417ef7530d9a7cd29e212b2f5f12bd9f9b2f258b17701f66745ae724b",
+      "observedDays": 292,
+      "rawGapsOver45Days": [],
+      "firstDay": 20003,
+      "lastDay": 20452
+    },
+    "61572": {
+      "rawRows": 1074,
+      "rawDigestSha256": "2ab5b10990477d17610b1a96c0870c55b68ceb33ab1d9f5ebd8214041e909cef",
+      "observedDays": 436,
+      "rawGapsOver45Days": [],
+      "firstDay": 20012,
+      "lastDay": 20453
+    },
+    "62078": {
+      "rawRows": 1268,
+      "rawDigestSha256": "2f51e72cd7474b156c5e303bc8e7ea7230e0a1c4b9f9437021d31de99e212d7e",
+      "observedDays": 395,
+      "rawGapsOver45Days": [],
+      "firstDay": 20052,
+      "lastDay": 20453
+    },
+    "62086": {
+      "rawRows": 955,
+      "rawDigestSha256": "d30ef4f809a831ca381a7dfd1a555670e32bbe0f6392129dea81af6410c40e48",
+      "observedDays": 395,
+      "rawGapsOver45Days": [],
+      "firstDay": 20052,
+      "lastDay": 20453
+    },
+    "62407": {
+      "rawRows": 804,
+      "rawDigestSha256": "59cbd7855031985810c41d1409f1f63519e233cc66e24b25865cf0721178c718",
+      "observedDays": 368,
+      "rawGapsOver45Days": [],
+      "firstDay": 20078,
+      "lastDay": 20453
+    }
+  },
+  "classes": {
+    "GEO-commercial": {
+      "selected": 45,
+      "floorMeasured": 45,
+      "floorMissing": 0,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        0.5129023974709728,
+        1.2200929095523232,
+        2.124419605290843,
+        4.585023376239293,
+        17.307763502950447
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        7.0,
+        11.0,
+        11.0,
+        11.0,
+        11.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.023719029595999034,
+        0.05622512693967558,
+        0.09746329096614055,
+        0.20784711790660892,
+        0.7400995315561055
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        0.7043951416900122,
+        1.6778103831838487,
+        2.9262643838241047,
+        6.344001790270217,
+        24.485660384905543
+      ],
+      "atMost2PctYr": 21,
+      "atMost3PctYr": 30,
+      "projectionMedianIidPctYr": {
+        "5": 10.30564313700992,
+        "10": 2.50529229577059,
+        "15": 1.2662667076967256
+      }
+    },
+    "GEO-commercial-passive": {
+      "selected": 45,
+      "floorMeasured": 25,
+      "floorMissing": 20,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        0.10582325112169484,
+        0.7381164994153382,
+        1.0961699792945336,
+        2.3881565445865056,
+        16.041190910696557
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        5.0,
+        6.0,
+        11.0,
+        11.0,
+        11.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.0049037122435095955,
+        0.026810217929408103,
+        0.03426771784680805,
+        0.05054543869420407,
+        0.6897689375781872
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        0.14522268575885705,
+        1.014116379915415,
+        1.507052767605889,
+        3.123278623730981,
+        22.64524682064264
+      ],
+      "atMost2PctYr": 17,
+      "atMost3PctYr": 20,
+      "projectionMedianIidPctYr": {
+        "5": 3.508782007063052,
+        "10": 0.8737935533282177,
+        "15": 0.44339938841123766
+      }
+    },
+    "LEO-350-550": {
+      "selected": 18,
+      "floorMeasured": 3,
+      "floorMissing": 15,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        5.882309565290445,
+        6.658090437859892,
+        7.433871310429338,
+        16.98094747354083,
+        26.52802363665232
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        5.0,
+        5.5,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.08612058853006163,
+        0.09707988954259057,
+        0.10803919055511951,
+        0.17092082679314755,
+        0.23380246303117558
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        7.732837788658379,
+        8.763725585070507,
+        9.794613381482634,
+        22.22298675358494,
+        34.65136012568725
+      ],
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 0,
+      "projectionMedianIidPctYr": {
+        "5": 11.485934853316525,
+        "10": 2.78089272757402,
+        "15": 1.4046321071418737
+      }
+    },
+    "LEO-350-550-passive": {
+      "selected": 17,
+      "floorMeasured": 3,
+      "floorMissing": 14,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        2.4811980344287163,
+        4.166877587407841,
+        5.852557140386966,
+        12.587254897539227,
+        19.321952654691486
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        5.0,
+        5.0,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.036928221728089815,
+        0.04672236766425966,
+        0.056516513600429516,
+        0.11602605303593602,
+        0.17553559247144251
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        3.245411011752221,
+        5.351093474474165,
+        7.4567759371961095,
+        16.242722066294647,
+        25.028668195393188
+      ],
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 1,
+      "projectionMedianIidPctYr": {
+        "5": 5.852557140386966,
+        "10": 1.4451999819241494,
+        "15": 0.7323347267628687
+      }
+    },
+    "LEO-550-650": {
+      "selected": 20,
+      "floorMeasured": 3,
+      "floorMissing": 17,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        2.3830787736813357,
+        2.584512929030934,
+        2.785947084380532,
+        4.8891868874775515,
+        6.992426690574572
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        5.0,
+        5.0,
+        5.0,
+        7.0,
+        9.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.023402011263587114,
+        0.04528077141859797,
+        0.06715953157360884,
+        0.07858632573134623,
+        0.09001311988908363
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        3.0227415716308936,
+        3.409442699997233,
+        3.796143828363572,
+        6.359078733068547,
+        8.922013637773523
+      ],
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 2,
+      "projectionMedianIidPctYr": {
+        "5": 6.992426690574572,
+        "10": 1.719683509529225,
+        "15": 0.8708446729139903
+      }
+    },
+    "LEO-550-650-passive": {
+      "selected": 20,
+      "floorMeasured": 4,
+      "floorMissing": 16,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        3.5889204464148756,
+        9.103288791601067,
+        11.496709452475423,
+        15.195044936988308,
+        24.62415775309008
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        5.0,
+        5.75,
+        6.0,
+        6.25,
+        7.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.05312691693446371,
+        0.13061539380864667,
+        0.18759104464243445,
+        0.22261314468349716,
+        0.23424096917950496
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        4.702057092740481,
+        12.042092103654817,
+        15.397084238052354,
+        20.252689149193362,
+        32.094562490338106
+      ],
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 0,
+      "projectionMedianIidPctYr": {
+        "5": 20.83776161688484,
+        "10": 4.881125480396351,
+        "15": 2.4523216378600274
+      }
+    },
+    "LEO-650-800": {
+      "selected": 19,
+      "floorMeasured": 0,
+      "floorMissing": 19,
+      "floor95PctYrMinQ1MedianQ3Max": null,
+      "nYearsMinQ1MedianQ3Max": null,
+      "logScatterMinQ1MedianQ3Max": null,
+      "mde80PctYrMinQ1MedianQ3Max": null,
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 0,
+      "projectionMedianIidPctYr": {
+        "5": null,
+        "10": null,
+        "15": null
+      }
+    },
+    "LEO-650-800-passive": {
+      "selected": 19,
+      "floorMeasured": 1,
+      "floorMissing": 18,
+      "floor95PctYrMinQ1MedianQ3Max": [
+        2.7493117354162813,
+        2.7493117354162813,
+        2.7493117354162813,
+        2.7493117354162813,
+        2.7493117354162813
+      ],
+      "nYearsMinQ1MedianQ3Max": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "logScatterMinQ1MedianQ3Max": [
+        0.10682874013033156,
+        0.10682874013033156,
+        0.10682874013033156,
+        0.10682874013033156,
+        0.10682874013033156
+      ],
+      "mde80PctYrMinQ1MedianQ3Max": [
+        3.7714458026674627,
+        3.7714458026674627,
+        3.7714458026674627,
+        3.7714458026674627,
+        3.7714458026674627
+      ],
+      "atMost2PctYr": 0,
+      "atMost3PctYr": 1,
+      "projectionMedianIidPctYr": {
+        "5": 11.350208657576074,
+        "10": 2.7493117354162813,
+        "15": 1.3887861047122247
+      }
+    }
+  },
+  "gates": {
+    "LEO": {
+      "powered": false,
+      "payloadFloorAtMost3": 2,
+      "sensitivePayloadWithEligibleControl": 2,
+      "verdict": "UNDERPOWERED"
+    },
+    "GEO": {
+      "powered": false,
+      "payloadFloorAtMost3": 30,
+      "sensitivePayloadWithEligibleControl": 15,
+      "verdict": "UNDERPOWERED"
+    }
+  },
+  "ledgerCorrelation": {
+    "rho": null,
+    "ci95": null,
+    "reason": "both-preregistered-cohort-power-gates-closed; no-inferential-growth-estimates",
+    "prediction": "positive within launch-mass class: cumulative ledger delta-v vs cumulative log observable growth",
+    "propulsionCatalogExists": false,
+    "publishedEventsMetadata": {
+      "count": 1500,
+      "generatedAt": "2026-09-19T12:48:51Z",
+      "manoeuvreLabelPermitted": false,
+      "path": "artifacts/orbit-events-d7919fbbd28d8c62.json",
+      "sha256": "d7919fbbd28d8c6281efceb1fa47df06b942d78e0fb3fcf16614b5d2604fddb4"
+    },
+    "inputAudit": {
+      "eventArtifactSha256": "d7919fbbd28d8c6281efceb1fa47df06b942d78e0fb3fcf16614b5d2604fddb4",
+      "expectedEventArtifactSha256": "d7919fbbd28d8c6281efceb1fa47df06b942d78e0fb3fcf16614b5d2604fddb4",
+      "publishedEvents": {
+        "inThisBundle": 1500,
+        "rule": "The population views need one list of the notable changes across the whole catalogue; a per-object view needs that object's changes and fetches them with the object's history shard, which it is already fetching. So this list is the largest change on every object that had one, plus the largest remaining changes and every change an operator independently published, up to 1500. Nothing is hidden: every event is in its object's shard.",
+        "total": 105523
+      },
+      "eventBundleIsCumulativeLedger": false,
+      "note": "A follow-up must use same-arc full per-object histories and verified mass classes; selected population events are truncated."
+    }
+  },
+  "jsonlSha256": "f2d7353613369d6482baa416fe08d04d034391cc8554f20522b6b5a8bc922350",
+  "wallSeconds": 335.84055063300184,
+  "cpuSeconds": 254.956332458,
+  "maxRssKiB": 143512,
+  "versions": {
+    "numpy": "1.26.4"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "blockYears": 2,
+    "seed": "NORAD+20260920"
+  },
+  "noArchiveSnapshot": true,
+  "selectionFileSha256": "545aa5cbff0e811a1305cb56270461796b300575a9b326343a032668eace791c",
+  "identityFinalization": {
+    "excludedPayloads": {
+      "36086": "attached-ISS-module-not-independent",
+      "27944": "passive-calibration-sphere-not-fueled-payload",
+      "66906": "inherited-ISS-launch-date-does-not-establish-pre-2015-launch"
+    },
+    "excludedRows": 4,
+    "preliminaryJsonlSha256": "5a1d7523cbe82090b9220d4aa868a64ed8c0c83fb2d6b808667f3684b1c08996",
+    "scriptSha256": "e6f7f15100f26ff2fb9d314e78db7a6cc9fae6fbf6aa6842b7197ca888fd2b0e",
+    "addendumSha256": "e1319141ac47c8bd3dd7f73cc9e344704a034d9dab25a32fa1c02e730aabb8fe"
+  }
+}

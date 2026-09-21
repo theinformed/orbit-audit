@@ -1,0 +1,165 @@
+{
+ "name": "Layer-page clip narration facts",
+ "sourceOfRecord": "/home/sdegan/space-teaching-aid/narration/layer-narration-facts.json on bigmem-PC",
+ "takenFrom": "src/layer-pages.ts PAGES[] at commit d02343e, and docs/SCIENTIFIC-LAYERS.md",
+ "note": "Every field here is copied verbatim from the page the clip already sits on. The model that drafts narration is shown NOTHING ELSE, so a number it writes that is not in this file is an invented number and is thrown away.",
+ "clips": [
+  {
+   "n": 1,
+   "id": "thermosphere",
+   "name": "Thermosphere",
+   "clipSeconds": 20.9,
+   "onScreen": "A quiet-time density profile spans 120 km to 1,000 km. Three published WAM model points are highlighted in reading order. The thin dashed line between them is declared log-linear interpolation; the highlight does not depict changing air.",
+   "lead": "The thermosphere is the last air a satellite ever touches - neutral gas, mostly nitrogen, oxygen and helium, thinning by nearly seven orders of magnitude between 120 and 1,000 km. It is not the ionosphere: it is the gas the ionosphere lives inside, and it is the part that actually causes drag.",
+   "facts": [
+    "1.67x10^-8 kg m^-3 at 120 km, 2.50x10^-12 at 420 km, 3.07x10^-15 at 1,000 km are the three published WAM quiet-time values marked on the curve; everything between them is log-linear interpolation.",
+    "2.27x is the density at 400 km at the Gannon storm peak against three days earlier, WAM global mean.",
+    "4.7x is the spread in density at 420 km right round the globe at one instant, so drag depends on where in the orbit you are.",
+    "38 of 49 Starlink spacecraft from the February 2022 launch reentered after a storm nobody would have called severe.",
+    "Before any storm at all, the density at 400 km changes by a factor of 12.8 between solar minimum and solar maximum.",
+    "No frame of this animation is a measurement of any particular moment."
+   ],
+   "doNotInfer": "Do not read a density here as a drag prediction for a named spacecraft.",
+   "wordBudget": 53
+  },
+  {
+   "n": 2,
+   "id": "ionosphere",
+   "name": "Ionosphere",
+   "clipSeconds": 22.6,
+   "onScreen": "A Chapman-style electron-density profile is drawn with the D, E, F1 and F2 regions marked on it, and the profile then changes between day and night. Two altitude extents are printed down the left-hand side.",
+   "lead": "The ionosphere is not a layer of the atmosphere - it is the fraction of it that solar ultraviolet has knocked apart into ions and free electrons. It starts below the thermosphere at 60 km and finishes far above it at 2,655 km: the two overlap, and neither contains the other.",
+   "facts": [
+    "The thermosphere extent drawn on the left is 120 to 1,000 km; the ionosphere extent is 60 to 2,655 km.",
+    "The profile draws no measured density at all - it shows where the four regions sit, not what was measured.",
+    "D absorbs, E and F reflect: the same ionosphere, opposite effects, which is why one disturbance can kill HF and leave UHF untouched.",
+    "16 cm of apparent GPS L1 range error per TECU, before any dual-frequency correction.",
+    "85 to 90 km is drawn by neither model and is left blank on purpose."
+   ],
+   "doNotInfer": "Do not read the profile as a sounding.",
+   "wordBudget": 58
+  },
+  {
+   "n": 3,
+   "id": "plasmasphere",
+   "name": "Plasmasphere",
+   "clipSeconds": 24.9,
+   "onScreen": "A plan view of the plasmasphere boundary around the Earth. Kp is turned up on screen and the boundary moves inward as it rises.",
+   "lead": "The plasmasphere is cold, dense plasma that has leaked up out of the ionosphere and been trapped, corotating with the Earth out to a boundary called the plasmapause. It occupies the same space as the ring current and the inner radiation belt while being thousands of times denser and thousands of times colder than either.",
+   "facts": [
+    "The boundary is the last closed equipotential of the Volland-Stern picture, corotation plus convection. When Kp is turned up the boundary moves in because the arithmetic moves it.",
+    "7.2 to 3.3 Earth radii is where that arithmetic puts the plasmapause as Kp goes from 2 to 8.",
+    "2,319 km is how far the midnight boundary actually travelled across one quiet 25-frame window, L 4.14 to 4.51, with Kp never above 2.89.",
+    "50 cm^-3 is the contour this site calls the boundary.",
+    "It is not a spacecraft crossing, and no in-situ plasmapause measurement exists in any feed this site reads."
+   ],
+   "doNotInfer": "Do not read the boundary as an observed crossing.",
+   "wordBudget": 60
+  },
+  {
+   "n": 4,
+   "id": "radiation-belts",
+   "name": "Radiation belts",
+   "clipSeconds": 29.9,
+   "onScreen": "A cross-section of the two belts with a single magnetic field line through them, then a world map at the end with contours over a coastline.",
+   "lead": "Two nested regions of trapped particles: an inner belt of protons at L 1.2 to 2 that is essentially always there, and an outer belt of electrons at L 3 to 7 that can change by a factor of a hundred in a day. Between them sits the slot, swept nearly clear by plasmaspheric hiss.",
+   "facts": [
+    "The belt cross-section and the field line are schematic: every curve is the dipole relation r = L cos squared lambda, and no flux value is drawn.",
+    "The world map at the end is not schematic. It is IGRF-14 total field at 500 km, contoured.",
+    "18.3 microtesla is the weakest total field anywhere at 500 km, over the South Atlantic, where the inner belt reaches lowest and most low-Earth-orbit single-event upsets are collected.",
+    "The geomagnetic dipole sits about 550 km from the centre of the Earth, and is tilted about 11 degrees from the spin axis.",
+    "1,000 pfu is NOAA's greater-than-2-MeV integral electron flux alert level, where internal charging of spacecraft dielectrics becomes an operational concern."
+   ],
+   "doNotInfer": "Do not read a flux here as a dose.",
+   "wordBudget": 60
+  },
+  {
+   "n": 5,
+   "id": "ring-current",
+   "name": "Ring current",
+   "clipSeconds": 21.5,
+   "onScreen": "Ions and electrons drift in opposite directions around the Earth and a current loop closes; the animation then changes to a plot of Dst falling.",
+   "lead": "Ions of 10 to 200 keV trapped between about L 2 and L 7 drift westward around the Earth while electrons drift east; both carry the same current, and it adds up to several million amperes. This site draws computed drift geometry; spacecraft also observe ring-current particles in situ.",
+   "facts": [
+    "This clip changes evidence class partway through, on screen. The drift geometry and the current loop are model-derived; the Dst it ends on is observed.",
+    "This display uses Dst, an observed ground-magnetometer index influenced by multiple current systems, not a complete direct measurement of the ring. Spacecraft such as the Van Allen Probes also measure ring-current particles in situ. This site does not ingest those particle measurements; the limitation is this site's data, not what science can observe.",
+    "The Dessler-Parker-Sckopke relation turns that depression into the total energy in the trapped ions to within a factor of two.",
+    "An ion carried from L 8 in to L 4 goes from 10 keV to 80 keV, because energy goes as L to the minus three.",
+    "The drift replay runs at 400 times real speed: one hour of drift per second of screen time."
+   ],
+   "doNotInfer": "Do not read the drawn ring as the location of the current.",
+   "wordBudget": 55
+  },
+  {
+   "n": 6,
+   "id": "magnetopause",
+   "name": "Magnetopause and bow shock",
+   "clipSeconds": 20.6,
+   "onScreen": "The magnetopause surface is drawn around the Earth with the bow shock outside it, and the whole boundary then walks inward as the driver state changes.",
+   "lead": "The magnetopause is where the solar wind's pressure balances the Earth's magnetic field - the outer wall of the magnetosphere, and the line between being shielded and not being shielded. The bow shock stands about 13 Earth radii sunward of it, where the wind slows abruptly because it is arriving faster than any wave that could warn it.",
+   "facts": [
+    "The surface is Shue et al. (1998), evaluated at each driver state shown. The standoff walking inward is that formula being computed at real solar-wind values, not an animator's idea of what compressed looks like.",
+    "13.5 to 5.6 Earth radii is where the arithmetic puts the subsolar standoff between a very quiet day and Gannon-class driving.",
+    "Geostationary orbit is at 6.6 Earth radii. In severe events the boundary crosses inside it, and a spacecraft there is in the solar wind.",
+    "The dayside boundary spent about 6 hours below geostationary during the Gannon storm of 10 to 11 May 2024.",
+    "17,230 spacecraft boundary crossings sit behind the Nguyen 2022 fit.",
+    "The bow shock in this animation is a conic of the right family at the right distance and nothing more."
+   ],
+   "doNotInfer": "Do not read the drawn surface as the boundary's instantaneous position.",
+   "wordBudget": 52
+  },
+  {
+   "n": 7,
+   "id": "peak-surfaces",
+   "name": "Ionospheric peak surfaces",
+   "clipSeconds": 19.03,
+   "onScreen": "Two height curves are drawn against each other, and the difference between them is shown.",
+   "lead": "Three smooth surfaces, one each for the height of the E, F1 and F2 electron-density maxima, lifted off the globe like relief on a map. They were removed because they drew themselves on a height curve nobody else on the globe was using.",
+   "facts": [
+    "Both curves in this animation are the literal display transforms from the code that drew them: 28 times ln(1 + h/350) for the shared radial ruler every other layer uses, and 18 times ln(1 + h/350) for the curve these three surfaces used instead.",
+    "Those heights were then multiplied by eight so the relief would read.",
+    "The result put a spacecraft and the density peak it was flying through in visibly different places on the same picture. A viewer would have concluded the satellite was well above the F2 layer. It was inside it.",
+    "hmF2 is an altitude: the height of the F2 density maximum, not the top of a layer and not its bottom.",
+    "Everything else on the globe - satellites, footprints, belts, boundaries - was placed by the shared ruler; these three were not."
+   ],
+   "doNotInfer": "Do not treat the probe that replaced them as an ionosonde.",
+   "wordBudget": 47
+  },
+  {
+   "n": 8,
+   "id": "d-region",
+   "name": "D-region absorption",
+   "clipSeconds": 24.66,
+   "onScreen": "Absorption curves are plotted against frequency, and the absorbing layer's reference height is marked as it moves.",
+   "lead": "The bottom of the ionosphere is the only part of it that takes energy out of a radio wave instead of bending it. Down here the air is still thick enough that a free electron collides with a neutral before it can finish one turn of the wave, and the wave's energy becomes heat.",
+   "facts": [
+    "The absorption curves are NOAA's own documented D-RAP scaling, HAF divided by f, all to the power 1.5, in dB on a vertical two-pass path, evaluated exactly.",
+    "The reference heights are the ones the site's empirical Wait-Spies D region uses: about 70 km by day, about 84 km at night.",
+    "There is 8 times more absorption at 5 MHz than at 20 MHz for the same disturbance, which is why a shortwave circuit dies while a UHF link over the same sky never notices.",
+    "The HF band is 3 to 30 MHz. Quiet means the modelled maximum affected frequency is below 3 MHz, so nothing in the band is touched at all.",
+    "Under an X45 flare the absorbing layer drops from 70 km to 53 km, into denser air where the collision rate is higher still.",
+    "X-rays reach the daylit hemisphere in about eight minutes, and the whole sunlit half of the planet is affected at once."
+   ],
+   "doNotInfer": "Do not read this as a propagation prediction.",
+   "wordBudget": 60
+  },
+  {
+   "n": 9,
+   "id": "ground-track-footprint",
+   "name": "Ground track and footprint",
+   "clipSeconds": 30.66,
+   "onScreen": "A satellite goes round a generic orbit over a world map, drawing a ground track behind it and a footprint circle beneath it; the circle then shrinks as the elevation mask is raised.",
+   "lead": "The two lines drawn around a selected satellite are its ground track - the path of the point directly beneath it - and its footprint, the circle inside which it is above the horizon. Both are geometry computed from a propagated ephemeris, and the second is the most over-read object on the map.",
+   "facts": [
+    "The orbit shown is a generic circular orbit at 500 km and 51.6 degrees inclination. No real spacecraft is shown and no ephemeris is quoted.",
+    "Each successive pass lands 23.7 degrees west, because the Earth turned that far during one 94-minute revolution.",
+    "The highest latitude a ground track ever reaches is plus or minus the inclination, and nothing else sets it.",
+    "The footprint half-angle at 500 km goes from 22.0 degrees to 14.0 degrees as the mask goes from 0 to 10 degrees - about 41 per cent of the area survives.",
+    "The edge is line of sight only: it is where the spacecraft sits on the horizon. It is not coverage, not an antenna pattern and not a comms range."
+   ],
+   "doNotInfer": "Do not read the footprint edge as a coverage boundary.",
+   "wordBudget": 60
+  }
+ ],
+ "wordBudgetRule": "wordBudget = min(60, floor((clipSeconds - 2.5) * 2.9)). 2.9 words per second is measured from the eleven already-rendered lines in this voice; 2.5 s is a 1.5 s lead-in plus a 1.0 s tail so the voice never runs past the picture. 60 is tools/narrate.py's own MAX_WORDS lint ceiling."
+}

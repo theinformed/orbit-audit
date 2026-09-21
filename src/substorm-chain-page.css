@@ -1,0 +1,46 @@
+/**
+ * The chain page's own two rules.
+ *
+ * In its own file rather than in `styles.css` because that sheet has other
+ * agents in it, and because these are the only two selectors on the site that
+ * need them: a stage is a `.mechanism-entry` in every other respect and
+ * inherits the rest.
+ */
+
+/* The evidence pair under each stage. Browser-default <dl> puts the term in
+   body weight and indents the definition, which reads as an accident; these
+   are the same shape the method cards use for term/detail. */
+.chain-stage-evidence {
+  margin: 0.9rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.chain-stage-evidence > div {
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  gap: 0.15rem 1.1rem;
+  align-items: start;
+}
+
+.chain-stage-evidence dt {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  margin: 0;
+}
+
+.chain-stage-evidence dd {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .chain-stage-evidence > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.2rem;
+  }
+}

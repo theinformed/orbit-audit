@@ -1,0 +1,14 @@
+[Unit]
+Description=Build and publish Space Environment Explorer data from bigmem-PC
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=sdegan
+WorkingDirectory=/home/sdegan/space-teaching-aid
+ExecStart=/home/sdegan/space-teaching-aid/pipeline/publish_vps.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+TimeoutStartSec=240

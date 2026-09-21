@@ -1,0 +1,916 @@
+{
+  "generatedAt": "2026-08-19T08:02:25Z",
+  "missions": [
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('FORTE' vs 'FORTE')",
+        "launch date not comparable",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 24920,
+      "mission": "earth-observation",
+      "name": "FORTE",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/JSVB-5618-9837-5426-1381"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('IMAGE' vs 'IMAGE')",
+        "launch date not comparable",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 26113,
+      "mission": "science",
+      "name": "IMAGE",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/XYDH-5297-2408-7982-2518"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('STARS (KUKAI)' vs 'STARS')",
+        "launch date agrees (2009-01-23 vs 2009-01-23)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 33498,
+      "mission": "communications",
+      "name": "STARS (KUKAI)",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/RCSI-2248-9538-7513-4618"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('YOUTHSAT' vs 'YOUTHSAT')",
+        "launch date agrees (2011-04-20 vs 2011-04-20)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 37388,
+      "mission": "earth-observation",
+      "name": "YOUTHSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/WQYT-3877-9353-7434-8931"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('YUNHAI 1' vs 'Yunhai 1-01')",
+        "launch date agrees (2016-11-11 vs 2016-11-11)",
+        "all active transmitters filed under ITU service 'Meteorological'"
+      ],
+      "id": 41857,
+      "mission": "weather",
+      "name": "YUNHAI 1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Meteorological service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Meteorological",
+      "source": "https://db.satnogs.org/satellite/OKWG-5359-6762-3969-6223"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('SUPERVIEW-1 03' vs 'Superview-1 03')",
+        "launch date agrees (2018-01-09 vs 2018-01-09)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 43099,
+      "mission": "earth-observation",
+      "name": "SUPERVIEW-1 03",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/SCMV-5336-5011-1169-8233"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('S-NET D' vs 'S-Net D')",
+        "launch date agrees (2018-02-01 vs 2018-02-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43186,
+      "mission": "communications",
+      "name": "S-NET D",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/XPSM-2524-2392-8428-5297"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('S-NET B' vs 'S-Net B')",
+        "launch date agrees (2018-02-01 vs 2018-02-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43187,
+      "mission": "communications",
+      "name": "S-NET B",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/EFAY-8089-9221-6385-2409"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('S-NET A' vs 'S-Net A')",
+        "launch date agrees (2018-02-01 vs 2018-02-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43188,
+      "mission": "communications",
+      "name": "S-NET A",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/MCHL-8693-9902-0813-2147"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('S-NET C' vs 'S-Net C')",
+        "launch date agrees (2018-02-01 vs 2018-02-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43189,
+      "mission": "communications",
+      "name": "S-NET C",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/GRBF-7624-2517-1207-4873"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('PAZ' vs 'PAZ')",
+        "launch date agrees (2018-02-22 vs 2018-02-22)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 43215,
+      "mission": "earth-observation",
+      "name": "PAZ",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/NFML-7000-4303-5065-5108"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('CFOSAT' vs 'CFOSAT')",
+        "launch date agrees (2018-10-29 vs 2018-10-29)",
+        "all active transmitters filed under ITU service 'Meteorological'"
+      ],
+      "id": 43662,
+      "mission": "weather",
+      "name": "CFOSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Meteorological service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Meteorological",
+      "source": "https://db.satnogs.org/satellite/MUPH-1409-5939-4359-8340"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('TEN-KOH' vs 'Ten-Koh')",
+        "launch date agrees (2018-10-29 vs 2018-10-29)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43677,
+      "mission": "communications",
+      "name": "TEN-KOH",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/ILWB-0355-7294-3027-0757"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('STARS-AO' vs 'Stars-AO')",
+        "launch date agrees (2018-10-29 vs 2018-10-29)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43679,
+      "mission": "communications",
+      "name": "STARS-AO",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/VBFH-2959-0036-6917-5389"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name differs ('RANGE A' vs 'RANGE B')",
+        "launch date agrees (2018-12-03 vs 2018-12-03)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43773,
+      "mission": "communications",
+      "name": "RANGE A",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/OTVL-0209-5913-2544-1321"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('EAGLET 1' vs 'Eaglet 1')",
+        "launch date agrees (2018-12-03 vs 2018-12-03)",
+        "all active transmitters filed under ITU service 'Maritime'"
+      ],
+      "id": 43790,
+      "mission": "communications",
+      "name": "EAGLET 1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Maritime service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Maritime",
+      "source": "https://db.satnogs.org/satellite/NMSF-0466-6077-1186-9611"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('THEA' vs 'THEA')",
+        "launch date agrees (2018-12-03 vs 2018-12-03)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 43796,
+      "mission": "science",
+      "name": "THEA",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/OSTA-3937-9747-5420-7898"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('SUOMI100' vs 'Suomi 100')",
+        "launch date agrees (2018-12-03 vs 2018-12-03)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43804,
+      "mission": "communications",
+      "name": "SUOMI100",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/MUVJ-0454-0662-1172-2559"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('SEAHAWK-1' vs 'SEAHAWK-1')",
+        "launch date agrees (2018-12-03 vs 2018-12-03)",
+        "all active transmitters filed under ITU service 'Meteorological'"
+      ],
+      "id": 43820,
+      "mission": "weather",
+      "name": "SEAHAWK-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Meteorological service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Meteorological",
+      "source": "https://db.satnogs.org/satellite/KNTJ-0032-5210-8089-2604"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('ISAT' vs 'D-Star ONE iSat')",
+        "launch date agrees (2018-12-27 vs 2018-12-27)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 43879,
+      "mission": "communications",
+      "name": "ISAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/VLTM-4130-8711-4931-9078"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('TAURUS-1' vs 'Taurus-1')",
+        "launch date agrees (2019-09-12 vs 2019-09-12)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 44530,
+      "mission": "communications",
+      "name": "TAURUS-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/EJQU-9911-5613-4301-2109"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('NORBI' vs 'NORBI')",
+        "launch date not comparable",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 46494,
+      "mission": "communications",
+      "name": "NORBI",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/DNNN-7162-2135-4056-8903"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('TEIKYOSAT-4 (OORURI)' vs 'TeikyoSat-4')",
+        "launch date agrees (2021-11-09 vs 2021-11-09)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 49396,
+      "mission": "communications",
+      "name": "TEIKYOSAT-4 (OORURI)",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/UYHX-6974-4483-5549-8559"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('Z-SAT' vs 'Z-Sat')",
+        "launch date agrees (2021-11-09 vs 2021-11-09)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 49399,
+      "mission": "communications",
+      "name": "Z-SAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/KMUR-8898-9913-2178-8848"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('KOSEN-1' vs 'KOSEN-1')",
+        "launch date agrees (2021-11-09 vs 2021-11-09)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 49402,
+      "mission": "communications",
+      "name": "KOSEN-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/NJBJ-3838-9654-0508-8247"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('RANDEV' vs 'RANDEV')",
+        "launch date agrees (2022-06-21 vs 2022-06-21)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 52898,
+      "mission": "science",
+      "name": "RANDEV",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/LYKB-5376-2648-5150-0020"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('SNUGLITE-II' vs 'SNUGLITE-II')",
+        "launch date agrees (2022-06-21 vs 2022-06-21)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 52899,
+      "mission": "communications",
+      "name": "SNUGLITE-II",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/YFNZ-9504-4902-9033-1722"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('CENTISPACE-1 S3' vs 'CentiSpace-1 S3')",
+        "launch date agrees (2022-09-06 vs 2022-09-05)",
+        "all active transmitters filed under ITU service 'Radionavigational'"
+      ],
+      "id": 53757,
+      "mission": "navigation",
+      "name": "CENTISPACE-1 S3",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Radionavigational service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Radionavigational",
+      "source": "https://db.satnogs.org/satellite/POWQ-0954-8603-5864-6677"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('YUNHAI 1-03' vs 'Yunhai 1-03')",
+        "launch date agrees (2022-09-20 vs 2022-09-21)",
+        "all active transmitters filed under ITU service 'Meteorological'"
+      ],
+      "id": 53877,
+      "mission": "weather",
+      "name": "YUNHAI 1-03",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Meteorological service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Meteorological",
+      "source": "https://db.satnogs.org/satellite/FMWH-9451-5252-3845-9360"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('CENTISPACE-1 S6' vs 'CentiSpace-1 S6')",
+        "launch date agrees (2022-10-07 vs 2022-10-07)",
+        "all active transmitters filed under ITU service 'Radionavigational'"
+      ],
+      "id": 54021,
+      "mission": "navigation",
+      "name": "CENTISPACE-1 S6",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Radionavigational service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Radionavigational",
+      "source": "https://db.satnogs.org/satellite/NSYK-3243-5929-3706-2322"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('EOSSAT-1' vs 'EOSSAT-1')",
+        "launch date agrees (2023-01-03 vs 2023-01-03)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 55053,
+      "mission": "earth-observation",
+      "name": "EOSSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/REKY-2761-8978-3233-4536"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('KUWAITSAT-1' vs 'KuwaitSat-1')",
+        "launch date agrees (2023-01-03 vs 2023-01-03)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 55103,
+      "mission": "communications",
+      "name": "KUWAITSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/UIOI-1341-4569-4790-3695"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('SHARJAHSAT-1' vs 'Sharjahsat-1')",
+        "launch date agrees (2023-01-03 vs 2023-01-03)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 55104,
+      "mission": "communications",
+      "name": "SHARJAHSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/DELH-6722-1461-1897-7938"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('AAC-AIS-SAT-1' vs 'AAC-AIS-SAT-1')",
+        "launch date agrees (2023-01-03 vs 2023-01-03)",
+        "all active transmitters filed under ITU service 'Maritime'"
+      ],
+      "id": 55107,
+      "mission": "communications",
+      "name": "AAC-AIS-SAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Maritime service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Maritime",
+      "source": "https://db.satnogs.org/satellite/RYKF-4582-4605-7595-4204"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('PVCC' vs 'PVCC')",
+        "launch date not comparable",
+        "all active transmitters filed under ITU service 'Meteorological'"
+      ],
+      "id": 58025,
+      "mission": "weather",
+      "name": "PVCC",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Meteorological service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Meteorological",
+      "source": "https://db.satnogs.org/satellite/NTXV-3568-8556-1732-1226"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name differs ('IMPULSE-1 MIRA' vs 'Impulse-1 (LEO Express-1)')",
+        "launch date agrees (2023-11-11 vs 2023-11-11)",
+        "all active transmitters filed under ITU service 'Radionavigational'"
+      ],
+      "id": 58301,
+      "mission": "navigation",
+      "name": "IMPULSE-1 MIRA",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Radionavigational service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Radionavigational",
+      "source": "https://db.satnogs.org/satellite/CVWL-5147-2655-6759-5452"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('NANOFF B' vs 'NanoFF B')",
+        "launch date agrees (2023-12-01 vs 2023-12-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 58755,
+      "mission": "communications",
+      "name": "NANOFF B",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/RCBZ-5048-4345-8306-0931"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('NANOFF A' vs 'NanoFF A')",
+        "launch date agrees (2023-12-01 vs 2023-12-01)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 58810,
+      "mission": "communications",
+      "name": "NANOFF A",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/DUMR-1924-9064-2363-1545"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('STRIX-3' vs 'StriX-3')",
+        "launch date agrees (2024-03-12 vs 2024-03-12)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 59224,
+      "mission": "earth-observation",
+      "name": "STRIX-3",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/NPDV-9106-0671-4492-6649"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name differs ('KORSAT-1' vs 'QPS-SAR-7')",
+        "launch date agrees (2024-04-07 vs 2024-04-07)",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 59452,
+      "mission": "earth-observation",
+      "name": "KORSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/DLUP-6316-3111-7417-6906"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('WSF-M' vs 'WSF-M')",
+        "launch date not comparable",
+        "all active transmitters filed under ITU service 'Earth Exploration'"
+      ],
+      "id": 59481,
+      "mission": "earth-observation",
+      "name": "WSF-M",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Earth Exploration service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Earth Exploration",
+      "source": "https://db.satnogs.org/satellite/IGOB-8644-4870-2823-1701"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('ACS 3' vs 'ACS3')",
+        "launch date agrees (2024-04-23 vs 2024-04-23)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 59588,
+      "mission": "science",
+      "name": "ACS 3",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/EYEX-3123-7466-3755-9687"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('ISTSAT-1' vs 'ISTSAT-1')",
+        "launch date agrees (2024-07-09 vs 2024-07-09)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 60238,
+      "mission": "communications",
+      "name": "ISTSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/VFKG-4740-7583-8424-4286"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('CATSAT' vs 'CatSat')",
+        "launch date agrees (2024-07-04 vs 2024-07-04)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 60246,
+      "mission": "science",
+      "name": "CATSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/EIOW-0233-5270-5407-2865"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('QUBE' vs 'QUBE')",
+        "launch date agrees (2024-08-16 vs 2024-08-16)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 60476,
+      "mission": "communications",
+      "name": "QUBE",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/ZYDE-4447-8719-9309-2022"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('ORESAT0.5' vs 'ORESAT0.5')",
+        "launch date agrees (2024-08-16 vs 2024-08-16)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 60525,
+      "mission": "communications",
+      "name": "ORESAT0.5",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/DKCD-1609-0567-7056-3922"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('VIZARD-ION' vs 'Vizard-ion')",
+        "launch date agrees (2024-11-04 vs 2024-11-04)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 61749,
+      "mission": "communications",
+      "name": "VIZARD-ION",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/SQGD-2208-0540-4983-6683"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('INNOCUBE (TUBSAT-31)' vs 'INNOCUBE')",
+        "launch date agrees (2025-01-14 vs 2025-01-14)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 62616,
+      "mission": "communications",
+      "name": "INNOCUBE (TUBSAT-31)",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/IMIN-5614-5566-5816-9152"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('UND ROADS 1' vs 'UND ROADS 1')",
+        "launch date agrees (2025-06-23 vs 2025-06-23)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 64535,
+      "mission": "communications",
+      "name": "UND ROADS 1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/CGQM-1404-3051-5125-7571"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('UND ROADS 2' vs 'UND ROADS 2')",
+        "launch date agrees (2025-06-23 vs 2025-06-23)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 64549,
+      "mission": "communications",
+      "name": "UND ROADS 2",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/BZMH-1691-0385-6822-7921"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name differs ('TOMORROW-S8' vs 'CEVROSAT-1')",
+        "launch date agrees (2025-11-02 vs 2025-11-02)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 66308,
+      "mission": "communications",
+      "name": "TOMORROW-S8",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/OKGA-8851-7796-3537-9901"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('HUNITY-1' vs 'HUNITY')",
+        "launch date agrees (2025-11-28 vs 2025-11-28)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 66670,
+      "mission": "communications",
+      "name": "HUNITY-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/LLEW-4775-7241-6889-7282"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('BLACKCAT' vs 'BlackCAT')",
+        "launch date agrees (2026-01-11 vs 2026-01-11)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 67369,
+      "mission": "science",
+      "name": "BLACKCAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/ZJAA-2480-3107-6868-7733"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('UITMSAT' vs 'UiTMSAT-2')",
+        "launch date differs (1998-11-20 vs 2025-10-26)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 67686,
+      "mission": "communications",
+      "name": "UITMSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/GTCB-7495-2132-2852-9491"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('TEN-KOH 2' vs 'Ten-Koh 2')",
+        "launch date differs (2025-10-26 vs 2025-10-21)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68261,
+      "mission": "communications",
+      "name": "TEN-KOH 2",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/BLJD-2583-9512-2426-1509"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('EMISAR' vs 'EMISAR')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Space Research'"
+      ],
+      "id": 68427,
+      "mission": "science",
+      "name": "EMISAR",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Space Research service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Space Research",
+      "source": "https://db.satnogs.org/satellite/DOFN-8999-9141-5844-0576"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('DISCO-2' vs 'DISCO-2')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68431,
+      "mission": "communications",
+      "name": "DISCO-2",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/HWUY-3165-6126-0472-2513"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name differs ('AIGLONSAT-1' vs 'VEGAFLY-1')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68437,
+      "mission": "communications",
+      "name": "AIGLONSAT-1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/LPUU-9270-2724-3685-4470"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('HADES-SA (SPINNYONE)' vs 'HADES-SA')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68446,
+      "mission": "communications",
+      "name": "HADES-SA (SPINNYONE)",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/MIAF-5680-8845-1005-1215"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('PARUS-6U1' vs 'PARUS-6U1')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68456,
+      "mission": "communications",
+      "name": "PARUS-6U1",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/SXGC-2824-2222-8971-3473"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('AEPEX' vs 'AEPEX')",
+        "launch date agrees (2026-03-30 vs 2026-03-30)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68506,
+      "mission": "communications",
+      "name": "AEPEX",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/ROGL-5396-9562-5275-1160"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('CANVAS' vs 'CANVAS')",
+        "launch date agrees (2026-04-07 vs 2026-04-07)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68635,
+      "mission": "communications",
+      "name": "CANVAS",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/GLFY-8231-7125-4883-6529"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('ORIGAMISAT-2' vs 'OrigamiSat-2')",
+        "launch date agrees (2026-04-23 vs 2026-04-23)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 68795,
+      "mission": "communications",
+      "name": "ORIGAMISAT-2",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/FDQL-7890-4040-6919-7625"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('FRONTIERSAT' vs 'FrontierSat')",
+        "launch date agrees (2026-05-03 vs 2026-05-03)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 69015,
+      "mission": "communications",
+      "name": "FRONTIERSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/GGCH-4346-1583-9419-5634"
+    },
+    {
+      "checkedAt": "2026-08-19T08:02:25Z",
+      "evidence": [
+        "name agrees ('MARMOTSAT' vs 'MARMOTSat')",
+        "launch date agrees (2026-07-07 vs 2026-07-07)",
+        "all active transmitters filed under ITU service 'Amateur'"
+      ],
+      "id": 69912,
+      "mission": "communications",
+      "name": "MARMOTSAT",
+      "purpose": "The public catalog does not identify this spacecraft's payload. What is on record is its radio licence: its transmitters are filed under the ITU Amateur service in the SatNOGS community database, which is what its operator told a regulator it would use the spectrum for. That is evidence about what it does, and it is not a mission statement from whoever flies it.",
+      "service": "Amateur",
+      "source": "https://db.satnogs.org/satellite/HPYK-4830-8894-4849-3491"
+    }
+  ],
+  "note": "Generated by pipeline/satnogs_verify.py. A mission for objects the catalog says NOTHING about, derived from the single ITU radio service their transmitters are filed under. Never applied over any other evidence, and the sentence on the card says it is a licence."
+}

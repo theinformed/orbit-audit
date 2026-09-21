@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "selection": "Supplemental convenience audits selected from raise identities while extraction ran, before cadence outcomes; not a representative validation sample.",
+  "objects": {
+    "24786": {
+      "name": "GOES 10",
+      "from": "2009-12-01",
+      "toExclusive": "2009-12-02",
+      "precision": "day",
+      "event": "NOAA decommissioning, not a thruster firing timestamp",
+      "source": "https://www.ncei.noaa.gov/products/goes-1-15/space-weather-instruments",
+      "evidence": "NOAA's mission documentation dates decommissioning to 1 December 2009.",
+      "retrievedAt": "2026-09-20"
+    },
+    "25004": {
+      "name": "ECHOSTAR 3",
+      "from": "2017-08-01",
+      "toExclusive": "2017-09-01",
+      "precision": "month",
+      "event": "Operator-declared retirement after regaining control",
+      "source": "https://www.sec.gov/Archives/edgar/data/1415404/000141540417000050/sats09301710qdocument.htm",
+      "evidence": "The operator's Q3 2017 filing reports recovery of communications/control and retirement in August 2017.",
+      "inclinedOperationsSource": "https://ir.echostar.com/news-releases/news-release-details/echostar-iii-satellite-experiences-anomaly-during-move",
+      "inclinedOperationsEvidence": "The 2 August 2017 operator release reports more than three years of prior inclined operation.",
+      "retrievedAt": "2026-09-20"
+    }
+  }
+}

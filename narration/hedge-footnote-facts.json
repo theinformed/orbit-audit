@@ -1,0 +1,81 @@
+{
+  "note": "THE ONLY THING A MODEL EVER SEES ABOUT THE CLASSIFICATION FOOTNOTE. One row per KIND of uncorroborated label the site can draw, never one row per spacecraft: there are eight kinds and 1,559 marked cards, and a footnote written per card would be 1,559 chances to say something the facts do not support. Every sentence below is a restatement of what pipeline/build_release.py actually recorded for that basis, and of CLASSIFICATION_BASIS_EVIDENCE in src/main.ts, which is the sentence already printed on the card as 'Category evidence'. `what` and `notChecked` are the MATERIAL. `mustBelieve` and `mustNotBelieve` are TESTS on the finished footnote, not sentences to print - the first live run (2026-08-27) printed all four as four sentences in order, blew every word budget, and read like a form, which is why the last two are named the way they are now.",
+  "deterministicFallbackIsAbsentOnPurpose": "The sentence that ships when the model is down is NOT in this file. Shown its own fallback, a model hands it straight back: the result passes every gate, because it is made of these facts, and ships marked as model-written while the model authored nothing. narration/build_hedge_footnotes.py composes the fallback from `what` + `notChecked`, and refuses to mark a line as model-written if it comes back as that composition.",
+  "takenFrom": "src/main.ts CLASSIFICATION_BASIS_EVIDENCE / CORROBORATED_BASES / classificationChipEvidence, and the live catalog at public/data/artifacts/catalog-574094c018fc8cd5.json",
+  "audience": "A reader who has just noticed an asterisk on a label and wants to know what it means. Not a specialist.",
+  "keys": [
+    {
+      "key": "name-pattern",
+      "what": "The label comes from this spacecraft's name matching the naming pattern of a known programme.",
+      "notChecked": "Nothing about this individual spacecraft was checked against an operator, a government or an independent observer.",
+      "mustBelieve": "Spacecraft named into this programme do this job.",
+      "mustNotBelieve": "That anyone outside this site has confirmed the job for this particular spacecraft.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    },
+    {
+      "key": "assessed",
+      "what": "Named independent analysts worked out what this spacecraft is for, from its orbit and its launch.",
+      "notChecked": "No operator and no government has published what this spacecraft is for.",
+      "mustBelieve": "The site is repeating a published assessment made by analysts who never had official confirmation either.",
+      "mustNotBelieve": "That the country flying the spacecraft has said what it does.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    },
+    {
+      "key": "assessed-low",
+      "what": "Named independent analysts worked out what this spacecraft is for, from its orbit and its launch.",
+      "notChecked": "No operator and no government has published what this spacecraft is for, and the reviewer who recorded the analysts' reading here marked the answer as still unsettled.",
+      "mustBelieve": "The site is repeating the best published reading of a spacecraft nobody has explained.",
+      "mustNotBelieve": "That the reading is settled, or that the country flying the spacecraft has said what it does.",
+      "wordAim": 45,
+      "wordCeiling": 65
+    },
+    {
+      "key": "source-group",
+      "what": "The label comes from the category the orbit catalogue files this object under.",
+      "notChecked": "Nothing was checked against the spacecraft itself.",
+      "mustBelieve": "One catalogue sorts this object into this category.",
+      "mustNotBelieve": "That anybody examined this spacecraft and agreed with that sorting.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    },
+    {
+      "key": "withdrawn-name-collision",
+      "what": "This spacecraft's name matched a known programme.",
+      "notChecked": "Two independent sources say that name belongs to a different spacecraft, so the match was withdrawn and nothing replaced it.",
+      "mustBelieve": "The label is the one the catalogue offers, and the site does not stand behind it.",
+      "mustNotBelieve": "That this object is the spacecraft the name points at.",
+      "wordAim": 40,
+      "wordCeiling": 65
+    },
+    {
+      "key": "unclassified",
+      "what": "No source this site consulted establishes what this spacecraft is for.",
+      "notChecked": "No operator filing, no independent observation and no analyst's reading was found for it.",
+      "mustBelieve": "The label above is a placeholder for an object the site could not identify.",
+      "mustNotBelieve": "That this is what the spacecraft does.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    },
+    {
+      "key": "low-confidence",
+      "what": "A rule written for this specific object put the label on it.",
+      "notChecked": "The reviewer who wrote that rule recorded that the answer is still not settled, which is why the mark stays.",
+      "mustBelieve": "The label is this site's own reading of the object, written down as unsure.",
+      "mustNotBelieve": "That the reading is settled.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    },
+    {
+      "key": "unknown",
+      "what": "This release does not record how the label was arrived at.",
+      "notChecked": "Nothing is recorded as having been checked against this spacecraft.",
+      "mustBelieve": "The label is carried forward from the catalogue as it was found.",
+      "mustNotBelieve": "That anything about it has been checked.",
+      "wordAim": 40,
+      "wordCeiling": 60
+    }
+  ],
+  "budgetNote": "TWO NUMBERS, BECAUSE ONE NUMBER WAS A LIE. The first live runs were given a single `wordBudget` of 40 and landed at 42-56 words, writing exactly the two-sentence footnote that was asked for. Enforcing 40 would have thrown away eight good footnotes over a number nobody had checked against real output; quietly enforcing 60 while the prompt said 40 is the gate-disagrees-with-the-prompt trap that the layer-narration lane paid for on its first day. So `wordAim` is the length to write to and `wordCeiling` is the number narration/build_hedge_footnotes.py actually enforces, and the prompt says both."
+}

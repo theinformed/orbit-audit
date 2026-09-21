@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "tools/layer-media/thermosphere.json": "ee9498e86d525001bfddd45d5b4cde5491f5b6a47bf9361d32bc3583412823f6",
+    "tools/layer-media/thermosphere.py": "c368c23899a0cea07cb820af200b5f18990097a182fb84c7d7a6d08c8f760fed",
+    "tools/layer-media/build.py": "14ac01b0d170375d6d9a7bae6c8823a577e88626291f3c5a4891d186b1470262"
+  },
+  "outputs": {
+    "src/media/thermosphere.mp4": "0ee45bdd5c685c03cba1e27edca7a1a94d2cf38509eefa29c8cfab96bf7959db",
+    "src/media/thermosphere.webp": "4bd512a97b147b8182105d2f116022bef36612c6c379d1405764e5782f649ab8"
+  },
+  "samples": [
+    {
+      "second": 0,
+      "ocr": "THERMOSPHERE -: 120-1,000 km Nearly seven orders of magnitude Altitude (km) 1000 @ 2-07 X105> 6.74 decades Density ratio ~ 5.44 million 700 Three dots: WAM model values Dashed line: 420 \u201c B8oar log-linear interpolation . s . Highlight order is a teaching aid; 120 1.67x10\u00b08. it does not represent changing air. -15 -13 -11 9 8 Source: NOAA Whole Atmosphere Model logio density (kg m-3) SCHEMATIC - model reference points, no time axis No frame measures a particular moment."
+    },
+    {
+      "second": 8,
+      "ocr": "THERMOSPHERE : 120-1,000 km Nearly seven orders of magnitude Altitude (km) 1000 e 3-07x10-% 6.74 decades Density ratio =~ 5.44 million 700 Three dots: WAM model values Dashed line: 420 \u201cwz 50x10- log-linear interpolation . S . Highlight order is a teaching aid; 120 1.67x10\u00b08. it does not represent changing air. -15 -13 -11 9 -8 Source: NOAA Whole Atmosphere Model log1o density (kg m-3) SCHEMATIC - model reference points, no time axis No frame measures a particular moment."
+    },
+    {
+      "second": 20,
+      "ocr": "THERMOSPHERE - 120-1,000 km Nearly seven orders of magnitude Altitude (km) 1000 @Poro\u201d\u2122 6.74 decades Density ratio = 5.44 million 700 Three dots: WAM model values Dashed line: 420 9 2aoe\u2122 log-linear interpolation . . s Highlight order is a teaching aid; 120 1.67x10\u00b08. it does not represent changing air. -5 -13 -11 9) -8 Source: NOAA Whole Atmosphere Model log1o density (kg m-3) SCHEMATIC - model reference points, no time axis No frame measures a particular moment."
+    }
+  ],
+  "posterOcr": "THERMOSPHERE : 120-1,000 km Nearly seven orders of magnitude Altitude (km) 1000 eo OL XT 05S 6.74 decades Density ratio = 5.44 million 700 Three dots: WAM model values Dashed line: 420 log-linear interpolation \u201cwz 5ox10\u2122 . 5 5 Highlight order is a teaching aid; 120 1.67x10\u00b08. it does not represent changing air. -15 -13 -11 -9 -8 Source: NOAA Whole Atmosphere Model log1o density (kg m-3) SCHEMATIC - model reference points, no time axis No frame measures a particular moment.",
+  "durationSeconds": 20.9
+}

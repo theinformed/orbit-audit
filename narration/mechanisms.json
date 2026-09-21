@@ -1,0 +1,348 @@
+{
+ "name": "Mechanism library narration",
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "note": "One line per THOUGHT, Quebec-style: the voice says the point the caption is making, extends it with what the caption had no room for, and picks up the previous line's last idea BY NAME. Lines are grouped by scene and in spoken order, because narrate.py starts a new stitching chain wherever `scene` changes. THE OLD RULE HERE WAS THE OPPOSITE and it is retired -- see `retiredRule`.",
+ "lines": [
+  {
+   "id": "mech-01-open",
+   "scene": "Reconnection",
+   "at": 0.35,
+   "seed": 101,
+   "note": "Opening line, over the title card and the bubble being drawn. Sets the question the clip answers and hands the next line the thing it is about to name: 'one thing', which is not the wind's strength.",
+   "text": "Earth holds a magnetic bubble, and the solar wind spends all day trying to open it. Whether it succeeds comes down to one thing, and it is not how hard the wind is blowing."
+  },
+  {
+   "id": "mech-01-direction",
+   "scene": "Reconnection",
+   "anchor": 1,
+   "seed": 101,
+   "note": "Picks up 'one thing' and names it. Runs across the caption that says everything depends on which way the field points and the one that says 'Look at the nose', because they are one thought. The L1 sentence is NOT on the frame: it is the extension the picture cannot hold, and it is why Bz is a number an operator watches rather than a number in a textbook.",
+   "text": "It is which way the field inside the wind is pointing, and no picture of the Sun tells you that in advance. The only instrument that knows sits an hour upstream at L1. Watch the nose."
+  },
+  {
+   "id": "mech-01-quiet-case",
+   "scene": "Reconnection",
+   "anchor": 3,
+   "seed": 101,
+   "note": "Picks up 'the nose'. Runs over the zoomed inset while Earth's northward field is drawn and the arriving field is drawn northward beside it. Says the consequence the frame cannot: pressure still couples, energy does not. It must END before the flip at 35.1 s, because from there the picture is the other case.",
+   "text": "At the nose the two fields are pressed hardest together. Point the arriving field north, the way Earth's already points, and they slide past with the energy left outside."
+  },
+  {
+   "id": "mech-01-only-door",
+   "scene": "Reconnection",
+   "anchor": 7,
+   "seed": 101,
+   "note": "Picks up 'the arriving field' and turns it over, on the frame where it is turned over. Covers the antiparallel case, the break and the rejoin. 'The only door' is the claim the rest of the site's chain depends on, and it is not drawable.",
+   "text": "Turn that field over and the two lie exactly opposed. Fields that meet head on break and rejoin across the join, and the new lines carry both. This is the only door."
+  },
+  {
+   "id": "mech-01-catapult",
+   "scene": "Reconnection",
+   "anchor": 10,
+   "seed": 101,
+   "note": "Picks up 'door'. The frame here straightens the two kinked lines and flings them apart, then zooms out and drags the open ends over the poles - so the catapult, the loose end and the pole are all shown while this is spoken.",
+   "text": "Through that door the new line comes out bent, and a bent line straightens like a catapult. That is the energy release. One end is loose in the wind now, and the wind drags it over the pole."
+  },
+  {
+   "id": "mech-01-growth-phase",
+   "scene": "Reconnection",
+   "anchor": 14,
+   "seed": 101,
+   "note": "Picks up 'over the pole'. The tail loading is drawn; its DURATION is not, and the hour of storage is what makes a substorm growth phase something an operator can watch. Ends by handing the nose's geometry to the tail, which is the next frame.",
+   "text": "They stack up in the tail, and the tail holds that load for the better part of an hour before it lets go. That wait is the substorm growth phase. Far down it the lobes lie opposed the same way."
+  },
+  {
+   "id": "mech-01-loop",
+   "scene": "Reconnection",
+   "anchor": 16,
+   "seed": 101,
+   "note": "Picks up 'lie opposed the same way' with 'so it breaks a second time'. Covers the tail reconnection, the injection, the ring current and the sunward return - all four are drawn in this stretch. Closes the loop the title card opened.",
+   "text": "So it breaks a second time, and this time the plasma is thrown back at the planet. That injection lights the aurora and feeds the ring current, and the emptied line drifts round to the dayside to start again."
+  },
+  {
+   "id": "mech-02-open",
+   "scene": "Chapman",
+   "at": 0.35,
+   "seed": 101,
+   "note": "Opening line, over the title card and the first axes. Promises the argument is short, which is the clip's actual selling point, and hands the next line the column it happens in.",
+   "text": "Every ionised layer above you comes out of one argument, and it is short enough to follow all the way down. Here is the column it happens in."
+  },
+  {
+   "id": "mech-02-two-gradients",
+   "scene": "Chapman",
+   "anchor": 1,
+   "seed": 101,
+   "note": "Picks up 'the column'. Spans the light curve, the air curve and the multiplication - three captions, one thought. States the two opposing gradients and why their product must peak, which is the whole mechanism; the frame draws it one piece at a time.",
+   "text": "Two quantities in that column run opposite ways. Light is strongest where it arrives and is spent on the way down; air is thinnest at the top and thickens downward. Their product has to peak in between."
+  },
+  {
+   "id": "mech-02-optical-depth",
+   "scene": "Chapman",
+   "anchor": 4,
+   "seed": 101,
+   "note": "Picks up 'peak'. The frame draws the peak as the product of two curves and marks it THE PEAK. The criterion that fixes its altitude is one number and is not on the frame; it is also the number that fixes the visible edge of a star, which hands the Sun to the next line.",
+   "text": "That peak is the compromise: light without air at the top, air without light at the bottom. It sits at optical depth one, and the same criterion draws the visible edge of the Sun."
+  },
+  {
+   "id": "mech-02-slant",
+   "scene": "Chapman",
+   "anchor": 6,
+   "seed": 101,
+   "note": "Picks up 'the Sun' and moves it. Runs over the whole sunset sweep, where the readout climbs from 0 to 80 degrees and the peak marker climbs and shrinks with it - so 'climbs and thins' is shown, not asserted. Heads off the obvious misreading, that the atmosphere is changing.",
+   "text": "Now drop that Sun toward the horizon. Nothing about the air changes, only the angle the light arrives at. A slanted beam crosses more air to reach the same altitude, so the peak climbs and thins."
+  },
+  {
+   "id": "mech-02-layers",
+   "scene": "Chapman",
+   "anchor": 8,
+   "seed": 101,
+   "note": "Picks up 'the peak' as 'that argument'. The frame has switched to a real daytime electron-density profile with D, E, F1 and F2 marked. Short line, and deliberately so: it is the hinge between the single-curve half and the day/night half.",
+   "text": "Run that same argument at other wavelengths, in other gases, and you have D, E and F1 - three layers out of one balance."
+  },
+  {
+   "id": "mech-02-bands-open",
+   "scene": "Chapman",
+   "anchor": 10,
+   "seed": 101,
+   "note": "Picks up 'D, E and F1'. Covers the sunset collapse, the shortwave conclusion, the F2 caveat block that is on the frame at this point, and the end card. Connects the D-region collapse to the thing an operator notices and hands off to the HF clip.",
+   "text": "At sunset production stops and D collapses within minutes, and the absorption that held the low bands down all day goes with it. F2 is the exception: it sits above the peak of production, shaped by slow loss."
+  },
+  {
+   "id": "mech-03-open",
+   "scene": "HF",
+   "at": 0.35,
+   "seed": 101,
+   "note": "Over the title card, the ground, and the three layers appearing. Opens the story rather than announcing the clip, and names the two things the rest of the line will hand on: the space between transmitter and layers, and the flare that acts on it.",
+   "text": "One transmitter on the ground, and three ionised layers stacked above it. Everything this circuit can reach, and everything a flare can take away from it, is decided in the space between those two."
+  },
+  {
+   "id": "mech-03-one-hop",
+   "scene": "HF",
+   "anchor": 2,
+   "seed": 101,
+   "note": "Picks up 'that space' from the opening line and spends it. Runs across three captions - the ground wave, the one hop, and the skip zone - because they are one thought and splitting them into three lines is what produced the label-reading Sean rejected. 'Band', not 'ring': the frame is a side-on cut and does not show a ring.",
+   "text": "Some of the power never gets into that space. It crawls along the ground and dies. The rest goes up, is turned back by the F2 layer, and lands two thousand miles away, with a band of silent ground in between."
+  },
+  {
+   "id": "mech-03-ceiling",
+   "scene": "HF",
+   "anchor": 6,
+   "seed": 101,
+   "note": "Picks up 'band' and moves it, then arrives at the ceiling. The picture at this point replaces 7 MHz with 14 MHz landing further out, then 28 MHz leaving through F2 with the MUF callout - so the band WIDENS with frequency, which is the direction the geometry actually goes.",
+   "text": "Raise the frequency and that band widens: the ray goes deeper before it turns, and lands further out. Push too far and the layer cannot turn it back. That limit is the ceiling."
+  },
+  {
+   "id": "mech-03-sponge",
+   "scene": "HF",
+   "anchor": 9,
+   "seed": 101,
+   "note": "Carries 'ceiling' into the flare half instead of restarting at 'Now a flare goes off'. Top of the path is F2 at 300 km and the bottom is D at 80 km, both drawn to scale against each other in the frame, so the top/bottom contrast is shown and not asserted. 'Swallows the low frequencies hardest' is the caption's one-over-frequency-squared said as a consequence.",
+   "text": "That ceiling belongs to the top of the path. What a flare attacks is the bottom. Its X-rays cross in eight minutes, stop in the D region, and turn D from a mirror into a sponge that swallows the low frequencies hardest."
+  },
+  {
+   "id": "mech-03-window",
+   "scene": "HF",
+   "anchor": 12,
+   "seed": 101,
+   "note": "The frame changes here to the frequency-versus-time chart with the MUF ceiling, the LUF floor and the usable band between them. The line narrates that change as it happens and reuses 'ceiling' a third time, which is what makes the clip feel like one person telling one story.",
+   "text": "Draw the path as a window and watch it happen. The ceiling is the highest frequency that still comes back, the floor the lowest that gets through, and the flare lifts only the floor."
+  },
+  {
+   "id": "mech-03-blackout",
+   "scene": "HF",
+   "anchor": 15,
+   "seed": 101,
+   "note": "Over the floor meeting the ceiling and the BLACKOUT card. Ends on the thing an operator needs and the frame cannot hold: reported as a fault, this wastes a maintenance cycle, because nothing is broken and it clears on its own.",
+   "text": "When the floor reaches the ceiling there is no window left. Nothing is broken: the D region recombines within the hour and the path comes back on its own."
+  },
+  {
+   "id": "mech-04-open",
+   "scene": "Trapped",
+   "at": 0.35,
+   "seed": 101,
+   "note": "Opening line, over the title card and the field line being drawn. Sets up three motions without naming the ring current or Dst, which are the clip's payoff.",
+   "text": "A particle caught on a field line is tied to it as it spirals, and free to move along it, around it, and slowly the whole way round the planet. Three motions, and they barely touch each other."
+  },
+  {
+   "id": "mech-04-flat-frame",
+   "scene": "Trapped",
+   "anchor": 1,
+   "seed": 101,
+   "note": "Picks up 'three motions' with 'the fastest of them'. The known defect of this scene, said out loud while it is on screen: a helix drawn in a plane is a sawtooth. The honest move is to name it rather than hope nobody notices.",
+   "text": "The fastest of them is the one a flat frame cannot draw. The real path wraps the line thousands of times, so the gyration reads as a sawtooth."
+  },
+  {
+   "id": "mech-04-bounce",
+   "scene": "Trapped",
+   "anchor": 2,
+   "seed": 101,
+   "note": "Picks up 'the gyration' with 'the second motion'. The mirror points are labelled on the frame while this plays. Says the turn is geometric, since a viewer's first guess is that something hit it.",
+   "text": "The second motion is the bounce. Toward the feet the field crowds together and turns the particle by shape alone, not by collision, and it runs between those mirror points until something scatters it."
+  },
+  {
+   "id": "mech-04-drift",
+   "scene": "Trapped",
+   "anchor": 4,
+   "seed": 101,
+   "note": "Picks up 'runs between' with 'the third'. The frame switches to the polar view here and the two dots walk opposite ways round the planet over four and a half seconds, so the opposite directions are shown before the caption names them.",
+   "text": "The third is the slow one. The field weakens outward, and that walks the particle the whole way round the planet in hours - but ions walk west and electrons walk east."
+  },
+  {
+   "id": "mech-04-why-they-add",
+   "scene": "Trapped",
+   "anchor": 6,
+   "seed": 101,
+   "note": "Picks up 'west' and 'east'. The caption two beats later asserts they add. This says WHY, which is the one piece of the clip a viewer cannot get from the picture: reversing charge and velocity together leaves the current unchanged.",
+   "text": "Opposite charges going opposite ways would normally cancel. These do not: current is charge times velocity, and reversing both leaves the current pointing one way."
+  },
+  {
+   "id": "mech-04-dst-measured",
+   "scene": "Trapped",
+   "anchor": 9,
+   "seed": 101,
+   "note": "Picks up 'the current'. States the sign, which is what makes the trace read correctly, then says the trace is measured - required, not decorative, because a curve inside a schematic frame would otherwise be read as another drawing. The frame badges it MEASUREMENT and prints the Kyoto provenance and the minimum. 'Dst' is respelled to 'D S T' by the lexicon: rendered as written it came back 'deist'.",
+   "text": "So one westward current wraps the planet, and a westward current above you subtracts from the field beneath it. That dip is Dst, and the trace here is measured, not drawn: Kyoto's hourly index through the Halloween storm of 2003."
+  },
+  {
+   "id": "mech-05-open",
+   "scene": "SAA",
+   "at": 0.35,
+   "seed": 101,
+   "note": "Opening line, over the title card and the Earth appearing. Promises the consequence without naming Brazil, which the clip reveals in its last caption, and hands the next line 'that patch'.",
+   "text": "Two things about Earth's field are not obvious from a picture of a bar magnet, and one of them is why a spacecraft has a bad patch it flies through several times a day."
+  },
+  {
+   "id": "mech-05-off-centre",
+   "scene": "SAA",
+   "anchor": 1,
+   "seed": 101,
+   "note": "Picks up 'bad patch'. The frame withholds which of the two things it means and then draws the offset with its 610 km dimension callout, which is on screen as this line says the number. Short slot - the next caption lands 9.2 s later.",
+   "text": "That patch comes out of the second one: the magnet that best fits Earth's field is not at its centre. It sits 610 kilometres off."
+  },
+  {
+   "id": "mech-05-sphere",
+   "scene": "SAA",
+   "anchor": 4,
+   "seed": 101,
+   "note": "Picks up '610 kilometres off' as 'that gap'. Spans the equal-field-surface construction. Turns the falls-off-with-distance rule into the picture it implies, which is the step a viewer has to make before the anomaly is obvious, and the frame draws the sphere off centre while it is said.",
+   "text": "Everything follows from that gap. Field strength falls off with distance from the magnet, not the Earth, so a surface of equal field strength rides off centre with it."
+  },
+  {
+   "id": "mech-05-lopsided",
+   "scene": "SAA",
+   "anchor": 7,
+   "seed": 101,
+   "note": "Picks up 'rides off centre'. Both altitude callouts are drawn and measured on the frame - 1 520 km on one side, 300 km on the other - and the '1 220 km apart, exactly twice the offset' block is on screen while this is spoken. Ends by handing the satellite to the next line, which is what the frame does next.",
+   "text": "Riding off centre means high on one side and low on the other: fifteen hundred kilometres up over there, three hundred over here, twice the offset between them. Now fly a spacecraft at five hundred kilometres through it."
+  },
+  {
+   "id": "mech-05-upsets",
+   "scene": "SAA",
+   "anchor": 9,
+   "seed": 101,
+   "note": "Picks up 'fly a spacecraft'. The geometry is the whole scene; the reason anyone cares about the geometry is not on the frame, and this is where it goes. The antipode and Brazil are both printed on the frame at this point.",
+   "text": "For most of a revolution it stays well under that shell; over one region it rises above it, and that region is the antipode of the offset, off Brazil. That is where a spacecraft is safed going in and switched on coming out."
+  },
+  {
+   "id": "mech-06-open",
+   "scene": "Drag",
+   "at": 0.35,
+   "seed": 101,
+   "note": "INTRO. Opening line, over the title card and the satellite's first lap. Defines the thermosphere. The altitude is deliberately in the SECOND sentence: the 400 km readout does not land until 6.6 s, and the plan's original order said the number while the title card was still up.",
+   "text": "Where a spacecraft flies there is still air — the outer wisp of the thermosphere, thin enough to ignore for one lap and impossible to ignore for a year. Four hundred kilometres up, what it does to an orbit is not what anyone expects."
+  },
+  {
+   "id": "mech-06-one-speed",
+   "scene": "Drag",
+   "anchor": 0,
+   "seed": 101,
+   "note": "INTRO. Picks up 'what it does'. The ALTITUDE/SPEED/PERIOD readout is on screen for the whole line; the voice points at it rather than reading its digits aloud, which is the diffusion-video lesson about numbers read out ridiculously. Defines period.",
+   "text": "What it does starts from a constraint: a circular orbit has one speed for each altitude, and one period — the time for one lap. The readout shows all three, and the orbit has no choice about any of them."
+  },
+  {
+   "id": "mech-06-thin-air",
+   "scene": "Drag",
+   "anchor": 1,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up the previous line by reference: 'that orbit' is the one that has no choice. IT USED TO SAY 'that no-choice orbit' AND MUST NOT AGAIN. Sean, 2026-08-27: \"I don't know what is meant by 'no choice orbit.' Is that what we mean to say? ... I want to make sure 'no-choice' is the right terminology and not some artifact.\" It was deliberate, not an artifact - but a compound adjective coins a term of art that does not exist, and a listener who stops to wonder whether a phrase is a mistake has already lost the sentence. The chain-of-nouns carry survives without the coinage. The coral DRAG arrow and the mint velocity arrow are both on the satellite through this line, which is what 'exactly opposite the motion' points at.",
+   "text": "Into that orbit put the thin air. Every pass costs energy: a drag force pointing backwards along the track, exactly opposite the motion."
+  },
+  {
+   "id": "mech-06-brake",
+   "scene": "Drag",
+   "anchor": 2,
+   "seed": 101,
+   "note": "EXPLANATION. Beat 2's caption is 'Backwards. So obviously it slows down.' The voice sets the trap up with it and then sends the eye to the readout, which is where the reveal happens. The plan's wording used 'obviously', which narrate.py's lint refuses as filler.",
+   "text": "Backwards, which can only mean one thing: it must slow the satellite down. That is every brake anyone has ever used. Watch the readout while the orbit shrinks."
+  },
+  {
+   "id": "mech-06-reveal",
+   "scene": "Drag",
+   "anchor": 3,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up 'the readout'. Anchored to the beat where the readout has already flipped to 300 km / 7 726 m/s / 90.5 min. Both spoken numbers are the difference between the two readouts the clip has drawn.",
+   "text": "It does not slow down. It ends up a hundred kilometres lower and fifty-seven metres a second faster — while drag is the only force taking energy out. Nothing is wrong with the arithmetic."
+  },
+  {
+   "id": "mech-06-accounting",
+   "scene": "Drag",
+   "anchor": 4,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up 'the arithmetic'. The hinge line: the zero line is drawn at this beat and the first bar lands as the line ends. Short on purpose, as the current script's shortest lines are.",
+   "text": "The arithmetic is the reason, and it is exact. Keep score in units of the energy drag removed, and draw the three bars."
+  },
+  {
+   "id": "mech-06-bars",
+   "scene": "Drag",
+   "anchor": 5,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up 'the three bars'. Spans beats 5, 6 and 7, and the holds on those beats are cut to this recording's own clause boundaries so that -1 is on screen at 'one unit out', -2 at 'worth two', +1 at 'into speed' and the v = root mu over r card at 'the equation closes the case'.",
+   "text": "Drag took one unit out. The orbit fell, and the height it gave up was worth two — one unit paid the drag, and the other had nowhere to go but into speed. The equation closes the case: speed is the square root of mu over r, so a smaller orbit is always a faster one."
+  },
+  {
+   "id": "mech-06-runaway",
+   "scene": "Drag",
+   "anchor": 8,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up 'a faster one'. The spiral is drawn UNDER the feedback clause rather than after it, and the REENTRY label lands on the word reentry. Names the feedback as having no equilibrium, which is what the caption spells out.",
+   "text": "Faster, and it does not settle, because lower means denser air, denser air means more drag, and more drag means lower still — a feedback with no equilibrium. The spiral is what that looks like, all the way to reentry."
+  },
+  {
+   "id": "mech-06-arrives-early",
+   "scene": "Drag",
+   "anchor": 10,
+   "seed": 101,
+   "note": "EXPLANATION. Picks up 'reentry'. ANCHORED TO A CAPTION BEAT THAT DID NOT EXIST BEFORE. The along-track ops block was drawn with no caption of its own, so the only beat available was the runaway caption before it, and this content used to be spoken from 7 s into that beat - by which time the ops block had already been replaced by the storm note. The block's own headline is now the caption, so the beat exists, the block is on the frame for the whole line, and no words were added to the picture. Defines along-track error. IT SAYS 'THE along-track error' AND NOT 'AN along-track error' ON PURPOSE: the 'an' version was rendered on 2026-08-27 and came back through speech-to-text as 'and a long track error'. Nobody can tell from a transcript whether the SYNTHESIS or the TRANSCRIBER split the word, so the ambiguous wording was retired rather than argued with; 'the along-track error' round-trips at 1.0.",
+   "text": "Long before reentry, what an operator notices is not the altitude. Each orbit is two minutes shorter, so the satellite arrives early, and the along-track error grows every single revolution."
+  },
+  {
+   "id": "mech-06-storm",
+   "scene": "Drag",
+   "anchor": 11,
+   "seed": 101,
+   "note": "WRAP-UP. THE BEAT THE PLAN NAMED. The storm note was a drawn visual with no caption, so no line could anchor to it and the frame's last statement was never spoken. Its first sentence is now the caption, which creates the beat without adding a word to the picture. Lands the operational consequence rather than summarising.",
+   "text": "And the air is not constant. A geomagnetic storm heats the thermosphere, density at orbit height jumps, and drag jumps with it — for everything in low orbit at once. After a storm, the whole catalogue runs slightly ahead of its own predictions."
+  }
+ ],
+ "retiredRule": {
+  "rule": "The captions are burned into the frame and are good, so the voice never reads them. It says the thing the frame cannot hold. The rest is silence on purpose.",
+  "retired": "2026-08-27, by Sean.",
+  "why": "The rule was followed exactly and it produced fifteen lines for seventy-nine caption beats across six minutes of picture. Measured on the delivered files: speech covered 18 to 37 percent of each clip, and the voice first arrived 40.8 s into a 79.1 s clip, 36.6 s into 66.0 s, and 35.4 s into 60.5 s. Sean, watching one of them: 'my voice is missing from parts of the videos ... It is bad.' Nothing was broken. The silence was working as designed, and the design was wrong.",
+  "whatReplacedIt": "Quebec, which Sean singled out as the clip that works, breaks the old rule on every line: it says the caption's point and then extends it. Quebec runs 14.2 characters of narration per second of clip and this lane ran 4.6. Matching Quebec is the standard now.",
+  "doNotReinstate": "Restoring the rule restores the defect. If a beat has nothing worth saying, the answer is a shorter clip, not a silent one.",
+  "captionsStay": "Sean asked whether the captions were still needed. They are: they are the accessibility floor for a deaf reader, they are what makes a clip work with the sound off, and they survive a screenshot because they are burned in. Quebec proves voice and captions coexist. Write with the caption, not against it -- never contradict one, never read one back flat."
+ },
+ "seedNote": "New lines carry seed 101, the seed already proven in narration/pronunciation-lexicon.json. Without a seed the same text is pronounced two different ways between renders, so a re-render of one line would no longer match the take that was listened to. The original fifteen lines predate this practice and are left as rendered: re-rendering them to add a seed would cost characters and change audio nobody has complained about.",
+ "theShape": {
+  "what": "All six scenes are now written in Quebec's shape. hf-skip-blackout was rewritten first, on 2026-08-27, and the other five followed once Sean had a clip to judge.",
+  "why": "Sean rejected all six mechanism clips on 2026-08-27: 'the content is just weird. it is cringy. There isn't any flow in the things that I'm saying. Nothing has a good transition. I'm not talking like a person that is speaking to an audience about what is happening before their eyes. It is like I'm basically reading bullet points.' He loves the Quebec 1989 GIC clip, which is the same voice, the same model and the same renderer.",
+  "theDifference": "Quebec is 7 lines, median 205 characters, and every line picks up a noun from the one before: 'a few volts per kilometre' -> 'Multiply a few volts per kilometre by...' -> 'THAT CURRENT is nearly direct'. The mechanism scenes were 44 lines, median 152, each PINNED TO ITS OWN CAPTION BEAT, so nothing could carry. It is a writing difference, not a rendering difference.",
+  "theRule": "Fewer lines, each longer, each anchored to the caption where its THOUGHT starts rather than to every caption it plays over. A line is allowed to run across three captions. Open by picking up the previous line's last idea by name.",
+  "sizeCheck": "Reconnection 7 lines / median 183 / 14.8 characters per second of clip; Chapman 6 / 187 / 15.1; HF 6 / 197 / 14.4; Trapped 6 / 170 / 15.1; SAA 5 / 168 / 15.0. Quebec is 14.2 and the rejected lane was 4.6. DRAG WAS RE-WRITTEN ON 2026-08-27 UNDER docs/PLAN-video-expansion.md and is now 10 lines / median 203 / about 14.9 per second of a longer clip - the pilot for the other five.",
+  "doNotSplit": "Do not split these back into one line per beat to 'improve alignment'. That is the rule already retired in retiredRule, arriving by a different door. Alignment is fixed by moving the PICTURE - widening a hold, or giving a voiceless visual a caption of its own - not by chopping the voice into caption-sized pieces.",
+  "theAB": "HF is rendered at stability 0.45 / similarity 0.80 and the other five at 0.62 / 0.75, which Sean chose in a blind pairwise tournament. That is deliberate and it is the only difference left between them: HF isolates the WRITING change, and the other five add the dials on top of it. Do not re-render HF to 'make them consistent' without Sean saying so - it would destroy the comparison and re-bill 1 136 characters.",
+  "expansion": "Drag is the pilot for the expansion plan (docs/PLAN-video-expansion.md). Sean, 2026-08-27: the clips must 'cover the entire concept ... so that the video sort of stands alone', in the shape 'introduction of the topic, then explanation, then some sort of wrap up' - and 'my voice matches what is being drawn on the screen based on timing'. MORE LINES IS NOT THE RETIRED RULE COMING BACK. The retired lane was 44 fragments, median 152, each written to sit under one caption and stop. These are Quebec-shaped lines that still span one to three beats; what went up is COVERAGE per beat, not the number of thoughts per line. The holds in scene_06_drag.py are cut to this recording's own clause boundaries, so re-rendering a Drag line changes its length and the holds have to be re-checked against it."
+ }
+}

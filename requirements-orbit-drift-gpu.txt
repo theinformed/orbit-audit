@@ -1,0 +1,6 @@
+# Isolated .venv-gpu only; system NumPy and the release pipeline stay untouched.
+numpy==1.26.4
+cupy-cuda13x==13.6.0
+fastrlock==0.8.3
+nvidia-cuda-runtime==13.1.80
+nvidia-cuda-nvrtc==13.1.115

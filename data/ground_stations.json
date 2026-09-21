@@ -1,0 +1,2790 @@
+{
+  "schema": 1,
+  "policy": {
+    "militarySites": "excluded",
+    "militarySitesRationale": "Military ground sites are excluded from the first release. Individually their locations are public, but a single map that assembles them, marks their role and draws lines to the spacecraft they serve is a different artifact from the sum of its sources. This site is published under the name of a serving US information warfare officer, and every teaching payoff the feature exists for is already served by civil and scientific stations, which also publish the link. See docs/ground-stations-design.md section 2; the decision is the site owner's to revisit."
+  },
+  "attribution": "Station locations and satellite relationships are published by the operators and agencies cited on each record. NASA/JPL-Caltech (DSN 810-005), NASA Near Earth Network Users' Guide, NOAA/NESDIS, USGS/EROS.",
+  "stations": [
+    {
+      "id": "nasa-dsn-goldstone-dss14",
+      "name": "Goldstone DSS-14 (Mars)",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 35.425901,
+      "longitudeDeg": -116.889538,
+      "altitudeM": 1001,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 70,
+      "note": "Published geodetic position on WGS-84, quoted to 0.001 arcsec and 3 cm (1-sigma). Converted here from the source's degrees-minutes-seconds and 0-360 east longitude. Not the geocentric latitude published by the DSN Now config feed, which is about 20 km further south.",
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "nasa-dsn-goldstone-dss24",
+      "name": "Goldstone DSS-24",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 35.339893,
+      "longitudeDeg": -116.874794,
+      "altitudeM": 951,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 34,
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-dsn-goldstone-dss13",
+      "name": "Goldstone DSS-13 (Venus)",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech",
+      "operatorKind": "scientific",
+      "country": "United States",
+      "latitudeDeg": 35.247164,
+      "longitudeDeg": -116.794459,
+      "altitudeM": 1070,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 34,
+      "note": "Research and development antenna.",
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-dsn-madrid-dss63",
+      "name": "Madrid DSS-63",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech with INTA",
+      "operatorKind": "civil-agency",
+      "country": "Spain",
+      "latitudeDeg": 40.43121,
+      "longitudeDeg": -4.248009,
+      "altitudeM": 865,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 70,
+      "note": "At Robledo de Chavela, west of Madrid.",
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-dsn-madrid-dss53",
+      "name": "Madrid DSS-53",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech with INTA",
+      "operatorKind": "civil-agency",
+      "country": "Spain",
+      "latitudeDeg": 40.427084,
+      "longitudeDeg": -4.253404,
+      "altitudeM": 843,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 34,
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-dsn-canberra-dss43",
+      "name": "Canberra DSS-43",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech with CSIRO",
+      "operatorKind": "civil-agency",
+      "country": "Australia",
+      "latitudeDeg": -35.402424,
+      "longitudeDeg": 148.981267,
+      "altitudeM": 689,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 70,
+      "note": "At Tidbinbilla, south-west of Canberra. The only antenna that can command Voyager 2.",
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-dsn-canberra-dss34",
+      "name": "Canberra DSS-34",
+      "network": "NASA Deep Space Network",
+      "operator": "NASA / JPL-Caltech with CSIRO",
+      "operatorKind": "civil-agency",
+      "country": "Australia",
+      "latitudeDeg": -35.398479,
+      "longitudeDeg": 148.981964,
+      "altitudeM": 692,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 34,
+      "source": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+      "sourceName": "DSN Telecommunications Link Design Handbook 810-005 Module 301 Rev. P, Table 5",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA/JPL-Caltech; US Government sponsorship acknowledged."
+    },
+    {
+      "id": "nasa-nsn-wallops-wg1",
+      "name": "Wallops Ground Station WG1",
+      "network": "NASA Near Space Network",
+      "operator": "NASA",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 37.9249,
+      "longitudeDeg": -75.4765,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 11.3,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work, generally not subject to copyright in the United States."
+    },
+    {
+      "id": "nasa-nsn-white-sands-ws1",
+      "name": "White Sands WS1",
+      "network": "NASA Near Space Network",
+      "operator": "NASA",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 32.5048,
+      "longitudeDeg": -106.6108,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "Ka"
+      ],
+      "antennaDiameterM": 18.3,
+      "note": "NASA's own guide disagrees with itself here by about 300 m: the per-section degrees-minutes-seconds value differs from the Table 2-1 decimal value used here. Recorded as approximate for that reason.",
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work."
+    },
+    {
+      "id": "nasa-nsn-alaska-as1",
+      "name": "Alaska Satellite Facility AS1",
+      "network": "NASA Near Space Network",
+      "operator": "University of Alaska Fairbanks for NASA",
+      "operatorKind": "academic",
+      "country": "United States",
+      "latitudeDeg": 64.8587,
+      "longitudeDeg": -147.8576,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 11.3,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work."
+    },
+    {
+      "id": "nasa-nsn-mcmurdo",
+      "name": "McMurdo Ground Station MG1",
+      "network": "NASA Near Space Network",
+      "operator": "NASA",
+      "operatorKind": "civil-agency",
+      "country": "Antarctica",
+      "latitudeDeg": -77.8391,
+      "longitudeDeg": 166.6671,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 10,
+      "note": "NASA-owned and operated. A near-polar orbit is visible from here on almost every revolution, which is the whole reason a station exists at 78 degrees south.",
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work."
+    },
+    {
+      "id": "nasa-nsn-kennedy-uplink",
+      "name": "Kennedy Uplink Station",
+      "network": "NASA Near Space Network",
+      "operator": "NASA",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 28.542064,
+      "longitudeDeg": -80.642953,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "launch-range-tracking",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S"
+      ],
+      "antennaDiameterM": 6.1,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work."
+    },
+    {
+      "id": "ksat-svalsat",
+      "name": "Svalbard SG1 (SvalSat)",
+      "network": "KSAT global network / NASA Near Space Network",
+      "operator": "Kongsberg Satellite Services",
+      "operatorKind": "commercial",
+      "country": "Norway",
+      "latitudeDeg": 78.231,
+      "longitudeDeg": 15.389,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 11.3,
+      "note": "At 78 degrees north a sun-synchronous satellite is in view on every revolution, which is why the world's polar-orbiting weather and Earth-observation missions come here.",
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by KSAT."
+    },
+    {
+      "id": "ksat-trollsat",
+      "name": "Troll TR2 (TrollSat)",
+      "network": "KSAT global network / NASA Near Space Network",
+      "operator": "Kongsberg Satellite Services",
+      "operatorKind": "commercial",
+      "country": "Antarctica",
+      "latitudeDeg": -72.0022,
+      "longitudeDeg": 2.0575,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 7.3,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by KSAT."
+    },
+    {
+      "id": "ksat-punta-arenas",
+      "name": "Punta Arenas PA11",
+      "network": "KSAT global network / NASA Near Space Network",
+      "operator": "Kongsberg Satellite Services",
+      "operatorKind": "commercial",
+      "country": "Chile",
+      "latitudeDeg": -52.9,
+      "longitudeDeg": -70.9,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 11.3,
+      "note": "The source publishes this site to one decimal place only, so the position is good to about 10 km and is recorded as approximate rather than refined from elsewhere.",
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by KSAT."
+    },
+    {
+      "id": "ksat-singapore",
+      "name": "Singapore SI1",
+      "network": "KSAT global network / NASA Near Space Network",
+      "operator": "Kongsberg Satellite Services",
+      "operatorKind": "commercial",
+      "country": "Singapore",
+      "latitudeDeg": 1.3962,
+      "longitudeDeg": 103.8343,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 9.1,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by KSAT."
+    },
+    {
+      "id": "ssc-esrange-kiruna",
+      "name": "Kiruna KU1S (Esrange)",
+      "network": "SSC network / NASA Near Space Network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Sweden",
+      "latitudeDeg": 67.8896,
+      "longitudeDeg": 21.0657,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 13,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by SSC."
+    },
+    {
+      "id": "ssc-santiago-ago",
+      "name": "Santiago SA1 (AGO)",
+      "network": "SSC network / NASA Near Space Network",
+      "operator": "SSC Chile",
+      "operatorKind": "commercial",
+      "country": "Chile",
+      "latitudeDeg": -33.1511,
+      "longitudeDeg": -70.6664,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S"
+      ],
+      "antennaDiameterM": 9,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by SSC."
+    },
+    {
+      "id": "ssc-south-point-hawaii",
+      "name": "South Point USHI01, Hawaii",
+      "network": "SSC network / NASA Near Space Network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 19.014,
+      "longitudeDeg": -155.6633,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 13,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by SSC."
+    },
+    {
+      "id": "ssc-dongara",
+      "name": "Dongara AUWA01",
+      "network": "SSC network / NASA Near Space Network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Australia",
+      "latitudeDeg": -29.0457,
+      "longitudeDeg": 115.3487,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 13,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by SSC."
+    },
+    {
+      "id": "ssc-north-pole-alaska",
+      "name": "North Pole USAK01, Alaska",
+      "network": "SSC network / NASA Near Space Network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 64.8042,
+      "longitudeDeg": -147.5002,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 13,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work. Site operated commercially by SSC."
+    },
+    {
+      "id": "sansa-hartebeesthoek",
+      "name": "Hartebeesthoek HBK02",
+      "network": "SANSA / NASA Near Space Network",
+      "operator": "South African National Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "South Africa",
+      "latitudeDeg": -25.8869,
+      "longitudeDeg": 27.7067,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 10,
+      "source": "https://ntrs.nasa.gov/api/citations/20205005784/downloads/453NENUGRev5__clean_final_82420.pdf",
+      "sourceName": "NASA Near Earth Network Users' Guide 453-NENUG Rev. 5, Table 2-1",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "NASA; US Government work."
+    },
+    {
+      "id": "noaa-wallops-cda",
+      "name": "Wallops Command and Data Acquisition Station",
+      "network": "NOAA/NESDIS command and data acquisition",
+      "operator": "NOAA NESDIS Office of Satellite and Product Operations",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 37.946689,
+      "longitudeDeg": -75.458697,
+      "altitudeM": 23,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "command-and-control",
+        "data-downlink"
+      ],
+      "bands": [
+        "UHF",
+        "VHF",
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 26,
+      "note": "Position of the 26-metre antenna; NOAA publishes a full fourteen-antenna table for this site. Converted from the source's degrees-minutes-seconds and 0-360 east longitude.",
+      "source": "https://www.nesdis.noaa.gov/about/our-offices/office-of-satellite-and-product-operations-ospo/wallops-command-and-data-acquisition-station",
+      "sourceName": "NOAA NESDIS OSPO, Wallops Command and Data Acquisition Station",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "noaa-fairbanks-cda",
+      "name": "Fairbanks Command and Data Acquisition Station",
+      "network": "NOAA/NESDIS command and data acquisition",
+      "operator": "NOAA NESDIS Office of Satellite and Product Operations",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 64.976716,
+      "longitudeDeg": -147.517555,
+      "altitudeM": 316,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "command-and-control",
+        "data-downlink"
+      ],
+      "bands": [
+        "UHF",
+        "VHF",
+        "L",
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 26,
+      "note": "Position of the 26-metre antenna. NOAA's published table gives this antenna's east longitude as 12 degrees, which is in Italy; every other antenna on the same page reads 212 degrees, and USGS independently publishes this site as Gilmore Creek at 64.9764 N, 147.5208 W. The 212-degree reading is used here and the discrepancy is recorded rather than quietly corrected.",
+      "source": "https://www.nesdis.noaa.gov/about/our-offices/office-of-satellite-and-product-operations-ospo/fairbanks-command-and-data-acquisition-station-fcdas",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "noaa-utqiagvik",
+      "name": "Utqiagvik remote terminal",
+      "network": "NOAA/NESDIS command and data acquisition",
+      "operator": "NOAA NESDIS Office of Satellite and Product Operations",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 71.323611,
+      "longitudeDeg": -156.610875,
+      "altitudeM": 15,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "S"
+      ],
+      "antennaDiameterM": 5,
+      "source": "https://www.nesdis.noaa.gov/about/our-offices/office-of-satellite-and-product-operations-ospo/fairbanks-command-and-data-acquisition-station-fcdas",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "usgs-eros-sioux-falls",
+      "name": "EROS Center LGS, Sioux Falls",
+      "network": "Landsat Ground Network",
+      "operator": "US Geological Survey",
+      "operatorKind": "civil-agency",
+      "country": "United States",
+      "latitudeDeg": 43.7361,
+      "longitudeDeg": -96.6225,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "command-and-control",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "note": "The USGS archive itself, and one of the five Landsat Ground Network sites.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "ga-alice-springs",
+      "name": "Alice Springs ASN",
+      "network": "Landsat Ground Network",
+      "operator": "Geoscience Australia",
+      "operatorKind": "civil-agency",
+      "country": "Australia",
+      "latitudeDeg": -23.7589,
+      "longitudeDeg": 133.8822,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "dlr-neustrelitz",
+      "name": "Neustrelitz NSN",
+      "network": "Landsat Ground Network",
+      "operator": "German Aerospace Center (DLR)",
+      "operatorKind": "civil-agency",
+      "country": "Germany",
+      "latitudeDeg": 53.3297,
+      "longitudeDeg": 13.0725,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "ccmeo-prince-albert",
+      "name": "Prince Albert PAC",
+      "network": "Landsat International Cooperator",
+      "operator": "Canada Centre for Mapping and Earth Observation",
+      "operatorKind": "civil-agency",
+      "country": "Canada",
+      "latitudeDeg": 53.2125,
+      "longitudeDeg": -105.9336,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "isro-shadnagar",
+      "name": "Shadnagar SGI",
+      "network": "Landsat International Cooperator",
+      "operator": "Indian Space Research Organisation",
+      "operatorKind": "civil-agency",
+      "country": "India",
+      "latitudeDeg": 17.0283,
+      "longitudeDeg": 78.1884,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "conae-cordoba",
+      "name": "Cordoba COA",
+      "network": "Landsat International Cooperator",
+      "operator": "Comision Nacional de Actividades Espaciales",
+      "operatorKind": "civil-agency",
+      "country": "Argentina",
+      "latitudeDeg": -31.5242,
+      "longitudeDeg": -64.4636,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "inpe-cuiaba",
+      "name": "Cuiaba CUB",
+      "network": "Landsat International Cooperator",
+      "operator": "Instituto Nacional de Pesquisas Espaciais",
+      "operatorKind": "civil-agency",
+      "country": "Brazil",
+      "latitudeDeg": -15.5528,
+      "longitudeDeg": -56.0733,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-fucino",
+      "name": "Fucino FUI",
+      "network": "Landsat International Cooperator",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Italy",
+      "latitudeDeg": 41.9786,
+      "longitudeDeg": 13.6033,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-matera",
+      "name": "Matera MTI",
+      "network": "Landsat International Cooperator",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Italy",
+      "latitudeDeg": 40.65,
+      "longitudeDeg": 16.7,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-maspalomas",
+      "name": "Maspalomas MPS",
+      "network": "Landsat International Cooperator",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Spain",
+      "latitudeDeg": 27.7632,
+      "longitudeDeg": -15.6313,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-kiruna-kis",
+      "name": "Kiruna KIS",
+      "network": "Landsat International Cooperator",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Sweden",
+      "latitudeDeg": 67.8767,
+      "longitudeDeg": 21.0622,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-malindi",
+      "name": "Malindi MLK",
+      "network": "Landsat International Cooperator",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Kenya",
+      "latitudeDeg": -2.9956,
+      "longitudeDeg": 40.1945,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "gistda-si-racha",
+      "name": "Si Racha SRT",
+      "network": "Landsat International Cooperator",
+      "operator": "Geo-Informatics and Space Technology Development Agency",
+      "operatorKind": "civil-agency",
+      "country": "Thailand",
+      "latitudeDeg": 13.1012,
+      "longitudeDeg": 100.9281,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "jaxa-hatoyama",
+      "name": "Hatoyama HAJ",
+      "network": "Landsat International Cooperator",
+      "operator": "JAXA with RESTEC",
+      "operatorKind": "civil-agency",
+      "country": "Japan",
+      "latitudeDeg": 36.0036,
+      "longitudeDeg": 139.3481,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "upr-mayaguez",
+      "name": "Mayaguez UPR",
+      "network": "Landsat International Cooperator",
+      "operator": "University of Puerto Rico",
+      "operatorKind": "academic",
+      "country": "Puerto Rico",
+      "latitudeDeg": 18.2113,
+      "longitudeDeg": -67.1369,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "inegi-chetumal",
+      "name": "Chetumal CHM",
+      "network": "Landsat International Cooperator",
+      "operator": "Instituto Nacional de Estadistica y Geografia",
+      "operatorKind": "civil-agency",
+      "country": "Mexico",
+      "latitudeDeg": 18.5447,
+      "longitudeDeg": -88.2636,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "X"
+      ],
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "US Government work, public domain"
+    },
+    {
+      "id": "esa-estrack-cebreros",
+      "name": "Cebreros CEB-1 (DSA 2)",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Spain",
+      "latitudeDeg": 40.45269,
+      "longitudeDeg": -4.36755,
+      "altitudeM": 794,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 35,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Cebreros_-_DSA_2",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "esa-estrack-new-norcia",
+      "name": "New Norcia NNO-1 (DSA 1)",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Australia",
+      "latitudeDeg": -31.04823,
+      "longitudeDeg": 116.1915,
+      "altitudeM": 252,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 35,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Estrack_ground_stations",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "esa-estrack-kourou",
+      "name": "Kourou KRU-1",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "French Guiana",
+      "latitudeDeg": 5.25144,
+      "longitudeDeg": -52.80466,
+      "altitudeM": -15,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 15,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason. Published ellipsoidal altitude is negative here because the geoid sits below the ellipsoid.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Estrack_ground_stations",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "esa-estrack-redu",
+      "name": "Redu RED-1",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Belgium",
+      "latitudeDeg": 50.00046,
+      "longitudeDeg": 5.14534,
+      "altitudeM": 387,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S"
+      ],
+      "antennaDiameterM": 15,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Estrack_ground_stations",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "esa-estrack-santa-maria",
+      "name": "Santa Maria SMA-1",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Portugal",
+      "latitudeDeg": 36.99725,
+      "longitudeDeg": -25.13572,
+      "altitudeM": 275,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 5.5,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason. Receive only.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Estrack_ground_stations",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "esa-estrack-kiruna-salmijarvi",
+      "name": "Kiruna KIR-1 (Salmijarvi)",
+      "network": "ESA ESTRACK",
+      "operator": "European Space Agency",
+      "operatorKind": "civil-agency",
+      "country": "Sweden",
+      "latitudeDeg": 67.85713,
+      "longitudeDeg": 20.96432,
+      "altitudeM": 402,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command",
+        "data-downlink"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 15,
+      "note": "Coordinate from ESA/ESOC document DOPS-ESTR-OPS-MAN-1001 (ESTRACK Facilities Manual, Issue 1 Rev 1, 2008), which publishes per-antenna positions on GRS80; converted here from its degrees-minutes-seconds. That document is not currently served from an esa.int URL, so the citation is the ESA station page, which confirms the site, operator, dish and bands. Recorded as approximate for that reason. A different site from the SSC Esrange antennas a few kilometres away.",
+      "source": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/Estrack_ground_stations",
+      "sourceName": "ESA, Estrack ground stations; coordinates from ESTRACK Facilities Manual DOPS-ESTR-OPS-MAN-1001",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "ESA website terms permit personal non-commercial use; station positions are cited as facts, not reproduced from ESA material."
+    },
+    {
+      "id": "jaxa-usuda-64m",
+      "name": "Usuda 64 m (DSS-48)",
+      "network": "JAXA deep-space network",
+      "operator": "JAXA / ISAS",
+      "operatorKind": "civil-agency",
+      "country": "Japan",
+      "latitudeDeg": 36.132403748,
+      "longitudeDeg": 138.362773862,
+      "altitudeM": 1490,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 64,
+      "minimumElevationDeg": 5,
+      "note": "Geodetic latitude and longitude on GRS80 at epoch 2026.0, published by the ISAS navigation group in ITRF2014 at epoch 2015.0; the publisher states one-sigma accuracy of a few centimetres per component. Altitude is the published orthometric height above the EGM96 geoid (1490.1922 m); the ellipsoidal height is 1532.8122 m. The same page publishes the antenna's ECEF vector, which reproduces these degrees to 10 cm. JAXA also gives this antenna the DSN station identifier DSS-48. The elevation mask is this site's 5-degree assumption, not JAXA's: JAXA publishes a real per-azimuth downlink horizon mask at UDSC_horizon_mask.xls on the same page.",
+      "source": "https://ddor.nav.isas.jaxa.jp/station_coordinates/",
+      "sourceName": "JAXA Station Coordinates, ISAS navigation group (H. Takeuchi), last updated 11 January 2026",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "JAXA / ISAS. Geodetic positions are published facts, cited not reproduced."
+    },
+    {
+      "id": "jaxa-misasa-54m",
+      "name": "Misasa Deep Space Station 54 m (DSS-30)",
+      "network": "JAXA deep-space network",
+      "operator": "JAXA / ISAS",
+      "operatorKind": "civil-agency",
+      "country": "Japan",
+      "latitudeDeg": 36.140984502,
+      "longitudeDeg": 138.35212867,
+      "altitudeM": 1613,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "command-and-control"
+      ],
+      "bands": [
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 54,
+      "minimumElevationDeg": 7,
+      "note": "Geodetic GRS80 at epoch 2026.0; altitude is the published orthometric height above the EGM96 geoid (1613.380 m), ellipsoidal height 1655.993 m. The publisher is unusually candid about the error: the 54 m antenna has no S-band receiver, so conventional S/X geodetic VLBI cannot measure it, and JAXA states it assumes \"a formal error of about 5-10 cm for the station position errors\". The elevation mask is JAXA's published antenna drive limit of 7 degrees, not this site's default. JAXA's Misasa User's Guide gives the site only as 138 deg 21 min E / 36 deg 8 min N; these are the surveyed figures from the coordinates page the guide points at.",
+      "source": "https://ddor.nav.isas.jaxa.jp/station_coordinates/",
+      "sourceName": "JAXA Station Coordinates, ISAS navigation group (H. Takeuchi), last updated 11 January 2026",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "JAXA / ISAS. Geodetic positions are published facts, cited not reproduced."
+    },
+    {
+      "id": "jaxa-uchinoura-34m",
+      "name": "Uchinoura 34 m (DSS-38)",
+      "network": "JAXA deep-space network",
+      "operator": "JAXA / ISAS",
+      "operatorKind": "civil-agency",
+      "country": "Japan",
+      "latitudeDeg": 31.25430804,
+      "longitudeDeg": 131.078392333,
+      "altitudeM": 346,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "deep-space-tracking",
+        "tracking-telemetry-command"
+      ],
+      "antennaDiameterM": 34,
+      "minimumElevationDeg": 5,
+      "note": "Geodetic GRS80 at epoch 2026.0; altitude is the published orthometric height above the EGM96 geoid (346.445 m), ellipsoidal height 375.7827 m. The publisher states one-sigma accuracy of about 3 cm per component and notes this station was not moved by the earthquakes that shifted Usuda. Bands are not stated on the source page and are therefore not recorded. JAXA gives this antenna the DSN identifier DSS-38.",
+      "source": "https://ddor.nav.isas.jaxa.jp/station_coordinates/",
+      "sourceName": "JAXA Station Coordinates, ISAS navigation group (H. Takeuchi), last updated 11 January 2026",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "JAXA / ISAS. Geodetic positions are published facts, cited not reproduced."
+    },
+    {
+      "id": "jaxa-uchinoura-20m",
+      "name": "Uchinoura 20 m (DSS-37)",
+      "network": "JAXA deep-space network",
+      "operator": "JAXA / ISAS",
+      "operatorKind": "civil-agency",
+      "country": "Japan",
+      "latitudeDeg": 31.256625132,
+      "longitudeDeg": 131.080381009,
+      "altitudeM": 362,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "tracking-telemetry-command"
+      ],
+      "antennaDiameterM": 20,
+      "minimumElevationDeg": 5,
+      "note": "The only station on this page for which JAXA publishes the ECEF vector and not the degrees: X -3586293.8662, Y 4113888.6263, Z 3290452.1716 m. These degrees are that vector converted to geodetic GRS80 by the ordinary closed-form datum conversion, the same arithmetic used to turn the DSN handbook's arcseconds into degrees; no position has been estimated. Recorded as approximate because the publisher says so in as many words: \"Position accuracy of the Uchinoura 20 m antenna is unknown.\" Altitude is the ellipsoidal height from the same conversion less the 29.3 m geoid separation published for the neighbouring 34 m antenna.",
+      "source": "https://ddor.nav.isas.jaxa.jp/station_coordinates/",
+      "sourceName": "JAXA Station Coordinates, ISAS navigation group (H. Takeuchi), last updated 11 January 2026",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "JAXA / ISAS. Geodetic positions are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-accra",
+      "name": "Viasat Real-Time Earth Accra",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "Ghana",
+      "latitudeDeg": 5.6,
+      "longitudeDeg": -0.3,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 7.3,
+      "note": "Published to one decimal place only, about 11 km, which is why this row is approximate where the others from the same page are not. Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-guildford",
+      "name": "Viasat Real-Time Earth Guildford",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "United Kingdom",
+      "latitudeDeg": 51.24,
+      "longitudeDeg": -0.62,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 5.4,
+      "note": "Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-hokkaido",
+      "name": "Viasat Real-Time Earth Hokkaido",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "Japan",
+      "latitudeDeg": 42.59,
+      "longitudeDeg": 143.45,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X",
+        "Ka"
+      ],
+      "antennaDiameterM": 7.3,
+      "note": "Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-pendergrass",
+      "name": "Viasat Real-Time Earth Pendergrass, Georgia",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 34.18,
+      "longitudeDeg": -83.67,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 5.4,
+      "note": "Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-pitea",
+      "name": "Viasat Real-Time Earth Piteaa / Oejebyn",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "Sweden",
+      "latitudeDeg": 65.33,
+      "longitudeDeg": 21.42,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "antennaDiameterM": 7.3,
+      "note": "Viasat describes this one as an \"X-Y band\" antenna, which names a mount type rather than a frequency band, so no bands are recorded. Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "viasat-rte-ushuaia",
+      "name": "Viasat Real-Time Earth Ushuaia",
+      "network": "Viasat Real-Time Earth",
+      "operator": "Viasat Inc.",
+      "operatorKind": "commercial",
+      "country": "Argentina",
+      "latitudeDeg": -54.5,
+      "longitudeDeg": -67.11,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "bands": [
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 7.3,
+      "note": "Viasat adds \"(Ka upgradable)\"; the Ka band is not recorded because it is not in service. Viasat publishes these to two decimal places, about 1 km, as part of a sentence describing the antenna rather than as a survey.",
+      "source": "https://www.viasat.com/government/antenna-systems/real-time-earth/",
+      "sourceName": "Viasat, Real-Time Earth: \"Viasat Real-Time Earth deployments\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Viasat Inc. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "ssc-clewiston",
+      "name": "Clewiston Satellite Station, Florida",
+      "network": "SSC satellite ground station network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 26.75,
+      "longitudeDeg": -81.05,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "SSC publishes each station it owns as \"Lat <n>, Long <n>\" to two decimal places, about 1 km. Its ten collaborative partner stations are named without coordinates.",
+      "source": "https://sscspace.com/services/satellite-ground-stations/our-stations/",
+      "sourceName": "Swedish Space Corporation, \"Our stations\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Swedish Space Corporation. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "ssc-inuvik",
+      "name": "Inuvik Satellite Station",
+      "network": "SSC satellite ground station network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Canada",
+      "latitudeDeg": 68.32,
+      "longitudeDeg": -133.54,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "SSC publishes each station it owns as \"Lat <n>, Long <n>\" to two decimal places, about 1 km. Its ten collaborative partner stations are named without coordinates.",
+      "source": "https://sscspace.com/services/satellite-ground-stations/our-stations/",
+      "sourceName": "Swedish Space Corporation, \"Our stations\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Swedish Space Corporation. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "ssc-irbene",
+      "name": "Irbene Station, Ventspils",
+      "network": "SSC satellite ground station network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Latvia",
+      "latitudeDeg": 56.56,
+      "longitudeDeg": 21.86,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "SSC publishes each station it owns as \"Lat <n>, Long <n>\" to two decimal places, about 1 km. Its ten collaborative partner stations are named without coordinates.",
+      "source": "https://sscspace.com/services/satellite-ground-stations/our-stations/",
+      "sourceName": "Swedish Space Corporation, \"Our stations\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Swedish Space Corporation. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "ssc-punta-arenas",
+      "name": "Punta Arenas Satellite Station",
+      "network": "SSC satellite ground station network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Chile",
+      "latitudeDeg": -52.93,
+      "longitudeDeg": -70.85,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "SSC publishes each station it owns as \"Lat <n>, Long <n>\" to two decimal places, about 1 km. Its ten collaborative partner stations are named without coordinates.",
+      "source": "https://sscspace.com/services/satellite-ground-stations/our-stations/",
+      "sourceName": "Swedish Space Corporation, \"Our stations\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Swedish Space Corporation. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "ssc-stockholm-teleport",
+      "name": "Stockholm Teleport, Agesta",
+      "network": "SSC satellite ground station network",
+      "operator": "Swedish Space Corporation",
+      "operatorKind": "commercial",
+      "country": "Sweden",
+      "latitudeDeg": 59.21,
+      "longitudeDeg": 18.08,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "SSC publishes each station it owns as \"Lat <n>, Long <n>\" to two decimal places, about 1 km. Its ten collaborative partner stations are named without coordinates.",
+      "source": "https://sscspace.com/services/satellite-ground-stations/our-stations/",
+      "sourceName": "Swedish Space Corporation, \"Our stations\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Swedish Space Corporation. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "telespazio-fucino",
+      "name": "Fucino Space Centre",
+      "network": "Telespazio space centres and teleports",
+      "operator": "Telespazio (Leonardo Group)",
+      "operatorKind": "commercial",
+      "country": "Italy",
+      "latitudeDeg": 42.0146925,
+      "longitudeDeg": 13.5907857,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Telespazio publishes a map marker and a street address for each centre. The marker carries seven decimal places, but it is a geocoded site marker rather than an antenna reference point, so it is recorded as approximate. This is a different antenna farm from the ESA station also at Fucino that this table already carries: the two published positions are 4.1 km apart. EUMETSAT names Fucino as the primary ground station for Meteosat Second Generation and a telemetry, tracking and control station for Meteosat Third Generation, but publishes no coordinate for it, and its statements are about the satellite series rather than a named spacecraft, so no link row follows from them. See docs/ground-stations-design.md section 7 question 4.",
+      "source": "https://www.telespazio.com/en/business/space-centres-teleports",
+      "sourceName": "Telespazio (Leonardo Group), \"Space centres and teleports\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Telespazio S.p.A. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "telespazio-lario",
+      "name": "Lario Space Centre",
+      "network": "Telespazio space centres and teleports",
+      "operator": "Telespazio (Leonardo Group)",
+      "operatorKind": "commercial",
+      "country": "Italy",
+      "latitudeDeg": 46.1596339,
+      "longitudeDeg": 9.4124281,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Telespazio publishes a map marker and a street address for each centre. The marker carries seven decimal places, but it is a geocoded site marker rather than an antenna reference point, so it is recorded as approximate. EUMETSAT names Lario as a Meteosat Third Generation mission-data acquisition ground station and publishes no coordinate for it.",
+      "source": "https://www.telespazio.com/en/business/space-centres-teleports",
+      "sourceName": "Telespazio (Leonardo Group), \"Space centres and teleports\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Telespazio S.p.A. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "telespazio-cheia",
+      "name": "Cheia Space Centre",
+      "network": "Telespazio space centres and teleports",
+      "operator": "Telespazio (Leonardo Group)",
+      "operatorKind": "commercial",
+      "country": "Romania",
+      "latitudeDeg": 45.4581462,
+      "longitudeDeg": 25.9382467,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Telespazio publishes a map marker and a street address for each centre. The marker carries seven decimal places, but it is a geocoded site marker rather than an antenna reference point, so it is recorded as approximate. EUMETSAT names Cheia as a primary ground station for Meteosat Second Generation and a telemetry, tracking and control station for Meteosat Third Generation, and publishes no coordinate for it.",
+      "source": "https://www.telespazio.com/en/business/space-centres-teleports",
+      "sourceName": "Telespazio (Leonardo Group), \"Space centres and teleports\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Telespazio S.p.A. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "telespazio-scanzano",
+      "name": "Scanzano Space Centre",
+      "network": "Telespazio space centres and teleports",
+      "operator": "Telespazio (Leonardo Group)",
+      "operatorKind": "commercial",
+      "country": "Italy",
+      "latitudeDeg": 37.9937494,
+      "longitudeDeg": 13.2882423,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Telespazio publishes a map marker and a street address for each centre. The marker carries seven decimal places, but it is a geocoded site marker rather than an antenna reference point, so it is recorded as approximate.",
+      "source": "https://www.telespazio.com/en/business/space-centres-teleports",
+      "sourceName": "Telespazio (Leonardo Group), \"Space centres and teleports\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Telespazio S.p.A. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "telespazio-benavidez",
+      "name": "Benavidez Teleport",
+      "network": "Telespazio space centres and teleports",
+      "operator": "Telespazio (Leonardo Group)",
+      "operatorKind": "commercial",
+      "country": "Argentina",
+      "latitudeDeg": -34.4102909,
+      "longitudeDeg": -58.7192104,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Telespazio publishes a map marker and a street address for each centre. The marker carries seven decimal places, but it is a geocoded site marker rather than an antenna reference point, so it is recorded as approximate.",
+      "source": "https://www.telespazio.com/en/business/space-centres-teleports",
+      "sourceName": "Telespazio (Leonardo Group), \"Space centres and teleports\"",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Telespazio S.p.A. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-utqiagvik",
+      "name": "Leaf Line Utqiagvik, Alaska",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 71.29,
+      "longitudeDeg": -156.78,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-maui",
+      "name": "Leaf Line Maui, Hawaii",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 20.79,
+      "longitudeDeg": -156.33,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3. Leaf publishes this one at longitude +156.33, which is open water in the Philippine Sea about 3,000 km from the island in its own label. The sign is corrected here and the correction is stated, on the same footing as the NOAA Fairbanks longitude below.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-al-ain",
+      "name": "Leaf Line Al Ain",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "United Arab Emirates",
+      "latitudeDeg": 24.2,
+      "longitudeDeg": 55.74,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-longwood",
+      "name": "Leaf Line Longwood, Saint Helena",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Saint Helena",
+      "latitudeDeg": -15.94,
+      "longitudeDeg": -5.65,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-santiago",
+      "name": "Leaf Line Santiago",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Chile",
+      "latitudeDeg": -33.36,
+      "longitudeDeg": -70.77,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-talkeetna",
+      "name": "Leaf Line Talkeetna, Alaska",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "United States",
+      "latitudeDeg": 62.33,
+      "longitudeDeg": -150.03,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-mon-loisir",
+      "name": "Leaf Line Mon Loisir",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Mauritius",
+      "latitudeDeg": -20.13,
+      "longitudeDeg": 57.68,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-blonduos",
+      "name": "Leaf Line Blonduos",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Iceland",
+      "latitudeDeg": 65.64,
+      "longitudeDeg": -20.24,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-punta-arenas",
+      "name": "Leaf Line Punta Arenas",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Chile",
+      "latitudeDeg": -53.04,
+      "longitudeDeg": -70.84,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-nova-scotia",
+      "name": "Leaf Line Nova Scotia",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Canada",
+      "latitudeDeg": 44.68,
+      "longitudeDeg": -63.74,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-absheron",
+      "name": "Leaf Line Absheron",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Azerbaijan",
+      "latitudeDeg": 40.46,
+      "longitudeDeg": 49.48,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-nangetty",
+      "name": "Leaf Line Nangetty, Western Australia",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Australia",
+      "latitudeDeg": -29.01,
+      "longitudeDeg": 115.34,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-peterborough",
+      "name": "Leaf Line Peterborough, South Australia",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Australia",
+      "latitudeDeg": -32.96,
+      "longitudeDeg": 138.84,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-kandy",
+      "name": "Leaf Line Kandy",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Sri Lanka",
+      "latitudeDeg": 7.27,
+      "longitudeDeg": 80.72,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-awarua",
+      "name": "Leaf Line Awarua",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "New Zealand",
+      "latitudeDeg": -46.52,
+      "longitudeDeg": 168.37,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-kaspichan",
+      "name": "Leaf Line Kaspichan",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Bulgaria",
+      "latitudeDeg": 43.31,
+      "longitudeDeg": 27.15,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-plana",
+      "name": "Leaf Line Plana",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Bulgaria",
+      "latitudeDeg": 42.48,
+      "longitudeDeg": 23.44,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-shetland",
+      "name": "Leaf Line Shetland",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "United Kingdom",
+      "latitudeDeg": 60.74,
+      "longitudeDeg": -0.85,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "leaf-la-paz",
+      "name": "Leaf Line La Paz",
+      "network": "Leaf Space Leaf Line",
+      "operator": "Leaf Space",
+      "operatorKind": "commercial",
+      "country": "Mexico",
+      "latitudeDeg": 24.09,
+      "longitudeDeg": -110.38,
+      "coordinatePrecision": "published-approximate",
+      "roles": [
+        "data-downlink",
+        "tracking-telemetry-command"
+      ],
+      "note": "Leaf Space publishes its network as a map marker list, two decimal places, about 1 km. Five of its twenty-four published markers are not carried by this table; the reasons are in docs/ground-stations-design.md section 3.",
+      "source": "https://leaf.space/leaf-line/",
+      "sourceName": "Leaf Space, \"Leaf Line\" ground segment network map",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "Leaf Space S.r.l. Coordinates are published facts, cited not reproduced."
+    },
+    {
+      "id": "dlr-gars-ohiggins",
+      "name": "GARS O'Higgins",
+      "network": "DLR German Antarctic Receiving Station",
+      "operator": "German Aerospace Center (DLR) Earth Observation Center",
+      "operatorKind": "scientific",
+      "country": "Antarctica",
+      "latitudeDeg": -63.3208,
+      "longitudeDeg": -57.900847,
+      "altitudeM": 18,
+      "coordinatePrecision": "published-survey",
+      "roles": [
+        "data-downlink"
+      ],
+      "bands": [
+        "L",
+        "S",
+        "X"
+      ],
+      "antennaDiameterM": 9,
+      "note": "Converted from the arcseconds DLR publishes: 63 deg 19' 14.88\" South, 57 deg 54' 03.05\" West, height above sea level 17.56 m. The same page publishes the local gravity to eight figures, which is a geodetic station's way of saying the position is surveyed; the datum is not stated. DLR's own page places this station \"in immediate proximity to the Chilean station General Bernardo O'Higgins\" rather than inside it: the pin is DLR's civil Earth-observation and VLBI facility, which is what makes it eligible for this table at all.",
+      "source": "https://www.dlr.de/de/eoc/forschung-transfer/forschungsinfrastruktur/station-gars-ohiggins/stationsbeschreibung/lage-der-station-koordinaten",
+      "sourceName": "DLR EOC, Station GARS O'Higgins: Lage der Station / Koordinaten",
+      "sourceRetrieved": "2026-08-08",
+      "licence": "DLR. Coordinates are published facts, cited not reproduced."
+    }
+  ],
+  "links": [
+    {
+      "stationId": "usgs-eros-sioux-falls",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "command-and-control",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "usgs-eros-sioux-falls",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "command-and-control",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ga-alice-springs",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ga-alice-springs",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "dlr-neustrelitz",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "dlr-neustrelitz",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS states that \"the Landsat 8 and Landsat 9 USGS Ground Network is comprised of five ground receiving stations\" -- Sioux Falls, Alice Springs, Neustrelitz, Gilmore Creek and Svalbard -- which \"are responsible for downlinking the satellite telemetry ... and science data\" and \"can also uplink commands to the satellite.\"",
+      "source": "https://www.usgs.gov/landsat-missions/usgs-landsat-ground-stations",
+      "sourceName": "USGS, Landsat Ground Stations",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ccmeo-prince-albert",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Prince Albert, operated by the Canada Centre for Mapping and Earth Observation, as actively receiving Landsat 8.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ccmeo-prince-albert",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Prince Albert, operated by the Canada Centre for Mapping and Earth Observation, as actively receiving Landsat 9.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "isro-shadnagar",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Shadnagar, operated by ISRO, as an active International Cooperator station receiving Landsat 8.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "isro-shadnagar",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Shadnagar, operated by ISRO, as an active International Cooperator station receiving Landsat 9.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "sansa-hartebeesthoek",
+      "noradId": 39084,
+      "satelliteName": "LANDSAT 8",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Hartebeesthoek, operated by SANSA, as an active International Cooperator station receiving Landsat 8.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 8",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "sansa-hartebeesthoek",
+      "noradId": 49260,
+      "satelliteName": "LANDSAT 9",
+      "relationship": "data-downlink",
+      "evidence": "USGS lists Hartebeesthoek, operated by SANSA, as an active International Cooperator station receiving Landsat 9.",
+      "source": "https://landsat.usgs.gov/IGS/igs-network/",
+      "sourceName": "USGS Landsat International Ground Station Network",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "LANDSAT 9",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-matera",
+      "noradId": 39634,
+      "satelliteName": "SENTINEL 1A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 1A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-maspalomas",
+      "noradId": 39634,
+      "satelliteName": "SENTINEL 1A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 1A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 39634,
+      "satelliteName": "SENTINEL 1A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 1A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 39634,
+      "satelliteName": "SENTINEL 1A",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that the Sentinel-1 Flight Operations Control Centre is at ESOC \"with telemetry and commands managed via the ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 1A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-matera",
+      "noradId": 66315,
+      "satelliteName": "SENTINEL-1D",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-1D",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-maspalomas",
+      "noradId": 66315,
+      "satelliteName": "SENTINEL-1D",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-1D",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 66315,
+      "satelliteName": "SENTINEL-1D",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-1D",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 66315,
+      "satelliteName": "SENTINEL-1D",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that the Sentinel-1 Flight Operations Control Centre is at ESOC \"with telemetry and commands managed via the ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Data_flow",
+      "sourceName": "ESA, Sentinel-1 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-1D",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-matera",
+      "noradId": 40697,
+      "satelliteName": "SENTINEL 2A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-maspalomas",
+      "noradId": 40697,
+      "satelliteName": "SENTINEL 2A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 40697,
+      "satelliteName": "SENTINEL 2A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 40697,
+      "satelliteName": "SENTINEL 2A",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that Sentinel-2 \"critical housekeeping telemetry and commands\" are \"primarily managed at S-band via the ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-matera",
+      "noradId": 42063,
+      "satelliteName": "SENTINEL 2B",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-maspalomas",
+      "noradId": 42063,
+      "satelliteName": "SENTINEL 2B",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 42063,
+      "satelliteName": "SENTINEL 2B",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 42063,
+      "satelliteName": "SENTINEL 2B",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that Sentinel-2 \"critical housekeeping telemetry and commands\" are \"primarily managed at S-band via the ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 2B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-matera",
+      "noradId": 60989,
+      "satelliteName": "SENTINEL-2C",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-2C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-maspalomas",
+      "noradId": 60989,
+      "satelliteName": "SENTINEL-2C",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-2C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 60989,
+      "satelliteName": "SENTINEL-2C",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel data \"are sent to ground and received at the X-band core stations located in Matera, Italy, Maspalomas, Spain and Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-2C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 60989,
+      "satelliteName": "SENTINEL-2C",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that Sentinel-2 \"critical housekeeping telemetry and commands\" are \"primarily managed at S-band via the ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Data_flow",
+      "sourceName": "ESA, Sentinel-2 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL-2C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 41335,
+      "satelliteName": "SENTINEL 3A",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel-3 \"data are sent to the ground and received at the ESA operated X-band core station in Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/Data_flow",
+      "sourceName": "ESA, Sentinel-3 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 3A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 41335,
+      "satelliteName": "SENTINEL 3A",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that Sentinel-3 \"housekeeping telemetry and commands are done via ESA's ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/Data_flow",
+      "sourceName": "ESA, Sentinel-3 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 3A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 43437,
+      "satelliteName": "SENTINEL 3B",
+      "relationship": "data-downlink",
+      "evidence": "ESA states that Sentinel-3 \"data are sent to the ground and received at the ESA operated X-band core station in Svalbard, Norway.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/Data_flow",
+      "sourceName": "ESA, Sentinel-3 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 3B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "esa-estrack-kiruna-salmijarvi",
+      "noradId": 43437,
+      "satelliteName": "SENTINEL 3B",
+      "relationship": "command-and-control",
+      "evidence": "ESA states that Sentinel-3 \"housekeeping telemetry and commands are done via ESA's ground station in Kiruna, Sweden.\"",
+      "source": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/Data_flow",
+      "sourceName": "ESA, Sentinel-3 Data flow",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "SENTINEL 3B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 38771,
+      "satelliteName": "METOP-B",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that it \"controls its Metop satellites by sending commands via the EUMETSAT Polar System (EPS) ground station, which is located on Spitsbergen, Svalbard, Norway (78N)\", with two command and data acquisition antennas that \"receive data from every orbit.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "METOP-B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 43689,
+      "satelliteName": "METOP-C",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that it \"controls its Metop satellites by sending commands via the EUMETSAT Polar System (EPS) ground station, which is located on Spitsbergen, Svalbard, Norway (78N)\", with two command and data acquisition antennas that \"receive data from every orbit.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "METOP-C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 41240,
+      "satelliteName": "JASON 3",
+      "relationship": "data-downlink",
+      "evidence": "EUMETSAT states that Jason-3 \"is monitored and controlled ... using either the NOAA ground stations at Fairbanks and Barrow (Alaska, US) and Wallops (Virginia, US) or the EUMETSAT ground stations at Usingen (Germany).\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "JASON 3",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-utqiagvik",
+      "noradId": 41240,
+      "satelliteName": "JASON 3",
+      "relationship": "data-downlink",
+      "evidence": "EUMETSAT states that Jason-3 \"is monitored and controlled ... using either the NOAA ground stations at Fairbanks and Barrow (Alaska, US) and Wallops (Virginia, US) or the EUMETSAT ground stations at Usingen (Germany).\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "JASON 3",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-wallops-cda",
+      "noradId": 41240,
+      "satelliteName": "JASON 3",
+      "relationship": "data-downlink",
+      "evidence": "EUMETSAT states that Jason-3 \"is monitored and controlled ... using either the NOAA ground stations at Fairbanks and Barrow (Alaska, US) and Wallops (Virginia, US) or the EUMETSAT ground stations at Usingen (Germany).\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "JASON 3",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 37849,
+      "satelliteName": "NPP",
+      "relationship": "data-downlink",
+      "evidence": "The NOAA/NESDIS Fairbanks station fact sheet lists the satellites the station acquires data from, naming Suomi NPP, NOAA-20 (JPSS-1) and NOAA-21 (JPSS-2), Landsat-8 and 9, Jason-3, MetOp, DSCOVR, and Spain's PAZ mission among them.",
+      "source": "https://www.ospo.noaa.gov/assets/pdf/Fairbanks_Ground_Station.pdf",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station fact sheet",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "NPP",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 43013,
+      "satelliteName": "NOAA 20",
+      "relationship": "data-downlink",
+      "evidence": "The NOAA/NESDIS Fairbanks station fact sheet lists the satellites the station acquires data from, naming Suomi NPP, NOAA-20 (JPSS-1) and NOAA-21 (JPSS-2), Landsat-8 and 9, Jason-3, MetOp, DSCOVR, and Spain's PAZ mission among them.",
+      "source": "https://www.ospo.noaa.gov/assets/pdf/Fairbanks_Ground_Station.pdf",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station fact sheet",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "NOAA 20",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 54234,
+      "satelliteName": "NOAA 21",
+      "relationship": "data-downlink",
+      "evidence": "The NOAA/NESDIS Fairbanks station fact sheet lists the satellites the station acquires data from, naming Suomi NPP, NOAA-20 (JPSS-1) and NOAA-21 (JPSS-2), Landsat-8 and 9, Jason-3, MetOp, DSCOVR, and Spain's PAZ mission among them.",
+      "source": "https://www.ospo.noaa.gov/assets/pdf/Fairbanks_Ground_Station.pdf",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station fact sheet",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "NOAA 21",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 43215,
+      "satelliteName": "PAZ",
+      "relationship": "data-downlink",
+      "evidence": "The NOAA/NESDIS Fairbanks station fact sheet lists the satellites the station acquires data from, naming Suomi NPP, NOAA-20 (JPSS-1) and NOAA-21 (JPSS-2), Landsat-8 and 9, Jason-3, MetOp, DSCOVR, and Spain's PAZ mission among them.",
+      "source": "https://www.ospo.noaa.gov/assets/pdf/Fairbanks_Ground_Station.pdf",
+      "sourceName": "NOAA NESDIS OSPO, Fairbanks Command and Data Acquisition Station fact sheet",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "PAZ",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 43013,
+      "satelliteName": "NOAA 20",
+      "relationship": "command-and-control",
+      "evidence": "NOAA states that \"the Fairbanks CDAS is NOAA's primary satellite ground station for downloading data from and sending commands to polar-orbiting satellites\", and that the CDA facilities at Wallops and Fairbanks exist \"to command and control the satellites, to track the satellites, and to acquire, process and distribute their data.\"",
+      "source": "https://www.ospo.noaa.gov/operations/operational-satellites/",
+      "sourceName": "NOAA NESDIS OSPO, Operational satellites",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "NOAA 20",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 54234,
+      "satelliteName": "NOAA 21",
+      "relationship": "command-and-control",
+      "evidence": "NOAA states that \"the Fairbanks CDAS is NOAA's primary satellite ground station for downloading data from and sending commands to polar-orbiting satellites\", and that the CDA facilities at Wallops and Fairbanks exist \"to command and control the satellites, to track the satellites, and to acquire, process and distribute their data.\"",
+      "source": "https://www.ospo.noaa.gov/operations/operational-satellites/",
+      "sourceName": "NOAA NESDIS OSPO, Operational satellites",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "NOAA 21",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 37849,
+      "satelliteName": "NPP",
+      "relationship": "data-downlink",
+      "evidence": "NOAA states that \"HRD users schedule S-NPP and NOAA-20 contacts using orbital information provided by NOAA\" and that \"during scheduled contacts, NOAA uses the JPSS ground system equipment at the Svalbard ground station to record the HRD signal characteristics.\"",
+      "source": "https://www.ospo.noaa.gov/operations/jpss/fts/index.html",
+      "sourceName": "NOAA NESDIS OSPO, JPSS field terminal support",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "NPP",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 43013,
+      "satelliteName": "NOAA 20",
+      "relationship": "data-downlink",
+      "evidence": "NOAA states that \"HRD users schedule S-NPP and NOAA-20 contacts using orbital information provided by NOAA\" and that \"during scheduled contacts, NOAA uses the JPSS ground system equipment at the Svalbard ground station to record the HRD signal characteristics.\"",
+      "source": "https://www.ospo.noaa.gov/operations/jpss/fts/index.html",
+      "sourceName": "NOAA NESDIS OSPO, JPSS field terminal support",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna. This record is a specific antenna at that site whose position a different agency publishes, so the pin locates the site rather than the exact dish that carries this link.",
+      "registryName": "NOAA 20",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 38771,
+      "satelliteName": "METOP-B",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that \"the NOAA Fairbanks station provides a similar service for Metop ... if the Svalbard ground station should become unavailable.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "METOP-B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 43689,
+      "satelliteName": "METOP-C",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that \"the NOAA Fairbanks station provides a similar service for Metop ... if the Svalbard ground station should become unavailable.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "METOP-C",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 41335,
+      "satelliteName": "SENTINEL 3A",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that \"the Copernicus Sentinel-3A and -3B satellites are controlled from EUMETSAT's Darmstadt headquarters via a telemetry, tracking and control s-band service provided by the European Space Agency. The most regularly used ground stations are located in Kiruna and Svalbard.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna, and EUMETSAT publishes no coordinate for it. The pin is the Svalbard antenna whose position NASA's Near Earth Network users' guide publishes. The table already carries this spacecraft's science downlink here on a separate ESA citation; this row is the command and telemetry half.",
+      "registryName": "SENTINEL 3A",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "ksat-svalsat",
+      "noradId": 43437,
+      "satelliteName": "SENTINEL 3B",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that \"the Copernicus Sentinel-3A and -3B satellites are controlled from EUMETSAT's Darmstadt headquarters via a telemetry, tracking and control s-band service provided by the European Space Agency. The most regularly used ground stations are located in Kiruna and Svalbard.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "note": "The publisher names the site, not the antenna, and EUMETSAT publishes no coordinate for it. The pin is the Svalbard antenna whose position NASA's Near Earth Network users' guide publishes.",
+      "registryName": "SENTINEL 3B",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 46984,
+      "satelliteName": "Sentinel-6 Michael Freilich",
+      "relationship": "tracking-telemetry-command",
+      "evidence": "EUMETSAT states that \"the Copernicus Sentinel-6 Michael Freilich satellite is controlled from EUMETSAT's Darmstadt headquarters via a combination of the s-band European ground station service located in Kiruna and the United States' National Oceanic and Atmospheric Administration's ground stations located in Fairbanks.\"",
+      "source": "https://www.eumetsat.int/telemetry-tracking-and-control",
+      "sourceName": "EUMETSAT, Telemetry, tracking and control",
+      "sourceRetrieved": "2026-08-08",
+      "note": "EUMETSAT's Kiruna half of this sentence is not carried. Three different Kiruna antennas appear in this table under three operators, EUMETSAT says only \"Kiruna\", and attaching a real relationship to a guessed dish is worse than leaving it out.",
+      "registryName": "S6 MICHAEL FREILICH",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "noaa-fairbanks-cda",
+      "noradId": 46984,
+      "satelliteName": "Sentinel-6 Michael Freilich",
+      "relationship": "data-downlink",
+      "evidence": "EUMETSAT states that \"satellite Tracking, Telemetry and Commanding (TT&C) as well as the mission instrument data (MDA) from the Sentinel-6 satellite (Sentinel-6 Michael Freilich) are downlinked on every visible orbit at the Ground Stations at Fairbanks (Alaska, US) and Kiruna (Sweden). The Fairbanks dual frequency ground station support is provided as a service by NOAA through the partnership of the Sentinel-6 mission.\"",
+      "source": "https://www.eumetsat.int/collecting-data",
+      "sourceName": "EUMETSAT, Collecting the data",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "S6 MICHAEL FREILICH",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "jaxa-misasa-54m",
+      "noradId": 40319,
+      "satelliteName": "HAYABUSA2",
+      "relationship": "deep-space-tracking",
+      "evidence": "JAXA lists HAYABUSA2 first among the \"spacecrafts currently in operation and scheduled to be operated at Misasa Deep Space Station\", under the heading \"Spacecrafts in operation\".",
+      "source": "https://www.isas.jaxa.jp/home/great/english/mission_en.html",
+      "sourceName": "JAXA / ISAS, Misasa Deep Space Station: Spacecrafts",
+      "sourceRetrieved": "2026-08-08",
+      "registryName": "HAYABUSA 2",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    },
+    {
+      "stationId": "jaxa-misasa-54m",
+      "noradId": 43653,
+      "satelliteName": "MPO (Mercury Planetary Orbiter)",
+      "relationship": "deep-space-tracking",
+      "evidence": "JAXA lists \"MPO, Mercury Planetary Orbiter, Launched on October 20, 2018\" among the \"spacecrafts currently in operation and scheduled to be operated at Misasa Deep Space Station\", under the heading \"Spacecrafts in operation\".",
+      "source": "https://www.isas.jaxa.jp/home/great/english/mission_en.html",
+      "sourceName": "JAXA / ISAS, Misasa Deep Space Station: Spacecrafts",
+      "sourceRetrieved": "2026-08-08",
+      "note": "JAXA names the orbiter element; the catalogued object is the composite BepiColombo stack that carries it, which is why the registry name differs from the name JAXA used. The identification is the publisher's own: the launch date it prints beside \"MPO\" is BepiColombo's.",
+      "registryName": "BEPICOLOMBO",
+      "registrySource": "space-track.org SATCAT (offline mirror)"
+    }
+  ],
+  "coLocated": [
+    {
+      "stations": [
+        "nasa-dsn-madrid-dss63",
+        "nasa-dsn-madrid-dss53"
+      ],
+      "reason": "Two antennas of the Madrid Deep Space Communications Complex, 0.5 km apart."
+    },
+    {
+      "stations": [
+        "nasa-dsn-canberra-dss43",
+        "nasa-dsn-canberra-dss34"
+      ],
+      "reason": "Two antennas of the Canberra Deep Space Communication Complex."
+    },
+    {
+      "stations": [
+        "jaxa-uchinoura-34m",
+        "jaxa-uchinoura-20m"
+      ],
+      "reason": "The 34 m and 20 m antennas of the Uchinoura Space Center, 0.3 km apart."
+    },
+    {
+      "stations": [
+        "jaxa-usuda-64m",
+        "jaxa-misasa-54m"
+      ],
+      "reason": "The Usuda 64 m and its Misasa 54 m successor, 1.4 km apart on neighbouring ridges."
+    },
+    {
+      "stations": [
+        "nasa-nsn-wallops-wg1",
+        "noaa-wallops-cda"
+      ],
+      "reason": "NASA's Near Space Network antenna and NOAA's command and data acquisition station are both at Wallops and are published separately by their two operators."
+    },
+    {
+      "stations": [
+        "esa-kiruna-kis",
+        "ssc-esrange-kiruna"
+      ],
+      "reason": "ESA's Kiruna station and SSC's Esrange are published separately by their two operators."
+    }
+  ],
+  "coLocationThresholdKm": 3.0
+}

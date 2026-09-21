@@ -1,0 +1,618 @@
+{
+  "@gap/worldview-1/32060": {
+    "match": "norad",
+    "norad": [
+      32060
+    ],
+    "noradNames": [
+      "WORLDVIEW 1"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "A commercial half-metre imaging satellite built by Ball Aerospace for DigitalGlobe and now flown by Vantor. It carries a single panchromatic camera and no colour bands at all, which is what lets it sweep up very large areas of black-and-white imagery each day. Much of its capacity was committed to United States government mapping from the outset, under the NGA's NextView contract.",
+    "source": "https://space.skyrocket.de/doc_sdat/worldview-1.htm"
+  },
+  "@gap/worldview-2/35946": {
+    "match": "norad",
+    "norad": [
+      35946
+    ],
+    "noradNames": [
+      "WORLDVIEW 2"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "The satellite that added colour to the WorldView line, pairing a half-metre panchromatic channel with eight multispectral bands. Beyond blue, green, red and near-infrared it adds coastal, yellow, red-edge and a second near-infrared band — the extra channels that make it useful for shallow-water bathymetry, vegetation health and material discrimination rather than mapping alone.",
+    "source": "https://space.skyrocket.de/doc_sdat/worldview-2.htm"
+  },
+  "@gap/worldview-3/40115": {
+    "match": "norad",
+    "norad": [
+      40115
+    ],
+    "noradNames": [
+      "WORLDVIEW 3"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "A commercial imager that pairs roughly 30 cm panchromatic detail with eight visible and near-infrared bands and, unusually, eight shortwave-infrared bands. The shortwave channels see through haze, smoke and dust, and separate minerals and man-made materials that visible colour cannot. A separate coarse-pixel sensor called CAVIS measures aerosol, cloud and water vapour along the same track, so those scenes can be corrected for the atmosphere they were taken through.",
+    "source": "https://www.eoportal.org/satellite-missions/worldview-3"
+  },
+  "@gap/geoeye-1/33331": {
+    "match": "norad",
+    "norad": [
+      33331
+    ],
+    "noradNames": [
+      "GEOEYE 1"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "A high-resolution optical imager built for GeoEye and now flown by Vantor, collecting about 0.41 m panchromatic and 1.65 m colour imagery. Like WorldView-1 it was underwritten by the NGA's NextView programme, so it was designed from the start to serve government mapping and intelligence alongside commercial customers.",
+    "source": "https://space.skyrocket.de/doc_sdat/geoeye-1.htm"
+  },
+  "@gap/worldview-legion-polar/59625": {
+    "match": "norad",
+    "norad": [
+      59625,
+      59626
+    ],
+    "noradNames": [
+      "LEGION 1",
+      "LEGION 2"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "One of the WorldView Legion imagers built to take over from the ageing WorldView-1 and WorldView-2. Each carries a Raytheon-built telescope delivering about 29 cm panchromatic and roughly half-metre colour imagery across eight bands, and the constellation is arranged so that a given place can be revisited many times in a day rather than once.",
+    "source": "https://www.eoportal.org/satellite-missions/worldview-legion"
+  },
+  "@gap/worldview-legion-mid/60452": {
+    "match": "norad",
+    "norad": [
+      60452,
+      60453,
+      62900,
+      62901
+    ],
+    "noradNames": [
+      "LEGION 3",
+      "LEGION 4",
+      "LEGION 5",
+      "LEGION 6"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Vantor (formerly Maxar)",
+    "purpose": "One of the WorldView Legion imagers built to take over from the ageing WorldView-1 and WorldView-2, each carrying a Raytheon-built telescope that delivers about 29 cm panchromatic and roughly half-metre colour imagery across eight bands. These units fly at mid-inclination rather than over the poles, which concentrates their revisits on the mid-latitude belt where most people and infrastructure are.",
+    "source": "https://www.eoportal.org/satellite-missions/worldview-legion"
+  },
+  "@gap/microcarb/64899": {
+    "match": "norad",
+    "norad": [
+      64899
+    ],
+    "noradNames": [
+      "CARB"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "civil",
+    "organization": "CNES",
+    "purpose": "CNES's small greenhouse-gas satellite, which space-track catalogues as CARB and CelesTrak lists as MICROCARB — the same object under two registry names. A dispersive infrared spectrometer measures the total column of carbon dioxide through the atmosphere to roughly one part per million, over pixels a few kilometres across. Those columns are used to map where CO2 is being released and where it is being taken up, by tropical forests and the oceans especially, which ground stations alone constrain very poorly.",
+    "source": "https://cnes.fr/en/projects/microcarb"
+  },
+  "@gap/gms-t/47346": {
+    "match": "norad",
+    "norad": [
+      47346
+    ],
+    "noradNames": [
+      "GMS-T"
+    ],
+    "individual": true,
+    "mission": "communications",
+    "sector": "commercial",
+    "organization": "OHB Cosmos International",
+    "purpose": "A roughly 50 kg prototype communications satellite built by OHB. Its real job was regulatory rather than commercial: it carried Ku- and Ka-band transponders into orbit to bring spectrum filings into use before they lapsed, keeping them alive for a planned broadband constellation. The frequencies had originally been reserved for the failed LeoSat system.",
+    "source": "https://space.skyrocket.de/doc_sdat/gms-t.htm"
+  },
+  "@gap/stars-1-kukai/33498": {
+    "match": "norad",
+    "norad": [
+      33498
+    ],
+    "noradNames": [
+      "STARS"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Kagawa University",
+    "purpose": "STARS-1, nicknamed Kukai, was a student-built tether experiment from Kagawa University. It flew as a pair — a mother satellite that was to reel out a 10 m tether with a small daughter satellite on the end, the daughter carrying a robot arm and a camera to photograph the mother during deployment. The tether jammed after extending only a few tens of centimetres, so the full deployment was never achieved. This catalogue number is the mother satellite.",
+    "source": "https://space.skyrocket.de/doc_sdat/stars-1.htm"
+  },
+  "@gap/stars-ao/43679": {
+    "match": "norad",
+    "norad": [
+      43679
+    ],
+    "noradNames": [
+      "STARS-AO"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Shizuoka University",
+    "purpose": "STARS-AO, also called Aoi, is a 1U CubeSat built by Shizuoka University. It carries a miniature telescope, and its job is to show that a satellite this small can be held steady and pointed accurately enough to make real astronomical observations.",
+    "source": "https://space.skyrocket.de/doc_sdat/stars-ao.htm"
+  },
+  "@gap/ten-koh/43677": {
+    "match": "norad",
+    "norad": [
+      43677
+    ],
+    "noradNames": [
+      "TEN-KOH"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Kyushu Institute of Technology",
+    "purpose": "Ten-Koh is a quasi-spherical microsatellite about half a metre across, built by the Kyushu Institute of Technology to measure the space environment that wears spacecraft out. It carries radiation, magnetic-field and electron-density sensors alongside samples of advanced materials, so engineers can watch how candidate materials degrade under real orbital conditions.",
+    "source": "https://space.skyrocket.de/doc_sdat/ten-koh.htm"
+  },
+  "@gap/ten-koh-2/68261": {
+    "match": "norad",
+    "norad": [
+      68261
+    ],
+    "noradNames": [
+      "TEN-KOH 2"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Nihon University (Okuyama Laboratory)",
+    "purpose": "Ten-Koh 2 is a 6U CubeSat from the Okuyama Laboratory at Nihon University, continuing the Ten-Koh line of space-environment measurement. It carries a Liulin high-energy charged-particle detector and strain and environment sensors that track how materials degrade in orbit, plus an imaging payload from National Cheng Kung University. Its transponder and data downlink were developed with the Japan Amateur Satellite Association and are deliberately left open to amateur operators worldwide.",
+    "source": "https://space.skyrocket.de/doc_sdat/ten-koh-2.htm"
+  },
+  "@gap/kosen-1/49402": {
+    "match": "norad",
+    "norad": [
+      49402
+    ],
+    "noradNames": [
+      "KOSEN-1"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Kochi National College of Technology",
+    "purpose": "KOSEN-1 is a 2U CubeSat built by Japan's Kochi National College of Technology as a student radio-astronomy mission. It deploys a seven-metre antenna to listen to Jupiter's decametric radio emissions, which demands far tighter pointing than a CubeSat normally manages, so it carries two ultra-thin reaction wheels and purpose-written control software.",
+    "source": "https://space.skyrocket.de/doc_sdat/kosen-1.htm"
+  },
+  "@gap/teikyosat-4/49396": {
+    "match": "norad",
+    "norad": [
+      49396
+    ],
+    "noradNames": [
+      "TEIKYOSAT-4"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Teikyo University",
+    "purpose": "TeikyoSat-4, named Ooruri, is a small satellite built by Teikyo University. It tests a new satellite platform designed to run biology, mechanical-engineering and physics experiments in microgravity automatically, with no crew involvement.",
+    "source": "https://space.skyrocket.de/doc_sdat/teikyosat-4.htm"
+  },
+  "@gap/z-sat/49399": {
+    "match": "norad",
+    "norad": [
+      49399
+    ],
+    "noradNames": [
+      "Z-SAT"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "commercial",
+    "organization": "Mitsubishi Heavy Industries",
+    "purpose": "Z-Sat is a technology demonstrator built by Mitsubishi Heavy Industries. It carries near-infrared and far-infrared cameras and superimposes images taken at several wavelengths to locate heat sources on the ground more accurately, proving the technique for a future constellation that would monitor terrestrial infrastructure.",
+    "source": "https://space.skyrocket.de/doc_sdat/z-sat.htm"
+  },
+  "@gap/origamisat-2/68795": {
+    "match": "norad",
+    "norad": [
+      68795
+    ],
+    "noradNames": [
+      "ORIGAMISAT-2"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Institute of Science Tokyo (formerly Tokyo Institute of Technology)",
+    "purpose": "OrigamiSat-2 is a 3U CubeSat from the origami-structures group at what is now the Institute of Science Tokyo. It unfolds a two-layer membrane reflectarray antenna that expands to roughly twenty-five times its stowed area, giving a CubeSat enough gain to send CW and image data on the 5.8 GHz band — a link previously demonstrated only by FITSAT-1. The team publishes the antenna design and the reception methods so amateur operators can receive it themselves.",
+    "source": "https://iaru.amsat-uk.org/finished_detail.php?serialnum=932"
+  },
+  "@gap/uitmsat-2/67686": {
+    "match": "norad",
+    "norad": [
+      67686
+    ],
+    "noradNames": [
+      "UITMSAT"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Universiti Teknologi MARA, Malaysia",
+    "purpose": "UiTMSAT-2 is a 1U CubeSat built by Universiti Teknologi MARA in Malaysia with partner universities in the Philippines and Thailand and the Kyushu Institute of Technology, using the Japanese BIRDS programme's bus design. It is a hands-on training satellite, carrying a commercial camera and an APRS store-and-forward digipeater that relays short messages and sensor readings from remote areas. The registry files it to Japan because it was released from the ISS through JAXA's Kibo module; the spacecraft itself is Malaysian.",
+    "source": "https://iaru.amsat-uk.org/finished_detail.php?serialnum=955"
+  },
+  "@gap/randev/52898": {
+    "match": "norad",
+    "norad": [
+      52898
+    ],
+    "noradNames": [
+      "RANDEV"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "academic",
+    "organization": "KAIST",
+    "purpose": "RANDEV — Repeater Arrangement and Disaster Early View — is a 3U CubeSat designed by KAIST. It carries a hyperspectral camera to collect imagery of potential hazards such as volcanoes, coastlines and cloud, together with S-band and X-band links used for store-and-forward messaging and satellite-internet experiments.",
+    "source": "https://space.skyrocket.de/doc_sdat/randev.htm"
+  },
+  "@gap/snuglite-2/52899": {
+    "match": "norad",
+    "norad": [
+      52899
+    ],
+    "noradNames": [
+      "SNUGLITE-II"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Seoul National University",
+    "purpose": "SNUGLITE-2 is a 3U CubeSat built by Seoul National University. Its main payload is an in-house dual-frequency GPS receiver, used both for precise onboard navigation and for GPS radio-occultation sounding of the atmosphere — the same technique the operational weather constellations use. It doubles as an amateur radio training satellite.",
+    "source": "https://space.skyrocket.de/doc_sdat/snuglite-2.htm"
+  },
+  "@gap/parus-6u1/68456": {
+    "match": "norad",
+    "norad": [
+      68456
+    ],
+    "noradNames": [
+      "PARUS-6U1"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "National Taipei University of Technology",
+    "purpose": "PARUS-6U1, previously designated PARUS-T3, is Taipei Tech's first educational CubeSat, built by graduate students. It carries a wide-angle camera whose imagery is compressed onboard and sent down over a student-designed S-band transmitter, plus reaction-wheel attitude control used to teach telemetry interpretation. A VHF digipeater lets students in other departments, and amateur operators anywhere, work the satellite through the university ground station.",
+    "source": "https://iaru.amsat-uk.org/finished_detail.php?serialnum=1053"
+  },
+  "@gap/youthsat/37388": {
+    "match": "norad",
+    "norad": [
+      37388
+    ],
+    "noradNames": [
+      "YOUTHSAT"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "civil",
+    "organization": "ISRO with M.V. Lomonosov Moscow State University",
+    "purpose": "YouthSat is an Indo-Russian science satellite flown by ISRO jointly with Moscow State University, built explicitly to give students hands-on involvement from payload testing through to data analysis. The Russian SolRad instrument measures hard X-rays, gamma rays and energetic particles from the Sun, while ISRO's RaBIT radio beacon maps ionospheric structure and a limb-viewing hyperspectral imager profiles the upper atmosphere. Together the payloads connect solar activity to its effect on Earth's ionosphere.",
+    "source": "https://space.skyrocket.de/doc_sdat/youthsat.htm"
+  },
+  "@gap/s-net/43186": {
+    "match": "norad",
+    "norad": [
+      43186,
+      43187,
+      43188,
+      43189
+    ],
+    "noradNames": [
+      "S-NET D",
+      "S-NET B",
+      "S-NET A",
+      "S-NET C"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Technische Universität Berlin",
+    "purpose": "S-Net is a four-satellite technology demonstration from the Technical University of Berlin, built to prove that nanosatellites can talk directly to each other rather than only to the ground. Each spacecraft carries SLink, an S-band crosslink transceiver developed with IQ wireless GmbH, giving roughly 100 kbit/s satellite-to-satellite links and a 1 Mbit/s downlink. Four nodes were chosen deliberately: that is the smallest number that allows six independent links and true multi-hop routing across the network.",
+    "source": "https://www.tu.berlin/en/raumfahrttechnik/research/past-projects/2010-2019/s-net"
+  },
+  "@gap/d-star-one-isat/43879": {
+    "match": "norad",
+    "norad": [
+      43879
+    ],
+    "noradNames": [
+      "ISAT"
+    ],
+    "individual": true,
+    "mission": "communications",
+    "sector": "commercial",
+    "organization": "German Orbital Systems",
+    "purpose": "iSat is one of the D-Star One series of 3U cubesats built by German Orbital Systems in Berlin, flown to prove out a low-cost commercial cubesat communications platform. Each carries two D-Star digital voice-and-data repeater modules given over entirely to the amateur radio community, which is why the spacecraft's transmitters sit under an amateur licence.",
+    "source": "https://space.skyrocket.de/doc_sdat/d-star-one.htm"
+  },
+  "@gap/innocube/62616": {
+    "match": "norad",
+    "norad": [
+      62616
+    ],
+    "noradNames": [
+      "INNOCUBE"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "TU Berlin and University of Würzburg",
+    "purpose": "InnoCube is a 3U+ cubesat flown jointly by TU Berlin and the University of Würzburg, with student training in design, planning and operations built into the project as a stated goal. It demonstrates two prize-winning technologies: SKITH, which replaces a satellite's internal wiring harness with fault-tolerant 2.4 GHz wireless links, and Wall#E, which builds battery storage into the load-bearing structure to save mass and volume.",
+    "source": "https://www.tu.berlin/en/raumfahrttechnik/research/current-projects/innocube"
+  },
+  "@gap/nanoff/58755": {
+    "match": "norad",
+    "norad": [
+      58755,
+      58810
+    ],
+    "noradNames": [
+      "NANOFF B",
+      "NANOFF A"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Technische Universität Berlin",
+    "purpose": "NanoFF — Nanosatellites in Formation Flight — is a pair of 2U cubesats from the Technical University of Berlin flown together to demonstrate autonomous formation flying. Each carries a resistojet propulsion module plus reaction wheels, magnetorquers and a star tracker for the precise pointing that formation keeping demands, letting the two change their separation, fly a helix formation, and eventually have one satellite hold station relative to the other on its own.",
+    "source": "https://www.tu.berlin/en/raumfahrttechnik/research/current-projects/nanoff"
+  },
+  "@gap/qube/60476": {
+    "match": "norad",
+    "norad": [
+      60476
+    ],
+    "noradNames": [
+      "QUBE"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Zentrum für Telematik, Würzburg",
+    "purpose": "QUBE is a 3U cubesat built by the Zentrum für Telematik in Würzburg with OHB System and DLR to test quantum key distribution from orbit. It transmits heavily attenuated light pulses whose quantum states are set by a miniaturised quantum random number generator on board, so an eavesdropper cannot copy the encryption key without leaving a trace. Its UHF radio works in the amateur band, and the team planned to open an onboard digipeater to radio amateurs once the primary experiment was complete.",
+    "source": "https://space.skyrocket.de/doc_sdat/qube.htm"
+  },
+  "@gap/suomi-100/43804": {
+    "match": "norad",
+    "norad": [
+      43804
+    ],
+    "noradNames": [
+      "SUOMI100"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Aalto University",
+    "purpose": "Suomi 100 is a 1U cubesat built by Aalto University with GomSpace to mark the centenary of Finnish independence and to fly new cubesat instrument technology. It carries a wide-field camera and, as its science instrument, a low-frequency radio receiver designed largely by students — many of them radio amateurs — intended to detect natural radio emissions from the ionosphere, including those associated with aurora.",
+    "source": "https://space.skyrocket.de/doc_sdat/suomi-100.htm"
+  },
+  "@gap/eaglet-1/43790": {
+    "match": "norad",
+    "norad": [
+      43790
+    ],
+    "noradNames": [
+      "EAGLET 1"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "OHB Italia",
+    "purpose": "Eaglet 1 is OHB Italia's first nanosatellite, a 3U+ cubesat built as an Earth-observation demonstrator. Its payload is a 300 mm focal length telescope with an 85 mm aperture, giving about 5 m panchromatic ground resolution, backed by a star tracker, Sun and Earth sensors, GPS and reaction wheels to hold the pointing accuracy imaging requires. It also carries an AIS receiver for picking up ship transponder signals.",
+    "source": "https://space.skyrocket.de/doc_sdat/eaglet-1.htm"
+  },
+  "@gap/hunity-1/66670": {
+    "match": "norad",
+    "norad": [
+      66670
+    ],
+    "noradNames": [
+      "HUNITY-1"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Budapest University of Technology and Economics",
+    "purpose": "HUNITY, also designated NMHH-1, is a student-built 3P PocketQube from the Budapest University of Technology and Economics, developed with Hungary's media and infocommunications regulator NMHH as its principal technical partner. It carries a set of small student experiments: a total-ionising-dose radiation detector, a space-qualified GPS receiver, an FPGA test, and a side-by-side endurance comparison of German, Chinese and South Korean solar cells. Its UHF amateur transmitter, callsign HG1NMHH, carries the telemetry that makes those results readable from the ground.",
+    "source": "https://gnd.bme.hu/hunity"
+  },
+  "@gap/paz/43215": {
+    "match": "norad",
+    "norad": [
+      43215
+    ],
+    "noradNames": [
+      "PAZ"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "military",
+    "organization": "Hisdesat",
+    "purpose": "PAZ is Hisdesat's X-band synthetic aperture radar satellite, which images through cloud and darkness at resolutions as fine as 25 cm across spotlight, stripmap and ScanSAR modes. It was built to serve Spanish defence and security needs alongside civil users, and it carries an AIS receiver that logs the positions ships broadcast about themselves — Hisdesat pairs the two so radar contacts can be checked against declared traffic to flag anomalies. It works with Airbus's TerraSAR-X and TanDEM-X as a coordinated radar constellation, cutting revisit time to roughly four to seven days.",
+    "source": "https://www.hisdesat.es/en/paz/"
+  },
+  "@gap/hades-sa/68446": {
+    "match": "norad",
+    "norad": [
+      68446
+    ],
+    "noradNames": [
+      "HADES-SA"
+    ],
+    "individual": true,
+    "mission": "communications",
+    "sector": "academic",
+    "organization": "AMSAT-EA",
+    "purpose": "HADES-SA, also called SpinnyONE, is a pocket-sized amateur radio satellite from AMSAT-EA, the Spanish amateur satellite organisation. It runs as a store-and-forward bulletin board relaying licensed operators' FSK digital messages and CODEC2 digital voice, and it carries a small camera that downlinks slow-scan still images. It holds the amateur satellite designation SO-127.",
+    "source": "https://www.amsat-ea.org/proyectos/"
+  },
+  "@gap/frontiersat/69015": {
+    "match": "norad",
+    "norad": [
+      69015
+    ],
+    "noradNames": [
+      "FRONTIERSAT"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "CalgaryToSpace, University of Calgary",
+    "purpose": "FrontierSat is a student-built CubeSat from the CalgaryToSpace team at the University of Calgary, flown with support from the Canadian Space Agency and ESA's Fly Your Satellite! programme. Its Mini Plasma Imager is a charged-particle detector studying STEVE, the aurora-like ionospheric feature caused by fast plasma flows. A secondary experiment deploys a lightweight composite lattice boom and films the deployment with an onboard camera.",
+    "source": "https://space.skyrocket.de/doc_sdat/frontiersat.htm"
+  },
+  "@gap/marmotsat/69912": {
+    "match": "norad",
+    "norad": [
+      69912
+    ],
+    "noradNames": [
+      "MARMOTSAT"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "University of Victoria",
+    "purpose": "MARMOTSat is the second CubeSat from the University of Victoria's Centre for Aerospace Research and its student Satellite Design Team, flown under the Canadian Space Agency's CUBICS programme. It sounds the structure and composition of the ionosphere — the charged layer that governs radio propagation and satellite navigation — to see how it responds to a changing climate. Its second purpose is to prove out a fully open-source spacecraft radio that other university teams and amateur operators can reuse.",
+    "source": "https://news.uvic.ca/2026/uvic-satellite-to-probe-climate-open-source-radio/"
+  },
+  "@gap/proba-v-companion/58025": {
+    "match": "norad",
+    "norad": [
+      58025
+    ],
+    "noradNames": [
+      "PVCC"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "civil",
+    "organization": "European Space Agency",
+    "purpose": "PVCC is an ESA technology mission that re-flies a spare single-telescope version of the PROBA-V Vegetation imager on a 12U CubeSat platform. It observes the same ground as the original PROBA-V so the two datasets can be compared directly, testing whether a small, cheap satellite can do the work of a full-size vegetation-monitoring spacecraft.",
+    "source": "https://space.skyrocket.de/doc_sdat/proba-v-cc.htm"
+  },
+  "@gap/disco-2/68431": {
+    "match": "norad",
+    "norad": [
+      68431
+    ],
+    "noradNames": [
+      "DISCO-2"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "academic",
+    "organization": "Danish Student CubeSat Program",
+    "purpose": "DISCO-2 is a student-built CubeSat from the Danish Student CubeSat Program, a joint effort of Aarhus University, the University of Southern Denmark and the IT University of Copenhagen. It carries a three-camera payload — a high-resolution and a wide-field optical camera plus a near-infrared camera — aimed at the east coast of Greenland. The imagery supports Aarhus University's Arctic Research Centre in tracking glacier flow, meltwater, sea ice and land-water interactions against ground measurements.",
+    "source": "https://discosat.dk/v2_disco-2/"
+  },
+  "@gap/istsat-1/60238": {
+    "match": "norad",
+    "norad": [
+      60238
+    ],
+    "noradNames": [
+      "ISTSAT-1"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Instituto Superior Técnico, Lisbon",
+    "purpose": "ISTSat-1 is a 1U CubeSat built by students at Instituto Superior Técnico in Lisbon under ESA's Fly Your Satellite! programme. It carries an ADS-B receiver and tests whether a nanosatellite can pick up the transponder broadcasts aircraft use to report their position, in oceanic and remote regions where ground stations cannot hear them.",
+    "source": "https://space.skyrocket.de/doc_sdat/istsat-1.htm"
+  },
+  "@gap/kuwaitsat-1/55103": {
+    "match": "norad",
+    "norad": [
+      55103
+    ],
+    "noradNames": [
+      "KUWAITSAT-1"
+    ],
+    "individual": true,
+    "mission": "technology",
+    "sector": "academic",
+    "organization": "Kuwait University",
+    "purpose": "KuwaitSat-1 is a 2U CubeSat designed and built at Kuwait University as the country's first university satellite. It carries a multi-colour camera, and its main experiment is to test whether that camera can double as a sensor for determining and controlling the spacecraft's attitude.",
+    "source": "https://space.skyrocket.de/doc_sdat/kuwaitsat-1.htm"
+  },
+  "@gap/sharjah-sat-1/55104": {
+    "match": "norad",
+    "norad": [
+      55104
+    ],
+    "noradNames": [
+      "SHARJAHSAT-1"
+    ],
+    "individual": true,
+    "mission": "science",
+    "sector": "academic",
+    "organization": "Sharjah Academy for Astronomy, Space Sciences and Technology",
+    "purpose": "Sharjah-Sat-1 is a 3U CubeSat built at the Sharjah Academy for Astronomy, Space Sciences and Technology at the University of Sharjah, with Istanbul Technical University and Sabancı University. Its primary payload is an improved X-ray detector for observing cosmic X-ray sources, alongside a visible-band camera returning imagery at roughly 100 m per pixel.",
+    "source": "https://space.skyrocket.de/doc_sdat/sharjah-sat-1.htm"
+  },
+  "@gap/kelpie-1/55107": {
+    "match": "norad",
+    "norad": [
+      55107
+    ],
+    "noradNames": [
+      "AAC-AIS-SAT-1"
+    ],
+    "individual": true,
+    "mission": "communications",
+    "sector": "commercial",
+    "organization": "AAC Clyde Space",
+    "purpose": "Kelpie-1, catalogued as AAC-AIS-SAT-1, is a 3U CubeSat owned and operated by AAC Clyde Space purely as a data service. Its single payload is an AIS receiver that picks up the position and identity broadcasts ships transmit, and the resulting maritime traffic picture is sold exclusively to ORBCOMM for its government and commercial ship-tracking and navigational-safety customers.",
+    "source": "https://space.skyrocket.de/doc_sdat/kelpie-1.htm"
+  },
+  "@gap/eos-sat-1/55053": {
+    "match": "norad",
+    "norad": [
+      55053
+    ],
+    "noradNames": [
+      "EOSSAT-1"
+    ],
+    "individual": true,
+    "mission": "earth-observation",
+    "sector": "commercial",
+    "organization": "Dragonfly Aerospace for EOS Data Analytics",
+    "purpose": "EOS SAT-1 is the first satellite of the EOS SAT constellation, built by Dragonfly Aerospace in Stellenbosch for EOS Data Analytics and billed as the first satellite constellation dedicated to agriculture. Its two DragonEye electro-optical imagers return panchromatic and multispectral imagery in eleven spectral bands over a 44 km swath at close to 1 m resolution. The data feeds harvest monitoring, application mapping, soil moisture, biomass and yield prediction.",
+    "source": "https://dragonflyaerospace.com/eos-sat-1/"
+  }
+}

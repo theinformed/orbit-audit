@@ -1,0 +1,923 @@
+\documentclass[11pt]{article}
+%% Standard article class, arXiv-compatible: no exotic packages.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+%% Let long paths, hashes and URLs break anywhere rather than run into the margin.
+\makeatletter
+\g@addto@macro\UrlBreaks{%
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m%
+  \do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z%
+  \do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M%
+  \do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z%
+  \do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\:\do\=\do\?}
+\makeatother
+\Urlmuskip=0mu plus 1mu\relax
+%% Shrink a table only when it is wider than the text block.
+\newcommand{\fitwidth}[1]{%
+  \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{#1}}
+\setlength{\parskip}{0.4\baselineskip}
+\setlength{\parindent}{0pt}
+\emergencystretch=3em
+\sloppy
+
+\begin{document}
+
+\title{A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets}
+\author{Sean D. Egan\thanks{The Informed, theinformed.org. Corresponding author: sean@theinformed.org}
+  \and Derek Conklin\thanks{The Informed, theinformed.org}}
+\date{Draft, 2026-09-21. Target venues: AMOS; Acta Astronautica; Journal of Space Safety Engineering.}
+\maketitle
+
+%FRONT MATTER. The draft's author-block parenthetical is retained here verbatim as a source comment; the affiliation and corresponding-author line above records the decision that settled it.
+%*(affiliations and corresponding author to be confirmed by the authors before submission; author order per operator decision 2026-09-21)*
+
+%AUTHORS' COMMENT — PROVENANCE.
+%Every numeric claim is followed by an HTML comment naming the committed
+%repository document, receipt or source file it was taken from. Nothing was
+%recomputed while drafting. Primary sources:
+%  docs/orbit-phase2-inclination-decomposition-20260920.md   (commit 4c1722d)
+%  docs/orbit-phase2b-corroboration-20260920.md              (commit 56eef64)
+%  docs/paperb-preregistration-20260920.md                   (commit f317a28; amendment 1 at 8604de2)
+%  docs/paperb-results-20260920.md + paperb-tables-20260920.md (commit 7626c55)
+%  docs/paperb-results-20260920.json                        (machine receipt for the above)
+%  docs/phase3-preregistration-20260921.md                  (the registered covariate-aware gate)
+%  docs/phase3-results-20260921.md + .json                  (Phase 3 measured on the full archive, commit 1093a3c)
+%  docs/detector-separation-plan.md, docs/orbit-browser-wiring.md, docs/orbit-drift.md
+%  pipeline/orbit_events.py (separation_verdict, MIN_SEPARATION_BOUND_RATIO, 2V screen)
+%A small number of comments are marked `derivation:` rather than `src:`. Those
+%are arithmetic performed for this draft — quotients, sample-size and
+%perturbation estimates — from numbers that are themselves traced. They are
+%marked so that no reader mistakes a derivation for a receipt.
+%Scoping language follows the 2026-09-20 adversarial prior-art review. Two
+%phrases are forbidden and do not appear: "physically guaranteed" and
+%"first at catalogue scale". Where a number could not be traced to a committed
+%source it carries a TODO marker rather than a value.
+
+\begin{abstract}
+
+Manoeuvre detection from public two-line element sets has no ground truth. Operators do not publish burn logs, so a detector's precision cannot be measured directly, and the literature has largely settled for demonstrating detections rather than bounding false ones. We describe an apparatus that bounds them continuously: the catalogue's passive population --- debris and spent rocket bodies, which are physically passive by class --- is used as a class-based negative control at approximately 89 million usable intervals%
+% src: docs/orbit-phase2b-corroboration-20260920.md, full-population paired acceptance table: 89,384,239 passive usable intervals 
+, each population's rate is carried as a Jeffreys interval rather than a point estimate, and the public wording of every individual detection is bound mechanically to a bound-versus-bound separation requirement that the pipeline recomputes on every run. When the requirement is not met, the word ``manoeuvre'' is withheld and a stated reason is published in its place.
+
+We report the apparatus, a worked demonstration, and --- at equal prominence --- two stress tests that the apparatus failed, which is the point.
+
+The demonstration is a detector change carried end to end under pre-registration. A decomposition of the false-alarm floor found that 74.08\% of passive flags carried an inclination-change signature%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Channel" paragraph: 29,597 of 39,953 
+, and the obvious explanation --- an inclination residual divided by sin(\emph{i}), badly conditioned near the equator --- was killed by its own pre-registered diagnostic: 1,050 of 1,127 (93.17\%) sampled passive inclination flags lie between 60\textdegree{} and 120\textdegree{}, and only 2 (0.18\%) below 1\textdegree{}%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, opening 
+. The measurement stopped at the registered gate with no detector change. A separate pre-registered corroboration rule --- an inclination trip at or above 30\textdegree{} abstains unless an energy channel also survives persistence in the same interval --- then raised full-population raw-floor bound separation from 6.901$\times$ to 18.191$\times$ across the unchanged 10$\times$ requirement, with the passive rate falling 64.45\% against a payload fall of 5.66\%, 40,300 counted abstentions, every one of the 4,662 payload geostationary north-south catches preserved as the boundary requires, and zero CPU/GPU flag disagreements on the verified population%
+% src: docs/orbit-phase2b-corroboration-20260920.md, paired acceptance and verification sections 
+.
+
+The stress tests are the substance. A pre-registered covariate-matched transfer analysis asked whether a false-alarm floor measured on the passive covariate mix bounds payload behaviour. The registered verdict is \textbf{DOES NOT TRANSFER}: reweighted to the payload covariate distribution the floor is 2.0591$\times$ the raw floor, failing a registered 2$\times$ clause by three percent, and its primary clustered-bootstrap upper bound reaches 26.19 per 1,000 against a 1.000 target%
+% src: docs/paperb-results-20260920.md, "Analysis 1" 
+. A pre-registered exact equivalence test then reversed a previously published reading: at and above the shipped 30\textdegree{} boundary the payload inclination-only rate is 0.6585 of the passive rate, exact 90\% interval [0.6316, 0.6865], superiority \emph{p} = 6.03e-65%
+% src: docs/paperb-results-20260920.md, Analysis 2b table 
+. The region where the two populations genuinely match begins near 54\textdegree{}, not 30\textdegree{}.
+
+Those two results compose with the first, and the multiplication is one line, so we do it here rather than leave it to a reader. The raw-floor separation of 18.191$\times$ divided by the registered primary reweighting factor of 2.0591$\times$ gives a \textbf{covariate-matched separation of 8.83$\times$} --- below the unchanged 10$\times$ requirement. On the registered primary analysis, measured on the detector that ships, the shipped detector does not clear its own gate once the floor is read on the covariate mix its own audit says is the applicable one. The registered coarse sensitivity variant (perigee $\times$ inclination only, 48 cells, 1.3206$\times$) gives 13.77$\times$ and the gate holds, so the composition on its own reports a spread that straddles the requirement rather than a single verdict%
+% derivation: 18.19114 = 2.938579 / 0.161539 and 2.0591351, 1.3206021 from docs/paperb-results-20260920.json, analysis1CorroborationOn; quotient computed for this draft, see §5.2 
+.
+
+A second registration settles it. Phase 3 re-measured the reweighted floor on the \textbf{entire retained archive} --- sampling modulus 1, 89,402,955 passive and 63,018,120 payload usable intervals, five times this paper's sampled passive exposure --- and returned a registered \textbf{FAIL}. The clause this paper failed now passes decisively: the reweighted floor is 0.2756 per 1,000 with a clustered object-level bootstrap 95\% upper bound of 0.5025 against the 1.000 target, seed 20260921 over 2,000 draws, where the sampled evidence gave 1.846. The gate is shut by the other clause instead, at a reweighted separation of \textbf{5.3560$\times$} against the unchanged 10$\times$ requirement%
+% src: docs/phase3-results-20260921.json, meta.passiveIntervals 89,402,955, meta.payloadIntervals 63,018,120, primary.reweightedFloorPer1000 0.275578384451783, clause1.upperBoundPer1000 0.502491221502946, clause2.boundRatio 5.35601797798307, bootstrap.seed 20260921, bootstrap.draws 2000 
+. That failure is not a power problem and no exposure can buy it off: collapse the passive interval to its point estimate and the separation is 9.7662$\times$; read both sides at their point estimates, with no uncertainty admitted anywhere, and it is 9.8135$\times$ --- still under the bar%
+% derivation: 2.691352 ÷ 0.275578 and 2.704389 ÷ 0.275578, from docs/phase3-results-20260921.json payloadSide.lower95Per1000, payloadSide.ratePer1000 and primary.reweightedFloorPer1000; reported the same way in docs/phase3-results-20260921.md, "Why the gate is shut" 
+. The audit therefore shut its own gate twice, by two independent routes --- 8.83$\times$ as a matched composite on a 1-in-5 sample, 5.3560$\times$ fully reweighted at full-archive exposure --- and the second route establishes that the shortfall is fundamental rather than statistical. We report both.
+
+Neither failure was repaired by editing an estimator. Both were produced by rules fixed in commits that precede every number they judge. That is what we mean by audited.
+
+\end{abstract}
+
+\section*{1. Introduction}
+
+\subsection*{1.1 The problem}
+
+A step detector run over catalogued element sets will flag things. Some are manoeuvres. Some are the catalogue's own fit noise, an observation gap, a change in sensor tasking, or an element pair that does not describe one orbit. Without operator telemetry there is no direct way to tell which, object by object.
+
+The usual responses are to demonstrate agreement on a handful of known manoeuvres, or to characterise the detector on simulated data. Both are useful and neither bounds the false-alarm rate of the detector as actually run, on the population it is actually run on, at the time it is run.
+
+\subsection*{1.2 What is taken, and what is not}
+
+Our adversarial prior-art review was explicit about which parts of this territory are occupied.
+
+\textbf{Taken: debris as a negative reference.} A Raytheon patent (US11649076B2, filed 2020, granted 2023) trains a no-manoeuvre baseline on debris. The idea of using a physically passive class as a noise reference is not ours to claim.
+
+\textbf{Taken: catalogue scale.} Lemmens and Krag (JGCD, 2014) and Fu (arXiv:2605.09790, reported at 232 million element sets) have already operated at this scale. We do not claim precedence of scale, and this paper does not describe its work as a first at catalogue scale.
+
+\textbf{State of the art in control rigour, at small N.} MAD-LEO (arXiv:2609.08556) evaluates against evidence-verified controls, with a small number of objects. That is the right direction and a different trade: verified truth on few objects versus class-based truth on many.
+
+\textbf{Direction already published, for the inclination result specifically.} Kelecy (AMOS 2007) reported energy-based versus inclination-based detection performance (roughly 95\%/6\% against 85\%/7\%, on objects at 66\textdegree{} and 98.5\textdegree{}), so the finding that inclination-only evidence is weaker is not new in direction. What is not published, to our knowledge, is a class-resolved population measurement of \emph{how} weak: an attempt to establish, by an equivalence test at a pre-registered margin rather than by accepting a null from \emph{p} > 0.05, that inclination-only flags above a boundary are uninformative rather than merely noisy. We report that attempt and its outcome, which is a failure at the shipped 30\textdegree{} boundary and a matched region located near 54\textdegree{} (\S{}5.4). The contribution is the measurement and the registered procedure that produced it, not a demonstration that the shipped boundary was right.
+
+\textbf{The gap we occupy:} the audit as a standing, published, gating artifact --- an interval-level false-alarm rate with interval estimates, recomputed on every production run, bound mechanically to the strength of the public claim, and published alongside the detections it governs. The apparatus is not a validation exercise performed once; it is a component of the pipeline that can and does close.
+
+%AUTHORS' COMMENT — CITATIONS.
+%Prior-art identifiers above (US11649076B2; Lemmens & Krag 2014 JGCD;
+%Fu arXiv:2605.09790; MAD-LEO arXiv:2609.08556; Kelecy AMOS 2007) were taken
+%verbatim from the committed prior-art review (operator memory,
+%space-publication-priorart-20260920), which did not carry full titles, pages
+%or DOIs. Full bibliographic entries for all five were located and verified
+%against live sources on 2026-09-21 — USPTO/Google Patents record for
+%US11649076B2; Crossref DOI record for Lemmens & Krag; arXiv abstract pages
+%for Fu and MAD-LEO; the AMOS technical-paper library, including a fetched
+%copy of the paper itself, for Kelecy — and now appear in the References
+%section. Flohrer, Krag and Klinkrad AMOS 2008 IS fully traced with verbatim
+%quotations; see section 5.5 and docs/paperb-results-20260920.md. Its page
+%number for the quoted passage (page 6 of 12 in the AMOS proceedings PDF) was
+%not previously recorded and has now been added; see §5.5 and the References
+%section.
+%RESOLVED 2026-09-21: no bibliographic TODO remains open in this paper. The
+%`implausibleCosts` full-population value and the external commit-anchor of
+%§8 are separate, non-citation TODO items and remain open as stated there.
+
+\subsection*{1.3 Contributions}
+
+\begin{enumerate}
+\item[1.] The apparatus (\S{}2): a class-based negative control, interval estimates rather than point estimates, a bound-versus-bound separation requirement argued from share-of-flags rather than fitted to the data, a mechanical gate on public wording, a physical cost ceiling whose rejections are counted, and abstentions that are counted at the decision that produces them.
+\item[2.] A demonstration (\S{}3--4): a pre-registered diagnostic that killed the obvious explanation of a false-alarm floor and stopped without a fix; then a pre-registered corroboration rule measured on a paired full-population rerun, accepted on a 6.901 $\rightarrow$ 18.191$\times$ raw-floor separation, and stopped again.
+\item[3.] Two stress tests the apparatus failed (\S{}5): a covariate transfer analysis that returned DOES NOT TRANSFER, and an equivalence test that reversed a published inclination reading and relocated its boundary from 30\textdegree{} to near 54\textdegree{}. These are reported at the prominence of the demonstration because an audit that has never returned an unwelcome answer has not been shown to work.
+\item[4.] The composition of the two (\S{}5.2), and its independent confirmation (\S{}5.2.2): applying the first stress test's measured correction to the demonstration's headline puts the shipped detector below its own gate at 8.83$\times$, and a second registration measured on every in-scope object in the archive reaches the same verdict by a direct route at 5.3560$\times$, with the shortfall surviving at point estimates on both sides. We report both rather than omit either.
+\item[5.] An engagement with the closest error-structure literature (\S{}5.5), stating where our measured curve disagrees with a published out-of-plane error peak and why that disagreement is not a refutation.
+\end{enumerate}
+
+\subsection*{1.4 Why the failures are the point}
+
+The result a reader is most likely to remember from this paper is that our own audit shut our own gate. We put that here rather than only in \S{}5 because it is the claim, not an embarrassment inside it.
+
+Nothing in \S{}5 was repaired. No estimator was swapped, no margin relaxed, no boundary moved, no detector changed, and the 30\textdegree{} rule remains live while the evidence against its stated justification sits in the repository. The reweighted floor is reported at 2.0591$\times$ against a 2$\times$ threshold that a registration written three percent looser would have passed, and the raw ratio is published so any reader may apply their own. The composed separation of 8.83$\times$ is reported although the number the apparatus was built to advertise is 18.191$\times$. Phase 3's registered FAIL is reported together with the observation that its own registration predicted failure for the wrong reason, which \S{}5.2.2 states before a reviewer has to.
+
+The claim of this paper is not that the apparatus produces favourable numbers. It is that rules fixed in commits preceding every number they judge will occasionally return numbers their authors do not want, and that a control which has demonstrated that is worth more than one which has not been given the chance.
+
+\subsection*{1.5 Who a published error rate is for}
+
+Space-domain activity data exists today in three forms, and none of them is what a decision-maker outside government or a well-funded operator can obtain. Government space situational awareness is classified. Commercial awareness is accurate but proprietary, priced for institutional customers. Compliance reporting --- the ESA Space Environment Report and its predecessors --- is public but annual and retrospective: what happened to a population last year, not what is happening to an object today. Missing from all three is free, continuous, catalogue-scale activity characterisation carried alongside a published, continuously audited error rate.
+
+That last clause is load-bearing, and it is what this paper is about. A rate with no error bound is not usable for a decision; ``manoeuvre detected'' with no stated wrongness rate is a rumour with better production values. The apparatus of \S{}2 attaches the number, and \S{}5 shows it attaching a number its authors did not want.
+
+Three uses follow, each tied to a decision and each stated with its limiter in the same breath.
+
+\emph{Sensor-tasking economisation.} A network deciding where to point limited looks needs to know what fraction of a cue is noise before it can budget wasted looks per thousand cues. The limiter is the one \S{}6 states: where the separation gate clears, it bounds large-excursion detections only, and a tasking decision that assumes uniform sensitivity across manoeuvre size will be wrong in the direction the recall measurement describes.
+
+\emph{Conjunction screening for operators priced out of commercial services.} Activity status, keeping cadence and correction history of a conjuncting object are inputs a well-resourced operator buys. Free, audited activity history is a partial substitute, not a replacement: catalogue-scale element accuracy and daily-cadence latency both trail a commercial feed, and the published data says so rather than implying parity.
+
+\emph{Teaching.} The detector's public surface began as a teaching artifact for reading orbital element sets, and that origin is not incidental to the method. A data product whose error rate and apparatus are documented in the open is legible to a student for the same reason it is usable for screening: the interval estimates, the abstentions and the blocking reasons are all visible on the object they govern.
+
+The companion paper adds two more --- disposal-compliance monitoring and remaining-propellant bounds for underwriting --- with their own limiters, both of which turn on the recall measurement quoted in \S{}6.
+
+One limiter belongs in the framing rather than in the limitations. Commercial providers, where affordable, exceed this data with proprietary sensors and tasked collection. The niche here is not best-possible accuracy; it is free, public and audited, and audited is the differentiator, because an unaudited better number is not comparable to an audited worse one in any decision that depends on knowing how often the number is wrong.
+
+\section*{2. The apparatus}
+
+\subsection*{2.1 A class-based negative control}
+
+The detector is a self-history step detector. For each object, adjacent fitted element sets form an interval; each interval's residual in semi-major axis, eccentricity, inclination and node is standardised against a rolling baseline built from that object's own recent history; a channel trips when the standardised residual exceeds a threshold (production $\kappa$ = 32) and survives a persistence test.
+
+The control partitions the catalogue by object type. Passive is \path{DEBRIS} and \path{ROCKET BODY}; payload is \path{PAYLOAD}; objects with a null or \path{UNKNOWN} type are in neither population%
+% src: docs/paperb-preregistration-20260920.md, §0 
+. A flag is any detected event whose signature is not in the non-propulsive set; exposure is usable intervals of admitted objects, under the production rule that an object with fewer than nine usable intervals is excluded and the exclusion counted%
+% src: docs/paperb-preregistration-20260920.md, §0 
+.
+
+Debris and spent stages are physically passive by class, so a flag on one is treated as a false alarm; \S{}6 bounds the direction of the error that treatment introduces, which is an inflated floor rather than a deflated one. The exposures involved are large: the paired full-population acceptance ran 68,711 objects / 216,937,493 element rows, admitting 61,377 objects to both detectors, with 89,384,239 passive and 62,984,047 payload usable intervals%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Full-population paired acceptance" 
+.
+
+Two element-level statements belong here rather than in the limitations, because every physical quantity in this paper descends from them. First, the archive stores catalogue mean motion, and semi-major axis is derived Keplerian from it as $a = (\mu/n^2)^{1/3}$ with no Kozai-to-Brouwer transform; the resulting offset from the SGP4 mean semi-major axis is about +0.5 km at the geostationary ring and +3.3 to $-$1.7 km at 500 km altitude depending on inclination, is a smooth function of (\emph{a}, \emph{e}, \emph{i}), and therefore cancels to well under a metre in the per-interval differences this detector actually tests%
+% derivation: a_Brouwer = a_Kepler(1 − δ₁/3 − …) with δ₁ = ¾·J₂·(R_E/a)²·(3cos²i − 1)·(1−e²)^(−3/2); computed for this draft, not taken from a receipt 
+. The derived perigee altitude, by contrast, inherits the full offset with its inclination dependence, and that matters for the perigee stratification of \S{}5.1; it is carried into the limitations as such. Second, the companion end-of-life paper's frozen census reports 216,937,797 rows for the same 68,711 objects --- 304 more than the count above --- because it is a different pass over a live ingest, taken at a different time and held frozen for that study; neither figure is a correction of the other, and the two must not be differenced%
+% src: docs/eol-three-arm-20260920.md, arm-0 census table, against docs/orbit-phase2b-corroboration-20260920.md, "Full-population paired acceptance" 
+.
+
+The critical scoping statement, which we place here rather than in the limitations because it governs every number that follows: \textbf{the payload rate is not a detection rate.} Most payload intervals contain no manoeuvre either. What the two rates together bound is how much of the payload flag rate could be the same noise%
+% src: pipeline/orbit_events.py, control note string 
+.
+
+\subsection*{2.2 Interval estimates, not point estimates}
+
+Every rate in the control carries a Jeffreys 95\% interval. The passive rate is read at its upper bound and the payload rate at its lower bound whenever the two are compared, so that the comparison is conservative in the direction that matters. A stratum or population with zero observed flags receives a non-zero upper bound; a zero point estimate is never reported as a zero bound%
+% src: docs/paperb-preregistration-20260920.md, §4 
+.
+
+\subsection*{2.3 Separation as an effect size, not a significance test}
+
+The first half of the published gate is a design target: the passive Jeffreys upper bound must lie below 0.001, one flag per 1,000 usable intervals. On its own that half is buyable --- a detector tightened until it flags almost nothing has a passive rate of almost nothing, and clears it by detecting nothing.
+
+Requiring in addition that the payload excess be statistically significant does not close the loophole, and the exposures say why. At the paired acceptance's 89,384,239 passive and 62,984,047 payload usable intervals, $1/n_1 + 1/n_2 = 2.706 \times 10^{-8}$, so the two-proportion \emph{z} for a null rate \emph{p} and a rate ratio \emph{r} is $(r - 1)\cdot\sqrt{p / 2.706 \times 10^{-8}}$. Setting \emph{z} = 1.96, the smallest detectable ratio is 1.0058 at the payload rate, 1.0082 at the pooled rate and 1.0153 at the passive rate; at the gate's own \emph{p} < 0.01 those become 1.0076, 1.0107 and 1.0200%
+% derivation: computed for this draft from the paired acceptance exposures in docs/orbit-phase2b-corroboration-20260920.md; not taken from a receipt 
+. An effect of six parts in a thousand is not a reason to put the word ``manoeuvre'' on an event card, and significance at this scale is a statement about the size of the archive.
+
+The source comment in \path{pipeline/orbit_events.py} makes the same argument with a \emph{z} of 459 and a detectable ratio of 1.001%
+% src: pipeline/orbit_events.py, MIN_SEPARATION_BOUND_RATIO commentary 
+. Neither figure reproduces from any bundle tabulated in this paper: the live artifact gives \emph{z} = 411.8 and the paired original \emph{z} = 413.6, and 1.001 would need roughly 67 times this archive's exposure to reach \emph{p} < 0.05. We report the arithmetic above instead, and the comment has been corrected in the repository.
+
+So the second half is an effect size, and it compares bounds: the payload rate's Jeffreys lower bound must be at least ten times the passive rate's Jeffreys upper bound.
+
+The factor of ten is argued from a share of flags rather than fitted. If the process that produces flags on objects that are physically passive by class also acts on payloads, then the share of payload flags attributable to it is at most the ratio of the two rates; a factor of ten bounds that share below one in ten. The word ``manoeuvre'' on an event card is a claim about \emph{that} event, so a reader is entitled to more than a coin flip --- and a coin flip, a factor of about two, is roughly what a threshold reverse-engineered from the archive of the day would have been%
+% src: pipeline/orbit_events.py, MIN_SEPARATION_BOUND_RATIO commentary; the same reasoning and the decision to keep 10x are recorded in docs/detector-separation-plan.md, "Decisions" 
+. The commentary also records that the share argument assumes the two classes are fitted alike, and that they are not --- payloads are tracked and fitted differently from fragments --- which is a further argument for a generous factor rather than one set at the edge of what the data allow.
+
+\subsection*{2.4 The gate is mechanical, and it publishes its reason}
+
+\path{sufficientToLabel} is computed on every run from four conditions, all of which must hold: the passive control holds at least 200 intervals; the passive Jeffreys upper bound is below 0.001; the payload excess is significant at \emph{p} < 0.01; and the bound separation meets 10$\times$%
+% src: pipeline/orbit_events.py, control assembly 
+. When any fails, a \path{blockingReason} string states which, in publishable English --- for example, that the payload flag rate is only \emph{n} times the false-alarm floor once both are read at their 95\% bounds, against the 10$\times$ required, so up to one flag in \emph{n} on a payload could be the same noise.
+
+Two clauses need their own accounting. The significance clause is near-vacuously satisfied at full-population exposure, for the reason \S{}2.3 gives; it is retained only as a guard against tiny or degenerate controls, where it can still fail, and it carries no weight in any full-population verdict in this paper. And the gate is computed on interval-level Jeffreys bounds, which \S{}6 says are the weaker of the two estimators this work uses; the separation is nevertheless robust to intra-object clustering, since pushing 18.191$\times$ below 10$\times$ would require the bounds widened by about fifty-fold, a design effect near 2,500 at roughly 1,450 intervals per object --- an intra-object correlation above one, which is impossible. That is why the simpler estimator is retained in production while the clustered bootstrap is quoted for the covariate work in \S{}5%
+% derivation: design effect required to move 18.191× to 10×, computed for this draft from the paired acceptance exposures; not taken from a receipt 
+.
+
+Three properties make this a gate rather than a disclaimer. It is recomputed from the run's own control, so it cannot be inherited from a better run. It is mechanical, so no author decides per-event whether to use the word. And zero denominators mean \emph{unmeasured}, never zero. The third property is demonstrated in an analogous lane rather than in this one: the long-arc \path{orbit-drift} control refuses to label from a restricted population and returns UNMEASURABLE instead%
+% src: docs/orbit-drift.md, "Shipped window and statistic" and the 2026-09-12 control 
+. That a restricted or manual sample cannot open \emph{this} gate follows from the same code path computing the control, but we have not run the adversarial construction that would show it, and we do not claim it as measured.
+
+The gate closes in practice, which is the only evidence that it is real. In the release used by our end-of-life study, the published self-history passive rate was 0.4471 per 1,000 with bound separation 6.86$\times$, below the 10$\times$ gate, and consequently all 28 individual published graveyard-raise records carried \path{manoeuvreLabelPermitted = false}%
+% src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" 
+. Separately, a full-catalogue long-arc control run returned FAIL / UNMEASURABLE with flags suppressed: 68,657 objects examined, 0 test-fitted objects, 68,657 coverage gaps, and the report states in terms that this is inadequate coverage, not zero measured false alarms, and that an earlier successful result (0/4,107 passive, 56/7,059 payload, 0.729 per 1,000 upper bound, 10.88$\times$) is historical evidence that authorises none of the current release's wording%
+% src: docs/orbit-drift.md, "Shipped-config full-catalogue control — 2026-09-12" 
+.
+
+\subsection*{2.5 The physical ceiling, and the rule that a bound must be applied}
+
+Delta-v pricing carries a screen with a physical justification, and we state its status precisely because an earlier version of this text overstated it. The screen rejects any interval whose priced total exceeds twice the speed at perigee. That is not the largest impulse a bound orbit admits: a single impulse at radius \emph{r} leaves the orbit bound if the \emph{final} speed is below escape, so the true supremum is $v(r)$ + \emph{v}\_esc(\emph{r}) = $(1 + \sqrt{2})\cdot v$(\emph{r}) $\approx$ 2.414$\cdot$$v(r)$, reached by reversing the velocity and then adding up to escape speed in the new direction. At a 7,000 km circular radius that supremum is 18.22 km/s against the screen's 15.09 km/s%
+% derivation: vis-viva at r = 7,000 km, μ = 398,600.4418 km³/s²; computed for this draft 
+. The screen therefore sits about 21\% inside the true single-impulse bound, and it is chosen for that reason rather than in ignorance of it: no real spacecraft manoeuvre approaches twice orbital speed, so a priced total above it is evidence of an element pair that does not describe one orbit, not of an expensive burn%
+% src: pipeline/orbit_events.py, "THE PHYSICAL SCREEN, AND WHAT IT IS NOT" 
+.
+
+Two further caveats keep it a screen rather than a bound. The quantity compared against it is a hypot of components priced at three different points in the orbit --- tangential and eccentricity at circular speed, plane change at apogee --- while the ceiling is evaluated at perigee; and the components are themselves cheapest-case figures. A mixed-point cost against a single-point ceiling is an implausibility heuristic, and we use it as one.
+
+Two operational rules attach to it. First, the rejections are counted: the sweep carries an \path{implausible_costs} counter beside its tracking-gap drops and its abstentions, on the principle that a bound which removes data owes the reader a number%
+% src: pipeline/orbit_campaigns.py, event assembly 
+. As of commit 061539e (2026-09-21) that principle is closer to discharged: the counter is now carried into the diagnostics block and the published control alongside \path{trackingGapDroppedIntervals} and \path{inclinationUncorroborated}, the one-line repository change this section previously called for. No full-population value can be quoted yet --- the pooled count will first materialise at the next production sweep --- and credit for discharging the principle stays unclaimed until that measured value is sitting in a committed artifact%
+% src: pipeline/orbit_campaigns.py, diagnostics assembly and control_rates_by_object; commit 061539e 
+. Second, and this is a methods lesson worth more than the ceiling itself: the ceiling had been computed and published in the artifact while the lane that judged most of the events never read it. Measured on a live artifact before the fix, five of 1,500 published events cost more than twice their own perigee speed, and because the object summaries sort by descending delta-v, the top five rows of the public page were all physically impossible --- one object showing 22,252 m/s in its worst event against a 15,077 m/s ceiling%
+% src: docs/orbit-browser-wiring.md, "The 2V ceiling reached readers" 
+. The rule adopted is stated in the same document: a physical bound belongs at every call site that prices a change, or inside the pricing function itself.
+
+We include this because a paper that describes only the apparatus's successes teaches nothing transferable. A bound computed but not applied is not a bound.
+
+\subsection*{2.6 Counted abstentions}
+
+When a rule declines to judge an interval, the decline is counted and attributed, not silently folded into the flag count. The high-inclination corroboration rule of \S{}4 increments a detector diagnostic, the whole-pass count, and the passive or payload bucket where applicable, and publishes its boundary and its reason alongside the count%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Implementation and checkpoint continuity" 
+.
+
+The accounting is stated carefully, because abstentions and removals are different stages: counts are taken at the post-persistence decision, before later tracking-gap and physical-cost checks, so an abstention need not equal an event removed from the previous catalogue --- the old detector might already have rejected that interval later. The full-population rerun shows the difference explicitly: 40,300 all-object abstentions against 40,160 removed events, a gap of 140%
+% src: docs/orbit-phase2b-corroboration-20260920.md, paired acceptance narrative 
+.
+
+The source document reports that gap rather than reconciling it. It does in fact decompose cleanly, and showing the decomposition is better than asserting the stages differ:
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lrrr}
+\toprule
+Class & Abstentions & Flags removed & Excess \\
+\midrule
+Passive & 25,752 & 25,750 & +2 \\
+Payload & 11,174 & 11,149 & +25 \\
+Neither class & 3,374 & 3,261 & +113 \\
+Total & 40,300 & 40,160 & +140 \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+Flag removals are the acceptance table's own differences --- 39,954 $-$ 14,204 passive and 197,075 $-$ 185,926 payload --- and the third row is the residual of the all-object totals%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Full-population paired acceptance"; the three excesses are differences of that table's published counts, computed for this draft 
+. Every abstention is therefore accounted for, and the 113 excess outside both classes is concentrated where the unclassified population is: objects with a null or \path{UNKNOWN} catalogue type, which belong to neither control.
+
+\subsection*{2.7 Checkpoint policy: a sweep never pools two detectors}
+
+A long sweep is resumable, which creates a way to corrupt a control: resume a half-finished sweep under new detector rules and the reported rate mixes two detectors. The implementation forbids it. A checkpoint predating the corroboration rule finishes its entire sweep under the old policy --- in serial, process-pool, columnar and GPU execution --- and its control output says explicitly that corroboration is disabled for that legacy checkpoint and that its abstention count is \emph{unmeasured}, not zero. Merging incompatible non-empty sweep policies raises rather than averaging%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Implementation and checkpoint continuity" 
+.
+
+\subsection*{2.8 A channel written, tested, and shipped off}
+
+The clearest demonstration that the control governs development, rather than decorating it, is a capability the project built and then declined to ship.
+
+Two elements the archive stores were unwatched: the node and the argument of perigee. Both drift enormously with nobody burning anything --- the Earth's oblateness moves each at of order a degree a day in low orbit, a thousand times the catalogue's own scatter in those angles --- so neither channel sees a raw element difference; each sees the residual after the predicted J2 secular drift is subtracted, exactly as the semi-major-axis channel sees the residual after drag. Both were written, both were given their conditioning floors (1/sin \emph{i} with a hard cut at 1\textdegree{} for the node; 1/\emph{e} with a hard cut at \emph{e} = 10\ensuremath{^{-3}} for the apse line), and both were then measured on the passive control before either was switched on%
+% src: pipeline/orbit_events.py, "The node and the apse line" commentary and NODE_CHANNEL_ENABLED / APSIDAL_CHANNEL_ENABLED 
+.
+
+The node channel passed. Over one seven-day release window of the live archive --- 15,363 intervals, 3,205 of them on debris and spent stages --- the passive control stood at 49 flags with the channel off and 49 with it on, unchanged to the flag, while 41 payload node tests cleared the bar and 11 became published node-change events.
+
+The apse-line channel failed, and it is off. Same window, same run: the passive control went from 49 flags to 62, a thirteen-flag increase on objects with no propulsion. The excess was not a threshold artefact. Every tripped test was on debris, at eccentricities from 0.0016 to 0.19, with cohort \emph{z}-scores from 8.5 to 147 --- so the population screen that saves the node channel does not save this one. Three unmodelled physical causes are named in the source: drag rotates the apse line of an eccentric orbit by an amount that depends on area-to-mass (the worst offenders carried B* of 0.16 and 0.19); the catalogue's eccentricity scatter is measured on well-tracked payloads, so $\sigma_e/e$ understates the floor by two orders of magnitude on exactly the objects that trip it; and the residual distribution has heavier tails than the population MAD describes%
+% src: pipeline/orbit_events.py, "The node and the apse line" commentary 
+.
+
+So the channel ships written, tested and off, and turning it on requires a fresh measurement on the passive control first. A Molniya-type orbit spends its life on the apse line, so this is a real capability declined. It was declined because the negative control said so, before anything was published --- which is the property this paper is about, demonstrated on a decision that cost the project a feature rather than on one that gained it.
+
+\section*{3. Demonstration, part one: a decomposition that killed the obvious explanation}
+
+\subsection*{3.1 The starting position}
+
+The published control stood at a bound separation of 6.86$\times$ against the 10$\times$ requirement, with a passive rate of 0.447058 per 1,000 (Jeffreys upper 0.451456) and a payload rate of 3.110553 per 1,000 (lower 3.096821)%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, full-population measures table 
+. The gate was shut.
+
+The route chosen was to cut the false-alarm floor, and the documented trap was named in advance: a symmetric tightening moves both populations and the ratio barely moves, so every change must be asymmetric and the asymmetry must be arguable in physics before it is measured%
+% src: docs/detector-separation-plan.md, "Two routes, and one trap" 
+.
+
+\subsection*{3.2 The hypothesis, and its pre-registered stop rule}
+
+74.08\% of passive flags carried an \path{inclination-change} signature --- 29,597 of 39,953 --- with a further 28 carrying a geostationary north-south keeping signature%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Channel" paragraph 
+. That distribution is not what a propulsive population would look like, which is the point: the flags are on debris and spent stages, which perform no manoeuvres at all, and plane changes are the most expensive thing an operator can buy. Whatever the inclination channel is responding to on these objects, it is a property of how their planes are fitted, not of anything that happened to them. The proposed mechanism was conditioning: the inclination residual divides by sin(\emph{i}), which blows up near the equator.
+
+The stop rule was registered with the hypothesis: stop if the decomposition does not support the proposed concentration at low inclination, sparse baseline coverage, or high fit scatter%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Pre-registration and decision rule" 
+. The diagnostic population was fixed before reading results to all classified passive/payload objects with catalogue number $\equiv$ 0 (mod 25) across their entire retained histories, with bins fixed in advance.
+
+\subsection*{3.3 The result: the hypothesis is rejected, and nothing was changed}
+
+In the fixed sample, 1,050 of 1,127 (93.17\%) passive inclination flags lie between 60\textdegree{} and 120\textdegree{}, and only 2 (0.18\%) below 1\textdegree{}. 953 of 1,127 (84.56\%) have all twelve neighbouring baseline blocks; sparse baselines of 3--5 blocks account for ten flags; the highest scatter band contains one passive flag; longer intervals do not carry an elevated passive rate%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, opening and decomposition tables 
+. The concentration is in high-inclination, well-covered histories --- the opposite corner of the covariate space from the one the hypothesis named.
+
+The geometric constraint pointed the same way. A blanket one-degree inclination gate would have discarded 221 of 226 sampled payload north-south catches and 2,734 of 2,845 published catalogue north-south catches, while addressing two sampled passive flags%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, opening 
+. And a general threshold increase was not justified either: 2,345 of 2,845 (82.43\%) published north-south catches sit at 32 $\le$ |z| < 64, with sample median |z| of 40.18 passive against 42.20 payload and substantially overlapping distributions.
+
+The measurement stopped at the registered gate. No parameter, optional switch or threshold was changed; both arithmetic implementations retained their pre-measurement SHA-256 hashes; the live published bound remained 6.86$\times$%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Interpretation, arithmetic paths, and limits" 
+. The report states that fixed-code before/after acceptance and achievement of 10$\times$ remain unmeasured/unproven, not passes.
+
+A negative diagnostic that changes nothing is a cheap result to suppress and an expensive one to publish. It is here because the same registration that produced the later accepted change produced this stop, and a registration only means anything if both outcomes are reported.
+
+\section*{4. Demonstration, part two: a corroboration rule, measured end to end}
+
+\subsection*{4.1 The registered gate, passed before any code was edited}
+
+Phase 2b registered a different remedy and, crucially, a diagnostic gate that had to pass before either detector implementation was touched: at inclination $\ge$ 30\textdegree{}, at least 60\% of passive inclination flags must be inclination-only, and the payload-to-passive inclination-only exposure rate ratio must be at most approximately 1.5.
+
+Measured: 1,009 of 1,104 (91.39\%) passive high-inclination flags are inclination-only; the payload inclination-only rate is 0.215083 per 1,000 usable intervals against 0.296720 passive, a ratio of 0.724868$\times$%
+% src: docs/orbit-phase2b-corroboration-20260920.md, pre-registration table 
+. Both clauses passed.
+
+The 30\textdegree{} boundary was fixed from the prior all-channel rate table, where the payload-to-passive ratio collapses from 14.88$\times$ at 0--1\textdegree{} to 1.76$\times$ at 15--30\textdegree{} and 0.40$\times$ at 30--60\textdegree{}%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Why 30°" 
+. The report states plainly that the 15--30\textdegree{} evidence is sparse --- 13 passive and two payload inclination catches --- so it does not establish a precise physical discontinuity at 30\textdegree{}, that the boundary was not scanned against the eventual separation, and that no alternative cutoff was tried. Section 5.3 reports what happened when a later analysis did scan it.
+
+\subsection*{4.2 The rule}
+
+For fresh self-history sweeps, an inclination trip whose starting inclination is $\ge$ 30\textdegree{} abstains unless semi-major axis or eccentricity also survives persistence in that same interval. A raw energy spike that fails persistence cannot corroborate. A node trip cannot corroborate. Below 30\textdegree{} the channel set and returned events are unchanged by construction%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Implementation and checkpoint continuity" 
+.
+
+\subsection*{4.3 Paired full-population acceptance}
+
+Both detector policies received identical rows for each admitted object and identical GPU arithmetic, so both control denominators agree exactly:
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lrrr}
+\toprule
+Measure & Live artifact before the task & Paired original & Paired corroboration \\
+\midrule
+Passive usable intervals & 89,368,801 & 89,384,239 & 89,384,239 \\
+Passive flags & 39,953 & 39,954 & 14,204 \\
+Passive flags / 1,000 & 0.447058 & 0.446992 & 0.158909 \\
+Passive 95\% upper / 1,000 & 0.451456 & 0.451390 & 0.161539 \\
+Payload usable intervals & 62,952,784 & 62,984,047 & 62,984,047 \\
+Payload flags & 195,818 & 197,075 & 185,926 \\
+Payload flags / 1,000 & 3.110553 & 3.128967 & 2.951954 \\
+Payload 95\% lower / 1,000 & 3.096821 & 3.115197 & 2.938579 \\
+Bound separation (10$\times$ required) & 6.860$\times$ & 6.901$\times$ & 18.191$\times$ \\
+Passive inclination catches & 29,625 & 29,626 & 3,876 \\
+Payload inclination catches & 21,053 & 21,055 & 9,906 \\
+Payload GEO north-south catches & 4,660 & 4,662 & 4,662 \\
+All-object inclination abstentions & not measured & not measured & 40,300 \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Full-population paired acceptance" 
+
+The passive point rate falls 64.45\%; the payload rate falls 5.66\%, retaining 94.34\% of payload flags. This is not proportional loss and does not trigger the registered symmetric trap%
+% src: same 
+.
+
+Three properties of that acceptance matter more than the headline number.
+
+\textbf{It is a rerun, not a subtraction.} Every one of 38,693 returned events below 30\textdegree{} was compared for exact equality and was unchanged; 40,160 old events were removed and zero new events appeared; all 40,160 removals carry the \path{inclination-change} signature, and every other signature is preserved%
+% src: same 
+.
+
+The 4,662 payload geostationary north-south catches are among those preserved, and we say plainly what that is and is not. Controlled geostationary satellites sit at inclinations of hundredths of a degree to a few degrees, far below the 30\textdegree{} boundary, and below 30\textdegree{} the channel set and returned events are unchanged by construction. Their preservation is therefore required by the rule, not discovered by the acceptance, and it should not be read as an acceptance property. What the identity does establish, because it is measured rather than assumed, is that none of the 4,662 sits at or above 30\textdegree{}: any that did would have abstained and appeared among the removals, and all 40,160 removals carry the \path{inclination-change} signature rather than the geostationary north-south one. We do not publish the inclination distribution of the 4,662 and cannot say more than that from a committed source.
+
+So the change lowered the detector's pooled floor without touching the capability the detector exists for. We say \emph{lowered its pooled floor} rather than \emph{fixed its floor}, because \S{}5.2 measures that the same change made the floor more covariate-sensitive, not less.
+
+\textbf{The abstentions are counted and attributed:} 25,752 passive, 11,174 payload, 3,374 outside both classes, 40,300 in total%
+% src: same 
+.
+
+\textbf{The stop rule fired again.} Separation reached 18.191$\times$, the registered scientific stop was satisfied, and no threshold, boundary or requirement was changed afterwards.
+
+\subsection*{4.4 Arithmetic verification}
+
+CPU and GPU implementations are committed together, and the corroboration decision is computed independently on each: the CPU tests the surviving channel set at the existing call site; the GPU computes a corroboration mask from its own threshold and persistence arrays and the same starting inclination, and GPU execution consumes that mask without running the CPU predicate%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Implementation and checkpoint continuity" 
+.
+
+The deterministic real-population verification covered 1,000 objects, 1,230,008 element rows / 1,086,894 usable intervals, in a fixed epoch window at production $\kappa$ = 32, completing 3,260,682 channel comparisons, 4,632 raw threshold flags, 2,681 persistent channel flags and 4,118 corroboration decisions including 21 inclination abstentions, with zero disagreements, zero fallbacks and zero telemetry gaps; the largest absolute z difference was 1.82e-12 and flag comparisons carry no numerical tolerance%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Arithmetic verification" 
+. Real CUDA fixtures cover the 30\textdegree{} boundary, each energy channel, energy spikes that fail persistence, and geostationary north-south preservation; 35 CUDA-enabled focused tests passed with no skips, and the final repository suite ran 624 tests in 125.138 s, OK.
+
+The scope is stated exactly in the source and we repeat it: the GPU oracle proof is that measured 1,000-object population plus fixtures, not a full-archive CPU/GPU comparison; the full-population before/after acceptance uses the same GPU arithmetic for both passes and therefore does not establish zero disagreements on unverified intervals%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Unproven items and scope" 
+.
+
+\section*{5. The stress test}
+
+An audit that has only ever agreed with the paper it supports has not been tested. This section reports two pre-registered analyses designed to answer the two objections most likely to kill the method, both given a real chance to win, and both of which did.
+
+The pre-registration
+% src: docs/paperb-preregistration-20260920.md, committed at f317a28 
+was committed in its own commit ahead of the analysis code and ahead of every result file, with an amendment
+% src: 8604de2 
+likewise ahead of every result. Section 10 of that document prohibits metric shopping, fixes every estimator, margin, bin edge, seed and decision rule, and states that an unfavourable result is a result, is reported at the same prominence as a favourable one, and changes the paper's claims.
+
+\subsection*{5.1 Objection one: the debris floor may not transfer to payloads}
+
+Passive and payload populations differ in altitude, inclination, eccentricity and update cadence, so a floor measured on the passive covariate mix is not obviously a bound on payload behaviour.
+
+The registered answer estimates the passive rate inside covariate strata and carries it onto the payload population's own covariate distribution. Four factors, banded in advance and reusing existing repository definitions wherever one existed: perigee (6 bands), inclination (8 bands), eccentricity (4 decade bands --- the only new cut, registered as untuned), and interval span as a proxy for update cadence (4 bands, spanning the full admissible range between the 0.1-day minimum and the 3.0-day maximum joinable gap). 768 nominal cells%
+% src: docs/paperb-preregistration-20260920.md, §2 
+.
+
+The sample is every archive object with catalogue number $\equiv$ 0 (mod 5) and an in-scope type, across whole retained histories --- uniform inclusion probability in both populations, so the reweighting is a pure covariate reweighting and not a design reweighting. Measured: 2,510 passive and 3,787 payload objects with tallies, 17,877,732 passive and 12,746,434 payload usable intervals, with 16 admission exclusions counted rather than dropped%
+% src: docs/paperb-results-20260920.md, "Sample and exposure" 
+.
+
+The decision rule was fixed before any number existed: the transfer claim survives if and only if the reweighted floor and its primary bootstrap upper bound are below the 0.001-per-interval target, and the reweighted floor is within 2$\times$ the raw floor; independently, if unsupported payload exposure exceeds 20\%, the estimate is declared insufficient whatever it produced%
+% src: docs/paperb-preregistration-20260920.md, §5 
+.
+
+\subsection*{5.2 Result: DOES NOT TRANSFER}
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lr}
+\toprule
+Quantity & Per 1,000 usable intervals \\
+\midrule
+Raw passive floor & 0.162716 \\
+Raw Jeffreys 95\% & [0.156884, 0.168710] \\
+Reweighted to the payload covariate mix & 0.335055 \\
+Primary 95\%, clustered object bootstrap & [0.179740, 26.190132] \\
+Secondary 95\%, Jeffreys posteriors (registered as conservative) & [0.571995, 1.510412] \\
+Reweighted / raw & 2.0591$\times$ \\
+Registered target & 1.000 \\
+Sensitivity A, gaps filled at the pooled upper bound & 0.331538 (2.0375$\times$ raw) \\
+Sensitivity B, perigee $\times$ inclination only, 48 cells & 0.214884 (1.3206$\times$ raw) \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% src: docs/paperb-results-20260920.md, "Analysis 1: reweighted passive floor, corroboration ACTIVE" 
+
+Both clauses fail, for different reasons. The point estimate clears the target by a factor of three; the upper bound does not, reaching 26.19 per 1,000. And the reweighted-to-raw ratio is 2.0591$\times$, failing a 2$\times$ clause by three percent --- which is a failure.
+
+The third clause passes: unsupported payload exposure is 2.114\% across 82 gap strata, far inside the 20\% ceiling, so the estimate is not disqualified for coverage%
+% src: docs/paperb-results-20260920.md, support table 
+.
+
+The mechanism is visible and is not subtle. \textbf{150 supported strata hold fewer than 2,000 passive intervals each yet carry 18.21\% of the payload weight between them.} The single heaviest is \texttt{300-500 km \textbar{} 30-60\textdegree{} \textbar{} e\textless{}0.001 \textbar{} 0.25-1 d}: 5.134\% of the payload population resting on 512 passive intervals carrying one flag%
+% src: docs/paperb-results-20260920.md, thin-support table 
+. Under a clustered object bootstrap such a stratum swings between zero and the rate of whichever single object is drawn, and a few percent of weight on strata like that throws the composite's upper tail to 26 per 1,000.
+
+The registered secondary support tier makes the same point from the other side: restricted to strata with at least 1,000 passive intervals, the reweighted floor is 0.223524 (1.3737$\times$ raw) and the bootstrap interval tightens to [0.153825, 1.845847] --- still straddling the 1.000 target at the top --- while 13.358\% of payload exposure moves into labelled gaps%
+% src: docs/paperb-results-20260920.md, secondary tier table 
+.
+
+The honest statement the method can make is therefore narrower than the one it previously made: the raw passive floor is not demonstrated to be a payload-applicable bound. The point estimate of the covariate-matched floor is three times below target and the coarse 48-cell stratification gives 1.3206$\times$ raw; both are reported, and neither repairs the registered verdict. What is missing is passive exposure in the strata where payloads actually live --- low-perigee, moderate-inclination, near-circular orbits above all.
+
+The source names the remedy as more measurement in those cells rather than a different estimator, and that experiment is named rather than run in this paper's own measurement; Phase 3 has since run it to the limit of the archive (\S{}5.2.2)%
+% src: docs/paperb-results-20260920.md, "Analysis 1" narrative 
+. One qualification belongs with it, because in the heaviest thin stratum the remedy may not be purchasable at any effort. That stratum is \texttt{300-500 km \textbar{} 30-60\textdegree{} \textbar{} e\textless{}0.001 \textbar{} 0.25-1 d}. Passive objects do not linger at 300--500 km perigee: orbital lifetimes there are months and are strongly solar-cycle dependent, so passive exposure in that shell is bounded by the atmosphere rather than by observation effort, and varies by an order of magnitude over a cycle. Payload exposure in the same shell is dominated by large, drag-compensated, often electrically propelled constellations --- the least exchangeable available comparison against a decaying fragment. A targeted campaign cannot manufacture exposure the atmosphere removes. For those strata the honest apparatus is a labelled gap, not a denser measurement, and Phase 3's acceptance rule is written to permit that outcome. Phase 3 has since measured how much of the residual gap that account actually covers, and the answer is under half: at full-archive exposure the atmosphere-limited strata at or below 500 km perigee carry 46.33\% of a 3.621\% labelled gap%
+% src: docs/phase3-results-20260921.json, m7AtmosphereLimited.atmosphereLimitedShareOfGap 0.46334177461471954, primary.unsupportedPayloadExposureShare 0.03621242588639585 
+. The qualification in this paragraph is correct for the stratum it names and must not be generalised to the coverage gap as a whole (\S{}5.2.2).
+
+\subsection*{5.2.1 Composing the two results: the gate does not clear on the matched floor}
+
+\S{}2.3's argument for the factor of ten assumes that the passive rate estimates the noise rate \emph{on payloads}: the share of payload flags attributable to that noise is at most the ratio of the two rates, and ten bounds the share below one in ten. Analysis 1 measures that this assumption is wrong, on the detector that ships, by a factor of 2.0591, and returns DOES NOT TRANSFER. The gate statistic and the correction factor are defined on the same quantity, so they compose. The multiplication is one line and we perform it:
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lr}
+\toprule
+Quantity & Value \\
+\midrule
+Raw-floor separation, corroboration active (\S{}4.3) & 18.191$\times$ \\
+Registered primary reweighting factor (\S{}5.2) & 2.0591$\times$ \\
+Covariate-matched separation & \textbf{8.83$\times$ --- below the 10$\times$ requirement} \\
+Same, pre-corroboration detector (6.901 $\div$ 1.2213) & 5.65$\times$ --- below \\
+Same, under Sensitivity B, 48 cells (18.191 $\div$ 1.3206) & 13.77$\times$ --- above \\
+Same, at the registered primary bootstrap upper bound (26.190 $\div$ 0.163 = 160.9$\times$ raw) & 0.11$\times$ \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% derivation: quotients of numbers published in §4.3 and §5.2; 18.19114 = 2.938579 ÷ 0.161539, ratios 2.0591351 / 1.2213437 / 1.3206021 and the bootstrap upper bound 26.190132 from docs/paperb-results-20260920.json; computed for this draft 
+
+The registered primary estimate --- named as primary before any number existed, measured on the detector that ships, after the change this paper demonstrates --- says the shipped detector does not clear its own requirement once the floor is read on the payload covariate mix. We state that plainly rather than leaving the reader to multiply: \textbf{on the registered primary analysis, the gate should be considered shut.}
+
+Three things keep that from being the whole verdict, and none of them is a rescue. The registered coarse variant gives 13.77$\times$ and clears. The bootstrap upper bound is dominated by strata carrying a few hundred passive intervals, and at the upper bound the separation is 0.11$\times$, which says the primary interval is too wide to support any verdict rather than that the detector is a hundred times worse than advertised. And the raw-floor separation of 18.191$\times$ remains the correct statistic for the question \S{}4.3 asked, which is whether the corroboration rule lowered the pooled floor: it did, by the amount reported. What has changed is which floor a label should be gated on, and that is exactly what Phase 3 registers%
+% src: docs/phase3-preregistration-20260921.md, §2, clause 2: the reweighted separation must meet the same MIN_SEPARATION_BOUND_RATIO = 10.0 
+.
+
+This is the result we would least have chosen and it is the one the apparatus was built to produce. The audit shut our own gate, on a rule fixed in a commit that precedes the number that shut it. Phase 3 is registered against precisely this quantity, with both clauses required and with the observation --- also written before any Phase-3 number exists --- that it is not expected to pass on today's exposure%
+% src: docs/phase3-preregistration-20260921.md, §2 
+. \S{}5.2.2 reports what it measured, and why its prediction was right for the wrong reason.
+
+One further measured result is worth more than the verdict, because no pooled statistic would have revealed it: the same calculation on the pre-corroboration detector gives raw 0.451623, reweighted 0.551587, 1.2213$\times$ --- comfortably inside 2$\times$. \textbf{The corroboration rule made the floor more covariate-sensitive, not less.} It suppressed false alarms hardest in the strata that are best measured --- high-inclination LEO --- leaving the thin strata to dominate what remains%
+% src: docs/paperb-results-20260920.md, "The corroboration rule made the floor more covariate-sensitive" 
+. A change that improves a pooled control can make its covariate-matched version harder to establish. This is an argument for reporting both numbers, not for reverting anything.
+
+\subsection*{5.2.2 Phase 3: the same gate, shut again on the whole archive}
+
+The composition in \S{}5.2.1 is a quotient of two numbers measured on a 1-in-5 sample, and its weakest point is the one \S{}5.2 states: the reweighted floor's primary interval is too wide to support any verdict on its own. Phase 3 was registered to settle that, at \path{7eab5a4}, ahead of its tools and ahead of every number below --- the same estimand, the same two existing constants, both clauses required%
+% src: docs/phase3-preregistration-20260921.md, §§1–2 
+. It re-ran the measurement with the sampling modulus set to 1: \textbf{every in-scope object in the retained archive}, 89,402,955 passive and 63,018,120 payload usable intervals, against this paper's 17,877,732 and 12,746,434%
+% src: docs/phase3-results-20260921.json, meta.passiveIntervals, meta.payloadIntervals; docs/paperb-results-20260920.md, "Sample and exposure" 
+. That is a factor of 5.0 more passive exposure and a strict superset of the targeted oversample \S{}5.2 asked for, with no sampling headroom left behind it%
+% derivation: 89,402,955 ÷ 17,877,732 = 5.00×; computed for this draft from the two receipts named above 
+.
+
+\textbf{The registered verdict is FAIL: the covariate-aware gate does not ship.}
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{llrl}
+\toprule
+Registered clause & Requirement & Measured &  \\
+\midrule
+1. \path{R_rw} clustered-bootstrap 95\% upper bound below the published target & < 1.000 per 1,000 & \textbf{0.5025} & \textbf{PASS} \\
+2. Reweighted separation, payload lower bound $\div$ passive upper bound & $\ge$ 10.0$\times$ & \textbf{5.3560$\times$} & \textbf{FAIL} \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% src: docs/phase3-results-20260921.json, clause1.upperBoundPer1000 0.502491221502946, clause1.passes true, clause2.boundRatio 5.35601797798307, clause2.requiredBoundRatio 10.0, clause2.passes false, accepted false 
+
+The exposure experiment itself worked, and worked well. The reweighted floor is 0.2756 per 1,000 with a primary clustered 95\% of [0.2079, 0.5025] at seed 20260921 over 2,000 object-level draws, where this paper's sample gave an upper bound of 1.846 and failed clause 1 by nearly a factor of two%
+% src: docs/phase3-results-20260921.json, primary.reweightedFloorPer1000 0.275578384451783, bootstrap.low95Per1000 0.20789096048229422, bootstrap.high95Per1000 0.502491221502946, bootstrap.seed 20260921, bootstrap.draws 2000 
+. Labelled gaps fell from 13.358\% of payload exposure to 3.621\%, and the support-tier choice stopped mattering: \texttt{S $\ge$ 1} gives 0.2779 against \path{S_1000}'s 0.2756, a difference of 0.8\%, against the 26.19-versus-1.85 swing this paper reports%
+% src: docs/phase3-results-20260921.json, primary.unsupportedPayloadExposureShare 0.03621242588639585, contextTierS1.reweightedFloorPer1000 0.2778532189700391, contextTierS1.unsupportedPayloadExposureShare 0.001753765424928576 
+. The single strongest objection to Analysis 1 --- that the estimator was an artefact of where the support line was drawn --- does not survive the full archive. The diagnosis in \S{}5.2 was right and the remedy it named was the right remedy. It was simply not sufficient.
+
+\textbf{The gate is shut anyway, by the other clause, for a reason no further exposure can touch.} The separation is the payload rate's lower bound over the passive floor's upper bound, so additional passive exposure can only narrow the passive interval%
+% src: pipeline/orbit_events.py, `separation_verdict`; the same bound-to-bound logic §2.3 describes 
+. Drive that interval's width to zero --- infinite passive exposure, the upper bound collapsed onto the point estimate --- and the ratio is 9.7662$\times$. Read both sides at their point estimates, with no uncertainty admitted anywhere at all, and it is 9.8135$\times$, against a requirement of ten%
+% derivation: 2.691352 ÷ 0.275578 and 2.704389 ÷ 0.275578, from docs/phase3-results-20260921.json payloadSide.lower95Per1000 2.6913520161484517, payloadSide.ratePer1000 2.7043891751922553 and primary.reweightedFloorPer1000 0.275578384451783; stated the same way in docs/phase3-results-20260921.md, "Why the gate is shut, and why more data will not open it" 
+. \textbf{This is a clean failure and not an underpowered one.} The reweighted payload rate is 9.81 times the reweighted passive floor and the detector requires ten: that is a statement about the two populations and the detector, not about sample size, and no campaign of any size can change it. Both estimators of the payload side agree --- the shipped Jeffreys bound gives 5.3560$\times$ and a secondary clustered payload-object bootstrap, registered as secondary, gives 5.3133$\times$ --- so there is no version of the payload bound under which clause 2 passes%
+% src: docs/phase3-results-20260921.json, clause2.boundRatio 5.35601797798307, clause2.secondaryBoundRatio 5.313261732880201, payloadBootstrap.method 
+. The underpowering that remains is real but confined: it lives in the 3.62\% of payload exposure sitting in labelled gaps, and filling every one of them at the most favourable rate would not reach the bar.
+
+\textbf{How collection ended, reported as it happened.} The registration's stop rule named two conditions --- all ten target strata reach \path{S_1000}, or the resource budget is exhausted first --- and neither is what occurred. Eight of the ten reached \path{S_1000}; the other two cannot, at any effort, because modulus 1 \emph{is} the entire retained archive. Collection terminated on a third condition the registration did not anticipate: \textbf{the archive itself was exhausted}%
+% src: docs/phase3-results-20260921.md, "Stop rule: which condition ended collection" 
+. We report that as a third outcome rather than assimilate it to the budget clause, and the two short strata are reported short --- one of them by two intervals, at 998 --- with the tier left exactly where \path{7eab5a4} fixed it. Choosing the tier after seeing which strata fall near it is the move the registration exists to prevent.
+
+\textbf{The residual coverage gap is not mostly atmospheric.} Of the 162 strata below \path{S_1000} carrying payload exposure, 101 lie at or below 500 km perigee and carry 1.678\% of payload exposure --- \textbf{46.33\% of the 3.621\% gap}, under half%
+% src: docs/phase3-results-20260921.json, m7AtmosphereLimited.strataBelowS1000 162, .atmosphereLimitedStrata 101, .atmosphereLimitedPayloadWeight 0.016778729673306663, .atmosphereLimitedShareOfGap 0.46334177461471954 
+. The atmospheric mechanism \S{}5.2 names is real and this pass measures it without an atmosphere model: the passive-to-payload exposure ratio collapses from 3.529 at 800--1200 km perigee to 0.552 at 300--500 km, into the shell where payload exposure is largest, which is the signature the mechanism predicts%
+% src: docs/phase3-results-20260921.json, m7AtmosphereLimited.perigeeBandSummary, passivePerPayloadExposure 3.5292610621797995 and 0.5524953767251628 
+. But it does not account for the majority of the gap. The heaviest labelled gap in the whole estimate is a \texttt{1200-2000 km \textbar{} 30-60\textdegree{} \textbar{} e\textless{}0.001 \textbar{} 0.25-1 d} cell holding 0.939\% of payload exposure on \textbf{four} passive intervals, with a closely related cell holding 87,598 payload intervals on \textbf{zero}%
+% src: docs/phase3-results-20260921.json, primary.gaps, heaviest entries: payloadIntervals 591,826 on 4 passive, and 87,598 on 0 
+. Nothing decays out of 1200--2000 km on a human timescale, so that gap is a genuine sparseness of passive objects in near-circular mid-altitude orbits at those inclinations rather than an atmospheric limit. It is unexplained, and we say so rather than borrow the atmospheric account for it.
+
+\textbf{The Kozai perigee offset cannot change either clause.} \S{}6 records that the derived perigee inherits an inclination-dependent offset of roughly 5 km across inclination, and that this paper leaves it unquantified. Phase 3 bounds it: 2.997\% of passive and 2.415\% of payload exposure lies within one full Kozai spread of a band edge, and re-binning the entire population at +3.35 km, then again at $-$1.68 km --- a deliberately worst-case uniform shift --- moves the reweighted floor by at most +0.32\% / $-$0.90\%%
+% src: docs/phase3-results-20260921.json, m14KozaiPerigee.edgeExposureSharePassive 0.029966269012025384, .edgeExposureSharePayload 0.02414940337794907, variants.Up.reweightedFloorPer1000 0.27644654925298273, variants.Down.reweightedFloorPer1000 0.2730846561651722 against primary 0.275578384451783 
+. Clause 1 passes and clause 2 fails under all three assignments. The diagnostic is post-hoc rather than pre-registered and carries no decision weight; the registered estimand is the nominal assignment alone.
+
+\textbf{What a reviewer will reach for, said here first.} The registration recorded in advance that Phase 3 was \emph{not expected to pass on today's exposure} --- but it justified that expectation entirely from clause 1's bootstrap upper bound, which is precisely the clause that ended up passing%
+% src: docs/phase3-preregistration-20260921.md, §2, the paragraph beginning "On the Paper B `S_1000` numbers alone" 
+. Nobody computed the point-estimate separation in advance. Had anyone done so, clause 2 would have been visible as the binding constraint and exposure as the wrong lever. The prediction was correct and its stated reason was wrong: the experiment was well run against a partly misdiagnosed target%
+% src: docs/phase3-results-20260921.md, "What a reviewer still attacks", item 2 
+. That is a defect in the registration's reasoning rather than in its ordering, and stating it is cheaper than being caught at it.
+
+Two further items travel with the verdict and are not repaired. 9.81$\times$ against a 10.0$\times$ bar is close enough that a two-percent move in either rate flips it, and 10.0 is a round number this project chose; the defence is only that the constant predates this measurement, is load-bearing elsewhere in the apparatus, and was not touched --- not that it is principled to two significant figures. And the reweighted floor still leans on few events: \texttt{300-500 km \textbar{} 30-60\textdegree{} \textbar{} e\textless{}0.001 \textbar{} 0.25-1 d} now clears \path{S_1000} honestly at 5,429 passive intervals, but carries 5.274\% of the estimator's weight on \textbf{three} flags, at 0.5526 per 1,000%
+% src: docs/phase3-results-20260921.json, primaryRows entry `300-500 km|30-60|<0.001|0.25-1 d`: weight 0.052738173870651946, passiveFlags 3, passiveIntervals 5429, passiveRatePer1000 0.5525879535826118 
+.
+
+\textbf{Nothing in the shipped detector changes.} The registration fixed the response to this outcome before the outcome existed: the pooled-floor gate keeps governing \path{sufficientToLabel} exactly as it does today, \path{INCLINATION_CORROBORATION_MIN_DEG} is not touched, and the 54\textdegree{} matched region of \S{}5.4 remains an open question requiring its own registration. A covariate gate that fails is not a licence to relax the pooled one, to remove a disclosure, or to fall back on moving the corroboration boundary as an alternate route to a shippable number%
+% src: docs/phase3-preregistration-20260921.md, §5, and §4 on the boundary question 
+.
+
+\subsection*{5.3 Objection two: identical rates are null-acceptance, and the band looks fitted}
+
+The Phase-2b justification rested on a reading of a coarse table --- rates that looked alike at 60--120\textdegree{} --- and a non-significant difference. Accepting a null from \emph{p} > 0.05 is absence of evidence. The registered answer replaces it with an exact conditional binomial equivalence test (TOST) at a margin fixed in advance, and lets a boundary fall out of a finely binned curve.
+
+The margin is [1/1.5, 1.5] on the payload/passive rate ratio, and its primary defence is information-theoretic and exogenous to these data: the exposure-normalised rate ratio is the channel-level likelihood ratio, a ratio inside 1.5 is under 0.6 bits of evidence, and 0.6 bits cannot move a detection from candidate to confirmed at any prior this catalogue supports. The margin is symmetric on the log scale%
+% src: docs/paperb-preregistration-20260920.md, §7 
+.
+
+It is also not a new number: 1.5 is the ceiling already registered in the Phase-2b diagnostic gate, reused to remove a degree of freedom. We state that lineage rather than lean on it. Reuse makes a number's provenance one step longer, not exogenous, and the Phase-2b ceiling was itself set while the prior all-channel rate table was in view --- the same source \S{}4.1 credits for the 30\textdegree{} boundary. So the reuse argument establishes only that the margin was not chosen for this test; the information-theoretic argument is the one that establishes it was not chosen from these data at all.
+
+\textbf{An amendment was required before any result existed}, and its trigger is worth recording as a property of the apparatus. Sections 6, 7 and 9 asked for inclination-only rates at and above 30\textdegree{} while section 0 fixed the detector at shipping HEAD --- where an inclination-only catch above 30\textdegree{} is abstained by construction. The contradiction was noticed from an in-flight progress log showing \path{passiveInclinationOnly: 0} and \path{payloadInclinationOnly: 0} after 110 passive and 87 payload flags: a structural zero, identifiable from the arithmetic of the rule alone, with no rate, ratio, test or boundary yet computed. The measurement was stopped and amendment 1 registered Analysis 2 onto the pre-corroboration detector --- reached through an existing keyword argument on the production function, not a source edit --- while leaving Analysis 1 on the shipping detector, because the floor is a claim about the detector that ships%
+% src: docs/paperb-preregistration-20260920.md, Amendment 1; confirmed in docs/paperb-results-20260920.md, "Why Analysis 2 is measured with corroboration off" 
+. The structural zeros are left in the published tables so a reader can verify the contradiction rather than take the amendment's word for it.
+
+\subsection*{5.4 Result: the equivalence fails, and the direction is the surprise}
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lrll}
+\toprule
+Region (inclination-only rates) & Ratio payload/passive & Exact 90\% interval & Equivalent at 1.5? \\
+\midrule
+$\ge$30\textdegree{} (registered primary) & 0.6585 & [0.6316, 0.6865] & NO \\
+30--60\textdegree{} & 0.2444 & [0.2089, 0.2860] & NO \\
+60--90\textdegree{} excluding SSO & 0.8903 & [0.8465, 0.9363] & YES \\
+SSO 96--100\textdegree{} & 0.5934 & [0.5204, 0.6753] & NO \\
+90--120\textdegree{} excluding SSO & 0.7892 & [0.6814, 0.9108] & YES \\
+$\ge$30\textdegree{} excluding SSO & 0.6184 & [0.5916, 0.6463] & NO \\
+<30\textdegree{} (below the shipped boundary) & 7.8690 & [6.5292, 9.5466] & NO (strongly discriminating) \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% src: docs/paperb-results-20260920.md, "Analysis 2b and 2c: exact conditional TOST by region" 
+
+The registered primary test fails, and it fails worse for the shipped rule than ``inconclusive'' would have: the superiority \emph{p}-value is 6.03e-65. The two rates at and above 30\textdegree{} are not indistinguishable. The payload inclination-only rate is about two-thirds of the passive rate, and the sample --- roughly four times the Phase-2b diagnostic --- is large enough to say so.
+
+This is exactly what the objection predicted: the earlier reading came from a coarse table and a non-significant difference, and with four times the exposure, 2\textdegree{} bins and an exact test the difference is reliable and was hidden by binning.
+
+The 30--60\textdegree{} band is the sharpest case. The payload rate there is 0.24$\times$ the passive rate. The shipped abstention message says the channel is suppressed ``where the control measures no discriminating power''. In 30--60\textdegree{} that sentence is wrong as stated: there is discriminating power and it runs the \emph{other} way --- the channel fires roughly four times more readily on debris than on payloads. Abstaining there may still be the right operational call, because a band where most catches are false alarms is a band worth declining. But the published justification is not what the data say, and the wording must change%
+% src: docs/paperb-results-20260920.md, "Analysis 2b" narrative 
+.
+
+\textbf{The SSO composition control answers against the artefact hypothesis.} Sun-synchronous orbits (a fixed geometric band, 96--100\textdegree{}, registered rather than fitted) are 30.50\% of passive exposure at $\ge$30\textdegree{} but only 21.08\% of payload exposure there, so the objection was well posed.
+
+One arithmetic feature of that table looks like an error and is not, so we pre-empt it. Removing the SSO band --- whose own ratio, 0.5934, is \emph{below} the pooled 0.6585 --- lowers the pooled ratio to 0.6184 rather than raising it. The reason is that the two populations are weighted differently in the numerator and the denominator: SSO is 30.50\% of passive exposure but only 21.08\% of payload exposure, and its passive rate (0.124 and 0.158 per 1,000 across the band) is about a third of the surrounding non-SSO plateau (roughly 0.45). Removing it therefore raises the \emph{passive} rate --- the denominator of the ratio --- by much more than it raises the payload rate, and the ratio falls. Reconstructing the exposure-weighted algebra with those four numbers returns 0.610 against the measured 0.6184%
+% derivation: exposure-weighted reconstruction from the shares and rates published in this section; computed for this draft, and it is a check on the sign and magnitude, not a re-derivation of the measurement 
+. It is not the explanation: equivalence holds in 60--90\textdegree{} excluding SSO and in 90--120\textdegree{} excluding SSO, and fails inside the SSO band itself. The registered pooled verdict reads \emph{inconclusive: neither split establishes equivalence}, and that is reported as the verdict --- but it is an artefact of the registered pooling, since \texttt{$\ge$30\textdegree{} excluding SSO} lumps the strongly adverse 30--60\textdegree{} band in with the matched bands and drags the pooled test under. The finer splits, all registered in advance, tell the clearer story%
+% src: docs/paperb-results-20260920.md, "Analysis 2c" 
+.
+
+\textbf{No data-driven boundary exists at the registered margin, and 30\textdegree{} is not one.} The registered rule takes the smallest grid candidate that passes and whose every larger candidate also passes. Equivalence holds continuously for pooled regions [54\textdegree{}, 180\textdegree{}) through [74\textdegree{}, 180\textdegree{}), then fails at 76, 78, 80, 82, passes at 84 and 86, and fails at 88 and 90. Monotone stability is never satisfied, so the registered answer is the one named in advance: no boundary at margin 1.5, rather than a relaxed margin. The shipped 30\textdegree{} boundary fails its own candidate test, as does every candidate from 2 through 48. The region where the populations genuinely match begins near 54\textdegree{}, not 30\textdegree{} --- and even there it is not stable to the pole%
+% src: docs/paperb-results-20260920.md, "Analysis 2a", and the full boundary-scan table 
+.
+
+The registration's documented dilution property did not bite, and the scan shows why: the candidate at 0\textdegree{} passes ([0.7942, 0.8561]) only because the enormous matched high-inclination exposure swamps the strongly discriminating 0--2\textdegree{} bin, and the monotone-stability clause correctly refuses it because the candidate at 2\textdegree{} fails. The property was declared and pinned by an offline test \emph{before} the archive result existed, precisely so it would be recognised as dilution rather than read as a physical edge at zero degrees%
+% src: docs/paperb-preregistration-20260920.md, Amendment 1, final section 
+.
+
+\textbf{The shape of the curve.} Passive inclination-only false alarms per 1,000 usable intervals: low and ragged below 30\textdegree{} (0.00--0.14); essentially nothing at 36--42\textdegree{}, with the 38--40\textdegree{} bin holding 27,268 intervals and zero flags (Jeffreys 95\% upper 0.092); a broad plateau of roughly 0.26--0.72 from 42\textdegree{} to 76\textdegree{}, with local maxima at 46--48 (0.658), 56--58 (0.643) and 72--74 (0.723); a trough down to 0.195 at 82--84\textdegree{}; 0.124 and 0.158 across the SSO band on very large exposure; rising again to 0.45--0.98 from 100 to 116\textdegree{}%
+% src: docs/paperb-results-20260920.md, "The curve, and the shape of it" 
+. The payload curve differs in shape as well as level: it is dominated by the 0--2\textdegree{} bin at 1.069 per 1,000, a ratio of 25.7$\times$ passive --- geostationary north-south keeping, the one place in this decomposition where the inclination channel discriminates strongly. Two qualifications: that is a statement about the \emph{contrast} between the populations, not about completeness, and the companion end-of-life measurement finds the same channel accounting for a median of 1.81\% of the routine north-south budget on chemically kept geostationary payloads%
+% src: docs/fuel-odometer-20260920.md, "Sanity anchor 1" 
+. Where the channel fires at the geostationary ring it fires on something real; it also misses most of what is there.
+
+\subsection*{5.5 Engagement with Flohrer, Krag and Klinkrad (AMOS 2008)}
+
+The closest error-structure result in the literature is \emph{Assessment and Categorization of TLE Orbit Errors for the US SSN Catalogue} (Flohrer, Krag \& Klinkrad, AMOS 2008, p. 6 of 12 for the passage below; page located 2026-09-21 in a freshly fetched copy of the AMOS proceedings PDF, which carries no printed page numbers of its own --- ``p. 6 of 12'' denotes the PDF's own page order). The copy read for this analysis was fetched and its text extracted; the passage below is verbatim from it%
+% src: docs/paperb-results-20260920.md, "Discussion: Flohrer, Krag and Klinkrad" 
+:
+
+\begin{quote}
+``Leaving the circular orbits out, objects in low-inclined orbits show higher uncertainties in radial and along-track direction compared to objects orbiting in higher inclinations. This is slightly different in the out-of-plane component, where the largest uncertainties are found at medium inclinations, centered on $\sim$40 deg. It is difficult to give the reason for the observed pattern, as the applied process for the TLE generation is unknown.''
+\end{quote}
+
+Out-of-plane is the component our inclination channel is sensitive to, so this is the most relevant published prediction for where a TLE-driven inclination false-alarm floor might peak. Ours does not peak there: at 38--40\textdegree{} our 95\% upper bound is 0.092 per 1,000, against 95\% intervals of [0.267, 0.711] at 44--46\textdegree{}, [0.500, 0.816] at 56--58\textdegree{} and [0.647, 0.804] at 72--74\textdegree{}.
+
+We report that as a discussion note, not as a result, and we deliberately do not describe the non-overlap as an exclusion. Two reasons, both of which come from this paper's own measurements. Analysis 1 establishes that the passive false-alarm rate moves by a factor of 2.06 under covariate reweighting on perigee, inclination, eccentricity and cadence alone; raw 2\textdegree{} inclination bins carry no covariate control whatsoever, and bins at 38--40\textdegree{} and 72--74\textdegree{} differ in altitude distribution, object-type mix, fragment-cloud membership and tracking cadence. The 38--40\textdegree{} bin also rests on 27,268 intervals, thinner than the bins it would be excluded against (35,678 at 44--46\textdegree{}; 99,501 at 56--58\textdegree{}; 451,133 at 72--74\textdegree{}) and 0.03\% of passive exposure. An interval-overlap statement about a quantity we have ourselves shown to be covariate-confounded by 2$\times$ is not an exclusion. Stratifying this comparison on perigee and cadence with the Analysis-1 machinery is a measurement this paper does not make.
+
+The second reason is stronger, and it dissolves the comparison rather than weakening it. The two papers measure different quantities: they measure orbit uncertainty against an independent orbit determination; we measure how often a self-history detector at $\kappa$ = 32 declares a step relative to that object's own fitted baseline scatter. A regime can carry large but well-characterised out-of-plane error and stay quiet for us, because the baseline absorbs it. If that is right --- and we believe it is --- then our trip rate and their uncertainty magnitude are not expected to correlate in the first place, and the absence of a $\sim$40\textdegree{} feature in our floor bears on their result hardly at all. The defensible statement is the narrow one: \emph{the inclination false-alarm floor of this detector does not inherit the $\sim$40\textdegree{} structure of TLE out-of-plane error}, so whatever drives our 42--76\textdegree{} plateau is not simply the error magnitude they mapped.
+
+One point of agreement carries more weight than the disagreement. Their conclusion proposes classifying TLE covariance in the eccentricity--inclination--perigee-height domain, and ESA's collision-risk tooling carries TLE covariance in look-up tables sorted by those quantities. That is three of the four factors our Analysis 1 registered, chosen independently fifteen years later for the same reason. Our fourth factor, update cadence, is the one they gesture at rather than tabulate --- their suggested follow-up to the pattern they could not explain was ``the bridging of gaps in the observations, or the performance of the used sensors''%
+% src: docs/paperb-results-20260920.md, same section 
+.
+
+\subsection*{5.6 What was not repaired}
+
+\S{}1.4 states why these failures are the thesis; this section records what was and was not done to them. Nothing in \S{}5 was repaired. No estimator was swapped, no margin relaxed, no boundary moved, no detector changed, and the 30\textdegree{} rule remains live while the evidence against its stated justification sits in the repository%
+% src: docs/paperb-results-20260920.md, reviewer attack 12 
+. The one change this work makes to the shipped artifact is a disclosure: the \path{covariateTransfer} block in the published control now carries the reweighted floor, the composed matched separation of 8.83$\times$ and the sensitivity variant, so a reader of the data product sees the unfavourable number without reading this paper%
+% src: pipeline/orbit_campaigns.py, `covariateTransfer` disclosure block 
+.
+
+\section*{6. Limitations}
+
+\textbf{Recall is not manoeuvre rate, and the separation statistic must not be read as one.} A companion measurement on the same archive found that for the 54 chemically station-kept geostationary satellites where the comparison is meaningful, detected station-keeping delta-v accounts for a median of 1.81\% of the $\sim$50 m/s/yr north-south budget, with 47 of 54 below 10\% at the perigee-speed pricing the companion paper now reports as primary and 46 of 54 at the circular-speed convention; and that 84 further catalogued satellites station-keep electrically, where a continuous low-thrust burn produces no step for a step detector at all%
+% src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors", whose circular arm reproduces docs/fuel-odometer-20260920.md, "The verdict, stated first" and "Sanity anchor 1", committed at 2575e4f 
+.
+
+This cuts three ways and all three are stated in the source. It does not invalidate the reweighting: Analysis 1's estimand is a false-alarm rate on objects believed not to manoeuvre, and neither its numerator nor its denominator changes when the detector misses small true burns on payloads. It does change what the separation between the two rates means: the payload rate is the rate of manoeuvres large enough for this detector to see, so any bound separation --- this sample's or the published 18.191$\times$ --- is a statement about large-excursion detection only, and must not be read as ``payloads manoeuvre 18 times more often than debris false-alarm''. And it correlates with a stratum, which is the part that genuinely bites: the blind population sits almost entirely in perigee >2000 km, inclination 0--1\textdegree{}, eccentricity <0.001 --- exactly where payload exposure is heavy --- so any per-stratum passive-versus-payload comparison in the geostationary corner is a comparison against a known-depressed payload number%
+% src: docs/paperb-results-20260920.md, "Detection recall is very low" 
+.
+
+\textbf{Passive purity is assumed, not measured.} Object type comes from the catalogue. A rocket body with an unrecorded disposal burn, or a fragment that is really a misclassified payload, contributes a real manoeuvre to the false-alarm numerator. This inflates the floor, so it is conservative for a bound --- but the amount is unmeasured, and nothing here answers how much of the floor it is%
+% src: docs/paperb-results-20260920.md, reviewer attack 1 
+. The prior-art review is explicit that this class of label error (catalogue mislabels; rocket bodies vent; high area-to-mass debris changes its area-to-mass ratio and attitude) forbids describing the passive population as anything stronger than physically passive by class, and requires a contamination model and sensitivity analysis%
+% src: the committed adversarial prior-art review (operator memory, space-publication-priorart-20260920), the same source cited in §1.2; NOT docs/paperb-results-20260920.md, whose reviewer attack 1 does not mention venting, high area-to-mass debris, contamination models or sensitivity analysis 
+.
+
+\textbf{Solar radiation pressure is not modelled outside the geostationary branch, and on high area-to-mass fragments it is a named mechanism rather than a remote one.} The detector's natural-cause floor enumerates catalogue fit scatter, lunisolar plane precession, geostationary triaxial libration and J2 model error; solar radiation pressure is not among them at any altitude, and the drag model is switched off above 1,400 km, so from 1,400 km to the geostationary ring neither non-gravitational perturbation is modelled. The semi-major-axis floor is tightest, 0.10 m, in the 800--1,500 km perigee band. At 1,000 km altitude an ordinary fragment at A/m = 0.02 m\ensuremath{^{2}}/kg sees a\_SRP $\approx$ 1.2 $\times$ 10\ensuremath{^{-7}} m/s\ensuremath{^{2}}; even 1\% net along-track retention over a day is $\Delta$\emph{v} $\approx$ 10\ensuremath{^{-4}} m/s, i.e. $\Delta$\emph{a} = 2$\Delta$\emph{v}/\emph{n} $\approx$ 0.2 m/day, about twice that floor. At A/m of 1 m\ensuremath{^{2}}/kg and above --- well attested in the debris population --- the same estimate is of order 10 m/day, a hundred times the floor, and such objects change attitude and effective area, which produces exactly the step a step detector looks for%
+% derivation: a_SRP = C_R·P_SR·(A/m) with P_SR ≈ 4.56 × 10⁻⁶ N/m², and Δa = 2Δv/n at a = 7,378 km; computed for this draft, not taken from a receipt 
+. This is a mechanism that puts real flags on passive objects, so it inflates the floor rather than deflating it; but it is unquantified in the pipeline, it is inclination- and area-dependent, and it is not distributed like the other four causes. At the geostationary ring the 140 m/day triaxiality bound is large enough to absorb plausible SRP-driven $\Delta$\emph{a}, which is why the geostationary branch is protected --- by accident of scale rather than by a model.
+
+\textbf{The derived perigee altitude carries an inclination-dependent offset.} \S{}2.1 states the Kozai/Brouwer point and notes that the offset cancels in per-interval differences; it does not cancel in the derived perigee, which inherits it in full, with a spread of about 5 km across inclination at 500 km altitude. Analysis 1's perigee bands are 200 km wide at the bottom of the range and the heaviest thin stratum is a 300--500 km band, so a few percent of objects can sit in the adjacent band to the one their SGP4 mean perigee would place them in. This is a covariate-measurement error, not a rate error. It is unquantified in this paper's own analysis; Phase 3 has since bounded it on the full archive and found it immaterial to both registered clauses, with the numbers in \S{}5.2.2%
+% src: docs/phase3-results-20260921.json, m14KozaiPerigee 
+.
+
+\textbf{Exchangeability inside a stratum is the whole argument, and it is an assumption.} Reweighting transfers the floor only if, at fixed perigee, inclination, eccentricity and cadence, a passive object's noise process matches a payload object's. Payloads are tracked differently, are often larger and brighter, and may be prioritised by the sensor tasking that produces the element sets. The four registered factors are observable proxies; sensor tasking is not in the archive and cannot be stratified on%
+% src: docs/paperb-results-20260920.md, reviewer attack 2 
+.
+
+\textbf{The sample is systematic, not random.} A modulus sample is uniform-probability over objects but not a random confidence sample, and catalogue number correlates with launch epoch, operator and constellation membership. Interval-level Jeffreys bounds quantify within-sample binomial uncertainty only; the clustered object-level bootstrap is quoted for the headline precisely because intervals inside one object share a baseline, a fit history and a cadence. Even the bootstrap assumes sampled objects are exchangeable with unsampled ones at fixed covariates, which is not testable from inside the sample%
+% src: docs/paperb-results-20260920.md, "The sample is systematic, not random" 
+.
+
+\textbf{The target distribution is itself estimated.} Payload covariate weights come from the same 1-in-5 sample and carry their own sampling error, which the registered bootstrap does not propagate --- it resamples passive objects only, holding payload weights fixed. A double bootstrap resampling both populations was not registered and is not reported%
+% src: docs/paperb-results-20260920.md, "The target distribution is itself estimated" 
+.
+
+\textbf{The archive is mutable.} It is a live ingest, not a preserved snapshot. Paired policies see identical in-memory rows per object, so the two tallies cannot drift apart, but a whole pass is a mosaic of read times rather than one global snapshot, and the published full-population control is a separate, earlier population that must not be added to or compared row-for-row with the sample%
+% src: docs/paperb-results-20260920.md, "The archive is mutable" 
+. The companion end-of-life paper describes its own census as \emph{frozen}, and both descriptions are correct: that study copied the archive to a consistent SQLite backup and analysed the copy read-only, which is why it reports 216,937,797 rows where this paper's live paired pass reports 216,937,493 for the same 68,711 objects. Freezing is a property of that copy, not of the ingest, and neither number is a correction of the other.
+
+\textbf{The equivalence margin is a choice.} 1.5 was reused rather than invented and registered before the test, but a reviewer who prefers 1.2 gets a different verdict and is entitled to: at 1.2, 60--90\textdegree{} excluding SSO ([0.8465, 0.9363]) would fail. All exact ratio intervals are published so that verdict needs no re-run%
+% src: docs/paperb-results-20260920.md, reviewer attacks 4 and 13 
+.
+
+\textbf{A floor is not a bound on any individual event.} The control measures a rate over a population. No catch in this catalogue is promoted past \emph{candidate} by anything in this paper%
+% src: docs/paperb-results-20260920.md, "A floor is not a bound on any individual event" 
+.
+
+\textbf{Unsupported strata are gaps, never zeros.} Where payload exposure sits in a stratum with no passive support, the stratum is listed, its share quantified, and the estimate renormalised over supported strata only; the worst-case fill shows what happens if every such stratum were as bad as the pooled Jeffreys upper bound allows. Neither number measures those strata%
+% src: docs/paperb-results-20260920.md, "Unsupported strata are gaps, not zeros" 
+.
+
+\textbf{The named-but-not-run experiment.} The remedy Analysis 1 asks for is a denser or covariate-targeted passive-exposure measurement in the thin strata where payloads live. It was named here, not run, and at the time of this paper's measurement its absence was the single largest gap between what this paper demonstrates and what it would need to claim the floor transfers%
+% src: docs/paperb-results-20260920.md, reviewer attack 10 
+. It has since been run to exhaustion under its own registration. \S{}5.2.2 reports what that bought and what it did not: the exposure clause passes decisively, the separation clause fails at 5.3560$\times$, and what remains is the exchangeability of the two populations rather than the quantity of passive exposure%
+% src: docs/phase3-results-20260921.json, clause1.passes true, clause2.boundRatio 5.35601797798307, accepted false 
+.
+
+\textbf{One unresolved test failure is disclosed rather than absorbed.} The repository's orbital suite was run three times; the second and third runs reported 626 tests OK with 5 opt-in skips. The first run, executed concurrently with both archive readers, reported one failure, and only the tail of its output was retained, so the failing test cannot be named. That is a gap, not a pass: the task modified no file under \path{pipeline/}, so the failure is unlikely to be attributable to it, but ``unlikely'' is not ``shown''%
+% src: docs/paperb-results-20260920.md, "What the run actually cost" 
+.
+
+\textbf{Further open items}, stated in the sources and not closed here: independent truth for removed payload manoeuvres; per-fit orbital covariance; the physical cause of the high-inclination tail; a physical discontinuity exactly at 30\textdegree{}; and whether a co-tripped energy channel independently confirms a burn --- it does not%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Unproven items and scope" 
+. Catch retention is not measured true-positive recall. No visual or independent confirmation of any individual passive flag is presented, and no external truth source for payload manoeuvres was available: the control is a rate argument end to end%
+% src: docs/paperb-results-20260920.md, reviewer attack 9 
+.
+
+\section*{7. Future work}
+
+\textbf{Phase 3: a covariate-aware gate.} The measured result of \S{}5.2 is that a single pooled floor is the wrong object to gate on: the covariate-matched floor is 2.06$\times$ the raw one, the thin strata dominate its upper tail, and the composed separation on the matched floor is 8.83$\times$ against a 10$\times$ requirement. The next apparatus is a gate evaluated on the reweighted floor rather than the raw one, with labelled gaps propagated into the wording. It was registered rather than built in this paper: \path{docs/phase3-preregistration-20260921.md} fixes the estimand as the payload-covariate-reweighted passive floor, reuses this paper's strata and both existing constants --- the 0.001 target and \path{MIN_SEPARATION_BOUND_RATIO = 10.0} --- requires both clauses to pass, and records in advance that on today's exposure it is not expected to pass, so that a later failure cannot be read as a surprise and a later pass cannot be read as a moved target%
+% src: docs/phase3-preregistration-20260921.md, §§1–2 and §5 
+. That measurement has since been made on the whole archive and is reported in \S{}5.2.2: the registered verdict is FAIL, clause 1 passing at a bootstrap upper bound of 0.5025 and clause 2 failing at 5.3560$\times$%
+% src: docs/phase3-results-20260921.json, verdict, accepted false 
+. Nothing in this paper installs the gate, and Phase 3 does not install one either. What survives as future work is the question Phase 3 turned up rather than the one it was registered to answer: the matched rates differ by 9.81$\times$ at full-archive point estimates and the requirement is ten, so the remaining work is a detector or an estimand whose matched separation clears the bar --- not a larger sample.
+
+\textbf{The passive-exposure experiment --- run, and now closed.} Targeted measurement of passive objects in low-perigee, moderate-inclination, near-circular strata was the experiment \S{}5.2 asked for. Phase 3 widened it to the limit: modulus 1, the whole archive, with eight of the ten registered target strata reaching the 1,000-interval tier and the other two unreachable because no denser pass exists (\S{}5.2.2)%
+% src: docs/phase3-results-20260921.md, "Stop rule: which condition ended collection" 
+. What replaces it as future work is the hole that pass exposed: the heaviest labelled gap in the full-archive estimate is a 1200--2000 km, near-circular, 30--60\textdegree{} cell resting on four passive intervals, at an altitude where nothing decays, and it is unexplained. That cell deserves its own look before any gate propagates it into shipped wording.
+
+\textbf{Full-population stratified control.} The pooled control exists at full population; the stratified one does not, and building it is a multi-hour full-archive pass. Every stratified number here carries sample uncertainty the pooled published numbers do not%
+% src: docs/paperb-results-20260920.md, reviewer attack 8 
+.
+
+\textbf{A contamination model for the passive class}, as the prior-art review requires, with the sensitivity analysis that turns ``physically passive by class'' from a caveat into a quantified bound. Solar radiation pressure on high area-to-mass fragments belongs in that model as a named term, with a measured rather than order-of-magnitude bound.
+
+Splitting the physical-cost rejection count by passive and payload class. \S{}2.5's \path{implausible_costs} counter now reaches a reader rather than a log --- commit 061539e (2026-09-21) carries it into the diagnostics block and the published control alongside \path{trackingGapDroppedIntervals}, pooled only, the same way its sibling is. The pooled value will first materialise at the next production sweep; a passive/payload split is not tracked by that change and remains future work.
+
+\subsection*{7.1 The accuracy frontier, and what it would take}
+
+Confidence today is adequate for the claims this paper actually makes, and the gate's own behaviour is the evidence: it has shut itself. The published self-history control backing the companion end-of-life study measured a bound separation of 6.86$\times$ against the 10$\times$ requirement, and the gate withheld ``manoeuvre'' from all 28 individual graveyard-raise records in that release%
+% src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" 
+. The registered transfer analysis then found the pooled floor does not transfer onto the payload covariate mix, and composing its factor with the shipped separation shuts the gate again at 8.83$\times$ (\S{}5.2.1). A second registered analysis, measured on every in-scope object in the archive, then shut it a third time at 5.3560$\times$ --- and on point estimates that no further exposure can move (\S{}5.2.2)%
+% src: docs/phase3-results-20260921.json, clause2.boundRatio 5.35601797798307 
+. Each is the audit returning an unwelcome answer on the record rather than an estimator being adjusted until it is comfortable.
+
+Accuracy is the frontier --- not for today's claims, but for claims the same data could support with better recall. The programme is ranked, each item tied to a measured gap rather than to intuition.
+
+First, sequence and matched-filter detection over correction cadences, aimed at the two gaps that define the current ceiling: 84 of 151 catalogued propulsion-cohort satellites station-keep electrically and are structurally invisible to a step detector, and among the 54 chemically kept satellites where the comparison is meaningful, detected delta-v explains a median of 1.81\% of the routine keeping budget%
+% src: docs/fuel-odometer-20260920.md, "Sanity anchor 1" 
+. The data are already ingested; what this needs is heavier compute over cadence sequences rather than single-interval steps.
+
+Second, joint multi-element estimation with full covariance, replacing per-channel threshold tests with one estimator over semi-major axis, eccentricity, inclination and node together --- which is the failure mode \S{}3 exposed, a channel conditioned badly enough that 74.08\% of one release's passive flags carried an inclination-change signature%
+% src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Channel" paragraph 
+.
+
+Third --- reordered by what Phase 3 measured --- not more passive exposure, which has now been bought to the limit of the archive and did not open the gate, but a detector or an estimand whose matched separation exceeds ten. \S{}5.2.2 makes the case that this is no longer a measurement problem. Two candidates follow from it: a per-stratum gate that propagates labelled gaps into the published wording instead of collapsing them into one composite, and better detection recall on payloads, which enters the separation through its numerator rather than its denominator%
+% derivation: the separation is the payload rate's lower bound over the passive floor's upper bound (§2.3), so recall enters the payload rate only; stated for this draft, not taken from a receipt 
+. The qualification \S{}5.2 adds still holds for the lowest perigee bands, where the missing exposure cannot be bought --- but it covers under half the coverage gap (\S{}5.2.2), so it is not the explanation for the rest.
+
+Only then, better data --- special-perturbations ephemerides, commercial feeds, denser tracking. Not first: the first two items extract gains from data already held at no cost, and the third is already registered. The measured bottleneck in both this paper and its companion is detection recall, not data volume, so compute buys the first two items rather than a larger archive.
+
+\section*{8. Reproducibility}
+
+Registrations function as timestamps within this repository. Each is committed in its own commit, ahead of the analysis code and ahead of every result file, so the ordering is recorded in the history rather than asserted in prose.
+
+\begin{center}
+\small
+\fitwidth{%
+\begin{tabular}{lll}
+\toprule
+Artefact & Commit & Role \\
+\midrule
+\path{docs/detector-separation-plan.md} & 5926f43 & The 10$\times$ bar, the symmetric trap, the guardrails (written 2026-09-11, ahead of this series) \\
+\path{docs/orbit-phase2-inclination-decomposition-20260920.md} (+ \path{.json}) & 4c1722d & Decomposition, pre-fix stop, receipt \\
+\path{docs/orbit-phase2b-corroboration-20260920.md} (+ \path{.json}) & 56eef64 & Corroboration rule, paired acceptance, CPU/GPU verification \\
+\path{docs/paperb-preregistration-20260920.md} & f317a28 & Registration, committed first and alone \\
+--- amendment 1 (same file) & 8604de2 & Detector state for Analysis 2, ahead of every result \\
+\path{tools/paperb_strata.py}, \path{paperb_measure.py}, \path{paperb_analyze.py}, \path{paperb_selftest.py} & d4c09ee & Analysis modules with offline tests, before any result existed \\
+resume double-count fix in \path{paperb_measure.py} & 46dee20 & Verified-before-relied-on resume path \\
+\path{docs/paperb-results-20260920.md}, \path{-tables-20260920.md}, \path{-strata-20260920.jsonl}, \path{-results-20260920.json} & 7626c55 & Results, generated tables, per-stratum evidence, machine receipt \\
+\path{docs/phase3-preregistration-20260921.md} & 7eab5a4 & Phase 3 registration, committed alone and ahead of every Phase-3 artefact \\
+\path{tools/phase3_measure.py}, \path{phase3_analyze.py}, \path{phase3_selftest.py} & 70e8414 & Phase 3 programs and the per-perigee-band M7 measurement, after the registration and before any result \\
+\path{docs/phase3-results-20260921.md} (+ \path{-results-20260921.json}, \path{-strata-20260921.jsonl}) & 1093a3c & Full-archive result, both clauses, M7 and M14, machine receipt \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+% src: commit hashes from `git log --oneline` on branch integration/space 
+
+\textbf{The registration ordering is the claim.} \path{f317a28} precedes \path{8604de2}, which precedes \path{d4c09ee} (analysis modules), which precedes \path{46dee20} and \path{7626c55} (results). Nothing in \S{}5 could have been fitted to a number that did not yet exist. The same holds for \S{}5.2.2: \path{7eab5a4} (09:09:25) precedes \path{70e8414} (10:01:43), which precedes \path{d4e9090} (10:38:36) and \path{1093a3c} (12:01:38), all ancestors of the branch head%
+% src: docs/phase3-results-20260921.md, "Commit references" 
+.
+
+\textbf{One demonstration that the TODO below is not hypothetical.} An earlier draft of the Phase 3 report cited commit \path{8327aa2} for those tools. That commit no longer exists in this repository: a concurrent session rewrote the branch later the same day, and a hash cited in a document became a dangling reference within hours. Nothing was lost --- the tool content is byte-identical and re-enters at \path{70e8414} --- but the ordering above is verifiable only by a reader holding this repository, which is exactly the gap the external anchor is for%
+% src: docs/phase3-results-20260921.md, "A live demonstration of M8, in this repository, today" 
+.
+
+\textbf{The external anchor now exists, and this paragraph states exactly what it covers.} The pre-registration documents are anchored by OpenTimestamps: two SHA-256 manifests --- listing each registration document's hash and, for the committed set, the working repository's registration commit identifiers --- were stamped to the Bitcoin blockchain on 21 September 2026, and the manifests with their proof files are published, alongside the analysis code and every artefact this paper and its companion cite, in the public release repository at \url{https://github.com/theinformed/orbit-audit}, together with the verification commands. What the anchor proves is bounded and we state the bound: it establishes that every registration document existed, byte for byte, no later than the stamp date; it does not retroactively prove that each registration preceded its results, because the stamps postdate the experiments they govern. That finer ordering rests, as before, on the working repository's history, whose registration commit identifiers the anchored manifest names; the anchor ensures any future rewriting of that record cannot go unnoticed. Registrations made after the stamp date are stamped before their experiments run, which closes the gap prospectively. The word \emph{verifiable} is accordingly reserved for what a reader can check themselves: the documents against the manifests, and the manifests against the Bitcoin attestations.
+
+\textbf{Commands.} The offline arithmetic self-test (\path{tools/paperb_selftest.py}, 40 tests, OK), the bounded resumable read-only archive pass over two disjoint catalogue-number ranges, and the table/verdict generator are reproduced verbatim in the results document%
+% src: docs/paperb-results-20260920.md, "Reproduction and provenance" 
+. The corroboration acceptance commands and the verification path are likewise reproduced in the Phase-2b document.
+
+\textbf{Resume correctness was verified before it was relied on, not after.} A run was stopped at its budget, a stray record appended past its cursor to simulate a reader killed between writing an object and updating the cursor; the resume truncated the stray, processed no object twice, and produced totals bit-identical to the same range measured in one uninterrupted pass. The check found a real defect --- the original resume would have double-counted any object written after the last cursor write --- fixed in \path{46dee20}%
+% src: docs/paperb-results-20260920.md, "What the run actually cost" 
+.
+
+\textbf{Receipts} record selection SQL, source SHA-256 hashes, detector flags, counts, timings, seeds, and every decision outcome against the registered rules, including the shipping-detector structural check that makes amendment 1 verifiable. Seeds are fixed at 20260920 throughout.
+
+\textbf{Public artifacts.} The live manifest was fetched directly from \path{https://sean.theinformed.org/space/data/manifest.json}; the event artifact \path{orbit-events-d7919fbbd28d8c62.json} (generated 2026-09-19T12:48:51Z) and all 256 detail shards passed SHA-256 verification against it%
+% src: docs/orbit-phase2b-corroboration-20260920.md, "Inputs and reproducibility" 
+. Published and archive-sample counts overlap and must never be added together; this is stated in both Phase-2 and Phase-2b documents and we repeat it here.
+
+\textbf{Compute and isolation.} All measurements ran read-only at low CPU and I/O priority under declared cooperative and hard wall-clock bounds, with at most two concurrent readers and resumable cursors written outside the repository. The Analysis-1/2 pass used no GPU; the corroboration acceptance ran through a GPU broker at a 320 MiB allowance with peak accounted VRAM of 285,703,168 bytes per worker and zero fallbacks%
+% src: docs/orbit-phase2b-corroboration-20260920.md 
+. The host was under heavy unrelated load throughout the Paper-B pass --- a 12-core machine at load average 26--28 --- and the readers used 86--87\% of a core each%
+% src: docs/paperb-results-20260920.md, "What the run actually cost" 
+. No release, deployment, checkpoint, timer, frontend or public artifact was produced or modified by any measurement reported in \S{}5, and no detector source file was changed: the two policies are reached through a keyword argument that already existed on the production function.
+
+\textbf{DONE 2026-09-21 --- citation TODO closed.} Bibliographic entries for Lemmens \& Krag (2014, JGCD), Fu (arXiv:2605.09790), MAD-LEO (arXiv:2609.08556) and Kelecy (AMOS 2007) were located and verified against live sources on 2026-09-21 and now appear in the References section below. These identifiers came from the committed prior-art review, which carried no full citations; the entries below were found externally and are not themselves repository artefacts, so they carry no \path{src:} provenance comment. The Raytheon patent (US11649076B2) and the Flohrer, Krag \& Klinkrad AMOS 2008 reference are both traced and both now have full entries; the quotations from Flohrer et al. in \S{}5.5 previously carried no page number and now cite p. 6 of 12 in the fetched AMOS proceedings PDF (see \S{}5.5). No bibliographic TODO remains open in this paper.
+\textbf{Still open, and not a citation task.} Report the \path{implausibleCosts} pooled value from the next full-population production sweep once it materialises (the counter was carried into the diagnostics block and the published control in commit 061539e, 2026-09-21); a passive/payload split is not yet tracked and remains separate future work. Anchor the registration commits externally, as \S{}8 requires.
+
+\section*{Acknowledgments}
+
+The authors used large language models to assist with manuscript preparation and analysis tooling, and take full responsibility for the content. The authors thank David Robinson and Taylor Wulff-Morrison for code development and draft review.
+
+\section*{References}
+
+\begin{thebibliography}{XX}
+
+\bibitem{brouwerb} Brouwer, D. (1959). Solution of the problem of artificial satellite theory without drag. \emph{The Astronomical Journal}, 64, 378--397. \url{https://doi.org/10.1086/107958}
+
+\bibitem{brownc} Brown, L. D., Cai, T. T., \& DasGupta, A. (2001). Interval estimation for a binomial proportion. \emph{Statistical Science}, 16(2), 101--133. \url{https://doi.org/10.1214/ss/1009213286}
+
+\bibitem{flohrerd} Flohrer, T., Krag, H., \& Klinkrad, H. (2008). Assessment and categorization of TLE orbit errors for the US SSN catalogue. In \emph{Proceedings of the Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS 2008)}. \url{https://amostech.com/TechnicalPapers/2008/Orbital_Debris/Flohrer.pdf} (verbatim passage quoted in \S{}5.5 is on p. 6 of 12 of this PDF)
+
+\bibitem{fue} Fu, Y. (2026). Multi-tier labeling and physics-informed learning for orbital anomaly detection at scale. \emph{arXiv preprint} arXiv:2605.09790.
+
+\bibitem{guof} Guo, Z., Shi, Q., Xu, X., Ge, L., Zhu, H., Ben, L., Nie, B., Zhao, Y., \& Li, X. (2026). MAD-LEO: a maneuver-annotated orbital dataset for LEO satellites with tiered multi-source evidence. \emph{arXiv preprint} arXiv:2609.08556.
+
+\bibitem{jeffreysg} Jeffreys, H. (1946). An invariant form for the prior probability in estimation problems. \emph{Proceedings of the Royal Society of London A}, 186, 453--461. \url{https://doi.org/10.1098/rspa.1946.0056}
+
+\bibitem{kelecyh} Kelecy, T., Hall, D., Hamada, K., \& Stocker, D. (2007). Satellite maneuver detection using two-line elements data. In \emph{Proceedings of the Advanced Maui Optical and Space Surveillance Technologies Conference (AMOS 2007)}. \url{https://amostech.com/TechnicalPapers/2007/Modeling_Analysis_Simulation/Kelecy.pdf}
+
+\bibitem{kozaii} Kozai, Y. (1959). The motion of a close earth satellite. \emph{The Astronomical Journal}, 64, 367--377. \url{https://doi.org/10.1086/107957}
+
+\bibitem{lemmensj} Lemmens, S., \& Krag, H. (2014). Two-line-elements-based maneuver detection methods for satellites in low earth orbit. \emph{Journal of Guidance, Control, and Dynamics}, 37(3), 860--868. \url{https://doi.org/10.2514/1.61300}
+
+\bibitem{tackk} Tack, J., \& Nezda, C. (2023). Space object maneuver detection (Raytheon Company, assignee). \emph{U.S. Patent No. 11,649,076 B2}, filed February 20, 2020, issued May 16, 2023.
+
+\bibitem{valladol} Vallado, D. A., Crawford, P., Hujsak, R., \& Kelso, T. S. (2006). Revisiting Spacetrack Report \#3. In \emph{AIAA/AAS Astrodynamics Specialist Conference and Exhibit}. \url{https://doi.org/10.2514/6.2006-6753}
+
+% Reference list compiled and each entry verified against a live external source (USPTO/Google Patents; Crossref DOI record; arXiv abstract page; or the AMOS technical-paper library at amostech.space, including a fetched copy of the Flohrer et al. and Kelecy et al. PDFs) on 2026-09-21. This is a bibliography, not a measured claim, so entries carry no docs/ src: provenance comment. 
+
+\end{thebibliography}
+
+\end{document}

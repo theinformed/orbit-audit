@@ -1,0 +1,382 @@
+/**
+ * ONE PAGE PER LAYER — reading proportions.
+ *
+ * Sean, 2026-08-21: "the text on all the sections is way too small. The videos
+ * are GIANT compared to the text. So that needs to be redesigned."
+ *
+ * Measured on the built page at 1440 before this file existed: the content
+ * column was 1060 px, the video was 1060 x 596 — 100% of it — and the prose
+ * around it was 11 px (figure caption, method detail, 92 characters a line)
+ * and 9 px (the fact captions under the numbers). The video was not merely
+ * bigger than the text; it was the only thing on the page drawn at reading
+ * size, and its own burnt-in labels were larger than the page own body copy.
+ *
+ * So both halves move. Body copy goes to 16 px at 1.65 over a 68-character
+ * measure, which is the range this project already uses where it expects
+ * someone to read rather than scan (src/substorm-chain-page.css sets its
+ * evidence rows at 0.94rem); the video is capped so it takes about three
+ * quarters of the reading column instead of all of it, and the explanation
+ * beside and below it is what the eye lands on.
+ *
+ * SCOPED ON PURPOSE. Every selector carries `.layer-page` or `.layer-index`,
+ * the two wrappers src/layer-pages.ts puts round these views:
+ *
+ *   1. The sizes overridden here live in SHARED rules. `.lesson-card p` is
+ *      13 px for the lessons, events and sources pages as well, and
+ *      `.method-card-body dd` is 11 px on Data & methods and on every layer
+ *      method card in the rail. Those pages are not the complaint and are not
+ *      touched by anything in this file.
+ *   2. src/styles.css has several agents editing it at once. A separate sheet
+ *      under a scoped root cannot collide with them — the same reason
+ *      src/substorm-chain-page.css exists.
+ *
+ * Specificity is what makes these win, not import order: every rule here is
+ * two classes deep against a one-class rule, so it holds wherever the two
+ * sheets land in the cascade.
+ */
+
+.layer-page,
+.layer-index {
+  /* One measure for every block of prose on these pages, set in ch and then
+     CHECKED against the characters that actually land on a line. Inter is a
+     narrow-figure face: `ch` is the width of a zero, 0.625em, while an average
+     lower-case character is 0.525em — so 68ch measured out at 81 characters a
+     line, not 68. 57ch is 570 px at 16 px, which measures 68. */
+  --layer-measure: 57ch;
+  --layer-lead: 17px;
+  --layer-body: 16px;
+  --layer-support: 15px;
+  --layer-caption: 14px;
+  --layer-line: 1.65;
+  /* The reading column. The shared .content-body is 1120 px wide because the
+     Data & methods page puts two card columns in it; a page of prose and one
+     picture does not want that much. */
+  max-width: 940px;
+}
+
+/* ── THE OPENING ──────────────────────────────────────────────────────────
+   The h1 and the eyebrow keep the size every other content view gives them:
+   this is one page of a coherent site, not a different site. Only the lead
+   sentence changes, and only because 16 px across 680 px was running to 81
+   characters a line. */
+.layer-page .content-hero > p:last-child,
+.layer-index .content-hero > p:last-child {
+  max-width: 54ch;
+  font-size: var(--layer-lead);
+  line-height: 1.6;
+}
+
+.layer-page .method-section-head > p:last-child,
+.layer-index .method-section-head > p:last-child {
+  max-width: var(--layer-measure);
+  font-size: var(--layer-support);
+  line-height: 1.6;
+}
+
+.layer-page .teaching-callout,
+.layer-index .teaching-callout {
+  font-size: var(--layer-support);
+  line-height: 1.6;
+}
+
+/* ── THE FIGURE ───────────────────────────────────────────────────────────
+   The video is the illustration of the argument, not the argument. Capped at
+   720 px it is 77% of this page column and 68% of the full content body,
+   against 100% before; the caption under it is set at reading size on the
+   same measure as the rest of the page, so the two are legible as a pair.
+
+   It stays left-aligned rather than centred: everything else on the page
+   starts at the same left edge, and a centred picture would be the one
+   element that does not. */
+.layer-page .layer-figure {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin: 30px 0 0;
+}
+
+.layer-page .layer-video {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* The class chip is a chip again. In the shared rule the figcaption is a
+   two-column grid whose first track is `auto`, so the long caption sat in
+   that track and stretched the chip across two thirds of the page — a
+   bordered box the width of a paragraph, which is not a chip. */
+.layer-page .layer-figcaption {
+  display: block;
+  max-width: none;
+  margin: 14px 0 0;
+  font-size: var(--layer-body);
+  line-height: var(--layer-line);
+}
+
+.layer-page .layer-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin: 0;
+}
+
+.layer-page .layer-figcaption .layer-status {
+  margin: 0;
+  font-size: 9px;
+}
+
+.layer-page .layer-status-note {
+  margin-left: 0;
+  font-size: 12px;
+}
+
+/* The caption itself, and the bare <span> that src/mechanism-animations.ts
+   emits in the same position on the chain page, which is a layer page too. */
+.layer-page .layer-caption-text,
+.layer-page .layer-figcaption > span:last-of-type {
+  display: block;
+  max-width: var(--layer-measure);
+  margin: 10px 0 0;
+  color: #a8bec6;
+  font-size: var(--layer-body);
+  line-height: var(--layer-line);
+}
+
+.layer-page .layer-figcaption em {
+  color: #8fa8b1;
+  font-size: var(--layer-caption);
+  font-style: normal;
+}
+
+/* ── THE SLOT FOR SPOKEN NARRATION ────────────────────────────────────────
+   Left deliberately empty and deliberately `hidden`, so it costs a reader
+   nothing until it is filled.
+ 
+   CONTRACT, for the agent adding narration:
+     - One `<div class="layer-narration" data-narration-for="<layer id>">`
+       sits inside the <figcaption>, directly under the video and above the
+       caption prose. The id is the same one `data-layer-page` uses.
+     - Remove the `hidden` attribute to reveal it. Everything inside inherits
+       the page reading size from the rules below, so a <button> control, an
+       <audio> element and a <details> transcript can be dropped in without a
+       further stylesheet.
+     - The audio files belong in media/narration-layers/, which exists and is
+       empty for exactly this.
+   The mechanism figures on the chain page already carry a transcript of this
+   shape (`.mechanism-transcript`), so this is the same idea in the place the
+   ten layer pages will need it. */
+.layer-page .layer-narration {
+  max-width: var(--layer-measure);
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--cyan);
+  background: rgba(41, 212, 227, .045);
+  font-size: var(--layer-support);
+  line-height: 1.55;
+}
+
+.layer-page .layer-narration[hidden] {
+  display: none;
+}
+
+.layer-page .layer-narration button {
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  color: var(--cyan-bright);
+  background: transparent;
+  font: 600 var(--layer-caption) var(--font-sans, Inter, system-ui, sans-serif);
+  cursor: pointer;
+}
+
+.layer-page .layer-narration audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.layer-page .layer-narration ol,
+.layer-page .layer-narration ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  font-size: var(--layer-support);
+  line-height: 1.6;
+}
+
+/* ── THE NUMBERS ──────────────────────────────────────────────────────────
+   Four cells across a 1060 px column gave each caption 232 px at 9 px, which
+   is a footnote rather than the operational consequence the section promises.
+   Two cells at 14 px is about 60 characters a line. */
+.layer-page .processing-facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 22px 0 0;
+}
+
+.layer-page .processing-facts article {
+  padding: 18px;
+}
+
+.layer-page .processing-facts strong {
+  font-size: 21px;
+}
+
+.layer-page .processing-facts span {
+  margin-top: 9px;
+  color: #9eb5bd;
+  font-size: var(--layer-caption);
+  line-height: 1.55;
+}
+
+/* ── HOW WE KNOW ──────────────────────────────────────────────────────────
+   The one card on a layer page is always open and is the longest reading on
+   the page, so it is set like reading. The 78ch the shared rule already
+   carried was the right instinct at the wrong size: 78ch of 11 px is 546 px,
+   which is a 92-character line by the measure that matters. */
+.layer-page .layer-page-methods .method-card summary {
+  min-height: 0;
+  padding: 20px 44px 18px 20px;
+}
+
+.layer-page .method-card summary .layer-status {
+  font-size: 9px;
+}
+
+.layer-page .method-card summary strong {
+  font-size: 21px;
+}
+
+.layer-page .method-card summary small {
+  font-size: var(--layer-caption);
+  line-height: 1.5;
+}
+
+/* Both selectors on purpose. src/styles.css already caps this dd at 78ch with
+   `.layer-page-methods .method-card-body dd`, which is three classes — exactly
+   the weight of `.layer-page .method-card-body dd` — so on its own the winner
+   would be decided by which sheet the bundler happened to put last. */
+.layer-page .layer-page-methods .method-card-body dd,
+.layer-page .method-card-body dd {
+  max-width: var(--layer-measure);
+  color: #b7cbd2;
+  font-size: var(--layer-body);
+  line-height: var(--layer-line);
+}
+
+/* Term beside detail rather than above it. A 57ch measure inside a 900 px
+   card leaves a third of the row empty when the term is stacked on top of it;
+   put the term in a left column and the row fills. This is the shape
+   src/substorm-chain-page.css already gives the chain page evidence rows, so
+   the two halves of this track read as one thing. */
+.layer-page .method-card-body dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  gap: 0 1.4rem;
+  align-items: start;
+  padding: 17px 0;
+}
+
+.layer-page .method-card-body dt {
+  margin-bottom: 0;
+  padding-top: 4px;
+  font-size: 10px;
+}
+
+/* ── THE CHAIN PAGE ────────────────────────────────────────────────────────────────────
+   The one layer page that renders its own body (src/substorm-chain-page.ts)
+   is a layer page too. Its six stage paragraphs had the opposite problem to
+   the rest of the track: no rule at all matched them, so they inherited the
+   browser default of 16 px WITH the browser default leading and no measure —
+   112 characters a line at line-height normal. Same treatment as every other
+   paragraph on the track now. Scoped like everything else here, which keeps
+   it off the mechanism library on the space-weather page: same markup, but
+   another agent surface. */
+.layer-page .mechanism-entry > p:not(.section-kicker):not(.mechanism-question) {
+  max-width: var(--layer-measure);
+  color: #a8bec6;
+  font-size: var(--layer-body);
+  line-height: var(--layer-line);
+}
+
+.layer-page .chain-stage-evidence dd {
+  max-width: var(--layer-measure);
+  font-size: var(--layer-support);
+}
+
+.layer-page .mechanism-entry h3 {
+  max-width: 32ch;
+}
+
+/* The narration transcript that already rides on the mechanism figures. It is
+   the closest thing on the site to the slot the ten layer clips are getting,
+   and at 10 px its summary was the smallest control on the page. */
+.layer-page .mechanism-transcript > summary {
+  font-size: 13px;
+}
+
+.layer-page .mechanism-transcript > ol {
+  max-width: var(--layer-measure);
+  font-size: var(--layer-support);
+  line-height: 1.6;
+}
+
+/* ── THE INDEX ────────────────────────────────────────────────────────────
+   Ten cards a reader chooses from. `.lesson-card p` is 13 px and shared with
+   three other pages, so the size is raised here on the layer card only. */
+.layer-index .layer-index-card p:not(.layer-index-extent) {
+  font-size: var(--layer-support);
+  line-height: 1.6;
+}
+
+.layer-index .layer-index-extent {
+  font-size: 11px;
+}
+
+.layer-index .layer-index-card .layer-status-note {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.layer-index .layer-index-card .link-button {
+  font-size: var(--layer-caption);
+}
+
+/* ── NARROWER THAN THE READING COLUMN ─────────────────────────────────────
+   `width: 100%` with `max-width: 720px` needs no breakpoint of its own: below
+   a 780 px viewport the column is narrower than the cap and the picture is
+   simply the width of the column. An explicit `max-width: 100%` under a
+   1000 px query was worse than nothing — measured, it made the video jump
+   from 720 px to the full 940 px column as the window crossed 1000.
+
+   The type does NOT shrink to meet a phone beyond one step. 11 px was worse
+   on a phone than on a desktop, not better. */
+@media (max-width: 820px) {
+  .layer-page,
+  .layer-index {
+    --layer-lead: 16px;
+    --layer-body: 15.5px;
+  }
+
+  .layer-page .processing-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .layer-page .content-hero > p:last-child,
+  .layer-index .content-hero > p:last-child,
+  .layer-page .method-section-head > p:last-child,
+  .layer-index .method-section-head > p:last-child {
+    max-width: none;
+  }
+
+  .layer-page .method-card summary strong,
+  .layer-page .processing-facts strong {
+    font-size: 19px;
+  }
+
+  /* No room for a left column at 358 px: the term goes back above its
+     detail, the same width the chain page falls back to. */
+  .layer-page .method-card-body dl > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px 0;
+  }
+}

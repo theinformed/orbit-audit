@@ -1,0 +1,378 @@
+{
+  "schema": 1,
+  "version": 4,
+  "generatedAt": "2026-09-12T00:00:00Z",
+  "method": {
+    "activeElements": [
+      "semiMajorAxisKm"
+    ],
+    "blindSpots": [
+      "station-keeping",
+      "lowering (drag-ambiguous)",
+      "everything above the gate",
+      "GEO relocations (future channel)",
+      "insufficient test-window coverage"
+    ],
+    "config": {
+      "altitude_band_km": 50.0,
+      "block_days": 5,
+      "end_day": 120,
+      "inclination_band_deg": 4.0,
+      "max_fits_per_day": 4096,
+      "min_blocks": 12,
+      "min_coverage": 0.8,
+      "page_rows": 4096,
+      "pairs": 4000,
+      "scratch_bytes": 536870912,
+      "split_day": 60,
+      "start_day": 0,
+      "threshold": 5.0
+    },
+    "elements": [
+      "semiMajorAxisKm",
+      "eccentricity",
+      "inclinationDeg"
+    ],
+    "gate": {
+      "basis": "every raw test-window element set",
+      "eccentricityBelow": 0.05,
+      "perigeeKmBelow": 800
+    },
+    "interpretation": "sustained orbit-raising in the drag regime -- propulsion by elimination",
+    "kind": "method",
+    "note": "No drag model or prediction. Trailing fits optional diagnostics. Out-of-gate labels describe ambiguity, not demonstrated causes. z is not a Gaussian probability; attribution remains unproven.",
+    "restrictedPopulation": false,
+    "scope": "full-catalogue control; restricted runs cannot authorize labels",
+    "version": 4,
+    "windows": [
+      [
+        0,
+        60
+      ],
+      [
+        60,
+        120
+      ]
+    ]
+  },
+  "controls": {
+    "acceptance": "controls failed or unmeasurable",
+    "basis": "test-window semi-major-axis raising inside raw-element regime gate",
+    "blockingReason": "requires passive exact 95% upper bound < 1/1000 and bound-aware separation >= 10x",
+    "designTarget": 0.001,
+    "kind": "controls",
+    "note": "One test object-window per object; only fitted in-gate objects in rate denominators. Gaps excluded; out-of-gate rises diagnostic only. upper95 is one-sided exact binomial; Jeffreys intervals also retained. Population dependence may limit binomial coverage. Annualized flags are descriptive, not independent events.",
+    "objectsWithGap": 1,
+    "outOfGate": {
+      "passive": {
+        "byLabel": {},
+        "objects": 0,
+        "raising": 0
+      },
+      "payload": {
+        "byLabel": {},
+        "objects": 0,
+        "raising": 0
+      }
+    },
+    "passive": {
+      "controlledFraction": 0.95,
+      "flaggedObjects": 0,
+      "flags": 0,
+      "jeffreys95": [
+        0.0,
+        0.12230940431991183
+      ],
+      "negativeSideObjects": 19,
+      "negativeSideRate": 1.0,
+      "objectDays": 1140,
+      "objectWindows": 19,
+      "objects": 19,
+      "objectsWithWindowData": 20,
+      "populationObjects": 20,
+      "ratePerObjectWindow": 0.0,
+      "ratePerObjectYear": 0.0,
+      "trendFittedFraction": 0.95,
+      "trendFittedObjects": 19,
+      "upper95": 0.14586850331224344
+    },
+    "passiveBoundMeetsTarget": false,
+    "payload": {
+      "controlledFraction": 1.0,
+      "flaggedObjects": 1,
+      "flags": 1,
+      "jeffreys95": [
+        0.1467463163095752,
+        1.0
+      ],
+      "negativeSideObjects": 0,
+      "negativeSideRate": 0.0,
+      "objectDays": 60,
+      "objectWindows": 1,
+      "objects": 1,
+      "objectsWithWindowData": 1,
+      "populationObjects": 1,
+      "ratePerObjectWindow": 1.0,
+      "ratePerObjectYear": 6.0875,
+      "trendFittedFraction": 1.0,
+      "trendFittedObjects": 1,
+      "upper95": 1.0
+    },
+    "pointSeparation": null,
+    "population": {
+      "controlledFraction": 0.9523809523809523,
+      "controlledObjects": 20,
+      "objects": 21,
+      "objectsWithWindowData": 21,
+      "outOfGateFittedObjects": 0,
+      "trendFittedFraction": 0.9523809523809523,
+      "trendFittedObjects": 20
+    },
+    "restrictedPopulation": false,
+    "separation": 6.855489549100387,
+    "separationExceedsOne": true,
+    "separationNote": "payload observed rate / passive one-sided exact 95% upper bound; bound-aware comparison, not a joint confidence bound on the ratio",
+    "sufficientToLabel": false,
+    "threshold": 5.0
+  },
+  "labelPolicy": {
+    "propulsionLabelPermitted": false,
+    "blockingReason": "requires passive exact 95% upper bound < 1/1000 and bound-aware separation >= 10x",
+    "passiveUpperBoundTarget": 0.001,
+    "minimumSeparation": 10,
+    "warrant": "drag-regime exclusion plus this window's passive control; cause remains an inference"
+  },
+  "objects": [
+    {
+      "norad": 1,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -23.194572237357026,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 2,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.38462891801662574,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 3,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -3.4968994771258046,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 4,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -31.793394842611995,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 5,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.5271633304336218,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 6,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -4.793303665756902,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 7,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -43.579995645581626,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 8,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.7226255492423662,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 9,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -6.570345026845774,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 10,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.10894959720892736,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 11,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.990577546118792,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 12,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -9.006087453137958,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 13,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.14932970008106036,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 14,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -1.357788778746215,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 15,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -12.34482794509335,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 16,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.20469874526782525,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 17,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -1.861161305141374,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 18,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -16.921404585724044,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 19,
+      "objectType": "DEBRIS",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": false,
+      "slopeMetresPerDay": -0.2805635769205268,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 20,
+      "objectType": "PAYLOAD",
+      "gap": null,
+      "inGate": true,
+      "regime": "drag regime",
+      "raising": true,
+      "slopeMetresPerDay": 47.44886767010526,
+      "spanDays": 55.0,
+      "flag": false
+    },
+    {
+      "norad": 21,
+      "objectType": "DEBRIS",
+      "gap": "insufficient temporal blocks/coverage",
+      "inGate": null,
+      "regime": null,
+      "raising": false,
+      "slopeMetresPerDay": null,
+      "spanDays": null,
+      "flag": false
+    }
+  ]
+}

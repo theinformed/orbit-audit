@@ -1,0 +1,54 @@
+{
+ "scene": "Chapman",
+ "duration": 69.167,
+ "lines": [
+  {
+   "t": 6.133,
+   "text": "One column of upper atmosphere. Ground below, space above."
+  },
+  {
+   "t": 9.7,
+   "text": "Light is strongest at the top, and is used up on the way down."
+  },
+  {
+   "t": 13.067,
+   "text": "Air does the opposite. It thickens downward, nearly tripling every scale height."
+  },
+  {
+   "t": 16.433,
+   "text": "Multiply the two, one altitude at a time."
+  },
+  {
+   "t": 22.2,
+   "text": "At the top: light, but no air. At the bottom: air, but no light."
+  },
+  {
+   "t": 25.167,
+   "text": "The peak is the compromise. That is a Chapman layer."
+  },
+  {
+   "t": 34.0,
+   "text": "Now let the Sun go down."
+  },
+  {
+   "t": 39.767,
+   "text": "The peak climbs and it weakens. A low Sun gives a higher, thinner layer."
+  },
+  {
+   "t": 47.833,
+   "text": "This is the shape a real daytime profile carries."
+  },
+  {
+   "t": 50.9,
+   "text": "D, E and F1 are the same balance \u2014 different wavelengths, different gases."
+  },
+  {
+   "t": 55.567,
+   "text": "At sunset production stops. D and E collapse in minutes: dense air, fast recombination."
+  },
+  {
+   "t": 58.333,
+   "text": "That is why the shortwave bands go long after dark."
+  }
+ ]
+}

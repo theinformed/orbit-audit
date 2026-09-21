@@ -1,0 +1,82 @@
+{
+ "scene": "Reconnection",
+ "duration": 86.7,
+ "lines": [
+  {
+   "t": 8.733,
+   "text": "Earth's field is a bubble the solar wind flows around."
+  },
+  {
+   "t": 12.9,
+   "text": "The wind carries the Sun's own field with it. Everything depends on which way that field points."
+  },
+  {
+   "t": 20.8,
+   "text": "Look at the nose."
+  },
+  {
+   "t": 24.767,
+   "text": "On the earthward side, Earth's field points north."
+  },
+  {
+   "t": 27.233,
+   "text": "Northward Bz: the two fields are parallel."
+  },
+  {
+   "t": 31.1,
+   "text": "Parallel fields slide past each other. Nothing opens at the nose."
+  },
+  {
+   "t": 33.067,
+   "text": "Now turn it over."
+  },
+  {
+   "t": 35.133,
+   "text": "Southward Bz: at the nose the two fields are exactly antiparallel."
+  },
+  {
+   "t": 38.4,
+   "text": "Pressed together, the field cannot stay in two pieces."
+  },
+  {
+   "t": 41.867,
+   "text": "It breaks, and rejoins across the join. Two lines went in; two different lines came out."
+  },
+  {
+   "t": 45.833,
+   "text": "The bent field straightens and flings the plasma away. That is the energy release."
+  },
+  {
+   "t": 48.0,
+   "text": "Each new line now has one foot on Earth and one end loose in the wind. It is open."
+  },
+  {
+   "t": 51.867,
+   "text": "Zoom back out, and follow the open lines."
+  },
+  {
+   "t": 54.733,
+   "text": "The wind drags the open ends back over the poles and stacks them in the tail."
+  },
+  {
+   "t": 57.7,
+   "text": "The tail loads. This is the storing half of the cycle."
+  },
+  {
+   "t": 64.433,
+   "text": "Far down the tail, the two stacked lobes are antiparallel too."
+  },
+  {
+   "t": 69.667,
+   "text": "It reconnects. One piece leaves down-tail; the rest is fired straight back at Earth."
+  },
+  {
+   "t": 73.033,
+   "text": "That injection lights the aurora and feeds the ring current."
+  },
+  {
+   "t": 77.0,
+   "text": "The closed line drifts back to the dayside, and the loop starts again."
+  }
+ ]
+}

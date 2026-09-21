@@ -1,0 +1,23 @@
+[Unit]
+Description=Reconcile the orbit-history rebuild cadence with the operations page
+
+[Timer]
+# Five minutes, matching the publish cycle that brings the request over, so a
+# click on the operations page takes effect within about ten minutes: one cycle
+# to pull the request, one run of this to apply it.
+#
+# Running this often is safe because it is idempotent by COMPARISON rather than
+# by consuming anything: it reads what is requested, reads what is live, and
+# returns without touching systemd when they already agree. It only ever writes
+# on the run where they differ, and the applied log records exactly those runs
+# -- so that log is a record of changes, not of executions.
+OnBootSec=4min
+OnUnitActiveSec=5min
+RandomizedDelaySec=30
+# Persistent so a machine that was asleep applies a pending request once on
+# waking rather than staying on the previous cadence until someone notices.
+Persistent=true
+Unit=space-explorer-cadence.service
+
+[Install]
+WantedBy=timers.target

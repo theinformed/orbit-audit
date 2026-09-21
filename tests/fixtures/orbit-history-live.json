@@ -1,0 +1,4675 @@
+{
+ "_source": {
+  "bundle": "https://sean.theinformed.org/space/data/artifacts/orbit-events-6f9b6fb8ba5d4be1.json",
+  "shard": "https://sean.theinformed.org/space/data/artifacts/orbit-history-000-168f965fbc3f0ebd.json",
+  "generatedAt": "2026-09-01T19:02:16Z",
+  "fetchedOn": "2026-09-03",
+  "note": "Trimmed from the artifacts sean.theinformed.org/space was serving. Key names and values are the publisher's own; only the number of samples, events, objects and ground-truth matches was reduced. repeatClusters on the shard objects is copied from the same object's summary row, which repeat_clusters() also produces. Object 40960's shard events are cut back to the pre-2026-08-09 marker keys.",
+  "objects": {
+   "46080": "decaying, remaining-life bound offered, repeats a correction",
+   "61696": "median rate POSITIVE -- gaining semi-major axis, not decaying",
+   "44800": "median rate negative at GEO perigee -- falling, but not called decay",
+   "63488": "decaying, remaining-life bound offered, NO repeat clusters",
+   "67584": "decaying, no events at all in the archive yet",
+   "40960": "shard events in the OLD marker shape, so the headline fallback renders"
+  }
+ },
+ "bundle": {
+  "schema": 1,
+  "generatedAt": "2026-09-01T19:02:16Z",
+  "kappa": 8.0,
+  "coverage": {
+   "captureCount": 550,
+   "capturedFrom": "2026-08-07T21:30:33Z",
+   "capturedTo": "2026-09-01T18:18:00Z",
+   "earliestEpoch": "1959-01-11T01:49:23.462000+00:00",
+   "framing": "These are fitted mean elements published every few hours, not measurements of where a satellite is. What this archive can show you is how the fit moved.",
+   "interpolationPolicy": "never-across-a-gap",
+   "latestEpoch": "2026-09-10T03:47:38.554000+00:00",
+   "noDataIntervals": [
+    {
+     "from": "1957-10-04T00:00:00Z",
+     "note": "Nothing before this point is held. What the archive does hold is whatever the hourly capture has seen since it started, plus whatever the bulk back-fill has imported from space-track's published yearly bundles.",
+     "reason": "before-bigmem-accumulation",
+     "to": "1959-01-11T01:49:23Z"
+    },
+    {
+     "from": "2025-12-31T13:33:45Z",
+     "note": "The archive holds element sets on both sides of this gap and none inside it: the bulk bundles end before live capture began. Nothing is interpolated across it, no cadence is measured across it, and an operator-published manoeuvre inside it is recorded as unscorable rather than as one the detector missed.",
+     "reason": "between-backfill-and-live-capture",
+     "to": "2026-08-07T00:30:49Z"
+    },
+    {
+     "from": "2026-08-08T21:22:26Z",
+     "note": "No capture ran in this window, so any element set published inside it was missed.",
+     "reason": "snapshot-gap",
+     "to": "2026-08-09T00:36:14Z"
+    }
+   ]
+  },
+  "controls": {
+   "blockingReason": "The passive control is too shallow to bound the false-alarm rate below the design target. Events are shown as measurements of the elements, without a manoeuvre label.",
+   "cohortWindowDays": 7.0,
+   "designTarget": 0.001,
+   "excessRate": null,
+   "excessSignificance": {
+    "approximatePValue": null,
+    "method": "insufficient-data",
+    "z": null
+   },
+   "excessSignificant": false,
+   "kappa": 8.0,
+   "note": "Debris and spent rocket stages cannot manoeuvre, so every flag on one is a false alarm. The payload rate is not a detection rate: most payload intervals contain no manoeuvre either. What the two together bound is how much of the payload flag rate could be noise.",
+   "passiveControl": {
+    "flags": 0,
+    "interval95": null,
+    "intervals": 0,
+    "rate": null
+   },
+   "payloadPopulation": {
+    "flags": 0,
+    "interval95": null,
+    "intervals": 0,
+    "rate": null
+   },
+   "selfHistory": {
+    "basis": "self-history",
+    "blockingReason": "the upper bound on the false-alarm rate is 6.2 per 1,000 intervals, above the design target of 1 per 1,000",
+    "kappa": 8.0,
+    "note": "Debris and spent rocket stages have no propulsion, so every flag on one is a false alarm by construction. The interval is Jeffreys rather than Wald: at zero flags Wald would report a false-alarm rate of exactly zero, which no control can support.",
+    "passive": {
+     "flaggedObjects": 11334,
+     "flags": 547138,
+     "intervals": 89017283,
+     "jeffreys95": [
+      0.0061302042867592554,
+      0.00616267662184361
+     ],
+     "objectDays": 76716169.4,
+     "objects": 12396,
+     "ratePerInterval": 0.0061464243971589205,
+     "ratePerObjectYear": 2.6049548118698502
+    },
+    "payload": {
+     "flags": 830686,
+     "intervals": 62406016,
+     "jeffreys95": [
+      0.013282581398155639,
+      0.013339448395472131
+     ],
+     "objectDays": 41237403.4,
+     "objects": 18644,
+     "ratePerInterval": 0.013310992324842529,
+     "ratePerObjectYear": 7.357593756577287
+    },
+    "separation": {
+     "approximatePValue": 0.0,
+     "caution": "The normal approximation is poor when either count is below about ten. Treat this as an order-of-magnitude statement about significance, not a precise p-value.",
+     "method": "pooled two-proportion normal approximation, two-sided",
+     "ratio": 2.1656481011944613,
+     "z": 457.013
+    },
+    "sufficientToLabel": false,
+    "targetRatePerInterval": 0.001
+   },
+   "sufficientToLabel": false
+  },
+  "groundTruth": {
+   "detected": 21,
+   "detectionRate": 0.7777777777777778,
+   "matches": [
+    {
+     "agreementRatio": null,
+     "detectedDeltaVMetresPerSecond": 0.6071,
+     "detectedEndAt": "2024-04-26T09:55:52Z",
+     "detectedSignature": "along-track-raise",
+     "detectedStartAt": "2024-04-26T01:54:39Z",
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2024-04-26T00:00:00Z",
+     "publishedDeltaVMetresPerSecond": null,
+     "source": "https://gipoc.grc.nasa.gov/pims/pimsdocs/public/ISS%20Handbook/hb_vib_vehicle_Progress_87P_Reboost_2024-04-26.pdf",
+     "type": "reboost"
+    },
+    {
+     "agreementRatio": null,
+     "detectedDeltaVMetresPerSecond": 1.3003,
+     "detectedEndAt": "2024-05-24T19:27:34Z",
+     "detectedSignature": "along-track-raise",
+     "detectedStartAt": "2024-05-24T13:01:53Z",
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2024-05-24T00:00:00Z",
+     "publishedDeltaVMetresPerSecond": null,
+     "source": "https://gipoc.grc.nasa.gov/pims/pimsdocs/public/ISS%20Handbook/hb_vib_vehicle_Cygnus_NG-20_Two_Reboots_2024-05-24.pdf",
+     "type": "reboost"
+    }
+   ],
+   "misses": [
+    {
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2025-04-30T22:10:00Z",
+     "publishedDeltaVMetresPerSecond": null,
+     "source": "https://www.orbitaldebris.jsc.nasa.gov/quarterly-news/pdfs/ODQNv29i3.pdf",
+     "type": "collision-avoidance"
+    },
+    {
+     "norad": 62261,
+     "object": "SENTINEL-1C",
+     "occurredAt": "2025-06-11T00:00:00Z",
+     "publishedDeltaVMetresPerSecond": null,
+     "source": "https://sentiwiki.copernicus.eu/web/s1-mission-status-reports",
+     "type": "collision-avoidance"
+    }
+   ],
+   "notDetected": 6,
+   "note": "Scorability is decided per object against that object's own contiguous observation runs, not against the archive's global first and last epoch. The archive contains a real hole between the end of the bulk bundles and the start of live capture, and an event inside that hole is one the archive cannot see, not one the detector missed.",
+   "pending": 7,
+   "pendingEvents": [
+    {
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2026-04-16T02:34:18Z",
+     "publishedDeltaVMetresPerSecond": 0.24,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+     "type": "reboost"
+    },
+    {
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2026-03-13T16:58:17Z",
+     "publishedDeltaVMetresPerSecond": 0.61,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+     "type": "reboost"
+    },
+    {
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2026-02-19T00:57:00Z",
+     "publishedDeltaVMetresPerSecond": 0.95,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+     "type": "reboost"
+    },
+    {
+     "norad": 25544,
+     "object": "ISS (ZARYA)",
+     "occurredAt": "2026-01-23T00:00:00Z",
+     "publishedDeltaVMetresPerSecond": 2.3,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+     "type": "reboost"
+    },
+    {
+     "norad": 43600,
+     "object": "AEOLUS",
+     "occurredAt": "2023-07-24T14:00:00Z",
+     "publishedDeltaVMetresPerSecond": 9.0,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://www.issfd.org/ISSFD_2024/ISSFD2024_1-2.pdf",
+     "type": "deorbit"
+    },
+    {
+     "norad": 43600,
+     "object": "AEOLUS",
+     "occurredAt": "2023-07-28T14:34:00Z",
+     "publishedDeltaVMetresPerSecond": 12.3,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://www.issfd.org/ISSFD_2024/ISSFD2024_1-2.pdf",
+     "type": "deorbit"
+    },
+    {
+     "norad": 27509,
+     "object": "METEOSAT-8",
+     "occurredAt": "2022-10-06T00:00:00Z",
+     "publishedDeltaVMetresPerSecond": null,
+     "reason": "archive-holds-no-elements-here",
+     "source": "https://www.eumetsat.int/long-serving-european-weather-satellite-safely-moved-graveyard-orbit",
+     "type": "disposal"
+    }
+   ],
+   "publishedEvents": 34,
+   "scorable": 27,
+   "tableVersion": "2026-08-08.1"
+  },
+  "events": [
+   {
+    "apogeeAltitudeKm": 661.2,
+    "confidence": "candidate",
+    "constellation": null,
+    "deltaVMetresPerSecond": 14.8569,
+    "endAt": "2017-11-16T21:14:41Z",
+    "eventKey": "40960|2017-11-16T16:33:06Z|2017-11-16T21:14:41Z|inclination-change",
+    "expectationVerdict": "expected-for-class",
+    "groundTruth": null,
+    "inclinationDeg": 97.8937,
+    "name": "LINGQIAO VIDEO B",
+    "norad": 40960,
+    "objectType": "PAYLOAD",
+    "perigeeAltitudeKm": 597.2,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "signature": "inclination-change",
+    "signatureLabel": "plane change",
+    "spanDays": 0.1955,
+    "startAt": "2017-11-16T16:33:06Z",
+    "sunSynchronous": true
+   }
+  ],
+  "eventsPublished": {
+   "inThisBundle": 1500,
+   "rule": "The population views need one list of the notable changes across the whole catalogue; a per-object view needs that object's changes and fetches them with the object's history shard, which it is already fetching. So this list is the largest change on every object that had one, plus the largest remaining changes and every change an operator independently published, up to 1500. Nothing is hidden: every event is in its object's shard.",
+   "total": 341417
+  },
+  "objects": [
+   {
+    "apogeeAltitudeKm": 385.9,
+    "cadence": {
+     "corrections": 73,
+     "correctionsPerYear": 13.6,
+     "medianDaysBetween": 0.398,
+     "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+     "observedDays": 1960.61,
+     "regularity": 0.552,
+     "spacingScaleDays": 0.22,
+     "spacingsUsed": 70
+    },
+    "constellation": "Starlink",
+    "decay": {
+     "decaying": true,
+     "metresPerDay": -20.64,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 379.8,
+     "reentryNote": "An UPPER bound: decay accelerates as an object falls into denser air, so the real figure is shorter. Extrapolated to a 120 km perigee at today's rate, and only offered below 600 km where drag is unambiguously the dominant term.",
+     "upperBoundDaysToReentry": 12591.6
+    },
+    "deltaVMetresPerSecond": 104.855,
+    "deltaVPerYearMetresPerSecond": 19.534,
+    "events": 73,
+    "firstSeenAt": "2020-08-13T22:00:02Z",
+    "inclinationDeg": 53.053,
+    "intervals": 3763,
+    "lastSeenAt": "2026-08-31T08:50:07Z",
+    "mission": "communications",
+    "name": "STARLINK-1568",
+    "norad": 46080,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 85.83,
+      "fromAt": "2020-08-13T22:00:02Z",
+      "toAt": "2020-11-07T18:00:01Z"
+     },
+     {
+      "days": 582.03,
+      "fromAt": "2020-11-11T00:33:59Z",
+      "toAt": "2022-06-16T01:22:38Z"
+     },
+     {
+      "days": 1290.81,
+      "fromAt": "2022-06-19T10:35:09Z",
+      "toAt": "2025-12-31T05:54:46Z"
+     },
+     {
+      "days": 23.63,
+      "fromAt": "2026-08-07T17:39:09Z",
+      "toAt": "2026-08-31T08:50:07Z"
+     }
+    ],
+    "observedDays": 1960.61,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 379.8,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "repeatClusters": [
+     {
+      "count": 34,
+      "deltaVSpreadMetresPerSecond": 0.2376,
+      "firstAt": "2020-09-25T14:00:01Z",
+      "lastAt": "2023-12-27T13:28:50Z",
+      "medianDaysBetween": 0.417,
+      "medianDeltaVMetresPerSecond": 1.2585,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.247,
+      "totalDeltaVMetresPerSecond": 41.3697
+     },
+     {
+      "count": 13,
+      "deltaVSpreadMetresPerSecond": 0.047,
+      "firstAt": "2020-10-19T22:00:06Z",
+      "lastAt": "2020-11-11T10:05:58Z",
+      "medianDaysBetween": 1.167,
+      "medianDeltaVMetresPerSecond": 2.5212,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.741,
+      "totalDeltaVMetresPerSecond": 32.8412
+     },
+     {
+      "count": 5,
+      "deltaVSpreadMetresPerSecond": 0.1142,
+      "firstAt": "2021-02-03T01:23:50Z",
+      "lastAt": "2024-12-01T19:18:03Z",
+      "medianDaysBetween": 158.232,
+      "medianDeltaVMetresPerSecond": 0.4767,
+      "signature": "along-track-lower",
+      "spacingScaleDays": 233.857,
+      "totalDeltaVMetresPerSecond": 2.3479
+     },
+     {
+      "count": 4,
+      "deltaVSpreadMetresPerSecond": 0.2171,
+      "firstAt": "2020-08-17T04:00:01Z",
+      "lastAt": "2021-02-14T04:54:48Z",
+      "medianDaysBetween": 78.417,
+      "medianDeltaVMetresPerSecond": 1.1461,
+      "signature": "inclination-change",
+      "spacingScaleDays": 33.329,
+      "totalDeltaVMetresPerSecond": 4.6234
+     },
+     {
+      "count": 4,
+      "deltaVSpreadMetresPerSecond": 0.0883,
+      "firstAt": "2021-02-07T16:51:50Z",
+      "lastAt": "2021-02-10T16:31:08Z",
+      "medianDaysBetween": 0.398,
+      "medianDeltaVMetresPerSecond": 0.6554,
+      "signature": "inclination-change",
+      "spacingScaleDays": 0.098,
+      "totalDeltaVMetresPerSecond": 2.5156
+     },
+     {
+      "count": 3,
+      "deltaVSpreadMetresPerSecond": 0.2041,
+      "firstAt": "2020-08-14T14:00:01Z",
+      "lastAt": "2020-08-16T06:00:02Z",
+      "medianDaysBetween": 0.833,
+      "medianDeltaVMetresPerSecond": 1.3366,
+      "signature": "deorbit-lowering",
+      "spacingScaleDays": 0.247,
+      "totalDeltaVMetresPerSecond": 4.1445
+     }
+    ],
+    "sector": "commercial",
+    "sunSynchronous": false,
+    "unusualForItself": [
+     {
+      "at": "2020-08-14T14:00:01Z",
+      "deltaVMetresPerSecond": 1.1989,
+      "signature": "deorbit-lowering",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-08-14T20:00:02Z",
+      "deltaVMetresPerSecond": 2.393,
+      "signature": "deorbit-lowering",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-08-15T14:00:02Z",
+      "deltaVMetresPerSecond": 1.3366,
+      "signature": "deorbit-lowering",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-08-15T22:00:01Z",
+      "deltaVMetresPerSecond": 2.7433,
+      "signature": "deorbit-lowering",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-08-16T06:00:02Z",
+      "deltaVMetresPerSecond": 1.609,
+      "signature": "deorbit-lowering",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-08-17T04:00:01Z",
+      "deltaVMetresPerSecond": 1.2727,
+      "signature": "inclination-change",
+      "usualCount": 34,
+      "usualDeltaVMetresPerSecond": 1.2585,
+      "usualSignature": "along-track-raise",
+      "why": "a different kind of change from this object's usual one"
+     }
+    ]
+   },
+   {
+    "apogeeAltitudeKm": 35796.1,
+    "cadence": {
+     "corrections": 199,
+     "correctionsPerYear": 33.49,
+     "medianDaysBetween": 12.822,
+     "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+     "observedDays": 2170.156,
+     "regularity": 0.272,
+     "spacingScaleDays": 3.494,
+     "spacingsUsed": 186
+    },
+    "constellation": null,
+    "decay": {
+     "decaying": false,
+     "metresPerDay": -138.74,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 35775.6
+    },
+    "deltaVMetresPerSecond": 57.4013,
+    "deltaVPerYearMetresPerSecond": 9.661,
+    "events": 199,
+    "firstSeenAt": "2019-11-27T00:08:30Z",
+    "inclinationDeg": 0.056,
+    "intervals": 4793,
+    "lastSeenAt": "2026-08-31T18:05:24Z",
+    "mission": "communications",
+    "name": "TIBA-1",
+    "norad": 44800,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 0.56,
+      "fromAt": "2019-11-27T00:08:30Z",
+      "toAt": "2019-11-27T13:41:11Z"
+     },
+     {
+      "days": 1.33,
+      "fromAt": "2019-12-02T03:09:58Z",
+      "toAt": "2019-12-03T11:02:55Z"
+     },
+     {
+      "days": 47.9,
+      "fromAt": "2019-12-07T17:25:12Z",
+      "toAt": "2020-01-24T15:07:21Z"
+     },
+     {
+      "days": 2.01,
+      "fromAt": "2020-01-27T15:28:49Z",
+      "toAt": "2020-01-29T15:43:17Z"
+     },
+     {
+      "days": 278.03,
+      "fromAt": "2020-02-03T17:42:42Z",
+      "toAt": "2020-11-07T18:26:25Z"
+     },
+     {
+      "days": 569.07,
+      "fromAt": "2020-11-11T01:25:42Z",
+      "toAt": "2022-06-03T03:00:57Z"
+     },
+     {
+      "days": 8.68,
+      "fromAt": "2022-06-06T19:42:25Z",
+      "toAt": "2022-06-15T12:04:59Z"
+     },
+     {
+      "days": 137.16,
+      "fromAt": "2022-06-19T07:50:42Z",
+      "toAt": "2022-11-03T11:37:53Z"
+     },
+     {
+      "days": 37.51,
+      "fromAt": "2022-11-07T04:43:12Z",
+      "toAt": "2022-12-14T16:58:39Z"
+     },
+     {
+      "days": 35.21,
+      "fromAt": "2022-12-17T19:34:38Z",
+      "toAt": "2023-01-22T00:43:42Z"
+     },
+     {
+      "days": 175.72,
+      "fromAt": "2023-01-26T01:11:54Z",
+      "toAt": "2023-07-20T18:30:50Z"
+     },
+     {
+      "days": 142.4,
+      "fromAt": "2023-07-24T07:50:42Z",
+      "toAt": "2023-12-13T17:20:27Z"
+     },
+     {
+      "days": 11.16,
+      "fromAt": "2023-12-19T17:44:13Z",
+      "toAt": "2023-12-30T21:28:42Z"
+     },
+     {
+      "days": 213.59,
+      "fromAt": "2024-01-02T22:37:47Z",
+      "toAt": "2024-08-03T12:46:20Z"
+     },
+     {
+      "days": 511.72,
+      "fromAt": "2024-08-06T21:28:33Z",
+      "toAt": "2025-12-31T14:45:07Z"
+     },
+     {
+      "days": 24.24,
+      "fromAt": "2026-08-07T12:25:52Z",
+      "toAt": "2026-08-31T18:05:24Z"
+     }
+    ],
+    "observedDays": 2170.156,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 35775.6,
+    "purposeLanguagePermitted": true,
+    "regime": "GEO",
+    "repeatClusters": [
+     {
+      "count": 124,
+      "deltaVSpreadMetresPerSecond": 0.011,
+      "firstAt": "2019-12-08T06:02:48Z",
+      "lastAt": "2026-08-19T11:50:29Z",
+      "medianDaysBetween": 14.125,
+      "medianDeltaVMetresPerSecond": 0.0688,
+      "signature": "geo-east-west-keeping",
+      "spacingScaleDays": 0.659,
+      "totalDeltaVMetresPerSecond": 8.6399
+     },
+     {
+      "count": 21,
+      "deltaVSpreadMetresPerSecond": 0.231,
+      "firstAt": "2020-03-15T04:21:12Z",
+      "lastAt": "2025-09-21T05:05:38Z",
+      "medianDaysBetween": 13.652,
+      "medianDeltaVMetresPerSecond": 1.9804,
+      "signature": "geo-north-south-keeping",
+      "spacingScaleDays": 13.231,
+      "totalDeltaVMetresPerSecond": 40.2828
+     },
+     {
+      "count": 19,
+      "deltaVSpreadMetresPerSecond": 0.0098,
+      "firstAt": "2020-07-29T04:42:55Z",
+      "lastAt": "2025-11-27T03:49:34Z",
+      "medianDaysBetween": 34.762,
+      "medianDeltaVMetresPerSecond": 0.0349,
+      "signature": "geo-east-west-keeping",
+      "spacingScaleDays": 33.281,
+      "totalDeltaVMetresPerSecond": 0.6588
+     },
+     {
+      "count": 17,
+      "deltaVSpreadMetresPerSecond": 0.0049,
+      "firstAt": "2020-01-19T12:48:03Z",
+      "lastAt": "2025-12-21T11:39:19Z",
+      "medianDaysBetween": 134.69,
+      "medianDeltaVMetresPerSecond": 0.0165,
+      "signature": "geo-east-west-keeping",
+      "spacingScaleDays": 160.944,
+      "totalDeltaVMetresPerSecond": 0.26
+     },
+     {
+      "count": 8,
+      "deltaVSpreadMetresPerSecond": 0.1069,
+      "firstAt": "2020-02-08T15:11:42Z",
+      "lastAt": "2024-10-05T20:27:42Z",
+      "medianDaysBetween": 176.962,
+      "medianDeltaVMetresPerSecond": 0.5592,
+      "signature": "geo-north-south-keeping",
+      "spacingScaleDays": 256.884,
+      "totalDeltaVMetresPerSecond": 4.6969
+     },
+     {
+      "count": 3,
+      "deltaVSpreadMetresPerSecond": 0.0283,
+      "firstAt": "2020-12-12T21:44:42Z",
+      "lastAt": "2021-01-23T20:39:34Z",
+      "medianDaysBetween": 20.977,
+      "medianDeltaVMetresPerSecond": 0.2912,
+      "signature": "geo-north-south-keeping",
+      "spacingScaleDays": 10.385,
+      "totalDeltaVMetresPerSecond": 0.9281
+     }
+    ],
+    "sector": "mixed",
+    "sunSynchronous": false,
+    "unusualForItself": [
+     {
+      "at": "2019-12-07T17:25:12Z",
+      "deltaVMetresPerSecond": 0.5085,
+      "signature": "geo-east-west-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2019-12-07T22:48:32Z",
+      "deltaVMetresPerSecond": 1.0238,
+      "signature": "geo-east-west-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2020-01-19T12:48:03Z",
+      "deltaVMetresPerSecond": 0.0118,
+      "signature": "geo-east-west-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2020-01-20T07:17:42Z",
+      "deltaVMetresPerSecond": 0.0139,
+      "signature": "geo-east-west-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2020-02-08T15:11:42Z",
+      "deltaVMetresPerSecond": 0.8309,
+      "signature": "geo-north-south-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2020-02-12T07:53:42Z",
+      "deltaVMetresPerSecond": 0.6034,
+      "signature": "geo-north-south-keeping",
+      "usualCount": 124,
+      "usualDeltaVMetresPerSecond": 0.0688,
+      "usualSignature": "geo-east-west-keeping",
+      "why": "a different kind of change from this object's usual one"
+     }
+    ]
+   },
+   {
+    "apogeeAltitudeKm": 360.5,
+    "cadence": {
+     "corrections": 36,
+     "correctionsPerYear": 29.87,
+     "medianDaysBetween": 0.333,
+     "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+     "observedDays": 440.144,
+     "regularity": 0.371,
+     "spacingScaleDays": 0.124,
+     "spacingsUsed": 35
+    },
+    "constellation": "Starlink",
+    "decay": {
+     "decaying": false,
+     "metresPerDay": 5.19,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 359.0
+    },
+    "deltaVMetresPerSecond": 36.66,
+    "deltaVPerYearMetresPerSecond": 30.422,
+    "events": 36,
+    "firstSeenAt": "2024-11-04T16:00:01Z",
+    "inclinationDeg": 53.159,
+    "intervals": 743,
+    "lastSeenAt": "2026-08-31T09:14:06Z",
+    "mission": "communications",
+    "name": "STARLINK-11341",
+    "norad": 61696,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 421.63,
+      "fromAt": "2024-11-04T16:00:01Z",
+      "toAt": "2025-12-31T07:05:11Z"
+     },
+     {
+      "days": 23.68,
+      "fromAt": "2026-08-07T16:47:43Z",
+      "toAt": "2026-08-31T09:14:06Z"
+     }
+    ],
+    "observedDays": 440.144,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 359.0,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "repeatClusters": [
+     {
+      "count": 17,
+      "deltaVSpreadMetresPerSecond": 0.183,
+      "firstAt": "2024-11-05T14:00:01Z",
+      "lastAt": "2024-12-12T14:00:01Z",
+      "medianDaysBetween": 0.696,
+      "medianDeltaVMetresPerSecond": 0.6955,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.451,
+      "totalDeltaVMetresPerSecond": 12.7886
+     },
+     {
+      "count": 11,
+      "deltaVSpreadMetresPerSecond": 0.3112,
+      "firstAt": "2024-11-04T16:00:01Z",
+      "lastAt": "2024-12-11T22:00:01Z",
+      "medianDaysBetween": 1.265,
+      "medianDeltaVMetresPerSecond": 1.7097,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.591,
+      "totalDeltaVMetresPerSecond": 18.4597
+     },
+     {
+      "count": 5,
+      "deltaVSpreadMetresPerSecond": 0.1601,
+      "firstAt": "2024-11-05T18:00:02Z",
+      "lastAt": "2024-11-09T04:00:02Z",
+      "medianDaysBetween": 0.708,
+      "medianDeltaVMetresPerSecond": 0.7787,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.432,
+      "totalDeltaVMetresPerSecond": 4.1527
+     },
+     {
+      "count": 3,
+      "deltaVSpreadMetresPerSecond": 0.0232,
+      "firstAt": "2024-12-08T13:23:55Z",
+      "lastAt": "2024-12-09T10:42:43Z",
+      "medianDaysBetween": 0.444,
+      "medianDeltaVMetresPerSecond": 0.3932,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.376,
+      "totalDeltaVMetresPerSecond": 1.259
+     }
+    ],
+    "sector": "commercial",
+    "sunSynchronous": false,
+    "unusualForItself": [
+     {
+      "at": "2024-11-04T16:00:01Z",
+      "deltaVMetresPerSecond": 1.7178,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2024-11-05T14:00:01Z",
+      "deltaVMetresPerSecond": 0.4111,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2024-11-06T22:00:02Z",
+      "deltaVMetresPerSecond": 1.4998,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2024-11-08T04:00:02Z",
+      "deltaVMetresPerSecond": 1.8553,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2024-11-09T04:00:02Z",
+      "deltaVMetresPerSecond": 1.101,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2024-11-10T04:00:01Z",
+      "deltaVMetresPerSecond": 1.1695,
+      "signature": "along-track-raise",
+      "usualCount": 17,
+      "usualDeltaVMetresPerSecond": 0.6955,
+      "usualSignature": "along-track-raise",
+      "why": "the same kind of change, at a cost outside its usual band"
+     }
+    ]
+   },
+   {
+    "apogeeAltitudeKm": 649.4,
+    "cadence": {
+     "corrections": 20,
+     "correctionsPerYear": 1.98,
+     "medianDaysBetween": 73.935,
+     "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+     "observedDays": 3695.687,
+     "regularity": 1.261,
+     "spacingScaleDays": 93.218,
+     "spacingsUsed": 18
+    },
+    "constellation": null,
+    "decay": {
+     "decaying": true,
+     "metresPerDay": -1.66,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 624.5
+    },
+    "deltaVMetresPerSecond": 16.5455,
+    "deltaVPerYearMetresPerSecond": 1.635,
+    "events": 20,
+    "firstSeenAt": "2015-10-07T14:04:47Z",
+    "inclinationDeg": 97.665,
+    "intervals": 12896,
+    "lastSeenAt": "2026-08-31T15:27:55Z",
+    "mission": "earth-observation",
+    "name": "LINGQIAO VIDEO B",
+    "norad": 40960,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 1858.32,
+      "fromAt": "2015-10-07T14:04:47Z",
+      "toAt": "2020-11-07T21:42:23Z"
+     },
+     {
+      "days": 219.35,
+      "fromAt": "2020-11-11T02:18:32Z",
+      "toAt": "2021-06-18T10:35:57Z"
+     },
+     {
+      "days": 359.22,
+      "fromAt": "2021-06-21T20:05:18Z",
+      "toAt": "2022-06-16T01:16:58Z"
+     },
+     {
+      "days": 1290.44,
+      "fromAt": "2022-06-20T04:41:11Z",
+      "toAt": "2025-12-31T15:19:38Z"
+     },
+     {
+      "days": 23.91,
+      "fromAt": "2026-08-07T17:44:31Z",
+      "toAt": "2026-08-31T15:27:55Z"
+     }
+    ],
+    "observedDays": 3695.687,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 624.5,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "repeatClusters": [
+     {
+      "count": 7,
+      "deltaVSpreadMetresPerSecond": 0.0024,
+      "firstAt": "2015-12-21T19:49:44Z",
+      "lastAt": "2025-09-30T12:09:06Z",
+      "medianDaysBetween": 143.325,
+      "medianDeltaVMetresPerSecond": 0.0071,
+      "signature": "along-track-lower",
+      "spacingScaleDays": 109.186,
+      "totalDeltaVMetresPerSecond": 0.0446
+     },
+     {
+      "count": 6,
+      "deltaVSpreadMetresPerSecond": 0.0477,
+      "firstAt": "2015-10-07T14:04:47Z",
+      "lastAt": "2023-04-23T19:24:25Z",
+      "medianDaysBetween": 392.032,
+      "medianDeltaVMetresPerSecond": 0.2292,
+      "signature": "inclination-change",
+      "spacingScaleDays": 455.779,
+      "totalDeltaVMetresPerSecond": 1.4926
+     },
+     {
+      "count": 5,
+      "deltaVSpreadMetresPerSecond": 0.0032,
+      "firstAt": "2024-09-17T14:24:52Z",
+      "lastAt": "2025-04-16T22:58:14Z",
+      "medianDaysBetween": 46.779,
+      "medianDeltaVMetresPerSecond": 0.0116,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 44.624,
+      "totalDeltaVMetresPerSecond": 0.0593
+     }
+    ],
+    "sector": "commercial",
+    "sunSynchronous": true,
+    "unusualForItself": [
+     {
+      "at": "2015-10-07T14:04:47Z",
+      "deltaVMetresPerSecond": 0.3331,
+      "signature": "inclination-change",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2015-10-07T21:35:45Z",
+      "deltaVMetresPerSecond": 0.0921,
+      "signature": "along-track-lower",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "the same kind of change, at a cost outside its usual band"
+     },
+     {
+      "at": "2015-12-31T04:48:20Z",
+      "deltaVMetresPerSecond": 0.2275,
+      "signature": "inclination-change",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2016-09-16T11:40:47Z",
+      "deltaVMetresPerSecond": 0.1841,
+      "signature": "inclination-change",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2017-10-13T12:27:32Z",
+      "deltaVMetresPerSecond": 0.2099,
+      "signature": "inclination-change",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "a different kind of change from this object's usual one"
+     },
+     {
+      "at": "2017-11-16T16:33:06Z",
+      "deltaVMetresPerSecond": 14.8569,
+      "signature": "inclination-change",
+      "usualCount": 7,
+      "usualDeltaVMetresPerSecond": 0.0071,
+      "usualSignature": "along-track-lower",
+      "why": "a different kind of change from this object's usual one"
+     }
+    ]
+   },
+   {
+    "apogeeAltitudeKm": 525.3,
+    "cadence": null,
+    "constellation": null,
+    "decay": {
+     "decaying": true,
+     "metresPerDay": -56.97,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 519.1,
+     "reentryNote": "An UPPER bound: decay accelerates as an object falls into denser air, so the real figure is shorter. Extrapolated to a 120 km perigee at today's rate, and only offered below 600 km where drag is unambiguously the dominant term.",
+     "upperBoundDaysToReentry": 7004.1
+    },
+    "deltaVMetresPerSecond": 0.1517,
+    "deltaVPerYearMetresPerSecond": 0.193,
+    "events": 2,
+    "firstSeenAt": "2025-04-08T11:21:55Z",
+    "inclinationDeg": 97.479,
+    "intervals": 589,
+    "lastSeenAt": "2026-08-31T19:23:55Z",
+    "mission": "communications",
+    "name": "POSAT 2",
+    "norad": 63488,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 178.15,
+      "fromAt": "2025-04-08T11:21:55Z",
+      "toAt": "2025-10-03T14:57:56Z"
+     },
+     {
+      "days": 85.67,
+      "fromAt": "2025-10-06T22:42:39Z",
+      "toAt": "2025-12-31T14:40:40Z"
+     },
+     {
+      "days": 23.99,
+      "fromAt": "2026-08-07T19:44:08Z",
+      "toAt": "2026-08-31T19:23:55Z"
+     }
+    ],
+    "observedDays": 287.008,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 519.1,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "repeatClusters": [],
+    "sector": "commercial",
+    "sunSynchronous": true,
+    "unusualForItself": []
+   },
+   {
+    "apogeeAltitudeKm": 466.4,
+    "cadence": null,
+    "constellation": "Starlink",
+    "decay": {
+     "decaying": true,
+     "metresPerDay": -4.76,
+     "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+     "perigeeAltitudeKm": 464.7,
+     "reentryNote": "An UPPER bound: decay accelerates as an object falls into denser air, so the real figure is shorter. Extrapolated to a 120 km perigee at today's rate, and only offered below 600 km where drag is unambiguously the dominant term.",
+     "upperBoundDaysToReentry": 72379.9
+    },
+    "deltaVMetresPerSecond": 0,
+    "deltaVPerYearMetresPerSecond": 0.0,
+    "events": 0,
+    "firstSeenAt": "2026-08-07T17:12:18Z",
+    "inclinationDeg": 97.284,
+    "intervals": 45,
+    "lastSeenAt": "2026-08-31T17:32:24Z",
+    "mission": "communications",
+    "name": "STARLINK-36419",
+    "norad": 67584,
+    "objectType": "PAYLOAD",
+    "observationRuns": [
+     {
+      "days": 24.01,
+      "fromAt": "2026-08-07T17:12:18Z",
+      "toAt": "2026-08-31T17:32:24Z"
+     }
+    ],
+    "observedDays": 23.622,
+    "outOfFamilyForClass": false,
+    "perigeeAltitudeKm": 464.7,
+    "purposeLanguagePermitted": true,
+    "regime": "LEO",
+    "repeatClusters": [],
+    "sector": "commercial",
+    "sunSynchronous": true,
+    "unusualForItself": []
+   }
+  ],
+  "maturity": {
+   "archive": {
+    "captures": 550,
+    "coldBytes": 10124,
+    "coldRows": 279,
+    "coldShards": 1,
+    "dailySamples": 7730,
+    "earliestEpoch": "1959-01-11T01:49:23.462000+00:00",
+    "elementSets": 182280403,
+    "elementSetsSource": "summary",
+    "firstCapture": "2026-08-07T21:30:33.712000+00:00",
+    "kpSamples": 25,
+    "lastCapture": "2026-09-01T18:18:00.146000+00:00",
+    "latestEpoch": "2026-09-10T03:47:38.554000+00:00",
+    "objects": 68522,
+    "schemaVersion": 2,
+    "summaryStale": null
+   },
+   "capabilities": [
+    {
+     "available": true,
+     "id": "population-cohort-screen",
+     "needs": "about a hundred overlapping intervals across the population",
+     "why": "The cohort control compares an object against others at the same altitude and inclination over the same hours. It needs many objects at one moment, not one object over many months, so it works on the day the archive starts."
+    },
+    {
+     "available": true,
+     "id": "per-object-cadence",
+     "needs": "at least three detected corrections for one object inside one observation run",
+     "objectsReady": 6115,
+     "why": "How often an object corrects is a property of its own time series and cannot be borrowed from the population."
+    },
+    {
+     "available": true,
+     "id": "station-keeping-cadence",
+     "needs": "several complete cycles of the same correction, which for geostationary east-west keeping means about three weeks",
+     "objectsReady": 6142,
+     "why": "A cadence needs several complete cycles before its regularity means anything. Four corrections at irregular spacing are not a cadence."
+    },
+    {
+     "available": true,
+     "id": "storm-density-enhancement",
+     "needs": "a geomagnetically quiet baseline window and a storm window in the same archive",
+     "why": "The density ratio is each object's storm-time decay against its OWN quiet-time decay, so the archive has to contain both."
+    },
+    {
+     "available": false,
+     "blockedBy": "the upper bound on the false-alarm rate is 6.2 per 1,000 intervals, above the design target of 1 per 1,000",
+     "id": "measured-false-alarm-rate",
+     "needs": "a passive control large enough to bound the rate below one in a thousand intervals, and payloads flagged significantly more often than it",
+     "why": "Until the false-alarm rate is bounded, no event may carry a manoeuvre label. The plots ship; the labels do not."
+    }
+   ],
+   "captureLedgerDays": 24.8663,
+   "coverageNote": "The archive holds what the hourly capture has seen since 2026-08-07 and whatever the bulk back-fill has imported from space-track's published yearly bundles. The two do not meet: there is a real gap between the end of the bundles and the start of live capture, it is never interpolated across, and it is the reason an operator-published manoeuvre inside it is recorded as unscorable rather than as missed.",
+   "longestSingleObjectDays": 15317.07,
+   "objectsScanned": 68465,
+   "objectsSummarised": 7943,
+   "objectsWithBaseline": 61083,
+   "observedObjectDays": 117953572.7,
+   "spanNote": "Maturity is decided on how much of each object the archive actually holds, summed over the intervals it can join, rather than on the capture ledger or on the distance between the first and last epoch. The ledger under-counts a back-filled archive by years; the epoch span over-counts it by the size of the hole in the middle."
+  },
+  "labelPolicy": {
+   "manoeuvreLabelPermitted": false,
+   "reason": "The passive control is too shallow to bound the false-alarm rate below the design target. Events are shown as measurements of the elements, without a manoeuvre label.",
+   "wording": "Until the false-alarm rate is bounded below the design target, no event is called a manoeuvre. The measurement, the cost, the control and the alternatives all ship; the word does not."
+  }
+ },
+ "shard": {
+  "schema": 1,
+  "shard": 0,
+  "shardCount": 256,
+  "objects": [
+   {
+    "norad": 40960,
+    "samples": [
+     {
+      "apogeeKm": 663.612,
+      "bstar": 0.0,
+      "eccentricity": 0.0017023,
+      "inclinationDeg": 98.0429,
+      "perigeeKm": 639.678,
+      "semiMajorAxisKm": 7029.7797,
+      "t": 1444212662395,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.848,
+      "bstar": 0.0,
+      "eccentricity": 0.0017404,
+      "inclinationDeg": 98.0433,
+      "perigeeKm": 639.379,
+      "semiMajorAxisKm": 7029.7488,
+      "t": 1444218530060,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.717,
+      "bstar": 0.0,
+      "eccentricity": 0.0017291,
+      "inclinationDeg": 98.0413,
+      "perigeeKm": 639.407,
+      "semiMajorAxisKm": 7029.6971,
+      "t": 1444226687285,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.583,
+      "bstar": 0.0,
+      "eccentricity": 0.0017019,
+      "inclinationDeg": 98.0437,
+      "perigeeKm": 639.656,
+      "semiMajorAxisKm": 7029.7545,
+      "t": 1444253745296,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.749,
+      "bstar": 0.0,
+      "eccentricity": 0.0017278,
+      "inclinationDeg": 98.044,
+      "perigeeKm": 639.457,
+      "semiMajorAxisKm": 7029.7377,
+      "t": 1444277222334,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.711,
+      "bstar": 0.0,
+      "eccentricity": 0.0017231,
+      "inclinationDeg": 98.0437,
+      "perigeeKm": 639.485,
+      "semiMajorAxisKm": 7029.7334,
+      "t": 1444306568388,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.847,
+      "bstar": 0.0,
+      "eccentricity": 0.0017419,
+      "inclinationDeg": 98.0425,
+      "perigeeKm": 639.357,
+      "semiMajorAxisKm": 7029.7369,
+      "t": 1444335914454,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.771,
+      "bstar": 0.0,
+      "eccentricity": 0.0017307,
+      "inclinationDeg": 98.0428,
+      "perigeeKm": 639.438,
+      "semiMajorAxisKm": 7029.7397,
+      "t": 1444341783817,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.766,
+      "bstar": 0.0,
+      "eccentricity": 0.0017301,
+      "inclinationDeg": 98.0427,
+      "perigeeKm": 639.442,
+      "semiMajorAxisKm": 7029.7391,
+      "t": 1444359391586,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.776,
+      "bstar": 0.0,
+      "eccentricity": 0.0017316,
+      "inclinationDeg": 98.0423,
+      "perigeeKm": 639.43,
+      "semiMajorAxisKm": 7029.738,
+      "t": 1444394606986,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.769,
+      "bstar": 0.0,
+      "eccentricity": 0.0017306,
+      "inclinationDeg": 98.0422,
+      "perigeeKm": 639.437,
+      "semiMajorAxisKm": 7029.7379,
+      "t": 1444418083930,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 663.78,
+      "bstar": 0.0,
+      "eccentricity": 0.0017318,
+      "inclinationDeg": 98.0418,
+      "perigeeKm": 639.432,
+      "semiMajorAxisKm": 7029.7413,
+      "t": 1444447430137,
+      "tier": "full"
+     }
+    ],
+    "events": [
+     {
+      "startAt": "2015-10-07T14:04:47Z",
+      "endAt": "2015-10-07T21:35:45Z",
+      "signature": "inclination-change",
+      "signatureLabel": "plane change",
+      "deltaVMetresPerSecond": 0.3331,
+      "confidence": "candidate",
+      "eventKey": "40960|2015-10-07T14:04:47Z|2015-10-07T21:35:45Z|inclination-change"
+     },
+     {
+      "startAt": "2015-10-07T21:35:45Z",
+      "endAt": "2015-10-08T04:07:02Z",
+      "signature": "along-track-lower",
+      "signatureLabel": "in-plane lowering",
+      "deltaVMetresPerSecond": 0.0921,
+      "confidence": "candidate",
+      "eventKey": "40960|2015-10-07T21:35:45Z|2015-10-08T04:07:02Z|along-track-lower"
+     }
+    ]
+   },
+   {
+    "norad": 44800,
+    "samples": [
+     {
+      "apogeeKm": 35750.759,
+      "bstar": 0.0,
+      "eccentricity": 0.727694,
+      "inclinationDeg": 5.0758,
+      "perigeeKm": 261.901,
+      "semiMajorAxisKm": 24384.465,
+      "t": 1574808595750,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35762.544,
+      "bstar": 0.0,
+      "eccentricity": 0.7276286,
+      "inclinationDeg": 5.0039,
+      "perigeeKm": 265.605,
+      "semiMajorAxisKm": 24392.2099,
+      "t": 1574813310146,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35752.009,
+      "bstar": 0.0,
+      "eccentricity": 0.7277817,
+      "inclinationDeg": 4.9983,
+      "perigeeKm": 259.623,
+      "semiMajorAxisKm": 24383.9507,
+      "t": 1574862071749,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35739.909,
+      "bstar": 0.0,
+      "eccentricity": 0.155554,
+      "inclinationDeg": 0.5127,
+      "perigeeKm": 24400.534,
+      "semiMajorAxisKm": 36448.3561,
+      "t": 1575256198779,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35739.876,
+      "bstar": 0.0,
+      "eccentricity": 0.1555535,
+      "inclinationDeg": 0.5113,
+      "perigeeKm": 24400.541,
+      "semiMajorAxisKm": 36448.3434,
+      "t": 1575370975032,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35790.693,
+      "bstar": 0.0001,
+      "eccentricity": 0.0006851,
+      "inclinationDeg": 0.0736,
+      "perigeeKm": 35732.953,
+      "semiMajorAxisKm": 42139.9584,
+      "t": 1575739512233,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35814.346,
+      "bstar": 0.0001,
+      "eccentricity": 0.0009161,
+      "inclinationDeg": 0.0738,
+      "perigeeKm": 35737.112,
+      "semiMajorAxisKm": 42153.864,
+      "t": 1575757853472,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35815.671,
+      "bstar": 0.0001,
+      "eccentricity": 0.0009195,
+      "inclinationDeg": 0.0734,
+      "perigeeKm": 35738.148,
+      "semiMajorAxisKm": 42155.0441,
+      "t": 1575758912805,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35795.343,
+      "bstar": 0.0001,
+      "eccentricity": 0.0002535,
+      "inclinationDeg": 0.0726,
+      "perigeeKm": 35773.966,
+      "semiMajorAxisKm": 42162.7896,
+      "t": 1575778765602,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35795.267,
+      "bstar": 0.0001,
+      "eccentricity": 0.0002259,
+      "inclinationDeg": 0.0721,
+      "perigeeKm": 35776.217,
+      "semiMajorAxisKm": 42163.877,
+      "t": 1575784968716,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35796.703,
+      "bstar": 0.0001,
+      "eccentricity": 0.0002132,
+      "inclinationDeg": 0.0715,
+      "perigeeKm": 35778.724,
+      "semiMajorAxisKm": 42165.8483,
+      "t": 1575809777654,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 35795.498,
+      "bstar": 0.0001,
+      "eccentricity": 0.0001931,
+      "inclinationDeg": 0.0707,
+      "perigeeKm": 35779.214,
+      "semiMajorAxisKm": 42165.4909,
+      "t": 1575840782895,
+      "tier": "full"
+     }
+    ],
+    "events": [
+     {
+      "apogeeAltitudeKm": 35790.7,
+      "card": {
+       "alternatives": "What could produce this signature: holding an assigned geostationary longitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "The Earth's equator is slightly elliptical, so a geostationary satellite drifts towards one of two stable longitudes unless it is corrected. Holding a slot means small tangential burns every few weeks.",
+         "id": "geo-longitude-control",
+         "label": "holding an assigned geostationary longitude"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 49 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 2199 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 50.8 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "East-west station-keeping \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved +13.934 km beyond what could happen on its own, against a floor of 30.4 m; and the eccentricity moved 2.31e-04. Atmospheric drag on a body of this ballistic coefficient accounts for -28.1 m of the change in semi-major axis, give or take 6.3 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": null,
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.3554,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": 0.5085,
+       "totalMetresPerSecond": 0.5085
+      },
+      "deltaVMetresPerSecond": 0.5085,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.0001,
+       "cohortCount": 49,
+       "predictedDeltaAMetres": -28.11,
+       "predictedSigmaMetres": 6.34,
+       "propulsiveDeltaAMetres": 13933.78,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2019-12-07T22:30:53Z",
+      "eventKey": "44800|2019-12-07T17:25:12Z|2019-12-07T22:30:53Z|geo-east-west-keeping",
+      "expectation": {
+       "citations": [
+        {
+         "budget": "geo-east-west",
+         "kind": "reference"
+        },
+        {
+         "budget": "geo-north-south",
+         "kind": "reference"
+        }
+       ],
+       "class": "Geostationary payload",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 0.0736,
+      "kpMax": null,
+      "name": "TIBA-1",
+      "norad": 44800,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 35733.0,
+      "purposeLanguagePermitted": true,
+      "regime": "GEO",
+      "signature": "geo-east-west-keeping",
+      "signatureExplanation": "At geostationary altitude a small change in semi-major axis is the signature of longitude control. The Earth's equatorial ellipticity pulls a satellite towards one of two stable longitudes, and the operator answers with small tangential burns every few weeks. It is the cheap half of geostationary station-keeping.",
+      "signatureLabel": "east-west station-keeping",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.2123,
+      "startAt": "2019-12-07T17:25:12Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": 2198.65,
+        "delta": 13933.775544344497,
+        "element": "semiMajorAxis",
+        "floorSigma": 30.387787553415166,
+        "floorZ": 458.53,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": 9.2,
+        "delta": 0.0006062081250872922,
+        "element": "inclination",
+        "floorSigma": 0.0005218775257420807,
+        "floorZ": 1.16,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": 902.81,
+        "delta": 0.00023112586866890717,
+        "element": "eccentricity",
+        "floorSigma": 1.6068797708577891e-06,
+        "floorZ": 143.84,
+        "tripped": true
+       }
+      ]
+     },
+     {
+      "apogeeAltitudeKm": 35815.7,
+      "card": {
+       "alternatives": "What could produce this signature: holding an assigned geostationary longitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "The Earth's equator is slightly elliptical, so a geostationary satellite drifts towards one of two stable longitudes unless it is corrected. Holding a slot means small tangential burns every few weeks.",
+         "id": "geo-longitude-control",
+         "label": "holding an assigned geostationary longitude"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 49 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 2403 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 1.02 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "East-west station-keeping \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved +7.776 km beyond what could happen on its own, against a floor of 32.9 m; and the eccentricity moved -6.66e-04. Atmospheric drag on a body of this ballistic coefficient accounts for -30.4 m of the change in semi-major axis, give or take 6.9 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": null,
+      "deltaV": {
+       "eccentricityMetresPerSecond": 1.0238,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": 0.2836,
+       "totalMetresPerSecond": 1.0238
+      },
+      "deltaVMetresPerSecond": 1.0238,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.0001,
+       "cohortCount": 49,
+       "predictedDeltaAMetres": -30.42,
+       "predictedSigmaMetres": 6.86,
+       "propulsiveDeltaAMetres": 7775.96,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2019-12-08T04:19:25Z",
+      "eventKey": "44800|2019-12-07T22:48:32Z|2019-12-08T04:19:25Z|geo-east-west-keeping",
+      "expectation": {
+       "citations": [
+        {
+         "budget": "geo-east-west",
+         "kind": "reference"
+        },
+        {
+         "budget": "geo-north-south",
+         "kind": "reference"
+        }
+       ],
+       "class": "Geostationary payload",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 0.0734,
+      "kpMax": null,
+      "name": "TIBA-1",
+      "norad": 44800,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 35738.1,
+      "purposeLanguagePermitted": true,
+      "regime": "GEO",
+      "signature": "geo-east-west-keeping",
+      "signatureExplanation": "At geostationary altitude a small change in semi-major axis is the signature of longitude control. The Earth's equatorial ellipticity pulls a satellite towards one of two stable longitudes, and the operator answers with small tangential burns every few weeks. It is the cheap half of geostationary station-keeping.",
+      "signatureLabel": "east-west station-keeping",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.2298,
+      "startAt": "2019-12-07T22:48:32Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": 1133.57,
+        "delta": 7775.963428813336,
+        "element": "semiMajorAxis",
+        "floorSigma": 32.89213872503804,
+        "floorZ": 236.41,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": -5.05,
+        "delta": -0.0003603150121369478,
+        "element": "inclination",
+        "floorSigma": 0.0005648722635786356,
+        "floorZ": -0.64,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 49,
+        "cohortScreened": true,
+        "cohortZ": -2402.93,
+        "delta": -0.000665863758106392,
+        "element": "eccentricity",
+        "floorSigma": 1.6103758417276273e-06,
+        "floorZ": -413.48,
+        "tripped": true
+       }
+      ]
+     }
+    ],
+    "repeatClusters": [
+     {
+      "count": 124,
+      "deltaVSpreadMetresPerSecond": 0.011,
+      "firstAt": "2019-12-08T06:02:48Z",
+      "lastAt": "2026-08-19T11:50:29Z",
+      "medianDaysBetween": 14.125,
+      "medianDeltaVMetresPerSecond": 0.0688,
+      "signature": "geo-east-west-keeping",
+      "spacingScaleDays": 0.659,
+      "totalDeltaVMetresPerSecond": 8.6399
+     },
+     {
+      "count": 21,
+      "deltaVSpreadMetresPerSecond": 0.231,
+      "firstAt": "2020-03-15T04:21:12Z",
+      "lastAt": "2025-09-21T05:05:38Z",
+      "medianDaysBetween": 13.652,
+      "medianDeltaVMetresPerSecond": 1.9804,
+      "signature": "geo-north-south-keeping",
+      "spacingScaleDays": 13.231,
+      "totalDeltaVMetresPerSecond": 40.2828
+     },
+     {
+      "count": 19,
+      "deltaVSpreadMetresPerSecond": 0.0098,
+      "firstAt": "2020-07-29T04:42:55Z",
+      "lastAt": "2025-11-27T03:49:34Z",
+      "medianDaysBetween": 34.762,
+      "medianDeltaVMetresPerSecond": 0.0349,
+      "signature": "geo-east-west-keeping",
+      "spacingScaleDays": 33.281,
+      "totalDeltaVMetresPerSecond": 0.6588
+     }
+    ]
+   },
+   {
+    "norad": 46080,
+    "samples": [
+     {
+      "apogeeKm": 402.832,
+      "bstar": -4.6221e-05,
+      "eccentricity": 0.0012725,
+      "inclinationDeg": 53.0066,
+      "perigeeKm": 385.596,
+      "semiMajorAxisKm": 6772.3488,
+      "t": 1597348801000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 402.89,
+      "bstar": 0.00052741,
+      "eccentricity": 0.001273,
+      "inclinationDeg": 53.0065,
+      "perigeeKm": 385.648,
+      "semiMajorAxisKm": 6772.4041,
+      "t": 1597356002000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 403.439,
+      "bstar": 0.017876,
+      "eccentricity": 0.0013255,
+      "inclinationDeg": 53.0065,
+      "perigeeKm": 385.485,
+      "semiMajorAxisKm": 6772.5969,
+      "t": 1597413601000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 401.447,
+      "bstar": 0.013791,
+      "eccentricity": 0.0013465,
+      "inclinationDeg": 53.0067,
+      "perigeeKm": 383.214,
+      "semiMajorAxisKm": 6770.4655,
+      "t": 1597435202000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 396.682,
+      "bstar": 0.012922,
+      "eccentricity": 0.0012731,
+      "inclinationDeg": 53.003,
+      "perigeeKm": 379.454,
+      "semiMajorAxisKm": 6766.2034,
+      "t": 1597492801000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 394.791,
+      "bstar": 0.015655,
+      "eccentricity": 0.0010126,
+      "inclinationDeg": 53.0058,
+      "perigeeKm": 381.089,
+      "semiMajorAxisKm": 6766.0748,
+      "t": 1597500002000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 393.091,
+      "bstar": 0.014785,
+      "eccentricity": 0.0011128,
+      "inclinationDeg": 53.004,
+      "perigeeKm": 378.037,
+      "semiMajorAxisKm": 6763.6989,
+      "t": 1597528801000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 385.789,
+      "bstar": 0.013828,
+      "eccentricity": 0.0004019,
+      "inclinationDeg": 53.0069,
+      "perigeeKm": 380.354,
+      "semiMajorAxisKm": 6761.2064,
+      "t": 1597557602000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 383.045,
+      "bstar": 0.0011916,
+      "eccentricity": 0.0004183,
+      "inclinationDeg": 53.0066,
+      "perigeeKm": 377.391,
+      "semiMajorAxisKm": 6758.3532,
+      "t": 1597586401000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 383.348,
+      "bstar": 0.0018088,
+      "eccentricity": 0.0004688,
+      "inclinationDeg": 53.0079,
+      "perigeeKm": 377.012,
+      "semiMajorAxisKm": 6758.3152,
+      "t": 1597615201000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 381.859,
+      "bstar": 0.0004615,
+      "eccentricity": 0.0003001,
+      "inclinationDeg": 53.0081,
+      "perigeeKm": 377.803,
+      "semiMajorAxisKm": 6757.9658,
+      "t": 1597636801000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 384.071,
+      "bstar": 0.0014548,
+      "eccentricity": 0.0006038,
+      "inclinationDeg": 53.004,
+      "perigeeKm": 375.91,
+      "semiMajorAxisKm": 6758.1251,
+      "t": 1597672801000,
+      "tier": "full"
+     }
+    ],
+    "events": [
+     {
+      "apogeeAltitudeKm": 403.4,
+      "card": {
+       "alternatives": "What could produce this signature: moving out of a useful orbit at end of life; descending under propulsion. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "Disposal guidelines ask operators to clear the orbits other spacecraft use, either by lowering into the atmosphere or, at geostationary altitude, by raising above the ring.",
+         "id": "disposal",
+         "label": "moving out of a useful orbit at end of life"
+        },
+        {
+         "detail": "A sustained, deliberate descent. At end of life an operator may lower the orbit to shorten how long the object remains in orbit, rather than leaving it to decay on its own over decades.",
+         "id": "orbit-lowering-campaign",
+         "label": "descending under propulsion"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 72 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 26 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 1.20 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "Disposal lowering \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved -2.117 km beyond what could happen on its own, against a floor of 90.2 m. Atmospheric drag on a body of this ballistic coefficient accounts for -14.6 m of the change in semi-major axis, give or take 80.7 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": "Starlink",
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": -1.1989,
+       "totalMetresPerSecond": 1.1989
+      },
+      "deltaVMetresPerSecond": 1.1989,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.017876,
+       "cohortCount": 72,
+       "predictedDeltaAMetres": -14.6,
+       "predictedSigmaMetres": 80.65,
+       "propulsiveDeltaAMetres": -2116.86,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2020-08-14T20:00:02Z",
+      "eventKey": "46080|2020-08-14T14:00:01Z|2020-08-14T20:00:02Z|deorbit-lowering",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+        }
+       ],
+       "class": "Starlink",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 53.0065,
+      "kpMax": null,
+      "name": "STARLINK-1568",
+      "norad": 46080,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 385.5,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "deorbit-lowering",
+      "signatureExplanation": "A lowering far larger than drag accounts for, at an altitude where the remaining lifetime is already short. Lowering perigee deliberately shortens it further.",
+      "signatureLabel": "disposal lowering",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.25,
+      "startAt": "2020-08-14T14:00:01Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": -26.25,
+        "delta": -2116.8581334348423,
+        "element": "semiMajorAxis",
+        "floorSigma": 90.15025941932348,
+        "floorZ": -23.48,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": 1.15,
+        "delta": 0.0001812491319446882,
+        "element": "inclination",
+        "floorSigma": 0.0003622236208967579,
+        "floorZ": 0.5,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": 1.65,
+        "delta": 1.8354234163367608e-05,
+        "element": "eccentricity",
+        "floorSigma": 1.3958021327954469e-05,
+        "floorZ": 1.31,
+        "tripped": false
+       }
+      ]
+     },
+     {
+      "apogeeAltitudeKm": 401.4,
+      "card": {
+       "alternatives": "What could produce this signature: moving out of a useful orbit at end of life; descending under propulsion. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "Disposal guidelines ask operators to clear the orbits other spacecraft use, either by lowering into the atmosphere or, at geostationary altitude, by raising above the ring.",
+         "id": "disposal",
+         "label": "moving out of a useful orbit at end of life"
+        },
+        {
+         "detail": "A sustained, deliberate descent. At end of life an operator may lower the orbit to shorten how long the object remains in orbit, rather than leaving it to decay on its own over decades.",
+         "id": "orbit-lowering-campaign",
+         "label": "descending under propulsion"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 72 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 20 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 2.39 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "Disposal lowering \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved -4.223 km beyond what could happen on its own, against a floor of 218.8 m. Atmospheric drag on a body of this ballistic coefficient accounts for -38.9 m of the change in semi-major axis, give or take 215.1 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": "Starlink",
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": -2.393,
+       "totalMetresPerSecond": 2.393
+      },
+      "deltaVMetresPerSecond": 2.393,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.013791,
+       "cohortCount": 72,
+       "predictedDeltaAMetres": -38.92,
+       "predictedSigmaMetres": 215.05,
+       "propulsiveDeltaAMetres": -4223.18,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2020-08-15T12:00:01Z",
+      "eventKey": "46080|2020-08-14T20:00:02Z|2020-08-15T12:00:01Z|deorbit-lowering",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+        }
+       ],
+       "class": "Starlink",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 53.0067,
+      "kpMax": null,
+      "name": "STARLINK-1568",
+      "norad": 46080,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 383.2,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "deorbit-lowering",
+      "signatureExplanation": "A lowering far larger than drag accounts for, at an altitude where the remaining lifetime is already short. Lowering perigee deliberately shortens it further.",
+      "signatureLabel": "disposal lowering",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.6667,
+      "startAt": "2020-08-14T20:00:02Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": -19.64,
+        "delta": -4223.178013402097,
+        "element": "semiMajorAxis",
+        "floorSigma": 218.7916005541212,
+        "floorZ": -19.3,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": -8.93,
+        "delta": -0.0037499991319445867,
+        "element": "inclination",
+        "floorSigma": 0.0005318287434094101,
+        "floorZ": -7.05,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 72,
+        "cohortScreened": true,
+        "cohortZ": -2.71,
+        "delta": -8.045492645822814e-05,
+        "element": "eccentricity",
+        "floorSigma": 3.0874994856728685e-05,
+        "floorZ": -2.61,
+        "tripped": false
+       }
+      ]
+     }
+    ],
+    "repeatClusters": [
+     {
+      "count": 34,
+      "deltaVSpreadMetresPerSecond": 0.2376,
+      "firstAt": "2020-09-25T14:00:01Z",
+      "lastAt": "2023-12-27T13:28:50Z",
+      "medianDaysBetween": 0.417,
+      "medianDeltaVMetresPerSecond": 1.2585,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.247,
+      "totalDeltaVMetresPerSecond": 41.3697
+     },
+     {
+      "count": 13,
+      "deltaVSpreadMetresPerSecond": 0.047,
+      "firstAt": "2020-10-19T22:00:06Z",
+      "lastAt": "2020-11-11T10:05:58Z",
+      "medianDaysBetween": 1.167,
+      "medianDeltaVMetresPerSecond": 2.5212,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.741,
+      "totalDeltaVMetresPerSecond": 32.8412
+     },
+     {
+      "count": 5,
+      "deltaVSpreadMetresPerSecond": 0.1142,
+      "firstAt": "2021-02-03T01:23:50Z",
+      "lastAt": "2024-12-01T19:18:03Z",
+      "medianDaysBetween": 158.232,
+      "medianDeltaVMetresPerSecond": 0.4767,
+      "signature": "along-track-lower",
+      "spacingScaleDays": 233.857,
+      "totalDeltaVMetresPerSecond": 2.3479
+     }
+    ]
+   },
+   {
+    "norad": 61696,
+    "samples": [
+     {
+      "apogeeKm": 291.93,
+      "bstar": -0.0016204,
+      "eccentricity": 0.0001262,
+      "inclinationDeg": 53.1676,
+      "perigeeKm": 290.247,
+      "semiMajorAxisKm": 6669.2234,
+      "t": 1730736001000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 294.667,
+      "bstar": -0.0019366,
+      "eccentricity": 8.62e-05,
+      "inclinationDeg": 53.1665,
+      "perigeeKm": 293.517,
+      "semiMajorAxisKm": 6672.2271,
+      "t": 1730815201000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 295.42,
+      "bstar": -0.001704,
+      "eccentricity": 9.16e-05,
+      "inclinationDeg": 53.1665,
+      "perigeeKm": 294.198,
+      "semiMajorAxisKm": 6672.9441,
+      "t": 1730829602000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 296.778,
+      "bstar": -0.0020832,
+      "eccentricity": 9.08e-05,
+      "inclinationDeg": 53.1656,
+      "perigeeKm": 295.566,
+      "semiMajorAxisKm": 6674.3068,
+      "t": 1730865601000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 298.333,
+      "bstar": -0.0022076,
+      "eccentricity": 9.16e-05,
+      "inclinationDeg": 53.1658,
+      "perigeeKm": 297.11,
+      "semiMajorAxisKm": 6675.8564,
+      "t": 1730901601000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 299.76,
+      "bstar": -0.0021591,
+      "eccentricity": 0.0001104,
+      "inclinationDeg": 53.1665,
+      "perigeeKm": 298.286,
+      "semiMajorAxisKm": 6677.1582,
+      "t": 1730930402000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 302.006,
+      "bstar": -0.0025549,
+      "eccentricity": 5.42e-05,
+      "inclinationDeg": 53.1661,
+      "perigeeKm": 301.282,
+      "semiMajorAxisKm": 6679.7794,
+      "t": 1730988001000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 303.232,
+      "bstar": -0.0023679,
+      "eccentricity": 6.99e-05,
+      "inclinationDeg": 53.1661,
+      "perigeeKm": 302.298,
+      "semiMajorAxisKm": 6680.8997,
+      "t": 1731009601000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 303.639,
+      "bstar": -0.0025205,
+      "eccentricity": 8.93e-05,
+      "inclinationDeg": 53.1663,
+      "perigeeKm": 302.446,
+      "semiMajorAxisKm": 6681.1774,
+      "t": 1731016801000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 304.55,
+      "bstar": -0.0027354,
+      "eccentricity": 6.96e-05,
+      "inclinationDeg": 53.1657,
+      "perigeeKm": 303.62,
+      "semiMajorAxisKm": 6682.2197,
+      "t": 1731038402000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 308.057,
+      "bstar": -0.0029519,
+      "eccentricity": 0.0001036,
+      "inclinationDeg": 53.1652,
+      "perigeeKm": 306.671,
+      "semiMajorAxisKm": 6685.499,
+      "t": 1731103201000,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 309.119,
+      "bstar": -0.0031507,
+      "eccentricity": 9.28e-05,
+      "inclinationDeg": 53.1649,
+      "perigeeKm": 307.878,
+      "semiMajorAxisKm": 6686.6331,
+      "t": 1731124802000,
+      "tier": "full"
+     }
+    ],
+    "events": [
+     {
+      "apogeeAltitudeKm": 291.9,
+      "card": {
+       "alternatives": "What could produce this signature: making up altitude lost to atmospheric drag; holding a position within a constellation's own geometry; climbing towards an operational altitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "Every object in low Earth orbit is slowly falling. An operator who wants to stay at a chosen altitude has to put back what the atmosphere takes out, and the higher the air density the more often that has to happen.",
+         "id": "drag-make-up",
+         "label": "making up altitude lost to atmospheric drag"
+        },
+        {
+         "detail": "A large constellation assigns each spacecraft an altitude and a phase, and small in-plane corrections are how a spacecraft is kept in the slot it was given. This is a statement about the published design of the constellation, not about which spacecraft is near which.",
+         "id": "constellation-slot-maintenance",
+         "label": "holding a position within a constellation's own geometry"
+        },
+        {
+         "detail": "A newly launched spacecraft is usually delivered below where it will work and climbs the rest of the way itself. With electric propulsion the climb takes weeks or months and appears as a steady trend rather than a step.",
+         "id": "orbit-raising-campaign",
+         "label": "climbing towards an operational altitude"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 68 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 9 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 1.72 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "In-plane raise \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved +2.964 km beyond what could happen on its own, against a floor of 350.7 m. Atmospheric drag on a body of this ballistic coefficient accounts for +39.9 m of the change in semi-major axis, give or take 348.0 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": "Starlink",
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": 1.7178,
+       "totalMetresPerSecond": 1.7178
+      },
+      "deltaVMetresPerSecond": 1.7178,
+      "drag": {
+       "applicable": true,
+       "bstar": -0.0016204,
+       "cohortCount": 68,
+       "predictedDeltaAMetres": 39.87,
+       "predictedSigmaMetres": 348.03,
+       "propulsiveDeltaAMetres": 2963.87,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2024-11-05T14:00:01Z",
+      "eventKey": "61696|2024-11-04T16:00:01Z|2024-11-05T14:00:01Z|along-track-raise",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+        }
+       ],
+       "class": "Starlink",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 53.1676,
+      "kpMax": null,
+      "name": "STARLINK-11341",
+      "norad": 61696,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 290.2,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "along-track-raise",
+      "signatureExplanation": "The semi-major axis rose by more than atmospheric drag can explain, with the orbit plane essentially unchanged. A prograde tangential burn raises the orbit and slows the ground track's eastward drift.",
+      "signatureLabel": "in-plane raise",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.9167,
+      "startAt": "2024-11-04T16:00:01Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": 8.52,
+        "delta": 2963.8691786797963,
+        "element": "semiMajorAxis",
+        "floorSigma": 350.68186684446744,
+        "floorZ": 8.45,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": -0.58,
+        "delta": -0.0008084198149321746,
+        "element": "inclination",
+        "floorSigma": 0.0015170967684280273,
+        "floorZ": -0.53,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": -0.55,
+        "delta": -3.6791685758584345e-05,
+        "element": "eccentricity",
+        "floorSigma": 7.097819829541795e-05,
+        "floorZ": -0.52,
+        "tripped": false
+       }
+      ]
+     },
+     {
+      "apogeeAltitudeKm": 294.7,
+      "card": {
+       "alternatives": "What could produce this signature: making up altitude lost to atmospheric drag; holding a position within a constellation's own geometry; climbing towards an operational altitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "Every object in low Earth orbit is slowly falling. An operator who wants to stay at a chosen altitude has to put back what the atmosphere takes out, and the higher the air density the more often that has to happen.",
+         "id": "drag-make-up",
+         "label": "making up altitude lost to atmospheric drag"
+        },
+        {
+         "detail": "A large constellation assigns each spacecraft an altitude and a phase, and small in-plane corrections are how a spacecraft is kept in the slot it was given. This is a statement about the published design of the constellation, not about which spacecraft is near which.",
+         "id": "constellation-slot-maintenance",
+         "label": "holding a position within a constellation's own geometry"
+        },
+        {
+         "detail": "A newly launched spacecraft is usually delivered below where it will work and climbs the rest of the way itself. With electric propulsion the climb takes weeks or months and appears as a steady trend rather than a step.",
+         "id": "orbit-raising-campaign",
+         "label": "climbing towards an operational altitude"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 68 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 11 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 41.1 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "In-plane raise \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved +709.7 m beyond what could happen on its own, against a floor of 76.5 m. Atmospheric drag on a body of this ballistic coefficient accounts for +7.2 m of the change in semi-major axis, give or take 63.3 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": "Starlink",
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": 0.4111,
+       "totalMetresPerSecond": 0.4111
+      },
+      "deltaVMetresPerSecond": 0.4111,
+      "drag": {
+       "applicable": true,
+       "bstar": -0.0019366,
+       "cohortCount": 68,
+       "predictedDeltaAMetres": 7.25,
+       "predictedSigmaMetres": 63.28,
+       "propulsiveDeltaAMetres": 709.71,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2024-11-05T18:00:02Z",
+      "eventKey": "61696|2024-11-05T14:00:01Z|2024-11-05T18:00:02Z|along-track-raise",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+        }
+       ],
+       "class": "Starlink",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 53.1665,
+      "kpMax": null,
+      "name": "STARLINK-11341",
+      "norad": 61696,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 293.5,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "along-track-raise",
+      "signatureExplanation": "The semi-major axis rose by more than atmospheric drag can explain, with the orbit plane essentially unchanged. A prograde tangential burn raises the orbit and slows the ground track's eastward drift.",
+      "signatureLabel": "in-plane raise",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.1667,
+      "startAt": "2024-11-05T14:00:01Z",
+      "sunSynchronous": false,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": 11.21,
+        "delta": 709.7087653365905,
+        "element": "semiMajorAxis",
+        "floorSigma": 76.51473669653527,
+        "floorZ": 9.28,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": 0.21,
+        "delta": 5.301826067141412e-05,
+        "element": "inclination",
+        "floorSigma": 0.0006385264681972165,
+        "floorZ": 0.08,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 68,
+        "cohortScreened": true,
+        "cohortZ": 0.49,
+        "delta": 5.983370371093784e-06,
+        "element": "eccentricity",
+        "floorSigma": 2.674141867571924e-05,
+        "floorZ": 0.22,
+        "tripped": false
+       }
+      ]
+     }
+    ],
+    "repeatClusters": [
+     {
+      "count": 17,
+      "deltaVSpreadMetresPerSecond": 0.183,
+      "firstAt": "2024-11-05T14:00:01Z",
+      "lastAt": "2024-12-12T14:00:01Z",
+      "medianDaysBetween": 0.696,
+      "medianDeltaVMetresPerSecond": 0.6955,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.451,
+      "totalDeltaVMetresPerSecond": 12.7886
+     },
+     {
+      "count": 11,
+      "deltaVSpreadMetresPerSecond": 0.3112,
+      "firstAt": "2024-11-04T16:00:01Z",
+      "lastAt": "2024-12-11T22:00:01Z",
+      "medianDaysBetween": 1.265,
+      "medianDeltaVMetresPerSecond": 1.7097,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.591,
+      "totalDeltaVMetresPerSecond": 18.4597
+     },
+     {
+      "count": 5,
+      "deltaVSpreadMetresPerSecond": 0.1601,
+      "firstAt": "2024-11-05T18:00:02Z",
+      "lastAt": "2024-11-09T04:00:02Z",
+      "medianDaysBetween": 0.708,
+      "medianDeltaVMetresPerSecond": 0.7787,
+      "signature": "along-track-raise",
+      "spacingScaleDays": 0.432,
+      "totalDeltaVMetresPerSecond": 4.1527
+     }
+    ]
+   },
+   {
+    "norad": 63488,
+    "samples": [
+     {
+      "apogeeKm": 564.606,
+      "bstar": 0.0010903,
+      "eccentricity": 0.0008479,
+      "inclinationDeg": 97.5248,
+      "perigeeKm": 552.842,
+      "semiMajorAxisKm": 6936.8592,
+      "t": 1744111315675,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.554,
+      "bstar": 0.0011187,
+      "eccentricity": 0.0008599,
+      "inclinationDeg": 97.5247,
+      "perigeeKm": 552.625,
+      "semiMajorAxisKm": 6936.7245,
+      "t": 1744237889679,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.518,
+      "bstar": 0.0011943,
+      "eccentricity": 0.000863,
+      "inclinationDeg": 97.5246,
+      "perigeeKm": 552.546,
+      "semiMajorAxisKm": 6936.6671,
+      "t": 1744283915576,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.501,
+      "bstar": 0.0010875,
+      "eccentricity": 0.0008646,
+      "inclinationDeg": 97.5245,
+      "perigeeKm": 552.507,
+      "semiMajorAxisKm": 6936.639,
+      "t": 1744312681518,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.467,
+      "bstar": 0.0010088,
+      "eccentricity": 0.0008725,
+      "inclinationDeg": 97.5241,
+      "perigeeKm": 552.363,
+      "semiMajorAxisKm": 6936.5497,
+      "t": 1744404731363,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.433,
+      "bstar": 0.0010769,
+      "eccentricity": 0.0008763,
+      "inclinationDeg": 97.5239,
+      "perigeeKm": 552.276,
+      "semiMajorAxisKm": 6936.4897,
+      "t": 1744462261583,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.341,
+      "bstar": 0.0010229,
+      "eccentricity": 0.0008815,
+      "inclinationDeg": 97.5233,
+      "perigeeKm": 552.112,
+      "semiMajorAxisKm": 6936.3614,
+      "t": 1744577319534,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.277,
+      "bstar": 0.00093874,
+      "eccentricity": 0.0008838,
+      "inclinationDeg": 97.5228,
+      "perigeeKm": 552.017,
+      "semiMajorAxisKm": 6936.2818,
+      "t": 1744663611148,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.242,
+      "bstar": 0.00084676,
+      "eccentricity": 0.0008853,
+      "inclinationDeg": 97.5225,
+      "perigeeKm": 551.961,
+      "semiMajorAxisKm": 6936.2368,
+      "t": 1744721138134,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.151,
+      "bstar": 0.0010522,
+      "eccentricity": 0.0008843,
+      "inclinationDeg": 97.522,
+      "perigeeKm": 551.883,
+      "semiMajorAxisKm": 6936.152,
+      "t": 1744807427434,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 564.062,
+      "bstar": 0.0010538,
+      "eccentricity": 0.0008863,
+      "inclinationDeg": 97.5213,
+      "perigeeKm": 551.767,
+      "semiMajorAxisKm": 6936.0497,
+      "t": 1744893714778,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 563.855,
+      "bstar": 0.00082245,
+      "eccentricity": 0.000881,
+      "inclinationDeg": 97.5203,
+      "perigeeKm": 551.634,
+      "semiMajorAxisKm": 6935.8797,
+      "t": 1745100798639,
+      "tier": "full"
+     }
+    ],
+    "events": [
+     {
+      "apogeeAltitudeKm": 554.1,
+      "card": {
+       "alternatives": "What could produce this signature: descending under propulsion; a collision-avoidance manoeuvre; moving out of a useful orbit at end of life. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "A sustained, deliberate descent. At end of life an operator may lower the orbit to shorten how long the object remains in orbit, rather than leaving it to decay on its own over decades.",
+         "id": "orbit-lowering-campaign",
+         "label": "descending under propulsion"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "Disposal guidelines ask operators to clear the orbits other spacecraft use, either by lowering into the atmosphere or, at geostationary altitude, by raising above the ring.",
+         "id": "disposal",
+         "label": "moving out of a useful orbit at end of life"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 126 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 18 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 4.7 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "In-plane lowering \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved -85.9 m beyond what could happen on its own, against a floor of 9.2 m. Atmospheric drag on a body of this ballistic coefficient accounts for -20.9 m of the change in semi-major axis, give or take 4.8 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": null,
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": -0.0471,
+       "totalMetresPerSecond": 0.0471
+      },
+      "deltaVMetresPerSecond": 0.0471,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.0012882,
+       "cohortCount": 126,
+       "predictedDeltaAMetres": -20.91,
+       "predictedSigmaMetres": 4.76,
+       "propulsiveDeltaAMetres": -85.95,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2025-09-30T15:11:25Z",
+      "eventKey": "63488|2025-09-30T07:12:54Z|2025-09-30T15:11:25Z|along-track-lower",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "A sun-synchronous orbit's whole value is that its J2 nodal regression equals the mean sun's apparent motion, +0.9856 deg/day, which fixes the local solar time of every pass. That rate depends on both altitude and inclination, so an operator holding the local time constant must adjust BOTH -- small inclination corrections are ordinary maintenance for this class, and only for this class. Elsewhere an inclination change is a mission change."
+        }
+       ],
+       "class": "Sun-synchronous payload",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 97.5123,
+      "kpMax": null,
+      "name": "POSAT 2",
+      "norad": 63488,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 545.5,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "along-track-lower",
+      "signatureExplanation": "The semi-major axis fell by more than atmospheric drag accounts for, with the orbit plane essentially unchanged. A retrograde tangential burn lowers the orbit.",
+      "signatureLabel": "in-plane lowering",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.3323,
+      "startAt": "2025-09-30T07:12:54Z",
+      "sunSynchronous": true,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 126,
+        "cohortScreened": true,
+        "cohortZ": -18.07,
+        "delta": -85.94909184663464,
+        "element": "semiMajorAxis",
+        "floorSigma": 9.215932482644208,
+        "floorZ": -9.33,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 126,
+        "cohortScreened": true,
+        "cohortZ": 3.25,
+        "delta": 0.00022776983540184873,
+        "element": "inclination",
+        "floorSigma": 0.0001639496763348989,
+        "floorZ": 1.39,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 126,
+        "cohortScreened": true,
+        "cohortZ": -0.66,
+        "delta": -1.9002388306324563e-06,
+        "element": "eccentricity",
+        "floorSigma": 4.2516819737811965e-06,
+        "floorZ": -0.45,
+        "tripped": false
+       }
+      ]
+     },
+     {
+      "apogeeAltitudeKm": 551.7,
+      "card": {
+       "alternatives": "What could produce this signature: descending under propulsion; a collision-avoidance manoeuvre; moving out of a useful orbit at end of life. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+       "candidateCauses": [
+        {
+         "detail": "A sustained, deliberate descent. At end of life an operator may lower the orbit to shorten how long the object remains in orbit, rather than leaving it to decay on its own over decades.",
+         "id": "orbit-lowering-campaign",
+         "label": "descending under propulsion"
+        },
+        {
+         "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot.",
+         "id": "collision-avoidance",
+         "label": "a collision-avoidance manoeuvre"
+        },
+        {
+         "detail": "Disposal guidelines ask operators to clear the orbits other spacecraft use, either by lowering into the atmosphere or, at geostationary altitude, by raising above the ring.",
+         "id": "disposal",
+         "label": "moving out of a useful orbit at end of life"
+        },
+        {
+         "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit.",
+         "id": "fit-artefact",
+         "label": "an artefact of how the orbit was fitted rather than a real change"
+        }
+       ],
+       "control": "Compared against 118 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 12 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+       "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 10.5 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+       "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved.",
+       "headline": "In-plane lowering \u2014 inferred, not confirmed",
+       "honesty": "This is a candidate. Over the same period the detector flagged 547138 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.6 per cent. ",
+       "kind": "deterministic",
+       "observation": "Between the two element sets, the semi-major axis moved -190.9 m beyond what could happen on its own, against a floor of 17.4 m. Atmospheric drag on a body of this ballistic coefficient accounts for -71.1 m of the change in semi-major axis, give or take 15.5 m; that has been subtracted before anything below is claimed."
+      },
+      "confidence": "candidate",
+      "constellation": null,
+      "deltaV": {
+       "eccentricityMetresPerSecond": 0.0,
+       "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+       "planeChangeMetresPerSecond": 0.0,
+       "tangentialMetresPerSecond": -0.1046,
+       "totalMetresPerSecond": 0.1046
+      },
+      "deltaVMetresPerSecond": 0.1046,
+      "drag": {
+       "applicable": true,
+       "bstar": 0.0010296,
+       "cohortCount": 118,
+       "predictedDeltaAMetres": -71.12,
+       "predictedSigmaMetres": 15.46,
+       "propulsiveDeltaAMetres": -190.95,
+       "reason": "measured from this object's own recent intervals"
+      },
+      "endAt": "2025-11-12T06:52:09Z",
+      "eventKey": "63488|2025-11-11T06:57:33Z|2025-11-12T06:52:09Z|along-track-lower",
+      "expectation": {
+       "citations": [
+        {
+         "kind": "derived",
+         "text": "A sun-synchronous orbit's whole value is that its J2 nodal regression equals the mean sun's apparent motion, +0.9856 deg/day, which fixes the local solar time of every pass. That rate depends on both altitude and inclination, so an operator holding the local time constant must adjust BOTH -- small inclination corrections are ordinary maintenance for this class, and only for this class. Elsewhere an inclination change is a mission change."
+        }
+       ],
+       "class": "Sun-synchronous payload",
+       "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+       "verdict": "expected-for-class"
+      },
+      "groundTruth": null,
+      "inclinationDeg": 97.509,
+      "kpMax": null,
+      "name": "POSAT 2",
+      "norad": 63488,
+      "objectType": "PAYLOAD",
+      "perigeeAltitudeKm": 541.6,
+      "purposeLanguagePermitted": true,
+      "regime": "LEO",
+      "signature": "along-track-lower",
+      "signatureExplanation": "The semi-major axis fell by more than atmospheric drag accounts for, with the orbit plane essentially unchanged. A retrograde tangential burn lowers the orbit.",
+      "signatureLabel": "in-plane lowering",
+      "spaceWeather": {
+       "densityRatio": null,
+       "kpMax": null
+      },
+      "spanDays": 0.9962,
+      "startAt": "2025-11-11T06:57:33Z",
+      "sunSynchronous": true,
+      "tests": [
+       {
+        "basis": "self-history",
+        "cohortCount": 118,
+        "cohortScreened": true,
+        "cohortZ": -12.35,
+        "delta": -190.9466293765813,
+        "element": "semiMajorAxis",
+        "floorSigma": 17.358193040438753,
+        "floorZ": -11.0,
+        "tripped": true
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 118,
+        "cohortScreened": true,
+        "cohortZ": 0.77,
+        "delta": 0.0002000000000066393,
+        "element": "inclination",
+        "floorSigma": 0.00029881780286238876,
+        "floorZ": 0.67,
+        "tripped": false
+       },
+       {
+        "basis": "self-history",
+        "cohortCount": 118,
+        "cohortScreened": true,
+        "cohortZ": 0.35,
+        "delta": 1.9766258424895048e-06,
+        "element": "eccentricity",
+        "floorSigma": 6.404131621707491e-06,
+        "floorZ": 0.31,
+        "tripped": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "norad": 67584,
+    "samples": [
+     {
+      "apogeeKm": 466.438,
+      "bstar": 0.00045978,
+      "eccentricity": 0.0001323,
+      "inclinationDeg": 97.2846,
+      "perigeeKm": 464.627,
+      "semiMajorAxisKm": 6843.6677,
+      "t": 1786122738196,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.369,
+      "bstar": 0.00031667,
+      "eccentricity": 0.0001238,
+      "inclinationDeg": 97.285,
+      "perigeeKm": 464.674,
+      "semiMajorAxisKm": 6843.6564,
+      "t": 1786162204325,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.298,
+      "bstar": 0.00036517517,
+      "eccentricity": 0.00011759,
+      "inclinationDeg": 97.2849,
+      "perigeeKm": 464.688,
+      "semiMajorAxisKm": 6843.6278,
+      "t": 1786201670266,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.312,
+      "bstar": 0.00039673,
+      "eccentricity": 0.0001251,
+      "inclinationDeg": 97.2849,
+      "perigeeKm": 464.6,
+      "semiMajorAxisKm": 6843.5912,
+      "t": 1786246773825,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.901,
+      "bstar": 6.33e-05,
+      "eccentricity": 0.0002042,
+      "inclinationDeg": 97.2851,
+      "perigeeKm": 464.106,
+      "semiMajorAxisKm": 6843.6389,
+      "t": 1786297515976,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.493,
+      "bstar": -1.0359e-05,
+      "eccentricity": 0.0001391,
+      "inclinationDeg": 97.2849,
+      "perigeeKm": 464.589,
+      "semiMajorAxisKm": 6843.6757,
+      "t": 1786331344372,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.788,
+      "bstar": 0.00016034,
+      "eccentricity": 0.0001765,
+      "inclinationDeg": 97.2853,
+      "perigeeKm": 464.372,
+      "semiMajorAxisKm": 6843.715,
+      "t": 1786382087303,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.653,
+      "bstar": 0.00020944,
+      "eccentricity": 0.0001557,
+      "inclinationDeg": 97.2845,
+      "perigeeKm": 464.522,
+      "semiMajorAxisKm": 6843.7226,
+      "t": 1786421553996,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.36,
+      "bstar": 0.00028116258,
+      "eccentricity": 0.00012171,
+      "inclinationDeg": 97.2841,
+      "perigeeKm": 464.695,
+      "semiMajorAxisKm": 6843.6625,
+      "t": 1786545591127,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.548,
+      "bstar": 0.00018613,
+      "eccentricity": 0.0001468,
+      "inclinationDeg": 97.2843,
+      "perigeeKm": 464.539,
+      "semiMajorAxisKm": 6843.6788,
+      "t": 1786590695651,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.542,
+      "bstar": 7.5194e-05,
+      "eccentricity": 0.0001433,
+      "inclinationDeg": 97.2839,
+      "perigeeKm": 464.581,
+      "semiMajorAxisKm": 6843.6966,
+      "t": 1786641438281,
+      "tier": "full"
+     },
+     {
+      "apogeeKm": 466.748,
+      "bstar": 0.0002538,
+      "eccentricity": 0.0001772,
+      "inclinationDeg": 97.2835,
+      "perigeeKm": 464.322,
+      "semiMajorAxisKm": 6843.6698,
+      "t": 1786680904590,
+      "tier": "full"
+     }
+    ],
+    "events": []
+   }
+  ]
+ },
+ "mixedCalibration": {
+  "_source": {
+   "state": "labelPolicy.byBasis = {cohort: false, selfHistory: true}. The self-history detector has been recalibrated at kappa 12 and its passive control now bounds false alarms below the design target; the cohort detector, run over a seven-day window, does not. Published events therefore come from two calibrations of the detector, and results from one are not directly comparable with results from the other.",
+   "why": "The live bundle above was published before the detector gained a second, separately calibrated lane, so its labelPolicy carries no byBasis at all and the mixed state had no render coverage.",
+   "generatedBy": "pipeline/orbit_events.control_rates, pipeline/orbit_campaigns.control_rates_by_object, pipeline/orbit_release._label_policy, ._controls_for, ._control_basis, ._event_label_permitted, ._slim, and pipeline/orbit_narrative.describe -- the publisher's own functions, so the control rates, the policy sentences and every evidence card are what a release in this state would carry. Samples, summary rows, coverage, ground truth and maturity are copied from the live artifacts above.",
+   "objects": {
+    "44800": "TIBA-1 -- both events tripped on the self-history lane, which IS calibrated, so each carries controlBasis 'self-history', manoeuvreLabelPermitted true, and a card that says 'a manoeuvre inferred from public elements'.",
+    "61696": "STARLINK-11341 -- both events tripped on the cohort lane, which is NOT calibrated, so each carries controlBasis 'cohort', manoeuvreLabelPermitted false, and a card that says 'This is a candidate'."
+   }
+  },
+  "bundle": {
+   "schema": 1,
+   "generatedAt": "2026-09-06T04:11:52Z",
+   "kappa": 8.0,
+   "coverage": {
+    "captureCount": 550,
+    "capturedFrom": "2026-08-07T21:30:33Z",
+    "capturedTo": "2026-09-01T18:18:00Z",
+    "earliestEpoch": "1959-01-11T01:49:23.462000+00:00",
+    "framing": "These are fitted mean elements published every few hours, not measurements of where a satellite is. What this archive can show you is how the fit moved.",
+    "interpolationPolicy": "never-across-a-gap",
+    "latestEpoch": "2026-09-10T03:47:38.554000+00:00",
+    "noDataIntervals": [
+     {
+      "from": "1957-10-04T00:00:00Z",
+      "note": "Nothing before this point is held. What the archive does hold is whatever the hourly capture has seen since it started, plus whatever the bulk back-fill has imported from space-track's published yearly bundles.",
+      "reason": "before-bigmem-accumulation",
+      "to": "1959-01-11T01:49:23Z"
+     },
+     {
+      "from": "2025-12-31T13:33:45Z",
+      "note": "The archive holds element sets on both sides of this gap and none inside it: the bulk bundles end before live capture began. Nothing is interpolated across it, no cadence is measured across it, and an operator-published manoeuvre inside it is recorded as unscorable rather than as one the detector missed.",
+      "reason": "between-backfill-and-live-capture",
+      "to": "2026-08-07T00:30:49Z"
+     },
+     {
+      "from": "2026-08-08T21:22:26Z",
+      "note": "No capture ran in this window, so any element set published inside it was missed.",
+      "reason": "snapshot-gap",
+      "to": "2026-08-09T00:36:14Z"
+     }
+    ]
+   },
+   "controls": {
+    "kappa": 8.0,
+    "passiveControl": {
+     "flags": 63,
+     "intervals": 24318,
+     "rate": 0.00259,
+     "interval95": [
+      0.00201,
+      0.00329
+     ]
+    },
+    "payloadPopulation": {
+     "flags": 402,
+     "intervals": 41690,
+     "rate": 0.00964,
+     "interval95": [
+      0.00874,
+      0.01062
+     ]
+    },
+    "excessSignificance": {
+     "z": 10.45,
+     "approximatePValue": 0.0,
+     "method": "pooled two-proportion normal approximation, two-sided",
+     "caution": "The normal approximation is poor when either count is below about ten. Treat this as an order-of-magnitude statement about significance, not a precise p-value."
+    },
+    "excessRate": 0.00705,
+    "sufficientToLabel": false,
+    "excessSignificant": true,
+    "separation": {
+     "boundRatio": 2.656,
+     "requiredBoundRatio": 10.0,
+     "meets": false,
+     "gap": "The payload flag rate is only 2.7 times the false-alarm floor once both are read at their 95 per cent bounds, against the 10 times this site requires before an individual event may be called a manoeuvre. Up to one flag in 3 on a payload could be the same noise.",
+     "note": "Lower bound on the payload rate against upper bound on the passive rate. Bounds rather than point estimates, and an effect size rather than a p-value: with tens of millions of intervals a two-proportion test is significant for a ratio of 1.001, which would say the archive is large rather than that the detector separates the two populations."
+    },
+    "designTarget": 0.001,
+    "note": "Debris and spent rocket stages cannot manoeuvre, so every flag on one is a false alarm. The payload rate is not a detection rate: most payload intervals contain no manoeuvre either. What the two together bound is how much of the payload flag rate could be noise.",
+    "blockingReason": "The upper bound on the cohort false-alarm rate is 3.3 per 1,000 intervals, not below the design target of 1 per 1,000.",
+    "selfHistory": {
+     "basis": "self-history",
+     "kappa": 12.0,
+     "passive": {
+      "objects": 12396,
+      "intervals": 89017283,
+      "flags": 41206,
+      "flaggedObjects": 6142,
+      "ratePerInterval": 0.00046289887324464847,
+      "ratePerObjectYear": 0.19618408502028256,
+      "jeffreys95": [
+       0.00045844668312011814,
+       0.0004673835472083776
+      ],
+      "objectDays": 76716169.4
+     },
+     "payload": {
+      "objects": 18644,
+      "intervals": 62406016,
+      "flags": 320000,
+      "ratePerInterval": 0.005127710764295545,
+      "ratePerObjectYear": 2.8343200677858396,
+      "jeffreys95": [
+       0.005110013031626615,
+       0.005145454399957894
+      ],
+      "objectDays": 41237403.4
+     },
+     "separation": {
+      "z": 579.196,
+      "approximatePValue": 0.0,
+      "method": "pooled two-proportion normal approximation, two-sided",
+      "caution": "The normal approximation is poor when either count is below about ten. Treat this as an order-of-magnitude statement about significance, not a precise p-value.",
+      "ratio": 11.07738873580165
+     },
+     "targetRatePerInterval": 0.001,
+     "sufficientToLabel": true,
+     "blockingReason": null,
+     "note": "Debris and spent rocket stages have no propulsion, so every flag on one is a false alarm by construction. The interval is Jeffreys rather than Wald: at zero flags Wald would report a false-alarm rate of exactly zero, which no control can support."
+    },
+    "cohortWindowDays": 7.0,
+    "cohortWindowFrom": "2026-08-30T04:11:52Z",
+    "cohortWindowTo": "2026-09-06T04:11:52Z",
+    "cohortWindowAnchor": "capture-ledger"
+   },
+   "groundTruth": {
+    "detected": 21,
+    "detectionRate": 0.7777777777777778,
+    "matches": [
+     {
+      "agreementRatio": null,
+      "detectedDeltaVMetresPerSecond": 0.6071,
+      "detectedEndAt": "2024-04-26T09:55:52Z",
+      "detectedSignature": "along-track-raise",
+      "detectedStartAt": "2024-04-26T01:54:39Z",
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2024-04-26T00:00:00Z",
+      "publishedDeltaVMetresPerSecond": null,
+      "source": "https://gipoc.grc.nasa.gov/pims/pimsdocs/public/ISS%20Handbook/hb_vib_vehicle_Progress_87P_Reboost_2024-04-26.pdf",
+      "type": "reboost"
+     },
+     {
+      "agreementRatio": null,
+      "detectedDeltaVMetresPerSecond": 1.3003,
+      "detectedEndAt": "2024-05-24T19:27:34Z",
+      "detectedSignature": "along-track-raise",
+      "detectedStartAt": "2024-05-24T13:01:53Z",
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2024-05-24T00:00:00Z",
+      "publishedDeltaVMetresPerSecond": null,
+      "source": "https://gipoc.grc.nasa.gov/pims/pimsdocs/public/ISS%20Handbook/hb_vib_vehicle_Cygnus_NG-20_Two_Reboots_2024-05-24.pdf",
+      "type": "reboost"
+     }
+    ],
+    "misses": [
+     {
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2025-04-30T22:10:00Z",
+      "publishedDeltaVMetresPerSecond": null,
+      "source": "https://www.orbitaldebris.jsc.nasa.gov/quarterly-news/pdfs/ODQNv29i3.pdf",
+      "type": "collision-avoidance"
+     },
+     {
+      "norad": 62261,
+      "object": "SENTINEL-1C",
+      "occurredAt": "2025-06-11T00:00:00Z",
+      "publishedDeltaVMetresPerSecond": null,
+      "source": "https://sentiwiki.copernicus.eu/web/s1-mission-status-reports",
+      "type": "collision-avoidance"
+     }
+    ],
+    "notDetected": 6,
+    "note": "Scorability is decided per object against that object's own contiguous observation runs, not against the archive's global first and last epoch. The archive contains a real hole between the end of the bulk bundles and the start of live capture, and an event inside that hole is one the archive cannot see, not one the detector missed.",
+    "pending": 7,
+    "pendingEvents": [
+     {
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2026-04-16T02:34:18Z",
+      "publishedDeltaVMetresPerSecond": 0.24,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+      "type": "reboost"
+     },
+     {
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2026-03-13T16:58:17Z",
+      "publishedDeltaVMetresPerSecond": 0.61,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+      "type": "reboost"
+     },
+     {
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2026-02-19T00:57:00Z",
+      "publishedDeltaVMetresPerSecond": 0.95,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+      "type": "reboost"
+     },
+     {
+      "norad": 25544,
+      "object": "ISS (ZARYA)",
+      "occurredAt": "2026-01-23T00:00:00Z",
+      "publishedDeltaVMetresPerSecond": 2.3,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://gipoc.grc.nasa.gov/wp/pims/handbook/",
+      "type": "reboost"
+     },
+     {
+      "norad": 43600,
+      "object": "AEOLUS",
+      "occurredAt": "2023-07-24T14:00:00Z",
+      "publishedDeltaVMetresPerSecond": 9.0,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://www.issfd.org/ISSFD_2024/ISSFD2024_1-2.pdf",
+      "type": "deorbit"
+     },
+     {
+      "norad": 43600,
+      "object": "AEOLUS",
+      "occurredAt": "2023-07-28T14:34:00Z",
+      "publishedDeltaVMetresPerSecond": 12.3,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://www.issfd.org/ISSFD_2024/ISSFD2024_1-2.pdf",
+      "type": "deorbit"
+     },
+     {
+      "norad": 27509,
+      "object": "METEOSAT-8",
+      "occurredAt": "2022-10-06T00:00:00Z",
+      "publishedDeltaVMetresPerSecond": null,
+      "reason": "archive-holds-no-elements-here",
+      "source": "https://www.eumetsat.int/long-serving-european-weather-satellite-safely-moved-graveyard-orbit",
+      "type": "disposal"
+     }
+    ],
+    "publishedEvents": 34,
+    "scorable": 27,
+    "tableVersion": "2026-08-08.1"
+   },
+   "events": [
+    {
+     "norad": 44800,
+     "name": "TIBA-1",
+     "objectType": "PAYLOAD",
+     "startAt": "2019-12-07T17:25:12Z",
+     "endAt": "2019-12-07T22:30:53Z",
+     "spanDays": 0.2123,
+     "signature": "geo-east-west-keeping",
+     "signatureLabel": "east-west station-keeping",
+     "confidence": "candidate",
+     "regime": "GEO",
+     "perigeeAltitudeKm": 35733.0,
+     "apogeeAltitudeKm": 35790.7,
+     "inclinationDeg": 0.0736,
+     "sunSynchronous": false,
+     "constellation": null,
+     "eventKey": "44800|2019-12-07T17:25:12Z|2019-12-07T22:30:53Z|geo-east-west-keeping",
+     "purposeLanguagePermitted": true,
+     "controlBasis": "self-history",
+     "manoeuvreLabelPermitted": true,
+     "deltaVMetresPerSecond": 0.5085,
+     "expectationVerdict": "expected-for-class",
+     "groundTruth": null
+    },
+    {
+     "norad": 44800,
+     "name": "TIBA-1",
+     "objectType": "PAYLOAD",
+     "startAt": "2019-12-07T22:48:32Z",
+     "endAt": "2019-12-08T04:19:25Z",
+     "spanDays": 0.2298,
+     "signature": "geo-east-west-keeping",
+     "signatureLabel": "east-west station-keeping",
+     "confidence": "candidate",
+     "regime": "GEO",
+     "perigeeAltitudeKm": 35738.1,
+     "apogeeAltitudeKm": 35815.7,
+     "inclinationDeg": 0.0734,
+     "sunSynchronous": false,
+     "constellation": null,
+     "eventKey": "44800|2019-12-07T22:48:32Z|2019-12-08T04:19:25Z|geo-east-west-keeping",
+     "purposeLanguagePermitted": true,
+     "controlBasis": "self-history",
+     "manoeuvreLabelPermitted": true,
+     "deltaVMetresPerSecond": 1.0238,
+     "expectationVerdict": "expected-for-class",
+     "groundTruth": null
+    },
+    {
+     "norad": 61696,
+     "name": "STARLINK-11341",
+     "objectType": "PAYLOAD",
+     "startAt": "2024-11-04T16:00:01Z",
+     "endAt": "2024-11-05T14:00:01Z",
+     "spanDays": 0.9167,
+     "signature": "along-track-raise",
+     "signatureLabel": "in-plane raise",
+     "confidence": "candidate",
+     "regime": "LEO",
+     "perigeeAltitudeKm": 290.2,
+     "apogeeAltitudeKm": 291.9,
+     "inclinationDeg": 53.1676,
+     "sunSynchronous": false,
+     "constellation": "Starlink",
+     "eventKey": "61696|2024-11-04T16:00:01Z|2024-11-05T14:00:01Z|along-track-raise",
+     "purposeLanguagePermitted": true,
+     "controlBasis": "cohort",
+     "manoeuvreLabelPermitted": false,
+     "deltaVMetresPerSecond": 1.7178,
+     "expectationVerdict": "expected-for-class",
+     "groundTruth": null
+    },
+    {
+     "norad": 61696,
+     "name": "STARLINK-11341",
+     "objectType": "PAYLOAD",
+     "startAt": "2024-11-05T14:00:01Z",
+     "endAt": "2024-11-05T18:00:02Z",
+     "spanDays": 0.1667,
+     "signature": "along-track-raise",
+     "signatureLabel": "in-plane raise",
+     "confidence": "candidate",
+     "regime": "LEO",
+     "perigeeAltitudeKm": 293.5,
+     "apogeeAltitudeKm": 294.7,
+     "inclinationDeg": 53.1665,
+     "sunSynchronous": false,
+     "constellation": "Starlink",
+     "eventKey": "61696|2024-11-05T14:00:01Z|2024-11-05T18:00:02Z|along-track-raise",
+     "purposeLanguagePermitted": true,
+     "controlBasis": "cohort",
+     "manoeuvreLabelPermitted": false,
+     "deltaVMetresPerSecond": 0.4111,
+     "expectationVerdict": "expected-for-class",
+     "groundTruth": null
+    }
+   ],
+   "eventsPublished": {
+    "inThisBundle": 4,
+    "total": 4,
+    "rule": "The population views need one list of the notable changes across the whole catalogue; a per-object view needs that object's changes and fetches them with the object's history shard, which it is already fetching. So this list is the largest change on every object that had one, plus the largest remaining changes and every change an operator independently published, up to 1500. Nothing is hidden: every event is in its object's shard."
+   },
+   "objects": [
+    {
+     "apogeeAltitudeKm": 35796.1,
+     "cadence": {
+      "corrections": 199,
+      "correctionsPerYear": 33.49,
+      "medianDaysBetween": 12.822,
+      "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+      "observedDays": 2170.156,
+      "regularity": 0.272,
+      "spacingScaleDays": 3.494,
+      "spacingsUsed": 186
+     },
+     "constellation": null,
+     "decay": {
+      "decaying": false,
+      "metresPerDay": -138.74,
+      "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+      "perigeeAltitudeKm": 35775.6
+     },
+     "deltaVMetresPerSecond": 57.4013,
+     "deltaVPerYearMetresPerSecond": 9.661,
+     "events": 199,
+     "firstSeenAt": "2019-11-27T00:08:30Z",
+     "inclinationDeg": 0.056,
+     "intervals": 4793,
+     "lastSeenAt": "2026-08-31T18:05:24Z",
+     "mission": "communications",
+     "name": "TIBA-1",
+     "norad": 44800,
+     "objectType": "PAYLOAD",
+     "observationRuns": [
+      {
+       "days": 0.56,
+       "fromAt": "2019-11-27T00:08:30Z",
+       "toAt": "2019-11-27T13:41:11Z"
+      },
+      {
+       "days": 1.33,
+       "fromAt": "2019-12-02T03:09:58Z",
+       "toAt": "2019-12-03T11:02:55Z"
+      },
+      {
+       "days": 47.9,
+       "fromAt": "2019-12-07T17:25:12Z",
+       "toAt": "2020-01-24T15:07:21Z"
+      },
+      {
+       "days": 2.01,
+       "fromAt": "2020-01-27T15:28:49Z",
+       "toAt": "2020-01-29T15:43:17Z"
+      },
+      {
+       "days": 278.03,
+       "fromAt": "2020-02-03T17:42:42Z",
+       "toAt": "2020-11-07T18:26:25Z"
+      },
+      {
+       "days": 569.07,
+       "fromAt": "2020-11-11T01:25:42Z",
+       "toAt": "2022-06-03T03:00:57Z"
+      },
+      {
+       "days": 8.68,
+       "fromAt": "2022-06-06T19:42:25Z",
+       "toAt": "2022-06-15T12:04:59Z"
+      },
+      {
+       "days": 137.16,
+       "fromAt": "2022-06-19T07:50:42Z",
+       "toAt": "2022-11-03T11:37:53Z"
+      },
+      {
+       "days": 37.51,
+       "fromAt": "2022-11-07T04:43:12Z",
+       "toAt": "2022-12-14T16:58:39Z"
+      },
+      {
+       "days": 35.21,
+       "fromAt": "2022-12-17T19:34:38Z",
+       "toAt": "2023-01-22T00:43:42Z"
+      },
+      {
+       "days": 175.72,
+       "fromAt": "2023-01-26T01:11:54Z",
+       "toAt": "2023-07-20T18:30:50Z"
+      },
+      {
+       "days": 142.4,
+       "fromAt": "2023-07-24T07:50:42Z",
+       "toAt": "2023-12-13T17:20:27Z"
+      },
+      {
+       "days": 11.16,
+       "fromAt": "2023-12-19T17:44:13Z",
+       "toAt": "2023-12-30T21:28:42Z"
+      },
+      {
+       "days": 213.59,
+       "fromAt": "2024-01-02T22:37:47Z",
+       "toAt": "2024-08-03T12:46:20Z"
+      },
+      {
+       "days": 511.72,
+       "fromAt": "2024-08-06T21:28:33Z",
+       "toAt": "2025-12-31T14:45:07Z"
+      },
+      {
+       "days": 24.24,
+       "fromAt": "2026-08-07T12:25:52Z",
+       "toAt": "2026-08-31T18:05:24Z"
+      }
+     ],
+     "observedDays": 2170.156,
+     "outOfFamilyForClass": false,
+     "perigeeAltitudeKm": 35775.6,
+     "purposeLanguagePermitted": true,
+     "regime": "GEO",
+     "repeatClusters": [
+      {
+       "count": 124,
+       "deltaVSpreadMetresPerSecond": 0.011,
+       "firstAt": "2019-12-08T06:02:48Z",
+       "lastAt": "2026-08-19T11:50:29Z",
+       "medianDaysBetween": 14.125,
+       "medianDeltaVMetresPerSecond": 0.0688,
+       "signature": "geo-east-west-keeping",
+       "spacingScaleDays": 0.659,
+       "totalDeltaVMetresPerSecond": 8.6399
+      },
+      {
+       "count": 21,
+       "deltaVSpreadMetresPerSecond": 0.231,
+       "firstAt": "2020-03-15T04:21:12Z",
+       "lastAt": "2025-09-21T05:05:38Z",
+       "medianDaysBetween": 13.652,
+       "medianDeltaVMetresPerSecond": 1.9804,
+       "signature": "geo-north-south-keeping",
+       "spacingScaleDays": 13.231,
+       "totalDeltaVMetresPerSecond": 40.2828
+      },
+      {
+       "count": 19,
+       "deltaVSpreadMetresPerSecond": 0.0098,
+       "firstAt": "2020-07-29T04:42:55Z",
+       "lastAt": "2025-11-27T03:49:34Z",
+       "medianDaysBetween": 34.762,
+       "medianDeltaVMetresPerSecond": 0.0349,
+       "signature": "geo-east-west-keeping",
+       "spacingScaleDays": 33.281,
+       "totalDeltaVMetresPerSecond": 0.6588
+      },
+      {
+       "count": 17,
+       "deltaVSpreadMetresPerSecond": 0.0049,
+       "firstAt": "2020-01-19T12:48:03Z",
+       "lastAt": "2025-12-21T11:39:19Z",
+       "medianDaysBetween": 134.69,
+       "medianDeltaVMetresPerSecond": 0.0165,
+       "signature": "geo-east-west-keeping",
+       "spacingScaleDays": 160.944,
+       "totalDeltaVMetresPerSecond": 0.26
+      },
+      {
+       "count": 8,
+       "deltaVSpreadMetresPerSecond": 0.1069,
+       "firstAt": "2020-02-08T15:11:42Z",
+       "lastAt": "2024-10-05T20:27:42Z",
+       "medianDaysBetween": 176.962,
+       "medianDeltaVMetresPerSecond": 0.5592,
+       "signature": "geo-north-south-keeping",
+       "spacingScaleDays": 256.884,
+       "totalDeltaVMetresPerSecond": 4.6969
+      },
+      {
+       "count": 3,
+       "deltaVSpreadMetresPerSecond": 0.0283,
+       "firstAt": "2020-12-12T21:44:42Z",
+       "lastAt": "2021-01-23T20:39:34Z",
+       "medianDaysBetween": 20.977,
+       "medianDeltaVMetresPerSecond": 0.2912,
+       "signature": "geo-north-south-keeping",
+       "spacingScaleDays": 10.385,
+       "totalDeltaVMetresPerSecond": 0.9281
+      }
+     ],
+     "sector": "mixed",
+     "sunSynchronous": false,
+     "unusualForItself": [
+      {
+       "at": "2019-12-07T17:25:12Z",
+       "deltaVMetresPerSecond": 0.5085,
+       "signature": "geo-east-west-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2019-12-07T22:48:32Z",
+       "deltaVMetresPerSecond": 1.0238,
+       "signature": "geo-east-west-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2020-01-19T12:48:03Z",
+       "deltaVMetresPerSecond": 0.0118,
+       "signature": "geo-east-west-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2020-01-20T07:17:42Z",
+       "deltaVMetresPerSecond": 0.0139,
+       "signature": "geo-east-west-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2020-02-08T15:11:42Z",
+       "deltaVMetresPerSecond": 0.8309,
+       "signature": "geo-north-south-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "a different kind of change from this object's usual one"
+      },
+      {
+       "at": "2020-02-12T07:53:42Z",
+       "deltaVMetresPerSecond": 0.6034,
+       "signature": "geo-north-south-keeping",
+       "usualCount": 124,
+       "usualDeltaVMetresPerSecond": 0.0688,
+       "usualSignature": "geo-east-west-keeping",
+       "why": "a different kind of change from this object's usual one"
+      }
+     ]
+    },
+    {
+     "apogeeAltitudeKm": 360.5,
+     "cadence": {
+      "corrections": 36,
+      "correctionsPerYear": 29.87,
+      "medianDaysBetween": 0.333,
+      "note": "Spacings that would have crossed a gap in the archive are dropped rather than averaged in: an archive gap is not a period of inactivity.",
+      "observedDays": 440.144,
+      "regularity": 0.371,
+      "spacingScaleDays": 0.124,
+      "spacingsUsed": 35
+     },
+     "constellation": "Starlink",
+     "decay": {
+      "decaying": false,
+      "metresPerDay": 5.19,
+      "note": "Median of this object's own per-day rates. A median rather than a fitted slope, so a manoeuvre inside the series cannot tilt it.",
+      "perigeeAltitudeKm": 359.0
+     },
+     "deltaVMetresPerSecond": 36.66,
+     "deltaVPerYearMetresPerSecond": 30.422,
+     "events": 36,
+     "firstSeenAt": "2024-11-04T16:00:01Z",
+     "inclinationDeg": 53.159,
+     "intervals": 743,
+     "lastSeenAt": "2026-08-31T09:14:06Z",
+     "mission": "communications",
+     "name": "STARLINK-11341",
+     "norad": 61696,
+     "objectType": "PAYLOAD",
+     "observationRuns": [
+      {
+       "days": 421.63,
+       "fromAt": "2024-11-04T16:00:01Z",
+       "toAt": "2025-12-31T07:05:11Z"
+      },
+      {
+       "days": 23.68,
+       "fromAt": "2026-08-07T16:47:43Z",
+       "toAt": "2026-08-31T09:14:06Z"
+      }
+     ],
+     "observedDays": 440.144,
+     "outOfFamilyForClass": false,
+     "perigeeAltitudeKm": 359.0,
+     "purposeLanguagePermitted": true,
+     "regime": "LEO",
+     "repeatClusters": [
+      {
+       "count": 17,
+       "deltaVSpreadMetresPerSecond": 0.183,
+       "firstAt": "2024-11-05T14:00:01Z",
+       "lastAt": "2024-12-12T14:00:01Z",
+       "medianDaysBetween": 0.696,
+       "medianDeltaVMetresPerSecond": 0.6955,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.451,
+       "totalDeltaVMetresPerSecond": 12.7886
+      },
+      {
+       "count": 11,
+       "deltaVSpreadMetresPerSecond": 0.3112,
+       "firstAt": "2024-11-04T16:00:01Z",
+       "lastAt": "2024-12-11T22:00:01Z",
+       "medianDaysBetween": 1.265,
+       "medianDeltaVMetresPerSecond": 1.7097,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.591,
+       "totalDeltaVMetresPerSecond": 18.4597
+      },
+      {
+       "count": 5,
+       "deltaVSpreadMetresPerSecond": 0.1601,
+       "firstAt": "2024-11-05T18:00:02Z",
+       "lastAt": "2024-11-09T04:00:02Z",
+       "medianDaysBetween": 0.708,
+       "medianDeltaVMetresPerSecond": 0.7787,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.432,
+       "totalDeltaVMetresPerSecond": 4.1527
+      },
+      {
+       "count": 3,
+       "deltaVSpreadMetresPerSecond": 0.0232,
+       "firstAt": "2024-12-08T13:23:55Z",
+       "lastAt": "2024-12-09T10:42:43Z",
+       "medianDaysBetween": 0.444,
+       "medianDeltaVMetresPerSecond": 0.3932,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.376,
+       "totalDeltaVMetresPerSecond": 1.259
+      }
+     ],
+     "sector": "commercial",
+     "sunSynchronous": false,
+     "unusualForItself": [
+      {
+       "at": "2024-11-04T16:00:01Z",
+       "deltaVMetresPerSecond": 1.7178,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2024-11-05T14:00:01Z",
+       "deltaVMetresPerSecond": 0.4111,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2024-11-06T22:00:02Z",
+       "deltaVMetresPerSecond": 1.4998,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2024-11-08T04:00:02Z",
+       "deltaVMetresPerSecond": 1.8553,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2024-11-09T04:00:02Z",
+       "deltaVMetresPerSecond": 1.101,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      },
+      {
+       "at": "2024-11-10T04:00:01Z",
+       "deltaVMetresPerSecond": 1.1695,
+       "signature": "along-track-raise",
+       "usualCount": 17,
+       "usualDeltaVMetresPerSecond": 0.6955,
+       "usualSignature": "along-track-raise",
+       "why": "the same kind of change, at a cost outside its usual band"
+      }
+     ]
+    }
+   ],
+   "maturity": {
+    "archive": {
+     "captures": 550,
+     "coldBytes": 10124,
+     "coldRows": 279,
+     "coldShards": 1,
+     "dailySamples": 7730,
+     "earliestEpoch": "1959-01-11T01:49:23.462000+00:00",
+     "elementSets": 182280403,
+     "elementSetsSource": "summary",
+     "firstCapture": "2026-08-07T21:30:33.712000+00:00",
+     "kpSamples": 25,
+     "lastCapture": "2026-09-01T18:18:00.146000+00:00",
+     "latestEpoch": "2026-09-10T03:47:38.554000+00:00",
+     "objects": 68522,
+     "schemaVersion": 2,
+     "summaryStale": null
+    },
+    "capabilities": [
+     {
+      "available": true,
+      "id": "population-cohort-screen",
+      "needs": "about a hundred overlapping intervals across the population",
+      "why": "The cohort control compares an object against others at the same altitude and inclination over the same hours. It needs many objects at one moment, not one object over many months, so it works on the day the archive starts."
+     },
+     {
+      "available": true,
+      "id": "per-object-cadence",
+      "needs": "at least three detected corrections for one object inside one observation run",
+      "objectsReady": 6115,
+      "why": "How often an object corrects is a property of its own time series and cannot be borrowed from the population."
+     },
+     {
+      "available": true,
+      "id": "station-keeping-cadence",
+      "needs": "several complete cycles of the same correction, which for geostationary east-west keeping means about three weeks",
+      "objectsReady": 6142,
+      "why": "A cadence needs several complete cycles before its regularity means anything. Four corrections at irregular spacing are not a cadence."
+     },
+     {
+      "available": true,
+      "id": "storm-density-enhancement",
+      "needs": "a geomagnetically quiet baseline window and a storm window in the same archive",
+      "why": "The density ratio is each object's storm-time decay against its OWN quiet-time decay, so the archive has to contain both."
+     },
+     {
+      "available": false,
+      "blockedBy": "the upper bound on the false-alarm rate is 6.2 per 1,000 intervals, above the design target of 1 per 1,000",
+      "id": "measured-false-alarm-rate",
+      "needs": "a passive control large enough to bound the rate below one in a thousand intervals, and payloads flagged significantly more often than it",
+      "why": "Until the false-alarm rate is bounded, no event may carry a manoeuvre label. The plots ship; the labels do not."
+     }
+    ],
+    "captureLedgerDays": 24.8663,
+    "coverageNote": "The archive holds what the hourly capture has seen since 2026-08-07 and whatever the bulk back-fill has imported from space-track's published yearly bundles. The two do not meet: there is a real gap between the end of the bundles and the start of live capture, it is never interpolated across, and it is the reason an operator-published manoeuvre inside it is recorded as unscorable rather than as missed.",
+    "longestSingleObjectDays": 15317.07,
+    "objectsScanned": 68465,
+    "objectsSummarised": 7943,
+    "objectsWithBaseline": 61083,
+    "observedObjectDays": 117953572.7,
+    "spanNote": "Maturity is decided on how much of each object the archive actually holds, summed over the intervals it can join, rather than on the capture ledger or on the distance between the first and last epoch. The ledger under-counts a back-filled archive by years; the epoch span over-counts it by the size of the hole in the middle."
+   },
+   "labelPolicy": {
+    "manoeuvreLabelPermitted": false,
+    "byBasis": {
+     "cohort": false,
+     "selfHistory": true
+    },
+    "reason": "The self-history detector is calibrated. Events judged only by the cohort detector remain candidates: The upper bound on the cohort false-alarm rate is 3.3 per 1,000 intervals, not below the design target of 1 per 1,000.",
+    "wording": "An event is called a manoeuvre only when the passive control for the detector that judged it bounds false alarms below the design target. Its cost remains a lower bound and its cause remains an inference."
+   }
+  },
+  "shard": {
+   "schema": 1,
+   "shard": 0,
+   "shardCount": 256,
+   "objects": [
+    {
+     "norad": 44800,
+     "samples": [
+      {
+       "apogeeKm": 35750.759,
+       "bstar": 0.0,
+       "eccentricity": 0.727694,
+       "inclinationDeg": 5.0758,
+       "perigeeKm": 261.901,
+       "semiMajorAxisKm": 24384.465,
+       "t": 1574808595750,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35762.544,
+       "bstar": 0.0,
+       "eccentricity": 0.7276286,
+       "inclinationDeg": 5.0039,
+       "perigeeKm": 265.605,
+       "semiMajorAxisKm": 24392.2099,
+       "t": 1574813310146,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35752.009,
+       "bstar": 0.0,
+       "eccentricity": 0.7277817,
+       "inclinationDeg": 4.9983,
+       "perigeeKm": 259.623,
+       "semiMajorAxisKm": 24383.9507,
+       "t": 1574862071749,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35739.909,
+       "bstar": 0.0,
+       "eccentricity": 0.155554,
+       "inclinationDeg": 0.5127,
+       "perigeeKm": 24400.534,
+       "semiMajorAxisKm": 36448.3561,
+       "t": 1575256198779,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35739.876,
+       "bstar": 0.0,
+       "eccentricity": 0.1555535,
+       "inclinationDeg": 0.5113,
+       "perigeeKm": 24400.541,
+       "semiMajorAxisKm": 36448.3434,
+       "t": 1575370975032,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35790.693,
+       "bstar": 0.0001,
+       "eccentricity": 0.0006851,
+       "inclinationDeg": 0.0736,
+       "perigeeKm": 35732.953,
+       "semiMajorAxisKm": 42139.9584,
+       "t": 1575739512233,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35814.346,
+       "bstar": 0.0001,
+       "eccentricity": 0.0009161,
+       "inclinationDeg": 0.0738,
+       "perigeeKm": 35737.112,
+       "semiMajorAxisKm": 42153.864,
+       "t": 1575757853472,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35815.671,
+       "bstar": 0.0001,
+       "eccentricity": 0.0009195,
+       "inclinationDeg": 0.0734,
+       "perigeeKm": 35738.148,
+       "semiMajorAxisKm": 42155.0441,
+       "t": 1575758912805,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35795.343,
+       "bstar": 0.0001,
+       "eccentricity": 0.0002535,
+       "inclinationDeg": 0.0726,
+       "perigeeKm": 35773.966,
+       "semiMajorAxisKm": 42162.7896,
+       "t": 1575778765602,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35795.267,
+       "bstar": 0.0001,
+       "eccentricity": 0.0002259,
+       "inclinationDeg": 0.0721,
+       "perigeeKm": 35776.217,
+       "semiMajorAxisKm": 42163.877,
+       "t": 1575784968716,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35796.703,
+       "bstar": 0.0001,
+       "eccentricity": 0.0002132,
+       "inclinationDeg": 0.0715,
+       "perigeeKm": 35778.724,
+       "semiMajorAxisKm": 42165.8483,
+       "t": 1575809777654,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 35795.498,
+       "bstar": 0.0001,
+       "eccentricity": 0.0001931,
+       "inclinationDeg": 0.0707,
+       "perigeeKm": 35779.214,
+       "semiMajorAxisKm": 42165.4909,
+       "t": 1575840782895,
+       "tier": "full"
+      }
+     ],
+     "events": [
+      {
+       "apogeeAltitudeKm": 35790.7,
+       "card": {
+        "kind": "deterministic",
+        "headline": "East-west station-keeping \u2014 inferred, not confirmed",
+        "observation": "Between the two element sets, the semi-major axis moved +13.934 km beyond what could happen on its own, against a floor of 30.4 m; and the eccentricity moved 2.31e-04. Atmospheric drag on a body of this ballistic coefficient accounts for -28.1 m of the change in semi-major axis, give or take 6.3 m; that has been subtracted before anything below is claimed.",
+        "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 50.8 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+        "control": "Compared against 49 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 2199 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+        "candidateCauses": [
+         {
+          "id": "geo-longitude-control",
+          "label": "holding an assigned geostationary longitude",
+          "detail": "The Earth's equator is slightly elliptical, so a geostationary satellite drifts towards one of two stable longitudes unless it is corrected. Holding a slot means small tangential burns every few weeks."
+         },
+         {
+          "id": "collision-avoidance",
+          "label": "a collision-avoidance manoeuvre",
+          "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot."
+         },
+         {
+          "id": "fit-artefact",
+          "label": "an artefact of how the orbit was fitted rather than a real change",
+          "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit."
+         }
+        ],
+        "alternatives": "What could produce this signature: holding an assigned geostationary longitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+        "honesty": "This is a manoeuvre inferred from public elements, not a confirmed cause. Over the same period the detector flagged 41206 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.047 per cent. The upper bound on that false-alarm rate is below the design target, and payloads are flagged significantly more often than objects without propulsion. That earns the word manoeuvre for this detector; the cause and the \u0394v remain inferences.",
+        "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved."
+       },
+       "confidence": "candidate",
+       "constellation": null,
+       "deltaV": {
+        "eccentricityMetresPerSecond": 0.3554,
+        "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+        "planeChangeMetresPerSecond": 0.0,
+        "tangentialMetresPerSecond": 0.5085,
+        "totalMetresPerSecond": 0.5085
+       },
+       "deltaVMetresPerSecond": 0.5085,
+       "drag": {
+        "applicable": true,
+        "bstar": 0.0001,
+        "cohortCount": 49,
+        "predictedDeltaAMetres": -28.11,
+        "predictedSigmaMetres": 6.34,
+        "propulsiveDeltaAMetres": 13933.78,
+        "reason": "measured from this object's own recent intervals"
+       },
+       "endAt": "2019-12-07T22:30:53Z",
+       "eventKey": "44800|2019-12-07T17:25:12Z|2019-12-07T22:30:53Z|geo-east-west-keeping",
+       "expectation": {
+        "citations": [
+         {
+          "budget": "geo-east-west",
+          "kind": "reference"
+         },
+         {
+          "budget": "geo-north-south",
+          "kind": "reference"
+         }
+        ],
+        "class": "Geostationary payload",
+        "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+        "verdict": "expected-for-class"
+       },
+       "groundTruth": null,
+       "inclinationDeg": 0.0736,
+       "kpMax": null,
+       "name": "TIBA-1",
+       "norad": 44800,
+       "objectType": "PAYLOAD",
+       "perigeeAltitudeKm": 35733.0,
+       "purposeLanguagePermitted": true,
+       "regime": "GEO",
+       "signature": "geo-east-west-keeping",
+       "signatureExplanation": "At geostationary altitude a small change in semi-major axis is the signature of longitude control. The Earth's equatorial ellipticity pulls a satellite towards one of two stable longitudes, and the operator answers with small tangential burns every few weeks. It is the cheap half of geostationary station-keeping.",
+       "signatureLabel": "east-west station-keeping",
+       "spaceWeather": {
+        "densityRatio": null,
+        "kpMax": null
+       },
+       "spanDays": 0.2123,
+       "startAt": "2019-12-07T17:25:12Z",
+       "sunSynchronous": false,
+       "tests": [
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": 2198.65,
+         "delta": 13933.775544344497,
+         "element": "semiMajorAxis",
+         "floorSigma": 30.387787553415166,
+         "floorZ": 458.53,
+         "tripped": true
+        },
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": 9.2,
+         "delta": 0.0006062081250872922,
+         "element": "inclination",
+         "floorSigma": 0.0005218775257420807,
+         "floorZ": 1.16,
+         "tripped": false
+        },
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": 902.81,
+         "delta": 0.00023112586866890717,
+         "element": "eccentricity",
+         "floorSigma": 1.6068797708577891e-06,
+         "floorZ": 143.84,
+         "tripped": true
+        }
+       ],
+       "controlBasis": "self-history",
+       "manoeuvreLabelPermitted": true
+      },
+      {
+       "apogeeAltitudeKm": 35815.7,
+       "card": {
+        "kind": "deterministic",
+        "headline": "East-west station-keeping \u2014 inferred, not confirmed",
+        "observation": "Between the two element sets, the semi-major axis moved +7.776 km beyond what could happen on its own, against a floor of 32.9 m; and the eccentricity moved -6.66e-04. Atmospheric drag on a body of this ballistic coefficient accounts for -30.4 m of the change in semi-major axis, give or take 6.9 m; that has been subtracted before anything below is claimed.",
+        "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 1.02 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+        "control": "Compared against 49 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 2403 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+        "candidateCauses": [
+         {
+          "id": "geo-longitude-control",
+          "label": "holding an assigned geostationary longitude",
+          "detail": "The Earth's equator is slightly elliptical, so a geostationary satellite drifts towards one of two stable longitudes unless it is corrected. Holding a slot means small tangential burns every few weeks."
+         },
+         {
+          "id": "collision-avoidance",
+          "label": "a collision-avoidance manoeuvre",
+          "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot."
+         },
+         {
+          "id": "fit-artefact",
+          "label": "an artefact of how the orbit was fitted rather than a real change",
+          "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit."
+         }
+        ],
+        "alternatives": "What could produce this signature: holding an assigned geostationary longitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+        "honesty": "This is a manoeuvre inferred from public elements, not a confirmed cause. Over the same period the detector flagged 41206 intervals out of 89017283 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.047 per cent. The upper bound on that false-alarm rate is below the design target, and payloads are flagged significantly more often than objects without propulsion. That earns the word manoeuvre for this detector; the cause and the \u0394v remain inferences.",
+        "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved."
+       },
+       "confidence": "candidate",
+       "constellation": null,
+       "deltaV": {
+        "eccentricityMetresPerSecond": 1.0238,
+        "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+        "planeChangeMetresPerSecond": 0.0,
+        "tangentialMetresPerSecond": 0.2836,
+        "totalMetresPerSecond": 1.0238
+       },
+       "deltaVMetresPerSecond": 1.0238,
+       "drag": {
+        "applicable": true,
+        "bstar": 0.0001,
+        "cohortCount": 49,
+        "predictedDeltaAMetres": -30.42,
+        "predictedSigmaMetres": 6.86,
+        "propulsiveDeltaAMetres": 7775.96,
+        "reason": "measured from this object's own recent intervals"
+       },
+       "endAt": "2019-12-08T04:19:25Z",
+       "eventKey": "44800|2019-12-07T22:48:32Z|2019-12-08T04:19:25Z|geo-east-west-keeping",
+       "expectation": {
+        "citations": [
+         {
+          "budget": "geo-east-west",
+          "kind": "reference"
+         },
+         {
+          "budget": "geo-north-south",
+          "kind": "reference"
+         }
+        ],
+        "class": "Geostationary payload",
+        "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+        "verdict": "expected-for-class"
+       },
+       "groundTruth": null,
+       "inclinationDeg": 0.0734,
+       "kpMax": null,
+       "name": "TIBA-1",
+       "norad": 44800,
+       "objectType": "PAYLOAD",
+       "perigeeAltitudeKm": 35738.1,
+       "purposeLanguagePermitted": true,
+       "regime": "GEO",
+       "signature": "geo-east-west-keeping",
+       "signatureExplanation": "At geostationary altitude a small change in semi-major axis is the signature of longitude control. The Earth's equatorial ellipticity pulls a satellite towards one of two stable longitudes, and the operator answers with small tangential burns every few weeks. It is the cheap half of geostationary station-keeping.",
+       "signatureLabel": "east-west station-keeping",
+       "spaceWeather": {
+        "densityRatio": null,
+        "kpMax": null
+       },
+       "spanDays": 0.2298,
+       "startAt": "2019-12-07T22:48:32Z",
+       "sunSynchronous": false,
+       "tests": [
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": 1133.57,
+         "delta": 7775.963428813336,
+         "element": "semiMajorAxis",
+         "floorSigma": 32.89213872503804,
+         "floorZ": 236.41,
+         "tripped": true
+        },
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": -5.05,
+         "delta": -0.0003603150121369478,
+         "element": "inclination",
+         "floorSigma": 0.0005648722635786356,
+         "floorZ": -0.64,
+         "tripped": false
+        },
+        {
+         "basis": "self-history",
+         "cohortCount": 49,
+         "cohortScreened": true,
+         "cohortZ": -2402.93,
+         "delta": -0.000665863758106392,
+         "element": "eccentricity",
+         "floorSigma": 1.6103758417276273e-06,
+         "floorZ": -413.48,
+         "tripped": true
+        }
+       ],
+       "controlBasis": "self-history",
+       "manoeuvreLabelPermitted": true
+      }
+     ],
+     "repeatClusters": [
+      {
+       "count": 124,
+       "deltaVSpreadMetresPerSecond": 0.011,
+       "firstAt": "2019-12-08T06:02:48Z",
+       "lastAt": "2026-08-19T11:50:29Z",
+       "medianDaysBetween": 14.125,
+       "medianDeltaVMetresPerSecond": 0.0688,
+       "signature": "geo-east-west-keeping",
+       "spacingScaleDays": 0.659,
+       "totalDeltaVMetresPerSecond": 8.6399
+      },
+      {
+       "count": 21,
+       "deltaVSpreadMetresPerSecond": 0.231,
+       "firstAt": "2020-03-15T04:21:12Z",
+       "lastAt": "2025-09-21T05:05:38Z",
+       "medianDaysBetween": 13.652,
+       "medianDeltaVMetresPerSecond": 1.9804,
+       "signature": "geo-north-south-keeping",
+       "spacingScaleDays": 13.231,
+       "totalDeltaVMetresPerSecond": 40.2828
+      },
+      {
+       "count": 19,
+       "deltaVSpreadMetresPerSecond": 0.0098,
+       "firstAt": "2020-07-29T04:42:55Z",
+       "lastAt": "2025-11-27T03:49:34Z",
+       "medianDaysBetween": 34.762,
+       "medianDeltaVMetresPerSecond": 0.0349,
+       "signature": "geo-east-west-keeping",
+       "spacingScaleDays": 33.281,
+       "totalDeltaVMetresPerSecond": 0.6588
+      }
+     ]
+    },
+    {
+     "norad": 61696,
+     "samples": [
+      {
+       "apogeeKm": 291.93,
+       "bstar": -0.0016204,
+       "eccentricity": 0.0001262,
+       "inclinationDeg": 53.1676,
+       "perigeeKm": 290.247,
+       "semiMajorAxisKm": 6669.2234,
+       "t": 1730736001000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 294.667,
+       "bstar": -0.0019366,
+       "eccentricity": 8.62e-05,
+       "inclinationDeg": 53.1665,
+       "perigeeKm": 293.517,
+       "semiMajorAxisKm": 6672.2271,
+       "t": 1730815201000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 295.42,
+       "bstar": -0.001704,
+       "eccentricity": 9.16e-05,
+       "inclinationDeg": 53.1665,
+       "perigeeKm": 294.198,
+       "semiMajorAxisKm": 6672.9441,
+       "t": 1730829602000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 296.778,
+       "bstar": -0.0020832,
+       "eccentricity": 9.08e-05,
+       "inclinationDeg": 53.1656,
+       "perigeeKm": 295.566,
+       "semiMajorAxisKm": 6674.3068,
+       "t": 1730865601000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 298.333,
+       "bstar": -0.0022076,
+       "eccentricity": 9.16e-05,
+       "inclinationDeg": 53.1658,
+       "perigeeKm": 297.11,
+       "semiMajorAxisKm": 6675.8564,
+       "t": 1730901601000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 299.76,
+       "bstar": -0.0021591,
+       "eccentricity": 0.0001104,
+       "inclinationDeg": 53.1665,
+       "perigeeKm": 298.286,
+       "semiMajorAxisKm": 6677.1582,
+       "t": 1730930402000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 302.006,
+       "bstar": -0.0025549,
+       "eccentricity": 5.42e-05,
+       "inclinationDeg": 53.1661,
+       "perigeeKm": 301.282,
+       "semiMajorAxisKm": 6679.7794,
+       "t": 1730988001000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 303.232,
+       "bstar": -0.0023679,
+       "eccentricity": 6.99e-05,
+       "inclinationDeg": 53.1661,
+       "perigeeKm": 302.298,
+       "semiMajorAxisKm": 6680.8997,
+       "t": 1731009601000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 303.639,
+       "bstar": -0.0025205,
+       "eccentricity": 8.93e-05,
+       "inclinationDeg": 53.1663,
+       "perigeeKm": 302.446,
+       "semiMajorAxisKm": 6681.1774,
+       "t": 1731016801000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 304.55,
+       "bstar": -0.0027354,
+       "eccentricity": 6.96e-05,
+       "inclinationDeg": 53.1657,
+       "perigeeKm": 303.62,
+       "semiMajorAxisKm": 6682.2197,
+       "t": 1731038402000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 308.057,
+       "bstar": -0.0029519,
+       "eccentricity": 0.0001036,
+       "inclinationDeg": 53.1652,
+       "perigeeKm": 306.671,
+       "semiMajorAxisKm": 6685.499,
+       "t": 1731103201000,
+       "tier": "full"
+      },
+      {
+       "apogeeKm": 309.119,
+       "bstar": -0.0031507,
+       "eccentricity": 9.28e-05,
+       "inclinationDeg": 53.1649,
+       "perigeeKm": 307.878,
+       "semiMajorAxisKm": 6686.6331,
+       "t": 1731124802000,
+       "tier": "full"
+      }
+     ],
+     "events": [
+      {
+       "apogeeAltitudeKm": 291.9,
+       "card": {
+        "kind": "deterministic",
+        "headline": "In-plane raise \u2014 inferred, not confirmed",
+        "observation": "Between the two element sets, the semi-major axis moved +2.964 km beyond what could happen on its own, against a floor of 350.7 m. Atmospheric drag on a body of this ballistic coefficient accounts for +39.9 m of the change in semi-major axis, give or take 348.0 m; that has been subtracted before anything below is claimed.",
+        "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 1.72 m/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+        "control": "Compared against 68 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 9 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+        "candidateCauses": [
+         {
+          "id": "drag-make-up",
+          "label": "making up altitude lost to atmospheric drag",
+          "detail": "Every object in low Earth orbit is slowly falling. An operator who wants to stay at a chosen altitude has to put back what the atmosphere takes out, and the higher the air density the more often that has to happen."
+         },
+         {
+          "id": "constellation-slot-maintenance",
+          "label": "holding a position within a constellation's own geometry",
+          "detail": "A large constellation assigns each spacecraft an altitude and a phase, and small in-plane corrections are how a spacecraft is kept in the slot it was given. This is a statement about the published design of the constellation, not about which spacecraft is near which."
+         },
+         {
+          "id": "orbit-raising-campaign",
+          "label": "climbing towards an operational altitude",
+          "detail": "A newly launched spacecraft is usually delivered below where it will work and climbs the rest of the way itself. With electric propulsion the climb takes weeks or months and appears as a steady trend rather than a step."
+         },
+         {
+          "id": "collision-avoidance",
+          "label": "a collision-avoidance manoeuvre",
+          "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot."
+         },
+         {
+          "id": "fit-artefact",
+          "label": "an artefact of how the orbit was fitted rather than a real change",
+          "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit."
+         }
+        ],
+        "alternatives": "What could produce this signature: making up altitude lost to atmospheric drag; holding a position within a constellation's own geometry; climbing towards an operational altitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+        "honesty": "This is a candidate. Over the same period the detector flagged 63 intervals out of 24318 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.329 per cent. Payloads are flagged more often, but this detector's passive upper bound has not cleared the design target. Until it does, this site shows the measurement and keeps the event labelled candidate.",
+        "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved."
+       },
+       "confidence": "candidate",
+       "constellation": "Starlink",
+       "deltaV": {
+        "eccentricityMetresPerSecond": 0.0,
+        "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+        "planeChangeMetresPerSecond": 0.0,
+        "tangentialMetresPerSecond": 1.7178,
+        "totalMetresPerSecond": 1.7178
+       },
+       "deltaVMetresPerSecond": 1.7178,
+       "drag": {
+        "applicable": true,
+        "bstar": -0.0016204,
+        "cohortCount": 68,
+        "predictedDeltaAMetres": 39.87,
+        "predictedSigmaMetres": 348.03,
+        "propulsiveDeltaAMetres": 2963.87,
+        "reason": "measured from this object's own recent intervals"
+       },
+       "endAt": "2024-11-05T14:00:01Z",
+       "eventKey": "61696|2024-11-04T16:00:01Z|2024-11-05T14:00:01Z|along-track-raise",
+       "expectation": {
+        "citations": [
+         {
+          "kind": "derived",
+          "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+         }
+        ],
+        "class": "Starlink",
+        "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+        "verdict": "expected-for-class"
+       },
+       "groundTruth": null,
+       "inclinationDeg": 53.1676,
+       "kpMax": null,
+       "name": "STARLINK-11341",
+       "norad": 61696,
+       "objectType": "PAYLOAD",
+       "perigeeAltitudeKm": 290.2,
+       "purposeLanguagePermitted": true,
+       "regime": "LEO",
+       "signature": "along-track-raise",
+       "signatureExplanation": "The semi-major axis rose by more than atmospheric drag can explain, with the orbit plane essentially unchanged. A prograde tangential burn raises the orbit and slows the ground track's eastward drift.",
+       "signatureLabel": "in-plane raise",
+       "spaceWeather": {
+        "densityRatio": null,
+        "kpMax": null
+       },
+       "spanDays": 0.9167,
+       "startAt": "2024-11-04T16:00:01Z",
+       "sunSynchronous": false,
+       "tests": [
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": 8.52,
+         "delta": 2963.8691786797963,
+         "element": "semiMajorAxis",
+         "floorSigma": 350.68186684446744,
+         "floorZ": 8.45,
+         "tripped": true
+        },
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": -0.58,
+         "delta": -0.0008084198149321746,
+         "element": "inclination",
+         "floorSigma": 0.0015170967684280273,
+         "floorZ": -0.53,
+         "tripped": false
+        },
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": -0.55,
+         "delta": -3.6791685758584345e-05,
+         "element": "eccentricity",
+         "floorSigma": 7.097819829541795e-05,
+         "floorZ": -0.52,
+         "tripped": false
+        }
+       ],
+       "controlBasis": "cohort",
+       "manoeuvreLabelPermitted": false
+      },
+      {
+       "apogeeAltitudeKm": 294.7,
+       "card": {
+        "kind": "deterministic",
+        "headline": "In-plane raise \u2014 inferred, not confirmed",
+        "observation": "Between the two element sets, the semi-major axis moved +709.7 m beyond what could happen on its own, against a floor of 76.5 m. Atmospheric drag on a body of this ballistic coefficient accounts for +7.2 m of the change in semi-major axis, give or take 63.3 m; that has been subtracted before anything below is claimed.",
+        "cost": "If a propulsion system produced this, the cheapest way to do it costs at least 41.1 cm/s. That is a lower bound: a burn in any other direction, or at any other point in the orbit, costs more.",
+        "control": "Compared against 68 other objects within twenty-five kilometres of the same altitude and two degrees of the same inclination over the same hours, this object stands out by about 11 times the spread of that group. Drag and geomagnetic heating act on a whole shell at once; whatever this was did not.",
+        "candidateCauses": [
+         {
+          "id": "drag-make-up",
+          "label": "making up altitude lost to atmospheric drag",
+          "detail": "Every object in low Earth orbit is slowly falling. An operator who wants to stay at a chosen altitude has to put back what the atmosphere takes out, and the higher the air density the more often that has to happen."
+         },
+         {
+          "id": "constellation-slot-maintenance",
+          "label": "holding a position within a constellation's own geometry",
+          "detail": "A large constellation assigns each spacecraft an altitude and a phase, and small in-plane corrections are how a spacecraft is kept in the slot it was given. This is a statement about the published design of the constellation, not about which spacecraft is near which."
+         },
+         {
+          "id": "orbit-raising-campaign",
+          "label": "climbing towards an operational altitude",
+          "detail": "A newly launched spacecraft is usually delivered below where it will work and climbs the rest of the way itself. With electric propulsion the climb takes weeks or months and appears as a steady trend rather than a step."
+         },
+         {
+          "id": "collision-avoidance",
+          "label": "a collision-avoidance manoeuvre",
+          "detail": "Operators are notified of close approaches and routinely move out of the way. These manoeuvres are small, unscheduled, and usually reversed a day or two later. This site does not identify what an object might have been avoiding, and cannot."
+         },
+         {
+          "id": "fit-artefact",
+          "label": "an artefact of how the orbit was fitted rather than a real change",
+          "detail": "These are fitted mean elements published every few hours, not measurements of where the spacecraft is. A gap in tracking, a change in the fitting process, or a mix-up between two objects in similar orbits can all move the published elements without anything moving in orbit."
+         }
+        ],
+        "alternatives": "What could produce this signature: making up altitude lost to atmospheric drag; holding a position within a constellation's own geometry; climbing towards an operational altitude; a collision-avoidance manoeuvre. It could also be an artefact of the fit rather than a real change \u2014 a re-fit after a gap in tracking, or a correlation error between two objects in similar orbits.",
+        "honesty": "This is a candidate. Over the same period the detector flagged 63 intervals out of 24318 on objects that physically cannot manoeuvre \u2014 debris and spent rocket stages \u2014 so flags like this one are wrong at least that often, and the data cannot rule out a rate as high as 0.329 per cent. Payloads are flagged more often, but this detector's passive upper bound has not cleared the design target. Until it does, this site shows the measurement and keeps the event labelled candidate.",
+        "footer": "We infer this from public orbital elements. We are not told what any operator did, and this site never claims to be. These are fitted mean elements published every few hours, not measurements of where the spacecraft is; what we can see is how the fit moved."
+       },
+       "confidence": "candidate",
+       "constellation": "Starlink",
+       "deltaV": {
+        "eccentricityMetresPerSecond": 0.0,
+        "note": "Lower bound: the cheapest manoeuvre consistent with the element change.",
+        "planeChangeMetresPerSecond": 0.0,
+        "tangentialMetresPerSecond": 0.4111,
+        "totalMetresPerSecond": 0.4111
+       },
+       "deltaVMetresPerSecond": 0.4111,
+       "drag": {
+        "applicable": true,
+        "bstar": -0.0019366,
+        "cohortCount": 68,
+        "predictedDeltaAMetres": 7.25,
+        "predictedSigmaMetres": 63.28,
+        "propulsiveDeltaAMetres": 709.71,
+        "reason": "measured from this object's own recent intervals"
+       },
+       "endAt": "2024-11-05T18:00:02Z",
+       "eventKey": "61696|2024-11-05T14:00:01Z|2024-11-05T18:00:02Z|along-track-raise",
+       "expectation": {
+        "citations": [
+         {
+          "kind": "derived",
+          "text": "Starlink spacecraft use krypton or argon Hall-effect thrusters, which are low-thrust and electric: a manoeuvre is spread over many revolutions rather than delivered impulsively, so it appears in the elements as a sustained trend rather than a step. Objects in this fleet are also routinely raising from an injection orbit, holding an operational shell, or being lowered for disposal at any given moment, so almost every in-plane signature is ordinary for them and the interesting question is the SIZE, not the fact."
+         }
+        ],
+        "class": "Starlink",
+        "reason": "Both the manoeuvre type and its cost are in family for this class of object.",
+        "verdict": "expected-for-class"
+       },
+       "groundTruth": null,
+       "inclinationDeg": 53.1665,
+       "kpMax": null,
+       "name": "STARLINK-11341",
+       "norad": 61696,
+       "objectType": "PAYLOAD",
+       "perigeeAltitudeKm": 293.5,
+       "purposeLanguagePermitted": true,
+       "regime": "LEO",
+       "signature": "along-track-raise",
+       "signatureExplanation": "The semi-major axis rose by more than atmospheric drag can explain, with the orbit plane essentially unchanged. A prograde tangential burn raises the orbit and slows the ground track's eastward drift.",
+       "signatureLabel": "in-plane raise",
+       "spaceWeather": {
+        "densityRatio": null,
+        "kpMax": null
+       },
+       "spanDays": 0.1667,
+       "startAt": "2024-11-05T14:00:01Z",
+       "sunSynchronous": false,
+       "tests": [
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": 11.21,
+         "delta": 709.7087653365905,
+         "element": "semiMajorAxis",
+         "floorSigma": 76.51473669653527,
+         "floorZ": 9.28,
+         "tripped": true
+        },
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": 0.21,
+         "delta": 5.301826067141412e-05,
+         "element": "inclination",
+         "floorSigma": 0.0006385264681972165,
+         "floorZ": 0.08,
+         "tripped": false
+        },
+        {
+         "basis": "cohort",
+         "cohortCount": 68,
+         "cohortScreened": true,
+         "cohortZ": 0.49,
+         "delta": 5.983370371093784e-06,
+         "element": "eccentricity",
+         "floorSigma": 2.674141867571924e-05,
+         "floorZ": 0.22,
+         "tripped": false
+        }
+       ],
+       "controlBasis": "cohort",
+       "manoeuvreLabelPermitted": false
+      }
+     ],
+     "repeatClusters": [
+      {
+       "count": 17,
+       "deltaVSpreadMetresPerSecond": 0.183,
+       "firstAt": "2024-11-05T14:00:01Z",
+       "lastAt": "2024-12-12T14:00:01Z",
+       "medianDaysBetween": 0.696,
+       "medianDeltaVMetresPerSecond": 0.6955,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.451,
+       "totalDeltaVMetresPerSecond": 12.7886
+      },
+      {
+       "count": 11,
+       "deltaVSpreadMetresPerSecond": 0.3112,
+       "firstAt": "2024-11-04T16:00:01Z",
+       "lastAt": "2024-12-11T22:00:01Z",
+       "medianDaysBetween": 1.265,
+       "medianDeltaVMetresPerSecond": 1.7097,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.591,
+       "totalDeltaVMetresPerSecond": 18.4597
+      },
+      {
+       "count": 5,
+       "deltaVSpreadMetresPerSecond": 0.1601,
+       "firstAt": "2024-11-05T18:00:02Z",
+       "lastAt": "2024-11-09T04:00:02Z",
+       "medianDaysBetween": 0.708,
+       "medianDeltaVMetresPerSecond": 0.7787,
+       "signature": "along-track-raise",
+       "spacingScaleDays": 0.432,
+       "totalDeltaVMetresPerSecond": 4.1527
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

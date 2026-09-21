@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Transit globe render check</title>
+    <style>
+      html, body { margin: 0; background: #03101a; }
+      #stage { width: 900px; height: 600px; }
+    </style>
+  </head>
+  <body>
+    <!--
+      A verification harness, not a page of the site. It mounts the planner's
+      real TransitGlobe with the real published land artifact, renders it, then
+      reads pixels back out of the WebGL canvas around the projected position of
+      known landmarks.
+
+      This is deliberately not a unit test: the point is to prove that what a
+      browser actually draws lands where the transform says, through the whole
+      three.js pipeline - camera, projection, viewport - rather than proving the
+      transform agrees with itself. Vite serves this in dev; it is not an entry
+      point of the built site, because vite builds only index.html.
+    -->
+    <div id="stage"></div>
+    <script type="module" src="./transit-render-check.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,865 @@
+{
+  "archive": {
+    "completedObjects": 1281,
+    "counts": {
+      "passiveFlags": 1597,
+      "passiveInclination": 1127,
+      "passiveIntervals": 3769544,
+      "passiveObjects": 528,
+      "passiveRows": 4130280,
+      "passiveTooShortObjects": 3,
+      "payloadFlags": 7405,
+      "payloadGeoNS": 226,
+      "payloadInclination": 809,
+      "payloadIntervals": 2242250,
+      "payloadObjects": 753,
+      "payloadRows": 2502067,
+      "payloadTooShortObjects": 1
+    },
+    "cpuSeconds": 850.722327174,
+    "detectorFlags": {
+      "DECLINE_AFTER_TRACKING_GAP": false,
+      "INCLINATION_FLOOR_TAIL_AWARE": false,
+      "MATCHED_CONTROL_STRATA_ENABLED": false
+    },
+    "histograms": {
+      "passiveFlags": {
+        "absZ": {
+          "128-256": 10,
+          "32-64": 995,
+          "64-128": 117,
+          ">=256": 5
+        },
+        "blockCount": {
+          "10": 33,
+          "11": 71,
+          "12": 953,
+          "3": 1,
+          "4": 3,
+          "5": 6,
+          "6": 3,
+          "7": 17,
+          "8": 16,
+          "9": 24
+        },
+        "inclination": {
+          "0-1": 2,
+          "1-5": 3,
+          "15-30": 13,
+          "30-60": 54,
+          "5-15": 5,
+          "60-90": 681,
+          "90-120": 369
+        },
+        "perigee": {
+          "1200-2000 km": 374,
+          "300-500 km": 35,
+          "500-800 km": 201,
+          "800-1200 km": 498,
+          "<300 km": 14,
+          ">2000 km": 5
+        },
+        "scatterDegPerDay": {
+          "0.0001-0.001": 935,
+          "0.001-0.01": 112,
+          "<0.0001": 79,
+          ">=0.01": 1
+        },
+        "spanDays": {
+          "0.1-0.25": 58,
+          "0.25-1": 836,
+          "1-2": 203,
+          ">=2": 30
+        }
+      },
+      "passiveIntervals": {
+        "blockCount": {
+          "0": 1324,
+          "1": 2363,
+          "10": 94389,
+          "11": 197801,
+          "12": 3270926,
+          "2": 3760,
+          "3": 5791,
+          "4": 8845,
+          "5": 11638,
+          "6": 23394,
+          "7": 33648,
+          "8": 47077,
+          "9": 68588
+        },
+        "inclination": {
+          "0-1": 18874,
+          "1-5": 52754,
+          "120-180": 1267,
+          "15-30": 142220,
+          "30-60": 177975,
+          "5-15": 155180,
+          "60-90": 1720126,
+          "90-120": 1501148
+        },
+        "perigee": {
+          "1200-2000 km": 555417,
+          "300-500 km": 202722,
+          "500-800 km": 1093903,
+          "800-1200 km": 1660223,
+          "<300 km": 73785,
+          ">2000 km": 183494
+        },
+        "scatterDegPerDay": {
+          "0.0001-0.001": 2366068,
+          "0.001-0.01": 311874,
+          "<0.0001": 1085694,
+          ">=0.01": 5908
+        },
+        "spanDays": {
+          "0.1-0.25": 197483,
+          "0.25-1": 2424419,
+          "1-2": 948321,
+          ">=2": 199321
+        }
+      },
+      "payloadFlags": {
+        "absZ": {
+          "128-256": 32,
+          "32-64": 650,
+          "64-128": 101,
+          ">=256": 26
+        },
+        "blockCount": {
+          "10": 33,
+          "11": 53,
+          "12": 631,
+          "3": 1,
+          "4": 2,
+          "5": 6,
+          "6": 29,
+          "7": 16,
+          "8": 12,
+          "9": 26
+        },
+        "inclination": {
+          "0-1": 223,
+          "1-5": 14,
+          "15-30": 2,
+          "30-60": 73,
+          "5-15": 12,
+          "60-90": 400,
+          "90-120": 85
+        },
+        "perigee": {
+          "1200-2000 km": 232,
+          "300-500 km": 61,
+          "500-800 km": 154,
+          "800-1200 km": 107,
+          "<300 km": 15,
+          ">2000 km": 240
+        },
+        "scatterDegPerDay": {
+          "0.0001-0.001": 608,
+          "0.001-0.01": 112,
+          "<0.0001": 78,
+          ">=0.01": 11
+        },
+        "spanDays": {
+          "0.1-0.25": 159,
+          "0.25-1": 529,
+          "1-2": 110,
+          ">=2": 11
+        }
+      },
+      "payloadGeoNS": {
+        "absZ": {
+          "128-256": 5,
+          "32-64": 178,
+          "64-128": 40,
+          ">=256": 3
+        },
+        "blockCount": {
+          "10": 9,
+          "11": 12,
+          "12": 190,
+          "4": 1,
+          "6": 1,
+          "7": 2,
+          "8": 5,
+          "9": 6
+        },
+        "inclination": {
+          "0-1": 221,
+          "1-5": 4,
+          "5-15": 1
+        },
+        "perigee": {
+          ">2000 km": 226
+        },
+        "scatterDegPerDay": {
+          "0.0001-0.001": 139,
+          "0.001-0.01": 86,
+          ">=0.01": 1
+        },
+        "spanDays": {
+          "0.1-0.25": 99,
+          "0.25-1": 121,
+          "1-2": 3,
+          ">=2": 3
+        }
+      },
+      "payloadIntervals": {
+        "blockCount": {
+          "0": 439,
+          "1": 852,
+          "10": 38700,
+          "11": 65932,
+          "12": 1987628,
+          "2": 1696,
+          "3": 1992,
+          "4": 2929,
+          "5": 3612,
+          "6": 19250,
+          "7": 31254,
+          "8": 39022,
+          "9": 48944
+        },
+        "inclination": {
+          "0-1": 141380,
+          "1-5": 54948,
+          "120-180": 1,
+          "15-30": 12460,
+          "30-60": 601717,
+          "5-15": 155115,
+          "60-90": 894493,
+          "90-120": 382136
+        },
+        "perigee": {
+          "1200-2000 km": 455227,
+          "300-500 km": 282884,
+          "500-800 km": 767844,
+          "800-1200 km": 270223,
+          "<300 km": 8975,
+          ">2000 km": 457097
+        },
+        "scatterDegPerDay": {
+          "0.0001-0.001": 1300912,
+          "0.001-0.01": 425827,
+          "<0.0001": 509886,
+          ">=0.01": 5625
+        },
+        "spanDays": {
+          "0.1-0.25": 263323,
+          "0.25-1": 1606903,
+          "1-2": 319394,
+          ">=2": 52630
+        }
+      }
+    },
+    "inputSha256": "39ffab6307e12d33d6920be74a2bc44b0018c114ea8227f2cdf5db8e0fd3df34",
+    "kappa": 32,
+    "nice": 19,
+    "selectedObjects": 1281,
+    "selection": "NORAD % 25 == 0; all archive metadata passive/payload objects; all retained epochs",
+    "wallSeconds": 881.8087871099997
+  },
+  "archiveEventQuantiles": {
+    "passive": {
+      "blockCount": {
+        "0": 3,
+        "0.25": 12,
+        "0.5": 12,
+        "0.75": 12,
+        "0.95": 12,
+        "1": 12
+      },
+      "inclination": {
+        "0": 0.1202,
+        "0.25": 70.8116,
+        "0.5": 74.0498,
+        "0.75": 98.8737,
+        "0.95": 101.9965,
+        "1": 102.6213
+      },
+      "scatter": {
+        "0": 0.0,
+        "0.25": 0.00015265782911825354,
+        "0.5": 0.0002676570224924535,
+        "0.75": 0.0005131216640288491,
+        "0.95": 0.00133678058288149,
+        "1": 0.01128381421963018
+      },
+      "sigma": {
+        "0": 0.0001414213562373095,
+        "0.25": 0.00018678465551323243,
+        "0.5": 0.00026109824417485137,
+        "0.75": 0.0004467582732769568,
+        "0.95": 0.000990428341493089,
+        "1": 0.026522941699780565
+      },
+      "z": {
+        "0": 32.003578036659604,
+        "0.25": 35.01784156422779,
+        "0.5": 40.17857628945504,
+        "0.75": 49.9490999319359,
+        "0.95": 85.56363580898059,
+        "1": 62923.62472768614
+      }
+    },
+    "payload": {
+      "blockCount": {
+        "0": 3,
+        "0.25": 12,
+        "0.5": 12,
+        "0.75": 12,
+        "0.95": 12,
+        "1": 12
+      },
+      "inclination": {
+        "0": 0.0001,
+        "0.25": 0.1072,
+        "0.5": 73.9829,
+        "0.75": 82.954,
+        "0.95": 98.1128,
+        "1": 104.7609
+      },
+      "scatter": {
+        "0": 0.0,
+        "0.25": 0.00014759950835895562,
+        "0.5": 0.00030032515390479147,
+        "0.75": 0.0006524265970258152,
+        "0.95": 0.002206883346536219,
+        "1": 0.14944084017949869
+      },
+      "sigma": {
+        "0": 0.0001414213562373095,
+        "0.25": 0.0001803228183575083,
+        "0.5": 0.0002518023745777675,
+        "0.75": 0.0005995684234640042,
+        "0.95": 0.0016881752496829038,
+        "1": 0.10098867683521914
+      },
+      "z": {
+        "0": 32.003505936736474,
+        "0.25": 36.42080225984626,
+        "0.5": 42.20307485444867,
+        "0.75": 55.942579460578436,
+        "0.95": 186.68039445809228,
+        "1": 6055.708419567696
+      }
+    }
+  },
+  "decision": "stop-before-detector-change",
+  "detectorSourceSha256": {
+    "pipeline/orbit_campaigns.py": "cb178a31dde7086ecc093fa480770e05537c9c78d2011cb8c097e3ca66e9426c",
+    "pipeline/orbit_events.py": "56bc4fa3a4aa23a743eb368b5537e8e99f2e77867630f8f81b5d86b8885330de",
+    "pipeline/orbit_sweep_gpu.py": "bd3bef2b57d20026b3907cf7492b2369015c247eea33dc57709f9012cdb2d66b"
+  },
+  "history": {
+    "allLocalShardHashesVerifiedAgainstLiveManifest": true,
+    "objects": 11335,
+    "shards": 256
+  },
+  "liveArtifact": {
+    "count": 1500,
+    "generatedAt": "2026-09-19T12:48:51Z",
+    "manoeuvreLabelPermitted": false,
+    "path": "artifacts/orbit-events-d7919fbbd28d8c62.json",
+    "sha256": "d7919fbbd28d8c6281efceb1fa47df06b942d78e0fb3fcf16614b5d2604fddb4"
+  },
+  "measuredDateUTC": "2026-09-20",
+  "measurementPrograms": {
+    "archive.py": "import sys,json,time,collections,hashlib,statistics,math,os\nfrom pathlib import Path\nsys.path.insert(0,'/home/sdegan/space-teaching-aid')\nfrom pipeline import orbit_campaigns as oc\nout=Path('/tmp/space-phase2-20260920');started=time.monotonic();cpu=time.process_time()\ndb=oc.open_archive_for_reading();assert db.execute('pragma journal_mode').fetchone()[0]=='wal'\ndb.execute('pragma busy_timeout=10000');db.set_progress_handler(lambda:int(time.monotonic()-started>1500),10000)\nfacts={n:(name,t) for n,name,t in db.execute(\"select norad,name,object_type from object where norad%25=0 and object_type in ('DEBRIS','ROCKET BODY','PAYLOAD') order by norad\")}\ncat=oc.load_catalog(Path('/home/sdegan/space-teaching-aid/public/data'));expect=oc.Expectations.load()\ncounts=collections.Counter(); hist={}; events=[]; digest=hashlib.sha256()\ndef band(x,edges):\n    for edge,label in edges:\n        if x<edge:return label\n    return 'other'\ndef dimensions(i,b,z=None,sigma=None):\n    d={'inclination':band(i.inclination_deg,[(1,'0-1'),(5,'1-5'),(15,'5-15'),(30,'15-30'),(60,'30-60'),(90,'60-90'),(120,'90-120'),(181,'120-180')]),'perigee':oc._perigee_band(i.perigee_altitude_km),'blockCount':str(b.blocks),'scatterDegPerDay':band(b.scale,[(1e-4,'<0.0001'),(1e-3,'0.0001-0.001'),(1e-2,'0.001-0.01'),(float('inf'),'>=0.01')]),'spanDays':band(i.span_days,[(0.25,'0.1-0.25'),(1,'0.25-1'),(2,'1-2'),(float('inf'),'>=2')])}\n    if z is not None:d['absZ']=band(abs(z),[(64,'32-64'),(128,'64-128'),(256,'128-256'),(float('inf'),'>=256')])\n    return d\ndef tally(group,d):\n    for dim,value in d.items():hist.setdefault(group,{}).setdefault(dim,collections.Counter())[value]+=1\nfor idx,(n,rows) in enumerate(oc.stream_object_rows(db,only=list(facts),page_rows=8192)):\n    if time.monotonic()-started>1500:raise TimeoutError('1500s deadline')\n    digest.update(json.dumps([n,rows],separators=(',',':')).encode());name,typ=facts[n]; group='payload' if typ=='PAYLOAD' else 'passive'\n    iv=oc.intervals_from_rows(n,name,typ,rows);counts[group+'Rows']+=len(rows);counts[group+'Objects']+=1\n    if len(iv)<9:counts[group+'TooShortObjects']+=1;continue\n    counts[group+'Intervals']+=len(iv)\n    blocks=oc._blocks_for(iv,'inclination'); baselines={k:oc.baseline_at(blocks,k) for k in blocks}\n    ix={}\n    for i in iv:\n        b=baselines[int(i.mid_ms//int(oc.BLOCK_DAYS*86400000))];ix[i.start_ms]=(i,b)\n        tally(group+'Intervals',dimensions(i,b))\n    found=oc.detect_object_events(iv,kappa=32,expectations=expect,record=cat.get(n,{}))\n    for e in found:\n        if e.signature in oc.NON_PROPULSIVE_SIGNATURES:continue\n        counts[group+'Flags']+=1\n        if e.signature=='geo-north-south-keeping':counts[group+'GeoNS']+=1\n        t=next((t for t in e.tests if t.element=='inclination' and t.tripped),None)\n        if t is None:continue\n        counts[group+'Inclination']+=1\n        i,b=ix[e.start_ms];d=dimensions(i,b,t.floor_z,t.floor_sigma);tally(group+'Flags',d)\n        if e.signature=='geo-north-south-keeping':tally(group+'GeoNS',d)\n        events.append({'norad':n,'group':group,'inclination':i.inclination_deg,'perigee':i.perigee_altitude_km,'blockCount':b.blocks,'samples':b.samples,'scatter':b.scale,'within':b.within,'between':b.between,'sigma':t.floor_sigma,'z':abs(t.floor_z),'startMs':e.start_ms,'signature':e.signature,'expectation':e.expectation})\n    if idx%25==0:print(idx+1,'/',len(facts),round(time.monotonic()-started,1),dict(counts),flush=True)\nresult={'selection':'NORAD % 25 == 0; all archive metadata passive/payload objects; all retained epochs','selectedObjects':len(facts),'completedObjects':counts['passiveObjects']+counts['payloadObjects'],'inputSha256':digest.hexdigest(),'counts':counts,'histograms':hist,'events':events,'wallSeconds':time.monotonic()-started,'cpuSeconds':time.process_time()-cpu,'nice':os.getpriority(os.PRIO_PROCESS,0),'detectorFlags':oc.detector_flags(),'kappa':32}\nassert result['completedObjects']==len(facts)\n(out/'archive-result.json').write_text(json.dumps(result,indent=2));print('COMPLETE',dict(counts),flush=True)\n",
+    "enrich.py": "import sys,json,time,collections,datetime,hashlib\nfrom pathlib import Path\nsys.path.insert(0,'/home/sdegan/space-teaching-aid')\nfrom pipeline import orbit_campaigns as oc\nout=Path('/tmp/space-phase2-20260920');events=json.loads((out/'published-inclination.json').read_text());by=collections.defaultdict(list)\nfor e in events:by[e['norad']].append(e)\nc=oc.open_archive_for_reading();c.execute('pragma busy_timeout=10000');start=time.monotonic();c.set_progress_handler(lambda:int(time.monotonic()-start>900),10000)\nmissing=[];h=hashlib.sha256()\nfor idx,(n,rows) in enumerate(oc.stream_object_rows(c,only=sorted(by),page_rows=8192)):\n if time.monotonic()-start>900:raise TimeoutError('900s bound')\n h.update(json.dumps([n,rows],separators=(',',':')).encode())\n iv=oc.intervals_from_rows(n,'',by[n][0]['objectType'],rows);blocks=oc._blocks_for(iv,'inclination');ix={(i.start_ms//1000,i.end_ms//1000):i for i in iv}\n for e in by[n]:\n  times=tuple(int(datetime.datetime.fromisoformat(e[k].replace('Z','+00:00')).timestamp()) for k in ('startAt','endAt'))\n  i=ix.get(times)\n  if i is None:missing.append({'norad':n,'times':times});e['gap']='published interval absent from current archive';continue\n  b=oc.baseline_at(blocks,int(i.mid_ms//int(oc.BLOCK_DAYS*86400000)))\n  e.update(blockCount=b.blocks,samples=b.samples,scatter=b.scale,within=b.within,between=b.between)\n if idx%100==0:print(idx+1,'/',len(by),round(time.monotonic()-start,1),flush=True)\n(out/'published-enriched.json').write_text(json.dumps({'events':events,'missing':missing,'inputSha256':h.hexdigest(),'seconds':time.monotonic()-start}));print('COMPLETE',len(events),'missing',len(missing),flush=True)\n",
+    "published.py": "import json,hashlib,collections,time\nfrom pathlib import Path\nroot=Path('/home/sdegan/space-teaching-aid/public/data'); out=Path('/tmp/space-phase2-20260920')\nm=json.loads((out/'live-manifest.json').read_text())\nlocal=json.loads((root/'manifest.json').read_text())\nassert m['orbitEvents']==local['orbitEvents']\nassert m['orbitHistory']==local['orbitHistory']\na=json.loads((root/m['orbitEvents']['path']).read_text()); print('live matched',m['orbitEvents'],flush=True)\nselected=[]; allcounts=collections.Counter(); began=time.monotonic()\nfor r in m['orbitHistory']['shards']:\n    raw=(root/r['path']).read_bytes();assert hashlib.sha256(raw).hexdigest()==r['sha256']\n    for obj in json.loads(raw)['objects']:\n        for e in obj.get('events',[]):\n            if e.get('controlBasis')!='self-history': continue\n            group='passive' if e['objectType'].upper() in ('DEBRIS','ROCKET BODY') else 'payload' if e['objectType'].upper()=='PAYLOAD' else 'unknown'\n            allcounts[group]+=1\n            tests=[t for t in e['tests'] if t['element']=='inclination' and t['tripped']]\n            if not tests: continue\n            selected.append({k:e.get(k) for k in ('norad','startAt','endAt','inclinationDeg','perigeeAltitudeKm','signature','expectation','objectType')}|{'group':group,'test':tests[0]})\n    if r['shard']%32==0:print('shard',r['shard'],'inclination',len(selected),flush=True)\n(out/'published-inclination.json').write_text(json.dumps(selected))\n(out/'published-controls.json').write_text(json.dumps(a['controls']['selfHistory'],indent=2))\nprint('counts',allcounts,'inclination',collections.Counter(e['group'] for e in selected),'objects',len(set(e['norad'] for e in selected)),'seconds',time.monotonic()-began)\n"
+  },
+  "method": {
+    "baseline": "_blocks_for(intervals, inclination), baseline_at(blocks, int(mid_ms // int(BLOCK_DAYS*86400000)))",
+    "detector": "intervals_from_rows then unmodified detect_object_events(kappa=32, expectations=Expectations.load(), record=current catalog record)",
+    "execution": "nice 19; idle I/O; CPU only; archive hard timeout 1530s and cooperative deadline 1500s; published join 930s hard/900s cooperative",
+    "inclinationFlag": "propulsive event containing an inclination ChannelTest with tripped=True, after persistence and cost checks",
+    "intervalDenominator": "usable intervals on objects with >=9 intervals, as in production; includes intervals without usable baseline",
+    "join": "NORAD plus start/end epoch truncated to published whole seconds; baselines recomputed from current archive",
+    "measurementScriptSha256": {
+      "archive.py": "8d5b3c7736b0ebcdd231f39a353d107ad8ffa7fce58e6a2f6428ed9cbecaa044",
+      "enrich.py": "7b8b375a394f9f8aa673e73692ba5b72ed18636d17d84c49e856e13df0637cfd",
+      "published.py": "8b753747c551692a7aca9ea972de6e842dc34b5ce9df1d60b3036d4b1becb9f1"
+    },
+    "publishedFilter": "controlBasis == self-history, inclination test tripped; all 256 manifest-listed history shards",
+    "reader": "open_archive_for_reading; stream_object_rows(page_rows=8192); SSD WAL; query_only=1",
+    "scatter": "baseline.scale=max(within-block median MAD, between-block MAD), degrees/day; not fit covariance",
+    "selectionSql": "select norad,name,object_type from object where norad%25=0 and object_type in ('DEBRIS','ROCKET BODY','PAYLOAD') order by norad"
+  },
+  "publishedArchiveJoin": {
+    "gaps": [
+      {
+        "events": 45,
+        "geoNorthSouthEvents": 15,
+        "reason": "published-baseline-reconstructed-after-archive-growth"
+      }
+    ],
+    "inputSha256": "aac2a9e009d3ab02089ea2314c452047f9e1733c85951e75fb397e456b5c9bf9",
+    "matchedEvents": 6641,
+    "matchingSampleCounts": 6596,
+    "missing": [],
+    "wallSeconds": 692.039997859014
+  },
+  "publishedControl": {
+    "catalogueGeoNorthSouthKeepingEvents": 2845,
+    "detectorFlags": {
+      "DECLINE_AFTER_TRACKING_GAP": false,
+      "INCLINATION_FLOOR_TAIL_AWARE": false,
+      "MATCHED_CONTROL_STRATA_ENABLED": false
+    },
+    "kappa": 32.0,
+    "passive": {
+      "breakdown": {
+        "channel": [
+          {
+            "count": 29625,
+            "share": 0.6556,
+            "value": "inclination"
+          },
+          {
+            "count": 11514,
+            "share": 0.2548,
+            "value": "semiMajorAxis"
+          },
+          {
+            "count": 4051,
+            "share": 0.0896,
+            "value": "eccentricity"
+          }
+        ],
+        "channelCombination": [
+          {
+            "count": 26255,
+            "share": 0.6571,
+            "value": "inclination"
+          },
+          {
+            "count": 9050,
+            "share": 0.2265,
+            "value": "semiMajorAxis"
+          },
+          {
+            "count": 2184,
+            "share": 0.0547,
+            "value": "eccentricity+inclination"
+          },
+          {
+            "count": 1278,
+            "share": 0.032,
+            "value": "eccentricity+semiMajorAxis"
+          },
+          {
+            "count": 597,
+            "share": 0.0149,
+            "value": "inclination+semiMajorAxis"
+          },
+          {
+            "count": 589,
+            "share": 0.0147,
+            "value": "eccentricity+inclination+semiMajorAxis"
+          }
+        ],
+        "confidence": [
+          {
+            "count": 39953,
+            "share": 1.0,
+            "value": "candidate"
+          }
+        ],
+        "perigeeBand": [
+          {
+            "count": 17144,
+            "share": 0.4291,
+            "value": "800-1200 km"
+          },
+          {
+            "count": 10475,
+            "share": 0.2622,
+            "value": "1200-2000 km"
+          },
+          {
+            "count": 8365,
+            "share": 0.2094,
+            "value": "500-800 km"
+          },
+          {
+            "count": 2400,
+            "share": 0.0601,
+            "value": ">2000 km"
+          },
+          {
+            "count": 1044,
+            "share": 0.0261,
+            "value": "300-500 km"
+          },
+          {
+            "count": 525,
+            "share": 0.0131,
+            "value": "<300 km"
+          }
+        ],
+        "regime": [
+          {
+            "count": 31846,
+            "share": 0.7971,
+            "value": "LEO"
+          },
+          {
+            "count": 4570,
+            "share": 0.1144,
+            "value": "transfer"
+          },
+          {
+            "count": 2070,
+            "share": 0.0518,
+            "value": "HEO"
+          },
+          {
+            "count": 1288,
+            "share": 0.0322,
+            "value": "MEO"
+          },
+          {
+            "count": 96,
+            "share": 0.0024,
+            "value": "near-GEO"
+          },
+          {
+            "count": 83,
+            "share": 0.0021,
+            "value": "GEO"
+          }
+        ],
+        "signature": [
+          {
+            "count": 29597,
+            "share": 0.7408,
+            "value": "inclination-change"
+          },
+          {
+            "count": 6304,
+            "share": 0.1578,
+            "value": "along-track-lower"
+          },
+          {
+            "count": 3712,
+            "share": 0.0929,
+            "value": "along-track-raise"
+          },
+          {
+            "count": 160,
+            "share": 0.004,
+            "value": "deorbit-lowering"
+          },
+          {
+            "count": 147,
+            "share": 0.0037,
+            "value": "geo-east-west-keeping"
+          },
+          {
+            "count": 28,
+            "share": 0.0007,
+            "value": "geo-north-south-keeping"
+          },
+          {
+            "count": 4,
+            "share": 0.0001,
+            "value": "geo-graveyard-raise"
+          },
+          {
+            "count": 1,
+            "share": 0.0,
+            "value": "drag-make-up"
+          }
+        ]
+      },
+      "flaggedObjects": 6260,
+      "flags": 39953,
+      "intervals": 89368801,
+      "jeffreys95": [
+        0.0004426910620571882,
+        0.00045145645721472727
+      ],
+      "objectDays": 77027464.4,
+      "objects": 12537,
+      "ratePerInterval": 0.0004470575810902957,
+      "ratePerObjectYear": 0.18944974189685632
+    },
+    "payload": {
+      "breakdown": {
+        "channel": [
+          {
+            "count": 179612,
+            "share": 0.8359,
+            "value": "semiMajorAxis"
+          },
+          {
+            "count": 21053,
+            "share": 0.098,
+            "value": "inclination"
+          },
+          {
+            "count": 14197,
+            "share": 0.0661,
+            "value": "eccentricity"
+          }
+        ],
+        "channelCombination": [
+          {
+            "count": 163281,
+            "share": 0.8338,
+            "value": "semiMajorAxis"
+          },
+          {
+            "count": 15382,
+            "share": 0.0786,
+            "value": "inclination"
+          },
+          {
+            "count": 11475,
+            "share": 0.0586,
+            "value": "eccentricity+semiMajorAxis"
+          },
+          {
+            "count": 2958,
+            "share": 0.0151,
+            "value": "inclination+semiMajorAxis"
+          },
+          {
+            "count": 1898,
+            "share": 0.0097,
+            "value": "eccentricity+inclination+semiMajorAxis"
+          },
+          {
+            "count": 815,
+            "share": 0.0042,
+            "value": "eccentricity+inclination"
+          },
+          {
+            "count": 9,
+            "share": 0.0,
+            "value": "eccentricity"
+          }
+        ],
+        "confidence": [
+          {
+            "count": 195818,
+            "share": 1.0,
+            "value": "candidate"
+          }
+        ],
+        "perigeeBand": [
+          {
+            "count": 75899,
+            "share": 0.3876,
+            "value": "300-500 km"
+          },
+          {
+            "count": 53169,
+            "share": 0.2715,
+            "value": "500-800 km"
+          },
+          {
+            "count": 29369,
+            "share": 0.15,
+            "value": ">2000 km"
+          },
+          {
+            "count": 19304,
+            "share": 0.0986,
+            "value": "800-1200 km"
+          },
+          {
+            "count": 16283,
+            "share": 0.0832,
+            "value": "1200-2000 km"
+          },
+          {
+            "count": 1794,
+            "share": 0.0092,
+            "value": "<300 km"
+          }
+        ],
+        "regime": [
+          {
+            "count": 163838,
+            "share": 0.8367,
+            "value": "LEO"
+          },
+          {
+            "count": 22108,
+            "share": 0.1129,
+            "value": "GEO"
+          },
+          {
+            "count": 4317,
+            "share": 0.022,
+            "value": "MEO"
+          },
+          {
+            "count": 3793,
+            "share": 0.0194,
+            "value": "HEO"
+          },
+          {
+            "count": 922,
+            "share": 0.0047,
+            "value": "near-GEO"
+          },
+          {
+            "count": 840,
+            "share": 0.0043,
+            "value": "transfer"
+          }
+        ],
+        "signature": [
+          {
+            "count": 122667,
+            "share": 0.6264,
+            "value": "along-track-raise"
+          },
+          {
+            "count": 30259,
+            "share": 0.1545,
+            "value": "along-track-lower"
+          },
+          {
+            "count": 18218,
+            "share": 0.093,
+            "value": "geo-east-west-keeping"
+          },
+          {
+            "count": 16393,
+            "share": 0.0837,
+            "value": "inclination-change"
+          },
+          {
+            "count": 4660,
+            "share": 0.0238,
+            "value": "geo-north-south-keeping"
+          },
+          {
+            "count": 3456,
+            "share": 0.0176,
+            "value": "deorbit-lowering"
+          },
+          {
+            "count": 152,
+            "share": 0.0008,
+            "value": "geo-graveyard-raise"
+          },
+          {
+            "count": 13,
+            "share": 0.0001,
+            "value": "drag-make-up"
+          }
+        ]
+      },
+      "flags": 195818,
+      "intervals": 62952784,
+      "jeffreys95": [
+        0.003096820583967652,
+        0.003124332023030918
+      ],
+      "objectDays": 41533477.6,
+      "objects": 18830,
+      "ratePerInterval": 0.0031105534586047855,
+      "ratePerObjectYear": 1.7220451691890937
+    },
+    "rateSeparation": {
+      "boundRatio": 6.86,
+      "gap": "The payload flag rate is only 6.9 times the false-alarm floor once both are read at their 95 per cent bounds, against the 10 times this site requires before an individual event may be called a manoeuvre. Up to one flag in 7 on a payload could be the same noise.",
+      "meets": false,
+      "note": "Lower bound on the payload rate against upper bound on the passive rate. Bounds rather than point estimates, and an effect size rather than a p-value: with tens of millions of intervals a two-proportion test is significant for a ratio of 1.001, which would say the archive is large rather than that the detector separates the two populations.",
+      "requiredBoundRatio": 10.0
+    }
+  },
+  "publishedDecomposition": {
+    "payload": {
+      "absZ": {
+        "128-256": 519,
+        "32-64": 4273,
+        "64-128": 1142,
+        ">=256": 707
+      },
+      "blockCount": {
+        "10": 181,
+        "11": 249,
+        "12": 5001,
+        "3": 4,
+        "4": 28,
+        "5": 76,
+        "6": 519,
+        "7": 310,
+        "8": 163,
+        "9": 110
+      },
+      "inclination": {
+        "0-1": 2809,
+        "1-5": 255,
+        "15-30": 139,
+        "30-60": 338,
+        "5-15": 211,
+        "60-90": 1307,
+        "90-120": 1582
+      },
+      "perigee": {
+        "1200-2000 km": 104,
+        "300-500 km": 598,
+        "500-800 km": 1879,
+        "800-1200 km": 660,
+        "<300 km": 145,
+        ">2000 km": 3255
+      },
+      "scatterDegPerDay": {
+        "0.0001-0.001": 4497,
+        "0.001-0.01": 1511,
+        "<0.0001": 578,
+        ">=0.01": 55
+      }
+    },
+    "payloadGeoNS": {
+      "absZ": {
+        "128-256": 65,
+        "32-64": 2345,
+        "64-128": 404,
+        ">=256": 31
+      },
+      "blockCount": {
+        "10": 29,
+        "11": 56,
+        "12": 2635,
+        "3": 1,
+        "4": 1,
+        "6": 14,
+        "7": 41,
+        "8": 42,
+        "9": 26
+      },
+      "inclination": {
+        "0-1": 2734,
+        "1-5": 84,
+        "15-30": 6,
+        "30-60": 1,
+        "5-15": 20
+      },
+      "perigee": {
+        ">2000 km": 2845
+      },
+      "scatterDegPerDay": {
+        "0.0001-0.001": 1789,
+        "0.001-0.01": 1044,
+        "<0.0001": 7,
+        ">=0.01": 5
+      }
+    }
+  },
+  "unproven": [
+    "Full-population inclination/baseline decomposition: archive diagnosis uses predeclared 1-in-25 sample",
+    "Fixed-code full-population control and before/after acceptance: no fix attempted",
+    "New CPU/GPU parity run: no arithmetic change",
+    "Physical per-fit covariance and independent truth of payload catches",
+    "Exact published archive snapshot: current archive is mutable; published baselines are reconstructed"
+  ]
+}

@@ -1,0 +1,6152 @@
+{
+  "note": "Facet triples distilled from the real catalog artifact (2026-08-27T06:29:12Z, 8000 objects). Regenerated after the IGSO orbit class shipped and the cohort-corroboration wave landed. Regenerate with the procedure in the accompanying test's docstring.",
+  "satelliteTotal": 8000,
+  "entries": [
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Eutelsat",
+      "owner": "Eutelsat",
+      "orbit": "GEO",
+      "count": 11
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Globalstar",
+      "owner": "Globalstar",
+      "orbit": "LEO",
+      "count": 18
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Inmarsat",
+      "owner": "Inmarsat",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Intelsat",
+      "owner": "Azercosmos",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Intelsat",
+      "owner": "Intelsat",
+      "orbit": "GEO",
+      "count": 18
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Iridium",
+      "owner": "Iridium Communications",
+      "orbit": "LEO",
+      "count": 31
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "O3b / mPOWER",
+      "owner": "O3b / SES",
+      "orbit": "MEO",
+      "count": 10
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "OneWeb",
+      "owner": "Eutelsat OneWeb",
+      "orbit": "LEO",
+      "count": 242
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "SES",
+      "owner": "SES",
+      "orbit": "GEO",
+      "count": 10
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "Starlink",
+      "owner": "SpaceX",
+      "orbit": "LEO",
+      "count": 4649
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "AAC Clyde Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ABS (Agility Beyond Space)",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "APT Satellite (Hong Kong)",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "APT Satellite (Hong Kong)",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ARSAT",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ASELSAN",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "AST SpaceMobile",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Aistech Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Alen Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Almagest Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Angosat (Angola) / ISS Reshetnev",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Apogeo Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Aprize Satellite",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Arab Satellite Communications Organization",
+      "orbit": "GEO",
+      "count": 7
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ArkEdge Space",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Asia Satellite Telecommunications Company (AsiaSat)",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Astranis",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Astranis",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Astranis / Anuvu",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Astranis / Orbits Corp",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Astrocast",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Avanti Communications",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Azercosmos",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "B-SAT Corporation",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Bangladesh Communication Satellite Company Limited",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Bank Rakyat Indonesia",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Beijing Guodian Gaoke Technology",
+      "orbit": "LEO",
+      "count": 28
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Belintersat (Belarus)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Bulgaria Sat",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Bureau 1440",
+      "orbit": "LEO",
+      "count": 31
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "China Satcom",
+      "orbit": "GEO",
+      "count": 18
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Connecta / Plan-S",
+      "orbit": "LEO",
+      "count": 17
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "DirecTV / AT&T",
+      "orbit": "GEO",
+      "count": 8
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "DirecTV Latin America",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "E-Space",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "EchoStar (formerly TerreStar Networks)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "EchoStar / DISH Network",
+      "orbit": "GEO",
+      "count": 8
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "EchoStar Global LLC",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "EchoStar Mobile",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Embratel Star One",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Es'hailSat",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Eutelsat",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "FOSSA Systems",
+      "orbit": "LEO",
+      "count": 9
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Fleet Space Technologies",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Galaxy Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Gazprom Space Systems",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Geespace (Zhejiang Geely Holding Group)",
+      "orbit": "LEO",
+      "count": 63
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "German Orbital Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Gravity Space",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "HEAD Aerospace",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hellas Sat (Arabsat)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hellas Sat / Inmarsat",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hellas Sat / KACST",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "HispaSat",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hispasat",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Horizons Satellite (Intelsat / SKY Perfect JSAT)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hubble Network",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Hughes Network Systems / EchoStar",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ICO Global Communications",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "ICO Satellite Management -> DBSD North America -> EchoStar",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Inmarsat / ESA",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "KLEO Connect",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "KT SAT",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Kepler Communications",
+      "orbit": "LEO",
+      "count": 11
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Kin\u00e9is",
+      "orbit": "LEO",
+      "count": 25
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Lao Satellite Joint Venture Co.",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Ligado Networks (formerly SkyTerra / LightSquared)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "LusoSpace",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Lynk Global",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Lynk Global, Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "MEASAT",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "NBN Co",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "NIGCOMSAT Ltd",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "National Telecommunications Public Company (NT), Thailand",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "NewSpace India Limited",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Nilesat",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "NuSpace",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "O3b / SES",
+      "orbit": "MEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "OHB Cosmos International",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "OQ Technology",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Omnispace",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Open Cosmos",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Optus",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Ovzon",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "PT Pasifik Satelit Nusantara",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "PointView Tech LLC (Facebook subsidiary)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Prisma Electronics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "QuetzSat / SES",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Rapidtek Technologies",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "RascomStar-QAF",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SES",
+      "orbit": "GEO",
+      "count": 16
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SKY Perfect JSAT",
+      "orbit": "GEO",
+      "count": 9
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SKY Perfect JSAT / Kacific Broadband Satellites",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SUPARCO",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Sateliot",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Satelit Nusantara Tiga",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SingTel / Chunghwa Telecom",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Sirion Global / Helios Wire",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SiriusXM",
+      "orbit": "GEO",
+      "count": 7
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SiriusXM (formerly XM Satellite Radio)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Skykraft",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Space Telecommunication Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "SpaceQuest",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Spacecom",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Startical (ENAIRE / Indra)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Telenor Satellite",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Telesat",
+      "orbit": "GEO",
+      "count": 12
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Telesat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Telkom Indonesia",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Telkomsat",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Thaicom",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Thuraya / Space42",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Tron Future Tech",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Turkmenistan National Space Agency / Space Systems International-Monaco",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Turksat",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Tyvak International / Eutelsat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Viasat",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Vietnam Posts and Telecommunications Group (VNPT)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "WildBlue Communications (later Viasat)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "WorldSpace Corp. -> CMMB Vision / Silkwave",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "commercial-satcom",
+      "constellation": "__independent__",
+      "owner": "Yahsat",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "Arctic Satellite Broadband Mission",
+      "owner": "Space Norway",
+      "orbit": "HEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "A*STAR / NUS",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT Argentina",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT Italia",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT-DL",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT-EA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT-NA",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "AMSAT-UK",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Agence Spatiale Algerienne (ASAL)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Agencia Boliviana Espacial",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "CAMSAT (Chinese Radio Amateur Satellite Group)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "CAMSAT and DFH Satellite (CAST)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "CASIC (Hongyun project)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "CASIC (Xingyun project)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "CASIC (Xingyun project, Fourth Academy)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Academy of Space Technology (CAST)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Academy of Space Technology (CAST)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "GEO",
+      "count": 12
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Satcom / China Telecom",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "China Satellite Network Group (China SatNet)",
+      "orbit": "LEO",
+      "count": 201
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Crown Prince Foundation of Jordan",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "European Space Agency / Airbus",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "German Aerospace Center (DLR) / Bundeswehr",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Gonets Satellite System / ISS Reshetnev",
+      "orbit": "LEO",
+      "count": 23
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Government of Egypt",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Government of Mexico",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Harbin Institute of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Herzliya Science Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "INTA (Instituto Nacional de Tecnica Aeroespacial)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "GEO",
+      "count": 17
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Interferometrics Inc. / AMRAD",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Islamic Republic of Iran Broadcasting",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Israel Aerospace Industries",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "JARL / JAMSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "JAXA",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "KACST Space Research Institute",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "KT Corporation / Agency for Defense Development",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "GEO",
+      "count": 8
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Optus / Australian Department of Defence",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Peking University and Geespace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not published)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "ROSTO (Russian Defence Sports and Technical Organisation)",
+      "orbit": "OTHER",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Republican Center of Space Communications (Kazakhstan)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / ISS Reshetnev",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / ISS Reshetnev",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Russian Satellite Communications Company (RSCC)",
+      "orbit": "GEO",
+      "count": 12
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Russian Satellite Communications Company (RSCC)",
+      "orbit": "OTHER",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "SES Americom -> U.S. Department of Defense",
+      "orbit": "IGSO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "SKY Perfect JSAT / DSN Corporation",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "SUPARCO",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Shanghai Tsingshen Technology / Tsinghua University",
+      "orbit": "MEO",
+      "count": 2
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Switzerland",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Telebras",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Tsinghua University and Xinwei Telecom",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Tyvak International / ESA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "U.S. Naval Academy",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "University of Surrey / SSTL",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "communications",
+      "constellation": "__independent__",
+      "owner": "Yahsat",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Disaster Monitoring Constellation",
+      "owner": "Beijing Landview Mapping Information Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Disaster Monitoring Constellation",
+      "owner": "China Centre for Resources Satellite Data and Application (CRESDA)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Disaster Monitoring Constellation",
+      "owner": "DMC International Imaging / SSTL",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Disaster Monitoring Constellation",
+      "owner": "Deimos Imaging / GEOSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Sentinel",
+      "owner": "European Union / ESA",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "SkySat",
+      "owner": "Planet Labs",
+      "orbit": "LEO",
+      "count": 12
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Yaogan",
+      "owner": "People's Republic of China",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Yaogan",
+      "owner": "People's Republic of China",
+      "orbit": "LEO",
+      "count": 156
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "Yaogan",
+      "owner": "People's Republic of China",
+      "orbit": "MEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "AAC Clyde Space",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "AAC Clyde Space (AAC SpaceQuest)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "AAC Clyde Space / Wyvern",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "AAC SpaceQuest",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ABAE (Agencia Bolivariana para Actividades Espaciales)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Absolut Sensing",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Accenture / Open Cosmos",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Agence Spatiale Algerienne (ASAL)",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Agency for Defence Development / DAPA",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Agency for Defense Development / DAPA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Air University Pakistan / Istanbul Technical University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Airbus Defence and Space",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Aistech Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Angkasa-X",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Arab Space Cooperation Group / UAEU NSSTC",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Argotec / ASI - IRIDE programme",
+      "orbit": "LEO",
+      "count": 15
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Astro Digital (Aquila Space)",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Axelspace",
+      "orbit": "LEO",
+      "count": 12
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Azista BST Aerospace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Beijing Normal University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Beijing Space View Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "BlackSky Global",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Botswana International University of Science and Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "C3S Electronics Development",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "CNES",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "CNES / Airbus Defence and Space",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "CONAE",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "CONIDA (Peru) / Peruvian Armed Forces",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "CRTS (Morocco) / Technische Universit\u00e4t Berlin",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Canadian Space Agency",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Canon Electronics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Carbon Mapper / Planet Labs",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Centre d'Etude et de Recherche de Djibouti",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Chang Guang Satellite Technology (CGSTL)",
+      "orbit": "LEO",
+      "count": 30
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "China Centre for Resources Satellite Data and Application (CRESDA)",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration",
+      "orbit": "LEO",
+      "count": 32
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration / Ministry of Natural Resources",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "China Siwei Survey and Mapping Technology (CASC)",
+      "orbit": "LEO",
+      "count": 12
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences (CBAS)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences (Qilu Aerospace Information Research Institute)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences (Shanghai Small Satellite Centre)",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Chosun University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Contec",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Creotech Instruments",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "DLR / Airbus Defence and Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "DSTA / ST Engineering",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Danish Student CubeSat Program",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Dauria Aerospace / Canopus Systems",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Deimos Imaging / GEOSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Democritus University of Thrace / Hellenic Space Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Dragonfly Aerospace for EOS Data Analytics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "EMTech Space / Hellenic Ministry of Digital Governance",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ESA / EUMETSAT / NASA / NOAA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ESA / JAXA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Earth Fire Alliance / Muon Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Egypt",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Egyptian Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "EllipSpace",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "EnduroSat",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "European Space Agency / Beyond Gravity Austria / TU Graz",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "European Space Agency / Open Cosmos",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Eycore (Advanced Protection Systems)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Fuerza Aerea de Chile",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "GHGSat",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "GISTDA",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "GalaxEye",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Generalitat de Catalunya / IEEC",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "German Aerospace Center (DLR)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "German Armed Forces",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Ghalam LLP (Kazakhstan) / SSTL",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Gilmour Space Technologies",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Govern de les Illes Balears / Open Cosmos",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Hanwha Systems / Agency for Defense Development",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Harbin Institute of Technology and the Chinese Academy of Space Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "HawkEye 360",
+      "orbit": "LEO",
+      "count": 36
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Hellenic Ministry of Digital Governance / Open Cosmos Aegean",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Hera Systems Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Hisdesat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Hokkaido University / Tohoku University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "IACTEC-Espacio, Instituto de Astrofisica de Canarias",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "IHI Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "INPE",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "INPE / CAST",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "INTA (Instituto Nacional de Tecnica Aeroespacial)",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ISRO / CNES",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ImageSat International",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Indian Space Research Organisation",
+      "orbit": "LEO",
+      "count": 9
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Iranian Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI) / ESA - IRIDE programme",
+      "orbit": "LEO",
+      "count": 16
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI) / Italian Ministry of Defence",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "JAXA",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "JAXA / NIES / Ministry of the Environment",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Japan Space Systems / Seiren Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Jinju City / Korea Testing Laboratory / Gyeongsang National University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Junta de Andalucia (AGAPA) / Open Cosmos",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "KACST Space Research Institute",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "KAIST",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "KARI / Korea Aerospace Industries / National Geographic Information Institute",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Kazakhstan Gharysh Sapary / Kazcosmos",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Industries / Rural Development Administration / Korea Forest Service",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Research Institute (KARI)",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Kuva Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "LAPAN / Bogor Agricultural University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "LAPAN / TU Berlin",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Lemu",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Loft Orbital / EarthDaily Analytics",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Loft Orbital / Hydrosat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Luxembourg Directorate of Defence",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "MDA Space / Canadian Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "MinoSpace (Beijing MinoSpace Technology)",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Mohammed bin Rashid Space Centre",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Muon Space / Hydrosat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Muon Space for Sierra Nevada Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Muon Space for the Earth Fire Alliance",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NARSS",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASA / CNES",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASA / ISRO",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASA / JAXA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASA / University of Wisconsin-Madison",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NASRDA",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NEC / Japan Space Systems, for METI",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NOAA / NASA / CNES / EUMETSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NOVI",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Nanyang Technological University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Nara Space Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Nara Space Technology / Gyeonggi Province",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "National Aerospace Technology Administration (DPRK)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "National Satellite Ocean Application Service (NSOAS)",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "National University of Singapore",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Norwegian University of Science and Technology (NTNU)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "NovaWurks",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "OHB Italia",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Open Cosmos / Satellite Applications Catapult",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Orbital Sidekick",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "OroraTech",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "PES University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "LEO",
+      "count": 19
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not independently confirmed)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Philippine Space Agency / University of the Philippines Diliman",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Pixxel",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Planet Labs",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Planet Labs (for the Swedish Armed Forces)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Polish Armament Agency / Creotech Instruments",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Polish Ministry of National Defence / Military University of Technology (WAT)",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Quantum Generative Materials (GenMat)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Republic of Korea",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / NPO Mashinostroyeniya",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / NPP VNIIEM",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / RKTs Progress",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Royal Moroccan Armed Forces",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Royal Thai Air Force",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "SPACE-SI (Slovenian Centre of Excellence for Space Sciences and Technologies)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "ST Engineering / DSTA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "SUPARCO",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "SUPARCO (Pakistan)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Salish Kootenai College",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Samara National Research University / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Sapienza University of Rome / Iraqi Ministry of Higher Education",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "SatVu",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Satellite Technology Research Center, KAIST",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Satlantis",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Satrec Initiative",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Sen",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Seoul National University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Shanghai Academy of Spaceflight Technology (SAST)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Sharjah Space and Astronomy Hub",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Sidus Space",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Sierra Nevada Corporation / Muon Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "South Australian Government / SmartSat CRC",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Space Technology Institute, VAST",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Surrey Satellite Technology Ltd",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Surrey Satellite Technology Ltd / Oxford Space Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Synspective",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "TRL Space Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "TUBITAK UZAY",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Taiwan Space Agency (TASA)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Taiwan Space Agency (TASA/NSPO)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Tata Advanced Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "TelePIX / SatRev",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Turkish Ministry of National Defence / TUBITAK UZAY",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Turkish Presidency of Defence Industries (SSB)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Twenty First Century Aerospace Technology (21AT)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "UK Ministry of Defence / UK Space Command",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "USGS / NASA",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "United Arab Emirates Armed Forces",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Universidad Popular Autonoma del Estado de Puebla",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "University of North Carolina Wilmington",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "University of Tokyo / NESTRA",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Vantor (formerly Maxar)",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Wakayama University / UNIFORM consortium",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Wuhan University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Xplore Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Yonsei University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Zhejiang Miaoyue Aerospace Application Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Zhuhai Orbita Aerospace Science & Technology",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "Zhuzhou Space Interstellar Satellite Technology / PIESAT Information Technology",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "constellr",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "exactEarth / Myriota",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "earth-observation",
+      "constellation": "__independent__",
+      "owner": "iQPS (Institute for Q-shu Pioneers of Space)",
+      "orbit": "LEO",
+      "count": 11
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "China Manned Space Agency",
+      "orbit": "LEO",
+      "count": 8
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "Innovation Academy for Microsatellites, Chinese Academy of Sciences",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "International Space Station partners",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "Northrop Grumman / NASA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / RSC Energia",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "human-spaceflight",
+      "constellation": "__independent__",
+      "owner": "SpaceX",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Air Force Research Laboratory",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Canadian Armed Forces",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "GEO",
+      "count": 24
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Russian Federation (assessed)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "LEO",
+      "count": 46
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "U.S. National Reconnaissance Office",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "U.S. Naval Research Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "U.S. Navy",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "military-other",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "AEHF",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "MUOS",
+      "owner": "U.S. Space Force / U.S. Navy",
+      "orbit": "GEO",
+      "count": 5
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "PWSA Transport Layer",
+      "owner": "Space Development Agency",
+      "orbit": "LEO",
+      "count": 63
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "TacSat",
+      "owner": "U.S. Navy / Naval Research Laboratory",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "UHF Follow-On (UFO)",
+      "owner": "U.S. Navy",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "WGS",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 10
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Agency for Defense Development (ADD) / DAPA",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "DSN Corporation, for the Japanese Ministry of Defense",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Direction g\u00e9n\u00e9rale de l'armement (DGA) / French armed forces",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "France / Italy",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "German Bundeswehr (SATCOMBw)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Hisdesat, for the Spanish Ministry of Defence",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "MIT Lincoln Laboratory",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Norwegian Defence Research Establishment (FFI)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Optus",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "HEO",
+      "count": 5
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "LEO",
+      "count": 39
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "Space Development Agency",
+      "orbit": "LEO",
+      "count": 20
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "U.S. Army Space and Missile Defense Command",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "U.S. Navy",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force (formerly U.S. Air Force)",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "milsatcom",
+      "constellation": "__independent__",
+      "owner": "UK Ministry of Defence",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "SBIRS",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 6
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "__independent__",
+      "owner": "Missile Defense Agency",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "HEO",
+      "count": 6
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "__independent__",
+      "owner": "Space Development Agency",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "missile-warning",
+      "constellation": "__independent__",
+      "owner": "US Space Development Agency",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "navigation",
+      "constellation": "BeiDou",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "GEO",
+      "count": 10
+    },
+    {
+      "mission": "navigation",
+      "constellation": "BeiDou",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "IGSO",
+      "count": 9
+    },
+    {
+      "mission": "navigation",
+      "constellation": "BeiDou",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "MEO",
+      "count": 31
+    },
+    {
+      "mission": "navigation",
+      "constellation": "GLONASS",
+      "owner": "Russian Federation",
+      "orbit": "MEO",
+      "count": 28
+    },
+    {
+      "mission": "navigation",
+      "constellation": "GPS",
+      "owner": "U.S. Space Force",
+      "orbit": "MEO",
+      "count": 40
+    },
+    {
+      "mission": "navigation",
+      "constellation": "Galileo",
+      "owner": "European Union / ESA",
+      "orbit": "MEO",
+      "count": 23
+    },
+    {
+      "mission": "navigation",
+      "constellation": "NavIC",
+      "owner": "ISRO",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "navigation",
+      "constellation": "NavIC",
+      "owner": "ISRO",
+      "orbit": "IGSO",
+      "count": 3
+    },
+    {
+      "mission": "navigation",
+      "constellation": "QZSS",
+      "owner": "Cabinet Office of Japan (QZSS)",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "navigation",
+      "constellation": "QZSS",
+      "owner": "Cabinet Office of Japan (QZSS)",
+      "orbit": "IGSO",
+      "count": 3
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "Air Force Research Laboratory",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "Beijing Future Navigation Technology",
+      "orbit": "LEO",
+      "count": 25
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "IGSO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "China Satellite Navigation Office",
+      "orbit": "MEO",
+      "count": 2
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence (assessed)",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "TrustPoint",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "U-Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "navigation",
+      "constellation": "__independent__",
+      "owner": "Xona Space Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Australia",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Azerbaijan",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Belgium",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Commonwealth of Independent States",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "CrunchLabs",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "DHS Science and Technology Directorate / U.S. Coast Guard",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Denmark",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "France",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Germany",
+      "orbit": "LEO",
+      "count": 14
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Greece",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Impulse Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Israel",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Japan",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Research Institute (KARI)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Lithuania",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Muon Space / Sierra Nevada Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Netherlands",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Ningxia Jingui Information Technology",
+      "orbit": "LEO",
+      "count": 10
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Not yet attributed in the registry",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Poland",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "SLB",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Saudi Arabia",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Shanghai Academy of Spaceflight Technology (SAST)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Spaceflight Inc. / Celestis",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Spaceflight Inc. / NearSpace Launch",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Spain",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Sweden",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "Taiwan",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "T\u00fcrkiye",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "United Arab Emirates",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "United Kingdom",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "other",
+      "constellation": "__independent__",
+      "owner": "United States",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "science",
+      "constellation": "Swarm",
+      "owner": "European Space Agency",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Aalto University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Air Force Research Laboratory",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Blue Skies Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Boston University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Boston University Center for Space Physics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "CNES",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "CalgaryToSpace, University of Calgary",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Canadian Space Agency",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Canadian Space Agency / Defence Research and Development Canada",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Canadian Space Agency / University of Calgary",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Cape Peninsula University of Technology / SANSA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration / National Satellite Meteorological Centre",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "China National Space Administration and the Italian Space Agency",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences (Institute of High Energy Physics)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences (Purple Mountain Observatory)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences, with ESA and the Max Planck Institute",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Dartmouth College",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Defence Science and Technology Group",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Electro Optic Systems / Western Pacific Laser Tracking Network",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "HEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "European Space Agency / Chinese Academy of Sciences",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Finnish Centre of Excellence in Sustainable Space / Aalto University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Friedrich Schiller University Jena / NanoAvionics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "German Aerospace Center (DLR)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Graz University of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "INAF / ASI - HERMES Pathfinder",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "INPE / Federal University of Santa Maria",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "ISRO with M.V. Lomonosov Moscow State University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Institute for Precision Instrument Engineering (IPIE)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI) / Sapienza University of Rome",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI) / Sapienza University of Rome",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "JAXA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "JAXA / ISAS",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "JAXA / ISAS",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "JAXA / NASA / ESA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "JAXA / NASA / UKSA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "KARI / KAIST SaTReC / Korea Astronomy and Space Science Institute",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Kanazawa University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Kochi National College of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Industries / Ministry of Science and ICT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Kyushu Institute of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Kyushu Institute of Technology / JAXA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "LASP, University of Colorado Boulder",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "LATMOS / Universit\u00e9 de Versailles Saint-Quentin",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Laboratory for Atmospheric and Space Physics, University of Colorado Boulder",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "MIREA - Russian Technological University / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "MSU-Standart / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Moscow State University (SINP MSU)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "HEO",
+      "count": 9
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "IGSO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / ASI",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / ESA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / GFZ Helmholtz Centre Potsdam",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / Italian Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / Johns Hopkins Applied Physics Laboratory",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / LASP, University of Colorado Boulder",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / Southwest Research Institute",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA / University of Iowa",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NASA Ames Research Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "NPO Lavochkin / Space Research Institute (IKI)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Naval Postgraduate School",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Nihon University (Okuyama Laboratory)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Novosibirsk State University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "POPACS collaboration (Utah State University, Drexel University, Planetary Systems Corp.)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "POPACS consortium (Utah State University, Drexel University, Planetary Systems Corporation)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Pennsylvania State University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "ROM",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / International Laser Ranging Service",
+      "orbit": "MEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Roscosmos / NPP VNIIEM",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence / ISS Reshetnev",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "SRM University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Satellite Technology Research Center, KAIST",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Seoul National University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Sharjah Academy for Astronomy, Space Sciences and Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Space LiinTech / Yonsei University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Space Research Centre of the Polish Academy of Sciences",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Swedish National Space Agency / Stockholm University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Technical University of Denmark (DTU Space)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "Technical University of Kosice / Spacemanic",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "The Aerospace Corporation",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "UC Berkeley Space Sciences Laboratory / NASA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "United States",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "University of California Berkeley Space Sciences Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "University of Colorado Boulder",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "University of Sydney / CUAVA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "University of Toronto / BRITE-Constellation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "University of Victoria",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "von Karman Institute / European Commission",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "science",
+      "constellation": "__independent__",
+      "owner": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Aerospacelab",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "ArkEdge Space",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Aurora Insight / NanoAvionics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "BAE Systems",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Kleos Space",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Norwegian Space Agency",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Norwegian Space Agency / Kongsberg",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Norwegian and Netherlands Ministries of Defence (MilSpace2)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "U-Space / CNES",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "signals-intelligence",
+      "constellation": "__independent__",
+      "owner": "Unseenlabs",
+      "orbit": "LEO",
+      "count": 16
+    },
+    {
+      "mission": "technology",
+      "constellation": "SkySat",
+      "owner": "Planet Labs",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "AO OKB-5",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "AVS (Added Value Solutions)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "AZSpace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Aethero",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Aichi University of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Air Force Research Laboratory",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Air Force Research Laboratory",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Alba Orbital",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Anduril Industries",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Apex Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Apex Space (operator reported as US Special Operations Command)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Argentine Ministry of Science, Technology and Productive Innovation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Array Labs",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Astro Digital",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Astro Digital / Orbit Fab",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Astroscale Japan",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Atomos Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Axelspace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "BULL Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Bonch-Bruevich St Petersburg State University of Telecommunications / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Budapest University of Technology and Economics",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "C-Space (Zhejiang)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "C3S Electronics Development / ESA NAVISP",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "CAS Satellite Technology Group",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "CASIC",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "CU Aerospace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Cal Poly (PolySat)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Cal Poly CubeSat Laboratory (PolySat), California Polytechnic State University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "CesiumAstro",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "China Academy of Space Technology (CAST)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "China Aerospace Science and Technology Corporation (CASC)",
+      "orbit": "LEO",
+      "count": 32
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Chinese Academy of Sciences",
+      "orbit": "LEO",
+      "count": 11
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "D-Orbit",
+      "orbit": "LEO",
+      "count": 19
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "DARPA",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "DARPA / NovaWurks",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "DARPA / NovaWurks",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "DLR (German Aerospace Center)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Dauria Aerospace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Defence Research and Development Canada",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Dhruva Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Digantara",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Dru\u0161tvo EVO (Croatia)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "ETRI (Electronics and Telecommunications Research Institute) / Nara Space Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Ecuadorian Civilian Space Agency (EXA)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Egyptian Space Agency",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "EnduroSat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "HEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "European Space Agency",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Exotrail",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Exotrail / EnduroSat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Fergani Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Fraunhofer EMI / Bundeswehr",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "GAUSS Srl",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "GITAI USA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "General Atomics Electromagnetic Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "General Atomics Electromagnetic Systems (GA-EMS)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Georgia Institute of Technology",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "GomSpace",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Harbin Institute of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "HawkEye 360",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Hokkaido University of Science",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Hongqing Technology (LandSpace)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "IIT Kanpur",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "INTA (Instituto Nacional de Tecnica Aeroespacial)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "ISIS - Innovative Solutions In Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "ISS Reshetnev",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Igor Sikorsky Kyiv Polytechnic Institute",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Impulse Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Institute of Science Tokyo (formerly Tokyo Institute of Technology)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Instituto Superior T\u00e9cnico, Lisbon",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Instituto Tecnologico de Aeronautica",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Inversion Space Co.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Iran",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Iran National Space Administration",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Iranian Space Research Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Istanbul Technical University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Italian Space Agency (ASI) / CIRA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "JAXA",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Johns Hopkins University Applied Physics Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "K2 Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "KACST Space Research Institute",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Kagawa University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Katalyst Space Technologies",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Kawasaki Heavy Industries",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Khrunichev State Research and Production Space Center",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Khrunichev State Research and Production Space Center",
+      "orbit": "OTHER",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "King Mongkut's University of Technology North Bangkok",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Research Institute (KARI)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Kuwait University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Kyushu Institute of Technology / Nanyang Technological University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "LASAR team / Spacemanic",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Laser Starcom (Beijing)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Launcher (later Vast)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Lockheed Martin",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Loft Orbital",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "MIT Lincoln Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "MIT Lincoln Laboratory",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "MITRE Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Mitsubishi Heavy Industries",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Mohammed V University of Rabat",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Momentus",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Momentus Space",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Moscow School No. 2086 / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Moscow State University / Space-Pi",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Mozhaisky Military Space Academy",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Mozhaisky Military Space Academy",
+      "orbit": "MEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Muon Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA Ames Research Center",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA Jet Propulsion Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA Johnson Space Center",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA Langley Research Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NASA Marshall Space Flight Center",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NICT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NOVI",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Nagoya University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National Central University / Aegiverse",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National Cheng Kung University",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National Cheng Kung University / SATORO",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National Space Science Agency (Bahrain)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National Taipei University of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "National and Kapodistrian University of Athens",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Naval Postgraduate School",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NearSpace Launch",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NearSpace Launch (Dream Big university constellation)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NearSpace Launch / GLOBE Mission EARTH (University of Toledo)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "NearSpace Launch / university consortium",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Nihon University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Northwest Nazarene University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "OrbAstro",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not published)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not published)",
+      "orbit": "HEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not published)",
+      "orbit": "IGSO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "People's Republic of China (operator not published)",
+      "orbit": "LEO",
+      "count": 33
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Peter the Great St Petersburg Polytechnic University / Space-Pi",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Planet Labs",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Planetek Hellas",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Portland State Aerospace Society, Portland State University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Proteus Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Republic of Korea",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Rogue Space Systems",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Russian Aerospace Defence Forces",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Russian Ministry of Defence",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SITAEL / ESA / ASI",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SRI International",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SUPARCO",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SUPSI (University of Applied Sciences of Southern Switzerland)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Satellite Technology Research Center, KAIST",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Satellogic",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Seoul National University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Shanghai (Aerospace System Engineering Institute / Aes Space)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Shanghai Academy of Spaceflight Technology (SAST)",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Shizuoka University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Space Forge",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Space Norway",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SpaceLogistics (Northrop Grumman)",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SpaceQuest / Aurora Insight",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Spaceflight Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Spaceflight Inc. (hosting Boeing Varuna-TDM)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "SpeQtral / RAL Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Starcloud LLC",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Starfish Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Surrey Satellite Technology Ltd",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Surrey Space Centre / SSTL",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Sustain Space (Emposat) and Hunan University of Science and Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "TU Berlin and University of W\u00fcrzburg",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Technion",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Technische Universit\u00e4t Berlin",
+      "orbit": "LEO",
+      "count": 11
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Teikyo University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Telesat",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Texas A&M University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "The Aerospace Corporation",
+      "orbit": "LEO",
+      "count": 12
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tohoku University, Hokkaido University and Muroran Institute of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tokyo Institute of Technology",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tokyo Institute of Technology (LSS)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tokyo Metropolitan College of Industrial Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "TriSept Corporation",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "True Anomaly",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "True Anomaly Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Turion Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tyvak Nano-Satellite Systems / Lockheed Martin",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tyvak Nano-Satellite Systems with Lawrence Livermore National Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tyvak Nano-Satellite Systems with Lockheed Martin",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Tyvak Nano-Satellite Systems, Inc.",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U-Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Air Force Academy",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Air Force Institute of Technology",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Army Space and Missile Defense Command",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Naval Research Laboratory",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force Space Test Program",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force Space Test Program",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "UK Space Agency / Clyde Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "UNSW Canberra Space / Royal Australian Air Force",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "US Department of Energy (Los Alamos and Sandia National Laboratories)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "US Special Operations Command",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "USEF / Japan Space Systems, for METI",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "UTIAS Space Flight Laboratory",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "United States Special Operations Command",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Universiti Teknologi MARA, Malaysia",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Arizona",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Auckland Space Institute",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Michigan",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of North Dakota",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Stuttgart",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Sydney / CUAVA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of Tokyo (ISSL)",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of W\u00fcrzburg",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "University of W\u00fcrzburg / Zentrum f\u00fcr Telematik",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Western Michigan University / NearSpace Launch",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Zentrum f\u00fcr Telematik, W\u00fcrzburg",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "Zhejiang University",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "technology",
+      "constellation": "__independent__",
+      "owner": "i2CAT Research Centre",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "COSMIC",
+      "owner": "NSPO / NOAA",
+      "orbit": "LEO",
+      "count": 6
+    },
+    {
+      "mission": "weather",
+      "constellation": "DMSP",
+      "owner": "U.S. Space Force / NOAA",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "weather",
+      "constellation": "Fengyun",
+      "owner": "China Meteorological Administration",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "weather",
+      "constellation": "Fengyun",
+      "owner": "China Meteorological Administration",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "weather",
+      "constellation": "GOES",
+      "owner": "NOAA / NASA",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "weather",
+      "constellation": "Himawari",
+      "owner": "Japan Meteorological Agency",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "weather",
+      "constellation": "Meteosat",
+      "owner": "EUMETSAT",
+      "orbit": "GEO",
+      "count": 4
+    },
+    {
+      "mission": "weather",
+      "constellation": "Metop",
+      "owner": "EUMETSAT",
+      "orbit": "LEO",
+      "count": 3
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Aerospace Tianmu (Chongqing) Satellite Technology, a CASIC subsidiary",
+      "orbit": "LEO",
+      "count": 20
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "CNSA and CNES (China\u2013France Oceanography Satellite)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Care Weather Technologies",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "China Meteorological Administration (National Satellite Meteorological Centre)",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "EUMETSAT / ESA",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "European Space Agency / EUMETSAT",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "ISRO",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Indian Space Research Organisation",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "JAXA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Korea Aerospace Research Institute",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Korea Meteorological Administration / KARI / KIOST",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Muon Space",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "NASA",
+      "orbit": "LEO",
+      "count": 7
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "NOAA",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "NOAA / NASA",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Nanyang Technological University",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "National Satellite Ocean Application Service (NSOAS)",
+      "orbit": "LEO",
+      "count": 5
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "People's Liberation Army (assessed)",
+      "orbit": "LEO",
+      "count": 18
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "PlanetiQ",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Roshydromet",
+      "orbit": "GEO",
+      "count": 3
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Roshydromet",
+      "orbit": "HEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Roshydromet",
+      "orbit": "LEO",
+      "count": 4
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Roshydromet / NPO Lavochkin",
+      "orbit": "GEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Taiwan Space Agency (TASA)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Tianjin Yunyao Aerospace Technology",
+      "orbit": "LEO",
+      "count": 9
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Tomorrow.io",
+      "orbit": "LEO",
+      "count": 11
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "U.S. Naval Research Laboratory",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "GEO",
+      "count": 2
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "U.S. Space Force",
+      "orbit": "LEO",
+      "count": 2
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "University of Montpellier",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Weather Stream (Orbital Micro Systems)",
+      "orbit": "LEO",
+      "count": 1
+    },
+    {
+      "mission": "weather",
+      "constellation": "__independent__",
+      "owner": "Weathernews Inc.",
+      "orbit": "LEO",
+      "count": 2
+    }
+  ]
+}

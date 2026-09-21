@@ -1,0 +1,6 @@
+# Render outputs and build inputs. The canonical caption maps are the copies in
+# scripts/, which package.sh refreshes from scenes/scripts/ after every render;
+# the ones Manim dumps in place are the raw artefact of the last run.
+scenes/media/
+scenes/scripts/
+scenes/ttf/

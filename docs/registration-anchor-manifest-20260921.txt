@@ -1,0 +1,13 @@
+# Registration anchor manifest — space-teaching-aid, branch integration/space, generated 2026-09-21
+
+## Registration commits (hash = full git SHA-1)
+commit 7eab5a4 = 7eab5a49ab252c724cd7b3fd23e8eb72bc262cb1
+commit 62f98d3 = 62f98d3c0cf9310348f9eb3cb3b336c226b41fa6
+commit 1a51afe = 1a51afe1d79bab780fbfc21988970318f4aac29f
+HEAD at manifest time = 3ed51db1cd5aed1596d8d5a79a733c92466d8096 (2026-09-21 17:03:40 -0400)
+
+## SHA-256 of registration documents at HEAD
+0984c1bb8384a8712e9b7f0b6bdffb27ca147726311187e8925fce1c1f024248  docs/phase3-preregistration-20260921.md
+727dcad951ee6a749d2a24606eab6e8a3d535a9a86baa0d17c6c413e8ad68bd5  docs/repricing-preregistration-20260921.md
+22ad03adc0d86eae66bb8614a39f419c4f5dd8e1dee4f1f23e0facb42e445d93  docs/cadence-preregistration-20260921.md
+801ebd77bdb0fbc7a5141cc1f426d90ba7ccbe2b19f8af0f3a10b94c42459ce6  docs/paperb-preregistration-20260920.md

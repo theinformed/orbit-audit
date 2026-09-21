@@ -1,0 +1,546 @@
+/*
+ * Orbit-history browser.
+ *
+ * Kept in its own file rather than added to `styles.css`, which another agent
+ * owns. It is imported by `orbit-history-browser.ts`, so Vite bundles it only
+ * when the browser is bundled.
+ *
+ * Colours are read from the custom properties `styles.css` already defines,
+ * with fallbacks, so the panel follows the site's theme without depending on a
+ * particular value being present. Every fallback is a real colour rather than
+ * `inherit`, because a panel that renders as invisible text on a missing token
+ * is worse than one that renders in the wrong shade.
+ */
+
+.orbit-history {
+  --oh-ink: var(--text-primary, #e8edf5);
+  --oh-muted: var(--text-secondary, #9aa7bb);
+  --oh-line: var(--border-subtle, rgba(154, 167, 187, 0.28));
+  --oh-panel: var(--surface-raised, rgba(16, 22, 34, 0.72));
+  --oh-manoeuvre: #f0a132;
+  --oh-drag: #4c9be8;
+  --oh-plane: #c07de8;
+  --oh-drift: #57c7b3;
+  --oh-unattributed: #7f8a9c;
+  --oh-cohort: rgba(154, 167, 187, 0.18);
+  color: var(--oh-ink);
+  display: grid;
+  gap: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* --- the honesty banner: never decoration, always the first thing read --- */
+.orbit-history__status {
+  border: 1px solid var(--oh-line);
+  border-left: 3px solid var(--oh-manoeuvre);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  background: var(--oh-panel);
+}
+
+.orbit-history__status h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+}
+
+.orbit-history__status p {
+  margin: 0 0 0.4rem;
+}
+
+.orbit-history__status p:last-child {
+  margin-bottom: 0;
+}
+
+.orbit-history__rising-group {
+  margin-top: 1rem;
+}
+
+.orbit-history__rising-group h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.92rem;
+}
+
+.orbit-history__rising a {
+  color: var(--oh-drift);
+}
+
+.orbit-history__rising td:last-child {
+  min-width: 18rem;
+  white-space: normal;
+}
+
+.orbit-history__rising caption {
+  text-align: left;
+  color: var(--oh-muted);
+  padding: 0.4rem 0;
+}
+
+.orbit-history__rising details {
+  margin-top: 0.8rem;
+}
+
+.orbit-history__numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-top: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.orbit-history__numbers div {
+  display: grid;
+}
+
+.orbit-history__numbers dt,
+.orbit-history__numbers span:first-child {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+}
+
+.orbit-history__numbers strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* --- controls --- */
+.orbit-history__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.orbit-history__controls button {
+  border: 1px solid var(--oh-line);
+  background: transparent;
+  color: var(--oh-muted);
+  border-radius: 999px;
+  padding: 0.28rem 0.75rem;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.orbit-history__controls button[aria-pressed="true"] {
+  color: var(--oh-ink);
+  border-color: currentColor;
+  background: rgba(240, 161, 50, 0.12);
+}
+
+.orbit-history__controls input[type="search"] {
+  border: 1px solid var(--oh-line);
+  background: transparent;
+  color: var(--oh-ink);
+  border-radius: 999px;
+  padding: 0.28rem 0.8rem;
+  font: inherit;
+  font-size: 0.82rem;
+  min-width: 12rem;
+}
+
+.orbit-history__question {
+  margin: 0;
+  color: var(--oh-muted);
+  font-size: 0.85rem;
+}
+
+/* --- population table --- */
+.orbit-history__table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--oh-line);
+  border-radius: 8px;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.orbit-history table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+
+.orbit-history thead th {
+  position: sticky;
+  top: 0;
+  background: var(--oh-panel);
+  backdrop-filter: blur(6px);
+  text-align: right;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--oh-line);
+  white-space: nowrap;
+}
+
+.orbit-history thead th:first-child,
+.orbit-history tbody td:first-child {
+  text-align: left;
+}
+
+.orbit-history tbody td {
+  padding: 0.35rem 0.6rem;
+  text-align: right;
+  border-bottom: 1px solid rgba(154, 167, 187, 0.12);
+  white-space: nowrap;
+}
+
+.orbit-history tbody tr {
+  cursor: pointer;
+}
+
+.orbit-history tbody tr:hover,
+.orbit-history tbody tr[aria-selected="true"] {
+  background: rgba(240, 161, 50, 0.09);
+}
+
+.orbit-history__flag {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 0 0.3rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.orbit-history__flag--unusual {
+  color: var(--oh-manoeuvre);
+}
+
+.orbit-history__flag--decaying {
+  color: var(--oh-drag);
+}
+
+/* --- empty and unavailable states, designed rather than blank --- */
+.orbit-history__empty {
+  border: 1px dashed var(--oh-line);
+  border-radius: 8px;
+  padding: 1.1rem;
+  color: var(--oh-muted);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.orbit-history__empty strong {
+  color: var(--oh-ink);
+  font-size: 0.95rem;
+}
+
+.orbit-history__empty code {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* The one absence that offers an action: the archive server being offline.
+   The panel is a grid, so a button child would stretch the full width and read
+   as a banner rather than as something to press. `justify-self: start` keeps it
+   the width of its own words. */
+.orbit-history__ask {
+  justify-self: start;
+  margin-top: 0.35rem;
+}
+
+/* --- plots --- */
+.orbit-history__plots {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.orbit-history__plot {
+  border: 1px solid var(--oh-line);
+  border-radius: 6px;
+  background: var(--oh-panel);
+  padding: 0.35rem 0.5rem 0.15rem;
+}
+
+.orbit-history__plot h4 {
+  margin: 0 0 0.1rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.orbit-history__plot h4 span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.orbit-history__plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.orbit-history__axis {
+  stroke: var(--oh-line);
+  stroke-width: 1;
+}
+
+.orbit-history__tick {
+  fill: var(--oh-muted);
+  font-size: 9px;
+}
+
+.orbit-history__series {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.orbit-history__point {
+  stroke: none;
+}
+
+.orbit-history__band {
+  fill: var(--oh-cohort);
+  stroke: none;
+}
+
+.orbit-history__gap {
+  fill: rgba(127, 138, 156, 0.14);
+  stroke: none;
+}
+
+.orbit-history__gap-label {
+  fill: var(--oh-muted);
+  font-size: 8px;
+}
+
+.orbit-history__event-rule {
+  stroke-width: 1.2;
+  stroke-dasharray: 3 2;
+}
+
+/* --- evidence card --- */
+/*
+ * THE REPEATING CORRECTIONS, set apart from the individual events below them.
+ *
+ * Given a left rule and a tinted ground because it is a different KIND of
+ * statement, not merely a bigger one: every card under it is a candidate the
+ * page may not call a manoeuvre, while this block is corroborated by its own
+ * repetition and is allowed to speak plainly. Making that visible is the point
+ * -- a reader should be able to see, without reading a word, that the thing at
+ * the top of the list is held to a different standard than the things below it.
+ */
+.orbit-history__clusters {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0 0 1.1rem;
+  padding: 0.85rem 1rem 0.95rem;
+  border-left: 3px solid var(--oh-accent, #46b8d0);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--oh-panel) 82%, transparent);
+}
+
+.orbit-history__clusters h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.orbit-history__clusters h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.orbit-history__clusters > .orbit-history__wording {
+  margin: 0;
+  opacity: 0.86;
+}
+
+@media (max-width: 600px) {
+  .orbit-history__clusters {
+    padding: 0.7rem 0.75rem 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+/*
+ * WHERE THIS ORBIT IS GOING, keyed to the DRAG colour rather than the
+ * manoeuvre one.
+ *
+ * The cluster block above it is orange-accented because it is about something
+ * an operator did. This one is about something the atmosphere is doing, and it
+ * carries the drag hue the plot already uses for `drag-decay` and
+ * `re-entry-decay`, so the same physics wears the same colour wherever a reader
+ * meets it. It sits above the plot rather than below because it is the answer
+ * to a question about the WHOLE series, and it comes from the events bundle, so
+ * it is still drawn on a day when the history shard cannot be fetched at all.
+ */
+.orbit-history__decay {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 1.1rem;
+  padding: 0.85rem 1rem 0.95rem;
+  border-left: 3px solid var(--oh-drag);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--oh-panel) 82%, transparent);
+}
+
+.orbit-history__decay h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.orbit-history__decay > .orbit-history__wording {
+  margin: 0;
+  opacity: 0.86;
+}
+
+.orbit-history__decay dl {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .orbit-history__decay {
+    padding: 0.7rem 0.75rem 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+.orbit-history__card {
+  border: 1px solid var(--oh-line);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  background: var(--oh-panel);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.orbit-history__card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.orbit-history__card p {
+  margin: 0;
+}
+
+.orbit-history__card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.5rem 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.orbit-history__card dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+}
+
+.orbit-history__card dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.orbit-history__causes {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.orbit-history__causes li strong {
+  font-weight: 600;
+}
+
+.orbit-history__causes li span {
+  color: var(--oh-muted);
+}
+
+.orbit-history__provenance {
+  font-size: 0.78rem;
+  color: var(--oh-muted);
+  border-top: 1px solid var(--oh-line);
+  padding-top: 0.5rem;
+}
+
+.orbit-history__wording {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oh-muted);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .orbit-history tbody tr {
+    transition: background-color 120ms ease;
+  }
+}
+
+@media (max-width: 720px) {
+  .orbit-history {
+    font-size: 0.88rem;
+  }
+
+  .orbit-history__table-wrap {
+    max-height: 16rem;
+  }
+}
+
+/* A regular cadence is a *good* sign — a satellite doing exactly what its
+   class does — so it is drawn in the quiet accent rather than the alert one.
+   The two unusual flags share a colour because they share a meaning. */
+.orbit-history__flag--regular {
+  border-color: color-mix(in srgb, var(--oh-drag) 55%, transparent);
+  color: var(--oh-drag);
+}
+
+/* ---------------------------------------------------------------------------
+   Per-object history panels: cadence, repeats, what is unusual for the object
+   itself, and where it is going. Each carries the numbers it was computed from
+   rather than a verdict, so the panel is wide enough to hold a sentence and
+   quiet enough not to compete with the plots above it.
+   --------------------------------------------------------------------------- */
+.orbit-history__panel {
+  margin: 0.75rem 0 0;
+  padding: 0.6rem 0.75rem;
+  border-left: 3px solid color-mix(in srgb, var(--oh-drag) 50%, transparent);
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  border-radius: 0 4px 4px 0;
+}
+
+.orbit-history__panel--unusual {
+  border-left-color: color-mix(in srgb, var(--oh-plane) 65%, transparent);
+}
+
+.orbit-history__panel h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.orbit-history__panel p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.orbit-history__panel-note {
+  margin-top: 0.35rem !important;
+  font-size: 0.82rem !important;
+  opacity: 0.7;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Transit planner smoke test</title>
+    <link rel="stylesheet" href="/src/styles.css">
+    <style> body { margin: 0; padding: 1.5rem; background: #02070c; color: #edf8fb; font-family: system-ui, sans-serif; } </style>
+  </head>
+  <body>
+    <!--
+      Mounts the real TransitPlanner against the real published catalog, exactly
+      as the openContent() patch in docs/transit-planner-wiring.md will. It exists
+      because the planner is not wired into index.html yet, so nothing else would
+      ever execute its markup - and a panel that throws on first render is the
+      failure mode a unit test over the same modules would not catch.
+    -->
+    <div id="host"></div>
+    <script type="module" src="./transit-planner-smoke.ts"></script>
+  </body>
+</html>

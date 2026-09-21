@@ -1,0 +1,156 @@
+{
+ "voice_id": "9M1l09pkVunOZDmYq0Ms",
+ "voice_name": "Myself (Sean, professional clone)",
+ "model_id": "eleven_multilingual_v2",
+ "_about": "Narration for the five figure clips of the 'How the numbers are made' methods page. One `scene` per clip = one stitched chain. `beat` names the figure reveal state (0 = base). Written to the space-site narration doctrine: long connected lines, each picking up the last, saying what the picture does not. Clone is FINAL render only after Sean approves the words (his 2026-07-07 rule).",
+ "clips": {
+  "orbit-basics": {
+   "svg": "fig-orbit.svg",
+   "title": "An orbit is six numbers"
+  },
+  "the-step": {
+   "svg": "fig-step.svg",
+   "title": "What a burn looks like"
+  },
+  "the-arithmetic": {
+   "svg": "fig-gpu.svg",
+   "title": "Why a graphics card"
+  },
+  "the-gate": {
+   "svg": "fig-gate.svg",
+   "title": "Debris grades us for free"
+  },
+  "earning-it": {
+   "svg": "fig-flip.svg",
+   "title": "Three failures, then the flip"
+  }
+ },
+ "lines": [
+  {
+   "id": "orbit-1",
+   "scene": "orbit-basics",
+   "beat": 0,
+   "text": "Everything on this site begins with a satellite going around the Earth, and the whole of its future motion is fixed by six numbers, published for tens of thousands of objects several times a day."
+  },
+  {
+   "id": "orbit-2",
+   "scene": "orbit-basics",
+   "beat": 1,
+   "text": "The first and most important is the semi-major axis: the overall size of the orbit, the number that tells you how high the satellite is flying."
+  },
+  {
+   "id": "orbit-3",
+   "scene": "orbit-basics",
+   "beat": 2,
+   "text": "The next two describe the shape and the tilt: the eccentricity, how stretched the ellipse is, and the inclination, how steeply the orbit is angled against the equator."
+  },
+  {
+   "id": "orbit-4",
+   "scene": "orbit-basics",
+   "beat": 4,
+   "text": "Three more angles fix how that ellipse is turned in space and where along it the craft sits right now, and together those six numbers are the satellite's address in the sky."
+  },
+  {
+   "id": "orbit-5",
+   "scene": "orbit-basics",
+   "beat": 5,
+   "text": "The size hides inside a number the catalogue reports, so one short equation converts laps per day into a height in kilometres, exact to the last digit we are given."
+  },
+  {
+   "id": "step-1",
+   "scene": "the-step",
+   "beat": 0,
+   "text": "Left alone, a low orbit slowly sinks, because the thin upper air drags on it and the size slides gently downward, day after day, and that decay is itself a measurement of the atmosphere."
+  },
+  {
+   "id": "step-2",
+   "scene": "the-step",
+   "beat": 1,
+   "text": "A manoeuvre looks completely different: the size does not drift, it jumps, and then holds at the new value. That step, sustained, is the fingerprint of an engine firing."
+  },
+  {
+   "id": "step-3",
+   "scene": "the-step",
+   "beat": 2,
+   "text": "To catch the step without being fooled by a single bad measurement, we compare each point to a median of the two months around it, and a median cannot be dragged by one stray reading, nor by the burn becoming its own baseline."
+  },
+  {
+   "id": "step-4",
+   "scene": "the-step",
+   "beat": 3,
+   "text": "We raise a flag only when the jump clears a firm multiple of that object's own scatter, and only when it is still there two days later, and even then we report the least a real operator could have spent."
+  },
+  {
+   "id": "gpu-1",
+   "scene": "the-arithmetic",
+   "beat": 0,
+   "text": "Every single day the detector takes all two hundred and sixteen million published orbit records and works the entire thing out again from scratch, keeping nothing from yesterday, so the same input always gives the same answer."
+  },
+  {
+   "id": "gpu-2",
+   "scene": "the-arithmetic",
+   "beat": 1,
+   "text": "That is a mountain of arithmetic, but arithmetic of one particular shape: tens of millions of identical little calculations, all independent, which is exactly the shape a graphics card is built to do thousands at a time."
+  },
+  {
+   "id": "gpu-3",
+   "scene": "the-arithmetic",
+   "beat": 2,
+   "text": "We measured the split precisely: ninety-three percent of the work is that repetitive arithmetic, which moved to the card, while the branchy judgement of naming each change stays on the ordinary processor where it belongs."
+  },
+  {
+   "id": "gpu-4",
+   "scene": "the-arithmetic",
+   "beat": 3,
+   "text": "Moving math to a graphics card is only safe if it gives the same answer, so before we trusted it we ran both machines side by side: over four million comparisons, and not one disagreement."
+  },
+  {
+   "id": "gate-1",
+   "scene": "the-gate",
+   "beat": 0,
+   "text": "Here is the part we are proudest of. To know a manoeuvre detector is honest, you test it on things that cannot manoeuvre: dead rocket bodies and debris, with no engines, so every flag on one of them is by definition a false alarm."
+  },
+  {
+   "id": "gate-2",
+   "scene": "the-gate",
+   "beat": 2,
+   "text": "That gives a free, always-on measure of how often we cry wolf, and today it sits far below the rate at which real payloads flag, read at its honest statistical ceiling, not its rosiest estimate."
+  },
+  {
+   "id": "gate-3",
+   "scene": "the-gate",
+   "beat": 3,
+   "text": "The rule is fixed and public: the site may print the word manoeuvre only when the distance between those two rates clears ten times, and until it did, every event said candidate instead."
+  },
+  {
+   "id": "gate-4",
+   "scene": "the-gate",
+   "beat": 4,
+   "text": "It is measured today at more than eighteen times, so the strong word is finally earned, and that wording is wired straight to the number, never typed by hand."
+  },
+  {
+   "id": "flip-1",
+   "scene": "earning-it",
+   "beat": 1,
+   "text": "Good science includes what did not work, and our slow-drift detector failed its own debris test three separate times, each design flagging junk more often than satellites."
+  },
+  {
+   "id": "flip-2",
+   "scene": "earning-it",
+   "beat": 2,
+   "text": "The fix came from physics, not a bigger computer: below eight hundred kilometres the air drags everything down, so nothing without an engine can climb there — and when we only trusted sustained climbs in that region, the fourth design turned sharp."
+  },
+  {
+   "id": "flip-3",
+   "scene": "earning-it",
+   "beat": 3,
+   "text": "A sister insight fixed the step detector the same week: a real change of orbit costs energy, so a tilt change with no energy change is noise — demanding that corroboration took the separation from under seven to over eighteen, left every real station-keeping catch untouched, and counted every withheld judgement out loud."
+  },
+  {
+   "id": "flip-4",
+   "scene": "earning-it",
+   "beat": 3,
+   "text": "That is the day the site earned the word."
+  }
+ ]
+}

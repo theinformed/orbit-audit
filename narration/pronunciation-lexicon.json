@@ -1,0 +1,75 @@
+{
+ "name": "Pronunciation fixes",
+ "whatThisIs": "A record of words that CAME OUT WRONG in narration, and the respelling that fixed each one. It is not a checklist of words that might be risky, and it must not be allowed to become one.",
+ "theRuleThatGovernsThisFile": [
+  "A respelling is a LIABILITY, not an improvement. Plain text is the safe default: the model usually says a word correctly, and when a model changes it changes toward better. A respelling is a permanent silent override on every future render.",
+  "So respelling a word the model already handles does not make it safer - it MANUFACTURES a defect that did not exist, and hides it in a file nobody re-listens to.",
+  "The bar for an entry is therefore not 'this looks at-risk'. It is: I HEARD THIS WORD COME OUT WRONG, IN REAL NARRATION, IN A SENTENCE SOMEONE WOULD ACTUALLY SAY.",
+  "This file starts empty and grows only on a heard failure. Every entry cites its defect. Fewer entries is better. Never respell for consistency with another entry.",
+  "The order of work is RENDER, LISTEN, then fix only what failed - never pronunciation work front-loaded before anything has been heard.",
+  "STALENESS RUNS THE OTHER WAY TOO, and nobody expects this one: if the model improves, a respelling that was once a fix becomes a fresh defect. Re-check every entry on a model or voice change, and DELETING an entry is a valid, good outcome."
+ ],
+ "history": "2026-08-21: this file briefly held 59 entries, built by auditing every term that looked at-risk before anything had been heard wrong. Sean: 'perhaps we are overdoing the phonetics ... I'm worried not many words need the phonetics spelled out like this, so we introduce more error if we overdo it.' He was right, and the 57 speculative entries were removed the same day. What survives is what a person actually heard fail. The one-off measurement sweep that produced them is kept at media/pronunciation-audit/readback.json as a record of what was measured once - not as a standing checklist.",
+ "voiceProvenOn": {
+  "voice_id": "9M1l09pkVunOZDmYq0Ms",
+  "model_id": "eleven_multilingual_v2",
+  "why": "Sean's professional clone is fine-tuned on this model; his account offers no other quality tier for it. He compared it against eleven_v3 on the same sentence at the same loudness and ruled: 'A is way better. C is much worse.' v3 also wandered 18% in duration across three renders of one line against v2's 6.7%, which would read as tone and pace changing between clips and cannot be normalised away afterwards. v3's inline IPA made pronunciation WORSE, not better - it read the IPA for magnetopause as 'man-knee-two-pause'. Settled: no IPA, respelling only, on multilingual v2.",
+  "note": "Every entry below is proven against ONE voice and ONE model. Change either and all of them are unproven again - re-listen, and expect to delete some."
+ },
+ "spotCheck": {
+  "why": "A short listen, not a gate. These are words that actually appear in the narration scripts more than once. They are rendered PLAIN - no respelling - so a person can hear whether they are fine. Nothing here becomes an entry unless it is heard failing.",
+  "words": [
+   "SOHO",
+   "coronagraph",
+   "ionosphere",
+   "thermosphere",
+   "nanotesla",
+   "Kyoto",
+   "Quebec",
+   "magnetopause"
+  ]
+ },
+ "terms": [
+  {
+   "id": "egan",
+   "display": "Egan",
+   "spoken": "Eegan",
+   "status": "respelled-proven",
+   "heardFailure": "Sean's own surname, and the failure he opened this whole thread with: 'E says its name in Egan, but sometimes ElevenLabs will pronounce it like Egg-an.' Rendered plain on this voice it came back EGG-an in one take and EYE-gan in a natural carrier sentence ('Lieutenant Sean Egan, United States Navy').",
+   "target": "In his words: 'say the letter E, gan. As in began - without the B.' Stress on the front - EE-gan, like BEgan and not beGAN.",
+   "spokenWhy": "Sean listened to five candidates in that carrier sentence and ruled. 'Egan' is WRONG - it reads EYE-gan. 'E-gan' is WRONG. 'Eegan', 'Eagan' and 'Eagen' are all right; 'Eegan' is canonical here because it is the most obvious to a human reading this file.",
+   "expectedIpa": "iːɡən",
+   "ruledBy": "Sean, by ear, 2026-08-21",
+   "seed": 101,
+   "seedEvidence": {
+    "similarity": 0.75,
+    "whisper": "E gun.",
+    "tried": [
+     101
+    ]
+   },
+   "carrier": "Lieutenant Sean Egan, United States Navy."
+  },
+  {
+   "id": "dst",
+   "display": "Dst",
+   "spoken": "D S T",
+   "status": "respelled-proven",
+   "heardFailure": "A REAL rendered narration line, before this file existed. narration/mechanisms.json line mech-04-dst-measured records it: 'the first take pronounced the abbreviation as a word, which the round-trip transcriber returned as deist'. That line was rewritten to say 'index' instead of the abbreviation, so the defect was worked around rather than fixed - and narration/layer-pages.json line layer-ring-current still says Dst and has not been rendered yet.",
+   "target": "Three letters: D, S, T.",
+   "spokenWhy": "Spacing the letters returns d-iː-ɛ-s-t-iː and the transcriber reads back 'DST'. Rendered as written it came back 'died' on one take and 'dast' on another.",
+   "expectedIpa": "diːɛstiː",
+   "ruledBy": "measured, and corroborated by the earlier defect recorded in mechanisms.json",
+   "seed": 101,
+   "seedEvidence": {
+    "similarity": 1.0,
+    "whisper": "DST",
+    "tried": [
+     101
+    ]
+   },
+   "carrier": "The Dst plot at the end is the only part directly measured by ground stations."
+  }
+ ],
+ "carrierRule": "A fix is checked INSIDE A SENTENCE SOMEONE WOULD ACTUALLY SAY, never as a bare word. The same respelling behaves differently in isolation: 'Eegan.' alone came back as 'E gun', while the carrier sentence Sean actually ruled on is right. A bare-word audit is what produced the 57 speculative entries this file used to carry. Dst's carrier is the real unrendered line from narration/layer-pages.json."
+}
