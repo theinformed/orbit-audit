@@ -31,13 +31,13 @@
 \begin{document}
 
 \title{Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt}
-\author{Sean D. Egan\thanks{The Informed, theinformed.org. Corresponding author: sean@theinformed.org}
-  \and Derek Conklin\thanks{The Informed, theinformed.org}}
-\date{Draft, 2026-09-21. Target venue: AMOS (Advanced Maui Optical and Space Surveillance Technologies Conference).}
+\author{Sean D. Egan \and Derek Conklin\\
+  \normalsize The Informed --- \texttt{theinformed.org}\\
+  \normalsize Corresponding author: \texttt{sean@theinformed.org}}
+\date{Preprint, 21 September 2026}
 \maketitle
 
 %FRONT MATTER. The draft's author-block parenthetical is retained here verbatim as a source comment; the affiliation and corresponding-author line above records the decision that settled it.
-%*(affiliations and corresponding author to be confirmed by the authors before submission; author order per operator decision 2026-09-21)*
 
 %AUTHORS' COMMENT — PROVENANCE.
 %Every numeric claim in this draft is followed by an HTML comment naming the
@@ -69,7 +69,7 @@ The negative result is the one that matters for anyone building an end-of-life p
 
 We re-detected the entire retained history of every geostationary-capable object in the archive without a publication catalogue filter. Distinct payloads carrying a raise flag rise from 22 in the published artifact to 133 before any screen --- a 6.0$\times$ increase, like for like --- and to 113 after the pre-registered station-acquisition screen that excludes 30 payload raise flags within 18 calendar months of launch%
 % src: docs/eol-three-arm-20260920.md, "Verdict, stated first" and arm-0 census table 
-. An external audit against operational and historical catalogues agreed with 79.7\% of assessable object-level endpoints, Wilson 95\% [0.688, 0.875], with all 14 contradictions retained and examined%
+. An external audit against operational and historical catalogues agreed with 80\% of assessable object-level endpoints, Wilson 95\% [0.688, 0.875], with all 14 contradictions retained and examined%
 % src: docs/eol-three-arm-20260920.md, "External agreement and what it establishes" 
 .
 
@@ -79,7 +79,7 @@ The registered outcome test did not run. Only 2 arm-1 and 1 arm-2 trajectories c
 % src: docs/eol-three-arm-20260920.md, arm-1 eligibility failures 
 . An independent propulsion-ledger integration on the same archive measures the size of that miss directly: for the 54 chemically station-kept geostationary satellites where the comparison is meaningful, detected station-keeping delta-v accounts for a median of 1.81\% of the $\sim$50 m/s/yr north-south budget, with 47 of 54 below 10\%%
 % src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors"; perigee-priced primary, median 1.808803%, 47 of 54 below 10% 
-. Both delta-v pricings are reported throughout this paper: the perigee-speed pricing registered at \path{62f98d3} is primary, and the circular-speed convention of the published odometer is retained beside it, where the same statistic is 1.809394\% and 46 of 54%
+. Both delta-v pricings are reported throughout this paper: the perigee-speed pricing registered at \path{62f98d3} is primary, and the circular-speed convention of the published odometer is retained beside it, where the same statistic is 1.81\% and 46 of 54%
 % src: docs/repricing-20260921.md, control-arm table, which reproduces docs/fuel-odometer-20260920.md exactly on all eight registered checks 
 .
 
@@ -145,7 +145,7 @@ That last clause is load-bearing, and it is why the companion methods paper exis
 
 Two uses of this paper's own measurements follow, each tied to a decision and each stated with its limiter in the same breath.
 
-\emph{Disposal-compliance monitoring.} Continuous detection of graveyard raises and of keeping abandonment complements annual outcome reporting rather than replacing it; the census here found 113 distinct payload retirement candidates once a publication-catalogue filter was removed, against 22 in the filtered artifact, with 79.7\% external agreement among assessable cases. The limiter is this paper's own negative result: north-south cessation is not a retirement proxy on its own, so monitoring built on cessation alone would misclassify satellites that are still operating in an inclined orbit (\S{}3.4). The detection threshold is also the bare constant term of the IADC floor rather than the full criterion (\S{}3.8), so a crossing is a detection, not a finding of compliance.
+\emph{Disposal-compliance monitoring.} Continuous detection of graveyard raises and of keeping abandonment complements annual outcome reporting rather than replacing it; the census here found 113 distinct payload retirement candidates once a publication-catalogue filter was removed, against 22 in the filtered artifact, with 80\% external agreement among assessable cases. The limiter is this paper's own negative result: north-south cessation is not a retirement proxy on its own, so monitoring built on cessation alone would misclassify satellites that are still operating in an inclined orbit (\S{}3.4). The detection threshold is also the bare constant term of the IADC floor rather than the full criterion (\S{}3.8), so a crossing is a detection, not a finding of compliance.
 
 \emph{Fleet finance and underwriting.} The odometer's remaining-propellant figure is an upper bound --- catalogued capacity minus a burn integrated from detected events, quoted at the high-specific-impulse edge --- and a conservative bound is usable for underwriting in a way a midpoint estimate is not, because it cannot argue a satellite has more service life than it has%
 % src: docs/fuel-odometer-20260920.md, "Directionality" table 
@@ -208,6 +208,8 @@ Two qualifications travel with that 18.191$\times$, both from the companion pape
 Neither calibration measures the positive predictive value of the \emph{retirement interpretation} specifically%
 % src: docs/eol-policy-relaxation-20260920.md, "False-alarm context" 
 .
+
+\textbf{A note on displayed precision.} Values quoted from committed artifacts are reproduced here verbatim, to the digits the receipt carries, so that a reader can find them in the source by searching for them; the precision of an estimate is given by its interval and not by its digit count, and headline statements in the abstract and the introduction are accordingly rounded to what the interval supports. Registered constants, gate values and seeds are never rounded.
 
 \subsection*{2.3 Registration}
 
@@ -326,6 +328,17 @@ Distinct payloads carrying a raise flag rise from 22 in the published artifact t
 % src: docs/eol-three-arm-20260920.md, "Verdict, stated first" and arm-0 census table 
 .
 
+Figure~\ref{fig:census} sets out the two steps separately, so that neither is read as the other.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/census-waterfall.pdf}
+\caption{The census correction is a filter being removed, not data being added. Distinct payloads carrying a detected graveyard-raise flag: in the published artifact, after the publication-catalogue filter is removed from the same archive, and after the pre-registered launch-acquisition screen. The first two columns are like for like; the third is screened, and the hatched step is the payload objects that screen removes rather than the flags it excludes.}
+\label{fig:census}
+\end{figure}
+
+% figure: docs/latex/paper-a/figs/census-waterfall.pdf, drawn by tools/make_figures.py from docs/eol-policy-relaxation-20260920-receipt.json distinctRetireeCandidates and docs/eol-three-arm-20260920-receipt.json raiseFlow.payloadObjects, raiseFlow.contaminatedFlags and arms.arm1.candidates; derivation: the screen step is the difference of the two published payload-object counts, since the receipt counts that screen in flags 
+
 We avoid the ratio 113 $\div$ 22 = 5.1$\times$, which appeared in an earlier draft of this work and which compares a screened count against an unscreened one. It is conservative --- the like-for-like increase is larger, and screening both ends would put it near tenfold --- but a definitional mismatch in the paper's most-quoted number is not excused by running in the safe direction.
 
 \subsection*{3.2 The registered gates, and the stop}
@@ -382,6 +395,17 @@ Final-year cadence not estimable & 108 \\
 Arm 2 fails the same way: baseline cadence not estimable 17, final-year cadence not estimable 19, NSK depth below three years 5, out of 20 candidates%
 % src: docs/eol-three-arm-20260920.md, arm-2 eligibility failures line 
 .
+
+Figure~\ref{fig:recall} puts both arms and the failure marginals in one view.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/recall-wall.pdf}
+\caption{Recall, not the supply of retirements, is what stopped the test. Both arms flow from candidate endpoints to usable trajectories to complete matched pairs, and both reach zero against a registered feasibility floor. Below, the arm-one eligibility failures drawn against the full candidate bar: these are overlapping marginal counts and do not sum, and nearly every candidate fails for want of an estimable cadence in one window or the other.}
+\label{fig:recall}
+\end{figure}
+
+% figure: docs/latex/paper-a/figs/recall-wall.pdf, drawn by tools/make_figures.py from docs/eol-three-arm-20260920-receipt.json arms.arm1 and arms.arm2: candidates, usable, effects.R_interval.n and eligibilityFailures, with the feasibility floor from docs/eol-policy-relaxation-20260920-receipt.json requiredRetirees 
 
 Three north-south detections and two same-segment spacings per window is a modest requirement. The detector does not supply it for most geostationary payloads in this archive. Increasing the number of retirements helped very little: the census increased it six-fold and the gate count moved from 0 usable to 2. At the scale available to this archive, recall dominates population, and the next attempt at this study should spend its effort there rather than on more objects%
 % src: docs/eol-three-arm-20260920.md, "Verdict, stated first" 
@@ -537,6 +561,17 @@ Above twice the budget & 0 & 0 \\
 The two columns differ by 0.033\% relative, and the single object that crosses the 10\% line is Intelsat 603, at 13.04\% circular and 9.23\% perigee%
 % src: docs/repricing-20260921.md, "Per-object and the three Paper A anchors" 
 . Nothing in this section's argument turns on which column a reader uses.
+
+The distribution behind that median is in Figure~\ref{fig:odometer}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/odometer-recall.pdf}
+\caption{The median is not the story; the distribution is. One point per anchored satellite, ranked, showing the share of the routine north-south keeping budget that detected delta-v accounts for, under both pricings. The dashed rule is the median and the heavy rule is a tenth of the budget. The detector recovers a few per cent of the budget on most of the cohort and essentially none of it on several, which is the recall gap the registered test of this paper ran into.}
+\label{fig:odometer}
+\end{figure}
+
+% figure: docs/latex/paper-a/figs/odometer-recall.pdf, drawn by tools/make_figures.py from docs/fuel-odometer-20260920.jsonl sanity.flag, which selects the anchored cohort, and docs/repricing-20260921.jsonl perigee.explainedFractionOfFolkloreBudget and circular.explainedFractionOfFolkloreBudget 
 
 The station-keeping odometer reads far too low by construction. That is a statement about detection recall, not about how much propellant these satellites burn, and it is one-sided in the event count, which omits sub-threshold, continuous and geometrically ambiguous burns%
 % src: docs/fuel-odometer-20260920.md, "Directionality" table 
@@ -750,7 +785,7 @@ Three limitations survive the re-pricing and one is new. The perigee price is an
 
 We set out to test a piece of operational folklore at population scale and we did not get to test it. That is the result, and we report it at the prominence the registration demands.
 
-What we can report is: a protocol registered before the data were seen, with a stop rule that fired; a census that shows a publication-catalogue filter had been hiding 81.6\% of the relevant events, and that removing it multiplies distinct payloads carrying a raise by 6.0, to 133 before the launch screen and 113 after it; an external audit that agrees with 79.7\% of assessable endpoints, [68.8, 87.5], with every contradiction preserved; a negative result, demonstrated on 16 eligible cessations of which 8 are unresolved, that north-south cessation resolves into at least three materially different outcomes and is therefore not usable as a retirement proxy without an explicit precision estimate this cohort is too small to supply; and an independent measurement showing that the obstacle is small-burn detection recall, at a median 1.81\% of the routine station-keeping budget under either pricing, with the same detector recovering 45.5--105.5\% of the transfer-phase mass drop where the excursion is large (50.0--107.5\% under the circular convention) --- a consistency check whose denominator, as \S{}4.2 sets out, is not the transfer propellant under every reading of the catalogue.
+What we can report is: a protocol registered before the data were seen, with a stop rule that fired; a census that shows a publication-catalogue filter had been hiding 81.6\% of the relevant events, and that removing it multiplies distinct payloads carrying a raise by 6.0, to 133 before the launch screen and 113 after it; an external audit that agrees with 80\% of assessable endpoints, [68.8, 87.5], with every contradiction preserved; a negative result, demonstrated on 16 eligible cessations of which 8 are unresolved, that north-south cessation resolves into at least three materially different outcomes and is therefore not usable as a retirement proxy without an explicit precision estimate this cohort is too small to supply; and an independent measurement showing that the obstacle is small-burn detection recall, at a median 1.81\% of the routine station-keeping budget under either pricing, with the same detector recovering 45.5--105.5\% of the transfer-phase mass drop where the excursion is large (50.0--107.5\% under the circular convention) --- a consistency check whose denominator, as \S{}4.2 sets out, is not the transfer propellant under every reading of the catalogue.
 
 The experiment this work asks for is specific: raise small-burn recall on geostationary payloads, re-census under snapshot control, and run the registered test. Until then, the honest statement is that the geostationary catalogue, as this archive renders it, does not yet contain enough measurable north-south cadence to answer the question.
 

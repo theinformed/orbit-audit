@@ -31,13 +31,13 @@
 \begin{document}
 
 \title{A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets}
-\author{Sean D. Egan\thanks{The Informed, theinformed.org. Corresponding author: sean@theinformed.org}
-  \and Derek Conklin\thanks{The Informed, theinformed.org}}
-\date{Draft, 2026-09-21. Target venues: AMOS; Acta Astronautica; Journal of Space Safety Engineering.}
+\author{Sean D. Egan \and Derek Conklin\\
+  \normalsize The Informed --- \texttt{theinformed.org}\\
+  \normalsize Corresponding author: \texttt{sean@theinformed.org}}
+\date{Preprint, 21 September 2026}
 \maketitle
 
 %FRONT MATTER. The draft's author-block parenthetical is retained here verbatim as a source comment; the affiliation and corresponding-author line above records the decision that settled it.
-%*(affiliations and corresponding author to be confirmed by the authors before submission; author order per operator decision 2026-09-21)*
 
 %AUTHORS' COMMENT — PROVENANCE.
 %Every numeric claim is followed by an HTML comment naming the committed
@@ -73,25 +73,25 @@ The demonstration is a detector change carried end to end under pre-registration
 % src: docs/orbit-phase2-inclination-decomposition-20260920.md, "Channel" paragraph: 29,597 of 39,953 
 , and the obvious explanation --- an inclination residual divided by sin(\emph{i}), badly conditioned near the equator --- was killed by its own pre-registered diagnostic: 1,050 of 1,127 (93.17\%) sampled passive inclination flags lie between 60\textdegree{} and 120\textdegree{}, and only 2 (0.18\%) below 1\textdegree{}%
 % src: docs/orbit-phase2-inclination-decomposition-20260920.md, opening 
-. The measurement stopped at the registered gate with no detector change. A separate pre-registered corroboration rule --- an inclination trip at or above 30\textdegree{} abstains unless an energy channel also survives persistence in the same interval --- then raised full-population raw-floor bound separation from 6.901$\times$ to 18.191$\times$ across the unchanged 10$\times$ requirement, with the passive rate falling 64.45\% against a payload fall of 5.66\%, 40,300 counted abstentions, every one of the 4,662 payload geostationary north-south catches preserved as the boundary requires, and zero CPU/GPU flag disagreements on the verified population%
+. The measurement stopped at the registered gate with no detector change. A separate pre-registered corroboration rule --- an inclination trip at or above 30\textdegree{} abstains unless an energy channel also survives persistence in the same interval --- then raised full-population raw-floor bound separation from 6.90$\times$ to 18.19$\times$ across the unchanged 10$\times$ requirement, with the passive rate falling 64.45\% against a payload fall of 5.66\%, 40,300 counted abstentions, every one of the 4,662 payload geostationary north-south catches preserved as the boundary requires, and zero CPU/GPU flag disagreements on the verified population%
 % src: docs/orbit-phase2b-corroboration-20260920.md, paired acceptance and verification sections 
 .
 
-The stress tests are the substance. A pre-registered covariate-matched transfer analysis asked whether a false-alarm floor measured on the passive covariate mix bounds payload behaviour. The registered verdict is \textbf{DOES NOT TRANSFER}: reweighted to the payload covariate distribution the floor is 2.0591$\times$ the raw floor, failing a registered 2$\times$ clause by three percent, and its primary clustered-bootstrap upper bound reaches 26.19 per 1,000 against a 1.000 target%
+The stress tests are the substance. A pre-registered covariate-matched transfer analysis asked whether a false-alarm floor measured on the passive covariate mix bounds payload behaviour. The registered verdict is \textbf{DOES NOT TRANSFER}: reweighted to the payload covariate distribution the floor is 2.06$\times$ the raw floor, failing a registered 2$\times$ clause by three percent, and its primary clustered-bootstrap upper bound reaches 26.19 per 1,000 against a 1.000 target%
 % src: docs/paperb-results-20260920.md, "Analysis 1" 
-. A pre-registered exact equivalence test then reversed a previously published reading: at and above the shipped 30\textdegree{} boundary the payload inclination-only rate is 0.6585 of the passive rate, exact 90\% interval [0.6316, 0.6865], superiority \emph{p} = 6.03e-65%
+. A pre-registered exact equivalence test then reversed a previously published reading: at and above the shipped 30\textdegree{} boundary the payload inclination-only rate is 0.66 of the passive rate, exact 90\% interval [0.6316, 0.6865], superiority \emph{p} = 6.03e-65%
 % src: docs/paperb-results-20260920.md, Analysis 2b table 
 . The region where the two populations genuinely match begins near 54\textdegree{}, not 30\textdegree{}.
 
-Those two results compose with the first, and the multiplication is one line, so we do it here rather than leave it to a reader. The raw-floor separation of 18.191$\times$ divided by the registered primary reweighting factor of 2.0591$\times$ gives a \textbf{covariate-matched separation of 8.83$\times$} --- below the unchanged 10$\times$ requirement. On the registered primary analysis, measured on the detector that ships, the shipped detector does not clear its own gate once the floor is read on the covariate mix its own audit says is the applicable one. The registered coarse sensitivity variant (perigee $\times$ inclination only, 48 cells, 1.3206$\times$) gives 13.77$\times$ and the gate holds, so the composition on its own reports a spread that straddles the requirement rather than a single verdict%
+Those two results compose with the first, and the multiplication is one line, so we do it here rather than leave it to a reader. The raw-floor separation of 18.19$\times$ divided by the registered primary reweighting factor of 2.06$\times$ gives a \textbf{covariate-matched separation of 8.83$\times$} --- below the unchanged 10$\times$ requirement. On the registered primary analysis, measured on the detector that ships, the shipped detector does not clear its own gate once the floor is read on the covariate mix its own audit says is the applicable one. The registered coarse sensitivity variant (perigee $\times$ inclination only, 48 cells, 1.32$\times$) gives 13.77$\times$ and the gate holds, so the composition on its own reports a spread that straddles the requirement rather than a single verdict%
 % derivation: 18.19114 = 2.938579 / 0.161539 and 2.0591351, 1.3206021 from docs/paperb-results-20260920.json, analysis1CorroborationOn; quotient computed for this draft, see §5.2 
 .
 
-A second registration settles it. Phase 3 re-measured the reweighted floor on the \textbf{entire retained archive} --- sampling modulus 1, 89,402,955 passive and 63,018,120 payload usable intervals, five times this paper's sampled passive exposure --- and returned a registered \textbf{FAIL}. The clause this paper failed now passes decisively: the reweighted floor is 0.2756 per 1,000 with a clustered object-level bootstrap 95\% upper bound of 0.5025 against the 1.000 target, seed 20260921 over 2,000 draws, where the sampled evidence gave 1.846. The gate is shut by the other clause instead, at a reweighted separation of \textbf{5.3560$\times$} against the unchanged 10$\times$ requirement%
+A second registration settles it. Phase 3 re-measured the reweighted floor on the \textbf{entire retained archive} --- sampling modulus 1, 89,402,955 passive and 63,018,120 payload usable intervals, five times this paper's sampled passive exposure --- and returned a registered \textbf{FAIL}. The clause this paper failed now passes decisively: the reweighted floor is 0.276 per 1,000 with a clustered object-level bootstrap 95\% upper bound of 0.5025 against the 1.000 target, seed 20260921 over 2,000 draws, where the sampled evidence gave 1.846. The gate is shut by the other clause instead, at a reweighted separation of \textbf{5.36$\times$} against the unchanged 10$\times$ requirement%
 % src: docs/phase3-results-20260921.json, meta.passiveIntervals 89,402,955, meta.payloadIntervals 63,018,120, primary.reweightedFloorPer1000 0.275578384451783, clause1.upperBoundPer1000 0.502491221502946, clause2.boundRatio 5.35601797798307, bootstrap.seed 20260921, bootstrap.draws 2000 
-. That failure is not a power problem and no exposure can buy it off: collapse the passive interval to its point estimate and the separation is 9.7662$\times$; read both sides at their point estimates, with no uncertainty admitted anywhere, and it is 9.8135$\times$ --- still under the bar%
+. That failure is not a power problem and no exposure can buy it off: collapse the passive interval to its point estimate and the separation is 9.77$\times$; read both sides at their point estimates, with no uncertainty admitted anywhere, and it is 9.81$\times$ --- still under the bar%
 % derivation: 2.691352 ÷ 0.275578 and 2.704389 ÷ 0.275578, from docs/phase3-results-20260921.json payloadSide.lower95Per1000, payloadSide.ratePer1000 and primary.reweightedFloorPer1000; reported the same way in docs/phase3-results-20260921.md, "Why the gate is shut" 
-. The audit therefore shut its own gate twice, by two independent routes --- 8.83$\times$ as a matched composite on a 1-in-5 sample, 5.3560$\times$ fully reweighted at full-archive exposure --- and the second route establishes that the shortfall is fundamental rather than statistical. We report both.
+. The audit therefore shut its own gate twice, by two independent routes --- 8.83$\times$ as a matched composite on a 1-in-5 sample, 5.36$\times$ fully reweighted at full-archive exposure --- and the second route establishes that the shortfall is fundamental rather than statistical. We report both.
 
 Neither failure was repaired by editing an estimator. Both were produced by rules fixed in commits that precede every number they judge. That is what we mean by audited.
 
@@ -142,9 +142,9 @@ Our adversarial prior-art review was explicit about which parts of this territor
 
 \begin{enumerate}
 \item[1.] The apparatus (\S{}2): a class-based negative control, interval estimates rather than point estimates, a bound-versus-bound separation requirement argued from share-of-flags rather than fitted to the data, a mechanical gate on public wording, a physical cost ceiling whose rejections are counted, and abstentions that are counted at the decision that produces them.
-\item[2.] A demonstration (\S{}3--4): a pre-registered diagnostic that killed the obvious explanation of a false-alarm floor and stopped without a fix; then a pre-registered corroboration rule measured on a paired full-population rerun, accepted on a 6.901 $\rightarrow$ 18.191$\times$ raw-floor separation, and stopped again.
+\item[2.] A demonstration (\S{}3--4): a pre-registered diagnostic that killed the obvious explanation of a false-alarm floor and stopped without a fix; then a pre-registered corroboration rule measured on a paired full-population rerun, accepted on a 6.90 $\rightarrow$ 18.19$\times$ raw-floor separation, and stopped again.
 \item[3.] Two stress tests the apparatus failed (\S{}5): a covariate transfer analysis that returned DOES NOT TRANSFER, and an equivalence test that reversed a published inclination reading and relocated its boundary from 30\textdegree{} to near 54\textdegree{}. These are reported at the prominence of the demonstration because an audit that has never returned an unwelcome answer has not been shown to work.
-\item[4.] The composition of the two (\S{}5.2), and its independent confirmation (\S{}5.2.2): applying the first stress test's measured correction to the demonstration's headline puts the shipped detector below its own gate at 8.83$\times$, and a second registration measured on every in-scope object in the archive reaches the same verdict by a direct route at 5.3560$\times$, with the shortfall surviving at point estimates on both sides. We report both rather than omit either.
+\item[4.] The composition of the two (\S{}5.2), and its independent confirmation (\S{}5.2.2): applying the first stress test's measured correction to the demonstration's headline puts the shipped detector below its own gate at 8.83$\times$, and a second registration measured on every in-scope object in the archive reaches the same verdict by a direct route at 5.36$\times$, with the shortfall surviving at point estimates on both sides. We report both rather than omit either.
 \item[5.] An engagement with the closest error-structure literature (\S{}5.5), stating where our measured curve disagrees with a published out-of-plane error peak and why that disagreement is not a refutation.
 \end{enumerate}
 
@@ -152,7 +152,7 @@ Our adversarial prior-art review was explicit about which parts of this territor
 
 The result a reader is most likely to remember from this paper is that our own audit shut our own gate. We put that here rather than only in \S{}5 because it is the claim, not an embarrassment inside it.
 
-Nothing in \S{}5 was repaired. No estimator was swapped, no margin relaxed, no boundary moved, no detector changed, and the 30\textdegree{} rule remains live while the evidence against its stated justification sits in the repository. The reweighted floor is reported at 2.0591$\times$ against a 2$\times$ threshold that a registration written three percent looser would have passed, and the raw ratio is published so any reader may apply their own. The composed separation of 8.83$\times$ is reported although the number the apparatus was built to advertise is 18.191$\times$. Phase 3's registered FAIL is reported together with the observation that its own registration predicted failure for the wrong reason, which \S{}5.2.2 states before a reviewer has to.
+Nothing in \S{}5 was repaired. No estimator was swapped, no margin relaxed, no boundary moved, no detector changed, and the 30\textdegree{} rule remains live while the evidence against its stated justification sits in the repository. The reweighted floor is reported at 2.06$\times$ against a 2$\times$ threshold that a registration written three percent looser would have passed, and the raw ratio is published so any reader may apply their own. The composed separation of 8.83$\times$ is reported although the number the apparatus was built to advertise is 18.19$\times$. Phase 3's registered FAIL is reported together with the observation that its own registration predicted failure for the wrong reason, which \S{}5.2.2 states before a reviewer has to.
 
 The claim of this paper is not that the apparatus produces favourable numbers. It is that rules fixed in commits preceding every number they judge will occasionally return numbers their authors do not want, and that a control which has demonstrated that is worth more than one which has not been given the chance.
 
@@ -205,6 +205,8 @@ The critical scoping statement, which we place here rather than in the limitatio
 Every rate in the control carries a Jeffreys 95\% interval. The passive rate is read at its upper bound and the payload rate at its lower bound whenever the two are compared, so that the comparison is conservative in the direction that matters. A stratum or population with zero observed flags receives a non-zero upper bound; a zero point estimate is never reported as a zero bound%
 % src: docs/paperb-preregistration-20260920.md, §4 
 .
+
+\textbf{A note on displayed precision.} Values quoted from committed artifacts are reproduced here verbatim, to the digits the receipt carries, so that a reader can find them in the source by searching for them; the precision of an estimate is given by its interval and not by its digit count, and headline statements in the abstract and the introduction are accordingly rounded to what the interval supports. Registered constants, gate values and seeds are never rounded.
 
 \subsection*{2.3 Separation as an effect size, not a significance test}
 
@@ -405,6 +407,17 @@ All-object inclination abstentions & not measured & not measured & 40,300 \\
 
 % src: docs/orbit-phase2b-corroboration-20260920.md, "Full-population paired acceptance" 
 
+The shape of that change is in Figure~\ref{fig:corroboration}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/corroboration-slopegraph.pdf}
+\caption{The corroboration rule lowered the floor without lowering the capability. Left: passive and payload flag rates on the paired full-population rerun, before and after the rule, on a log scale so that equal proportional falls are equal slopes. Right: the bound separation those two rates produce, against the unchanged requirement. The passive rate falls by roughly two thirds and the payload rate by a few per cent, which is why the separation crosses the requirement from below rather than staying where it was.}
+\label{fig:corroboration}
+\end{figure}
+
+% figure: docs/latex/paper-b/figs/corroboration-slopegraph.pdf, drawn by tools/make_figures.py from docs/orbit-phase2b-corroboration-20260920.json, fullPopulation.before and fullPopulation.after: passive.ratePerInterval, payload.ratePerInterval, rateSeparation.boundRatio, rateSeparation.requiredBoundRatio 
+
 The passive point rate falls 64.45\%; the payload rate falls 5.66\%, retaining 94.34\% of payload flags. This is not proportional loss and does not trigger the registered symmetric trap%
 % src: same 
 .
@@ -575,6 +588,17 @@ Registered clause & Requirement & Measured &  \\
 
 % src: docs/phase3-results-20260921.json, clause1.upperBoundPer1000 0.502491221502946, clause1.passes true, clause2.boundRatio 5.35601797798307, clause2.requiredBoundRatio 10.0, clause2.passes false, accepted false 
 
+The whole verdict is one picture, and Figure~\ref{fig:gate} is it.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/gate-separations.pdf}
+\caption{Our own audit shuts our own gate, by two independent routes. Bound separation against the unchanged requirement, drawn as the heavy vertical rule: the raw passive floor with corroboration active clears it, the covariate-matched composite on the one-in-five sample does not, and the full-archive reweighted measurement does not. The whisker on the composite is the registered sensitivity spread, which straddles the requirement rather than settling it. The marked tick below the axis is the point-estimate ceiling, both rates read with no uncertainty admitted anywhere, and it still falls short of the bar: the shortfall is a property of the two populations and not of the sample size.}
+\label{fig:gate}
+\end{figure}
+
+% figure: docs/latex/paper-b/figs/gate-separations.pdf, drawn by tools/make_figures.py from docs/orbit-phase2b-corroboration-20260920.json fullPopulation.after payload.jeffreys95 and passive.jeffreys95; docs/paperb-results-20260920.json analysis1CorroborationOn.primary.ratioToRaw, coarseSensitivityB.ratioToRaw and bootstrapPrimaryInterval.high95Per1000; docs/phase3-results-20260921.json clause2.boundRatio, clause2.secondaryBoundRatio, clause2.requiredBoundRatio, payloadSide.ratePer1000 and primary.reweightedFloorPer1000 
+
 The exposure experiment itself worked, and worked well. The reweighted floor is 0.2756 per 1,000 with a primary clustered 95\% of [0.2079, 0.5025] at seed 20260921 over 2,000 object-level draws, where this paper's sample gave an upper bound of 1.846 and failed clause 1 by nearly a factor of two%
 % src: docs/phase3-results-20260921.json, primary.reweightedFloorPer1000 0.275578384451783, bootstrap.low95Per1000 0.20789096048229422, bootstrap.high95Per1000 0.502491221502946, bootstrap.seed 20260921, bootstrap.draws 2000 
 . Labelled gaps fell from 13.358\% of payload exposure to 3.621\%, and the support-tier choice stopped mattering: \texttt{S $\ge$ 1} gives 0.2779 against \path{S_1000}'s 0.2756, a difference of 0.8\%, against the 26.19-versus-1.85 swing this paper reports%
@@ -600,6 +624,17 @@ The exposure experiment itself worked, and worked well. The reweighted floor is 
 . But it does not account for the majority of the gap. The heaviest labelled gap in the whole estimate is a \texttt{1200-2000 km \textbar{} 30-60\textdegree{} \textbar{} e\textless{}0.001 \textbar{} 0.25-1 d} cell holding 0.939\% of payload exposure on \textbf{four} passive intervals, with a closely related cell holding 87,598 payload intervals on \textbf{zero}%
 % src: docs/phase3-results-20260921.json, primary.gaps, heaviest entries: payloadIntervals 591,826 on 4 passive, and 87,598 on 0 
 . Nothing decays out of 1200--2000 km on a human timescale, so that gap is a genuine sparseness of passive objects in near-circular mid-altitude orbits at those inclinations rather than an atmospheric limit. It is unexplained, and we say so rather than borrow the atmospheric account for it.
+
+The grid in Figure~\ref{fig:grid} shows where that exposure actually sits.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/covariate-grid.pdf}
+\caption{Where the payloads are, the passive objects are not. Passive usable intervals per payload usable interval over the registered perigee and inclination grid, with the eccentricity and cadence factors summed out. Cells outlined in bold carry at least one per cent of all payload exposure, and almost every one of them sits below parity; the cells with passive exposure to spare carry almost no payload exposure at all. That is the mismatch the reweighting has to bridge, and it is why a single pooled floor is the wrong object to gate on.}
+\label{fig:grid}
+\end{figure}
+
+% figure: docs/latex/paper-b/figs/covariate-grid.pdf, drawn by tools/make_figures.py from docs/phase3-strata-20260921.jsonl, every record of both kinds: passiveIntervals and payloadIntervals summed over the eccentricity and interval-span factors of the stratum key 
 
 \textbf{The Kozai perigee offset cannot change either clause.} \S{}6 records that the derived perigee inherits an inclination-dependent offset of roughly 5 km across inclination, and that this paper leaves it unquantified. Phase 3 bounds it: 2.997\% of passive and 2.415\% of payload exposure lies within one full Kozai spread of a band edge, and re-binning the entire population at +3.35 km, then again at $-$1.68 km --- a deliberately worst-case uniform shift --- moves the reweighted floor by at most +0.32\% / $-$0.90\%%
 % src: docs/phase3-results-20260921.json, m14KozaiPerigee.edgeExposureSharePassive 0.029966269012025384, .edgeExposureSharePayload 0.02414940337794907, variants.Up.reweightedFloorPer1000 0.27644654925298273, variants.Down.reweightedFloorPer1000 0.2730846561651722 against primary 0.275578384451783 
@@ -856,6 +891,17 @@ resume double-count fix in \path{paperb_measure.py} & 46dee20 & Verified-before-
 \textbf{The registration ordering is the claim.} \path{f317a28} precedes \path{8604de2}, which precedes \path{d4c09ee} (analysis modules), which precedes \path{46dee20} and \path{7626c55} (results). Nothing in \S{}5 could have been fitted to a number that did not yet exist. The same holds for \S{}5.2.2: \path{7eab5a4} (09:09:25) precedes \path{70e8414} (10:01:43), which precedes \path{d4e9090} (10:38:36) and \path{1093a3c} (12:01:38), all ancestors of the branch head%
 % src: docs/phase3-results-20260921.md, "Commit references" 
 .
+
+The ordering is drawn in Figure~\ref{fig:timeline} rather than left to a reader to reconstruct from hashes.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/registration-timeline.pdf}
+\caption{The registration ordering, drawn from the repository's own clock rather than left to a reader to reconstruct from hashes. Each lane is one experiment: the registration that governs it is committed before its analysis code, and the analysis code before any result. The dashed rule marks the moment the external anchor manifest was generated, after which every registration document is fixed byte for byte. The separation plan that fixes the requirement was committed nine days before the left edge of this window and is therefore off it.}
+\label{fig:timeline}
+\end{figure}
+
+% figure: docs/latex/paper-b/figs/registration-timeline.pdf, drawn by tools/make_figures.py from this repository's commit metadata for the commits named in the table above, and from docs/registration-anchor-manifest-20260921.txt for the anchor time 
 
 \textbf{One demonstration that the TODO below is not hypothetical.} An earlier draft of the Phase 3 report cited commit \path{8327aa2} for those tools. That commit no longer exists in this repository: a concurrent session rewrote the branch later the same day, and a hash cited in a document became a dangling reference within hours. Nothing was lost --- the tool content is byte-identical and re-enters at \path{70e8414} --- but the ordering above is verifiable only by a reader holding this repository, which is exactly the gap the external anchor is for%
 % src: docs/phase3-results-20260921.md, "A live demonstration of M8, in this repository, today" 
