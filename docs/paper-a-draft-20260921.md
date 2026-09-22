@@ -514,8 +514,6 @@ All analysis code, registrations, reports, per-object evidence files and machine
 
 **Compute.** The census ran through a GPU broker in the standard class at low CPU and I/O priority, with no CPU fallback permitted; the arm-1 probe ran on CPU at low priority in 153.27 s wall / 130.26 s CPU, reading 137,788 selected-object archive rows and verifying all 256 shards <!-- src: docs/eol-policy-relaxation-20260920.md, "Deliverables and verification" -->. No production detector run, timer, ingestion, release or deployment was exercised by any measurement reported here.
 
-**DONE 2026-09-21 — citation TODO closed.** Bibliographic entries for Yilmaz (2025), Roberts et al. (AMOS 2023) and Decoto & Loerch (AMOS 2015) were located and verified against live sources (publisher record; AMOS technical-paper library) and now appear in the References section below, alongside a full entry for Jehn, Agapov & Hernandez (2005). No committed source in this repository carries these citations — they were found externally on 2026-09-21 and are not themselves repository artefacts, so they carry no `src:` provenance comment; they are ordinary literature citations rather than measured claims. No bibliographic TODO remains open in this paper. The only outstanding items before submission are the external commit-anchor of §7 (not a citation task) and the standard author/affiliation front-matter noted at the top of this draft.
-
 ---
 
 ## Acknowledgments
