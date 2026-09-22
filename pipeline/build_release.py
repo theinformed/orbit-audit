@@ -249,7 +249,7 @@ OWNER_LABELS = {
     "O3B": "O3b / SES",
     "GLOB": "Globalstar",
     "IM": "Inmarsat",
-    # Added 2026-08-07. Without these the card printed the registry's raw
+    # Without these the card printed the registry's raw
     # abbreviation -- "SAUD", "ISRA", "AB" -- in a field labelled OWNER /
     # OPERATOR, which reads as a name the site knows rather than a code it
     # failed to expand. Only codes whose expansion is unambiguous are listed;
@@ -1516,7 +1516,7 @@ BASIS_EVIDENCE = {
     ),
     # ASSESSED IS NOT DOCUMENTED, AND THE SITE MAY NOT SAY IT IS.
     #
-    # Added 2026-08-20. The site's owner filtered the catalog by MILSATCOM and
+    # Filtering the catalog by MILSATCOM and
     # got 101 objects, 93 of them American, and asked whether we know of no PLA
     # military communications satellites. We do. What we do not have for them is
     # the same KIND of evidence: SKYNET has a gov.uk page, Syracuse has a CNES
@@ -1540,7 +1540,7 @@ BASIS_EVIDENCE = {
 }
 
 
-# REMOVED 2026-08-20: `registry_owner_clause` and `registry_facts_clause`.
+# DELETED: `registry_owner_clause` and `registry_facts_clause`.
 #
 # Together they formatted the sentence "This object's registry record: about
 # 976 km up on a 104.6-minute period, launched 1964-10-06 in launch group

@@ -620,7 +620,7 @@ def _fold_numbers(words: list[str]) -> list[str]:
 def _fold_hundreds(words: list[str]) -> list[str]:
     """`a hundred` -> 100, `four hundred and thirty five` -> 435.
 
-    Added 2026-08-27 after a CORRECT line failed verification. The script said
+    Written after a CORRECT line failed verification. The script said
     "It ends up a hundred kilometres lower and fifty-seven metres a second
     faster"; the transcriber heard it perfectly and wrote "100 kilometers ...
     57 meters". `_fold_numbers` turns "fifty seven" into 57 on both sides but

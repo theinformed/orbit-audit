@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prove the marks -> per-beat placement path against a REAL marks file.
 
-The video agent's emit_marks.py has now written one marks file per MECHANISM clip. The ten
+tools/mechanism-animations/emit_marks.py writes one marks file per MECHANISM clip. The ten
 layer clips still have none, so the layer beds remain one beat each — but the FORMAT is the
 one this lane consumes, and a real file with real beat boundaries is much better evidence
 than the synthetic fixture.
@@ -13,9 +13,9 @@ it is CHECKED against tools/mechanism-animations/narration-alignment.json, which
 each line's start straight from the caption map when the mp4s were muxed. If the two
 disagree the mapping is wrong and this refuses to go on.
 
-Writes into this lane's own scratch. It does not touch the video agent's files.
+Writes into this lane's own scratch. It does not touch the rendered marks files.
 
-A CAVEAT ADDED 2026-08-27. This feeds MECHANISM lines through the LAYER bed
+ONE CAVEAT. This feeds MECHANISM lines through the LAYER bed
 builder as a format test, and that builder refuses a line which overruns the
 beat it is anchored to. Mechanism lines are no longer bound by that: since the
 silence rule was retired they routinely span several caption beats, exactly as

@@ -119,7 +119,7 @@ class SocketGateTests(unittest.TestCase):
             ("HALT_MARKER", root / "state" / "HALTED.json"),
             ("SATCAT_APPLIED", root / "state" / "satcat-applied-signature.json"),
             ("LAST_ATTEMPT", root / "state" / "last-request-at.json"),
-            # Added 2026-08-27 with conditional requests. Without it this
+            # Required by the conditional-request path. Without it this
             # offline test wrote the REAL ingest/state/http-validators.json --
             # caught on the first run, by a 36-byte file appearing in live state
             # while the mirror was supposed to be halted. A sandbox that misses

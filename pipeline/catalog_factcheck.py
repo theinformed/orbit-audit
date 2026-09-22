@@ -866,7 +866,7 @@ PROGRAMME_FACTS: dict[str, dict[str, str]] = {
         "source": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197713/advanced-extremely-high-frequency-system/",
         "sourceTier": "primary",
     },
-    # Added 2026-08-20 while working the United States partition. The retrieval
+    # The retrieval
     # half of this lane had already corroborated `DSP 22`, `GSSAP 3`, `GSSAP 4`
     # and `CBAS 2` across independent domains and then refused to write them,
     # for the one reason the design intends: what a programme IS comes from a

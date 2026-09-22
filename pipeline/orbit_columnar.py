@@ -242,7 +242,7 @@ def _writer(root):
     _check_budget()
     root.mkdir(parents=True, exist_ok=True)
     with open(root / ".writer", "a") as lock:
-        # Single-flight program maintenance, nonblocking; never waits on an agent.
+        # Single-flight maintenance, nonblocking; never waits on another writer.
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         marker = root / "OWNER"
         if marker.exists():

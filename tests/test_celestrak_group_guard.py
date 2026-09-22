@@ -214,7 +214,7 @@ class MirrorIntegrationTests(unittest.TestCase):
             ("HALT_MARKER", self.tmp / "state" / "HALTED.json"),
             ("SATCAT_APPLIED", self.tmp / "state" / "satcat-applied-signature.json"),
             ("LAST_ATTEMPT", self.tmp / "state" / "last-request-at.json"),
-            # Added 2026-08-27 with conditional requests. Same reason as
+            # Required by the conditional-request path. Same reason as
             # HALT_MARKER above: without it the seeded change ledger was written
             # into the real repository, on bigmem, which may not touch this lane.
             ("VALIDATORS", self.tmp / "state" / "http-validators.json"),

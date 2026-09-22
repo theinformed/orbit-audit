@@ -273,8 +273,8 @@ def validate_station_table(table: dict[str, Any]) -> None:
         _require_text(link.get("sourceName"), f"{where}.sourceName")
         _require_text(link.get("sourceRetrieved"), f"{where}.sourceRetrieved")
         # The published sentence, in the publisher's words. This is the field
-        # that makes the difference between "someone published this" and "an
-        # agent decided it looked right", and it is why there is no code path
+        # that makes the difference between "someone published this" and
+        # "software decided it looked right", and it is why there is no code path
         # here that can manufacture a link: nothing can write this string.
         evidence = _require_text(link.get("evidence"), f"{where}.evidence")
         if len(evidence) < 24:

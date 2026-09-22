@@ -39,7 +39,7 @@ class MirrorPolicyTests(unittest.TestCase):
             mock.patch.object(mirror, "HALT_MARKER", root / "state" / "HALTED.json"),
             mock.patch.object(mirror, "SATCAT_APPLIED", root / "state" / "satcat-applied-signature.json"),
             mock.patch.object(mirror, "LAST_ATTEMPT", root / "state" / "last-request-at.json"),
-            # Added 2026-08-27. Without it this offline test wrote the REAL
+            # Without it this offline test wrote the REAL
             # ingest/state/http-validators.json -- on bigmem, which is forbidden
             # from touching this lane at all. See SandboxCompletenessTests in
             # tests/test_celestrak_conditional_requests.py, which now fails if a

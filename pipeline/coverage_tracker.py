@@ -43,8 +43,8 @@ of ``build_release.py`` is worth having once.
 Every check is offline and deterministic except one.  Source liveness needs the
 network, so it is opt-in (``--check-sources``), cached on disk with a long TTL,
 rate-limited per host, and it reports a 403 as *unverifiable*, never as dead --
-several publishers and every .mil host refuse automated clients, and a sibling
-agent confirmed three such by hand.  A dead-link column that cries wolf is
+several publishers and every .mil host refuse automated clients, and three such
+were confirmed by hand.  A dead-link column that cries wolf is
 worse than no column at all.
 """
 
@@ -618,7 +618,7 @@ def attribute_cause(record: dict[str, Any], gaps: Sequence[dict[str, Any]],
         pass
 
     if "licence-only" in keys:
-        # Corrected 2026-08-20: these are not a gap between the four owner
+        # These are not a gap between the four owner
         # partitions. They are the SatNOGS radio-licence lane's own output --
         # documented spacecraft to which a lane attached a spectrum filing in
         # place of a mission. A lane producing weak prose is a different and
@@ -836,8 +836,8 @@ def urllib_probe(url: str, timeout: int = 20, *, opener=None, sleep=time.sleep) 
                            404 or a 410.
     * ``dead``          -- 404 or 410, or the host does not resolve.  Only these
                            are reported as rot.
-    * ``unverifiable``  -- 403, 401, 429, a timeout, a TLS failure.  A sibling
-                           agent confirmed by hand that three publishers and
+    * ``unverifiable``  -- 403, 401, 429, a timeout, a TLS failure.  Manual
+                           checks confirmed that three publishers and
                            every .mil host in the catalog refuse automated
                            clients outright.  **A 403 is not a dead link.**
                            Saying so would put a false accusation next to a
