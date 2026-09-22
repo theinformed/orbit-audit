@@ -20,9 +20,9 @@ API class rate-limits it to **1 / lifetime** and says, verbatim:
 So this module does exactly what they ask. It **never touches the space-track
 API**. It fetches from the Sync.com share they publish for this purpose, which
 consumes no API rate limit at all, and it keeps what it downloads so a re-import
-never needs a re-fetch. Sean holds the space-track account personally, as a
-serving officer; a suspension is a trip through his chain of command, and that
-constraint is what shapes every fetch decision below.
+never needs a re-fetch. The space-track account is held personally by a serving
+officer, so a suspension is a trip through a chain of command; that constraint
+is what shapes every fetch decision below.
 
     NEVER add a request to space-track.org's API to this file.
     NEVER add a request to celestrak.org to this file.
@@ -30,9 +30,9 @@ constraint is what shapes every fetch decision below.
 ENTITY BOUNDARY
 ---------------
 Identical to `ingest/spacetrack_ingest.py`, and for the same legal reason:
-space-track material is fetched and held only on bigmem-PC, under Sean's
-personal account. The VPS operates under a separate entity and must never hold
-it. `enforce_entity_boundary()` runs before anything opens a socket or writes a
+space-track material is fetched and held only on the designated host, under the
+personal account. The publishing server operates under a separate entity and
+must never hold it. `enforce_entity_boundary()` runs before anything opens a socket or writes a
 byte, and it refuses on any other host.
 
 Redistribution of *derived* products (mean elements, with citation) is settled
@@ -124,19 +124,19 @@ from pipeline import orbit_history as oh
 ROOT = Path(__file__).resolve().parents[1]
 
 # ---------------------------------------------------------------------------
-# The boundary. Do not relax without Sean's explicit instruction.
+# The boundary. Do not relax without an explicit decision to change the rule.
 # ---------------------------------------------------------------------------
 SPACETRACK_HOST = "bigmem-PC"
 
 
 def enforce_entity_boundary(host: str | None = None) -> None:
-    """Refuse to run anywhere but bigmem-PC.
+    """Refuse to run anywhere but the designated space-track host.
 
     Same guard, same wording and the same reason as
-    `ingest/spacetrack_ingest.py`. space-track material is held only under
-    Sean's personal identity, on his own machine. The VPS operates under the
-    LLC and must never hold it, and a guard is the only form of that rule that
-    cannot be forgotten.
+    `ingest/spacetrack_ingest.py`. space-track material is held only under the
+    personal identity, on that one machine. The publishing server operates under
+    the organisation and must never hold it, and a guard is the only form of
+    that rule that cannot be forgotten.
     """
     current = host if host is not None else socket.gethostname()
     if current != SPACETRACK_HOST:

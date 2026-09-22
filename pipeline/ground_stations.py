@@ -100,8 +100,8 @@ RELATIONSHIP_LABELS = {
 
 #: Policy values for military ground sites. The default is ``excluded`` and the
 #: validator refuses a military row while it holds, so turning this on is a
-#: single reviewable line rather than something that happens by drift. This is
-#: Sean's call to make, not the pipeline's: see docs/ground-stations-design.md.
+#: single reviewable line rather than something that happens by drift. The
+#: decision is editorial, not the pipeline's: see docs/ground-stations-design.md.
 MILITARY_POLICIES = frozenset({"excluded", "included"})
 
 _ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")

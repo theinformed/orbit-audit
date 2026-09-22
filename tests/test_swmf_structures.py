@@ -211,8 +211,8 @@ class RbeOutlierHandling(unittest.TestCase):
         """Two bad cells in two shells is 0.08% of the frame, not 3.9%.
 
         Shell quantisation removes 96 cells to keep the grid rectangular. If the
-        backstop counted those it would turn Sean's 2% tolerance into 0.04% and
-        fail frames he intended to publish.
+        backstop counted those it would turn the 2% tolerance into 0.04% and
+        fail frames that are meant to publish.
         """
         reduced = swmf._parse_radiation(
             _synthetic_rbe_file(bad_radii={(3, 7): 55.0, (20, 9): 61.0}))

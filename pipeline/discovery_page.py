@@ -3,10 +3,9 @@
 
 Where this lives, and why that is the gate
 ------------------------------------------
-Sean asked for this feature to exist but to stay off the site: *"maybe leave it
-off the site for now in a hidden area."* This project already has a convention
-for that, in two halves, and both are used here rather than a new one being
-invented.
+This feature exists but stays off the published site, in a hidden area. The
+project already has a convention for that, in two halves, and both are used
+here rather than a new one being invented.
 
 **Half one — the publish allowlist.** ``deploy/publish_data.py`` stages "only
 the artifacts referenced by the current atomic manifest": it walks

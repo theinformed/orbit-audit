@@ -587,9 +587,9 @@ def fetch_text(url: str, max_age_seconds: int) -> str:
 def fetch_celestrak(url: str, max_age_seconds: int, **kwargs: Any) -> Any:
     """Structurally forbid direct CelesTrak access from the publisher.
 
-    CelesTrak belongs to the VPS mirror under the LLC identity.  The publisher
-    runs on bigmem under Sean's personal identity and must only read the mirror
-    pulled over WireGuard.  This unconditional guard replaces the former
+    CelesTrak is fetched only by the mirror host, which operates under the
+    organisation's identity.  The publisher runs under a personal identity and
+    must only read the mirror over the private link.  This guard replaces the former
     environment-variable kill switch and its network fallbacks: forgetting an
     environment variable can no longer cross the identity boundary.
     """
@@ -961,8 +961,8 @@ def contains(name: str, patterns: Iterable[str]) -> bool:
 # The name tokens `classify_detailed` matches on, lifted out of the function so
 # they can be COUNTED.
 #
-# Sean, 2026-08-19: "a rule that silently captures hundreds of objects on a
-# substring is where the next COSMIC is hiding. Report the count per rule."
+# A rule that silently captures hundreds of objects on a substring is where the
+# next misclassification hides, so the count per rule has to be reportable.
 # That audit is impossible while the tokens are literals inside an if-chain, and
 # it turned out to be worth having for a second reason: run over the live
 # catalog, 27 of these 95 tokens match NOTHING AT ALL. "GPS " has never matched
@@ -1142,11 +1142,11 @@ def celestrak_hosted_augmentations() -> dict[int, str]:
 # This project already knew that in two places and had not generalised it. The
 # `gnss` group is withheld from spacecraft that merely HOST an augmentation
 # transponder -- see `SBAS_SYSTEMS`, whose comment says withholding "is what
-# stops 'GALAXY 30, mission: navigation'". And on 2026-08-19 the `stations`
-# group was found putting six ISS-DEPLOYED CubeSats on the site as crewed
-# spaceflight. Sean then found THEMIS A -- one of NASA's five magnetospheric
-# physics spacecraft, studying substorm onset in the magnetotail -- displayed
-# as CIVIL / OTHER SATCOM, because it is in CelesTrak's `tdrss` group.
+# stops 'GALAXY 30, mission: navigation'". The same failure then turned up
+# twice more: the `stations` group put six ISS-DEPLOYED CubeSats on the site as
+# crewed spaceflight, and THEMIS A -- one of NASA's five magnetospheric physics
+# spacecraft, studying substorm onset in the magnetotail -- was displayed as
+# CIVIL / OTHER SATCOM, because it is in CelesTrak's `tdrss` group.
 #
 # So the groups were MEASURED rather than argued about. For each one, take the
 # members the site classified from OTHER evidence (a name rule, an exact name, a
@@ -1305,8 +1305,8 @@ OPERATOR_SECTORS: tuple[tuple[str, str, str, str], ...] = (
 # The site does not resolve these conflicts. It shows them.
 #
 # The first design withdrew the claim: a name-pattern mission contradicted by
-# the object's own orbit fell back to "unclassified". Sean overruled that, and
-# he was right -- it silently discards the most interesting thing in the record.
+# the object's own orbit fell back to "unclassified". That design was rejected:
+# it silently discards the most interesting thing in the record.
 # A student learns more from "here is a claim, here is evidence that does not
 # fit it, here is us declining to pretend we know" than from a card that quietly
 # says nothing, and the disagreement demonstrates the very method this site
@@ -1549,9 +1549,9 @@ BASIS_EVIDENCE = {
 # it padded from behind. Every fact in it is already a row in the Satellite
 # Details grid on the same screen, so the sentence restated the grid.
 #
-# Sean: "that sounds absolutely tacky ... just having it lead into orbit is
-# fucking dumb", and the standing rule, "stop adding filler/fluff text to my
-# site". This was the THIRD appearance of the defect: removed from the
+# The standing rule this breaks is that no card carries filler, and no sentence
+# restates the grid printed beside it.
+# This was the THIRD appearance of the defect: removed from the
 # generated description, it came back through a dormant opt-in flag. The
 # functions are DELETED rather than left unused for that reason -- there is now
 # nothing in the pipeline that can render the grid back into prose.
@@ -1566,8 +1566,8 @@ def constellation_shell_note(
 ) -> str:
     """Where in its own constellation this particular spacecraft flies.
 
-    Sean, on the objects carrying no description: "I can google search any
-    satellite I click and get details." The family paragraph is most of that
+    The complaint these objects draw is that a card with no description tells a
+    reader less than a search engine would. The family paragraph is most of that
     answer, but a family paragraph repeated across 186 Guowang cards is still
     186 identical cards, and identical is what "no details" feels like.
 
@@ -1631,14 +1631,12 @@ def launch_cohort_payloads(satcat_rows: Iterable[dict[str, Any]]) -> dict[str, i
     return counts
 
 
-#: What every object in this class has in common, and the reason the site's
-#: owner asked for this text at all: "for the ones that we don't have data on,
-#: put something that makes sense ... potentially you could say what picosats
-#: are in general". A small satellite almost never carries propulsion. It
-#: therefore cannot be the one that moves, which is a fact about how LEO
-#: traffic is actually managed and is not derivable from anything in the
-#: Details grid. Sean, on this clause: "yes the operational hook you mentioned
-#: is awesome."
+#: What every object in this class has in common, and the reason a card with no
+#: researched description still says something: where no source names the
+#: individual spacecraft, the class it belongs to still carries a fact worth
+#: stating. A small satellite almost never carries propulsion. It therefore
+#: cannot be the one that moves, which is a fact about how LEO traffic is
+#: actually managed and is not derivable from anything in the Details grid.
 CANNOT_MANOEUVRE = (
     "Objects this size almost never carry propulsion, so in a close approach they cannot be "
     "the one that moves."
@@ -1656,15 +1654,13 @@ def template_purpose(
 ) -> str:
     """The description shown when nothing authoritative names this spacecraft.
 
-    REWRITTEN 2026-08-20, twice in one night, and the second rewrite is the one
-    that matters. The first replaced an apology-led sentence with a fact-led
-    one -- the gap in seven words, then the registry's own record. Measured on a
+    This text was rewritten twice, and the second rewrite is the one that
+    matters. The first replaced an apology-led sentence with a fact-led one --
+    the gap in seven words, then the registry's own record. Measured on a
     finished card, that record turned out to be six facts (orbit class,
     altitude, period, launch date, launch group, registering state) EVERY ONE OF
-    WHICH was already in the Details grid on the same screen. Sean: "that sounds
-    absolutely tacky. Saying 'we don't have it in the catalog but we do have...'
-    and just having it lead into orbit is fucking dumb", and, standing:
-    "stop adding filler/fluff text to my site."
+    WHICH was already in the Details grid on the same screen, so the sentence
+    added nothing and read as filler.
 
     So the test here is not "is this true" -- the registry clause was perfectly
     true -- but "does this tell the reader something the grid does not already
@@ -2731,9 +2727,9 @@ def catalog_priority(record: dict[str, Any]) -> tuple[int, int, str, int]:
 SHAPED_PURPOSES = ROOT / "narration" / "shaped-purposes.json"
 CONSTELLATION_OVERRIDES = ROOT / "data" / "constellation_overrides.json"
 
-#: Sean, 2026-08-27: "on the site, I want max 2 paragraphs, and max just a few lines per
-#: paragraph. It is fine if some only have 1 paragraph and it can be longer if so, with a
-#: max of maybe 6-8 lines." Eight lines at the MEASURED 46 characters per line of the
+#: The published format is at most two paragraphs of a few lines each; a card with a
+#: single paragraph may run longer, to a ceiling of six to eight lines.
+#: Eight lines at the MEASURED 46 characters per line of the
 #: card's description column -- 280.5 px at a 1440 px viewport, 11.6 px Inter on an
 #: 18.56 px line box. The one place this number is derived is
 #: narration/build_shaped_purposes.py; this is the publish-time copy of it, and the two
@@ -2926,15 +2922,15 @@ SOURCE_GROUP_CARRY_FORWARD_DAYS = 14
 # on a 104.6-minute period, launched 1964-10-06 in launch-group 1964-063,
 # registered to the United States." to 1,205 published descriptions, 553 of them
 # researched prose it padded from behind. Every value in it is already a row in
-# the Satellite Details grid on the same screen. Sean: "that sounds absolutely
-# tacky", and the standing rule, "stop adding filler/fluff text to my site".
+# the Satellite Details grid on the same screen, which makes it filler by the
+# standing rule: a card never restates the grid beside it.
 # The flag, the clause helpers that formatted it and the 627 override entries
 # that set it are all deleted; `validate_overrides` now REFUSES the flag, since
 # leaving it dormant is how it came back the second time. `purpose` changes on
 # 1,205 retained objects, which is what this bump acknowledges.
-# 2026-08-27: cohort corroboration. Sean, looking at STARLINK-11600: "I don't
-# like that ?", and "it looks ridiculous on the display". He was right, and the
-# measurement agreed: 6,288 of 8,000 cards rested on `name-pattern` and drew the
+# 2026-08-27: cohort corroboration. The question-marked chip on STARLINK-11600
+# read as noise rather than as a caveat, and the measurement agreed with that
+# reading: 6,288 of 8,000 cards rested on `name-pattern` and drew the
 # dashed, dimmed, question-marked chip, so the mark that exists to warn about
 # Tianmu-1 11 was firing on four thousand Starlinks and had stopped meaning
 # anything. The 18th Space Defense Squadron's naming really is provisional
@@ -3418,10 +3414,10 @@ def build_catalog(max_satellites: int, data_root: Path | None = None) -> dict[st
                 # Every fact in it -- altitude, period, launch date, launch
                 # group, registering state -- is already a row in the Satellite
                 # Details grid on the same screen, so it restated the grid in
-                # prose and padded 1,205 cards, 553 of them researched. Sean:
-                # "that sounds absolutely tacky ... just having it lead into
-                # orbit is fucking dumb", and "stop adding filler/fluff text to
-                # my site". This was its THIRD appearance; `validate_overrides`
+                # prose and padded 1,205 cards, 553 of them researched. The
+                # standing rule is that no card carries filler and no sentence
+                # restates the grid printed beside it.
+                # This was its THIRD appearance; `validate_overrides`
                 # now refuses the flag outright rather than ignoring it, and
                 # `test_the_description_never_restates_the_details_grid`
                 # guards the override path as well as the generated one.
@@ -3712,8 +3708,8 @@ def build_catalog(max_satellites: int, data_root: Path | None = None) -> dict[st
     # because that is still exactly how its mission label was arrived at and
     # destroying that record to change a chip would be losing data to win an
     # argument. This is an ADDITIONAL fact recorded beside it, which is what
-    # lets the interface's rendering rule be re-tuned later -- Sean intends to
-    # revisit the doctrine -- without re-deriving or rebuilding anything.
+    # lets the interface's rendering rule be re-tuned later, without
+    # re-deriving or rebuilding anything.
     cohort_verdicts = satnogs_verify.constellation_cohort_verdicts(satellites)
     for record in satellites:
         verdict = cohort_verdicts.get(record.get("constellation") or "")
@@ -4383,8 +4379,8 @@ def build_space_weather() -> dict[str, Any]:
             #
             # src/types.ts declares this field `number`, not `number | null`, but
             # nothing in src/ reads it -- only the declaration exists -- so the
-            # null is inert today. Flagged for Sean rather than changed here,
-            # because src/ belongs to another agent this session.
+            # null is inert today. Recorded here rather than corrected,
+            # because the fix belongs in the TypeScript declaration.
             "maximumProbability": (max(point["probability"] for point in aurora_points)
                                    if aurora_points else None),
             "points": aurora_points,

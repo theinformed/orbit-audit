@@ -164,8 +164,8 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-# Ignore HTTP(S)_PROXY variables explicitly.  Sean's rule is direct from the
-# VPS, and a future environment change must not silently reroute this lane.
+# Ignore HTTP(S)_PROXY variables explicitly.  This lane fetches direct from the
+# mirror host, and a future environment change must not silently reroute it.
 DIRECT_OPENER = urllib.request.build_opener(
     urllib.request.ProxyHandler({}),
     NoRedirect(),
@@ -248,7 +248,7 @@ def _atomic_write(path: Path, body: bytes, *, mode: int) -> None:
 
 
 def alert_human(summary: str, detail: str) -> None:
-    """Tell Sean through Bob; alert failure must never mask the halt."""
+    """Page a human through the notification channel; a failed alert must never mask the halt."""
     message = (
         f"CelesTrak mirror HALTED: {summary}. No further CelesTrak request will be "
         "made until an operator records the investigation and clears the marker. "

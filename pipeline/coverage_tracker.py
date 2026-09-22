@@ -11,8 +11,8 @@ SUOMI100, the four-spacecraft German S-NET, EAGLET 1, YOUTHSAT -- documented
 spacecraft that fell between the seams of four owner-partitioned work packages
 (China / Russia-CIS / United States / rest of the world).
 
-Sean asked for "some tracker that tells us which satellites are
-under-described".  The word that matters in that sentence is *under*.
+What is wanted is a tracker of which satellites are UNDER-described.  The word
+that matters there is *under*.
 
 A present/absent check is the easy half and the useless half.  It reports the
 objects whose card openly says "we do not know", which are already the honest

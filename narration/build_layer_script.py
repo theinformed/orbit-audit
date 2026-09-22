@@ -5,13 +5,13 @@ Assemble narration/layer-pages.json — the spoken script for the ten layer-page
 WHAT THIS IS FOR. Nine of the ten clips on Learn > Layers play silently. This turns the
 words already printed beside each clip into the words spoken over it, and it is the LAST
 step before tools/narrate.py spends anything: narrate.py renders whatever is in
-layer-pages.json, so what this writes is what Sean's voice will say.
+layer-pages.json, so what this writes is what the narration will say.
 
 TWO SOURCES OF A LINE, AND THE FILE SAYS WHICH ONE IT GOT
 ---------------------------------------------------------
-1. `--drafts <file>` — the free local 35B's draft, produced by the shared scaffold runner
-   (manifest entry `space-layer-narration` in the OpenClaw workspace; the model never sees
-   anything but layer-narration-facts.json). Every line is re-checked HERE against the
+1. `--drafts <file>` — a draft from the free local model, produced by the shared scaffold
+   runner (the model never sees anything but layer-narration-facts.json).
+   Every line is re-checked HERE against the
    same per-clip gate the runner ran, because a gate that only runs on the machine that
    generated the text is a gate that protects the wrong file.
 2. No draft, or a draft that fails the gate — a deterministic line assembled from the
@@ -117,8 +117,8 @@ def deterministic(clip: dict) -> str:
 def gate(clip: dict, text: str) -> tuple:
     """The per-clip check, imported from the deployed validator so the two cannot drift.
 
-    Falls back to a local copy of the same rules when the OpenClaw validator is not on this
-    machine — the space repo lives on bigmem-PC and the runner lives on the VPS, and this
+    Falls back to a local copy of the same rules when the shared validator is not on this
+    machine — this repository and the scaffold runner live on different hosts, and this
     script has to be runnable on either.
     """
     try:

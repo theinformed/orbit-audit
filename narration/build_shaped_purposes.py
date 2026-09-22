@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""Shape the long satellite descriptions to the format Sean set, without losing a word of them.
+"""Shape the long satellite descriptions to the published format, without losing a word of them.
 
 WHAT THIS IS FOR.  Every one of the 8,000 spacecraft cards carries a background
 description, and 7,933 of them carry a Source link to where it was researched.  The corpus
 is real: 1,311 cited override entries, 1.2 MB.  The defect is SHAPE.  The published length
 runs from a median of 137 characters to a maximum of 2,425, none of the texts contains a
 paragraph break, and `main.ts` prints `purpose` as one textContent node -- so 835 objects
-open onto a single unbroken wall.  Sean, 2026-08-27, after seeing a short one:
+open onto a single unbroken wall.  The published format is:
 
-    "on the site, I want max 2 paragraphs, and max just a few lines per paragraph. It is
-    fine if some only have 1 paragraph and it can be longer if so, with a max of maybe 6-8
-    lines."   ...   "I definitely don't want it to get crowded and crazy."
+    at most 2 paragraphs, and at most a few lines per paragraph. A card with only 1
+    paragraph may run longer, to a maximum of about 6-8 lines. Nothing crowded.
 
 WHY A MODEL IS ALLOWED NEAR THIS, WHEN THE STUDY SAYS NO MODEL WRITES SITE PROSE.  Because
 this is not writing.  The text already exists and is already cited, so the honesty question
@@ -53,26 +52,24 @@ OUT = ROOT / "narration" / "shaped-purposes.json"
 # THE FORMAT, MEASURED.  Not adjectives, and not the 55-60 characters a line was
 # guessed to be.
 #
-# Sean, 2026-08-27: "on the site, I want max 2 paragraphs, and max just a few lines
-# per paragraph. It is fine if some only have 1 paragraph and it can be longer if
-# so, with a max of maybe 6-8 lines."  And, earlier: "I definitely don't want it to
-# get crowded and crazy."
+# The format: at most 2 paragraphs, at most a few lines per paragraph, and a single
+# paragraph may run longer to a maximum of about 6-8 lines. Nothing crowded.
 #
 # MEASURED ON THE REAL CARD, not assumed.  The satellite card's description column
 # is 280.5 px wide at a 1440 px viewport, set in 11.6 px Inter on an 18.56 px line
 # box (`.satellite-purpose`, src/styles.css:1444).  ASBM-1's 2,425-character
 # description wraps to 53 line boxes there -- a MEDIAN OF 46 CHARACTERS PER LINE,
-# range 35 to 54.  Every number below is that 46 times a count of Sean's lines, and
-# raising his allowance is a one-line change to LINE_CHARS' multipliers.
+# range 35 to 54.  Every number below is that 46 times a count of stated lines, and
+# raising the allowance is a one-line change to LINE_CHARS' multipliers.
 #
 # The ceiling is on the WHOLE section, both paragraphs together, because that is
 # what a reader actually meets: two four-line paragraphs and one eight-line
-# paragraph are the same amount of card, and he set the same number for both.
+# paragraph are the same amount of card, and the format states one number for both.
 # ---------------------------------------------------------------------------
 LINE_CHARS = 46
 SECTION_LINES = 8               # "a max of maybe 6-8 lines"
-# 5, not 4. "A few lines per paragraph" is Sean's phrase and it does not name a number;
-# the number he DID give -- six to eight lines -- is on the section, and with two paragraphs
+# 5, not 4. "A few lines per paragraph" does not name a number;
+# the number the format DOES give -- six to eight lines -- is on the section, and with two paragraphs
 # the section ceiling binds long before either paragraph can run away. Four lines refused
 # honest 186- and 195-character paragraphs inside a 368-character total, which is a derived
 # number overruling the stated one. What this ceiling is actually for is stopping ONE
@@ -260,7 +257,7 @@ def check(item: dict, row: dict) -> str | None:
         return f"{len(paras)} paragraphs; the maximum is 2"
     whole = " ".join(paras)
 
-    # 1. LENGTH -- Sean's rule, in characters, against the measured card.
+    # 1. LENGTH -- the format rule, in characters, against the measured card.
     if len(whole) > SECTION_MAX:
         return (f"{len(whole)} characters over both paragraphs; the ceiling is {SECTION_MAX}. "
                 f"Cut about {words_over(whole, SECTION_MAX)} words -- take out a whole idea, "

@@ -484,9 +484,9 @@ class StationsGroupIsNotAMissionTests(unittest.TestCase):
 class ParticipationIsNotIdentityTests(unittest.TestCase):
     """Some CelesTrak groups say what a spacecraft TAKES PART IN, not what it is.
 
-    Sean found THEMIS A — one of NASA's five magnetospheric physics spacecraft,
-    which fly far down the magnetotail to find where a substorm begins —
-    displayed as CIVIL / OTHER SATCOM. Not a name collision: it is in CelesTrak's
+    THEMIS A — one of NASA's five magnetospheric physics spacecraft, which fly
+    far down the magnetotail to find where a substorm begins — was displayed as
+    CIVIL / OTHER SATCOM. Not a name collision: it is in CelesTrak's
     `tdrss` group, and that group lists the relay network's USERS beside the
     eight TDRS relays themselves.
 

@@ -320,7 +320,7 @@ class OperatorSectorTests(unittest.TestCase):
 class MilitaryAssertionTests(unittest.TestCase):
     """A military claim on this site is higher-consequence than any other field.
 
-    Sean is a serving U.S. Navy officer and the site carries his name.
+    The site is published under the name of a serving U.S. Navy officer.
     RIGIDSPHERE 2 -- a radar calibration sphere -- reached the front page as a
     Defense Support Program missile-warning spacecraft. Every rule that can put
     "military" on a card must therefore be answerable to a public source.

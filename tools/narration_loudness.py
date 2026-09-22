@@ -4,7 +4,7 @@ Measure — and, on request, fix — the loudness of every narration file this s
 
 WHY THIS EXISTS
 ---------------
-Sean's complaint about the chemistry videos was not that any one line sounded wrong. It was
+The defect in an earlier video set was not that any one line sounded wrong. It was
 that the level JUMPED between them, because manim-voiceover asked ElevenLabs for each line
 separately and shipped whatever level came back. The same thing had quietly happened here:
 measured on 2026-08-21, the six narration mp3s the event pages play directly ran from -26.8

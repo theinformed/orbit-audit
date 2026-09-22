@@ -769,7 +769,7 @@ class OpacityGate(unittest.TestCase):
 
 # ---------------------------------------------------------------------------
 class Expectations(unittest.TestCase):
-    """Sean's insight, in code: what is ordinary depends on the object."""
+    """The rule, in code: what is ordinary depends on the object."""
 
     def setUp(self):
         self.expectations = oe.Expectations.load()

@@ -306,8 +306,8 @@ class AttachmentTests(unittest.TestCase):
     def test_a_curated_card_is_left_alone(self):
         """It is interesting on a dead cubesat and noise on a research
 
-        satellite whose card already says what it does. Sean: "I just don't
-        want useless filler or redundant bullshit."
+        satellite whose card already says what it does; there the same sentence
+        is useless filler and redundant with the card.
         """
         record = self._record(1000, "curated")
         build_release.attach_orbital_lifetime([record], self._root(1000))

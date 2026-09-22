@@ -324,7 +324,7 @@ class PolitenessTests(unittest.TestCase):
         self.assertTrue(issubclass(verify.SatnogsUnavailable, RuntimeError))
 
     def test_there_is_no_token_in_the_source(self):
-        # Sean's personal token lives in an untracked file or the environment.
+        # The personal token lives in an untracked file or in the environment.
         # A fallback key in the source would be committed by the next person who
         # ran `git add -A`.
         source = Path(verify.__file__).read_text(encoding="utf-8")

@@ -49,9 +49,9 @@ def usage_fields(usage: object, source: str = "llama-server") -> dict:
     """Token counts off a provider's own response body, in the field names the
     VPS usage collector reads — or {} when the response carried none.
 
-    WHY IT RETURNS {} AND NEVER A NUMBER OF ITS OWN (Sean, 2026-09-21: "Never
-    estimate tokens; if a call path truly cannot report usage, the row must say
-    so honestly"). /system/models distinguishes a MEASURED row from an absent
+    WHY IT RETURNS {} AND NEVER A NUMBER OF ITS OWN. Token counts are never
+    estimated: where a call path cannot report usage, the row has to say so.
+    /system/models distinguishes a MEASURED row from an absent
     one, and it can only do that if an unmeasurable call writes no token fields
     at all. A chars/4 estimate, or a 0 standing in for "unknown", would draw a
     confident bar over a number nobody counted — worse than the gap it filled.

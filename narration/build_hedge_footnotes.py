@@ -3,10 +3,10 @@
 
 WHAT THIS IS FOR. A spacecraft card's category label says what the object is for.
 Where nobody has corroborated that label against the individual spacecraft, the label
-is drawn dashed, dimmed and marked with an asterisk -- 1,559 of the 8,000 cards.  Sean,
-2026-08-27: "I wouldn't put a ? on the site. I'd put an * and then somewhere on details,
-like the written details, denote what that * means. We'd want to make sure the flow makes
-sense and that users understand that caveat - what we are trying to say."
+is drawn dashed, dimmed and marked with an asterisk -- 1,559 of the 8,000 cards.  An
+asterisk rather than a question mark, with its meaning written out in the card's details,
+so that the caveat reads as a footnote a reader can follow rather than as doubt cast on
+the card.
 
 WHY IT RUNS HERE AND NOT IN THE BROWSER.  There are 1,559 marked cards and EIGHT reasons a
 card is marked.  So this writes eight footnotes, once, at authoring time, and checks them

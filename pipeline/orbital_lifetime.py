@@ -6,9 +6,9 @@ source describes -- 2025-26 rideshare passengers, almost all of them, whose
 operators publish nothing at all. Their cards had to say SOMETHING, and the
 first attempt said the registry's own record back to the reader: orbit class,
 altitude, period, launch date, launch group, country. Every one of those is
-already in the Details grid two centimetres higher up the same card. Sean:
-"that sounds absolutely tacky ... just having it lead into orbit is fucking
-dumb", and "stop adding filler/fluff text to my site".
+already in the Details grid two centimetres higher up the same card, so the
+sentence was filler by the standing rule: a card never restates the grid
+printed beside it.
 
 So the test for anything published here is whether it tells a reader something
 the grid does NOT already show. Orbital lifetime does. It is the answer to the

@@ -4,8 +4,8 @@ How much of each narrated clip actually has a voice on it.
 
 WHY THIS EXISTS
 ---------------
-On 2026-08-26 Sean reported that his voice was missing from parts of the
-videos -- "one where my voice doesn't start until half way through". Every
+The narration was missing from parts of the delivered videos -- in one of them
+the voice did not start until halfway through. Every
 manifest on the site said the opposite: narration-alignment.json reported every
 line "fits": true, and docs/MEDIA-AND-NARRATION.md called the mechanism lane
 "complete". Both were telling the truth about the wrong question. They check
@@ -23,7 +23,7 @@ a manifest, because the manifests are what got it wrong.
 THE NUMBER THAT MATTERS
 -----------------------
 speechFraction and firstOnsetSeconds, read together, against Quebec. The Quebec
-GIC chain is the clip Sean singled out as the one that works: it opens at
+GIC chain is the reference clip, the one that works: it opens at
 0.00 s, talks for 77% of its length, and never goes quiet for more than 2.1 s.
 A clip scoring far below that is not a clip with sparse narration. It is a clip
 a reader concludes is broken, turns off, and does not come back to.

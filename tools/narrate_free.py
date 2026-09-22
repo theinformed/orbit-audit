@@ -6,13 +6,13 @@ Renders every line of a narration script with offline espeak-ng, at the same lou
 target the paid lane uses, so a whole script can be heard, timed and thrown away without
 spending anything.
 
-WHY THIS EXISTS. ElevenLabs is billed per character and Sean's standing rule (2026-07-07)
-is that drafting uses a free voice and his clone is the FINAL render only, after he has
-approved the words. Sixteen draft renders of an unapproved script is money spent on text
+WHY THIS EXISTS. ElevenLabs is billed per character, and the standing rule is that
+drafting uses a free voice and the cloned voice is the FINAL render only, after the words
+are approved. Sixteen draft renders of an unapproved script is money spent on text
 that is about to change. This makes the draft set instead.
 
 IT IS ALSO THE FIT TEST. espeak-ng's default 175 words per minute is within 1% of the
-measured rate of the eleven lines already rendered in Sean's clone (2.92 words per second),
+measured rate of the eleven lines already rendered in the cloned voice (2.92 words per second),
 so the draft's DURATION is a usable prediction of the paid one's. Every line is measured
 against the clip it is spoken over and the overrun is printed, because a line that runs
 past its animation is the one defect that cannot be fixed after the audio exists.
@@ -20,7 +20,7 @@ past its animation is the one defect that cannot be fixed after the audio exists
 LOUDNESS IS APPLIED AT GENERATION TIME, NOT AS A RETROFIT. Each segment is normalised to
 I=-16 LUFS, TP=-1.5 dBTP, LRA 7 as it is written. Generating each line as a separate clip
 with no normalisation is exactly what produced the dramatic volume jumps between sentences
-in Sean's chemistry videos; the fix belongs here, where the file is made.
+in an earlier video set; the fix belongs here, where the file is made.
 
     python3 tools/narrate_free.py narration/layer-pages.json --outdir <dir>
     python3 tools/narrate_free.py narration/mechanisms.json --outdir <dir>

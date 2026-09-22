@@ -797,8 +797,8 @@ def _prepare_tail(connection, data_root, self_history_kappa, narratives, scan, s
 
     # --- the two detectors, and why neither alone is enough ----------------
     # `orbit_campaigns` streams the whole archive one object at a time and
-    # judges each object against its own history. That is the detector Sean's
-    # questions need -- a cadence is a property of one object -- and it is the
+    # judges each object against its own history. That is the detector the
+    # cadence questions need -- a cadence is a property of one object -- and it is the
     # only one that can be run over twenty-two years without materialising
     # them.
     # `scan` is injected by `build_cache`, which now runs the pass itself so it
@@ -1187,17 +1187,17 @@ DEFAULT_SWEEP_BUDGET_SECONDS = 2400.0
 
 # THE BANDWIDTH DECISION, ENFORCED IN CODE RATHER THAN BY THE TIMER.
 #
-# Sean chose a daily rebuild on 2026-08-08 for a measured reason: the shards are
+# The rebuild is daily for a measured reason: the shards are
 # content-addressed, so every completed rebuild ships all 256 of them in full --
 # 2.26 GB raw, 0.53 GB compressed, which at an hourly cadence was 71% of ALL
 # traffic from bigmem to the VPS and 382 GB a month against a 2 TB allowance.
 #
 # A sweep now takes several runs, so RUN frequency and SHIP frequency are no
-# longer the same thing, and the timer can no longer express his decision on its
-# own. This does: a finished sweep does not begin another until this long after
-# the last one finished, so however often the timer fires, the shards ship about
-# once a day. Changing the timer's period is now a scheduling choice; changing
-# THIS is a bandwidth choice, and it is Sean's.
+# longer the same thing, and the timer can no longer express that decision on
+# its own. This does: a finished sweep does not begin another until this long
+# after the last one finished, so however often the timer fires, the shards ship
+# about once a day. Changing the timer's period is a scheduling choice; changing
+# THIS is a bandwidth choice.
 MINIMUM_SECONDS_BETWEEN_SWEEPS = 20 * 3600.0
 
 # Where a half-finished sweep waits for the next run. Beside the manifest
@@ -1523,7 +1523,7 @@ def build_cache(
     machine over three cases rather than one long straight line:
 
       held           a sweep finished recently and the next one is not due.
-                     `MINIMUM_SECONDS_BETWEEN_SWEEPS` is Sean's bandwidth
+                     `MINIMUM_SECONDS_BETWEEN_SWEEPS` is the bandwidth
                      decision; see its comment. Costs nothing and reads nothing.
       busy           another run holds the sweep lock and is advancing this
                      same sweep or its tail. Costs nothing and reads nothing;

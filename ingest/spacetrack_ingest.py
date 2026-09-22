@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Space-Track ingest. Runs ONLY on bigmem-PC, under Sean's personal identity.
+"""Space-Track ingest. Runs ONLY on the designated host, under a personal identity.
 
 ENTITY SEPARATION - read this before changing anything here
 -----------------------------------------------------------
@@ -8,10 +8,10 @@ identities, and the split is not a preference:
 
   CelesTrak   -> fetched ONLY from the VPS, which operates under the LLC.
                  See ingest/celestrak_mirror.py.
-  space-track -> fetched ONLY from bigmem-PC, using Sean's personal
-                 space-track.org account, held as a USN officer.
+  space-track -> fetched ONLY from the designated host, using a personal
+                 space-track.org account held by a serving officer.
 
-The VPS must never contact space-track.org. Doing so would put a personal
+The publishing server must never contact space-track.org. Doing so would put a personal
 credential behind a commercial entity. The hostname guard below exists to make
 that mistake impossible rather than merely discouraged, and it runs before
 anything reads a credential or opens a socket.
@@ -70,7 +70,7 @@ from http.cookiejar import CookieJar
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# The boundary. Do not relax without Sean's explicit instruction.
+# The boundary. Do not relax without an explicit decision to change the rule.
 # ---------------------------------------------------------------------------
 SPACETRACK_HOST = "bigmem-PC"
 

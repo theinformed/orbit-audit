@@ -1871,9 +1871,9 @@ def score_against_expectation(
 ) -> dict[str, Any]:
     """Compare this event to what its class of object ordinarily does.
 
-    This is Sean's insight — "certain satellites wouldn't be retasked others
-    would be so that could even be a part of the calculus" — expressed as code.
-    A Starlink in an operational shell raising its orbit is unremarkable; a
+    Some satellites would be retasked and others would not, and that difference
+    belongs in the calculus. A Starlink in an operational shell raising its
+    orbit is unremarkable; a
     spent rocket body doing anything at all is impossible; a geostationary
     communications satellite spending fifty metres per second in a week is out
     of family. The verdict is computed here and handed to the interface and to
@@ -3022,7 +3022,7 @@ def _parse_iso_ms(value: Any) -> int | None:
 
 
 # ---------------------------------------------------------------------------
-# Per-object summaries: the columns Sean asked the browser to sort on
+# Per-object summaries: the columns the browser sorts on
 # ---------------------------------------------------------------------------
 def summarise_objects(
     intervals: Sequence[Interval],
@@ -3032,10 +3032,10 @@ def summarise_objects(
 ) -> list[dict[str, Any]]:
     """One row per object: how often it corrects, what it spends, where it is going.
 
-    These are the columns Sean's own list asks for — "how often a satellite
-    needs correction", "who is spending the most Delta-v", "what is
-    deorbiting", "what makes the same correction repeatedly", "what is behaving
-    unusually for its class". Each is computed, none is inferred.
+    These are the operational questions the surface exists to answer: how often
+    a satellite needs correction, who is spending the most Delta-v, what is
+    deorbiting, what makes the same correction repeatedly, and what is behaving
+    unusually for its class. Each is computed, none is inferred.
 
     Every rate carries the observation span it was computed over, because a
     "manoeuvres per day" figure from a six-hour archive is not a cadence and

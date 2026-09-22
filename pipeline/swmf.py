@@ -841,7 +841,7 @@ def _parse_radiation(body: bytes) -> dict[str, Any]:
     # ---- the aggregate backstop, over the cells that were genuinely bad -----
     #
     # Measured on the cells that actually failed a check, NOT on the cells that
-    # shell-quantisation then removes alongside them. Sean's threshold means
+    # shell-quantisation then removes alongside them. The threshold means
     # "how much of this frame is wrong", and amplifying it by a factor of
     # mlt_count would silently turn a 2% tolerance into a 0.04% one.
     bad_cells = len(out_of_band) + sum(

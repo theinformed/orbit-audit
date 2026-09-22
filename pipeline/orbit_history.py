@@ -168,13 +168,13 @@ ARCHIVE_NAME = "orbit-history.sqlite3"
 DEFAULT_ROOT = Path("/mnt/d/space-orbit-history")
 FALLBACK_ROOT = ROOT / "runtime" / "orbit-history"
 
-# THE HOT DATABASE MOVED TO THE SSD -- 2026-09-08, Sean's instruction.
+# THE HOT DATABASE LIVES ON THE SSD.
 #
-# The comment above used to end "Never the SSD", and for the cold artifacts it
+# The rule above used to end "Never the SSD", and for the cold artifacts it
 # still holds. The DATABASE is a different animal. A full sweep reads it in
-# small random reads for hours: one measured on 2026-09-08 did 22.6 GB of reads
-# over 15 hours and made the machine unusable to its owner, who noticed it as
-# the Windows/Linux bridge DLL pegging.
+# small random reads for hours: one measured sweep did 22.6 GB of reads over 15
+# hours and made the machine unusable interactively, visible as the
+# Windows/Linux bridge DLL pegging a core.
 #
 # /mnt/d is a 9p mount onto a Windows SPINNING disk. Measured the same day:
 # 7 MB/s sequential, 2 ms per stat, and every single read crosses that bridge.
@@ -970,9 +970,9 @@ def open_archive(path: Path | None = None) -> sqlite3.Connection:
     #     It was the first statement to touch the file, not the expensive one.
     # WAL WHEN THE FILE IS LOCAL, TRUNCATE WHEN IT IS NOT.
     #
-    # Everything argued above remains true of /mnt/d and stays in force there.
-    # On 2026-09-08 the archive moved to ext4 on the SSD (Sean: high-throughput
-    # work belongs on the SSD), and on a local filesystem WAL buys the one thing
+    # Everything argued above remains true of the 9p mount and stays in force
+    # there. The archive now lives on ext4 on the SSD, where high-throughput
+    # work belongs, and on a local filesystem WAL buys the one thing
     # TRUNCATE cannot: a reader that does not block the writer. Under the
     # rollback modes an orphaned read cursor held this archive for five hours
     # and cost a day.

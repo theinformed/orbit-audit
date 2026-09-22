@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Deterministic discovery of *curious* things in the orbital archive.
 
-Sean asked for this in his own words:
-
-    "look for interesting stuff, see if a publication already knows about it,
-    and if not, throw it in a page that brings up how curious it is, but have
-    some sort of review"
+The requirement, stated plainly: look for interesting things in the archive,
+check whether a publication already knows about them, and where none does, put
+them on a page that says how curious they are -- behind a review step.
 
 This module is the first of the four stages that answer it, and it is the only
 one that decides whether something is worth looking at:

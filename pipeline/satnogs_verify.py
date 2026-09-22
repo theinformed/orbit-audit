@@ -77,7 +77,7 @@ RUN IT
 
 The token is read from ``SATNOGS_API_TOKEN`` or from the file named by
 ``SATNOGS_TOKEN_FILE`` (default ``~/.config/space-teaching-aid/satnogs.env``).
-It is Sean's personal token: it is never logged, never written to the report and
+It is a personal token: it is never logged, never written to the report and
 never committed. Absent, the module runs anonymously -- every endpoint this
 module uses answers unauthenticated -- and says so, rather than carrying a
 fallback key.
@@ -156,7 +156,7 @@ DEFAULT_TOKEN_FILE = Path.home() / ".config" / "space-teaching-aid" / "satnogs.e
 
 
 def api_token() -> str | None:
-    """Sean's personal SatNOGS token, or None.
+    """The operator's personal SatNOGS token, or None.
 
     Read from the environment or from an untracked file, never from the
     repository, and returned rather than logged. There is no embedded fallback
@@ -574,8 +574,8 @@ def constellation_cohort_verdicts(
         fleet with a disputed member cannot vouch for the rest.
 
     THE VERDICT IS THE COHORT'S, NOT THE MEMBER'S, and the caller applies it to
-    every member. Sean, on seeing the per-object form: "everything in starlink
-    should share the same one yes?" He is right, and it is not a cosmetic point.
+    every member. Every object in one fleet has to carry the same verdict, and
+    that is not a cosmetic point.
     STARLINK-1892 and STARLINK-2001 are the only members of their launch batches
     the browser ceiling retained, and IRIDIUM 174 flew with spares; per object
     those three hedge while 4,919 visually identical siblings do not, and a
@@ -738,8 +738,8 @@ def token_cohort_conflicts(
 def name_rule_coverage(satellites: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     """Every name token, how many objects it claims, and how many owners it spans.
 
-    Sean's question, and the right one: "a rule that silently captures hundreds
-    of objects on a substring is where the next COSMIC is hiding." A rule
+    A rule that silently captures hundreds of objects on a substring is where
+    the next misclassification hides, so every rule is counted. A rule
     claiming 4,673 objects that all share one owner is not hiding anything; a
     rule claiming 7 objects across two owners is. A rule claiming ZERO is a
     different problem -- it is dead, and its absence has been silently doing
@@ -781,9 +781,9 @@ def name_rule_coverage(satellites: Iterable[dict[str, Any]]) -> list[dict[str, A
 # decided without the group having a vote, so their agreement or disagreement is
 # real information about what the group contains.
 #
-# Sean, 2026-08-19, on finding THEMIS A shown as CIVIL / OTHER SATCOM: *"A
-# category that sweeps a science constellation into 'communications' is exactly
-# the kind of silent bulk error worth counting."*
+# THEMIS A was shown as CIVIL / OTHER SATCOM by exactly this route. A category
+# that sweeps a science constellation into 'communications' is the kind of
+# silent bulk error worth counting.
 
 #: A basis that was NOT handed down by a category group, and can therefore serve
 #: as an independent witness about what the group contains.
@@ -1208,7 +1208,7 @@ def render_report(
     token_conflicts: list[dict[str, Any]] | None = None,
     filled: list[dict[str, Any]] | None = None,
 ) -> str:
-    """The document Sean reads. Scale first, then what was and was not done.
+    """The document a reviewer reads. Scale first, then what was and was not done.
 
     Written as prose with tables rather than a bare diff because the honest
     answer here is mostly "we cannot tell", and a diff format makes that look
@@ -1402,8 +1402,7 @@ def render_report(
 # ONCE.
 #
 # Nothing in this section decides anything. The text is handed to a local model
-# on Sean's own GPU (infrastructure/scaffold-tools.json, tool
-# `satnogs-purpose-draft`) which proposes a mission and one sentence; the
+# on the operator's own GPU, which proposes a mission and one sentence; the
 # proposal lands in a review file and a person promotes it into
 # data/satellite_overrides.json. No field on any card is written from it.
 

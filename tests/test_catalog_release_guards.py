@@ -146,8 +146,8 @@ class CatalogDriftTests(unittest.TestCase):
 
 
 #: Real rows from the shipped catalog, so these tests exercise the values the
-#: generator actually meets rather than invented ones. Sean's complaint was
-#: about specific cards; these are three of them.
+#: generator actually meets rather than invented ones. The defect was reported
+#: against specific cards; these are three of them.
 REAL_ROWS = {
     # TIANMU-1 11: a CelesTrak `weather` category label, no published payload.
     58645: dict(
@@ -173,7 +173,7 @@ REAL_ROWS = {
 }
 
 #: The two openings this generator used to emit. 2,383 of 8,000 cards opened
-#: with one of them, and Sean read that as a card with no information on it:
+#: with one of them, and both read as a card with no information on it:
 #: nineteen and thirty-eight words respectively before the first fact.
 RETIRED_OPENINGS = (
     "The public catalog does not identify this spacecraft's payload or mission,",
@@ -255,9 +255,8 @@ class HonestDescriptionTests(unittest.TestCase):
         This test used to assert that the generated description contained the
         altitude, the period, the launch date, the launch group and the
         registering state. It did, faithfully -- and every one of those is a row
-        in the Satellite Details grid on the same screen, which is what Sean was
-        objecting to when he said "that sounds absolutely tacky ... just having
-        it lead into orbit is fucking dumb". A test that pins filler in place is
+        in the Satellite Details grid on the same screen, which is precisely the
+        filler the standing rule forbids. A test that pins filler in place is
         worse than no test, because it makes removing the filler look like a
         regression. So it now pins the opposite, on the same real card.
         """
@@ -653,8 +652,8 @@ class TaxonomyAcknowledgementTests(unittest.TestCase):
         # and 25 joined OTHER MILITARY.
         # 2026-08-20.3: the China partition. 686 Chinese-operated objects carried no
         # description at all -- 186 Guowang, 63 GeeSAT, 28 Tianqi, 20 Tianmu and
-        # a long tail -- against Sean's "we should be able to write up a
-        # paragraph or two on nearly every satellite in the catalog." They now
+        # a long tail -- against the stated goal of a paragraph or two on nearly
+        # every satellite in the catalog. They now
         # carry researched, cited family prose plus a per-object clause read off
         # their own elements. `evidence: "assessed"` is used where the mission is
         # an outside analyst's reading rather than a Chinese statement: Yunhai
@@ -721,8 +720,8 @@ class TaxonomyAcknowledgementTests(unittest.TestCase):
         # watched fields, and the release counts the refusals in
         # `operatorStateEvidence.identityDisputedObjects` so the silence is a
         # labelled gap rather than an absence.
-        # 2026-08-27.1: cohort corroboration. Sean, on STARLINK-11600: "I don't
-        # like that ?", and "it looks ridiculous on the display". 6,288 of 8,000
+        # 2026-08-27.1: cohort corroboration. The question-marked chip on
+        # STARLINK-11600 read as noise rather than as a caveat. 6,288 of 8,000
         # cards rested on `name-pattern` and drew the dashed, dimmed,
         # question-marked chip, so a mark built to warn about Tianmu-1 11 was
         # firing on four fifths of the catalog and had stopped carrying
@@ -747,7 +746,7 @@ class AttributionAnnotationTests(unittest.TestCase):
     """A claim, a competing signal, both attributed, no forced resolution.
 
     The first design withdrew a name-pattern mission that the object's own orbit
-    contradicted. Sean overruled it: the disagreement is the most interesting
+    contradicted. That was rejected: the disagreement is the most interesting
     thing in the record and teaches the site's own method -- that an orbit
     constrains what a spacecraft can be for -- by showing it disagreeing with a
     label. So the claim stands and the conflict is published beside it.

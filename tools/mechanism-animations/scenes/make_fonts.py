@@ -7,10 +7,9 @@ the render recipe. Inter ships as a 400-700 variable font and is instantiated
 at two static weights; Plex Mono ships as separate static faces and only needs
 the wrapper stripped.
 
-Paths are repo-relative with env overrides, because this used to be hardcoded
-to /home/node inside the OpenClaw gateway container and therefore ran in
-exactly one place. Manim is also installed on bigmem now, which is where
-Manim renders belong -- they are CPU-heavy and that machine has the cores.
+Paths are repo-relative with environment overrides, because this used to be
+hardcoded to a container-internal path and therefore ran in exactly one place.
+Manim renders belong on whichever machine has the cores: they are CPU-heavy.
 
     python3 make_fonts.py
     cp ttf/*.ttf ~/.local/share/fonts && fc-cache -f ~/.local/share/fonts

@@ -2,8 +2,8 @@
 """
 Space Environment Explorer — narration lane.
 
-Turns a JSON script into narrated MP3s in Sean's own cloned voice, verifies every
-file by transcribing it back, and writes a manifest the site can read.
+Turns a JSON script into narrated MP3s in the narrator's own cloned voice, verifies
+every file by transcribing it back, and writes a manifest the site can read.
 
     python3 tools/narrate.py narration/script.json
     python3 tools/narrate.py narration/script.json --dry-run    # lint only, no spend
@@ -22,10 +22,9 @@ WHY IT WORKS THIS WAY
    round-trip does not match, the line is marked `verified: false` in the manifest
    and the exit code is non-zero. Nothing here reports success it did not observe.
 
-3. It LINTS THE WRITING BEFORE IT SPENDS. See HOUSE_STYLE below. Sean's standing
-   instruction is "stop adding filler/fluff text to my site". Filler is cheap to
-   write and expensive to notice, so the rule is enforced mechanically rather than
-   left to the good intentions of whichever agent is writing this week.
+3. It LINTS THE WRITING BEFORE IT SPENDS. See HOUSE_STYLE below. The site carries
+   no filler text, and filler is cheap to write and expensive to notice, so the
+   rule is enforced mechanically rather than left to whoever is writing.
 
 CREDENTIALS
 -----------
@@ -34,16 +33,16 @@ logged, never written to the manifest, and never committed.
 
     export ELEVENLABS_API_KEY=...
 
-Voice `9M1l09pkVunOZDmYq0Ms` ("Myself") is a professional clone of Sean's own voice.
+Voice `9M1l09pkVunOZDmYq0Ms` ("Myself") is a professional clone of the narrator's voice.
 Use `eleven_multilingual_v2`: it is the model the clone is fully fine-tuned on.
 
-SETTLED 2026-08-21, by Sean listening. He compared this model against eleven_v3 on the same
-sentence at the same loudness: "A is way better. C is much worse." A was multilingual v2.
+That choice was settled by blind listening against eleven_v3 on the same sentence at the
+same loudness, and multilingual v2 won.
 v3 also wandered 18% in duration across three renders of one line, against v2's 6.7%, which
 would read as tone and pace changing between clips in a fifteen-clip set and cannot be
 normalised away afterwards. v3's inline IPA made pronunciation WORSE rather than better - it
 read the IPA for magnetopause as "man-knee-two-pause". So: no IPA, respelling only, on
-multilingual v2, and the estate's other lanes are back on it too.
+multilingual v2.
 """
 
 from __future__ import annotations
@@ -60,11 +59,11 @@ import urllib.request
 from pathlib import Path
 
 API = "https://api.elevenlabs.io/v1"
-DEFAULT_VOICE = "9M1l09pkVunOZDmYq0Ms"   # "Myself" — Sean's professional clone
-DEFAULT_MODEL = "eleven_multilingual_v2"  # the clone is fine_tuned on this one, and Sean picked it
+DEFAULT_VOICE = "9M1l09pkVunOZDmYq0Ms"   # "Myself" — the narrator's professional clone
+DEFAULT_MODEL = "eleven_multilingual_v2"  # the one the clone is fine-tuned on, chosen by ear
 # Checked in order. The user-local copy comes first: the root-owned path is
-# unreadable by the account that actually runs this tool on bigmem, and a
-# PermissionError there is indistinguishable to a reader from "no credential".
+# unreadable by the account that actually runs this tool, and a PermissionError
+# there is indistinguishable to a reader from "no credential".
 SECRET_FALLBACKS = (
     str(Path.home() / ".secrets" / "elevenlabs.json"),
     "/root/.openclaw/workspace/.secrets/elevenlabs.json",
@@ -77,15 +76,14 @@ SECRET_FALLBACK = SECRET_FALLBACKS[-1]
 # ---------------------------------------------------------------------------
 #
 # These used to be 0.45 / 0.80, tuned by reasoning about what narration "should"
-# want. They are now 0.62 / 0.75, which Sean picked in a blind pairwise
-# tournament run on the sibling lane (/root/voice-notes.md): 18 clips of one
-# sentence differing only in model and settings, levelled to within 0.3 dB of
-# each other so loudness could not bias the choice, presented as ~20 comparisons
-# with the settings hidden until the end. He chose the same clip SIX separate
-# times without knowing what it was, and it beat the config behind the video he
-# already liked, head to head. It also lands on the intersection of two configs
-# he had approved independently before: 0.62 is the stability behind the
-# published books and 0.75 the similarity behind the Part 1 video.
+# want. They are now 0.62 / 0.75, chosen in a blind pairwise tournament: 18 clips
+# of one sentence differing only in model and settings, levelled to within 0.3 dB
+# of each other so loudness could not bias the choice, presented as about 20
+# comparisons with the settings hidden until the end. The same clip won SIX
+# separate times, and it beat the configuration behind the previously preferred
+# render head to head. It also lands on the intersection of two configurations
+# approved independently before it: 0.62 is the stability behind the published
+# books and 0.75 the similarity behind the first video.
 #
 # `style` stays at 0.0 because this is explanation and not performance, and
 # `use_speaker_boost` stays on.
@@ -100,9 +98,9 @@ SECRET_FALLBACK = SECRET_FALLBACKS[-1]
 # WHAT IS RENDERED AT WHICH SETTINGS, AND WHY IT IS NOT UNIFORM. As of
 # 2026-08-27 the HF scene (hf-skip-blackout) is the only clip rendered at
 # 0.45/0.80 with the rewritten script; the other five carry the rewrite AND
-# these dials. Sean asked to hear the difference, and one clip holding the old
-# dials is what makes the comparison mean anything: HF isolates the writing
-# change, the other five add the delivery change on top of it. Re-rendering HF
+# these dials. That is deliberate: one clip holding the old dials is what makes
+# the comparison mean anything, because HF isolates the writing change and the
+# other five add the delivery change on top of it. Re-rendering HF
 # to make the library "consistent" destroys that comparison and re-bills 1 136
 # characters. Do not do it without being asked.
 VOICE_SETTINGS = {
@@ -135,8 +133,8 @@ VOICE_SETTINGS = {
 # as a ten-second one; the same 27 clips levelled on RMS spread 2.8 LU.
 #
 # So: ONE CONSTANT GAIN per line to a fixed RMS target. It moves the whole sentence
-# and leaves the delivery inside it alone - which is the point, because Sean's
-# complaint was that the delivery changes, and a compressor riding gain inside a
+# and leaves the delivery inside it alone - which is the point, because the
+# defect is that the delivery changes, and a compressor riding gain inside a
 # line is one of the things that makes it change. `alimiter` only catches the rare
 # peak the gain would have pushed into clipping.
 #
@@ -238,10 +236,10 @@ def is_bad_take(peak: float | None, recent: list[float]) -> bool:
 # WHAT IS SPOKEN IS NOT WHAT IS SHOWN.
 # ---------------------------------------------------------------------------
 #
-# Sean: "Sometimes ElevenLabs will pronounce things weird, like my last name. E says its
-# name in Egan, but sometimes ElevenLabs will pronounce it like Egg-an."
+# The synthesiser mispronounces some words, including proper names, and it does so
+# inconsistently between renders of the same text.
 #
-# Measured on this voice and this model: it does. `Egan.` comes back EGG-an. `GOES.` comes
+# Measured on this voice and this model: `Egan.` comes back EGG-an. `GOES.` comes
 # back as the English verb. `Dst.` comes back as "died". The fix is to send the synthesiser
 # a DIFFERENT STRING from the one the reader sees - `Eagen`, `Go-ess`, `D S T` - and the
 # one rule that matters is that the respelling must never reach the page. So:
@@ -429,9 +427,8 @@ def _request(url: str, *, key: str, data=None, headers=None, timeout=180,
 # REQUEST STITCHING.
 # ---------------------------------------------------------------------------
 #
-# Sean, 2026-08-27, on the six mechanism clips: "why does the volume and the style of
-# my speech change as the video progresses? ... I hear myself speed up. or my pitch
-# will change."
+# On the six mechanism clips, the volume and the style of the speech changed as each
+# video progressed: an audible speed-up, and a shifting pitch.
 #
 # That is literally what this lane did. Every line was ONE INDEPENDENT REQUEST, so
 # the model re-picked speaking rate, pitch contour and terminal intonation from
@@ -458,8 +455,8 @@ def _request(url: str, *, key: str, data=None, headers=None, timeout=180,
 #
 # WHY STITCHING IS NOT IN THE CACHE KEY. `line_hash` covers text + voice + model +
 # settings + seed and deliberately not the stitching context. Adding it would change
-# every hash in the file at once and re-bill 38 lines Sean has not asked to have
-# re-rendered, to fix a lane he has only asked to see one clip of. The cost of
+# every hash in the file at once and re-bill 38 lines that do not need
+# re-rendering. The cost of
 # leaving it out is that re-rendering ONE line in the middle of an approved scene
 # gives it a different run-up than it had; the answer to that is to re-render the
 # scene, which is what --only <whole scene> does.

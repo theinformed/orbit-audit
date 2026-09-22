@@ -10,9 +10,9 @@ by one.
 
 WHY THE TIMINGS IN HERE LOOK HAND-PICKED
 ----------------------------------------
-They are, and they are picked from a measurement rather than from taste. Sean,
-2026-08-27: "the timing needs to be checked on the videos ... my voice matches
-what is being drawn on the screen based on timing." This scene is the pilot for
+They are, and they are picked from a measurement rather than from taste. The
+requirement is that the voice matches what is being drawn on the screen, frame
+for word. This scene is the pilot for
 docs/PLAN-video-expansion.md, so every hold below is cut to a WORD TIME in the
 delivered narration - the transcriber returns a start and end for every word,
 and the holds are set so that the -1 bar is on the frame at "one unit out", the

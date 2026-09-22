@@ -3,8 +3,7 @@
 The chip on a satellite card states a MISSION CLASS -- "Commercial SATCOM" --
 and until 2026-08-27 it drew that claim dashed, dimmed and question-marked on
 6,288 of 8,000 objects, because their label came from a programme-name pattern.
-Sean, on STARLINK-11600: "I don't like that ?", and "it looks ridiculous on the
-display."
+On a card like STARLINK-11600 that mark read as noise rather than as a caveat.
 
 The scepticism was aimed at the right catalogue and the wrong claim. The 18th
 Space Defense Squadron names objects within a launch on observation and corrects
@@ -128,8 +127,8 @@ class CohortVerdictTests(unittest.TestCase):
             self.assertIn(key, result)
 
     def test_the_verdict_is_the_cohorts_so_every_member_gets_the_same_answer(self):
-        # Sean: "everything in starlink should share the same one yes?" He is
-        # right. STARLINK-1892 and STARLINK-2001 are the only members of their
+        # Every object in one fleet has to carry the same verdict.
+        # STARLINK-1892 and STARLINK-2001 are the only members of their
         # launch batches the browser ceiling retained and IRIDIUM 174 flew with
         # spares; judged per object those three hedge while thousands of
         # identical siblings do not, and a reader cannot tell why.
@@ -149,8 +148,8 @@ class PublishedFieldTests(unittest.TestCase):
     """What `build_catalog` records, and what it must leave alone."""
 
     def test_the_basis_is_recorded_beside_the_finding_never_replaced_by_it(self):
-        # Sean intends to revisit this doctrine. Collapsing `name-pattern` into
-        # the fleet finding would destroy how the label was actually arrived at,
+        # This doctrine is expected to be revisited. Collapsing `name-pattern`
+        # into the fleet finding would destroy how the label was arrived at,
         # and revisiting would then mean rebuilding data rather than editing one
         # rendering rule.
         import inspect

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lay Sean's narration onto the six mechanism animations.
+Lay the rendered narration onto the six mechanism animations.
 
 WHY THIS EXISTS RATHER THAN A SECOND SET OF FILES
 -------------------------------------------------
@@ -72,7 +72,7 @@ STEMS = {
 # R128 runs ONCE, HERE, on the assembled audio - where it is long enough for R128 to
 # be the right tool. Target -18 LUFS / -2 dBTP, matched to tools/manim/mux.py so the
 # mechanism clips and the Quebec GIC chain land at the same loudness; Quebec, the
-# clip Sean singled out as the one that works, measures -18.5 LUFS.
+# reference clip, measures -18.5 LUFS.
 #
 # BACKWARD COMPATIBILITY IS DELIBERATE, NOT DECORATION. A clip whose mp3s predate
 # the RMS change is still in the old world: those files were normalised per line to
@@ -89,9 +89,8 @@ LEAD_IN_MS = 0     # the caption time already carries the 0.30 s legibility lead
 # THE LEADING EDGE OF A LINE, AND WHY IT HAS TO BE REPAIRED HERE.
 # ---------------------------------------------------------------------------
 #
-# Sean, 2026-08-27, on the rebuilt Drag clip: "there is a small break in my voice
-# on many of the transitions. Like 'It does not slow down', or the word 'Backwards'
-# gets cut off. So we are sounding better but the transitions are cutting things off."
+# On the rebuilt Drag clip, the voice broke on many transitions: "It does not slow
+# down" arrived clipped, and the word "Backwards" was cut off at its head.
 #
 # Both examples are the FIRST WORDS of their lines, which is why it reads as a
 # transition problem. It is not one. Measured, sample by sample, on the shipped clip:
@@ -113,7 +112,7 @@ LEAD_IN_MS = 0     # the caption time already carries the 0.30 s legibility lead
 # THE ROUND-TRIP VERIFIER CANNOT SEE THIS. mech-06-brake transcribes back at
 # similarity 1.0 with the syllable inaudible, because speech-to-text reconstructs a
 # swallowed onset from context. A verifier that says "the words are all there" is
-# answering a different question from "can Sean hear them".
+# answering a different question from "can a listener hear them".
 #
 # So the repair is here, in the assembly, and it is GAIN ONLY:
 #
@@ -344,12 +343,12 @@ def main() -> int:
             # line's maximum length the length of one caption's window -- two to
             # three seconds on these clips. That is a sentence fragment, so the
             # lane wrote very few lines and left the rest of each clip silent.
-            # Sean's report on 2026-08-26 was the consequence: three clips whose
-            # voice did not arrive until past the halfway mark.
+            # The consequence was three delivered clips whose voice did not
+            # arrive until past the halfway mark.
             #
             # Captions change while a person is still talking; that is normal,
-            # and it is what Quebec -- the clip he singled out as the one that
-            # works -- does on every one of its seven lines. Two voices at once
+            # and it is what Quebec -- the reference clip, the one that works --
+            # does on every one of its seven lines. Two voices at once
             # is the real defect, so that is what is refused here.
             nxt = start_of(lines[i - 1]) if i - 1 < len(lines) else vdur
             slack = round(nxt - start - adur, 3)

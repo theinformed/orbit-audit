@@ -3,7 +3,7 @@
 
 THE PROBLEM THIS SOLVES, AND THE ONE IT MUST NOT CREATE
 -------------------------------------------------------
-Sean asked to set the orbit-history rebuild cadence from the operations page.
+The orbit-history rebuild cadence is set from the operations page.
 That page is static HTML: it is generated on bigmem, rsynced to the VPS by
 ``pipeline/publish_vps.sh``, and served by Caddy behind ``forward_auth`` at
 ``/space/ops``. A static page cannot change a systemd timer on a machine three
@@ -30,8 +30,8 @@ string to expand, no shell to reach. A request for a cadence this file does not
 name is not an error to be handled — it is a file that is skipped, counted, and
 shown on the page as rejected.
 
-That matters more than usual here. This ultimately edits a systemd unit on
-Sean's personal machine.
+That matters more than usual here. This ultimately edits a systemd unit on a
+personal machine.
 
 REQUESTS ARE DESIRED STATE, NOT COMMANDS
 ----------------------------------------
@@ -56,8 +56,8 @@ ahead of the next :17.
 most of every hour; there is no start minute from which it finishes before the
 next ingest begins. The old hourly setting at :42 cleared the ingest it read
 FROM and then overlapped the next one. That is not a reason to withhold the
-option — Sean is moving to an unlimited home connection and may well want
-hourly rebuilds again — but the page says it plainly next to the button rather
+option — the home connection is moving to unlimited and hourly rebuilds may well
+be wanted again — but the page says it plainly next to the button rather
 than letting someone find out from a lock-contention incident. ``clears_ingest``
 is that fact, per option, and it is displayed, not enforced.
 """
@@ -402,7 +402,7 @@ def read_request(directory: Path = REQUEST_DIR) -> Request:
     newest = max(stamp for stamp, _ in valid)
     # WebDAV stamps a PUT to whole seconds, so two clicks inside one second are
     # genuinely indistinguishable. Picking one would be picking at random and
-    # then acting on it, on a systemd timer, on Sean's own machine. An
+    # then acting on it, on a systemd timer, on somebody's own machine. An
     # ambiguous request is therefore no request: the current cadence stands and
     # the page says why.
     tied = sorted(name for stamp, name in valid if stamp == newest)

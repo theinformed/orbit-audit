@@ -9,19 +9,18 @@ fifteen clips that contain them.
 
 WHY THIS EXISTS
 ---------------
-Sean: "Sometimes ElevenLabs will pronounce things weird, like my last name. E says its
-name in Egan, but sometimes ElevenLabs will pronounce it like Egg-an. These are science
-terms so I worry many of them will get pronounced wrong."
+The synthesiser mispronounces some words -- proper names, and science terms in
+particular -- and it does so inconsistently between renders of the same text.
 
-He is right, and it is measurable: rendering `Egan.` through this voice on
+That is measurable: rendering `Egan.` through this voice on
 eleven_multilingual_v2 comes back as EGG-an. Finding that out AFTER a bulk render means
 paying for the bulk render twice.
 
 WHAT IT PRODUCES, AND WHY THAT SHAPE
 ------------------------------------
-One mp3 per term and one concatenated audit file with a written index. Sean can approve
-sixty terms in about two minutes instead of listening to twenty minutes of narration
-hunting for the one word that is wrong. Terms, not sentences, because the audit is billed
+One mp3 per term and one concatenated audit file with a written index. That lets a
+reviewer approve sixty terms in about two minutes instead of listening to twenty minutes
+of narration hunting for the one word that is wrong. Terms, not sentences, because the audit is billed
 by the character like everything else.
 
 **A term spoken alone is not identical to the same term inside a sentence.** Rhythm and
@@ -129,14 +128,13 @@ def audit_set(lex: dict) -> list[dict]:
     sent, so the fix itself can be checked. A SPOT CHECK is a word that appears in the
     scripts more than once and is spoken exactly as written, so a person can hear whether it
     is fine. Nothing else belongs here. The audit used to speak fifty-nine terms chosen for
-    looking risky, which is how a listening aid turns into a ritual: Sean, twice, "perhaps we
-    are overdoing the phonetics."
+    looking risky, which is how a listening aid turns into a ritual rather than a check.
     """
     rows = []
     for t in lex["terms"]:
         # A fix is spoken inside a real sentence, because that is the only place it was ever
-        # heard failing. `Eegan.` on its own comes back "E gun"; the carrier sentence Sean
-        # actually ruled on is right. Checking a respelling as a bare word is the mistake that
+        # heard failing. `Eegan.` on its own comes back "E gun"; the same respelling inside
+        # the carrier sentence is right. Checking a respelling as a bare word is the mistake that
         # filled this file with 57 speculative entries.
         carrier = t.get("carrier")
         display = carrier or t["display"]
@@ -314,8 +312,8 @@ def assemble() -> int:
 SEED_CANDIDATES = [101, 7, 42, 13, 23, 77]
 
 
-# The model A/B that used to live here is gone: Sean settled it by ear on 2026-08-21 -
-# "A is way better. C is much worse." A was eleven_multilingual_v2. The renders are kept at
+# The model A/B that used to live here is gone: it was settled by blind listening, and
+# eleven_multilingual_v2 won. The renders are kept at
 # media/pronunciation-audit/name-candidates/ with the measurement beside them.
 
 
@@ -328,8 +326,8 @@ def find_seeds(only: set[str] | None) -> int:
     a seed the pronunciation repeats.
 
     So for every term this searches seeds until the free local readback agrees the audio
-    says the right thing, and writes the winning seed into the lexicon. What Sean approves
-    in the audit clip is then what the pipeline reproduces.
+    says the right thing, and writes the winning seed into the lexicon. What a reviewer
+    approves in the audit clip is then what the pipeline reproduces.
 
     Run under the ASR virtualenv:
         /home/sdegan/.venv-asr/bin/python tools/pronunciation_audit.py --find-seeds

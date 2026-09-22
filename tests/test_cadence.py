@@ -1,7 +1,7 @@
 """Proofs for the cadence control. No network, no real systemd, no clock.
 
 This is the one thing on this surface that WRITES, and what it writes is a unit
-file on Sean's personal machine. So the assertions here are not about display —
+file on a personal machine. So the assertions here are not about display —
 they are about what cannot happen:
 
 * **Nothing outside the allow-list can ever be applied.** Not by a request

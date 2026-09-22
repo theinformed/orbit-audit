@@ -9,7 +9,7 @@ one object over many months.
 
 This module is the other half, and it only became possible when the archive
 gained real depth. It judges an object against **its own history**, which is the
-control Sean's questions actually require:
+control the operational questions actually require:
 
 * *"how often a satellite needs correction"* is a cadence, and a cadence is a
   property of one object's own time series.
@@ -209,9 +209,9 @@ PERSISTENCE_HORIZON_DAYS = 2.0
 # zero events, which is the correct answer to the question the step detector
 # asks and a useless answer to the question a reader has.
 #
-# The question a reader has is Sean's: "this is a continuous burn design but
-# here on this day we see greater burn than usual". So there are two separate
-# claims here, and keeping them separate is the point.
+# The question a reader has is a different one: this is a continuous-burn
+# design, but on this day we see greater burn than usual. So there are two
+# separate claims here, and keeping them separate is the point.
 #
 # **One: is this object under thrust at all.** Atmospheric drag can only take
 # energy out of an orbit. An object whose semi-major axis climbs, and keeps
@@ -466,8 +466,8 @@ def intervals_from_rows(
 # ---------------------------------------------------------------------------
 # The self-history node channel is implemented below, but the complete
 # 2026-09-04 archive control produced 63,190 RAAN trips on passive objects.
-# The handoff's acceptance rule is explicit: any passive node flags keep this
-# channel off. Cohort RAAN remains independently enabled in orbit_events.py.
+# The acceptance rule is explicit: any passive node flags keep this channel
+# off. Cohort RAAN remains independently enabled in orbit_events.py.
 SELF_HISTORY_NODE_CHANNEL_ENABLED = False
 # DETECTOR-DESIGN.md F3/F1/F4: implemented, not calibrated. The offline
 # acceptance suite (tests/acceptance_detector_fixes.py) must earn each switch
@@ -1051,8 +1051,8 @@ def window_persistence(
 def _daily_windows(intervals: Sequence[Interval]) -> list[tuple[int, int]]:
     """Contiguous runs of intervals sharing a UTC day, as (first, last) indices.
 
-    A day, because that is the unit Sean's question is asked in -- "here on this
-    day we see greater burn than usual" -- and because it is the unit a
+    A day, because that is the unit the question is asked in -- on this day we
+    see greater burn than usual -- and because it is the unit a
     low-thrust manoeuvre actually occupies: the catalogue publishes three to six
     fits a day for an object like this, so one day's thrust is spread over
     several intervals and is present in none of them as a step. A run is broken
@@ -1791,7 +1791,7 @@ def summarise_object(
     *,
     record: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """One publishable row: the columns Sean's own list asks the browser to sort on."""
+    """One publishable row: the columns the browser is asked to sort on."""
     record = record or {}
     first, last = intervals[0], intervals[-1]
     propulsive = [e for e in events if e.signature not in NON_PROPULSIVE_SIGNATURES]

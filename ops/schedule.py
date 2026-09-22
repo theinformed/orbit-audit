@@ -13,9 +13,9 @@ never happened, because a job that never ran leaves nothing to look stale. The
 grid has a cell for every hour a job was *supposed* to run, so an hour with
 nothing in it is visible as a hole rather than as an absence of evidence.
 
-THE FIVE STATES SEAN ASKED FOR, AND THE FOUR THIS ADDS
------------------------------------------------------
-Asked for:
+THE FIVE STATES THE GRID WAS SPECIFIED WITH, AND THE FOUR THIS ADDS
+-------------------------------------------------------------------
+Specified:
 
     ok       ran and succeeded
     running  in progress right now
@@ -352,8 +352,8 @@ class Row:
 
         The bars deliberately show a whole week, but an alert must be about
         NOW. Without this, a single failed hour last Tuesday would keep the page
-        red and keep Bob announcing it forever, and a person who is paged about
-        last Tuesday stops reading pages.
+        red and keep the alerter announcing it forever, and a person who is paged
+        about last Tuesday stops reading pages.
         """
         order = [FAILED, MISSED, HALTED, PARTIAL, UNKNOWN, RUNNING, OK, PENDING, NA]
         present = {slot.state for slot in self.slots if slot.hour_start >= cutoff}

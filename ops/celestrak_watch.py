@@ -5,9 +5,9 @@ WHY THIS EXISTS
 ---------------
 This installation was banned from CelesTrak once, on 2026-08-07, because group
 queries that had never succeeded retried on every five-minute publish cycle
-forever. Dr Kelso runs that server himself on donations. Sean has to ask him
-personally for access back, so "we are within policy" must be a number someone
-can read, not an assurance.
+forever. Dr Kelso runs that server himself on donations, and access has to be
+asked back personally, so "we are within policy" must be a number someone can
+read, not an assurance.
 
 WHAT IT DOES
 ------------
@@ -148,7 +148,7 @@ def survey(window_hours: int) -> dict:
     attempts = [row[2] for row in attempt_rows]
     # A refusal that was explicitly cleared and followed by a successful
     # request-bearing run is recovered history, not a present incident. Keep it
-    # visible in JSON for audit, but never page Sean about it again. Conversely,
+    # visible in JSON for audit, but never page a human about it again. Conversely,
     # a HALT event whose marker vanished without that sequence is a real
     # inconsistency and remains an alarm.
     halt_events = [(index, line) for index, line in enumerate(lines) if REFUSAL.search(line)]
@@ -243,7 +243,7 @@ def verdict(state: dict, ceiling: int) -> tuple[bool, str]:
 
 
 def alert(message: str) -> None:
-    """Tell Sean through Bob. A failed alert must never mask the finding."""
+    """Page a human through the notification channel. A failed alert must never mask the finding."""
     try:
         subprocess.run(
             [

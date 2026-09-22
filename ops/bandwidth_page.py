@@ -10,9 +10,9 @@ therefore shipped in full every time. That was invisible until somebody
 measured it, and it was findable the moment the bytes could be attributed to a
 layer. Attribution is the deliverable.
 
-It is **not** an alarm. Sean's VPS allowance is 3 TB of egress and a cold visit
+It is **not** an alarm. The server allowance is 3 TB of egress and a cold visit
 costs about 1.7 MB, so that side supports something like 1.75 million visits and
-is nowhere near binding; his home connection is going unlimited. A page that
+is nowhere near binding; the home connection is moving to unlimited. A page that
 warns about bandwidth nobody is short of is a page that gets ignored on the day
 it has something real to say. So this section states the numbers, states the
 trend, and says plainly when a side is not a constraint.
@@ -36,9 +36,9 @@ WHY THE CADENCE OPTIONS CARRY A COST AND A WARNING
 Choosing a rebuild frequency is a bandwidth decision, so each option shows what
 it costs per month in measured bytes. It is also a contention decision: a
 rebuild takes 32-45 minutes and the element ingest occupies :17-:23 every hour,
-so hourly cannot clear it. That is displayed, not enforced — Sean is moving to
-an unlimited connection and may well want hourly back, and the page's job is to
-let him choose knowing both things.
+so hourly cannot clear it. That is displayed, not enforced — the home connection
+is moving to unlimited and hourly may well be wanted back, and the page's job is
+to let an operator choose knowing both things.
 """
 
 from __future__ import annotations
@@ -463,9 +463,9 @@ def render(state: dict, cadence_state: dict, now: float) -> str:
               f'browser at {esc(visit.get("url", "the live site"))} with a cold cache.'
             # Not an opinion: a stated threshold and an arithmetic comparison,
             # the same shape as every colour on this page. The threshold is
-            # 100,000 visits a month because Sean intends to share this with US
-            # Navy Space Cadre and METOC officers, and a jump from tens to
-            # thousands is realistic while a jump to six figures is not.
+            # 100,000 visits a month because the intended audience is US Navy
+            # Space Cadre and METOC officers, and a jump from tens to thousands
+            # is realistic while a jump to six figures is not.
             + (" At more than 100,000 visits a month of headroom, this side is not "
                "a constraint at any visitor count this site is likely to see, and "
                "nothing here needs watching."

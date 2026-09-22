@@ -58,7 +58,7 @@ class OrbitClassifierParity(unittest.TestCase):
     def test_every_published_class_has_a_plain_english_sentence(self):
         """`template_purpose` falls back to ORBIT_EVIDENCE["OTHER"] for any class
         it does not know, which would silently describe an IGSO as an orbit that
-        is not one of the standard bands -- the exact sentence Sean objected to.
+        is not one of the standard bands -- the exact sentence that was reported.
         """
         for regime in ("LEO", "MEO", "GEO", "IGSO", "HEO", "OTHER"):
             self.assertIn(regime, build_release.ORBIT_EVIDENCE)

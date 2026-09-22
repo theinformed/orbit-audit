@@ -4,8 +4,8 @@ Stitch the six rendered event-chart lines into ONE narration bed, and measure it
 
 WHY A BED AT ALL, WHEN SIX MP3S ALREADY EXIST
 ---------------------------------------------
-Sean asked for a voice-over that walks a reader through the Starlink chart, "just over a
-minute". Six separate files can be played in sequence by a browser, but then the schedule
+The requirement is a voice-over that walks a reader through the Starlink chart in just
+over a minute. Six separate files can be played in sequence by a browser, but then the schedule
 lives in JavaScript: a queue of `ended` handlers, each one starting the next fetch, on a
 tab that may be throttled or backgrounded, with the picture trying to follow whichever
 element happens to be current. Every gap in that clip is a place where the timing can slip

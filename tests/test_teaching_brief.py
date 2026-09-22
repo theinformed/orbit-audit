@@ -214,7 +214,7 @@ class WordBandTests(unittest.TestCase):
 
         Kp 1.0 -> 1.03 and speed 400 -> 412 are both 3% moves that stay inside
         the same published band, and each one used to be able to cost seventy
-        seconds of a GPU shared with a human waiting for Bob.
+        seconds of a GPU shared with a human waiting on it.
         """
         before = facts(speed=400.0, kp=1.0)
         after = facts(speed=412.0, kp=1.03)

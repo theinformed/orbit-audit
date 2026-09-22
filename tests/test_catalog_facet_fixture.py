@@ -3,7 +3,7 @@ published catalog.
 
 tests/fixtures/catalog-facets.json is a distillation of the real catalog
 artifact into (mission facet, constellation, owner, orbit) -> count rows, so
-the vitest suite can run Sean's "only US Navy / only Starlink / only Metop"
+the vitest suite can run the "only US Navy / only Starlink / only Metop"
 scenarios against real populations without the ~44 GB data tree. This guard
 runs where that tree exists (the processing machine) and fails loudly if the
 published catalog's facet structure drifts away from the fixture; elsewhere it
@@ -68,7 +68,7 @@ class CatalogFacetFixtureAgreesWithLiveCatalog(unittest.TestCase):
         cries wolf daily is a guard nobody reads.
 
         What this actually protects is the vitest filter-healing suite, which
-        reasons over the fixture's populations to run Sean's "only US Navy",
+        reasons over the fixture's populations to run the "only US Navy",
         "only Starlink", "only Metop" scenarios. That suite needs populations
         that are REAL and roughly current; it does not need yesterday's exact
         integers. So the thresholds below are deliberately loose enough for

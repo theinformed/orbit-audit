@@ -287,7 +287,7 @@ class UpstreamAttribution(unittest.TestCase):
 
 
 class RsyncParsing(unittest.TestCase):
-    """The instrument on the leg Sean is actually watching."""
+    """The instrument on the leg that is actually being watched."""
 
     OUTPUT = """XFER|193200|510|aurora-0123456789abcdef.json
 XFER|193200|72|orbit-history-000-0123456789abcdef.json
@@ -349,7 +349,7 @@ Total bytes received: 130
         self.assertEqual(rows[bw.PROTOCOL_FAMILY], 1053 - (510 + 72 + 69))
 
     def test_a_pull_is_ingress_and_never_egress(self):
-        """Counting the mirror pull as egress would inflate the number Sean watches."""
+        """Counting the mirror pull as egress would inflate the number the page reports."""
         with tempfile.TemporaryDirectory() as room:
             ledger = Path(room) / "l.jsonl"
             bw.record_rsync_pull(self.OUTPUT, run="test", path=ledger, at=NOW)

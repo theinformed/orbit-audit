@@ -98,8 +98,8 @@ HUMAN_PREFIX = "human:"
 
 DECISIONS = frozenset(
     {
-        # Sean has read the evidence and the searches and is content for this
-        # to be written up. It still does not publish anything.
+        # A reviewer has read the evidence and the literature searches and is
+        # content for this to be written up. It still publishes nothing.
         "approved",
         # Not interesting, or not sound. Says why.
         "rejected",

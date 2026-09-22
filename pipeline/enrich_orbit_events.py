@@ -55,8 +55,8 @@ NARRATIVE_CACHE = CACHE / "qwen-orbit-narratives.json"
 UNREACHABLE_MARKER = CACHE / "qwen-endpoint-unreachable"
 UNREACHABLE_BACKOFF_SECONDS = 30 * 60
 
-# Writing one narrative costs tens of seconds of local GPU on the same server
-# Bob answers from. A cap keeps a catalogue-wide run from occupying it for an
+# Writing one narrative costs tens of seconds of local GPU on a server shared
+# with interactive work. A cap keeps a catalogue-wide run from occupying it for an
 # hour, and the events are processed largest-Delta-v first so the cap always
 # spends the budget on the events a visitor is most likely to open.
 DEFAULT_MAX_EVENTS = 12

@@ -11,9 +11,9 @@ filename — and were shipped in full — every hour. Nobody knew, because nothi
 counted.
 
 The reason nobody could have known by looking is that neither machine's
-interface totals are about this site. bigmem is Sean's personal PC and runs
-ComfyUI, local language models and other agents; the VPS runs Bob's entire
-OpenClaw stack. ``/proc/net/dev`` and plain ``vnstat`` on either box are
+interface totals are about this site. The processing machine is a personal
+workstation running local models and other unrelated work, and the publishing
+server hosts other services. ``/proc/net/dev`` and plain ``vnstat`` on either box are
 dominated by traffic that has nothing to do with the Space Environment
 Explorer. Reading one of those totals and labelling it "the site" would be the
 exact class of unearned number this project forbids.
@@ -116,8 +116,8 @@ LEDGER_LIMIT = 400_000
 # rather than quietly summed into the wrong column later.
 # ---------------------------------------------------------------------------
 
-#: bigmem sends to the VPS. This is the leg that crosses Sean's home
-#: connection, and it is the one that was at 43% of his allowance.
+#: bigmem sends to the VPS. This is the leg that crosses the home
+#: connection, and it is the one that was at 43% of that allowance.
 BIGMEM_EGRESS = "bigmem-egress"
 #: bigmem receives — from NOAA, space-track, and the CelesTrak mirror pull.
 BIGMEM_INGRESS = "bigmem-ingress"
@@ -401,7 +401,7 @@ def billing_period(now: float, *, start_day: int = 1) -> tuple[float, float]:
 
     ``start_day`` is the day of the month the allowance resets. It defaults to
     1 — the calendar month — and the page states that this is an assumption
-    until Sean confirms his ISP's actual reset day, because a cap measured over
+    until the ISP's actual reset day is confirmed, because a cap measured over
     the wrong month is measured over the wrong month.
     """
     start_day = max(1, min(28, int(start_day)))
@@ -488,7 +488,7 @@ class Projection:
     #: an unrepresentative sample, and it is worse than no figure because it
     #: looks like one. A full day is the shortest window that can contain the
     #: daily orbit-history rebuild -- the single largest thing this site ships,
-    #: and the thing whose cadence the page exists to let Sean choose. A window
+    #: and the thing whose cadence the page exists to let an operator choose. A window
     #: that misses it understates the month; a short window that happens to
     #: catch it overstates it several-fold. Twelve minutes of measurement once
     #: projected this leg at 92% of the home allowance.
@@ -634,7 +634,7 @@ def cross_check(records: Sequence[dict]) -> Disagreement:
 
 
 # ---------------------------------------------------------------------------
-# Allowances. A number Sean gave from memory is not a measurement either, and
+# Allowances. A number recalled from memory is not a measurement either, and
 # this file is where that distinction is kept.
 # ---------------------------------------------------------------------------
 
@@ -691,7 +691,7 @@ def load_allowances(path: Path = ALLOWANCES) -> dict[str, Allowance]:
     """Read ops/allowances.json. A missing file yields nothing, never a default.
 
     There is deliberately no fallback constant. An allowance this code invented
-    would be indistinguishable on the page from one Sean confirmed, and the
+    would be indistinguishable on the page from one a human confirmed, and the
     whole point of the file is that the page can say which it is.
     """
     try:
@@ -810,7 +810,7 @@ def record_rsync_pull(text: str, *, run: str, family: str = "celestrak-mirror-pu
     The publish script pulls the CelesTrak mirror down from the VPS on every
     cycle; it runs over the same private link and costs the same home
     allowance, but in the other direction, and counting it as egress would
-    inflate the number Sean is watching.
+    inflate the number the page exists to watch.
     """
     parsed = parse_rsync(text)
     if parsed["totalReceived"] is None:

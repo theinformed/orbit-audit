@@ -42,7 +42,7 @@ class BackgroundShape(unittest.TestCase):
 
 
     def test_the_publish_ceiling_is_the_one_the_shaper_derived(self):
-        """Two copies of Sean's format, and a drift between them un-shapes cards silently."""
+        """Two copies of the published format, and a drift between them un-shapes cards silently."""
         assert BACKGROUND_SECTION_MAX_CHARS == shaper.SECTION_MAX
 
 
@@ -70,7 +70,7 @@ class BackgroundShape(unittest.TestCase):
 
 
     def test_no_fleet_paragraph_runs_past_the_format(self):
-        """The paragraph plus its members' own sentence must fit Sean's section ceiling."""
+        """The paragraph plus its members' own sentence must fit the section ceiling."""
         for name, entry in FLEETS["constellations"].items():
             total = entry["ownSentenceChars"] + len(entry["fleetNote"])
             assert total <= BACKGROUND_SECTION_MAX_CHARS, f"{name}: {total}"
@@ -78,7 +78,7 @@ class BackgroundShape(unittest.TestCase):
 
 
     def test_the_corpus_stays_small_enough_to_read_in_one_sitting(self):
-        """Ten paragraphs Sean can read in full is the whole safety argument for this file."""
+        """Ten paragraphs a reviewer can read in full is the whole safety argument for this file."""
         assert len(FLEETS["constellations"]) <= 10
 
 

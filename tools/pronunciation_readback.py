@@ -24,12 +24,12 @@ directions, which is the only reason running both is worth it:
     and a large distance means a lot.
 
 Neither model can tell you that a correct-sounding word carries the wrong STRESS, and
-neither is Sean's ear. The audit clip exists because his ear is the actual acceptance
-test; this script exists so that the obvious failures are found and fixed before his
-ninety seconds are spent.
+neither is a human ear. The audit clip exists because a listener is the actual acceptance
+test; this script exists so that the obvious failures are found and fixed before that
+listening time is spent.
 
-Runs on bigmem's CPU under /home/sdegan/.venv-asr. It is free and it uses no GPU: sixty
-one-second clips take about a minute, and the GPU is busy with the night shift.
+Runs on CPU inside an ASR virtualenv. It is free and it uses no GPU: sixty one-second
+clips take about a minute, and the GPU is usually busy with other work.
 """
 
 from __future__ import annotations
@@ -129,8 +129,8 @@ def words(p: Path) -> str:
     return " ".join(s.text.strip() for s in segs).strip()
 
 
-# A term whose folded phone sequence matches this closely is not worth Sean's attention
-# first; below the lower bound it almost certainly is. Both numbers are calibrated on the
+# A term whose folded phone sequence matches this closely is not worth a listener's
+# attention first; below the lower bound it almost certainly is. Both numbers are calibrated on the
 # controls in the lexicon, not chosen for looking tidy.
 MATCH = 0.75
 SUSPECT = 0.55

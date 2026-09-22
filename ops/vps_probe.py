@@ -47,7 +47,7 @@ DATA = f"{ROOT}/runtime/data"
 MIRROR_LOG = "/var/log/celestrak-mirror.log"
 JOURNAL_HOURS = 50
 
-# The OpenClaw telemetry spine. Every watchdog on this stack drops its latest
+# The host's telemetry spine. Every watchdog on that stack drops its latest
 # observation here as one JSON file per lane, and the METOC lanes are read from
 # it rather than from a second transport of their own: this probe is already a
 # single ssh that changes nothing, and adding a second leg to the same machine

@@ -6,12 +6,11 @@ THIS PROGRAM IS A GUEST ON SOMEBODY ELSE'S GPU
 The model server on 127.0.0.1:8080 is not ours. It is one ``llama-server``
 process with exactly two slots, and its other users are:
 
-  * Bob's night lane — seven jobs between 22:50 and 05:30 ET, serialised behind
-    one global lock with a 600-second wait. When they are slowed they hit LOCK
-    TIMEOUT and the night's learning is lost. That happened on 2026-08-04
-    through 08-06 and is written up in the operator's memory as
-    ``openclaw-night-shift-starvation-traps``.
-  * Bob's live traffic, where a human is waiting for the answer.
+  * An assistant's night batch — seven jobs between 22:50 and 05:30 ET,
+    serialised behind one global lock with a 600-second wait. When they are
+    slowed they hit LOCK TIMEOUT and the night's work is lost, which has
+    happened.
+  * That assistant's live traffic, where a human is waiting for the answer.
   * A second teaching site that narrates at 02:30, 03:30, 08:30, 14:30, 15:30,
     20:30 and 21:30 ET.
 
@@ -26,8 +25,8 @@ Four things keep it a guest, and they are independent on purpose:
   1. **It writes far less often.** pipeline/teaching_brief.py now invalidates the
      cached brief only when a value leaves the band that would change a word in
      it. See that module for the derivation.
-  2. **It is silent all night.** ``--quiet-window`` covers Bob's whole night
-     lane with margin. Its edges are wall-clock Eastern, so daylight saving
+  2. **It is silent all night.** ``--quiet-window`` covers the whole night
+     batch with margin. Its edges are wall-clock Eastern, so daylight saving
      moves them with the jobs they are protecting.
   3. **It yields to anyone actually working.** ``--yield-to-busy`` asks the
      server whether a slot is busy and skips the tick if one is. A skip costs
@@ -98,14 +97,14 @@ def endpoint_recently_unreachable() -> bool:
 # The nightly quiet window
 # ---------------------------------------------------------------------------
 
-#: Bob's night lane runs on Sean's wall clock, so this window does too. A window
+#: The night batch runs on local wall clock, so this window does too. A window
 #: expressed in UTC would silently slide by an hour twice a year and stop
 #: covering the jobs it exists to protect — in November it would open at 23:45
-#: local and the 22:50 crew journal would be back in contention.
+#: local and the 22:50 job would be back in contention.
 QUIET_ZONE = "America/New_York"
 
-#: 22:45 is five minutes ahead of Bob's first night job (crew_journal at 22:50);
-#: 05:45 is fifteen minutes past his last (memory_hygiene_report at 05:30). The
+#: 22:45 is five minutes ahead of the first night job (22:50); 05:45 is fifteen
+#: minutes past the last (05:30). The
 #: window also covers both of the Skew-T site's night narrations, at 02:30 and
 #: 03:30. The first tick after it closes repopulates the brief before morning.
 QUIET_START = dt.time(22, 45)
@@ -168,8 +167,9 @@ _METRIC_PROCESSING = re.compile(r"^llamacpp:requests_processing\s+([0-9.eE+-]+)\
 
 #: vLLM (the Spark pair) names its equivalent gauge vllm:num_requests_running and labels it.
 #: Continuous batching means one extra request does not block anyone the way a llama.cpp slot
-#: does, so "busy" for a Spark endpoint is a queue depth, not any activity at all: Bob's
-#: think-tick bursts 8 chains, and one 2-hourly brief riding alongside <4 of them is noise.
+#: does, so "busy" for a Spark endpoint is a queue depth, not any activity at all: the
+#: neighbouring workload bursts 8 chains, and one 2-hourly brief riding alongside
+#: fewer than 4 of them is noise.
 _METRIC_VLLM_RUNNING = re.compile(
     r"^vllm:num_requests_running\{[^}]*\}\s+([0-9.eE+-]+)\s*$", re.MULTILINE)
 VLLM_BUSY_THRESHOLD = 4.0
@@ -191,7 +191,7 @@ def server_is_busy(base: str, timeout: float = PROBE_TIMEOUT_SECONDS) -> tuple[b
     The default is deliberately busy-on-doubt. This program is the lowest
     priority consumer on the machine and a skipped tick costs nothing, so the
     cheap mistake is skipping when the server was free, and the expensive one is
-    calling while a human waits for Bob.
+    calling while a human waits on the same GPU.
     """
     try:
         slots = json.loads(_get(f"{base}/slots", timeout))
@@ -330,7 +330,7 @@ def _call_model_inner(
         "max_tokens": max_tokens,
         "response_format": {"type": "json_object"},
         # Opting in per request. The server's own --reasoning off stays where it
-        # is: it is global and Bob's entire night shift depends on it.
+        # is: it is global and the neighbouring night batch depends on it.
         "chat_template_kwargs": {"enable_thinking": True},
     }
     request = urllib.request.Request(
@@ -414,7 +414,7 @@ def call_and_parse(
         content, reasoning = call_model(endpoint, model, turn, max_tokens)
         if require_reasoning and not reasoning.strip():
             # A routing tripwire, not a quality gate: it catches the misconfiguration where
-            # this unit silently lands on Bob's non-thinking production profile. The Spark
+            # this unit silently lands on the shared non-thinking production profile. The Spark
             # endpoint serves an Instruct model that never emits reasoning_content, so the
             # unit opts out explicitly with --allow-no-reasoning; every hard constraint on
             # the brief itself is enforced deterministically in pipeline/teaching_brief.py.

@@ -27,16 +27,17 @@ as a peak understates the storm by half a thousand nanotesla. Reproduce with
 ENTITY BOUNDARY
 ---------------
 Same guard, same reason as `ingest/spacetrack_ingest.py`: the SuperMAG account
-is registered to Sean personally, so it is used only from his own machine. The
-VPS operates under the LLC and must never carry a personal registration. Note
-this is the opposite of `ingest/celestrak_mirror.py`, which is VPS-only.
+is a personal registration, so it is used only from the one machine that holds
+it. The publishing server operates under the organisation and must never carry a
+personal registration. Note this is the opposite of `ingest/celestrak_mirror.py`,
+which runs only on the publishing server.
 
 WHAT MAY BE PUBLISHED, WHICH IS NOT WHAT THE RULES OF THE ROAD FIRST SUGGEST
 ---------------------------------------------------------------------------
 SuperMAG's published Rules of the Road say derived products "cannot be
 redistributed", and an earlier reading of that in
-`docs/gannon-storm-module-design.md` excluded the source outright. Sean then
-checked with a contact at JHU/APL and the actual position is narrower:
+`docs/gannon-storm-module-design.md` excluded the source outright. Checked with
+a contact at JHU/APL, the actual position is narrower:
 
     Derived VISUALISATION is cleared. Dataset REDISTRIBUTION is not.
 
@@ -89,7 +90,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 # ---------------------------------------------------------------------------
-# The boundary. Do not relax without Sean's explicit instruction.
+# The boundary. Do not relax without an explicit decision to change the rule.
 # ---------------------------------------------------------------------------
 SUPERMAG_HOST = "bigmem-PC"
 
