@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, and consider citing the two research papers produced with it."
+type: software
+title: "orbit-audit: catalogue-scale satellite manoeuvre detection with a continuously measured false-alarm bound"
+authors:
+  - family-names: Egan
+    given-names: "Sean D."
+    orcid: "https://orcid.org/0009-0005-9318-8819"
+    affiliation: "The Informed"
+  - family-names: Conklin
+    given-names: Derek
+    affiliation: "The Informed"
+repository-code: "https://github.com/theinformed/orbit-audit"
+license: Apache-2.0
+date-released: "2026-09-22"
+version: "1.0.0"
+references:
+  - type: article
+    title: "Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt"
+    authors:
+      - family-names: Egan
+        given-names: "Sean D."
+      - family-names: Conklin
+        given-names: Derek
+    year: 2026
+    doi: "10.5281/zenodo.22884814"
+  - type: article
+    title: "A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets"
+    authors:
+      - family-names: Egan
+        given-names: "Sean D."
+      - family-names: Conklin
+        given-names: Derek
+    year: 2026
+    doi: "10.5281/zenodo.22884816"
