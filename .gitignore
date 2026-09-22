@@ -9,4 +9,7 @@ dist/
 *.out
 # runtime artifacts written by the pipeline and by test runs
 pipeline/.cache/
+runtime/
 state/
+build/
+*.egg-info/

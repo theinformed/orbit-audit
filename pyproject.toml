@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orbit-audit"
+version = "1.0.0"
+description = "Registered manoeuvre detection from two-line element sets, with a continuously measured false-alarm control"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+keywords = [
+    "two-line element sets",
+    "orbit determination",
+    "manoeuvre detection",
+    "space situational awareness",
+    "false alarm rate",
+    "space weather",
+]
+authors = [
+    { name = "Sean D. Egan" },
+    { name = "Derek Conklin" },
+]
+maintainers = [
+    { name = "Sean D. Egan", email = "sean@theinformed.org" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+# The detection and release pipeline needs NumPy and nothing else. Every other
+# third-party package below belongs to one optional program and is imported
+# where it is used, so a checkout that installs only this dependency can still
+# run the acceptance suite:
+#
+#     python3 -m unittest discover -s tests -p 'test_orbit*.py'
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+# pipeline/orbit_drift_gpu.py and pipeline/orbit_sweep_gpu.py. The wheel is
+# CUDA-version specific; requirements-orbit-drift-gpu.txt pins the exact build
+# the published GPU measurements were produced with.
+gpu = ["cupy-cuda13x>=13.6"]
+
+# pipeline/thermosphere.py, for NRLMSIS density profiles.
+atmosphere = ["pymsis>=0.10"]
+
+# pipeline/wam_ipe.py, pipeline/thermosphere.py and pipeline/event_replays.py
+# read model and spacecraft files in netCDF and CDF. tests/test_wam_ipe.py
+# imports netCDF4 directly, so the wider test suite needs this extra; the
+# orbit detector suite does not.
+netcdf = ["netCDF4>=1.6", "cdflib>=1.3"]
+
+# tools/eol_three_arm_study.py, for the regression and t statistics.
+stats = ["scipy>=1.13"]
+
+# tools/make_figures.py, which renders the paper figures.
+figures = ["matplotlib>=3.8"]
+
+# tools/mechanism-animations/, tools/manim/ and tools/layer-media/ render the
+# explanatory animations.
+animation = ["manim>=0.18", "fonttools>=4.50"]
+
+# tools/pronunciation_readback.py transcribes rendered narration back to text
+# so a pronunciation can be checked without a listener.
+asr = ["faster-whisper>=1.0", "torch>=2.2", "transformers>=4.40"]
+
+[project.urls]
+Homepage = "https://github.com/theinformed/orbit-audit"
+Repository = "https://github.com/theinformed/orbit-audit"
+"Paper A" = "https://doi.org/10.5281/zenodo.22884814"
+"Paper B" = "https://doi.org/10.5281/zenodo.22884816"
+
+# There are deliberately no console scripts. Every program here is run from a
+# checkout, either as a module (``python3 -m pipeline.orbit_release``) or as a
+# file (``python3 tools/paperb_analyze.py``), which is the form the papers and
+# the receipts under docs/ record. Naming entry points that no published
+# command uses would make those records harder to replay, not easier.
+
+[tool.setuptools]
+# pipeline/ and ops/ are the two importable packages. The analysis programs
+# under tools/, the upstream mirrors under ingest/, the narration builders and
+# the deployment helpers are scripts run from a checkout against the repository
+# layout they read data from; they are not part of an installed distribution.
+packages = ["pipeline", "ops"]
