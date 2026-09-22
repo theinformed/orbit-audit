@@ -1,5 +1,4 @@
 """Offline research fixtures: missing coverage must not turn into retirement."""
-import math
 import importlib.util
 import unittest
 

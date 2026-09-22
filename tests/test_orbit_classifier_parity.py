@@ -12,7 +12,6 @@ says why: it mirrors the rule so that a disagreement means the *inputs* disagree
 not the definitions. An audit that imports what it audits audits nothing.
 """
 import json
-import math
 import pathlib
 import sys
 import unittest

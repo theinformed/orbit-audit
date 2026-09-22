@@ -1,3 +1,9 @@
+"""Accumulation and publication of the geospace frame history.
+
+Covers the cadence ladder, the published-archive frame ceiling, and the encoding
+of an archived frame.
+"""
+
 from __future__ import annotations
 
 import base64

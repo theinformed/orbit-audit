@@ -54,7 +54,6 @@ import argparse
 import collections
 import dataclasses
 import datetime as dt
-import hashlib
 import html
 import json
 import math
@@ -66,7 +65,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))

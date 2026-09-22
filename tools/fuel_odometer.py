@@ -66,7 +66,7 @@ Analysis only. No archive writes, no production artifacts, no network.
 from __future__ import annotations
 
 import argparse
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timezone
 import gzip
 import hashlib

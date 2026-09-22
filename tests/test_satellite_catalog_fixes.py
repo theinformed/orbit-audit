@@ -1,3 +1,6 @@
+"""Catalog selection and normalisation: priority, launch group and launch date.
+"""
+
 import unittest
 
 from pipeline.build_release import (

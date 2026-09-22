@@ -1,3 +1,6 @@
+"""D-region absorption grids: fetch, parse, encode and roll forward.
+"""
+
 from __future__ import annotations
 
 import base64

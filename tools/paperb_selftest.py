@@ -15,7 +15,6 @@ analysis which can only confirm is not an analysis.
 
 from __future__ import annotations
 
-import math
 import sys
 import unittest
 from pathlib import Path

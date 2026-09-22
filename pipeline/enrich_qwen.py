@@ -62,7 +62,6 @@ import zoneinfo
 from pathlib import Path
 
 from pipeline import gpu_usage_ledger
-from typing import Any
 
 from pipeline.build_release import CACHE, brief_fact_packet, canonical_json, sha256
 from pipeline.teaching_brief import (

@@ -1,3 +1,6 @@
+"""Validation applied to every upstream fetch before its bytes are used.
+"""
+
 import os
 import tempfile
 import unittest

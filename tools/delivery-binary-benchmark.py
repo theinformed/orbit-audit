@@ -1,6 +1,10 @@
-# Offline format experiment only; never emits a production binary or changes references.
-# Dry run by design: at most two in-memory artifacts, stdout report only (<4 KiB).
-# Compare the same gzip level (9) used by the publisher. No network or dependencies.
+"""Offline binary-format experiment for the published data artifacts.
+
+Never emits a production binary and never changes a reference. A dry run by
+design: at most two in-memory artifacts and a stdout report under 4 KiB.
+Comparisons use the same gzip level (9) as the publisher. No network access
+and no third-party dependencies.
+"""
 import json,struct,gzip,os,time
 m=json.load(open('public/data/manifest.json'))
 def head(out,major,n):

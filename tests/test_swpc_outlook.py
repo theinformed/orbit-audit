@@ -1,3 +1,6 @@
+"""Normalisation of the SWPC three-day geomagnetic and radio outlook.
+"""
+
 from __future__ import annotations
 
 import datetime as dt

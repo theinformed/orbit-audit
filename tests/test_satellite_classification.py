@@ -1,3 +1,10 @@
+"""Mission, sector and orbit classification of catalog objects.
+
+Covers the CelesTrak group taxonomy, the participation groups whose membership
+says what a spacecraft takes part in rather than what it is, and the name and
+catalog-number rules that can override a group label.
+"""
+
 import shutil
 import tempfile
 from unittest import mock

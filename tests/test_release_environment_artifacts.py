@@ -1,3 +1,9 @@
+"""Timed space-weather artifacts published with the release.
+
+Covers exact frame coverage, OVATION point extraction, and the atomic publish of
+an artifact whose timestamp must match the frame it carries.
+"""
+
 from __future__ import annotations
 
 import datetime as dt

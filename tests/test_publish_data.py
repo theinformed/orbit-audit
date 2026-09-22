@@ -1,3 +1,9 @@
+"""The publish stage: only artifacts named by the current manifest are staged.
+
+Each staged file is verified against the SHA-256 the manifest records, so a file
+that no manifest entry points at cannot reach the server.
+"""
+
 import hashlib
 import json
 import os

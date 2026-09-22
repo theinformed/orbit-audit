@@ -1,3 +1,10 @@
+"""Mux the seven rendered GIC-chain narration lines onto the silent animation.
+
+Each line is delayed to its own mark, levelled to -18 LUFS, and mixed into one
+track trimmed to the last mark's end.
+
+    python3 tools/manim/mux.py
+"""
 import json, subprocess
 marks = {m["id"]: m for m in json.load(open("marks.json"))}
 order = ["gic-01-field","gic-02-faraday","gic-03-line","gic-04-saturation",

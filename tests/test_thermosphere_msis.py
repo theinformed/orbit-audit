@@ -19,7 +19,7 @@ import unittest
 import numpy as np
 
 from pipeline import thermosphere
-from pipeline.msis_drivers import ApSeries, F107Series, kp_to_ap
+from pipeline.msis_drivers import F107Series, kp_to_ap
 from pipeline.thermosphere import (
     MSIS_HOURS_AHEAD,
     MSIS_HOURS_BACK,

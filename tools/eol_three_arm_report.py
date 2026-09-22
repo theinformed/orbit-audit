@@ -3,7 +3,6 @@
 from pathlib import Path
 import argparse
 import json
-from collections import Counter
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--prefix',type=Path,default=root/'docs/eol-three-arm-20260920')

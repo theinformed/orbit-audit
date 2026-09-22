@@ -1,3 +1,9 @@
+"""Reduction of WAM-IPE thermosphere/ionosphere model output.
+
+Reads synthetic netCDF files and checks the sampling, encoding and cache
+behaviour of the browser artifact built from them.
+"""
+
 from __future__ import annotations
 
 import base64

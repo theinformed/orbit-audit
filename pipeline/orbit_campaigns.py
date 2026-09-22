@@ -87,7 +87,7 @@ from collections import deque
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass, field, replace
 from pathlib import Path
-from typing import Any, Iterable, Iterator, Sequence
+from typing import Any, Iterator, Sequence
 
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:                      # pragma: no cover - CLI convenience
@@ -130,8 +130,8 @@ from pipeline.orbit_events import (  # noqa: E402
 )
 from pipeline.orbit_events import observation_span_days  # noqa: E402
 from pipeline import orbit_history  # noqa: E402
-from pipeline.orbit_history import (ARCHIVE_NAME, archive_db_path, archive_root,
-                                    archive_stats, open_archive)  # noqa: E402
+from pipeline.orbit_history import (archive_db_path, archive_stats,
+                                    open_archive)  # noqa: E402
 
 SCHEMA_VERSION = 1
 

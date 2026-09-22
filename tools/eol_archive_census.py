@@ -22,7 +22,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from pipeline import orbit_campaigns as oc, orbit_events as oe, orbit_sweep_gpu as gpu
-from tools.eol_policy_probe import RAISE, NSK, epoch, digest
+from tools.eol_policy_probe import RAISE, digest
 
 
 class RequiredGPU(gpu.Execution):

@@ -1,3 +1,9 @@
+"""Parsing of SWMF plane and radiation-belt structures.
+
+Synthetic frames exercise the grid-consistency checks and the aggregate outlier
+backstop, including the shell quantisation that must not count as bad cells.
+"""
+
 import base64
 import math
 import struct

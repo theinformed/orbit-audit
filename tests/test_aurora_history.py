@@ -1,3 +1,9 @@
+"""Aurora probability snapshots: parsing, accumulation and bundle assembly.
+
+Frames predating accumulation are reported as a labelled gap rather than as zero
+probability.
+"""
+
 from __future__ import annotations
 
 import base64

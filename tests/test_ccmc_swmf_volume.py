@@ -1,3 +1,6 @@
+"""CCMC SWMF volume output: BATL tree reading and tree/plot alignment.
+"""
+
 import struct
 import tempfile
 import unittest

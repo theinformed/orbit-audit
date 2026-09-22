@@ -32,7 +32,7 @@ import datetime as dt
 import json
 import math
 import re
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Mapping, Sequence
 
 USER_AGENT = (
     "SpaceEnvironmentExplorer/0.1 educational-project contact=sean.theinformed.org"

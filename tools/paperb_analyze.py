@@ -22,7 +22,6 @@ import argparse
 import glob
 import hashlib
 import json
-import math
 import subprocess
 import sys
 from collections import defaultdict

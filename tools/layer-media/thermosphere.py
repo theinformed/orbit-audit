@@ -7,7 +7,7 @@ import json
 import math
 from pathlib import Path
 
-from manim import Scene, Text, Line, DashedLine, Dot, Circle, VGroup, FadeIn, FadeOut
+from manim import Scene, Text, Line, DashedLine, Dot, Circle, FadeIn, FadeOut
 
 DATA = json.loads(Path(__file__).with_suffix('.json').read_text())
 BG, INK, MUTED, CYAN, GOLD = '#030b10', '#e0eef4', '#b4cbd4', '#40d7df', '#ffce75'
