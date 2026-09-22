@@ -21,14 +21,16 @@ The detector audits itself in public, and this release includes the occasions on
 which it **failed its own gate**. That is deliberate: a false-alarm control that
 only ever reports success is not a control.
 
-## The papers
+## Papers
 
-| | |
-|---|---|
-| **Paper A** | [Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt](docs/paper-a-draft-20260921.md) |
-| **Paper B** | [A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets](docs/paper-b-draft-20260921.md) |
+| | | |
+|---|---|---|
+| **Paper A** | [Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt](docs/paper-a-draft-20260921.md) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884814.svg)](https://doi.org/10.5281/zenodo.22884814) |
+| **Paper B** | [A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets](docs/paper-b-draft-20260921.md) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884816.svg)](https://doi.org/10.5281/zenodo.22884816) |
 
-Both are drafts by **Sean D. Egan and Derek Conklin**, dated 2026-09-21.
+Both are drafts by **Sean D. Egan and Derek Conklin**, dated 2026-09-21, released
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (the repository's
+own Apache 2.0 license, below, covers the code; the papers themselves are CC BY).
 LaTeX sources and built PDFs are under [`docs/latex/`](docs/latex/) —
 [paper A](docs/latex/paper-a/paper-a.pdf) (22 pages) and
 [paper B](docs/latex/paper-b/paper-b.pdf) (28 pages).
