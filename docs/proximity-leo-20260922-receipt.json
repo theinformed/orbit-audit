@@ -1,0 +1,2935 @@
+{
+  "study": "T8b -- LEO/MEO/HEO approach events from plane matching and phasing",
+  "registration": "docs/proximity-leo-preregistration-20260922.md",
+  "registrationCommit": "23d4776af8c373fdbeb16c2ce9e97f3331e50e16",
+  "generated": "2026-09-22T05:13:17.326694+00:00",
+  "host": {
+    "name": "bigmem-PC",
+    "executionMode": "CPU, nice -n 15"
+  },
+  "archive": {
+    "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+    "bytes": 13891362816,
+    "mtime": "2026-09-22T04:19:52.080610+00:00",
+    "pageCount": 3391446,
+    "monthRollupSpan": [
+      "1959-01",
+      "2026-09"
+    ],
+    "monthRollupRowTotal": 183371676,
+    "sequentialScanRowTotal": 217026192,
+    "rollupUnderstatesScanBy": 33654516
+  },
+  "extract": {
+    "rowsScanned": 217026192,
+    "rowsCached": 217026192,
+    "objects": 68749,
+    "wallSeconds": 757.4333159923553,
+    "byRegime": {
+      "LEO": {
+        "objectDays": 112826797,
+        "objects": 61734
+      },
+      "MEO": {
+        "objectDays": 3331793,
+        "objects": 1044
+      },
+      "HEO": {
+        "objectDays": 17148197,
+        "objects": 8404
+      }
+    }
+  },
+  "detect": {
+    "sigmaThetaDeg": 0.6993807388614783,
+    "sigmaThetaP95Deg": 2.9026403922110964,
+    "sigmaNRevDay": 6.274671529203453e-05,
+    "sigmaNP95RevDay": 0.0053953988888640995,
+    "objects": 68749,
+    "wallSeconds": 322.5475389957428,
+    "classCrossTabulation": {
+      "neverManoeuvred": 3011,
+      "neverManoeuvredExcludedForThinEvidence": 11150,
+      "cataloguePassive": 12640,
+      "payload": 18865,
+      "payloadAndNeverManoeuvred": 855,
+      "cataloguePassiveNotNeverManoeuvred": 10863,
+      "cataloguePassiveAndNeverManoeuvred": 1777,
+      "payloadWithPlaneManoeuvre": 1174
+    }
+  },
+  "gateADiagnostic": {
+    "regime": "LEO",
+    "objectsSampled": 673,
+    "stride": 60,
+    "sigmaThetaDiagnosticDeg": {
+      "5": 0.0,
+      "25": 0.0,
+      "50": 0.00014825999998263777,
+      "75": 0.0002965199999935685,
+      "95": 0.0007413000000074986
+    },
+    "sigmaNDiagnosticRevDay": {
+      "5": 0.0,
+      "25": 0.0,
+      "50": 0.0,
+      "75": 1.580451599875907e-05,
+      "95": 5.513048100007508e-05
+    },
+    "sigmaNDiagnosticAsDaKm": {
+      "5": 0.0,
+      "25": 0.0,
+      "50": 0.0,
+      "75": 0.005402670505054214,
+      "95": 0.018845994629126502
+    },
+    "referenceAKm": 7234.5,
+    "gateABarThetaDeg": 0.02,
+    "crossTrackKmAtMedianTheta": 0.018720174138276497
+  },
+  "sourceSha256": {
+    "tools/proximity_plane.py": "7f8ad845434f744895e07f1c2f0841cbd08f8f314b86b93efe4d110df1a0cc72",
+    "tests/test_orbit_proximity_plane.py": "ce2db52e5443ef0072ce0312b5680ac619e5e79f4cf2864ff5ef904fd539e7eb",
+    "pipeline/orbit_campaigns.py": "6fe3ae546426165f3cb8a04a7ff542d744a4be1a268a7b99cc607e4a9a0766e0",
+    "pipeline/orbit_events.py": "abc601e8736d2c3904573d987de4ef1438a55574446e0f5111e9c9340d40a8a9",
+    "docs/proximity-leo-preregistration-20260922.md": "419704a974440efebbe1206faf7355245c2a74829f4e8fcb2e06e1261294b7fd"
+  },
+  "artifactSha256": {
+    "HEO-primary-events.jsonl": {
+      "sha256": "d49a7b4d5f5af9225a7b54284ac1cf16f9e47c5678de41945b9b1f9eea864a76",
+      "bytes": 94594
+    },
+    "LEO-d014-events.jsonl": {
+      "sha256": "c2cbcc9c5e4d74e45145f2dc6be057a554c81c05bd0fdbde2c5ddc00ab7bff7f",
+      "bytes": 13834721
+    },
+    "LEO-d060-events.jsonl": {
+      "sha256": "6674252dca34ec52e9247e2a96f56b54fc47a23a62425b1c2efe6226897a765e",
+      "bytes": 2085749
+    },
+    "LEO-gamma025km-events.jsonl": {
+      "sha256": "6bd93e99cd9f8863cbfe554fbb3c30a0d04cdf4634619704d2f07ac5b1991e98",
+      "bytes": 978741
+    },
+    "LEO-gamma100-events.jsonl": {
+      "sha256": "ee814898c34f194852ad4e46bafad8f591d393fc0727cd6c4fcf2cb743f86920",
+      "bytes": 1200086
+    },
+    "LEO-primary-events.jsonl": {
+      "sha256": "39321a4bda7edaa9939a1784a3e9fae10360815dde41aae44b474ec4add4611b",
+      "bytes": 5129801
+    },
+    "LEO-theta005-events.jsonl": {
+      "sha256": "33b1344fdd80fe31e2d051b3cb713ab6e835940e473980bd3c33ffa5a5ec06e5",
+      "bytes": 3905067
+    },
+    "LEO-theta010-events.jsonl": {
+      "sha256": "8761fb8a9c6e76852b619090169987232ba21384d87e43e82252769f4478753f",
+      "bytes": 4503103
+    },
+    "LEO-theta050-events.jsonl": {
+      "sha256": "812b7826d55f3ed13f3d2f2276cf087f373c2ff8bb6adf93b1580fc05cb139f0",
+      "bytes": 6557366
+    },
+    "LEO-theta100-events.jsonl": {
+      "sha256": "70f65a3bcb0c24b1ba71773896878e59b1761ee7b565b4b697b367e720bae3bf",
+      "bytes": 8030582
+    },
+    "MEO-primary-events.jsonl": {
+      "sha256": "d2d81f274c713f8987746e087f2f0f35a7d3a27cfdf6ec3e7fb53c25c5649f48",
+      "bytes": 375061
+    }
+  },
+  "runs": {
+    "HEO-primary-summary.json": {
+      "label": "primary",
+      "regime": "HEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 2.9106351936754766,
+        "phaseConfinementDaKm": 1.9404234624503176,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 11124,
+        "uniquePairs": 252,
+        "wallSeconds": 0.519338846206665,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.0834658145904541,
+        "cpuPairs": 1948,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 47,
+        "armG": 2,
+        "armM": 0,
+        "attribution": {
+          "ambiguous": 32,
+          "target": 5,
+          "natural": 8,
+          "approacher": 4
+        },
+        "standingPairs": 92,
+        "distinctApproachersArmM": 0,
+        "distinctTargetsArmM": 0,
+        "distinctApproachersArmG": 2
+      },
+      "distributions": {},
+      "leadTime": {
+        "armMEvents": 0,
+        "withInitiatingManoeuvre": 0,
+        "withInitiatingFraction": null,
+        "percentiles": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "kaplanMeierMedian": null,
+        "kaplanMeierP25": null,
+        "kaplanMeierP75": null,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "leadIdeal": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 2075685,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              1.058789224572477e-22,
+              1.8506910785309702e-06
+            ]
+          },
+          "payload": {
+            "events": 1,
+            "exposureObjectDays": 2092642,
+            "perObjectDay": 4.778648235101848e-07,
+            "wilson95": [
+              8.435488026976798e-08,
+              2.7070676839143086e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 2075685,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              1.058789224572477e-22,
+              1.8506910785309702e-06
+            ]
+          },
+          "payload": {
+            "events": 0,
+            "exposureObjectDays": 2092642,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              1.8356946715915275e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 10694203,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 1,
+        "armM": 0,
+        "distinctApproachersArmM": 0,
+        "distinctTargetsArmM": 0,
+        "withInitiatingManoeuvre": 0,
+        "leadPercentiles": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "kaplanMeierMedian": null,
+        "kaplanMeierP25": null,
+        "kaplanMeierP75": null,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 2075685,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              1.058789224572477e-22,
+              1.8506910785309702e-06
+            ]
+          },
+          "payload": {
+            "events": 0,
+            "exposureObjectDays": 2092642,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              1.8356946715915275e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 2075685,
+        "payloadObjectDays": 2092642,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 9.365385055541992
+    },
+    "LEO-d014-summary.json": {
+      "label": "d014",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 14.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.5087032921924098,
+        "phaseConfinementDaKm": 0.33913552812827324,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 19249482,
+        "uniquePairs": 251048,
+        "wallSeconds": 437.1006782054901,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.8180944919586182,
+        "cpuPairs": 30294,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 6890,
+        "armG": 304,
+        "armM": 170,
+        "attribution": {
+          "target": 1036,
+          "natural": 3269,
+          "approacher": 400,
+          "ambiguous": 2680
+        },
+        "standingPairs": 22323,
+        "distinctApproachersArmM": 122,
+        "distinctTargetsArmM": 130,
+        "distinctApproachersArmG": 182
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 14.473756164930556,
+          "25": 18.975512196180553,
+          "50": 29.461489982638888,
+          "75": 54.64310211805555,
+          "95": 115.9186373634258
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.0017464877580605576,
+          "50": 0.01744117336611929,
+          "75": 0.04271555825573143,
+          "95": 0.07959252073510505
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.005103566103344483,
+          "50": 0.020667677488317535,
+          "75": 0.046551380760562824,
+          "95": 0.10162048657396454
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.06162102539694914,
+          "50": 0.22134741743085706,
+          "75": 1.1488999496830372,
+          "95": 3.6016904649324215
+        },
+        "medianGammaDeg": {
+          "5": 6.18985893532406e-07,
+          "25": 0.9033568372588865,
+          "50": 2.0460676578584285,
+          "75": 3.7406547935387238,
+          "95": 4.852747115851036
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.005470398597367421,
+          "50": 0.014490255270175112,
+          "75": 0.06990266338834772,
+          "95": 0.3241665535019136
+        },
+        "campaignDays": {
+          "5": 5.072038599537037,
+          "25": 22.677412528935186,
+          "50": 64.35427241319445,
+          "75": 149.8814150462963,
+          "95": 443.1105434276619
+        },
+        "planeClosureDeg": {
+          "5": 0.0010025279832189705,
+          "25": 0.011318543781482648,
+          "50": 0.03180464386179169,
+          "75": 0.08948920354463283,
+          "95": 0.14158932537281851
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 3.8793805783594557,
+          "50": 8.525188795944018,
+          "75": 19.72173261629205,
+          "95": 34.986409588713926
+        }
+      },
+      "leadTime": {
+        "armMEvents": 170,
+        "withInitiatingManoeuvre": 170,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 17.689093766203705,
+          "25": 88.27282187499999,
+          "50": 196.42603052662037,
+          "75": 415.8848181741898,
+          "95": 1052.3265880688655
+        },
+        "kaplanMeierMedian": 196.9220405902778,
+        "kaplanMeierP25": 88.22517497685185,
+        "kaplanMeierP75": 417.1472758796296,
+        "atOrBeyondWall": 9,
+        "leadPlaneMatch": {
+          "5": 4.478020240740742,
+          "25": 21.17429910011574,
+          "50": 50.69409294560185,
+          "75": 140.43172681423613,
+          "95": 443.1105434276619
+        },
+        "leadIdeal": {
+          "5": 19.114160322337966,
+          "25": 89.701298828125,
+          "50": 200.7167502199074,
+          "75": 416.22662463831017,
+          "95": 1052.5015932771987
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 160,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 5.5005965740771875e-06,
+            "wilson95": [
+              4.711765839817723e-06,
+              6.421490308207632e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 133,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 4.572370902201662e-06,
+            "wilson95": [
+              3.8585274866111634e-06,
+              5.418277562834371e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 146,
+        "armM": 64,
+        "distinctApproachersArmM": 33,
+        "distinctTargetsArmM": 35,
+        "withInitiatingManoeuvre": 64,
+        "leadPercentiles": {
+          "5": 44.52974046238427,
+          "25": 144.30045885416666,
+          "50": 233.34825191550925,
+          "75": 454.18223049189817,
+          "95": 1024.826030403356
+        },
+        "kaplanMeierMedian": 233.0,
+        "kaplanMeierP25": 136.01198232638887,
+        "kaplanMeierP75": 447.2578603240741,
+        "atOrBeyondWall": 3,
+        "leadPlaneMatch": {
+          "5": 10.25054841550926,
+          "25": 22.44893029513889,
+          "50": 109.09263383680556,
+          "75": 420.9243179542824,
+          "95": 826.8157350896988
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 72,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.4752684583347343e-06,
+            "wilson95": [
+              1.9657533337316487e-06,
+              3.1168473818854033e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 1235.5554666519165
+    },
+    "LEO-d060-summary.json": {
+      "label": "d060",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 60.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.11871833977571114,
+        "phaseConfinementDaKm": 0.0791455598504741,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 3894382,
+        "uniquePairs": 115279,
+        "wallSeconds": 52.47359299659729,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.5326268672943115,
+        "cpuPairs": 97716,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 1049,
+        "armG": 46,
+        "armM": 25,
+        "attribution": {
+          "natural": 479,
+          "ambiguous": 412,
+          "target": 223,
+          "approacher": 44
+        },
+        "standingPairs": 1535,
+        "distinctApproachersArmM": 22,
+        "distinctTargetsArmM": 22,
+        "distinctApproachersArmG": 33
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 65.48892527777778,
+          "25": 72.2544434375,
+          "50": 84.40480322916666,
+          "75": 196.5361160300926,
+          "95": 306.1898101273146
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.0005763084241897826,
+          "50": 0.013981258979838977,
+          "75": 0.03215449301491315,
+          "95": 0.057665970191364976
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.004347502111695992,
+          "50": 0.016562211803743548,
+          "75": 0.04632769036408422,
+          "95": 0.10210060524008133
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.002104588924983054,
+          "50": 0.07731495089905108,
+          "75": 1.0191768551869127,
+          "95": 2.629671483657704
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.4765269368483668,
+          "50": 1.2875863366382627,
+          "75": 3.741361239557291,
+          "95": 3.8296684875557867
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.002759155495368759,
+          "50": 0.004187232361800852,
+          "75": 0.010906551353400573,
+          "95": 0.035804514029223314
+        },
+        "campaignDays": {
+          "5": 17.278242745370374,
+          "25": 33.84720361111111,
+          "50": 138.0966574537037,
+          "75": 180.79054041666666,
+          "95": 460.0275681018516
+        },
+        "planeClosureDeg": {
+          "5": 0.0015108983761510629,
+          "25": 0.020534380692102554,
+          "50": 0.05653158951877047,
+          "75": 0.1186303186515113,
+          "95": 0.17261671911652512
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 1.785146266714463,
+          "50": 10.273262301012352,
+          "75": 18.875577752941496,
+          "95": 27.69967636499681
+        }
+      },
+      "leadTime": {
+        "armMEvents": 25,
+        "withInitiatingManoeuvre": 25,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 11.082289585648152,
+          "25": 102.23363181712963,
+          "50": 196.9220405902778,
+          "75": 511.79894037037036,
+          "95": 917.6755578773149
+        },
+        "kaplanMeierMedian": 196.9220405902778,
+        "kaplanMeierP25": 102.23363181712963,
+        "kaplanMeierP75": 511.79894037037036,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 0.0,
+          "25": 29.574672164351853,
+          "50": 96.63707215277778,
+          "75": 170.16554976851853,
+          "95": 460.0275681018516
+        },
+        "leadIdeal": {
+          "5": 12.02875530092593,
+          "25": 102.35093210648148,
+          "50": 196.9983454398148,
+          "75": 511.7991610300926,
+          "95": 918.4718234907408
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 23,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 7.907107575235957e-07,
+            "wilson95": [
+              5.269172558046211e-07,
+              1.1865685031305356e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 18,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 6.188171145836836e-07,
+            "wilson95": [
+              3.914486165292004e-07,
+              9.782499019282118e-07
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 14,
+        "armM": 7,
+        "distinctApproachersArmM": 4,
+        "distinctTargetsArmM": 4,
+        "withInitiatingManoeuvre": 7,
+        "leadPercentiles": {
+          "5": 49.25634381712963,
+          "25": 179.4858851099537,
+          "50": 291.68621421296297,
+          "75": 704.7953588310186,
+          "95": 1077.942562378472
+        },
+        "kaplanMeierMedian": 291.68621421296297,
+        "kaplanMeierP25": 102.23363181712963,
+        "kaplanMeierP75": 1038.5012101967593,
+        "atOrBeyondWall": 1,
+        "leadPlaneMatch": {
+          "5": 46.80021609143519,
+          "25": 114.08077050347222,
+          "50": 482.4948741550926,
+          "75": 586.7501872569445,
+          "95": 788.041624855324
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 8,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.7502982870385935e-07,
+            "wilson95": [
+              1.393644631208844e-07,
+              5.42759574381039e-07
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 409.5547466278076
+    },
+    "LEO-gamma025km-summary.json": {
+      "label": "gamma025km",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 0.2085,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.009899066678702804,
+        "phaseConfinementDaKm": 0.00659937778580187,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 25.029564333579856
+      },
+      "screen": {
+        "hits": 3459450,
+        "uniquePairs": 67532,
+        "wallSeconds": 40.84397649765015,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.310929536819458,
+        "cpuPairs": 43678,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 522,
+        "armG": 65,
+        "armM": 27,
+        "attribution": {
+          "natural": 188,
+          "approacher": 10,
+          "ambiguous": 157,
+          "target": 342
+        },
+        "standingPairs": 325,
+        "distinctApproachersArmM": 15,
+        "distinctTargetsArmM": 24,
+        "distinctApproachersArmG": 30
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 32.974230740740744,
+          "25": 41.9080203587963,
+          "50": 49.9647975,
+          "75": 56.84557265046296,
+          "95": 143.51576391666663
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.0
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.0
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.0
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 7.257075993138545e-07
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.0
+        },
+        "campaignDays": {
+          "5": 1.6703060983796296,
+          "25": 2.9424668518518518,
+          "50": 6.787726238425926,
+          "75": 24.648463472222222,
+          "95": 46.93067997800924
+        },
+        "planeClosureDeg": {
+          "5": 0.1100263586973255,
+          "25": 0.11870173366580883,
+          "50": 0.13246532890551566,
+          "75": 0.14336375774241472,
+          "95": 0.17093416459653468
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.0
+        }
+      },
+      "leadTime": {
+        "armMEvents": 27,
+        "withInitiatingManoeuvre": 27,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 1.2615425462962964,
+          "25": 3.129812164351852,
+          "50": 4.433080381944444,
+          "75": 17.9637690625,
+          "95": 42.78464469097221
+        },
+        "kaplanMeierMedian": 4.433080381944444,
+        "kaplanMeierP25": 3.129812164351852,
+        "kaplanMeierP75": 17.9637690625,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 1.6703060983796296,
+          "25": 2.9424668518518518,
+          "50": 6.787726238425926,
+          "75": 24.648463472222222,
+          "95": 46.93067997800924
+        },
+        "leadIdeal": {
+          "5": 1.3366431909722223,
+          "25": 3.259864594907407,
+          "50": 4.560150173611111,
+          "75": 20.979214733796297,
+          "95": 43.54308101504628
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 4,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.3751491435192967e-07,
+            "wilson95": [
+              5.3476865911296275e-08,
+              3.5361737920843155e-07
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 1,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 3.437872858798242e-08,
+            "wilson95": [
+              6.068689789007439e-09,
+              1.9475321104407382e-07
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 8,
+        "armM": 0,
+        "distinctApproachersArmM": 0,
+        "distinctTargetsArmM": 0,
+        "withInitiatingManoeuvre": 0,
+        "leadPercentiles": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "kaplanMeierMedian": null,
+        "kaplanMeierP25": null,
+        "kaplanMeierP75": null,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 2,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 6.875745717596484e-08,
+            "wilson95": [
+              1.885577498173188e-08,
+              2.5072357394689824e-07
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 309.0325541496277
+    },
+    "LEO-gamma100-summary.json": {
+      "label": "gamma100",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 1.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.04747753802735158,
+        "phaseConfinementDaKm": 0.03165169201823439,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 120.0400424553179
+      },
+      "screen": {
+        "hits": 6775156,
+        "uniquePairs": 132585,
+        "wallSeconds": 113.68154859542847,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.5124976634979248,
+        "cpuPairs": 54372,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 632,
+        "armG": 60,
+        "armM": 24,
+        "attribution": {
+          "natural": 246,
+          "ambiguous": 182,
+          "target": 330,
+          "approacher": 21
+        },
+        "standingPairs": 748,
+        "distinctApproachersArmM": 17,
+        "distinctTargetsArmM": 22,
+        "distinctApproachersArmG": 27
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 31.399255513310184,
+          "25": 35.693093078703704,
+          "50": 52.91687697337963,
+          "75": 58.024709129050926,
+          "95": 94.34653478819443
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.08655229171046357
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.00024051020715522273,
+          "95": 0.08777565973593594
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "95": 0.1258156843591676
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.00087619300600645,
+          "95": 0.5494323017372522
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0015854487589876953,
+          "95": 0.022020517226383127
+        },
+        "campaignDays": {
+          "5": 1.5341351678240742,
+          "25": 6.199064774305556,
+          "50": 18.562714247685186,
+          "75": 30.756297337962963,
+          "95": 95.55002041493042
+        },
+        "planeClosureDeg": {
+          "5": 0.05625694784125489,
+          "25": 0.11542711874992416,
+          "50": 0.13636797523852429,
+          "75": 0.14208729280928417,
+          "95": 0.15416601707264152
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.26207110706949166,
+          "95": 7.944064618460072
+        }
+      },
+      "leadTime": {
+        "armMEvents": 24,
+        "withInitiatingManoeuvre": 24,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 0.7128727546296296,
+          "25": 4.35201138599537,
+          "50": 15.164206903935185,
+          "75": 29.71489513888889,
+          "95": 254.55228528935143
+        },
+        "kaplanMeierMedian": 17.46435943287037,
+        "kaplanMeierP25": 4.433080381944444,
+        "kaplanMeierP75": 30.941170104166666,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 1.5341351678240742,
+          "25": 6.199064774305556,
+          "50": 18.2182820775463,
+          "75": 30.756297337962963,
+          "95": 95.55002041493042
+        },
+        "leadIdeal": {
+          "5": 0.7655293055555555,
+          "25": 4.479392688078704,
+          "50": 16.28747594328704,
+          "75": 31.30683472800926,
+          "95": 254.68599998726808
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 10,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 3.437872858798242e-07,
+            "wilson95": [
+              1.867447863415281e-07,
+              6.328941473514931e-07
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 5,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.718936429399121e-07,
+            "wilson95": [
+              7.342269191760842e-08,
+              4.0242900129766836e-07
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 12,
+        "armM": 0,
+        "distinctApproachersArmM": 0,
+        "distinctTargetsArmM": 0,
+        "withInitiatingManoeuvre": 0,
+        "leadPercentiles": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "kaplanMeierMedian": null,
+        "kaplanMeierP25": null,
+        "kaplanMeierP75": null,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 2,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 6.875745717596484e-08,
+            "wilson95": [
+              1.885577498173188e-08,
+              2.5072357394689824e-07
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 634.5778570175171
+    },
+    "LEO-primary-summary.json": {
+      "label": "primary",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 8444958,
+        "uniquePairs": 176257,
+        "wallSeconds": 129.09886240959167,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.4224984645843506,
+        "cpuPairs": 66552,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 2565,
+        "armG": 120,
+        "armM": 71,
+        "attribution": {
+          "natural": 1127,
+          "target": 481,
+          "ambiguous": 1075,
+          "approacher": 124
+        },
+        "standingPairs": 6322,
+        "distinctApproachersArmM": 55,
+        "distinctTargetsArmM": 58,
+        "distinctApproachersArmG": 75
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 30.968138258101853,
+          "25": 41.304338136574074,
+          "50": 55.32577091435185,
+          "75": 76.69027227430556,
+          "95": 240.1754166550926
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.000572222224674058,
+          "50": 0.016254626851740343,
+          "75": 0.039072932274031344,
+          "95": 0.05979860387354647
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.003539717402215394,
+          "50": 0.01957621948905976,
+          "75": 0.04398187501777558,
+          "95": 0.07327544423401217
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.01795925026378712,
+          "50": 0.2068563528430454,
+          "75": 1.0834485803605103,
+          "95": 2.887026976334768
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.6571482248601304,
+          "50": 2.3807064060833087,
+          "75": 3.7506233901811616,
+          "95": 3.963744649421277
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.0029076723615162337,
+          "50": 0.006524225426346675,
+          "75": 0.014112018151536176,
+          "95": 0.17421691662320882
+        },
+        "campaignDays": {
+          "5": 5.869352633101852,
+          "25": 29.31156127314815,
+          "50": 70.56525655092592,
+          "75": 210.31743498263887,
+          "95": 587.04320484375
+        },
+        "planeClosureDeg": {
+          "5": 0.0008731256633482481,
+          "25": 0.014039860258491563,
+          "50": 0.03567078760646843,
+          "75": 0.08220941878247848,
+          "95": 0.1409465699243384
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 2.3027717453454954,
+          "50": 7.843914084532258,
+          "75": 19.1451303533847,
+          "95": 33.04266921551174
+        }
+      },
+      "leadTime": {
+        "armMEvents": 71,
+        "withInitiatingManoeuvre": 71,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 8.738940642361111,
+          "25": 70.47047765625,
+          "50": 195.93002046296297,
+          "75": 473.92160949652776,
+          "95": 917.5150368807871
+        },
+        "kaplanMeierMedian": 195.93002046296297,
+        "kaplanMeierP25": 70.0542102662037,
+        "kaplanMeierP75": 496.12110996527775,
+        "atOrBeyondWall": 1,
+        "leadPlaneMatch": {
+          "5": 0.983516087962963,
+          "25": 27.878846313657405,
+          "50": 46.83173768518518,
+          "75": 210.31743498263887,
+          "95": 587.04320484375
+        },
+        "leadIdeal": {
+          "5": 9.406473755787037,
+          "25": 70.76747124421297,
+          "50": 196.59308614583333,
+          "75": 474.41546111689814,
+          "95": 918.3113024942129
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 59,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.028344986690963e-06,
+            "wilson95": [
+              1.5726184312791897e-06,
+              2.6161354590957272e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 52,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.787693886575086e-06,
+            "wilson95": [
+              1.3633682354577673e-06,
+              2.3440835182483067e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 53,
+        "armM": 26,
+        "distinctApproachersArmM": 12,
+        "distinctTargetsArmM": 14,
+        "withInitiatingManoeuvre": 26,
+        "leadPercentiles": {
+          "5": 96.05701831886574,
+          "25": 175.52563107060186,
+          "50": 252.75216248263888,
+          "75": 611.9149460445602,
+          "95": 1077.1461403877315
+        },
+        "kaplanMeierMedian": 248.7661865625,
+        "kaplanMeierP25": 171.58332175925926,
+        "kaplanMeierP75": 666.8006412847222,
+        "atOrBeyondWall": 2,
+        "leadPlaneMatch": {
+          "5": 11.572301883680556,
+          "25": 32.880636556712965,
+          "50": 169.8706337037037,
+          "75": 490.58238347800926,
+          "95": 821.1544562065973
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 28,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 9.626044004635078e-07,
+            "wilson95": [
+              6.660266003538453e-07,
+              1.3912463990590558e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 629.7903954982758
+    },
+    "LEO-theta005-summary.json": {
+      "label": "theta005",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.05,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 6.002306090825946,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 4168554,
+        "uniquePairs": 99239,
+        "wallSeconds": 139.97929763793945,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.7009384632110596,
+        "cpuPairs": 42984,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 1957,
+        "armG": 97,
+        "armM": 31,
+        "attribution": {
+          "natural": 703,
+          "ambiguous": 950,
+          "target": 428,
+          "approacher": 88
+        },
+        "standingPairs": 5494,
+        "distinctApproachersArmM": 25,
+        "distinctTargetsArmM": 25,
+        "distinctApproachersArmG": 60
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 30.156547233796296,
+          "25": 36.04080767361111,
+          "50": 48.33344386574074,
+          "75": 57.41332208912037,
+          "95": 220.0760302662037
+        },
+        "closestThetaDeg": {
+          "5": 5.409543945566175e-05,
+          "25": 0.009849684175877131,
+          "50": 0.01765173837867079,
+          "75": 0.03809297567723408,
+          "95": 0.046054852584932526
+        },
+        "medianThetaDeg": {
+          "5": 0.002080266761627514,
+          "25": 0.014893401354709568,
+          "50": 0.02424317547714931,
+          "75": 0.041727808068091475,
+          "95": 0.04760842042314173
+        },
+        "closestGammaDeg": {
+          "5": 0.017965249691906975,
+          "25": 0.06625563669777991,
+          "50": 0.4217649348949413,
+          "75": 1.6938259665678017,
+          "95": 2.842609825351087
+        },
+        "medianGammaDeg": {
+          "5": 0.5349063079895162,
+          "25": 1.2961462131512147,
+          "50": 3.668111128915692,
+          "75": 3.7927032779341756,
+          "95": 4.002745453919491
+        },
+        "medianAbsDaKm": {
+          "5": 0.0022169095823301177,
+          "25": 0.004471461001685384,
+          "50": 0.0077478932953454205,
+          "75": 0.012345910853127862,
+          "95": 0.12016083275125311
+        },
+        "campaignDays": {
+          "5": 8.801279502314815,
+          "25": 29.6688559375,
+          "50": 46.83173768518518,
+          "75": 145.96122734953704,
+          "95": 320.91948291666665
+        },
+        "planeClosureDeg": {
+          "5": 0.0008731256633482481,
+          "25": 0.005212483147526207,
+          "50": 0.013842962848638202,
+          "75": 0.018726094107258756,
+          "95": 0.03333555830377365
+        },
+        "apsidalSeparationDeg": {
+          "5": 5.6958940918682615,
+          "25": 7.050062514482747,
+          "50": 12.460071546821936,
+          "75": 18.288462178679502,
+          "95": 29.843214937333073
+        }
+      },
+      "leadTime": {
+        "armMEvents": 31,
+        "withInitiatingManoeuvre": 31,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 53.066125497685185,
+          "25": 121.30489182291666,
+          "50": 219.00858074074074,
+          "75": 497.2906637152778,
+          "95": 861.5886886979167
+        },
+        "kaplanMeierMedian": 219.00858074074074,
+        "kaplanMeierP25": 115.11857084490741,
+        "kaplanMeierP75": 498.46021746527776,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 0.49592796875,
+          "25": 20.15295896990741,
+          "50": 37.86238869212963,
+          "75": 123.86377086226852,
+          "95": 319.71114958333334
+        },
+        "leadIdeal": {
+          "5": 53.37078699652778,
+          "25": 121.79860452546296,
+          "50": 219.3419025,
+          "75": 497.78451533564817,
+          "95": 862.1410055729167
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 48,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.6501789722231562e-06,
+            "wilson95": [
+              1.2447347358726403e-06,
+              2.187687225451238e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 29,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 9.969831290514901e-07,
+            "wilson95": [
+              6.94198009420679e-07,
+              1.4318324380877708e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 39,
+        "armM": 17,
+        "distinctApproachersArmM": 9,
+        "distinctTargetsArmM": 11,
+        "withInitiatingManoeuvre": 17,
+        "leadPercentiles": {
+          "5": 129.25631222453703,
+          "25": 185.89586199074074,
+          "50": 220.76340006944446,
+          "75": 447.2578603240741,
+          "95": 1090.9914268333334
+        },
+        "kaplanMeierMedian": 220.76340006944446,
+        "kaplanMeierP25": 185.89586199074074,
+        "kaplanMeierP75": 447.2578603240741,
+        "atOrBeyondWall": 2,
+        "leadPlaneMatch": {
+          "5": 4.450013666666667,
+          "25": 22.709684837962964,
+          "50": 45.07691835648148,
+          "75": 227.1529112037037,
+          "95": 485.14512924999997
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 20,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 6.875745717596484e-07,
+            "wilson95": [
+              4.4511952764206366e-07,
+              1.0620938870064465e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 575.7999801635742
+    },
+    "LEO-theta010-summary.json": {
+      "label": "theta010",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.1,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 12.004607610634695,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 6282260,
+        "uniquePairs": 133303,
+        "wallSeconds": 146.74638485908508,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.6694190502166748,
+        "cpuPairs": 53684,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 2252,
+        "armG": 111,
+        "armM": 54,
+        "attribution": {
+          "natural": 886,
+          "ambiguous": 1031,
+          "approacher": 108,
+          "target": 459
+        },
+        "standingPairs": 6011,
+        "distinctApproachersArmM": 43,
+        "distinctTargetsArmM": 44,
+        "distinctApproachersArmG": 70
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 30.971977200810187,
+          "25": 39.52703837962963,
+          "50": 50.87739052083333,
+          "75": 71.79880053530093,
+          "95": 235.1394761608796
+        },
+        "closestThetaDeg": {
+          "5": 0.00016722703587372051,
+          "25": 0.007616174555422229,
+          "50": 0.029821477124078538,
+          "75": 0.045481770581926366,
+          "95": 0.06395975611918855
+        },
+        "medianThetaDeg": {
+          "5": 0.002458218886129121,
+          "25": 0.01227230530785441,
+          "50": 0.033088563886411855,
+          "75": 0.050989707731171736,
+          "95": 0.06804274897173043
+        },
+        "closestGammaDeg": {
+          "5": 0.01447232885975717,
+          "25": 0.09783568185681792,
+          "50": 0.2909203157110929,
+          "75": 1.6067247995895668,
+          "95": 2.8792885234040373
+        },
+        "medianGammaDeg": {
+          "5": 0.5811956365543093,
+          "25": 1.461787526435164,
+          "50": 3.673929287482832,
+          "75": 3.7747244160428424,
+          "95": 3.9823526156514677
+        },
+        "medianAbsDaKm": {
+          "5": 0.0020400453814772845,
+          "25": 0.0038971734136339364,
+          "50": 0.0077324407666310435,
+          "75": 0.014179848273670359,
+          "95": 0.19721449418716452
+        },
+        "campaignDays": {
+          "5": 10.227312079861111,
+          "25": 32.33514787326389,
+          "50": 99.2262764525463,
+          "75": 238.85863662905092,
+          "95": 575.9882746718746
+        },
+        "planeClosureDeg": {
+          "5": 0.0007894469104229483,
+          "25": 0.009088639947530551,
+          "50": 0.018475064533263766,
+          "75": 0.05031942504134042,
+          "95": 0.07044956448275075
+        },
+        "apsidalSeparationDeg": {
+          "5": 2.3719785898958126,
+          "25": 6.973502042185476,
+          "50": 12.072007563881947,
+          "75": 22.657360848973536,
+          "95": 33.79361241426452
+        }
+      },
+      "leadTime": {
+        "armMEvents": 54,
+        "withInitiatingManoeuvre": 54,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 34.98665910474537,
+          "25": 129.62140518229165,
+          "50": 219.8859904050926,
+          "75": 485.02135973090276,
+          "95": 861.2099879045139
+        },
+        "kaplanMeierMedian": 220.76340006944446,
+        "kaplanMeierP25": 127.49121280092592,
+        "kaplanMeierP75": 496.12110996527775,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 9.441663353009261,
+          "25": 31.41166769386574,
+          "50": 90.73481690972223,
+          "75": 234.87213167534722,
+          "95": 573.3262641741894
+        },
+        "leadIdeal": {
+          "5": 35.06685617013889,
+          "25": 129.73316294560186,
+          "50": 220.21931216435183,
+          "75": 485.39328554108795,
+          "95": 861.6966062447917
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 57,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.959587529514998e-06,
+            "wilson95": [
+              1.5126364873406329e-06,
+              2.5386025068431863e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 49,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.6845577008111387e-06,
+            "wilson95": [
+              1.2743229290078944e-06,
+              2.226856480411533e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 50,
+        "armM": 26,
+        "distinctApproachersArmM": 12,
+        "distinctTargetsArmM": 14,
+        "withInitiatingManoeuvre": 26,
+        "leadPercentiles": {
+          "5": 96.05701831886574,
+          "25": 175.52563107060186,
+          "50": 252.75216248263888,
+          "75": 611.9149460445602,
+          "95": 1077.1461403877315
+        },
+        "kaplanMeierMedian": 248.7661865625,
+        "kaplanMeierP25": 171.58332175925926,
+        "kaplanMeierP75": 666.8006412847222,
+        "atOrBeyondWall": 2,
+        "leadPlaneMatch": {
+          "5": 11.572301883680556,
+          "25": 27.039192777777778,
+          "50": 120.16194865740741,
+          "75": 470.0897000173611,
+          "95": 821.1544562065973
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 28,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 9.626044004635078e-07,
+            "wilson95": [
+              6.660266003538453e-07,
+              1.3912463990590558e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 677.1765785217285
+    },
+    "LEO-theta050-summary.json": {
+      "label": "theta050",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 0.5,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 60.022306693179196,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 11716192,
+        "uniquePairs": 243561,
+        "wallSeconds": 164.07040333747864,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.5568912029266357,
+        "cpuPairs": 90732,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 3278,
+        "armG": 141,
+        "armM": 85,
+        "attribution": {
+          "natural": 1669,
+          "ambiguous": 1174,
+          "target": 548,
+          "approacher": 154
+        },
+        "standingPairs": 6775,
+        "distinctApproachersArmM": 63,
+        "distinctTargetsArmM": 67,
+        "distinctApproachersArmG": 92
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 31.133165502314814,
+          "25": 41.93997496527778,
+          "50": 55.58368,
+          "75": 76.89373116898147,
+          "95": 234.68242047916667
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 2.2710573716316792e-05,
+          "50": 0.012400546461241948,
+          "75": 0.039219331239215,
+          "95": 0.07949011201917029
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.0014972860427727582,
+          "50": 0.015933381847883222,
+          "75": 0.04372842344103475,
+          "95": 0.1132350895463531
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.00033495358415553176,
+          "50": 0.1312753339944357,
+          "75": 0.6508596052914425,
+          "95": 2.8331390358191095
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.6279844290900038,
+          "50": 2.0552365643071715,
+          "75": 3.7412589116027317,
+          "95": 3.9530266783865136
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.00255738748865042,
+          "50": 0.006524225426346675,
+          "75": 0.0267470191420216,
+          "95": 0.16338233892911375
+        },
+        "campaignDays": {
+          "5": 5.072038599537037,
+          "25": 28.23026951388889,
+          "50": 42.45246082175926,
+          "75": 178.63565670138888,
+          "95": 609.1530651874998
+        },
+        "planeClosureDeg": {
+          "5": 0.0009650982705951751,
+          "25": 0.014653694740266725,
+          "50": 0.05094048370186984,
+          "75": 0.1188498749683294,
+          "95": 0.24769879816016352
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 2.0720822635111062,
+          "50": 7.607357689699398,
+          "75": 18.875577752941496,
+          "95": 34.52335083665759
+        }
+      },
+      "leadTime": {
+        "armMEvents": 85,
+        "withInitiatingManoeuvre": 85,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 10.629320872685186,
+          "25": 45.329467997685185,
+          "50": 171.58332175925926,
+          "75": 451.7221090277778,
+          "95": 1073.4530227662035
+        },
+        "kaplanMeierMedian": 171.58332175925926,
+        "kaplanMeierP25": 45.329467997685185,
+        "kaplanMeierP75": 451.7221090277778,
+        "atOrBeyondWall": 5,
+        "leadPlaneMatch": {
+          "5": 5.072038599537037,
+          "25": 28.23026951388889,
+          "50": 42.45246082175926,
+          "75": 178.63565670138888,
+          "95": 609.1530651874998
+        },
+        "leadIdeal": {
+          "5": 10.946539849537038,
+          "25": 45.40551958333333,
+          "50": 171.81799,
+          "75": 452.45981226851853,
+          "95": 1073.8279968032407
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 4,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 2.1284862875995772e-07,
+            "wilson95": [
+              8.277267800345077e-08,
+              5.473367613199854e-07
+            ]
+          },
+          "payload": {
+            "events": 65,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.2346173582188575e-06,
+            "wilson95": [
+              1.7534079579114477e-06,
+              2.8478906210367625e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 59,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.028344986690963e-06,
+            "wilson95": [
+              1.5726184312791897e-06,
+              2.6161354590957272e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": 0.09525059311703038
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 57,
+        "armM": 26,
+        "distinctApproachersArmM": 12,
+        "distinctTargetsArmM": 14,
+        "withInitiatingManoeuvre": 26,
+        "leadPercentiles": {
+          "5": 96.05701831886574,
+          "25": 175.52563107060186,
+          "50": 252.75216248263888,
+          "75": 611.9149460445602,
+          "95": 1077.1461403877315
+        },
+        "kaplanMeierMedian": 248.7661865625,
+        "kaplanMeierP25": 171.58332175925926,
+        "kaplanMeierP75": 666.8006412847222,
+        "atOrBeyondWall": 2,
+        "leadPlaneMatch": {
+          "5": 11.572301883680556,
+          "25": 32.880636556712965,
+          "50": 169.8706337037037,
+          "75": 490.58238347800926,
+          "95": 821.1544562065973
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 29,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 9.969831290514901e-07,
+            "wilson95": [
+              6.94198009420679e-07,
+              1.4318324380877708e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 855.5531992912292
+    },
+    "LEO-theta100-summary.json": {
+      "label": "theta100",
+      "regime": "LEO",
+      "thresholds": {
+        "thetaPDeg": 1.0,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 120.0400424553179,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 14305498,
+        "uniquePairs": 292915,
+        "wallSeconds": 147.3093864917755,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.5877749919891357,
+        "cpuPairs": 109058,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 4013,
+        "armG": 166,
+        "armM": 104,
+        "attribution": {
+          "natural": 2310,
+          "approacher": 184,
+          "ambiguous": 1207,
+          "target": 623
+        },
+        "standingPairs": 7063,
+        "distinctApproachersArmM": 78,
+        "distinctTargetsArmM": 82,
+        "distinctApproachersArmG": 112
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 31.791559927083334,
+          "25": 42.74529162326389,
+          "50": 55.99988037037037,
+          "75": 76.81198695023147,
+          "95": 228.61876404513868
+        },
+        "closestThetaDeg": {
+          "5": 0.0,
+          "25": 0.0002691562090535847,
+          "50": 0.025051457107060908,
+          "75": 0.059394157892280926,
+          "95": 0.7780993300082697
+        },
+        "medianThetaDeg": {
+          "5": 0.0,
+          "25": 0.0024811009431347946,
+          "50": 0.026981824949561375,
+          "75": 0.0728680558612644,
+          "95": 0.7826586333581862
+        },
+        "closestGammaDeg": {
+          "5": 0.0,
+          "25": 0.009804940925709353,
+          "50": 0.26320818364545573,
+          "75": 0.783014311478728,
+          "95": 2.7142978076382036
+        },
+        "medianGammaDeg": {
+          "5": 0.0,
+          "25": 0.6801991557283801,
+          "50": 1.966521881633833,
+          "75": 3.720933289508428,
+          "95": 3.9284982225125247
+        },
+        "medianAbsDaKm": {
+          "5": 0.0,
+          "25": 0.0032164069418740837,
+          "50": 0.008980803056147124,
+          "75": 0.04087589227515309,
+          "95": 0.16366601871991404
+        },
+        "campaignDays": {
+          "5": 5.072038599537037,
+          "25": 31.019656105324074,
+          "50": 100.29913560185184,
+          "75": 250.10952159722223,
+          "95": 612.8380419114579
+        },
+        "planeClosureDeg": {
+          "5": 0.0009563963357587361,
+          "25": 0.012433840213870832,
+          "50": 0.04715637817943155,
+          "75": 0.1315028070088975,
+          "95": 0.35807927683868396
+        },
+        "apsidalSeparationDeg": {
+          "5": 0.0,
+          "25": 3.2597504659688,
+          "50": 7.741076874504245,
+          "75": 19.282666042014043,
+          "95": 92.06403560250165
+        }
+      },
+      "leadTime": {
+        "armMEvents": 104,
+        "withInitiatingManoeuvre": 104,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 7.593198405671298,
+          "25": 70.67861135127315,
+          "50": 207.96531066550926,
+          "75": 509.40399817418984,
+          "95": 1054.5924668935183
+        },
+        "kaplanMeierMedian": 219.00858074074074,
+        "kaplanMeierP25": 70.8867450462963,
+        "kaplanMeierP75": 511.79894037037036,
+        "atOrBeyondWall": 6,
+        "leadPlaneMatch": {
+          "5": 5.072038599537037,
+          "25": 30.756297337962963,
+          "50": 97.11194383680555,
+          "75": 250.10952159722223,
+          "95": 612.8380419114579
+        },
+        "leadIdeal": {
+          "5": 8.510119741319446,
+          "25": 70.86510355034723,
+          "50": 208.17012396990742,
+          "75": 510.1932897540509,
+          "95": 1054.8538978686342
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 6,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 3.192729431399366e-07,
+            "wilson95": [
+              1.463256615640397e-07,
+              6.966323630104831e-07
+            ]
+          },
+          "payload": {
+            "events": 77,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.6471621012746465e-06,
+            "wilson95": [
+              2.118252554439003e-06,
+              3.308135401655794e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 69,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 2.372132272570787e-06,
+            "wilson95": [
+              1.8745740679228742e-06,
+              3.0017543034075314e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 57286322,
+        "armGLeakRatio": 0.12060951725857744
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 61,
+        "armM": 26,
+        "distinctApproachersArmM": 12,
+        "distinctTargetsArmM": 14,
+        "withInitiatingManoeuvre": 26,
+        "leadPercentiles": {
+          "5": 96.05701831886574,
+          "25": 175.52563107060186,
+          "50": 252.75216248263888,
+          "75": 611.9149460445602,
+          "95": 1077.1461403877315
+        },
+        "kaplanMeierMedian": 248.7661865625,
+        "kaplanMeierP25": 171.58332175925926,
+        "kaplanMeierP75": 666.8006412847222,
+        "atOrBeyondWall": 2,
+        "leadPlaneMatch": {
+          "5": 11.572301883680556,
+          "25": 32.880636556712965,
+          "50": 169.8706337037037,
+          "75": 490.58238347800926,
+          "95": 821.1544562065973
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 18792698,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              0.0,
+              2.0441226882126304e-07
+            ]
+          },
+          "payload": {
+            "events": 31,
+            "exposureObjectDays": 29087754,
+            "perObjectDay": 1.065740586227455e-06,
+            "wilson95": [
+              7.508441567544376e-07,
+              1.51270118694511e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 18792698,
+        "payloadObjectDays": 29087754,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 951.1278433799744
+    },
+    "MEO-primary-summary.json": {
+      "label": "primary",
+      "regime": "MEO",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 5.541536712185436,
+        "phaseConfinementDaKm": 3.6943578081236237,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "screen": {
+        "hits": 377326,
+        "uniquePairs": 1118,
+        "wallSeconds": 0.6794071197509766,
+        "path": "cpu"
+      },
+      "benchmark": {
+        "epochsBenchmarked": 200,
+        "cpuSeconds": 0.08528518676757812,
+        "cpuPairs": 48780,
+        "gpuSeconds": null,
+        "gpuPairs": null,
+        "gpuError": "ModuleNotFoundError: No module named 'cupy'",
+        "winner": "cpu"
+      },
+      "counts": {
+        "rawEvents": 185,
+        "armG": 5,
+        "armM": 2,
+        "attribution": {
+          "natural": 118,
+          "ambiguous": 57,
+          "approacher": 7,
+          "target": 17
+        },
+        "standingPairs": 186,
+        "distinctApproachersArmM": 1,
+        "distinctTargetsArmM": 2,
+        "distinctApproachersArmG": 4
+      },
+      "distributions": {
+        "dwellDays": {
+          "5": 132.97729258391203,
+          "25": 137.1749690306713,
+          "50": 142.42206458912037,
+          "75": 147.66916014756944,
+          "95": 151.8668365943287
+        },
+        "closestThetaDeg": {
+          "5": 0.020541390316871754,
+          "25": 0.020727975443290164,
+          "50": 0.020961206851313176,
+          "75": 0.021194438259336184,
+          "95": 0.021381023385754594
+        },
+        "medianThetaDeg": {
+          "5": 0.02091662154316507,
+          "25": 0.021060839704315097,
+          "50": 0.021241112405752632,
+          "75": 0.021421385107190164,
+          "95": 0.021565603268340193
+        },
+        "closestGammaDeg": {
+          "5": 1.3182334707051158,
+          "25": 1.5306271146384522,
+          "50": 1.7961191695551229,
+          "75": 2.0616112244717932,
+          "95": 2.2740048684051297
+        },
+        "medianGammaDeg": {
+          "5": 1.9007837408712487,
+          "25": 2.0614231998078907,
+          "50": 2.262222523478693,
+          "75": 2.463021847149495,
+          "95": 2.6236613060861367
+        },
+        "medianAbsDaKm": {
+          "5": 0.007243529452625808,
+          "25": 0.009723441937694588,
+          "50": 0.012823332544030563,
+          "75": 0.01592322315036654,
+          "95": 0.01840313563543532
+        },
+        "campaignDays": {
+          "5": 102.7233320318287,
+          "25": 179.27043168692128,
+          "50": 274.95430625578706,
+          "75": 370.63818082465275,
+          "95": 447.18528047974536
+        },
+        "planeClosureDeg": {
+          "5": 0.002333576821328186,
+          "25": 0.010929380119442356,
+          "50": 0.02167413424208507,
+          "75": 0.03241888836472778,
+          "95": 0.04101469166284195
+        },
+        "apsidalSeparationDeg": {
+          "5": 13.52637129661968,
+          "25": 14.512002581831403,
+          "50": 15.744041688346059,
+          "75": 16.976080794860714,
+          "95": 17.961712080072438
+        }
+      },
+      "leadTime": {
+        "armMEvents": 2,
+        "withInitiatingManoeuvre": 2,
+        "withInitiatingFraction": 1.0,
+        "percentiles": {
+          "5": 27.75151840104167,
+          "25": 41.275978440393516,
+          "50": 58.18155348958334,
+          "75": 75.08712853877316,
+          "95": 88.611588578125
+        },
+        "kaplanMeierMedian": 24.370403391203705,
+        "kaplanMeierP25": 24.370403391203705,
+        "kaplanMeierP75": 91.99270358796296,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": 102.7233320318287,
+          "25": 179.27043168692128,
+          "50": 274.95430625578706,
+          "75": 370.63818082465275,
+          "95": 447.18528047974536
+        },
+        "leadIdeal": {
+          "5": 32.79861637037037,
+          "25": 45.344801620370376,
+          "50": 61.02753318287037,
+          "75": 76.71026474537038,
+          "95": 89.25644999537037
+        }
+      },
+      "control": {
+        "armG": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 872811,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              4.235146096337623e-22,
+              4.401229949611672e-06
+            ]
+          },
+          "payload": {
+            "events": 5,
+            "exposureObjectDays": 2042528,
+            "perObjectDay": 2.447946858011249e-06,
+            "wilson95": [
+              1.0456170167358123e-06,
+              5.731001364306539e-06
+            ]
+          }
+        },
+        "armM": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 872811,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              4.235146096337623e-22,
+              4.401229949611672e-06
+            ]
+          },
+          "payload": {
+            "events": 2,
+            "exposureObjectDays": 2042528,
+            "perObjectDay": 9.791787432044995e-07,
+            "wilson95": [
+              2.6852617058030387e-07,
+              3.570561505572438e-06
+            ]
+          }
+        },
+        "cataloguePassiveExposureObjectDays": 1028983,
+        "armGLeakRatio": null
+      },
+      "planeOnlyVariant": {
+        "note": "ADDED AT IMPLEMENTATION TIME, NOT REGISTERED. The registered t_0 of prereg 4.5 opens the counterfactual window at the last epoch at which EITHER the plane or the phase was far; this variant opens it at the last epoch at which the PLANE alone was far. It is in no registered headline.",
+        "armG": 3,
+        "armM": 0,
+        "distinctApproachersArmM": 0,
+        "distinctTargetsArmM": 0,
+        "withInitiatingManoeuvre": 0,
+        "leadPercentiles": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "kaplanMeierMedian": null,
+        "kaplanMeierP25": null,
+        "kaplanMeierP75": null,
+        "atOrBeyondWall": 0,
+        "leadPlaneMatch": {
+          "5": null,
+          "25": null,
+          "50": null,
+          "75": null,
+          "95": null
+        },
+        "control": {
+          "neverManoeuvred": {
+            "events": 0,
+            "exposureObjectDays": 872811,
+            "perObjectDay": 0.0,
+            "wilson95": [
+              4.235146096337623e-22,
+              4.401229949611672e-06
+            ]
+          },
+          "payload": {
+            "events": 3,
+            "exposureObjectDays": 2042528,
+            "perObjectDay": 1.4687681148067493e-06,
+            "wilson95": [
+              4.995138276339696e-07,
+              4.318750750148643e-06
+            ]
+          }
+        }
+      },
+      "exposure": {
+        "neverManoeuvredObjectDays": 872811,
+        "payloadObjectDays": 2042528,
+        "neverManoeuvredObjects": 3011,
+        "payloadObjects": 18865,
+        "payloadWithPlaneManoeuvre": 1174
+      },
+      "wallSeconds": 10.859527111053467
+    }
+  },
+  "nulls": {
+    "LEO-primary-nulls.json": {
+      "regime": "LEO",
+      "label": "primary",
+      "thresholds": {
+        "thetaPDeg": 0.2,
+        "gammaDeg": 5.0,
+        "dDays": 30.0,
+        "thetaFarDeg": 5.0,
+        "gammaFarDeg": 60.0,
+        "tLookDays": 1095.0,
+        "daWindowKm": 0.23738769013675792,
+        "phaseConfinementDaKm": 0.15825846009117195,
+        "crossTrackKmAtRef": 24.009178653152713,
+        "alongTrackKmAtRef": 599.4691389551492
+      },
+      "analyticJ2Null": {
+        "expectedChanceCoplanarWindows": 1014.2477831910153,
+        "contributingPairs": 156285,
+        "permanentlyCoplanarPairs": 3,
+        "pairsConsidered": 176257
+      },
+      "permutationNull": {
+        "permutations": 1000,
+        "arrivalsPermuted": 120,
+        "arrivalsWithATooThinStratum_labelledGap": 8,
+        "observedArmG": 120,
+        "nullMean": 6.644,
+        "null95": [
+          2.0,
+          11.0
+        ],
+        "permutationsAtOrAboveObserved": 0,
+        "observedInsideNull95": false
+      },
+      "dwellBoundValidation": {
+        "pairsTested": 220,
+        "exceeding": 11,
+        "exceedingFraction": 0.05,
+        "wilson95": [
+          0.02814546401111347,
+          0.08729990056450858
+        ],
+        "pairsWithAZeroRelativeNodalRate": 0,
+        "observedOverBound": {
+          "5": 0.020666941675076038,
+          "25": 0.07609938725462967,
+          "50": 0.20595136292739386,
+          "75": 0.3875684674792561,
+          "95": 0.9732120165828628
+        },
+        "note": "observed dwell measured on the D/2 screening grid is a LOWER bound on the true dwell, so this test can only under-report exceedances"
+      },
+      "timeShuffledCorroboration": {
+        "armGEvents": 120,
+        "realCorroborated": 71,
+        "shuffledMean": 24.135,
+        "shuffled95": [
+          18.0,
+          31.0
+        ],
+        "draws": 200,
+        "realInsideShuffledInterval": false
+      },
+      "precision": {
+        "alerts": 161,
+        "objectsRaisingAnAlert": 87,
+        "armMEvents": 71,
+        "distinctArmMArrivals": 68,
+        "precision": 0.4409937888198758,
+        "wilson95": [
+          0.366561593420552,
+          0.5181761410309053
+        ]
+      },
+      "detectorFalseAlarm": {
+        "population": "catalogue_passive (DEBRIS, ROCKET BODY) -- an UPPER bound",
+        "objects": 9914,
+        "objectYears": 237795.99324353744,
+        "objectsWithAnyFlag": 8664,
+        "objectsWithAnyFlagFraction": 0.8739156748033085,
+        "flags": 152561,
+        "flagsPerObjectYear": 0.6415625339984409
+      },
+      "campaignRate": {
+        "objectYears": 104880.29626774533,
+        "campaigns": 163,
+        "campaignsPerObjectYear": 0.001554152741749345
+      },
+      "gates": {
+        "A": {
+          "meaning": "the instrument is unfit",
+          "barFormula": "sigma_theta(p95) <= theta_p/10 AND da noise <= (Gamma/(k D))/10",
+          "barEvaluated": {
+            "sigmaThetaP95Deg": 0.02,
+            "daNoiseKm": 0.015825846009117194
+          },
+          "measured": {
+            "sigmaThetaP95Deg": 2.9026403922110964,
+            "daNoiseKm": 0.021449228841856606
+          },
+          "fired": true
+        },
+        "B": {
+          "meaning": "the geometry arm leaks",
+          "barFormula": "arm-G never-manoeuvred rate > 0.10 x arm-G payload rate",
+          "barEvaluated": 0.1,
+          "measured": 0.0,
+          "fired": false
+        },
+        "Bprime": {
+          "meaning": "the corroboration is decorative",
+          "measured": {
+            "armGEvents": 120,
+            "realCorroborated": 71,
+            "shuffledMean": 24.135,
+            "shuffled95": [
+              18.0,
+              31.0
+            ],
+            "draws": 200,
+            "realInsideShuffledInterval": false
+          },
+          "fired": false
+        },
+        "C": {
+          "meaning": "the null explains the catalogue",
+          "measured": {
+            "permutations": 1000,
+            "arrivalsPermuted": 120,
+            "arrivalsWithATooThinStratum_labelledGap": 8,
+            "observedArmG": 120,
+            "nullMean": 6.644,
+            "null95": [
+              2.0,
+              11.0
+            ],
+            "permutationsAtOrAboveObserved": 0,
+            "observedInsideNull95": false
+          },
+          "fired": false
+        },
+        "D": {
+          "meaning": "underpowered",
+          "barEvaluated": 20,
+          "measured": 71,
+          "fired": false
+        },
+        "E": {
+          "meaning": "no lead time",
+          "measured": {
+            "medianLeadCausalDays": 195.93002046296297,
+            "nullFraction": 0.0
+          },
+          "fired": false
+        },
+        "F": {
+          "meaning": "the lead time is censored by its own window",
+          "barEvaluated": 0.2,
+          "measured": {
+            "atOrBeyondWall": 1,
+            "fraction": 0.014084507042253521
+          },
+          "fired": false
+        },
+        "G": {
+          "meaning": "the dwell bound is unvalidated",
+          "barEvaluated": 0.05,
+          "measured": {
+            "pairsTested": 220,
+            "exceeding": 11,
+            "exceedingFraction": 0.05,
+            "wilson95": [
+              0.02814546401111347,
+              0.08729990056450858
+            ],
+            "pairsWithAZeroRelativeNodalRate": 0,
+            "observedOverBound": {
+              "5": 0.020666941675076038,
+              "25": 0.07609938725462967,
+              "50": 0.20595136292739386,
+              "75": 0.3875684674792561,
+              "95": 0.9732120165828628
+            },
+            "note": "observed dwell measured on the D/2 screening grid is a LOWER bound on the true dwell, so this test can only under-report exceedances"
+          },
+          "fired": false
+        },
+        "H": {
+          "meaning": "the manoeuvre detector cannot corroborate",
+          "barFormula": "false-alarm rate per object-year >= 0.5 x campaign rate per object-year",
+          "barEvaluated": 0.5,
+          "measured": {
+            "falseAlarm": {
+              "population": "catalogue_passive (DEBRIS, ROCKET BODY) -- an UPPER bound",
+              "objects": 9914,
+              "objectYears": 237795.99324353744,
+              "objectsWithAnyFlag": 8664,
+              "objectsWithAnyFlagFraction": 0.8739156748033085,
+              "flags": 152561,
+              "flagsPerObjectYear": 0.6415625339984409
+            },
+            "campaignRate": {
+              "objectYears": 104880.29626774533,
+              "campaigns": 163,
+              "campaignsPerObjectYear": 0.001554152741749345
+            },
+            "ratio": 412.80532908001175
+          },
+          "fired": true
+        }
+      },
+      "armGLeakRatio": 0.0,
+      "wallSeconds": 412.46239256858826
+    }
+  },
+  "determinism": {
+    "seed": 20260922,
+    "usedFor": [
+      "permutation null",
+      "time shuffle",
+      "any subsampling"
+    ],
+    "otherRandomness": "none"
+  }
+}

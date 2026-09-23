@@ -1,0 +1,201 @@
+{
+  "bestValidationNll": 1.6774691343307495,
+  "checkpointSha256": "27d23e7f6c2a2d132932922eb848bdad24318499f042db1349bc7f865ef52e97",
+  "claimMiB": 2048,
+  "coTenanted": true,
+  "device": {
+    "cudaVisibleDevices": "GPU-e7724e1e-bdd0-0671-dd83-00b1177c7c0e",
+    "device": "cuda",
+    "name": "NVIDIA GeForce RTX 4080",
+    "totalMiB": 16375.5
+  },
+  "durationS": 745.2344706058502,
+  "history": [
+    {
+      "elapsedS": 129.36876440048218,
+      "step": 2000,
+      "train": 2.0465474128723145,
+      "validation": 1.8643342554569244
+    },
+    {
+      "elapsedS": 208.6654064655304,
+      "step": 4000,
+      "train": 1.8806809186935425,
+      "validation": 1.9318899512290955
+    },
+    {
+      "elapsedS": 279.4384272098541,
+      "step": 6000,
+      "train": 1.812111735343933,
+      "validation": 1.7512381076812744
+    },
+    {
+      "elapsedS": 344.7791395187378,
+      "step": 8000,
+      "train": 1.8418843746185303,
+      "validation": 1.7546666413545609
+    },
+    {
+      "elapsedS": 418.38686323165894,
+      "step": 10000,
+      "train": 1.9926338195800781,
+      "validation": 1.907076895236969
+    },
+    {
+      "elapsedS": 476.2158524990082,
+      "step": 12000,
+      "train": 2.2836859226226807,
+      "validation": 1.7324917167425156
+    },
+    {
+      "elapsedS": 541.9581136703491,
+      "step": 14000,
+      "train": 2.136047601699829,
+      "validation": 1.898686245083809
+    },
+    {
+      "elapsedS": 615.498363494873,
+      "step": 16000,
+      "train": 1.955984115600586,
+      "validation": 1.884333848953247
+    },
+    {
+      "elapsedS": 685.1343557834625,
+      "step": 18000,
+      "train": 1.5541948080062866,
+      "validation": 1.6774691343307495
+    },
+    {
+      "elapsedS": 745.2343509197235,
+      "step": 20000,
+      "train": 2.1781206130981445,
+      "validation": 1.7006663084030151
+    }
+  ],
+  "learnedDegreesOfFreedom": {
+    "dARGP_deg": 2.0058553218841553,
+    "dA_km": 2.0071120262145996,
+    "dAlongTrack_km": 2.1868233680725098,
+    "dCrossTrack_km": 2.4481124877929688,
+    "dE": 2.6492228507995605,
+    "dI_deg": 2.006789445877075,
+    "dM_deg": 2.053255558013916,
+    "dRAAN_deg": 2.0040502548217773,
+    "dRadial_km": 2.004214286804199
+  },
+  "measuredStepRate": {
+    "elapsedS": 745.2344706058502,
+    "note": "the run's own measured rate. The registered 30-minute mark is `stepRateMark`; when a run finishes inside 30 minutes that mark is null and this rate -- measured over the whole run rather than its first half hour -- is what the campaign is re-priced from.",
+    "steps": 20000,
+    "stepsPerSecond": 26.83719123156056
+  },
+  "normalisation": {
+    "cadence": {
+      "centre": [
+        -0.5293871760368347,
+        -0.6207419633865356,
+        0.34659096598625183,
+        10.720134735107422,
+        0.4540662169456482
+      ],
+      "scale": [
+        0.8108916903220117,
+        0.6404936884403228,
+        0.2132200908064842,
+        0.6070683242797851,
+        0.3735334197163582
+      ]
+    },
+    "fit": {
+      "centre": [
+        0.0001642400020500645,
+        7.099999947968172e-06,
+        10.720134735107422
+      ],
+      "scale": [
+        0.00027713204249848783,
+        1.4499828040925421e-05,
+        0.6070683242797851
+      ]
+    },
+    "targets": {
+      "centre": [
+        -2.8604754334082827e-05,
+        -1.5767139416311693e-07,
+        -1.7053025658242404e-12,
+        6.122215563664213e-05,
+        0.0009082269971258938,
+        -0.000716197828296572,
+        0.005896750371903181,
+        0.0008749621338211,
+        -0.00645413575693965
+      ],
+      "scale": [
+        0.006341219793508207,
+        7.025908482802378e-06,
+        0.00021830458546548924,
+        0.0006495430844122893,
+        0.1296184180739452,
+        0.13896421850606566,
+        0.07800232427688315,
+        0.7281398362274863,
+        0.06485005640191957
+      ]
+    },
+    "variant": "cadence"
+  },
+  "parameters": 696475,
+  "peakMiB": 798.0,
+  "poolBound": {
+    "bounded": true,
+    "claimMiB": 2048,
+    "fraction": 0.12506488351500716,
+    "totalMiB": 16375.5
+  },
+  "registeredCeilingMiB": 4096,
+  "registration": "docs/t18-preregistration-20260922.md",
+  "registrationCommit": "2618343",
+  "residentsAfter": [
+    {
+      "raw": "463979, [N/A], [Not Found]"
+    },
+    {
+      "raw": "686974, [N/A], [Not Found]"
+    },
+    {
+      "raw": "463979, [N/A], [Not Found]"
+    },
+    {
+      "raw": "686974, [N/A], [Not Found]"
+    }
+  ],
+  "residentsBefore": [
+    {
+      "raw": "682939, [N/A], [Not Found]"
+    },
+    {
+      "raw": "463979, [N/A], [Not Found]"
+    },
+    {
+      "raw": "682939, [N/A], [Not Found]"
+    },
+    {
+      "raw": "463979, [N/A], [Not Found]"
+    }
+  ],
+  "seed": 20260922,
+  "startedUtc": "2026-09-22T20:14:08+00:00",
+  "stepRateMark": null,
+  "steps": 20000,
+  "trainCorpus": {
+    "objects": 1998,
+    "path": "/home/sdegan/t18-work/data/train.npz",
+    "validSteps": 5172912
+  },
+  "validationCorpus": {
+    "objects": 500,
+    "path": "/home/sdegan/t18-work/data/validation.npz",
+    "validSteps": 1448072
+  },
+  "variant": "cadence"
+}

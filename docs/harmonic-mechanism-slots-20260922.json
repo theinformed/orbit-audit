@@ -1,0 +1,844 @@
+{
+  "bestSectorAccuracy": 1.0,
+  "bestSectorPhaseDeg": 73.0,
+  "droppedNoReadableMode": 97,
+  "droppedRelocated": 20,
+  "impliedStationaryLongitudesDeg": [
+    -107.0,
+    -17.0,
+    73.0,
+    163.0
+  ],
+  "invertedFraction": 0.5824175824175825,
+  "label": "POST HOC, NOT REGISTERED -- the per-object second-harmonic sign against the slot longitude",
+  "maxSlotSpreadDeg": 5.0,
+  "objects": 91,
+  "objectsDetail": [
+    {
+      "elementSets": 12357,
+      "interquartileSpreadDeg": 4.179978290922179,
+      "longitudeDeg": 141.93700043896473,
+      "medianEccentricity": 0.0001503,
+      "medianInclinationDeg": 5.929,
+      "mode": 1,
+      "norad": 23185
+    },
+    {
+      "elementSets": 11223,
+      "interquartileSpreadDeg": 0.036999835765669786,
+      "longitudeDeg": 105.00509591287448,
+      "medianEccentricity": 0.0004294,
+      "medianInclinationDeg": 2.5961,
+      "mode": 1,
+      "norad": 26107
+    },
+    {
+      "elementSets": 9223,
+      "interquartileSpreadDeg": 0.030776559687467397,
+      "longitudeDeg": -24.496796806599036,
+      "medianEccentricity": 0.0002709,
+      "medianInclinationDeg": 0.7233,
+      "mode": 1,
+      "norad": 27438
+    },
+    {
+      "elementSets": 8557,
+      "interquartileSpreadDeg": 0.11469227617180877,
+      "longitudeDeg": 136.00200913557785,
+      "medianEccentricity": 0.0004331,
+      "medianInclinationDeg": 5.6446,
+      "mode": 1,
+      "norad": 27461
+    },
+    {
+      "elementSets": 10693,
+      "interquartileSpreadDeg": 0.027153214092550115,
+      "longitudeDeg": 64.1469563219897,
+      "medianEccentricity": 0.000306,
+      "medianInclinationDeg": 0.0383,
+      "mode": -1,
+      "norad": 27513
+    },
+    {
+      "elementSets": 9833,
+      "interquartileSpreadDeg": 0.048022163774021465,
+      "longitudeDeg": -127.0213093503304,
+      "medianEccentricity": 0.0001595,
+      "medianInclinationDeg": 0.0197,
+      "mode": -1,
+      "norad": 27954
+    },
+    {
+      "elementSets": 10592,
+      "interquartileSpreadDeg": 0.048274730637416496,
+      "longitudeDeg": 46.983345602245976,
+      "medianEccentricity": 0.0002962,
+      "medianInclinationDeg": 0.0265,
+      "mode": -1,
+      "norad": 28885
+    },
+    {
+      "elementSets": 10410,
+      "interquartileSpreadDeg": 1.983244475310613,
+      "longitudeDeg": 173.97845509840027,
+      "medianEccentricity": 0.000611,
+      "medianInclinationDeg": 0.0677,
+      "mode": -1,
+      "norad": 28924
+    },
+    {
+      "elementSets": 9166,
+      "interquartileSpreadDeg": 0.03425259735064401,
+      "longitudeDeg": -29.986086807341906,
+      "medianEccentricity": 0.0004612,
+      "medianInclinationDeg": 0.0333,
+      "mode": 1,
+      "norad": 28945
+    },
+    {
+      "elementSets": 9954,
+      "interquartileSpreadDeg": 3.976822657177621,
+      "longitudeDeg": 12.978124389370919,
+      "medianEccentricity": 0.0005153,
+      "medianInclinationDeg": 0.0537,
+      "mode": -1,
+      "norad": 28946
+    },
+    {
+      "elementSets": 8875,
+      "interquartileSpreadDeg": 0.03999230271762144,
+      "longitudeDeg": 19.19043654251766,
+      "medianEccentricity": 0.0003875,
+      "medianInclinationDeg": 0.0542,
+      "mode": -1,
+      "norad": 29055
+    },
+    {
+      "elementSets": 9709,
+      "interquartileSpreadDeg": 0.05389015425339494,
+      "longitudeDeg": 13.002441915958343,
+      "medianEccentricity": 0.0004152,
+      "medianInclinationDeg": 0.0704,
+      "mode": -1,
+      "norad": 29270
+    },
+    {
+      "elementSets": 10058,
+      "interquartileSpreadDeg": 0.03739364659077182,
+      "longitudeDeg": -5.200609769356618,
+      "medianEccentricity": 0.0004313,
+      "medianInclinationDeg": 0.0202,
+      "mode": -1,
+      "norad": 29273
+    },
+    {
+      "elementSets": 10167,
+      "interquartileSpreadDeg": 0.047956056203361186,
+      "longitudeDeg": 26.000632189708995,
+      "medianEccentricity": 0.000473,
+      "medianInclinationDeg": 0.054,
+      "mode": -1,
+      "norad": 29526
+    },
+    {
+      "elementSets": 9493,
+      "interquartileSpreadDeg": 0.06521740097326756,
+      "longitudeDeg": 91.50118148774732,
+      "medianEccentricity": 0.0002768,
+      "medianInclinationDeg": 0.0572,
+      "mode": 1,
+      "norad": 29648
+    },
+    {
+      "elementSets": 9899,
+      "interquartileSpreadDeg": 0.06106467999589427,
+      "longitudeDeg": 95.1959704288945,
+      "medianEccentricity": 0.0003594,
+      "medianInclinationDeg": 0.5143,
+      "mode": 1,
+      "norad": 30794
+    },
+    {
+      "elementSets": 8689,
+      "interquartileSpreadDeg": 0.04207664880084394,
+      "longitudeDeg": 19.19272886786166,
+      "medianEccentricity": 0.0003753,
+      "medianInclinationDeg": 0.0674,
+      "mode": -1,
+      "norad": 31306
+    },
+    {
+      "elementSets": 11216,
+      "interquartileSpreadDeg": 0.05574753676152966,
+      "longitudeDeg": 115.51471453036066,
+      "medianEccentricity": 0.0003429,
+      "medianInclinationDeg": 0.0175,
+      "mode": 1,
+      "norad": 31800
+    },
+    {
+      "elementSets": 10124,
+      "interquartileSpreadDeg": 0.04745850362739645,
+      "longitudeDeg": 25.10053513686472,
+      "medianEccentricity": 0.0003809,
+      "medianInclinationDeg": 0.07305,
+      "mode": -1,
+      "norad": 32294
+    },
+    {
+      "elementSets": 9750,
+      "interquartileSpreadDeg": 0.02679708948110715,
+      "longitudeDeg": 4.80793956977837,
+      "medianEccentricity": 0.0002808,
+      "medianInclinationDeg": 0.0243,
+      "mode": -1,
+      "norad": 32299
+    },
+    {
+      "elementSets": 9666,
+      "interquartileSpreadDeg": 0.026861054664664152,
+      "longitudeDeg": -0.7514064419621604,
+      "medianEccentricity": 0.0002475,
+      "medianInclinationDeg": 0.0247,
+      "mode": -1,
+      "norad": 32487
+    },
+    {
+      "elementSets": 8813,
+      "interquartileSpreadDeg": 0.024829282995369795,
+      "longitudeDeg": -92.8503767175123,
+      "medianEccentricity": 0.000246,
+      "medianInclinationDeg": 4.0805,
+      "mode": 1,
+      "norad": 32763
+    },
+    {
+      "elementSets": 10462,
+      "interquartileSpreadDeg": 0.030840320601214444,
+      "longitudeDeg": 92.2038674394883,
+      "medianEccentricity": 0.0004384,
+      "medianInclinationDeg": 0.015,
+      "mode": 1,
+      "norad": 33051
+    },
+    {
+      "elementSets": 9161,
+      "interquartileSpreadDeg": 0.03778886383918234,
+      "longitudeDeg": -17.804785338156307,
+      "medianEccentricity": 0.0004037,
+      "medianInclinationDeg": 0.0668,
+      "mode": 1,
+      "norad": 33055
+    },
+    {
+      "elementSets": 9704,
+      "interquartileSpreadDeg": 0.03464946630633392,
+      "longitudeDeg": 41.99035131394044,
+      "medianEccentricity": 0.00044435,
+      "medianInclinationDeg": 0.0487,
+      "mode": -1,
+      "norad": 33056
+    },
+    {
+      "elementSets": 9787,
+      "interquartileSpreadDeg": 0.04268173807000153,
+      "longitudeDeg": 25.993269777078922,
+      "medianEccentricity": 0.0004742,
+      "medianInclinationDeg": 0.0649,
+      "mode": -1,
+      "norad": 33154
+    },
+    {
+      "elementSets": 10300,
+      "interquartileSpreadDeg": 0.03449383880945334,
+      "longitudeDeg": 143.9481097622603,
+      "medianEccentricity": 0.0001703,
+      "medianInclinationDeg": 0.0201,
+      "mode": 1,
+      "norad": 33274
+    },
+    {
+      "elementSets": 9542,
+      "interquartileSpreadDeg": 0.03551689997053842,
+      "longitudeDeg": -81.99370493615476,
+      "medianEccentricity": 0.0002295,
+      "medianInclinationDeg": 0.0158,
+      "mode": 1,
+      "norad": 33373
+    },
+    {
+      "elementSets": 8818,
+      "interquartileSpreadDeg": 0.03709592598885081,
+      "longitudeDeg": 19.191862114456285,
+      "medianEccentricity": 0.0003908,
+      "medianInclinationDeg": 0.0288,
+      "mode": -1,
+      "norad": 33436
+    },
+    {
+      "elementSets": 9238,
+      "interquartileSpreadDeg": 0.06619090041395737,
+      "longitudeDeg": 12.98500824127234,
+      "medianEccentricity": 0.0004592,
+      "medianInclinationDeg": 0.0592,
+      "mode": -1,
+      "norad": 33459
+    },
+    {
+      "elementSets": 9454,
+      "interquartileSpreadDeg": 0.03893705196026076,
+      "longitudeDeg": 9.99289711291172,
+      "medianEccentricity": 0.0005301,
+      "medianInclinationDeg": 0.067,
+      "mode": -1,
+      "norad": 34710
+    },
+    {
+      "elementSets": 9276,
+      "interquartileSpreadDeg": 0.047117548826179245,
+      "longitudeDeg": 91.51141627647092,
+      "medianEccentricity": 0.0002518,
+      "medianInclinationDeg": 0.0368,
+      "mode": 1,
+      "norad": 35362
+    },
+    {
+      "elementSets": 10272,
+      "interquartileSpreadDeg": 0.03679103280711615,
+      "longitudeDeg": 100.50372745231311,
+      "medianEccentricity": 0.0001552,
+      "medianInclinationDeg": 0.0233,
+      "mode": 1,
+      "norad": 35696
+    },
+    {
+      "elementSets": 9355,
+      "interquartileSpreadDeg": 0.02840038107262899,
+      "longitudeDeg": 156.00719350821822,
+      "medianEccentricity": 0.0003573,
+      "medianInclinationDeg": 0.0449,
+      "mode": 1,
+      "norad": 35756
+    },
+    {
+      "elementSets": 8901,
+      "interquartileSpreadDeg": 0.04570785485876172,
+      "longitudeDeg": -60.98838711083232,
+      "medianEccentricity": 0.0003735,
+      "medianInclinationDeg": 0.0438,
+      "mode": 1,
+      "norad": 35942
+    },
+    {
+      "elementSets": 9688,
+      "interquartileSpreadDeg": 0.026292493803410366,
+      "longitudeDeg": -0.8458789781730616,
+      "medianEccentricity": 0.0001911,
+      "medianInclinationDeg": 0.019,
+      "mode": -1,
+      "norad": 36033
+    },
+    {
+      "elementSets": 9768,
+      "interquartileSpreadDeg": 0.04406037381047412,
+      "longitudeDeg": 35.90334427589235,
+      "medianEccentricity": 0.0004771,
+      "medianInclinationDeg": 0.0669,
+      "mode": -1,
+      "norad": 36101
+    },
+    {
+      "elementSets": 9331,
+      "interquartileSpreadDeg": 0.038509550349431265,
+      "longitudeDeg": 23.497385398373808,
+      "medianEccentricity": 0.0003191,
+      "medianInclinationDeg": 0.0517,
+      "mode": -1,
+      "norad": 36581
+    },
+    {
+      "elementSets": 9094,
+      "interquartileSpreadDeg": 0.040891112894684056,
+      "longitudeDeg": 25.990680136774472,
+      "medianEccentricity": 0.0003958,
+      "medianInclinationDeg": 0.0272,
+      "mode": -1,
+      "norad": 36592
+    },
+    {
+      "elementSets": 9203,
+      "interquartileSpreadDeg": 0.03736105335426032,
+      "longitudeDeg": 30.48981596693841,
+      "medianEccentricity": 0.0003389,
+      "medianInclinationDeg": 0.0582,
+      "mode": -1,
+      "norad": 36745
+    },
+    {
+      "elementSets": 9073,
+      "interquartileSpreadDeg": 0.03804629921984315,
+      "longitudeDeg": -61.64363405931216,
+      "medianEccentricity": 0.0002096,
+      "medianInclinationDeg": 0.0284,
+      "mode": 1,
+      "norad": 36792
+    },
+    {
+      "elementSets": 9256,
+      "interquartileSpreadDeg": 0.03811938028949413,
+      "longitudeDeg": 2.893238625616192,
+      "medianEccentricity": 0.0005402,
+      "medianInclinationDeg": 0.02075,
+      "mode": -1,
+      "norad": 36831
+    },
+    {
+      "elementSets": 8854,
+      "interquartileSpreadDeg": 0.0321138525944491,
+      "longitudeDeg": -29.992730030542646,
+      "medianEccentricity": 0.0004521,
+      "medianInclinationDeg": 0.0402,
+      "mode": 1,
+      "norad": 37264
+    },
+    {
+      "elementSets": 9697,
+      "interquartileSpreadDeg": 0.04572316887083616,
+      "longitudeDeg": 110.50923987986823,
+      "medianEccentricity": 0.0003738,
+      "medianInclinationDeg": 0.0521,
+      "mode": 1,
+      "norad": 37677
+    },
+    {
+      "elementSets": 8637,
+      "interquartileSpreadDeg": 0.04077197699473345,
+      "longitudeDeg": 19.19768873259204,
+      "medianEccentricity": 0.0003845,
+      "medianInclinationDeg": 0.0544,
+      "mode": -1,
+      "norad": 37775
+    },
+    {
+      "elementSets": 9017,
+      "interquartileSpreadDeg": 0.03202260676391688,
+      "longitudeDeg": 19.99456478153911,
+      "medianEccentricity": 0.0003399,
+      "medianInclinationDeg": 0.0605,
+      "mode": -1,
+      "norad": 37810
+    },
+    {
+      "elementSets": 8723,
+      "interquartileSpreadDeg": 0.03204255143698731,
+      "longitudeDeg": 15.99565306417719,
+      "medianEccentricity": 0.0004952,
+      "medianInclinationDeg": 0.0674,
+      "mode": -1,
+      "norad": 37836
+    },
+    {
+      "elementSets": 8879,
+      "interquartileSpreadDeg": 0.03572388205492416,
+      "longitudeDeg": 105.50166376991717,
+      "medianEccentricity": 0.0001513,
+      "medianInclinationDeg": 0.0239,
+      "mode": 1,
+      "norad": 37933
+    },
+    {
+      "elementSets": 9211,
+      "interquartileSpreadDeg": 0.03356703660010396,
+      "longitudeDeg": 42.49363338638841,
+      "medianEccentricity": 0.0002241,
+      "medianInclinationDeg": 0.0343,
+      "mode": -1,
+      "norad": 38014
+    },
+    {
+      "elementSets": 9469,
+      "interquartileSpreadDeg": 0.03535344246330396,
+      "longitudeDeg": 98.25381625284399,
+      "medianEccentricity": 0.0002491,
+      "medianInclinationDeg": 0.0435,
+      "mode": 1,
+      "norad": 38352
+    },
+    {
+      "elementSets": 8574,
+      "interquartileSpreadDeg": 0.040882863278255854,
+      "longitudeDeg": 28.193898847945434,
+      "medianEccentricity": 0.0003343,
+      "medianInclinationDeg": 0.06915,
+      "mode": -1,
+      "norad": 38778
+    },
+    {
+      "elementSets": 8236,
+      "interquartileSpreadDeg": 0.03318859944012331,
+      "longitudeDeg": 21.592895980975214,
+      "medianEccentricity": 0.0002551,
+      "medianInclinationDeg": 0.0679,
+      "mode": -1,
+      "norad": 38992
+    },
+    {
+      "elementSets": 9118,
+      "interquartileSpreadDeg": 0.03940785591382223,
+      "longitudeDeg": 52.74840566891652,
+      "medianEccentricity": 0.0003846,
+      "medianInclinationDeg": 0.0722,
+      "mode": -1,
+      "norad": 39034
+    },
+    {
+      "elementSets": 8251,
+      "interquartileSpreadDeg": 0.025036788329856563,
+      "longitudeDeg": -114.80131845306379,
+      "medianEccentricity": 0.000211,
+      "medianInclinationDeg": 0.0178,
+      "mode": -1,
+      "norad": 39035
+    },
+    {
+      "elementSets": 8125,
+      "interquartileSpreadDeg": 0.027222604546750517,
+      "longitudeDeg": -60.9907712794535,
+      "medianEccentricity": 0.0003714,
+      "medianInclinationDeg": 0.0349,
+      "mode": 1,
+      "norad": 39078
+    },
+    {
+      "elementSets": 9196,
+      "interquartileSpreadDeg": 0.029708419787219498,
+      "longitudeDeg": 45.99202011765729,
+      "medianEccentricity": 0.0001843,
+      "medianInclinationDeg": 0.0189,
+      "mode": -1,
+      "norad": 39079
+    },
+    {
+      "elementSets": 7575,
+      "interquartileSpreadDeg": 0.10573818295443971,
+      "longitudeDeg": 97.97223738525736,
+      "medianEccentricity": 0.0002057,
+      "medianInclinationDeg": 0.0248,
+      "mode": 1,
+      "norad": 39157
+    },
+    {
+      "elementSets": 8139,
+      "interquartileSpreadDeg": 0.02946980719491421,
+      "longitudeDeg": 6.99593139255569,
+      "medianEccentricity": 0.000411,
+      "medianInclinationDeg": 0.0658,
+      "mode": -1,
+      "norad": 39163
+    },
+    {
+      "elementSets": 8749,
+      "interquartileSpreadDeg": 0.03140385625738418,
+      "longitudeDeg": 25.4923361395106,
+      "medianEccentricity": 0.0001936,
+      "medianInclinationDeg": 0.0511,
+      "mode": -1,
+      "norad": 39233
+    },
+    {
+      "elementSets": 8296,
+      "interquartileSpreadDeg": 0.04223326330313171,
+      "longitudeDeg": 28.488380698082608,
+      "medianEccentricity": 0.0002434,
+      "medianInclinationDeg": 0.0627,
+      "mode": -1,
+      "norad": 39285
+    },
+    {
+      "elementSets": 8522,
+      "interquartileSpreadDeg": 0.0355875961482468,
+      "longitudeDeg": 41.99544384840425,
+      "medianEccentricity": 0.0003711,
+      "medianInclinationDeg": 0.0555,
+      "mode": -1,
+      "norad": 39522
+    },
+    {
+      "elementSets": 7843,
+      "interquartileSpreadDeg": 0.055345356323215356,
+      "longitudeDeg": -73.98167699338644,
+      "medianEccentricity": 0.0003436,
+      "medianInclinationDeg": 0.0609,
+      "mode": 1,
+      "norad": 39616
+    },
+    {
+      "elementSets": 8066,
+      "interquartileSpreadDeg": 0.03033406888655321,
+      "longitudeDeg": 3.095563573083325,
+      "medianEccentricity": 0.0004083,
+      "medianInclinationDeg": 0.0651,
+      "mode": -1,
+      "norad": 39773
+    },
+    {
+      "elementSets": 8159,
+      "interquartileSpreadDeg": 0.032327318251702764,
+      "longitudeDeg": 91.49873502293894,
+      "medianEccentricity": 0.0002064,
+      "medianInclinationDeg": 0.0365,
+      "mode": 1,
+      "norad": 40147
+    },
+    {
+      "elementSets": 8145,
+      "interquartileSpreadDeg": 0.028948749846961164,
+      "longitudeDeg": 140.65887173258216,
+      "medianEccentricity": 9.57e-05,
+      "medianInclinationDeg": 0.0226,
+      "mode": 1,
+      "norad": 40267
+    },
+    {
+      "elementSets": 8420,
+      "interquartileSpreadDeg": 0.03890281854869215,
+      "longitudeDeg": 28.19555479583292,
+      "medianEccentricity": 0.00032445,
+      "medianInclinationDeg": 0.0411,
+      "mode": -1,
+      "norad": 40364
+    },
+    {
+      "elementSets": 7457,
+      "interquartileSpreadDeg": 0.035819955223075794,
+      "longitudeDeg": 39.99605630925373,
+      "medianEccentricity": 0.0002805,
+      "medianInclinationDeg": 0.0143,
+      "mode": -1,
+      "norad": 40505
+    },
+    {
+      "elementSets": 8443,
+      "interquartileSpreadDeg": 0.03025509788767522,
+      "longitudeDeg": 52.01768403726595,
+      "medianEccentricity": 0.0002662,
+      "medianInclinationDeg": 0.0177,
+      "mode": -1,
+      "norad": 40617
+    },
+    {
+      "elementSets": 7750,
+      "interquartileSpreadDeg": 0.029112817454915785,
+      "longitudeDeg": 142.00820485494546,
+      "medianEccentricity": 0.000185,
+      "medianInclinationDeg": 0.0296,
+      "mode": 1,
+      "norad": 40982
+    },
+    {
+      "elementSets": 8373,
+      "interquartileSpreadDeg": 0.033431809464104845,
+      "longitudeDeg": 49.98967219119152,
+      "medianEccentricity": 0.0002166,
+      "medianInclinationDeg": 0.0192,
+      "mode": -1,
+      "norad": 40984
+    },
+    {
+      "elementSets": 7615,
+      "interquartileSpreadDeg": 0.036827140858036955,
+      "longitudeDeg": 25.99397295450865,
+      "medianEccentricity": 0.0004614,
+      "medianInclinationDeg": 0.0463,
+      "mode": -1,
+      "norad": 41029
+    },
+    {
+      "elementSets": 7574,
+      "interquartileSpreadDeg": 0.034980571445842656,
+      "longitudeDeg": 36.09578597688417,
+      "medianEccentricity": 0.0002589,
+      "medianInclinationDeg": 0.0158,
+      "mode": -1,
+      "norad": 41191
+    },
+    {
+      "elementSets": 7634,
+      "interquartileSpreadDeg": 0.04424152381120905,
+      "longitudeDeg": 105.70830263079966,
+      "medianEccentricity": 0.00031185,
+      "medianInclinationDeg": 0.0642,
+      "mode": 1,
+      "norad": 41194
+    },
+    {
+      "elementSets": 7459,
+      "interquartileSpreadDeg": 0.03222761340734337,
+      "longitudeDeg": 8.994500595640375,
+      "medianEccentricity": 0.000394,
+      "medianInclinationDeg": 0.0575,
+      "mode": -1,
+      "norad": 41310
+    },
+    {
+      "elementSets": 7326,
+      "interquartileSpreadDeg": 0.028619573204011317,
+      "longitudeDeg": -65.19588484579663,
+      "medianEccentricity": 0.0002025,
+      "medianInclinationDeg": 0.0536,
+      "mode": 1,
+      "norad": 41382
+    },
+    {
+      "elementSets": 7490,
+      "interquartileSpreadDeg": 0.03550709971621302,
+      "longitudeDeg": 59.99737988261211,
+      "medianEccentricity": 0.0002016,
+      "medianInclinationDeg": 0.0208,
+      "mode": -1,
+      "norad": 41748
+    },
+    {
+      "elementSets": 6132,
+      "interquartileSpreadDeg": 0.03856869385599282,
+      "longitudeDeg": 110.51809217579734,
+      "medianEccentricity": 0.00057165,
+      "medianInclinationDeg": 0.0596,
+      "mode": 1,
+      "norad": 42662
+    },
+    {
+      "elementSets": 6542,
+      "interquartileSpreadDeg": 0.031231656159150134,
+      "longitudeDeg": 10.26003979965708,
+      "medianEccentricity": 0.0002355,
+      "medianInclinationDeg": 4.18385,
+      "mode": -1,
+      "norad": 42749
+    },
+    {
+      "elementSets": 6946,
+      "interquartileSpreadDeg": 0.03292875246557969,
+      "longitudeDeg": 1.8984734126217973,
+      "medianEccentricity": 0.0002654,
+      "medianInclinationDeg": 0.0254,
+      "mode": -1,
+      "norad": 42801
+    },
+    {
+      "elementSets": 6843,
+      "interquartileSpreadDeg": 0.03416311164986041,
+      "longitudeDeg": 38.99671777570023,
+      "medianEccentricity": 0.0003395,
+      "medianInclinationDeg": 0.0618,
+      "mode": -1,
+      "norad": 42814
+    },
+    {
+      "elementSets": 6712,
+      "interquartileSpreadDeg": 0.025319471470254484,
+      "longitudeDeg": -34.493729169415644,
+      "medianEccentricity": 0.000189,
+      "medianInclinationDeg": 0.0187,
+      "mode": 1,
+      "norad": 42818
+    },
+    {
+      "elementSets": 6372,
+      "interquartileSpreadDeg": 0.031652830613012384,
+      "longitudeDeg": -24.792975005431458,
+      "medianEccentricity": 0.00023785,
+      "medianInclinationDeg": 0.0386,
+      "mode": 1,
+      "norad": 43039
+    },
+    {
+      "elementSets": 4625,
+      "interquartileSpreadDeg": 0.0331642914228496,
+      "longitudeDeg": 134.00889313466917,
+      "medianEccentricity": 0.0002001,
+      "medianInclinationDeg": 0.0334,
+      "mode": 1,
+      "norad": 43450
+    },
+    {
+      "elementSets": 5352,
+      "interquartileSpreadDeg": 0.03604426390937476,
+      "longitudeDeg": 130.00883857029896,
+      "medianEccentricity": 0.000149,
+      "medianInclinationDeg": 0.0372,
+      "mode": 1,
+      "norad": 43920
+    },
+    {
+      "elementSets": 5229,
+      "interquartileSpreadDeg": 0.4203917721204107,
+      "longitudeDeg": 130.06386112781843,
+      "medianEccentricity": 0.0003723,
+      "medianInclinationDeg": 0.0527,
+      "mode": 1,
+      "norad": 44067
+    },
+    {
+      "elementSets": 4928,
+      "interquartileSpreadDeg": 0.04196765693166071,
+      "longitudeDeg": 31.18860582516305,
+      "medianEccentricity": 7.425e-05,
+      "medianInclinationDeg": 0.06525,
+      "mode": -1,
+      "norad": 44475
+    },
+    {
+      "elementSets": 4950,
+      "interquartileSpreadDeg": 0.028515581700574444,
+      "longitudeDeg": -5.000111463005453,
+      "medianEccentricity": 0.0003306,
+      "medianInclinationDeg": 0.0686,
+      "mode": -1,
+      "norad": 44624
+    },
+    {
+      "elementSets": 5265,
+      "interquartileSpreadDeg": 0.03569063609677414,
+      "longitudeDeg": 35.49877378302514,
+      "medianEccentricity": 0.0002104,
+      "medianInclinationDeg": 0.0551,
+      "mode": -1,
+      "norad": 44800
+    },
+    {
+      "elementSets": 5052,
+      "interquartileSpreadDeg": 0.03675753129178361,
+      "longitudeDeg": 11.00030336611161,
+      "medianEccentricity": 0.000213,
+      "medianInclinationDeg": 0.0438,
+      "mode": -1,
+      "norad": 44801
+    },
+    {
+      "elementSets": 3452,
+      "interquartileSpreadDeg": 0.030273366821376158,
+      "longitudeDeg": 101.40852808994839,
+      "medianEccentricity": 0.00027675,
+      "medianInclinationDeg": 0.0234,
+      "mode": 1,
+      "norad": 49125
+    },
+    {
+      "elementSets": 2565,
+      "interquartileSpreadDeg": 0.03950314268689681,
+      "longitudeDeg": 125.06432345124631,
+      "medianEccentricity": 0.0001856,
+      "medianInclinationDeg": 0.0333,
+      "mode": 1,
+      "norad": 52255
+    }
+  ],
+  "permutationNull": {
+    "exceedance": 0.0,
+    "max": 0.7362637362637363,
+    "median": 0.5934065934065934,
+    "p95": 0.6483516483516484,
+    "permutations": 2000
+  }
+}

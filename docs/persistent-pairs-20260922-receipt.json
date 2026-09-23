@@ -1,0 +1,1125 @@
+{
+ "schema": 1,
+ "measuredAt": "2026-09-22T17:49:12.909839+00:00",
+ "registration": "docs/persistent-pairs-preregistration-20260922.md",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "archive": {
+  "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+  "bytes": 13892550656,
+  "mtimeMs": 1790097768016,
+  "monthRollupSpan": [
+   "1959-01",
+   "2026-09",
+   183391698
+  ]
+ },
+ "extract": {
+  "rowsScanned": 217007154,
+  "rowsKept": 11626494,
+  "objectsKept": 1768,
+  "wallSeconds": 293.49314546585083
+ },
+ "derivations": {
+  "longitudeAccelerationDegPerDay2": 0.0017006,
+  "eastWestPeriodDays": 14.0,
+  "deadbandHalfWidthDeg": 0.02083235,
+  "xPairPrimaryDeg": 0.0416647,
+  "xPairPrimaryKm": 30.661202163585,
+  "xPairTightDeg": 0.02083235,
+  "xPairLooseDeg": 0.093745575,
+  "xPairT8aDeg": 0.1,
+  "dPairPrimaryDays": 56.0,
+  "phiLockRad": 0.3882110921935959,
+  "phiLockDeg": 22.242857142857144,
+  "wPrimaryDays": 162.7,
+  "kmPerDeg": 735.9035865753264,
+  "screenRadiusDeg": 0.15000000000000002,
+  "screenMinDays": 33,
+  "arrivalResolutionDays": 1.73
+ },
+ "arms": {
+  "primary": {
+   "xDeg": 0.0416647,
+   "dDays": 56.0,
+   "episodes": 1317,
+   "distinctPairs": 239,
+   "headlineEpisodes": 1317,
+   "headlinePairs": 239,
+   "dwellDays": {
+    "p5": 58.77070646990741,
+    "p25": 68.86811241898148,
+    "p50": 90.2923578125,
+    "p75": 138.21040489583334,
+    "p95": 304.0152358726852,
+    "min": 56.01462113425926,
+    "max": 1809.841965173611,
+    "mean": 123.62392187076408,
+    "n": 1317
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.005480709627269676,
+    "p25": 0.00863362385040034,
+    "p50": 0.011349801185417618,
+    "p75": 0.014762063385433066,
+    "p95": 0.020615427071470554,
+    "min": 1.1368683772161603e-13,
+    "max": 0.03024486671714044,
+    "mean": 0.011937703065215721,
+    "n": 1317
+   },
+   "distanceToStableDeg": {
+    "p5": 1.0824317752014907,
+    "p25": 2.6074360527161673,
+    "p50": 19.902116790920644,
+    "p75": 55.89876491958168,
+    "p95": 80.89185458876265,
+    "min": 0.14966781075085578,
+    "max": 89.69291136806692,
+    "mean": 30.140381919154287,
+    "n": 1317
+   },
+   "withinT8aLibrationFlag": 376,
+   "rejections": {
+    "dwellTooShort": 33228,
+    "occupancy": 2
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "x-tight": {
+   "xDeg": 0.02083235,
+   "dDays": 56.0,
+   "episodes": 289,
+   "distinctPairs": 73,
+   "headlineEpisodes": 289,
+   "headlinePairs": 73,
+   "dwellDays": {
+    "p5": 57.57482559722222,
+    "p25": 64.01511045138889,
+    "p50": 74.79523175925925,
+    "p75": 92.74621430555555,
+    "p95": 176.7987737916666,
+    "min": 56.073483530092595,
+    "max": 505.13242774305553,
+    "mean": 89.1181448198209,
+    "n": 289
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.0004113559590109617,
+    "p25": 0.004537374525739324,
+    "p50": 0.005890101963004213,
+    "p75": 0.007262235645256965,
+    "p95": 0.009911096008727322,
+    "min": 1.1368683772161603e-13,
+    "max": 0.015388106834109294,
+    "mean": 0.005849763762920913,
+    "n": 289
+   },
+   "distanceToStableDeg": {
+    "p5": 1.080300424496994,
+    "p25": 2.598730778783363,
+    "p50": 34.70366492744557,
+    "p75": 62.093883610448216,
+    "p95": 76.09874976667224,
+    "min": 0.21411445158369702,
+    "max": 82.08859604676206,
+    "mean": 31.652471355938616,
+    "n": 289
+   },
+   "withinT8aLibrationFlag": 88,
+   "rejections": {
+    "dwellTooShort": 47456
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "x-loose": {
+   "xDeg": 0.093745575,
+   "dDays": 56.0,
+   "episodes": 2006,
+   "distinctPairs": 496,
+   "headlineEpisodes": 2006,
+   "headlinePairs": 496,
+   "dwellDays": {
+    "p5": 58.76402844328704,
+    "p25": 72.11714044560185,
+    "p50": 104.88994847222222,
+    "p75": 198.6507500491898,
+    "p95": 663.9123174479166,
+    "min": 56.01463894675926,
+    "max": 2874.629165613426,
+    "mean": 206.52618912366486,
+    "n": 2006
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.0074107835213297335,
+    "p25": 0.014433871289487143,
+    "p50": 0.022694415411422142,
+    "p75": 0.03937070543458532,
+    "p95": 0.06779133597430587,
+    "min": 2.2737367544323206e-13,
+    "max": 0.08478345020614597,
+    "mean": 0.02829163075608992,
+    "n": 2006
+   },
+   "distanceToStableDeg": {
+    "p5": 0.3438061577410423,
+    "p25": 2.612208780796827,
+    "p50": 16.401399508192696,
+    "p75": 49.11709791783218,
+    "p95": 82.09428049881308,
+    "min": 0.09137322565669592,
+    "max": 89.69022052396474,
+    "mean": 27.697564272061086,
+    "n": 2006
+   },
+   "withinT8aLibrationFlag": 575,
+   "rejections": {
+    "dwellTooShort": 40007,
+    "occupancy": 12
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "x-t8a": {
+   "xDeg": 0.1,
+   "dDays": 56.0,
+   "episodes": 2103,
+   "distinctPairs": 535,
+   "headlineEpisodes": 2103,
+   "headlinePairs": 535,
+   "dwellDays": {
+    "p5": 58.861566072916666,
+    "p25": 72.69193973958333,
+    "p50": 104.71337427083333,
+    "p75": 196.76995857060183,
+    "p95": 665.4540497916653,
+    "min": 56.019903275462966,
+    "max": 3216.919325335648,
+    "mean": 208.12739479898096,
+    "n": 2103
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.0075980699636687635,
+    "p25": 0.015056865179701617,
+    "p50": 0.024638028648695354,
+    "p75": 0.04388560881312742,
+    "p95": 0.07528535231427608,
+    "min": 2.2737367544323206e-13,
+    "max": 0.09221724329793801,
+    "mean": 0.03112951408519944,
+    "n": 2103
+   },
+   "distanceToStableDeg": {
+    "p5": 0.33304512618285004,
+    "p25": 2.6064142121744567,
+    "p50": 15.966681966876166,
+    "p75": 49.10749045190613,
+    "p95": 82.09754864377896,
+    "min": 0.07227710246948504,
+    "max": 89.69027267720435,
+    "mean": 26.966749362083515,
+    "n": 2103
+   },
+   "withinT8aLibrationFlag": 618,
+   "rejections": {
+    "dwellTooShort": 42728,
+    "occupancy": 13
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "d-short": {
+   "xDeg": 0.0416647,
+   "dDays": 42.0,
+   "episodes": 1940,
+   "distinctPairs": 302,
+   "headlineEpisodes": 1940,
+   "headlinePairs": 302,
+   "dwellDays": {
+    "p5": 43.99933584027778,
+    "p25": 52.58657214699074,
+    "p50": 69.97692081018519,
+    "p75": 109.71588423032408,
+    "p95": 247.9771705167824,
+    "min": 42.00246063657407,
+    "max": 1809.841965173611,
+    "mean": 99.52812867030593,
+    "n": 1940
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.005488686009306321,
+    "p25": 0.008968741228319033,
+    "p50": 0.011970346494763362,
+    "p75": 0.015703460464624897,
+    "p95": 0.021926850817161635,
+    "min": 1.1368683772161603e-13,
+    "max": 0.031742191848650236,
+    "mean": 0.012606667486069255,
+    "n": 1940
+   },
+   "distanceToStableDeg": {
+    "p5": 1.0371717326426373,
+    "p25": 2.613045385808121,
+    "p50": 19.900107979449075,
+    "p75": 55.90251549042394,
+    "p95": 80.90739984244942,
+    "min": 0.14966781075085578,
+    "max": 89.69291136806692,
+    "mean": 30.33244495716259,
+    "n": 1940
+   },
+   "withinT8aLibrationFlag": 546,
+   "rejections": {
+    "dwellTooShort": 32603,
+    "occupancy": 4
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "d-long": {
+   "xDeg": 0.0416647,
+   "dDays": 112.0,
+   "episodes": 461,
+   "distinctPairs": 121,
+   "headlineEpisodes": 461,
+   "headlinePairs": 121,
+   "dwellDays": {
+    "p5": 115.43113739583333,
+    "p25": 134.35484609953704,
+    "p50": 166.71965402777778,
+    "p75": 231.41229903935186,
+    "p95": 448.7766461111111,
+    "min": 112.18128118055556,
+    "max": 1809.841965173611,
+    "mean": 209.15147169099484,
+    "n": 461
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.004533233920696489,
+    "p25": 0.007687392904927037,
+    "p50": 0.010000084037741885,
+    "p75": 0.012400000000525324,
+    "p95": 0.017488734769386838,
+    "min": 3.410605131648481e-13,
+    "max": 0.025689797475735077,
+    "mean": 0.010258342920388769,
+    "n": 461
+   },
+   "distanceToStableDeg": {
+    "p5": 1.0883358446207012,
+    "p25": 2.5973899879090254,
+    "p50": 27.440765033391756,
+    "p75": 55.90886674186109,
+    "p95": 76.08404218653308,
+    "min": 0.14966781075085578,
+    "max": 82.10211834279653,
+    "mean": 31.07230853749634,
+    "n": 461
+   },
+   "withinT8aLibrationFlag": 136,
+   "rejections": {
+    "dwellTooShort": 34086
+   },
+   "wallSeconds": 29.548181772232056
+  },
+  "d-very-long": {
+   "xDeg": 0.0416647,
+   "dDays": 168.0,
+   "episodes": 223,
+   "distinctPairs": 83,
+   "headlineEpisodes": 223,
+   "headlinePairs": 83,
+   "dwellDays": {
+    "p5": 171.63092542824074,
+    "p25": 192.42722442129627,
+    "p50": 236.93922270833335,
+    "p75": 327.14839091435186,
+    "p95": 554.1270439942128,
+    "min": 168.80842572916666,
+    "max": 1809.841965173611,
+    "mean": 287.3494646208063,
+    "n": 223
+   },
+   "medianAbsSepDeg": {
+    "p5": 0.004367068558596543,
+    "p25": 0.007246327817149734,
+    "p50": 0.00960916744276119,
+    "p75": 0.011416553387697093,
+    "p95": 0.01621921696816173,
+    "min": 3.410605131648481e-13,
+    "max": 0.02070657168036405,
+    "mean": 0.00955843241451609,
+    "n": 223
+   },
+   "distanceToStableDeg": {
+    "p5": 1.0902530137330273,
+    "p25": 2.6018575369894137,
+    "p50": 34.69935045948759,
+    "p75": 55.909743650263266,
+    "p95": 76.08402374597267,
+    "min": 0.22382991516653306,
+    "max": 80.91006860836035,
+    "mean": 31.561876541592433,
+    "n": 223
+   },
+   "withinT8aLibrationFlag": 63,
+   "rejections": {
+    "dwellTooShort": 34324
+   },
+   "wallSeconds": 29.548181772232056
+  }
+ },
+ "gates": {
+  "B": {
+   "registeredMeaning": "the pair detector leaks",
+   "bar": 0.1,
+   "payloadObjects": 1306,
+   "neverObjects": 9,
+   "payloadPairDays": 712483466,
+   "neverPairDays": 0,
+   "payloadEpisodes": 1317,
+   "neverEpisodes": 0,
+   "payloadRatePerPairDay": 1.8484639473724994e-06,
+   "neverRatePerPairDay": NaN,
+   "ratio": NaN,
+   "fired": false
+  },
+  "A": {
+   "registeredMeaning": "the cadence clause is unmeasurable",
+   "bar": 0.3882110921935959,
+   "medianSigmaPhaseRad": 0.3300610397726672,
+   "fired": false
+  },
+  "C": {
+   "registeredMeaning": "the null explains the cadence",
+   "observedRbar": 0.4324017139886932,
+   "controlBootstrap95": [
+    0.007989349177128725,
+    0.1068687388914498
+   ],
+   "controlOwnRbar": 0.027884718102089468,
+   "controlUniformityBar": 0.011019851105602038,
+   "firedInsideNull": false,
+   "firedControlNotUniform": true
+  },
+  "E": {
+   "registeredMeaning": "arrival order unresolvable",
+   "bar": 0.5,
+   "fraction": 0.08200455580865604,
+   "fired": false
+  },
+  "D": {
+   "registeredMeaning": "underpowered",
+   "pairs": 1317,
+   "barPairs": 20,
+   "exposedEvents": 12,
+   "barEvents": 10,
+   "fired": false
+  }
+ },
+ "screen": {
+  "radiusDeg": 0.15000000000000002,
+  "minDays": 33,
+  "pairsWithAnyProximity": 3574,
+  "candidatePairs": 2015,
+  "stationedObjectDays": 3733646,
+  "wallSeconds": 3.155963897705078
+ },
+ "population": {
+  "objects": 1652,
+  "payload": 1308,
+  "cataloguePassive": 307,
+  "classUnknown": 37,
+  "neverManoeuvred": 9,
+  "payloadInNeverManoeuvred": 2,
+  "cataloguePassiveNotNeverManoeuvred": 300,
+  "stationSegments": 24698,
+  "sigmaNDegPerDay": 0.0006038533519066339,
+  "sigmaNPairs": 3740056,
+  "sigmaNPublishedT8a": 0.0006038533519066339
+ },
+ "cadence": {
+  "episodes": 1317,
+  "cadenceTestable": 449,
+  "medianSigmaPhaseRad": 0.3300610397726672,
+  "observed": {
+   "rayleighRbar": 0.4324017139886932,
+   "rayleighP": 0.0,
+   "n": 449,
+   "categories": {
+    "locked": {
+     "count": 164,
+     "fraction": 0.36525612472160357,
+     "wilson95": [
+      0.3220365351388662,
+      0.4107617817044889
+     ]
+    },
+    "anti-locked": {
+     "count": 34,
+     "fraction": 0.0757238307349666,
+     "wilson95": [
+      0.05469214711580717,
+      0.10395379269674052
+     ]
+    },
+    "near-locked": {
+     "count": 128,
+     "fraction": 0.28507795100222716,
+     "wilson95": [
+      0.24528102467932097,
+      0.32852124929396437
+     ]
+    },
+    "unlocked": {
+     "count": 123,
+     "fraction": 0.2739420935412027,
+     "wilson95": [
+      0.23473882957851944,
+      0.3169806606628119
+     ]
+    }
+   },
+   "matchedCadence": 198,
+   "matchedFraction": 0.44097995545657015,
+   "matchedWilson95": [
+    0.39574820736734395,
+    0.48721303885329925
+   ]
+  },
+  "control": {
+   "rayleighRbar": 0.027884718102089468,
+   "rayleighP": 4.656919955977472e-09,
+   "n": 24669,
+   "categories": {
+    "locked": {
+     "count": 3554,
+     "fraction": 0.1440674530787628,
+     "wilson95": [
+      0.13974083422332043,
+      0.14850490636924377
+     ]
+    },
+    "anti-locked": {
+     "count": 3275,
+     "fraction": 0.13275771210831408,
+     "wilson95": [
+      0.12858062349587493,
+      0.1370491569150738
+     ]
+    },
+    "near-locked": {
+     "count": 6332,
+     "fraction": 0.256678422311403,
+     "wilson95": [
+      0.2512658603775042,
+      0.26216675256103755
+     ]
+    },
+    "unlocked": {
+     "count": 11508,
+     "fraction": 0.46649641250152013,
+     "wilson95": [
+      0.4602767416767584,
+      0.4727265160648
+     ]
+    }
+   },
+   "matchedCadence": 6829,
+   "matchedFraction": 0.2768251651870769,
+   "matchedWilson95": [
+    0.2712768646707194,
+    0.2824429604909869
+   ],
+   "rbarUniformityBar": 0.011019851105602038
+  },
+  "controlRbarBootstrap95": [
+   0.007989349177128725,
+   0.1068687388914498
+  ],
+  "freePeriodVariant": {
+   "testable": 487,
+   "rayleighRbar": 0.2033312363641023,
+   "rayleighP": 1.4643007770798067e-09,
+   "matchedCadence": 155,
+   "matchedFraction": 0.3182751540041068
+  },
+  "phaseStability": {
+   "episodesTested": 461,
+   "circularSd": {
+    "p5": 0.04770562908861293,
+    "p25": 0.34113432039379415,
+    "p50": 0.8047320203081455,
+    "p75": 1.3101261243989022,
+    "p95": 1.8391478978166194,
+    "min": 0.00043886143139604315,
+    "max": 3.031029944979506,
+    "mean": 0.8630942275824842,
+    "n": 461
+   }
+  },
+  "gateC": {
+   "registeredMeaning": "the null explains the cadence",
+   "observedRbar": 0.4324017139886932,
+   "controlBootstrap95": [
+    0.007989349177128725,
+    0.1068687388914498
+   ],
+   "controlOwnRbar": 0.027884718102089468,
+   "controlUniformityBar": 0.011019851105602038,
+   "firedInsideNull": false,
+   "firedControlNotUniform": true
+  },
+  "wallSeconds": 46.20297956466675
+ },
+ "arrivalOrder": {
+  "episodes": 1317,
+  "resolved": 1209,
+  "unresolved": 81,
+  "censored": 27,
+  "resolutionLimitDays": 1.73,
+  "arrivalGapDays": {
+   "p5": 22.0,
+   "p25": 152.0,
+   "p50": 579.0,
+   "p75": 1561.0,
+   "p95": 3244.0,
+   "min": 2.0,
+   "max": 4468.0,
+   "mean": 958.8502894954507,
+   "n": 1209
+  },
+  "bandMinusStationDays": {
+   "p5": 0.0,
+   "p25": 261.0,
+   "p50": 959.0,
+   "p75": 2060.0,
+   "p95": 3445.199999999998,
+   "min": 0.0,
+   "max": 4468.0,
+   "mean": 1261.234904880066,
+   "n": 1209
+  }
+ },
+ "crowding": {
+  "deciles": [
+   3.0,
+   6.0,
+   8.0,
+   10.0,
+   12.0,
+   14.0,
+   16.0,
+   19.0,
+   23.0
+  ],
+  "tenureQuartiles": [
+   37.0,
+   47.0,
+   88.0
+  ],
+  "stationedObjectDays": 3733646
+ },
+ "hazard": {
+  "relocation": {
+   "W=36.1d": {
+    "windowDays": 36.1,
+    "outcome": "relocation",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 0,
+     "exposureDays": 43524.0,
+     "ratePerDay": 0.0
+    },
+    "selfBaseline": {
+     "events": 170,
+     "exposureDays": 760383.0,
+     "ratePerDay": 0.00022357154223595215
+    },
+    "matchedControl": {
+     "events": 93,
+     "exposureDays": 201411.0,
+     "ratePerDay": 0.00046174240731638295,
+     "arrivalsWithNoMatch": 10,
+     "arrivalsWithFewerThanFive": 68,
+     "distinctControlObjects": 747
+    },
+    "hrSelf": 0.0,
+    "hrSelf95": [
+     0.0,
+     0.3832389139930272
+    ],
+    "hrControl": 0.0,
+    "hrControl95": [
+     0.0,
+     0.1872438641153132
+    ],
+    "L1": {
+     "nullMedian": 0.4358643719802351,
+     "null95": [
+      0.10633667689413365,
+      1.0112949609422492
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.8067329967116222,
+     "ci95": [
+      0.6476759993429231,
+      0.9941518787466793
+     ],
+     "passed": false
+    }
+   },
+   "W=96d": {
+    "windowDays": 96.0,
+    "outcome": "relocation",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 3,
+     "exposureDays": 115373.0,
+     "ratePerDay": 2.600261759683808e-05
+    },
+    "selfBaseline": {
+     "events": 167,
+     "exposureDays": 731807.0,
+     "ratePerDay": 0.00022820224458087993
+    },
+    "matchedControl": {
+     "events": 149,
+     "exposureDays": 511374.0,
+     "ratePerDay": 0.0002913718726411589,
+     "arrivalsWithNoMatch": 10,
+     "arrivalsWithFewerThanFive": 72,
+     "distinctControlObjects": 720
+    },
+    "hrSelf": 0.1139454944652053,
+    "hrSelf95": [
+     0.02326308197557938,
+     0.33879068273225726
+    ],
+    "hrControl": 0.08924203067762065,
+    "hrControl95": [
+     0.018197653696643563,
+     0.2658934440247104
+    ],
+    "L1": {
+     "nullMedian": 0.42053861148695076,
+     "null95": [
+      0.16360808503187851,
+      0.7040280306411049
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.49528173162031375,
+     "ci95": [
+      0.41618522744475517,
+      0.5856878952645885
+     ],
+     "passed": false
+    }
+   },
+   "W=162.7d": {
+    "windowDays": 162.7,
+    "outcome": "relocation",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 12,
+     "exposureDays": 191547.0,
+     "ratePerDay": 6.264780967595421e-05
+    },
+    "selfBaseline": {
+     "events": 159,
+     "exposureDays": 703903.0,
+     "ratePerDay": 0.00022588339586562353
+    },
+    "matchedControl": {
+     "events": 231,
+     "exposureDays": 827480.0,
+     "ratePerDay": 0.00027916082563929037,
+     "arrivalsWithNoMatch": 11,
+     "arrivalsWithFewerThanFive": 73,
+     "distinctControlObjects": 719
+    },
+    "hrSelf": 0.27734579354926536,
+    "hrSelf95": [
+     0.14033779331199484,
+     0.4981420218448912
+    ],
+    "hrControl": 0.224414759959561,
+    "hrControl95": [
+     0.11428802195934204,
+     0.3996192912166488
+    ],
+    "L1": {
+     "nullMedian": 0.3574997493947092,
+     "null95": [
+      0.19303291230984518,
+      0.5633947383241501
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.4863121733430396,
+     "ci95": [
+      0.42204336395646747,
+      0.5582399939041497
+     ],
+     "passed": false
+    }
+   },
+   "W=365d": {
+    "windowDays": 365.0,
+    "outcome": "relocation",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 23,
+     "exposureDays": 404565.0,
+     "ratePerDay": 5.6851185841582935e-05
+    },
+    "selfBaseline": {
+     "events": 151,
+     "exposureDays": 636974.0,
+     "ratePerDay": 0.00023705834147076646
+    },
+    "matchedControl": {
+     "events": 349,
+     "exposureDays": 1679889.0,
+     "ratePerDay": 0.00020775182169774313,
+     "arrivalsWithNoMatch": 11,
+     "arrivalsWithFewerThanFive": 75,
+     "distinctControlObjects": 674
+    },
+    "hrSelf": 0.23981938576328773,
+    "hrSelf95": [
+     0.1475291165427772,
+     0.3734377278788804
+    ],
+    "hrControl": 0.27364951785739516,
+    "hrControl95": [
+     0.1711840654975571,
+     0.4173514329821743
+    ],
+    "L1": {
+     "nullMedian": 0.28924148991749543,
+     "null95": [
+      0.17926859841870837,
+      0.4296864034496539
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.35497784888074835,
+     "ci95": [
+      0.3153205703593474,
+      0.3987191422889848
+     ],
+     "passed": false
+    }
+   }
+  },
+  "departure": {
+   "W=36.1d": {
+    "windowDays": 36.1,
+    "outcome": "departure",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 0,
+     "exposureDays": 43524.0,
+     "ratePerDay": 0.0
+    },
+    "selfBaseline": {
+     "events": 3097,
+     "exposureDays": 760383.0,
+     "ratePerDay": 0.004072947448851434
+    },
+    "matchedControl": {
+     "events": 506,
+     "exposureDays": 201311.0,
+     "ratePerDay": 0.0025135238511556747,
+     "arrivalsWithNoMatch": 10,
+     "arrivalsWithFewerThanFive": 68,
+     "distinctControlObjects": 741
+    },
+    "hrSelf": 0.0,
+    "hrSelf95": [
+     0.0,
+     0.02082166850719681
+    ],
+    "hrControl": 0.0,
+    "hrControl95": [
+     0.0,
+     0.03384283029620097
+    ],
+    "L1": {
+     "nullMedian": 0.8013013975254852,
+     "null95": [
+      0.6679822163853447,
+      0.9460192171299232
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.5179786207984983,
+     "ci95": [
+      0.4731234446881595,
+      0.5660142598580549
+     ],
+     "passed": false
+    }
+   },
+   "W=96d": {
+    "windowDays": 96.0,
+    "outcome": "departure",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 36,
+     "exposureDays": 115373.0,
+     "ratePerDay": 0.000312031411162057
+    },
+    "selfBaseline": {
+     "events": 3061,
+     "exposureDays": 731807.0,
+     "ratePerDay": 0.0041827968303118175
+    },
+    "matchedControl": {
+     "events": 913,
+     "exposureDays": 509430.0,
+     "ratePerDay": 0.001792199124511709,
+     "arrivalsWithNoMatch": 10,
+     "arrivalsWithFewerThanFive": 72,
+     "distinctControlObjects": 723
+    },
+    "hrSelf": 0.07459874907163391,
+    "hrSelf95": [
+     0.05214786078510493,
+     0.10350927617174938
+    ],
+    "hrControl": 0.1741053250693173,
+    "hrControl95": [
+     0.12116454307571169,
+     0.24285424153499174
+    ],
+    "L1": {
+     "nullMedian": 0.619166180476231,
+     "null95": [
+      0.5454539220289868,
+      0.6943354607762876
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.3637651032692939,
+     "ci95": [
+      0.3398829076105503,
+      0.38893307075331507
+     ],
+     "passed": false
+    }
+   },
+   "W=162.7d": {
+    "windowDays": 162.7,
+    "outcome": "departure",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 100,
+     "exposureDays": 191547.0,
+     "ratePerDay": 0.0005220650806329518
+    },
+    "selfBaseline": {
+     "events": 2991,
+     "exposureDays": 703903.0,
+     "ratePerDay": 0.004249165012792956
+    },
+    "matchedControl": {
+     "events": 1251,
+     "exposureDays": 826776.0,
+     "ratePerDay": 0.0015131063310981452,
+     "arrivalsWithNoMatch": 11,
+     "arrivalsWithFewerThanFive": 73,
+     "distinctControlObjects": 699
+    },
+    "hrSelf": 0.12286298109420817,
+    "hrSelf95": [
+     0.09964134797495379,
+     0.1499715355338409
+    ],
+    "hrControl": 0.3450286803400394,
+    "hrControl95": [
+     0.27857712785835076,
+     0.4232273196919918
+    ],
+    "L1": {
+     "nullMedian": 0.4959889587845959,
+     "null95": [
+      0.44139948380114036,
+      0.5536717560184075
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.3181328367102344,
+     "ci95": [
+      0.30001282423226294,
+      0.3371078058197357
+     ],
+     "passed": false
+    }
+   },
+   "W=365d": {
+    "windowDays": 365.0,
+    "outcome": "departure",
+    "arrivals": 1209,
+    "arrivalsUsed": 1209,
+    "exposed": {
+     "events": 221,
+     "exposureDays": 404565.0,
+     "ratePerDay": 0.000546265742216949
+    },
+    "selfBaseline": {
+     "events": 2835,
+     "exposureDays": 636974.0,
+     "ratePerDay": 0.00445073111304386
+    },
+    "matchedControl": {
+     "events": 2004,
+     "exposureDays": 1678116.0,
+     "ratePerDay": 0.0011941963487625408,
+     "arrivalsWithNoMatch": 11,
+     "arrivalsWithFewerThanFive": 75,
+     "distinctControlObjects": 682
+    },
+    "hrSelf": 0.12273618161654283,
+    "hrSelf95": [
+     0.10654741060209558,
+     0.1407868806959859
+    ],
+    "hrControl": 0.45743377358589704,
+    "hrControl95": [
+     0.3962896424548829,
+     0.5258553781947815
+    ],
+    "L1": {
+     "nullMedian": 0.3429466546996514,
+     "null95": [
+      0.3095316947360489,
+      0.3776653865340261
+     ],
+     "band": [
+      0.95,
+      1.05
+     ],
+     "permutations": 1000,
+     "passed": false
+    },
+    "L2": {
+     "ratio": 0.2318655088616477,
+     "ci95": [
+      0.2211753065835862,
+      0.24297097601523446
+     ],
+     "passed": false
+    }
+   }
+  },
+  "wallSeconds": 164.06264209747314
+ },
+ "verdict": {
+  "E3": "NOT READ",
+  "reason": "leak check L1 failed"
+ },
+ "leoReExpression": {
+  "status": "re-expressed from a committed catalogue, not measured by T11",
+  "source": "proximity-leo-events-20260922.jsonl",
+  "sha256": "39321a4bda7edaa9939a1784a3e9fae10360815dde41aae44b474ec4add4611b",
+  "armMRows": 71,
+  "distinctPairs": 63,
+  "dwellDays": {
+   "p5": 30.968138258101853,
+   "p25": 41.304338136574074,
+   "p50": 55.32577091435185,
+   "p75": 76.69027227430556,
+   "p95": 240.1754166550926,
+   "min": 30.119564027777777,
+   "max": 383.6694445486111,
+   "mean": 78.54765300257564,
+   "n": 71
+  },
+  "regimes": [
+   "LEO"
+  ],
+  "cadenceClause": "NOT MEASURABLE (prereg 9)",
+  "hazard": "NOT MEASURED (prereg 9)"
+ },
+ "cases": {
+  "ranked": 1209,
+  "top": [
+   "33436-37775-21399",
+   "41028-42815-21429",
+   "27460-44624-21027",
+   "35362-40147-20023",
+   "28945-43228-20666",
+   "35362-40147-19756",
+   "42747-44035-21635",
+   "28946-29270-21127",
+   "33436-37775-21623",
+   "37264-43228-19956"
+  ]
+ },
+ "familySplit": {
+  "episodes": 1317,
+  "sameFamily": 776,
+  "differentFamily": 541,
+  "registryAgrees": 1206,
+  "note": "the stem is a screen, not a fact about ownership: it merges operators flying similarly named buses and splits one operator's differently named fleets"
+ },
+ "wallSeconds": 243.47351121902466,
+ "sourceSha256": {
+  "tools/persistent_pairs.py": "6bd63b28d16d156484c7972bb9e908fc4ca6ee99ef8b85d8e4b4ab0cac6ac626",
+  "tools/proximity_geo.py": "59c5270b8231d88481d24a6dc37e9d4b630ffbe5a74f4d96f50aefd1bb134480"
+ },
+ "catalogueFile": "persistent-pairs-20260922.jsonl",
+ "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+ "caseListFile": "persistent-pairs-cases-20260922.md",
+ "caseListSha256": "8925f058728d57d9c986316e31be3e834146d0bb06fbbb0a9dedb8b61bb1f553"
+}

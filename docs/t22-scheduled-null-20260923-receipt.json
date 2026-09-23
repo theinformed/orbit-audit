@@ -1,0 +1,1204 @@
+{
+ "E0": {
+  "arcs": 29315,
+  "ratioQuantiles": {
+   "p25": 0.5915421697819386,
+   "p5": -0.940587894461544,
+   "p50": 0.9612440221659718,
+   "p75": 1.2211805134068512,
+   "p95": 1.902603567633806
+  },
+  "ratioRobustScatter": 0.4366941895405214,
+  "sigmaAcceleration": 0.0005899297771453625
+ },
+ "MC1": {
+  "checked": 200,
+  "medianRatio": 1.0124166588961603,
+  "tolerance": 0.1
+ },
+ "artifact": "t22-scheduled-null-receipt",
+ "carrierExposure": {
+  "chains": 40578,
+  "elementSets": 1841245,
+  "objectDays": 1555007.9485502196,
+  "objectsWithSeries": 207
+ },
+ "constants": {
+  "A_degPerDay2": 0.0017006955627927864,
+  "accelerationNeededForA14DayCycle": 0.002149387755102041,
+  "baselineSamples": 10,
+  "deadbandDeg": 0.02633,
+  "mergeDays": 5.0,
+  "optimalCycleAtMaxAccelerationDays": 15.738818661353214,
+  "sigmaDeadbandDeg": 0.0020408163265306124,
+  "sigmaLambdaDeg": 0.0066540706667427025,
+  "sigmaN": 0.0006038533519066339,
+  "stableLongitudesDeg": [
+   75.1,
+   -104.7
+  ]
+ },
+ "deviationV3": 0.5,
+ "executionMode": "CPU, one core",
+ "host": "pc",
+ "inputs": {
+  "carrierRoster": 208,
+  "carrierSeries": 207,
+  "extract": {
+   "objectsKept": 1768,
+   "rowsKept": 11626494,
+   "rowsScanned": 217007154,
+   "sha256": "ff19d32ea2bd9ec407e0d9d09c8bfa2bf0b7e660d5297d4196375bae30567a2a",
+   "source": "cached T8a extract, three numbers asserted",
+   "wallSeconds": 293.49314546585083
+  },
+  "ledger": {
+   "path": "/home/sdegan/t22-work/manoeuvre-library-ledger-v2.jsonl",
+   "sha256": "1311313c987271c46916c3cc2c1c24ca906562cf4d9ef69e53794dd49275a35a"
+  },
+  "passiveRoster": 331,
+  "passiveSeries": 239,
+  "replay": {
+   "path": "/home/sdegan/alarm-lane-work/alarm-lane-replay-everything-ledger.jsonl",
+   "sha256": "c78462e9e38d51a105f7196e355f5ff9db355df6374cb3d4881c80cd4d24ea1e"
+  },
+  "replayObjects": 210,
+  "toolSha256": "3a9234c788694dbcf13da3a901e8f824c56ff0a0650badec22c95542f554939c"
+ },
+ "measuredAt": "2026-09-23T01:16:23Z",
+ "passOne": {
+  "arcs": 29315,
+  "medianDifference": 1.372861877250043e-06,
+  "ratioQuantiles": {
+   "p25": 0.5915421697819386,
+   "p5": -0.940587894461544,
+   "p50": 0.9612440221659718,
+   "p75": 1.2211805134068512,
+   "p95": 1.902603567633806
+  },
+  "ratioRobustScatter": 0.4366941895405214,
+  "sigmaAcceleration": 0.0005899297771453625
+ },
+ "passiveExposure": {
+  "chains": 47571,
+  "elementSets": 1623047,
+  "objectDays": 2376161.6420851494,
+  "objectsWithSeries": 239
+ },
+ "registration": "docs/t22-scheduled-null-preregistration-20260923.md",
+ "registrationCommit": "1f27ef5",
+ "results": {
+  "k=0.00 registered median": {
+   "E1": {
+    "allAdmittedCarrierPairs": 24865,
+    "fraction": 0.059292819856200135,
+    "medianElementSpacingDays": 0.46693,
+    "medianObservedIntervalDays": 14.331942546296297,
+    "medianSignedErrorDays": 10.365895331870185,
+    "medianWindowDays": 1.0097842832054822,
+    "objects": 187,
+    "onSchedule": 602,
+    "pairs": 10153,
+    "wilson95": [
+     0.05486347173005183,
+     0.06405553116250054
+    ]
+   },
+   "E1b": {
+    "N1_randomPhase": {
+     "draws": 1000,
+     "mean": 0.27096956564562197,
+     "median": 0.27105289077120065,
+     "p95": 0.27696247414557273
+    },
+    "N2_shuffleWithinObject": {
+     "draws": 1000,
+     "median": 0.03320197044334976,
+     "p95": 0.034876847290640396,
+     "pairs": 10150
+    }
+   },
+   "E2": {
+    "a_pooledDeadband": {
+     "fraction": 0.02631578947368421,
+     "onSchedule": 1,
+     "pairs": 38,
+     "wilson95": [
+      0.004660587685768783,
+      0.1349487611595213
+     ]
+    },
+    "b_horizonMatched": {
+     "fraction": 0.0,
+     "onSchedule": 0,
+     "pairs": 12,
+     "tauRangeDays": [
+      1.893343282698923,
+      4.948527635261323
+     ],
+     "wilson95": [
+      2.7755575615628914e-17,
+      0.24249400665524085
+     ]
+    }
+   },
+   "E3": {
+    "primary_driftStart": {
+     "cells": {
+      "offWith": 384,
+      "offWithout": 22644,
+      "onWith": 48,
+      "onWithout": 1789
+     },
+     "ci": [
+      0.4664101823022365,
+      0.8564979733279461
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.6320438085143968
+    },
+    "union": {
+     "cells": {
+      "offWith": 1195,
+      "offWithout": 21833,
+      "onWith": 221,
+      "onWithout": 1616
+     },
+     "ci": [
+      0.343736240617037,
+      0.4659956081973659
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.40022441018235294
+    },
+    "unionNote": "`drift stop` carries Gate F wherever it is printed; `station acquisition`'s 0.751 is a mapping corrected to match a measured outcome and may not be scored as a successful prediction"
+   },
+   "E4": {
+    "carrier": {
+     "chains": 29836,
+     "fraction": 0.8293672074004558,
+     "held": 24745,
+     "wilson95": [
+      0.825056299561418,
+      0.8335933124723031
+     ]
+    },
+    "carrierOffSchedule": {
+     "chains": 23028,
+     "fraction": 0.8905245787736669,
+     "held": 20507,
+     "wilson95": [
+      0.8864265043262242,
+      0.89449238277873
+     ]
+    },
+    "carrierOnSchedule": {
+     "chains": 1837,
+     "fraction": 0.7795318454001089,
+     "held": 1432,
+     "wilson95": [
+      0.7600017277141361,
+      0.7978953117505939
+     ]
+    },
+    "passive": {
+     "chains": 7160,
+     "fraction": 0.15153631284916202,
+     "held": 1085,
+     "wilson95": [
+      0.1434177790282305,
+      0.1600285592689532
+     ]
+    }
+   },
+   "E5": {
+    "after": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "before": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "note": "an alert with no admitted east-west predecessor stays in the denominator: it is a labelled gap, not an on-schedule burn",
+    "removed": 0,
+    "removedHits": 0
+   },
+   "W1_defectRule": {
+    "fires": false,
+    "medianObservedIntervalDays": 14.331942546296297,
+    "medianWindowDays": 1.0097842832054822
+   },
+   "arms": {
+    "carrier": {
+     "admitted": 24865,
+     "admittedObjects": 194,
+     "arm": "carrier",
+     "errorDays": {
+      "p25": 7.68877138665941,
+      "p5": 3.0894859841529003,
+      "p50": 10.380895059851188,
+      "p75": 15.294495701203523,
+      "p95": 52.20185158522372
+     },
+     "objects": 207,
+     "observedIntervalDays": {
+      "p25": 13.485746527777778,
+      "p5": 9.972742571759259,
+      "p50": 14.600260983796296,
+      "p75": 21.53663840277778,
+      "p95": 56.765350368055536
+     },
+     "pairs": 40371,
+     "reasons": {
+      "acceleration-too-small": 521,
+      "admitted": 24865,
+      "gap-inside-pair": 3380,
+      "outside-band-at-burn": 2814,
+      "relocating": 1636,
+      "too-few-element-sets": 7155
+     },
+     "tauOverObserved": {
+      "median": 0.1715300369838766
+     },
+     "tauStarDays": {
+      "p25": 1.8029967575477601,
+      "p5": 0.7081666657046541,
+      "p50": 2.8912670275453953,
+      "p75": 4.979570032256177,
+      "p95": 9.52708286130195
+     },
+     "windowDays": {
+      "p25": 0.6358483668987581,
+      "p5": 0.4317433365044636,
+      "p50": 1.2183936608968295,
+      "p75": 2.6954825433932297,
+      "p95": 8.880489002174633
+     }
+    },
+    "passive": {
+     "admitted": 38,
+     "admittedObjects": 12,
+     "arm": "passive",
+     "errorDays": {
+      "p25": 19.082228859973483,
+      "p5": 8.299306728658888,
+      "p50": 25.047247064695007,
+      "p75": 29.449710443227556,
+      "p95": 72.29777800109494
+     },
+     "objects": 225,
+     "observedIntervalDays": {
+      "p25": 22.13836454861111,
+      "p5": 12.66582183622685,
+      "p50": 28.037260381944442,
+      "p75": 33.15618447916667,
+      "p95": 73.50543054629627
+     },
+     "pairs": 47340,
+     "reasons": {
+      "acceleration-too-small": 426,
+      "admitted": 38,
+      "gap-inside-pair": 5748,
+      "outside-band-at-burn": 293,
+      "relocating": 6403,
+      "slot-window-too-thin": 2,
+      "too-few-element-sets": 34430
+     },
+     "tauOverObserved": {
+      "median": 0.03744925992086519
+     },
+     "tauStarDays": {
+      "p25": 0.2836258020311837,
+      "p5": 0.10575887013823057,
+      "p50": 1.0620800813704363,
+      "p75": 2.3531378337146664,
+      "p95": 4.299535542644273
+     },
+     "windowDays": {
+      "p25": 0.5247630091526402,
+      "p5": 0.3225295039912869,
+      "p50": 0.5719646300099664,
+      "p75": 0.6289544283318902,
+      "p95": 2.589952177549464
+     }
+    },
+    "replay": {
+     "admitted": 10488,
+     "admittedObjects": 189,
+     "arm": "replay",
+     "errorDays": {
+      "p25": 8.167751109146543,
+      "p5": 1.6017250294114573,
+      "p50": 12.60434663043552,
+      "p75": 24.051155536427324,
+      "p95": 88.53847255086062
+     },
+     "objects": 210,
+     "observedIntervalDays": {
+      "p25": 13.961839470486112,
+      "p5": 8.459454332175927,
+      "p50": 19.415189230324074,
+      "p75": 29.021151715856483,
+      "p95": 93.14873044386567
+     },
+     "pairs": 29070,
+     "reasons": {
+      "acceleration-too-small": 998,
+      "admitted": 10488,
+      "gap-inside-pair": 3942,
+      "outside-band-at-burn": 3144,
+      "relocating": 2688,
+      "too-few-element-sets": 7810
+     },
+     "tauOverObserved": {
+      "median": 0.15591003895341948
+     },
+     "tauStarDays": {
+      "p25": 1.7498579580929416,
+      "p5": 0.5298275319495132,
+      "p50": 3.2704179827901814,
+      "p75": 5.796405621757529,
+      "p95": 11.349436805268951
+     },
+     "windowDays": {
+      "p25": 0.9072012766777116,
+      "p5": 0.4909122823564584,
+      "p50": 1.7876385236280545,
+      "p75": 3.8063126996249266,
+      "p95": 13.068722208173634
+     }
+    }
+   },
+   "centreOffsetFraction": 0.0,
+   "postRegistrationBranchDiagnostics": {
+    "branches": [
+     {
+      "edge": "burn-side edge, a full cycle",
+      "fraction": 0.14794156706507305,
+      "medianObservedDays": 15.025748368055556,
+      "medianTauDays": 5.808246800418224,
+      "onSchedule": 557,
+      "pairs": 3765,
+      "share": 0.3708263567418497,
+      "wilson95": [
+       0.13695966687038286,
+       0.15964115092323095
+      ]
+     },
+     {
+      "edge": "far edge, a half cycle",
+      "fraction": 0.007044458359423919,
+      "medianObservedDays": 14.139317089120372,
+      "medianTauDays": 2.2263942206270615,
+      "onSchedule": 45,
+      "pairs": 6388,
+      "share": 0.6291736432581503,
+      "wilson95": [
+       0.005269097784347827,
+       0.00941234565026578
+      ]
+     }
+    ],
+    "burnOffsetFromCentreDeg": {
+     "p25": 0.003497673016909175,
+     "p50": 0.007520772027049816,
+     "p75": 0.012867536927856804
+    },
+    "chainSpanDays": {
+     "p25": 0.9523409953703704,
+     "p50": 1.2320300925925927,
+     "p75": 1.8743572800925925
+    },
+    "deadbandImpliedByTheRateDeg": {
+     "p25": 0.0024681661738923844,
+     "p50": 0.02481652030068476,
+     "p75": 0.03566974820940266
+    },
+    "label": "POST-REGISTRATION, not an estimand, gates nothing",
+    "neededOverMeasured": {
+     "p25": 0.7478138275960268,
+     "p50": 0.965168829853767,
+     "p75": 3.636385434132522
+    },
+    "pairs": 10153,
+    "postBurnRateDegPerDay": {
+     "p25": 0.0035161304809724625,
+     "p50": 0.011997639557749967,
+     "p75": 0.014506843767803838
+    },
+    "rateTheObservedCycleNeeds": {
+     "p25": 0.009570365115192518,
+     "p50": 0.011226779437180496,
+     "p75": 0.013120305043147262
+    },
+    "tauOverRemainingHorizon": {
+     "p25": 0.1237614226730096,
+     "p50": 0.1977936473930457,
+     "p75": 0.3337570804829032
+    }
+   },
+   "verdict": "VOID -- UNDERPOWERED",
+   "verdictClauses": {
+    "bars": [
+     200,
+     50
+    ],
+    "carrierPairs": 10153,
+    "horizonMatchedPassivePairs": 12
+   }
+  },
+  "k=0.25": {
+   "E1": {
+    "allAdmittedCarrierPairs": 24296,
+    "fraction": 0.06279561235785448,
+    "medianElementSpacingDays": 0.46693,
+    "medianObservedIntervalDays": 14.337220046296297,
+    "medianSignedErrorDays": 10.874559446086177,
+    "medianWindowDays": 0.7808966271321977,
+    "objects": 188,
+    "onSchedule": 624,
+    "pairs": 9937,
+    "wilson95": [
+     0.05819266913245809,
+     0.067736455077637
+    ]
+   },
+   "E1b": {
+    "N1_randomPhase": {
+     "draws": 1000,
+     "mean": 0.25436419442487673,
+     "median": 0.25450337123880445,
+     "p95": 0.2602395089061085
+    },
+    "N2_shuffleWithinObject": {
+     "draws": 1000,
+     "median": 0.03453136011275546,
+     "p95": 0.036343501459780526,
+     "pairs": 9933
+    }
+   },
+   "E2": {
+    "a_pooledDeadband": {
+     "fraction": 0.02702702702702703,
+     "onSchedule": 1,
+     "pairs": 37,
+     "wilson95": [
+      0.004786974451940429,
+      0.13824069863730518
+     ]
+    },
+    "b_horizonMatched": {
+     "fraction": 0.0,
+     "onSchedule": 0,
+     "pairs": 16,
+     "tauRangeDays": [
+      1.4208958590897656,
+      5.333981147234961
+     ],
+     "wilson95": [
+      0.0,
+      0.1936076805344365
+     ]
+    }
+   },
+   "E3": {
+    "primary_driftStart": {
+     "cells": {
+      "offWith": 359,
+      "offWithout": 22067,
+      "onWith": 44,
+      "onWithout": 1826
+     },
+     "ci": [
+      0.4918903314993451,
+      0.9266809054193292
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.6751484116554131
+    },
+    "union": {
+     "cells": {
+      "offWith": 1079,
+      "offWithout": 21347,
+      "onWith": 238,
+      "onWithout": 1632
+     },
+     "ci": [
+      0.2985856988211204,
+      0.402333857484699
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.34659938833827436
+    },
+    "unionNote": "`drift stop` carries Gate F wherever it is printed; `station acquisition`'s 0.751 is a mapping corrected to match a measured outcome and may not be scored as a successful prediction"
+   },
+   "E4": {
+    "carrier": {
+     "chains": 29836,
+     "fraction": 0.8293672074004558,
+     "held": 24745,
+     "wilson95": [
+      0.825056299561418,
+      0.8335933124723031
+     ]
+    },
+    "carrierOffSchedule": {
+     "chains": 22426,
+     "fraction": 0.8864710603763489,
+     "held": 19880,
+     "wilson95": [
+      0.8822526952652446,
+      0.8905570471408161
+     ]
+    },
+    "carrierOnSchedule": {
+     "chains": 1870,
+     "fraction": 0.7903743315508022,
+     "held": 1478,
+     "wilson95": [
+      0.7713396530503901,
+      0.8082184493108823
+     ]
+    },
+    "passive": {
+     "chains": 7160,
+     "fraction": 0.15153631284916202,
+     "held": 1085,
+     "wilson95": [
+      0.1434177790282305,
+      0.1600285592689532
+     ]
+    }
+   },
+   "E5": {
+    "after": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "before": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "note": "an alert with no admitted east-west predecessor stays in the denominator: it is a labelled gap, not an on-schedule burn",
+    "removed": 0,
+    "removedHits": 0
+   },
+   "W1_defectRule": {
+    "fires": false,
+    "medianObservedIntervalDays": 14.337220046296297,
+    "medianWindowDays": 0.7808966271321977
+   },
+   "arms": {
+    "carrier": {
+     "admitted": 24296,
+     "admittedObjects": 195,
+     "arm": "carrier",
+     "errorDays": {
+      "p25": 7.712990124915794,
+      "p5": 2.958172158990083,
+      "p50": 10.81769247174157,
+      "p75": 15.441229797046097,
+      "p95": 52.661115185606924
+     },
+     "objects": 207,
+     "observedIntervalDays": {
+      "p25": 13.49631153935185,
+      "p5": 9.973189030671296,
+      "p50": 14.609170439814815,
+      "p75": 21.50067355613426,
+      "p95": 56.87769640335648
+     },
+     "pairs": 40371,
+     "reasons": {
+      "acceleration-too-small": 521,
+      "admitted": 24296,
+      "gap-inside-pair": 3380,
+      "outside-band-at-burn": 3383,
+      "relocating": 1636,
+      "too-few-element-sets": 7155
+     },
+     "tauOverObserved": {
+      "median": 0.14721810627255702
+     },
+     "tauStarDays": {
+      "p25": 1.4595478514570226,
+      "p5": 0.5072033404554439,
+      "p50": 2.539207294011786,
+      "p75": 5.343650274353019,
+      "p95": 9.478652024806799
+     },
+     "windowDays": {
+      "p25": 0.5545230710006674,
+      "p5": 0.4073780011242901,
+      "p50": 1.0823568391176597,
+      "p75": 2.7234291499490144,
+      "p95": 8.27111011905152
+     }
+    },
+    "passive": {
+     "admitted": 37,
+     "admittedObjects": 11,
+     "arm": "passive",
+     "errorDays": {
+      "p25": 19.671881045153583,
+      "p5": 6.849471324455544,
+      "p50": 25.54325593224702,
+      "p75": 29.644473708784314,
+      "p95": 66.443788116563
+     },
+     "objects": 225,
+     "observedIntervalDays": {
+      "p25": 22.930415,
+      "p5": 13.142729965277777,
+      "p50": 28.056902094907407,
+      "p75": 33.81243508101852,
+      "p95": 68.4868731111111
+     },
+     "pairs": 47340,
+     "reasons": {
+      "acceleration-too-small": 426,
+      "admitted": 37,
+      "gap-inside-pair": 5748,
+      "outside-band-at-burn": 294,
+      "relocating": 6403,
+      "slot-window-too-thin": 2,
+      "too-few-element-sets": 34430
+     },
+     "tauOverObserved": {
+      "median": 0.03933593473193428
+     },
+     "tauStarDays": {
+      "p25": 0.27480150114258234,
+      "p5": 0.08909525277226119,
+      "p50": 1.2267868161057611,
+      "p75": 2.263935924985759,
+      "p95": 4.419693020248329
+     },
+     "windowDays": {
+      "p25": 0.41048502209475624,
+      "p5": 0.3180235682627184,
+      "p50": 0.5503008143766909,
+      "p75": 0.6028371427426127,
+      "p95": 2.343230363399478
+     }
+    },
+    "replay": {
+     "admitted": 10119,
+     "admittedObjects": 189,
+     "arm": "replay",
+     "errorDays": {
+      "p25": 8.142915739925526,
+      "p5": 1.5211668815369783,
+      "p50": 12.856362068978768,
+      "p75": 24.279626865173622,
+      "p95": 88.6385420120644
+     },
+     "objects": 210,
+     "observedIntervalDays": {
+      "p25": 13.961839380787037,
+      "p5": 8.455640562500001,
+      "p50": 19.610806921296295,
+      "p75": 29.241539467592595,
+      "p95": 93.36288096527782
+     },
+     "pairs": 29070,
+     "reasons": {
+      "acceleration-too-small": 997,
+      "admitted": 10119,
+      "gap-inside-pair": 3942,
+      "outside-band-at-burn": 3514,
+      "relocating": 2688,
+      "too-few-element-sets": 7810
+     },
+     "tauOverObserved": {
+      "median": 0.1439463600055863
+     },
+     "tauStarDays": {
+      "p25": 1.6321228465095843,
+      "p5": 0.48261562752152254,
+      "p50": 3.1029661368944095,
+      "p75": 6.144145120674239,
+      "p95": 11.32684725492116
+     },
+     "windowDays": {
+      "p25": 0.8362454203142,
+      "p5": 0.4605090158814705,
+      "p50": 1.782701781772675,
+      "p75": 3.7989252546517047,
+      "p95": 12.964108940007076
+     }
+    }
+   },
+   "centreOffsetFraction": 0.25,
+   "postRegistrationBranchDiagnostics": {
+    "branches": [
+     {
+      "edge": "burn-side edge, a full cycle",
+      "fraction": 0.16507847533632286,
+      "medianObservedDays": 15.007461365740742,
+      "medianTauDays": 6.432415850093266,
+      "onSchedule": 589,
+      "pairs": 3568,
+      "share": 0.3590620911743987,
+      "wilson95": [
+       0.15325832043475007,
+       0.1776190358101991
+      ]
+     },
+     {
+      "edge": "far edge, a half cycle",
+      "fraction": 0.005495368189668707,
+      "medianObservedDays": 14.163154826388888,
+      "medianTauDays": 1.6873154702274507,
+      "onSchedule": 35,
+      "pairs": 6369,
+      "share": 0.6409379088256013,
+      "wilson95": [
+       0.0039541066814960035,
+       0.0076327905130810945
+      ]
+     }
+    ],
+    "burnOffsetFromCentreDeg": {
+     "p25": 0.00395013077888251,
+     "p50": 0.00820383404136038,
+     "p75": 0.013943634967478857
+    },
+    "chainSpanDays": {
+     "p25": 0.9563543865740741,
+     "p50": 1.230661701388889,
+     "p75": 1.8614567939814815
+    },
+    "deadbandImpliedByTheRateDeg": {
+     "p25": 0.0024846226843995424,
+     "p50": 0.02518001393248921,
+     "p75": 0.03610102416364573
+    },
+    "label": "POST-REGISTRATION, not an estimand, gates nothing",
+    "neededOverMeasured": {
+     "p25": 0.7447681548833801,
+     "p50": 0.9580736533457697,
+     "p75": 3.6039895534318704
+    },
+    "pairs": 9937,
+    "postBurnRateDegPerDay": {
+     "p25": 0.003519431976229155,
+     "p50": 0.012088216839071362,
+     "p75": 0.014580043455494643
+    },
+    "rateTheObservedCycleNeeds": {
+     "p25": 0.009552860574337794,
+     "p50": 0.011224862912027758,
+     "p75": 0.013072843093197927
+    },
+    "tauOverRemainingHorizon": {
+     "p25": 0.09315626128145339,
+     "p50": 0.16102844685091425,
+     "p75": 0.3231642845155499
+    }
+   },
+   "verdict": "VOID -- UNDERPOWERED",
+   "verdictClauses": {
+    "bars": [
+     200,
+     50
+    ],
+    "carrierPairs": 9937,
+    "horizonMatchedPassivePairs": 16
+   }
+  },
+  "k=0.50 V3 derived centre": {
+   "E1": {
+    "allAdmittedCarrierPairs": 22486,
+    "fraction": 0.06965227688664011,
+    "medianElementSpacingDays": 0.46693,
+    "medianObservedIntervalDays": 14.350041886574074,
+    "medianSignedErrorDays": 11.349674427108765,
+    "medianWindowDays": 0.638253921461621,
+    "objects": 187,
+    "onSchedule": 647,
+    "pairs": 9289,
+    "wilson95": [
+     0.06465147598363982,
+     0.0750088705930031
+    ]
+   },
+   "E1b": {
+    "N1_randomPhase": {
+     "draws": 1000,
+     "mean": 0.24396210571643878,
+     "median": 0.24383679621057164,
+     "p95": 0.25018839487565936
+    },
+    "N2_shuffleWithinObject": {
+     "draws": 1000,
+     "median": 0.037587506731287024,
+     "p95": 0.039310716208939146,
+     "pairs": 9285
+    }
+   },
+   "E2": {
+    "a_pooledDeadband": {
+     "fraction": 0.025,
+     "onSchedule": 1,
+     "pairs": 40,
+     "wilson95": [
+      0.0044268315026814095,
+      0.1288136896347409
+     ]
+    },
+    "b_horizonMatched": {
+     "fraction": 0.0,
+     "onSchedule": 0,
+     "pairs": 20,
+     "tauRangeDays": [
+      0.9801273157299439,
+      5.716430320068548
+     ],
+     "wilson95": [
+      0.0,
+      0.16112515805281938
+     ]
+    }
+   },
+   "E3": {
+    "primary_driftStart": {
+     "cells": {
+      "offWith": 342,
+      "offWithout": 20274,
+      "onWith": 43,
+      "onWithout": 1827
+     },
+     "ci": [
+      0.520080138855961,
+      0.9877413665065116
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.7167319352773973
+    },
+    "union": {
+     "cells": {
+      "offWith": 936,
+      "offWithout": 19680,
+      "onWith": 237,
+      "onWithout": 1633
+     },
+     "ci": [
+      0.28172459432287056,
+      0.3811995897283178
+     ],
+     "haldaneAnscombe": false,
+     "oddsRatio": 0.32770916949675827
+    },
+    "unionNote": "`drift stop` carries Gate F wherever it is printed; `station acquisition`'s 0.751 is a mapping corrected to match a measured outcome and may not be scored as a successful prediction"
+   },
+   "E4": {
+    "carrier": {
+     "chains": 29836,
+     "fraction": 0.8293672074004558,
+     "held": 24745,
+     "wilson95": [
+      0.825056299561418,
+      0.8335933124723031
+     ]
+    },
+    "carrierOffSchedule": {
+     "chains": 20616,
+     "fraction": 0.8829549864183158,
+     "held": 18203,
+     "wilson95": [
+      0.8784952183476953,
+      0.8872720661163374
+     ]
+    },
+    "carrierOnSchedule": {
+     "chains": 1870,
+     "fraction": 0.8155080213903744,
+     "held": 1525,
+     "wilson95": [
+      0.7972868822844906,
+      0.8324355493787704
+     ]
+    },
+    "passive": {
+     "chains": 7160,
+     "fraction": 0.15153631284916202,
+     "held": 1085,
+     "wilson95": [
+      0.1434177790282305,
+      0.1600285592689532
+     ]
+    }
+   },
+   "E5": {
+    "after": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "before": {
+     "alerts": 272,
+     "hits": 14,
+     "precision": 0.051470588235294115,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ]
+    },
+    "note": "an alert with no admitted east-west predecessor stays in the denominator: it is a labelled gap, not an on-schedule burn",
+    "removed": 0,
+    "removedHits": 0
+   },
+   "W1_defectRule": {
+    "fires": false,
+    "medianObservedIntervalDays": 14.350041886574074,
+    "medianWindowDays": 0.638253921461621
+   },
+   "arms": {
+    "carrier": {
+     "admitted": 22486,
+     "admittedObjects": 195,
+     "arm": "carrier",
+     "errorDays": {
+      "p25": 7.7094417834327835,
+      "p5": 2.7938174361744634,
+      "p50": 11.26431068732509,
+      "p75": 15.630585906707623,
+      "p95": 53.035647297846474
+     },
+     "objects": 207,
+     "observedIntervalDays": {
+      "p25": 13.551613732638888,
+      "p5": 9.991668324652778,
+      "p50": 14.621497424768517,
+      "p75": 21.644301953125,
+      "p95": 57.05662915798611
+     },
+     "pairs": 40371,
+     "reasons": {
+      "acceleration-too-small": 521,
+      "admitted": 22486,
+      "gap-inside-pair": 3380,
+      "outside-band-at-burn": 5193,
+      "relocating": 1636,
+      "too-few-element-sets": 7155
+     },
+     "tauOverObserved": {
+      "median": 0.12009469792183705
+     },
+     "tauStarDays": {
+      "p25": 1.0844686097669771,
+      "p5": 0.31314226793902167,
+      "p50": 2.1662396068739813,
+      "p75": 5.711337115810038,
+      "p95": 9.636533792180309
+     },
+     "windowDays": {
+      "p25": 0.5035833982135243,
+      "p5": 0.39153156838989767,
+      "p50": 0.990191737902024,
+      "p75": 2.794634302680694,
+      "p95": 7.873170472285753
+     }
+    },
+    "passive": {
+     "admitted": 40,
+     "admittedObjects": 12,
+     "arm": "passive",
+     "errorDays": {
+      "p25": 19.82934980779224,
+      "p5": 7.831724688680579,
+      "p50": 25.360451294846712,
+      "p75": 30.293546083636812,
+      "p95": 71.54390473878419
+     },
+     "objects": 225,
+     "observedIntervalDays": {
+      "p25": 23.812332630208335,
+      "p5": 13.176084071180554,
+      "p50": 28.416361822916667,
+      "p75": 33.94583985243056,
+      "p95": 71.94593502777772
+     },
+     "pairs": 47340,
+     "reasons": {
+      "acceleration-too-small": 424,
+      "admitted": 40,
+      "gap-inside-pair": 5748,
+      "outside-band-at-burn": 291,
+      "relocating": 6405,
+      "slot-window-too-thin": 2,
+      "too-few-element-sets": 34430
+     },
+     "tauOverObserved": {
+      "median": 0.040897053877588956
+     },
+     "tauStarDays": {
+      "p25": 0.17812152013307758,
+      "p5": 0.05633968810477776,
+      "p50": 1.1092306711542994,
+      "p75": 1.9685527346743454,
+      "p95": 3.568456159977006
+     },
+     "windowDays": {
+      "p25": 0.39370509279351207,
+      "p5": 0.31197034263296003,
+      "p50": 0.5570777816648429,
+      "p75": 0.6046528312500459,
+      "p95": 1.8032276529206828
+     }
+    },
+    "replay": {
+     "admitted": 9312,
+     "admittedObjects": 187,
+     "arm": "replay",
+     "errorDays": {
+      "p25": 8.11402042048984,
+      "p5": 1.78443313304887,
+      "p50": 13.136954457298561,
+      "p75": 24.877101610782766,
+      "p95": 88.60353385792888
+     },
+     "objects": 210,
+     "observedIntervalDays": {
+      "p25": 13.979241412037037,
+      "p5": 8.617635538773149,
+      "p50": 19.88753597800926,
+      "p75": 29.748973463541667,
+      "p95": 93.57694567881923
+     },
+     "pairs": 29070,
+     "reasons": {
+      "acceleration-too-small": 998,
+      "admitted": 9312,
+      "gap-inside-pair": 3942,
+      "outside-band-at-burn": 4321,
+      "relocating": 2687,
+      "too-few-element-sets": 7810
+     },
+     "tauOverObserved": {
+      "median": 0.13275152409486157
+     },
+     "tauStarDays": {
+      "p25": 1.4240806967161248,
+      "p5": 0.35416417386295385,
+      "p50": 3.012800165265322,
+      "p75": 6.465122351509917,
+      "p95": 11.252810394293387
+     },
+     "windowDays": {
+      "p25": 0.7647660175560994,
+      "p5": 0.4342967842571721,
+      "p50": 1.800434820640795,
+      "p75": 3.8634157339197355,
+      "p95": 12.389011681183923
+     }
+    }
+   },
+   "centreOffsetFraction": 0.5,
+   "postRegistrationBranchDiagnostics": {
+    "branches": [
+     {
+      "edge": "burn-side edge, a full cycle",
+      "fraction": 0.19173859432799015,
+      "medianObservedDays": 15.047871840277779,
+      "medianTauDays": 6.955341245676001,
+      "onSchedule": 622,
+      "pairs": 3244,
+      "share": 0.3492302723651631,
+      "wilson95": [
+       0.17855945168603501,
+       0.20564694343578568
+      ]
+     },
+     {
+      "edge": "far edge, a half cycle",
+      "fraction": 0.0041356492969396195,
+      "medianObservedDays": 14.176749039351852,
+      "medianTauDays": 1.2180440453840613,
+      "onSchedule": 25,
+      "pairs": 6045,
+      "share": 0.6507697276348369,
+      "wilson95": [
+       0.0028029104645693696,
+       0.0060982087311040566
+      ]
+     }
+    ],
+    "burnOffsetFromCentreDeg": {
+     "p25": 0.005789485620635304,
+     "p50": 0.01144518923705462,
+     "p75": 0.017333608907144082
+    },
+    "chainSpanDays": {
+     "p25": 0.9522193518518518,
+     "p50": 1.220314837962963,
+     "p75": 1.7985397800925926
+    },
+    "deadbandImpliedByTheRateDeg": {
+     "p25": 0.0024990706790727533,
+     "p50": 0.025470639601385247,
+     "p75": 0.03637176149695606
+    },
+    "label": "POST-REGISTRATION, not an estimand, gates nothing",
+    "neededOverMeasured": {
+     "p25": 0.7427608816939346,
+     "p50": 0.950508730239152,
+     "p75": 3.578473663080379
+    },
+    "pairs": 9289,
+    "postBurnRateDegPerDay": {
+     "p25": 0.003512411826474674,
+     "p50": 0.012146683736653445,
+     "p75": 0.014603730213323105
+    },
+    "rateTheObservedCycleNeeds": {
+     "p25": 0.009523625824069293,
+     "p50": 0.01123702101063457,
+     "p75": 0.01306240304948664
+    },
+    "tauOverRemainingHorizon": {
+     "p25": 0.06529800959117239,
+     "p50": 0.1236036058066008,
+     "p75": 0.3258905924597692
+    }
+   },
+   "verdict": "VOID -- UNDERPOWERED",
+   "verdictClauses": {
+    "bars": [
+     200,
+     50
+    ],
+    "carrierPairs": 9289,
+    "horizonMatchedPassivePairs": 20
+   }
+  }
+ },
+ "seed": 20260923,
+ "wallSeconds": 204.22949266433716
+}

@@ -1,0 +1,1322 @@
+{
+  "accelerationCheck_aCycleOnADerived": {
+    "ci95": [
+      0.7140123853642851,
+      1.0694708561861117
+    ],
+    "objects": 207,
+    "slope": 0.9329030845567317
+  },
+  "acceptance": {
+    "D1_power": true,
+    "D2v2_contaminationBelowBar": true,
+    "D2v2_targetAboveFloor": true,
+    "D3_admitted": true,
+    "D3_unscreened": true,
+    "D4_internalAgreement": false,
+    "D5_surrogate": false
+  },
+  "alphaSweep": {
+    "alpha0.001": {
+      "contamination": 0.002367977692985031,
+      "cycles": 34070,
+      "multipleAtM12": 1.8971296749548674,
+      "objectsWithThreeCycles": 207,
+      "perObjectMedianBootstrap": {
+        "ci95": [
+          0.027899090340817168,
+          0.02877672633706041
+        ],
+        "median": 0.028303669978008372,
+        "objects": 207
+      }
+    },
+    "alpha0.01": {
+      "contamination": 0.019470267400328218,
+      "cycles": 41436,
+      "multipleAtM12": 1.655899252013179,
+      "objectsWithThreeCycles": 207,
+      "perObjectMedianBootstrap": {
+        "ci95": [
+          0.02572372242920906,
+          0.026666725135079616
+        ],
+        "median": 0.026329809491877576,
+        "objects": 207
+      }
+    },
+    "alpha0.05": {
+      "contamination": 0.08415425376559436,
+      "cycles": 47934,
+      "multipleAtM12": 1.4431934182343096,
+      "objectsWithThreeCycles": 207,
+      "perObjectMedianBootstrap": {
+        "ci95": [
+          0.024146881837903367,
+          0.025182045478728377
+        ],
+        "median": 0.024677011606087262,
+        "objects": 207
+      }
+    }
+  },
+  "carriersBootstrapUnscreened": {
+    "ci95": [
+      0.01875352224495508,
+      0.021190384827743713
+    ],
+    "median": 0.02030130337771574,
+    "objects": 207
+  },
+  "contamination": {
+    "admitted": 41436,
+    "bar": 0.1,
+    "expectedNoiseAdmitted": 806.77,
+    "formula": "registration eq. (27)",
+    "fraction": 0.019470267400328218
+  },
+  "cpuSeconds": 668.22561,
+  "cycles": {
+    "admitted": 41436,
+    "found": 184591,
+    "objectsWithAnyCycle": 207,
+    "objectsWithThreeCycles": 207,
+    "preG6": 80677,
+    "screenCounts": {
+      "G3-too-few-samples": 95110,
+      "G4-too-short": 78210,
+      "G6v2-below-derived-floor": 105600
+    }
+  },
+  "deltaVCommercialCivilOnly": {
+    "note": "Computed ONLY for objects in data/propulsion-catalog-v1.json, policy commercial-civil-only. Every other carrier in this receipt carries angles and times only.",
+    "objects": 37,
+    "rows": [
+      {
+        "dvPerCycleMps": 0.04505611321081772,
+        "dvPerYearMps": 0.5804871858522029,
+        "measuredCycleDays": 15.116851828703703,
+        "medianRPosDeg": 0.028118952046654044,
+        "name": "Intelsat 605",
+        "norad": 21653,
+        "theoreticalCycleDays": 28.349885667314634
+      },
+      {
+        "dvPerCycleMps": 0.0821207317104933,
+        "dvPerYearMps": 1.4483692682063876,
+        "measuredCycleDays": 13.20189967013889,
+        "medianRPosDeg": 0.03743782751118552,
+        "name": "Intelsat 601",
+        "norad": 21765,
+        "theoreticalCycleDays": 20.709219613864075
+      },
+      {
+        "dvPerCycleMps": 0.07879950315400848,
+        "dvPerYearMps": 1.7169617426002124,
+        "measuredCycleDays": 11.710208171296296,
+        "medianRPosDeg": 0.029078410263945642,
+        "name": "Astra 1D",
+        "norad": 23331,
+        "theoreticalCycleDays": 16.763051740112797
+      },
+      {
+        "dvPerCycleMps": 0.07107540580518311,
+        "dvPerYearMps": 1.551463638661034,
+        "measuredCycleDays": 11.94856693287037,
+        "medianRPosDeg": 0.026180709631230314,
+        "name": "Astra 1F",
+        "norad": 23842,
+        "theoreticalCycleDays": 16.73277498965283
+      },
+      {
+        "dvPerCycleMps": 0.07639473711082638,
+        "dvPerYearMps": 1.5483059318791208,
+        "measuredCycleDays": 12.750796145833334,
+        "medianRPosDeg": 0.030307800748230918,
+        "name": "Hot Bird 4",
+        "norad": 25237,
+        "theoreticalCycleDays": 18.021746965642826
+      },
+      {
+        "dvPerCycleMps": 0.07718668049045345,
+        "dvPerYearMps": 1.5541995852415051,
+        "measuredCycleDays": 10.522514699074074,
+        "medianRPosDeg": 0.03082210238694305,
+        "name": "Eutelsat W2",
+        "norad": 25491,
+        "theoreticalCycleDays": 18.139520378753247
+      },
+      {
+        "dvPerCycleMps": 0.08298289273849987,
+        "dvPerYearMps": 1.7408866009152661,
+        "measuredCycleDays": 10.005680185185184,
+        "medianRPosDeg": 0.031804676094289164,
+        "name": "Hot Bird 5",
+        "norad": 25495,
+        "theoreticalCycleDays": 17.41038247798676
+      },
+      {
+        "dvPerCycleMps": 0.0742380489835126,
+        "dvPerYearMps": 1.3465008123496713,
+        "measuredCycleDays": 12.093282667824074,
+        "medianRPosDeg": 0.032910221065916456,
+        "name": "Eutelsat W1",
+        "norad": 26487,
+        "theoreticalCycleDays": 20.1377133548928
+      },
+      {
+        "dvPerCycleMps": 0.07377236582320115,
+        "dvPerYearMps": 1.4585365110492652,
+        "measuredCycleDays": 10.772363275462963,
+        "medianRPosDeg": 0.030002292224531324,
+        "name": "Hot Bird 6",
+        "norad": 27499,
+        "theoreticalCycleDays": 18.474242100075948
+      },
+      {
+        "dvPerCycleMps": 0.07440856386102461,
+        "dvPerYearMps": 1.5601053607390873,
+        "measuredCycleDays": 8.576949212962964,
+        "medianRPosDeg": 0.02853489214026439,
+        "name": "Apstar-6",
+        "norad": 28638,
+        "theoreticalCycleDays": 17.420443922687383
+      },
+      {
+        "dvPerCycleMps": 0.07053835422866267,
+        "dvPerYearMps": 1.4584361764829004,
+        "measuredCycleDays": 12.464603391203704,
+        "medianRPosDeg": 0.027431372428998735,
+        "name": "Hotbird 13B",
+        "norad": 29270,
+        "theoreticalCycleDays": 17.665588866665853
+      },
+      {
+        "dvPerCycleMps": 0.06952148331706798,
+        "dvPerYearMps": 1.6138706836025511,
+        "measuredCycleDays": 11.84797707175926,
+        "medianRPosDeg": 0.02407984274384134,
+        "name": "T\u00fcrksat 3A",
+        "norad": 33056,
+        "theoreticalCycleDays": 15.734049846469956
+      },
+      {
+        "dvPerCycleMps": 0.06262728235544734,
+        "dvPerYearMps": 1.3467538787026165,
+        "measuredCycleDays": 11.877661851851851,
+        "medianRPosDeg": 0.02341656656414859,
+        "name": "Eutelsat 10A",
+        "norad": 34710,
+        "theoreticalCycleDays": 16.985000186049735
+      },
+      {
+        "dvPerCycleMps": 0.06678598851907462,
+        "dvPerYearMps": 1.3668394546016298,
+        "measuredCycleDays": 10.55697818287037,
+        "medianRPosDeg": 0.02623841096901458,
+        "name": "AsiaSat 5",
+        "norad": 35696,
+        "theoreticalCycleDays": 17.84670630077883
+      },
+      {
+        "dvPerCycleMps": 0.07232484522631738,
+        "dvPerYearMps": 1.7623280212260983,
+        "measuredCycleDays": 10.929415972222221,
+        "medianRPosDeg": 0.023865613271986774,
+        "name": "Amazonas 2",
+        "norad": 35942,
+        "theoreticalCycleDays": 14.989632690816357
+      },
+      {
+        "dvPerCycleMps": 0.07562684998118872,
+        "dvPerYearMps": 1.7169756325186118,
+        "measuredCycleDays": 12.286716140046297,
+        "medianRPosDeg": 0.026783801082338243,
+        "name": "Astra 3B",
+        "norad": 36581,
+        "theoreticalCycleDays": 16.088001735417617
+      },
+      {
+        "dvPerCycleMps": 0.07767965513034845,
+        "dvPerYearMps": 1.7634475235520974,
+        "measuredCycleDays": 12.378388032407408,
+        "medianRPosDeg": 0.02751289917710853,
+        "name": "Arabsat 5A",
+        "norad": 36745,
+        "theoreticalCycleDays": 16.089219360046112
+      },
+      {
+        "dvPerCycleMps": 0.06040745788743293,
+        "dvPerYearMps": 1.0262989030004184,
+        "measuredCycleDays": 9.97269814236111,
+        "medianRPosDeg": 0.028588513520927616,
+        "name": "Rascom-QAF 1R",
+        "norad": 36831,
+        "theoreticalCycleDays": 21.49843864090721
+      },
+      {
+        "dvPerCycleMps": 0.06169610727758552,
+        "dvPerYearMps": 1.251512778594607,
+        "measuredCycleDays": 7.860408240740741,
+        "medianRPosDeg": 0.024454824887664373,
+        "name": "Yahsat 1A (Al Yah 1)",
+        "norad": 37393,
+        "theoreticalCycleDays": 18.005811501536044
+      },
+      {
+        "dvPerCycleMps": 0.06997209998110447,
+        "dvPerYearMps": 1.6373936888912086,
+        "measuredCycleDays": 10.969711840277778,
+        "medianRPosDeg": 0.024042577436936163,
+        "name": "Astra 1N",
+        "norad": 37775,
+        "theoreticalCycleDays": 15.6085306126989
+      },
+      {
+        "dvPerCycleMps": 0.06959263788389465,
+        "dvPerYearMps": 1.6550182355536722,
+        "measuredCycleDays": 12.777070671296297,
+        "medianRPosDeg": 0.023529252668511802,
+        "name": "Arabsat 5C",
+        "norad": 37810,
+        "theoreticalCycleDays": 15.358568528756367
+      },
+      {
+        "dvPerCycleMps": 0.06711276707517372,
+        "dvPerYearMps": 1.4446390696135587,
+        "measuredCycleDays": 8.01252961226852,
+        "medianRPosDeg": 0.025068898624637015,
+        "name": "Yahsat 1B (Al Yah 2)",
+        "norad": 38245,
+        "theoreticalCycleDays": 16.968209354025305
+      },
+      {
+        "dvPerCycleMps": 0.07448039095591913,
+        "dvPerYearMps": 1.7597092315036054,
+        "measuredCycleDays": 11.960662818287037,
+        "medianRPosDeg": 0.025347043053482565,
+        "name": "Astra 2F",
+        "norad": 38778,
+        "theoreticalCycleDays": 15.459351073247882
+      },
+      {
+        "dvPerCycleMps": 0.06911676724320291,
+        "dvPerYearMps": 1.6864185168312533,
+        "measuredCycleDays": 12.964511203703704,
+        "medianRPosDeg": 0.02277643724082079,
+        "name": "Eutelsat 21B",
+        "norad": 38992,
+        "theoreticalCycleDays": 14.969533946421866
+      },
+      {
+        "dvPerCycleMps": 0.05822858108134464,
+        "dvPerYearMps": 1.2205235085944026,
+        "measuredCycleDays": 11.891215833333334,
+        "medianRPosDeg": 0.022336266641679092,
+        "name": "Eutelsat 7B",
+        "norad": 39163,
+        "theoreticalCycleDays": 17.42530077479137
+      },
+      {
+        "dvPerCycleMps": 0.07168770081077742,
+        "dvPerYearMps": 1.7340247913929654,
+        "measuredCycleDays": 6.077233524305555,
+        "medianRPosDeg": 0.02382968606111291,
+        "name": "Alphasat (Inmarsat-4A F4)",
+        "norad": 39215,
+        "theoreticalCycleDays": 15.100091331510058
+      },
+      {
+        "dvPerCycleMps": 0.0759636052806648,
+        "dvPerYearMps": 1.7608266591565385,
+        "measuredCycleDays": 12.964380694444444,
+        "medianRPosDeg": 0.026349892733962044,
+        "name": "Astra 2E",
+        "norad": 39285,
+        "theoreticalCycleDays": 15.757205108453666
+      },
+      {
+        "dvPerCycleMps": 0.07661680271203232,
+        "dvPerYearMps": 1.7615022169030885,
+        "measuredCycleDays": 12.726160069444445,
+        "medianRPosDeg": 0.026794717004868573,
+        "name": "Astra 5B",
+        "norad": 39617,
+        "theoreticalCycleDays": 15.88660344678374
+      },
+      {
+        "dvPerCycleMps": 0.05605706852818589,
+        "dvPerYearMps": 1.0364102291422415,
+        "measuredCycleDays": 12.819035902777777,
+        "medianRPosDeg": 0.02437886006713219,
+        "name": "Eutelsat 3B (W7 heritage slot)",
+        "norad": 39773,
+        "theoreticalCycleDays": 19.75554052266097
+      },
+      {
+        "dvPerCycleMps": 0.056212782179627295,
+        "dvPerYearMps": 0.9552175745739705,
+        "measuredCycleDays": 9.972912910879629,
+        "medianRPosDeg": 0.026598195677813408,
+        "name": "Measat-3b",
+        "norad": 40147,
+        "theoreticalCycleDays": 21.494284901810012
+      },
+      {
+        "dvPerCycleMps": 0.07675203930754465,
+        "dvPerYearMps": 1.7597175310481483,
+        "measuredCycleDays": 12.056384924768519,
+        "medianRPosDeg": 0.026916662310246586,
+        "name": "Astra 2G",
+        "norad": 40364,
+        "theoreticalCycleDays": 15.930785403031619
+      },
+      {
+        "dvPerCycleMps": 0.07497899975980266,
+        "dvPerYearMps": 1.7455247341413294,
+        "measuredCycleDays": 12.920535474537036,
+        "medianRPosDeg": 0.025896292838064383,
+        "name": "Arabsat 6B (Badr-7)",
+        "norad": 41029,
+        "theoreticalCycleDays": 15.689310570405565
+      },
+      {
+        "dvPerCycleMps": 0.07713214385887185,
+        "dvPerYearMps": 1.725125942194315,
+        "measuredCycleDays": 11.667085474537037,
+        "medianRPosDeg": 0.027729007082371027,
+        "name": "Eutelsat 36C",
+        "norad": 41191,
+        "theoreticalCycleDays": 16.33070076531238
+      },
+      {
+        "dvPerCycleMps": 0.0611325698154268,
+        "dvPerYearMps": 1.306279529638721,
+        "measuredCycleDays": 12.964495156249999,
+        "medianRPosDeg": 0.023003477973110975,
+        "name": "Eutelsat 9B",
+        "norad": 41310,
+        "theoreticalCycleDays": 17.093333102494608
+      },
+      {
+        "dvPerCycleMps": 0.07064815709853545,
+        "dvPerYearMps": 1.733559603264378,
+        "measuredCycleDays": 12.678516828703703,
+        "medianRPosDeg": 0.023149798564645607,
+        "name": "Eutelsat 65 West A",
+        "norad": 41382,
+        "theoreticalCycleDays": 14.885118072461669
+      },
+      {
+        "dvPerCycleMps": 0.05427121868254729,
+        "dvPerYearMps": 1.1143544528563007,
+        "measuredCycleDays": 7.274762465277778,
+        "medianRPosDeg": 0.021252015044947115,
+        "name": "Intelsat 35e",
+        "norad": 42818,
+        "theoreticalCycleDays": 17.7883819398679
+      },
+      {
+        "dvPerCycleMps": 0.07041883534205015,
+        "dvPerYearMps": 1.6791810697263123,
+        "measuredCycleDays": 7.097131701388889,
+        "medianRPosDeg": 0.02374457857439438,
+        "name": "Hellas-Sat 4",
+        "norad": 44034,
+        "theoreticalCycleDays": 15.317275827124448
+      }
+    ]
+  },
+  "derivedFloor": {
+    "construction": "0.5 x sigma_lambda x med(W_m) at the population's modal cycle sample count; W_m is the range of m standard normals and the table is Monte Carlo at a fixed seed",
+    "cyclesWithSamplesAboveTableMax": 1,
+    "firstRegistrationsThreeTimesAsSigmas": 9.604198694229126,
+    "floorRPosDeg": 0.007498763860147651,
+    "medianRangeStatistic": 2.25388765335083,
+    "modalCycleSamples": 5,
+    "rangeTableMMax": 256,
+    "screenAlpha": 0.01,
+    "screenMultipleAtModalM": 2.0325795023848334,
+    "t3AboveDerivedFloor": true,
+    "t3DeadbandDeg": 0.0208,
+    "t3OverFloor": 2.7737905057314935
+  },
+  "executionMode": "cpu",
+  "f2Passive": {
+    "admittedBootstrap": {
+      "ci95": [
+        0.16332404974493642,
+        0.181132103606636
+      ],
+      "median": 0.17112960412302414,
+      "objects": 29
+    },
+    "admittedQuantiles": {
+      "max": 0.2914307690591329,
+      "mean": 0.14593690346785218,
+      "median": 0.16623904491164865,
+      "min": 0.015332839647271612,
+      "n": 617,
+      "p25": 0.09898973621056939,
+      "p75": 0.18966435076706745,
+      "p90": 0.20235456221035975
+    },
+    "contaminated": 0,
+    "cyclesAdmitted": 617,
+    "cyclesPreG6": 633,
+    "rosterObjects": 331,
+    "rosterUsed": 331,
+    "unscreenedBootstrap": {
+      "ci95": [
+        0.1567144229583306,
+        0.18093712345724633
+      ],
+      "median": 0.17112960412302414,
+      "objects": 29
+    },
+    "unscreenedQuantiles": {
+      "max": 0.2914307690591329,
+      "mean": 0.14259272695400946,
+      "median": 0.1631279247056483,
+      "min": 0.008381109637689121,
+      "n": 633,
+      "p25": 0.09474073860288001,
+      "p75": 0.1889451039616148,
+      "p90": 0.20217369724752815
+    }
+  },
+  "gpuNote": "No GPU arm. CPU only; nothing is left to prove later.",
+  "highInclinationCarriers": {
+    "medianRPosDeg": 0.04110372116758754,
+    "n": 17,
+    "norads": [
+      8747,
+      10000,
+      12564,
+      15144,
+      15946,
+      16597,
+      17083,
+      19330,
+      20410,
+      21765,
+      21813,
+      23185,
+      23200,
+      23943,
+      23948,
+      24665,
+      29398
+    ]
+  },
+  "inputs": {
+    "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+    "cadenceJsonl": "b7d594cc4ee57e7f46e54d1696f887b890583af94122bc1b1c9f069885f03f99",
+    "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+    "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f"
+  },
+  "internalCheck_rRateOnRPos": {
+    "ci95": [
+      0.1951701566440916,
+      0.368944396030463
+    ],
+    "objects": 207,
+    "slope": 0.23508233068775125
+  },
+  "jsonlSampling": {
+    "admitted": "every 2th of 41436",
+    "merged": "every 6th of 42478",
+    "note": "systematic sampling, caps chosen to keep the published file comparable in size with the first run's. EVERY cycle is in every statistic above; only the file is thinned.",
+    "passiveF2": "every 1th of 617",
+    "rejected": "every 29th of 143155",
+    "surrogate": "every 42th of 164029"
+  },
+  "maxRssKb": 1379240,
+  "measuredAt": "2026-09-22T19:52:53.193115+00:00",
+  "mergeArm": {
+    "d4SlopeMerged": {
+      "ci95": [
+        0.2640484295286501,
+        0.48838531698462534
+      ],
+      "objects": 207,
+      "slope": 0.4201982832564582
+    },
+    "preG6": {
+      "cycles": 78315,
+      "cyclesInSevenToTwentyEightDays": 192,
+      "label": "merged G3-G5 only",
+      "objectsWithAnyCycle": 207,
+      "objectsWithThreeCycles": 207,
+      "perCycleMedianRatioRPosOverRPred": 2.2898648540032864,
+      "perCycleQuantilesCycleDays": {
+        "max": 230.14741559027777,
+        "mean": 11.255400633315332,
+        "median": 10.613671168981481,
+        "min": 3.000000138888889,
+        "n": 78315,
+        "p25": 6.892737395833333,
+        "p75": 13.277770405092593,
+        "p90": 17.67873568287037
+      },
+      "perCycleQuantilesRPosDeg": {
+        "max": 0.29405328554229904,
+        "mean": 0.023578878679094604,
+        "median": 0.019189901789275154,
+        "min": 0.00042632922010099605,
+        "n": 78315,
+        "p25": 0.012110454843234919,
+        "p75": 0.02848256423018114,
+        "p90": 0.04156748473996501
+      },
+      "perObjectMedianBootstrap": {
+        "ci95": [
+          0.019595827918202247,
+          0.02230538079593103
+        ],
+        "median": 0.02136894127988853,
+        "objects": 207
+      },
+      "perObjectMedianCycleDays": 10.987765243055556,
+      "perObjectMedianRatio": 2.268841216111924,
+      "withinFactorOfTwoOfT3": 194
+    },
+    "registeredPredictions": {
+      "boxWithinTolerance": true,
+      "d4SlopeMovedTowardOne": true,
+      "periodRose": true,
+      "ratioFell": true
+    },
+    "rho": 0.5,
+    "runsMergedQuantiles": {
+      "max": 9.0,
+      "mean": 1.1205397792805372,
+      "median": 1.0,
+      "min": 1.0,
+      "n": 164734,
+      "p25": 1.0,
+      "p75": 1.0,
+      "p90": 1.0
+    },
+    "sensitivities": {
+      "rho0.25": {
+        "cycles": 41564,
+        "cyclesInSevenToTwentyEightDays": 201,
+        "label": "merged rho=0.25",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.835850998714215,
+        "perCycleQuantilesCycleDays": {
+          "max": 230.14741559027777,
+          "mean": 12.100000258067823,
+          "median": 11.318173686342593,
+          "min": 3.000053020833333,
+          "n": 41564,
+          "p25": 7.804885946180556,
+          "p75": 13.67245875,
+          "p90": 18.94901218865741
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.03305415300951914,
+          "median": 0.026945106021756704,
+          "min": 0.015247775616499482,
+          "n": 41564,
+          "p25": 0.02185302643139453,
+          "p75": 0.035704383028330566,
+          "p90": 0.0512480266340008
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.025897060745478484,
+            0.026751854285759435
+          ],
+          "median": 0.026372876866929573,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 11.75282625,
+        "perObjectMedianRatio": 2.9141594914133004,
+        "withinFactorOfTwoOfT3": 199
+      },
+      "rho0.75": {
+        "cycles": 40600,
+        "cyclesInSevenToTwentyEightDays": 200,
+        "label": "merged rho=0.75",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.0009852243956843,
+        "perCycleQuantilesCycleDays": {
+          "max": 261.10072408564815,
+          "mean": 15.625404663202712,
+          "median": 13.136148564814814,
+          "min": 3.000692662037037,
+          "n": 40600,
+          "p25": 10.097746941550927,
+          "p75": 18.18315499710648,
+          "p90": 26.670017041666657
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.03605283404907144,
+          "median": 0.028912392716111235,
+          "min": 0.015247775616499482,
+          "n": 40600,
+          "p25": 0.02301488800570528,
+          "p75": 0.039416608907616446,
+          "p90": 0.05786797553587256
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.027366264726101264,
+            0.028688234660362966
+          ],
+          "median": 0.028048302826643834,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 13.193491539351852,
+        "perObjectMedianRatio": 2.0278517291834746,
+        "withinFactorOfTwoOfT3": 192
+      }
+    },
+    "summary": {
+      "cycles": 42478,
+      "cyclesInSevenToTwentyEightDays": 198,
+      "label": "merged admitted",
+      "objectsWithAnyCycle": 207,
+      "objectsWithThreeCycles": 207,
+      "perCycleMedianRatioRPosOverRPred": 2.6211515223343755,
+      "perCycleQuantilesCycleDays": {
+        "max": 230.14741559027777,
+        "mean": 12.810476077491584,
+        "median": 11.905522673611111,
+        "min": 3.000692662037037,
+        "n": 42478,
+        "p25": 8.277879129050927,
+        "p75": 14.003808070023148,
+        "p90": 20.421167821759266
+      },
+      "perCycleQuantilesRPosDeg": {
+        "max": 0.29405328554229904,
+        "mean": 0.03393643095052182,
+        "median": 0.02746308376059048,
+        "min": 0.015247775616499482,
+        "n": 42478,
+        "p25": 0.022130708050980274,
+        "p75": 0.036721960231835604,
+        "p90": 0.053269640554094264
+      },
+      "perObjectMedianBootstrap": {
+        "ci95": [
+          0.026348713042748884,
+          0.027203518921915304
+        ],
+        "median": 0.026684786431736995,
+        "objects": 207
+      },
+      "perObjectMedianCycleDays": 12.009639467592592,
+      "perObjectMedianRatio": 2.618201012896054,
+      "withinFactorOfTwoOfT3": 197
+    }
+  },
+  "parentCommit": "0a49ba5",
+  "parentRegistration": "docs/t10c-cycle-deadband-preregistration-20260922.md",
+  "periodDiscrimination": {
+    "measuredBoxOverT3": 1.2658562255710373,
+    "measuredPeriodOverT3": 0.833363248181217,
+    "measuredRatioRPosOverRPred": 2.9721383000948904,
+    "predictions": {
+      "M1_one_burn_correctly_segmented": {
+        "boxOverRstar": 1.0,
+        "periodOverTstar": 1.0,
+        "ratio": 1.0
+      },
+      "M2_clean_pair_half_cycle_apart": {
+        "boxOverRstar": 0.25,
+        "note": "a pair halves the cycle AND quarters the box, so R = A T^2/16 is invariant under pairing and a pair cannot move the ratio off 1",
+        "periodOverTstar": 0.5,
+        "ratio": 1.0
+      },
+      "M3_split_by_prominence_filter": {
+        "boxOverRstar": "~ 1",
+        "periodOverTstar": "< 1",
+        "ratio": "> 1, exactly 4 at a vertex split"
+      }
+    },
+    "reading": "THE PERIOD DISCREPANCY IS CYCLE SPLITTING BY THE PROMINENCE FILTER, MEASURED"
+  },
+  "preG6Population": {
+    "cycles": 80677,
+    "cyclesInSevenToTwentyEightDays": 190,
+    "label": "G3-G5 only",
+    "objectsWithAnyCycle": 207,
+    "objectsWithThreeCycles": 207,
+    "perCycleMedianRatioRPosOverRPred": 2.4318053020753334,
+    "perCycleQuantilesCycleDays": {
+      "max": 230.14741559027777,
+      "mean": 10.563481269232787,
+      "median": 10.023034085648149,
+      "min": 3.000000138888889,
+      "n": 80677,
+      "p25": 6.427442974537037,
+      "p75": 12.967215949074074,
+      "p90": 15.818157817129645
+    },
+    "perCycleQuantilesRPosDeg": {
+      "max": 0.2762722765685339,
+      "mean": 0.02217505843420367,
+      "median": 0.018268404070681754,
+      "min": 0.00042632922010099605,
+      "n": 80677,
+      "p25": 0.011429268390308778,
+      "p75": 0.027182131892885764,
+      "p90": 0.03908134717686986
+    },
+    "perObjectMedianBootstrap": {
+      "ci95": [
+        0.01875352224495508,
+        0.021190384827743713
+      ],
+      "median": 0.02030130337771574,
+      "objects": 207
+    },
+    "perObjectMedianCycleDays": 10.422577569444444,
+    "perObjectMedianRatio": 2.3945577532923905,
+    "withinFactorOfTwoOfT3": 191
+  },
+  "primary": {
+    "cycles": 41436,
+    "cyclesInSevenToTwentyEightDays": 201,
+    "label": "primary admitted",
+    "objectsWithAnyCycle": 207,
+    "objectsWithThreeCycles": 207,
+    "perCycleMedianRatioRPosOverRPred": 2.8516676301629857,
+    "perCycleQuantilesCycleDays": {
+      "max": 230.14741559027777,
+      "mean": 11.991364701475703,
+      "median": 11.258619809027778,
+      "min": 3.000053020833333,
+      "n": 41436,
+      "p25": 7.752434444444444,
+      "p75": 13.632644565972223,
+      "p90": 18.71141221064815
+    },
+    "perCycleQuantilesRPosDeg": {
+      "max": 0.2762722765685339,
+      "mean": 0.03269629837553183,
+      "median": 0.026863351539144986,
+      "min": 0.015247775616499482,
+      "n": 41436,
+      "p25": 0.021817091026720803,
+      "p75": 0.035507081205349955,
+      "p90": 0.050433482671474295
+    },
+    "perObjectMedianBootstrap": {
+      "ci95": [
+        0.02572372242920906,
+        0.026666725135079616
+      ],
+      "median": 0.026329809491877576,
+      "objects": 207
+    },
+    "perObjectMedianCycleDays": 11.667085474537037,
+    "perObjectMedianRatio": 2.9721383000948904,
+    "withinFactorOfTwoOfT3": 199
+  },
+  "prominenceSweep": {
+    "k12": {
+      "admitted": {
+        "cycles": 41119,
+        "cyclesInSevenToTwentyEightDays": 193,
+        "label": "k=12 admitted",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 1.9935488525975267,
+        "perCycleQuantilesCycleDays": {
+          "max": 883.5186408333333,
+          "mean": 17.16126696542831,
+          "median": 12.964551296296296,
+          "min": 3.000692662037037,
+          "n": 41119,
+          "p25": 9.90623302662037,
+          "p75": 17.93055902199074,
+          "p90": 28.048366085648155
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.0355070267249225,
+          "median": 0.028931040864121016,
+          "min": 0.015247775616499482,
+          "n": 41119,
+          "p25": 0.02314318580648056,
+          "p75": 0.039202278295676685,
+          "p90": 0.05680566776489189
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.027343204266628618,
+            0.029059332332010968
+          ],
+          "median": 0.027864517463740412,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 13.11610244212963,
+        "perObjectMedianRatio": 1.8947743178329814,
+        "withinFactorOfTwoOfT3": 187
+      },
+      "preG6": {
+        "cycles": 63597,
+        "cyclesInSevenToTwentyEightDays": 195,
+        "label": "k=12 pre-G6",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 1.840874421444166,
+        "perCycleQuantilesCycleDays": {
+          "max": 883.5186408333333,
+          "mean": 15.122738155472007,
+          "median": 12.146442951388888,
+          "min": 3.0005788888888887,
+          "n": 63597,
+          "p25": 8.507986423611111,
+          "p75": 15.159025393518519,
+          "p90": 25.38097006712964
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.0274859638534564,
+          "median": 0.022685510794090646,
+          "min": 0.0005420676511143085,
+          "n": 63597,
+          "p25": 0.015527398118038604,
+          "p75": 0.03254900758899737,
+          "p90": 0.04783855702887365
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.022249741200925044,
+            0.024674679926619092
+          ],
+          "median": 0.02323374542223533,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 12.598851921296296,
+        "perObjectMedianRatio": 1.7972332408358178,
+        "withinFactorOfTwoOfT3": 189
+      }
+    },
+    "k20": {
+      "admitted": {
+        "cycles": 29789,
+        "cyclesInSevenToTwentyEightDays": 145,
+        "label": "k=20 admitted",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 1.4598416180678986,
+        "perCycleQuantilesCycleDays": {
+          "max": 2720.164664097222,
+          "mean": 29.859439269347188,
+          "median": 15.12709414351852,
+          "min": 3.000692662037037,
+          "n": 29789,
+          "p25": 11.949350162037037,
+          "p75": 27.92342537037037,
+          "p90": 58.47899181712971
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.04038147085865769,
+          "median": 0.032774885214085,
+          "min": 0.015367465629260835,
+          "n": 29789,
+          "p25": 0.025644319939608806,
+          "p75": 0.045222425886892736,
+          "p90": 0.06617000888738006
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.03158930712986674,
+            0.034592734184968776
+          ],
+          "median": 0.033159628064836966,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 19.01916230324074,
+        "perObjectMedianRatio": 1.2912738633749865,
+        "withinFactorOfTwoOfT3": 160
+      },
+      "preG6": {
+        "cycles": 36542,
+        "cyclesInSevenToTwentyEightDays": 161,
+        "label": "k=20 pre-G6",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 1.4424455654446335,
+        "perCycleQuantilesCycleDays": {
+          "max": 2720.164664097222,
+          "mean": 26.993560150090484,
+          "median": 14.287446579861111,
+          "min": 3.0005788888888887,
+          "n": 36542,
+          "p25": 10.926983454861112,
+          "p75": 26.58521324363426,
+          "p90": 52.985340195601864
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.03549360941264647,
+          "median": 0.02927995046358589,
+          "min": 0.0005420676511143085,
+          "n": 36542,
+          "p25": 0.021362775663468447,
+          "p75": 0.04126466748514046,
+          "p90": 0.061022402113362524
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.028111886255437923,
+            0.030412687975719166
+          ],
+          "median": 0.02910475834048576,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 16.552860127314815,
+        "perObjectMedianRatio": 1.3090085451371183,
+        "withinFactorOfTwoOfT3": 168
+      }
+    },
+    "k3": {
+      "admitted": {
+        "cycles": 38053,
+        "cyclesInSevenToTwentyEightDays": 201,
+        "label": "k=3 admitted",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 3.0543160830881146,
+        "perCycleQuantilesCycleDays": {
+          "max": 230.14741559027777,
+          "mean": 11.190253796322454,
+          "median": 10.935373530092592,
+          "min": 3.000053020833333,
+          "n": 38053,
+          "p25": 7.229542928240741,
+          "p75": 13.307508171296297,
+          "p90": 16.61121168518519
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.2762722765685339,
+          "mean": 0.032168787750214284,
+          "median": 0.02650685685275178,
+          "min": 0.015247775616499482,
+          "n": 38053,
+          "p25": 0.021614355046494893,
+          "p75": 0.03488585151779944,
+          "p90": 0.04936026791600346
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.02526184983952362,
+            0.026313196021530594
+          ],
+          "median": 0.025861162803346716,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 10.978471863425925,
+        "perObjectMedianRatio": 3.2184628146312297,
+        "withinFactorOfTwoOfT3": 199
+      },
+      "preG6": {
+        "cycles": 76761,
+        "cyclesInSevenToTwentyEightDays": 188,
+        "label": "k=3 pre-G6",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.552001106253162,
+        "perCycleQuantilesCycleDays": {
+          "max": 230.14741559027777,
+          "mean": 9.915105044543019,
+          "median": 9.741580868055555,
+          "min": 3.000000138888889,
+          "n": 76761,
+          "p25": 6.197310555555555,
+          "p75": 12.638917708333333,
+          "p90": 14.296994594907407
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.2762722765685339,
+          "mean": 0.021443622995363124,
+          "median": 0.01767878204509543,
+          "min": 0.00042632922010099605,
+          "n": 76761,
+          "p25": 0.010997899879676254,
+          "p75": 0.026412151013317953,
+          "p90": 0.037776221084016015
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.018414075775279315,
+            0.0205071782454862
+          ],
+          "median": 0.019855485712977128,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 10.01759837962963,
+        "perObjectMedianRatio": 2.541676511535952,
+        "withinFactorOfTwoOfT3": 184
+      }
+    },
+    "k5": {
+      "admitted": {
+        "cycles": 41436,
+        "cyclesInSevenToTwentyEightDays": 201,
+        "label": "k=5 admitted",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.8516676301629857,
+        "perCycleQuantilesCycleDays": {
+          "max": 230.14741559027777,
+          "mean": 11.991364701475703,
+          "median": 11.258619809027778,
+          "min": 3.000053020833333,
+          "n": 41436,
+          "p25": 7.752434444444444,
+          "p75": 13.632644565972223,
+          "p90": 18.71141221064815
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.2762722765685339,
+          "mean": 0.03269629837553183,
+          "median": 0.026863351539144986,
+          "min": 0.015247775616499482,
+          "n": 41436,
+          "p25": 0.021817091026720803,
+          "p75": 0.035507081205349955,
+          "p90": 0.050433482671474295
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.02572372242920906,
+            0.026666725135079616
+          ],
+          "median": 0.026329809491877576,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 11.667085474537037,
+        "perObjectMedianRatio": 2.9721383000948904,
+        "withinFactorOfTwoOfT3": 199
+      },
+      "preG6": {
+        "cycles": 80677,
+        "cyclesInSevenToTwentyEightDays": 190,
+        "label": "k=5 pre-G6",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.4318053020753334,
+        "perCycleQuantilesCycleDays": {
+          "max": 230.14741559027777,
+          "mean": 10.563481269232787,
+          "median": 10.023034085648149,
+          "min": 3.000000138888889,
+          "n": 80677,
+          "p25": 6.427442974537037,
+          "p75": 12.967215949074074,
+          "p90": 15.818157817129645
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.2762722765685339,
+          "mean": 0.02217505843420367,
+          "median": 0.018268404070681754,
+          "min": 0.00042632922010099605,
+          "n": 80677,
+          "p25": 0.011429268390308778,
+          "p75": 0.027182131892885764,
+          "p90": 0.03908134717686986
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.01875352224495508,
+            0.021190384827743713
+          ],
+          "median": 0.02030130337771574,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 10.422577569444444,
+        "perObjectMedianRatio": 2.3945577532923905,
+        "withinFactorOfTwoOfT3": 191
+      }
+    },
+    "k8": {
+      "admitted": {
+        "cycles": 42996,
+        "cyclesInSevenToTwentyEightDays": 200,
+        "label": "k=8 admitted",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.4400270642789303,
+        "perCycleQuantilesCycleDays": {
+          "max": 504.008468599537,
+          "mean": 13.692119153766834,
+          "median": 12.028407806712963,
+          "min": 3.000053020833333,
+          "n": 42996,
+          "p25": 8.610777413194445,
+          "p75": 14.42896997974537,
+          "p90": 22.106356927083333
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.03365320506671351,
+          "median": 0.027596169831300976,
+          "min": 0.015247775616499482,
+          "n": 42996,
+          "p25": 0.022314529995920873,
+          "p75": 0.0368761420611774,
+          "p90": 0.05279194543096466
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.02649310229645252,
+            0.027496379905038282
+          ],
+          "median": 0.026986944472611185,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 12.36920769675926,
+        "perObjectMedianRatio": 2.458961821308381,
+        "withinFactorOfTwoOfT3": 196
+      },
+      "preG6": {
+        "cycles": 75342,
+        "cyclesInSevenToTwentyEightDays": 195,
+        "label": "k=8 pre-G6",
+        "objectsWithAnyCycle": 207,
+        "objectsWithThreeCycles": 207,
+        "perCycleMedianRatioRPosOverRPred": 2.1583950565892187,
+        "perCycleQuantilesCycleDays": {
+          "max": 504.008468599537,
+          "mean": 12.090596816351695,
+          "median": 10.97001217013889,
+          "min": 3.000053020833333,
+          "n": 75342,
+          "p25": 7.09319146412037,
+          "p75": 13.546159620949073,
+          "p90": 19.37481536342593
+        },
+        "perCycleQuantilesRPosDeg": {
+          "max": 0.29405328554229904,
+          "mean": 0.02428146097181473,
+          "median": 0.020111611216515612,
+          "min": 0.00042632922010099605,
+          "n": 75342,
+          "p25": 0.013131423705485812,
+          "p75": 0.02930583192129499,
+          "p90": 0.042499653131637435
+        },
+        "perObjectMedianBootstrap": {
+          "ci95": [
+            0.01988592027089009,
+            0.022483364837462716
+          ],
+          "median": 0.02156825414132868,
+          "objects": 207
+        },
+        "perObjectMedianCycleDays": 11.189381909722222,
+        "perObjectMedianRatio": 2.1000222901265206,
+        "withinFactorOfTwoOfT3": 195
+      }
+    }
+  },
+  "registration": "docs/t10c-cycle-deadband-v2-preregistration-20260922.md",
+  "registrationCommit": "cd2fc78",
+  "roster": {
+    "byRegime": {
+      "GEO": 208,
+      "LEO": 6
+    },
+    "carriers": 214,
+    "geoCarriersWithArchiveHistory": 208
+  },
+  "runtimeProofs": {
+    "aMaxT3Form": 0.0017005994391406812,
+    "aMaxT8aForm": 0.0017006955627927864,
+    "d2OfRangeStatistic": {
+      "10": 3.0726878665951745,
+      "12": 3.253331304886411,
+      "2": 1.12697479379794,
+      "20": 3.7302406736954326,
+      "5": 2.324699668887502
+    },
+    "deadbandAt14dHalfAcceleration": 0.010416171564736672,
+    "deadbandAt14dMaxAcceleration": 0.020832343129473345,
+    "medianOfRangeStatistic": {
+      "12": 3.201399564743042,
+      "20": 3.67978572845459,
+      "5": 2.25388765335083,
+      "8": 2.7869064807891846
+    },
+    "multipleAtAlpha": {
+      "m12_alpha0.001": 1.8971296749548674,
+      "m12_alpha0.01": 1.655899252013179,
+      "m12_alpha0.05": 1.4431934182343096,
+      "m20_alpha0.001": 1.748940984078154,
+      "m20_alpha0.01": 1.533158050918289,
+      "m20_alpha0.05": 1.3621207271671762,
+      "m5_alpha0.001": 2.4516979443570577,
+      "m5_alpha0.01": 2.0325795023848334,
+      "m5_alpha0.05": 1.7075854525683107,
+      "m8_alpha0.001": 2.0852326686675564,
+      "m8_alpha0.01": 1.789725551073805,
+      "m8_alpha0.05": 1.53848382082743
+    },
+    "sigmaRatePropagatedDegPerDay": 0.0001597563823234465,
+    "threeTimesMedianW12AsSigmas": 9.604198694229126
+  },
+  "schema": 1,
+  "seeds": {
+    "bootstrap": 20260922,
+    "draws": 10000,
+    "rangeDraws": 100000,
+    "rangeTable": 20260922,
+    "surrogate": 20260922
+  },
+  "sigmas": {
+    "defect": null,
+    "lambdaMeasuredDegSecondDifferenceMad": 0.0066540706667427025,
+    "lambdaPublishedFirstRunDeg": 0.0066540706667427025,
+    "rateMeasuredDegPerDay": 0.0010905735318057822,
+    "ratePropagatedDegPerDay": 0.0001597563823234465,
+    "rateUsedDegPerDay": 0.0010905735318057822,
+    "segmentsMeasured": 1858
+  },
+  "smokeSwitches": {
+    "maxCarriers": 0,
+    "maxPassives": 0,
+    "note": "both zero in the registered run; any other value means this receipt is an exercise and not the measurement"
+  },
+  "sourceSha256": "67284e4a0dbf50c2fd69a8fb2e71bce2feb8184fb131b5290e2c07fb00c70626",
+  "surrogateD5": {
+    "band": [
+      0.7,
+      1.4
+    ],
+    "construction": "registration \u00a72.1: residuals about the FITTED sawtooth -- a parabola in longitude, a linear ramp in drift rate -- permuted in time",
+    "cycles": 164029,
+    "cyclesPreG6": 73362,
+    "expectedAtModalMDeg": 0.009681590610060537,
+    "medianRPosAtModalMDeg": 0.006115601836450324,
+    "modalSampleCount": 9,
+    "passes": false,
+    "quantilesRPosDeg": {
+      "max": 0.22558316461504546,
+      "mean": 0.0074764682622773405,
+      "median": 0.004399490775913506,
+      "min": 5.467993169361307e-08,
+      "n": 164029,
+      "p25": 0.0018972986400811465,
+      "p75": 0.009034722409744234,
+      "p90": 0.016920402899282122
+    },
+    "rho5": 0.6316732531631064
+  },
+  "track": "T10c v2",
+  "verdict": "MEASURED AND CLAIMABLE; THE INTERVAL EXCLUDES T3's +/-0.0208 deg",
+  "wallSeconds": 714.4275424480438
+}

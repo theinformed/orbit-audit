@@ -1,0 +1,1559 @@
+{
+ "schema": 1,
+ "measuredAt": "2026-09-22T20:11:04.645465+00:00",
+ "registration": "docs/geo-libration-epoch-control-preregistration-20260922.md",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "archive": {
+  "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+  "bytes": 13893615616,
+  "mtimeMs": 1790104836190,
+  "monthRollupSpan": [
+   "1959-01",
+   "2026-09",
+   183408945
+  ]
+ },
+ "extract": {
+  "rowsScanned": 217007154,
+  "rowsKept": 11626494,
+  "objectsKept": 1768,
+  "wallSeconds": 293.49314546585083
+ },
+ "inputs": {
+  "catalogue": "persistent-pairs-20260922.jsonl",
+  "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+  "episodes": 1317,
+  "t8aCatalogue": "proximity-events-20260922.jsonl",
+  "t8aCatalogueSha256": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "t8aEvents": 493
+ },
+ "derivations": {
+  "aDegPerDay2": 0.0017006955627927864,
+  "twoARadPerDay2": 5.936547428958419e-05,
+  "t0Days": 815.4792173265513,
+  "sigmaNDegPerDay": 0.0006038533519066339,
+  "fiveSigmaN": 0.0030192667595331695,
+  "ewBurnStepDegPerDay": 0.011904868939549505,
+  "uStarDeg": 7.345799838852717,
+  "minEpochDays": 56.0,
+  "minEpochSamples": 12,
+  "maxGapDays": 5.0,
+  "maxBaselineSpanDays": 14.0,
+  "halfPeriodSmallAmplitudeDays": 407.73960866327565,
+  "fullPeriodSmallAmplitudeDays": 815.4792173265513
+ },
+ "validation": {
+  "uStarDeg": 7.345799838852717,
+  "uStarDerivation": "5 sigma_n / (A T/2); a keeper inside this displacement of a stable longitude has burns under the measured noise floor",
+  "V_E1": {
+   "objects": 200,
+   "withEpoch": 191,
+   "epochs": 203,
+   "epochDays": 1393571.5199999986,
+   "sampledDays": 1460968.0000000033,
+   "admittedDays": 1393571.5199999986,
+   "turn": 203,
+   "quiet": 0,
+   "withEpochFraction": 0.955,
+   "admittedDayFraction": 0.9538686131386831,
+   "bar": 1.0,
+   "passed": false
+  },
+  "V_E2": {
+   "objects": 200,
+   "withEpoch": 1,
+   "epochs": 10,
+   "epochDays": 3624.350000000002,
+   "sampledDays": 1460985.0000000054,
+   "admittedDays": 3624.350000000002,
+   "turn": 0,
+   "quiet": 10,
+   "withEpochFraction": 0.005,
+   "admittedDayFraction": 0.002480757844878619,
+   "excluded": 199,
+   "excludedFraction": 0.995,
+   "admittedKeepers": [
+    {
+     "index": 64,
+     "slotDeg": -14.658562980454604,
+     "absUSlotDeg": 89.7585629804546,
+     "insideUStar": false
+    }
+   ],
+   "admittedOutsideUStar": 1,
+   "keepersOutsideUStar": 184,
+   "excludedOutsideUStar": 183,
+   "excludedOutsideUStarFraction": 0.9945652173913043,
+   "bar": 1.0,
+   "primaryBarPassed": false,
+   "overallBarPassed": false
+  },
+  "V_E2_maxRamp": {
+   "objects": 200,
+   "withEpoch": 0,
+   "epochs": 0,
+   "epochDays": 0.0,
+   "sampledDays": 1460985.0000000054,
+   "admittedDays": 0.0,
+   "turn": 0,
+   "quiet": 0,
+   "withEpochFraction": 0.0,
+   "admittedDayFraction": 0.0,
+   "excluded": 200,
+   "excludedFraction": 1.0,
+   "admittedKeepers": [],
+   "admittedOutsideUStar": 0,
+   "keepersOutsideUStar": 184,
+   "excludedOutsideUStar": 184,
+   "excludedOutsideUStarFraction": 1.0,
+   "note": "labelled arm: the ramp rate is the maximum triaxial acceleration rather than the acceleration at the object's own slot"
+  },
+  "wallSeconds": 58.1350622177124
+ },
+ "epochWallSeconds": 29.68363666534424,
+ "reference": {
+  "population": 1306,
+  "watchedObjectDays": 8172393,
+  "watchedPairDays": 3324051937,
+  "t8aEvents": 488,
+  "t11Episodes": 1317,
+  "triggerChains": 208962,
+  "t8aRatePerObjectDay": 5.971323209737955e-05,
+  "t11RatePerPairDay": 3.962031956662535e-07,
+  "triggerRatePerObjectDay": 0.025569254929370136,
+  "note": "payload class minus the v1 never-manoeuvred set, on watched days -- days inside a run of element sets with no gap beyond the registered catalogue gap",
+  "stationedObjectDaysForComparison": 3717395
+ },
+ "strata": {
+  "ALL": {
+   "stratum": "ALL",
+   "epochs": 2605,
+   "objects": 297,
+   "epochDays": 517397.7338524652,
+   "epochObjectDays": 517391,
+   "pairEpochDays": 23960622,
+   "epochsInsideUStar": 758,
+   "epochDaysInsideUStar": 130276.07414454858,
+   "medianEpochDays": 111.77678040509272,
+   "readings": {
+    "t8aEvents": {
+     "events": 57,
+     "exposure": 517391,
+     "rate": 0.00011016813203167431,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 1.8449534242596946,
+     "leakRatioCi95": [
+      1.3768713798941006,
+      2.430979360937343
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "t11Episodes": {
+     "events": 6,
+     "exposure": 23960622,
+     "rate": 2.50410861621205e-07,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.6320263550628743,
+     "leakRatioCi95": [
+      0.23152099499517076,
+      1.3793450249125183
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "triggerChains": {
+     "events": 3812,
+     "exposure": 517391,
+     "rate": 0.00736773542639899,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.28814822515364097,
+     "leakRatioCi95": [
+      0.2789923789370591,
+      0.29753072988588714
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 54,
+    "t8aWholeSpan": 7,
+    "t11Overlap": 26
+   }
+  },
+  "TURN": {
+   "stratum": "TURN",
+   "epochs": 163,
+   "objects": 100,
+   "epochDays": 84846.3769043287,
+   "epochObjectDays": 84852,
+   "pairEpochDays": 1221962,
+   "epochsInsideUStar": 42,
+   "epochDaysInsideUStar": 25292.88789049769,
+   "medianEpochDays": 499.8687676620357,
+   "readings": {
+    "t8aEvents": {
+     "events": 15,
+     "exposure": 84852,
+     "rate": 0.00017677839060953188,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 2.9604559056733692,
+     "leakRatioCi95": [
+      1.6441905725844594,
+      4.931528899669517
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 1221962,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      7.630045959919876
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 555,
+     "exposure": 84852,
+     "rate": 0.00654080045255268,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.25580723687961615,
+     "leakRatioCi95": [
+      0.23493903534174163,
+      0.2780345661594738
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 14,
+    "t8aWholeSpan": 6,
+    "t11Overlap": 0
+   }
+  },
+  "QUIET": {
+   "stratum": "QUIET",
+   "epochs": 2442,
+   "objects": 293,
+   "epochDays": 432551.3569481365,
+   "epochObjectDays": 432539,
+   "pairEpochDays": 15517273,
+   "epochsInsideUStar": 716,
+   "epochDaysInsideUStar": 104983.18625405089,
+   "medianEpochDays": 107.93732126157329,
+   "readings": {
+    "t8aEvents": {
+     "events": 42,
+     "exposure": 432539,
+     "rate": 9.710107065490049e-05,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 1.626123176460275,
+     "leakRatioCi95": [
+      1.1571015917621863,
+      2.2309833686005747
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "t11Episodes": {
+     "events": 6,
+     "exposure": 15517273,
+     "rate": 3.8666587872753156e-07,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.9759282180380094,
+     "leakRatioCi95": [
+      0.35749754780644627,
+      2.1298822769638344
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "triggerChains": {
+     "events": 3257,
+     "exposure": 432539,
+     "rate": 0.007529956836262164,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.29449261846159136,
+     "leakRatioCi95": [
+      0.28438888121375144,
+      0.3048664381025235
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 40,
+    "t8aWholeSpan": 1,
+    "t11Overlap": 26
+   }
+  }
+ },
+ "perBlockCadenceArm": {
+  "stratum": "ALL",
+  "epochs": 2118,
+  "objects": 286,
+  "epochDays": 378574.9180330671,
+  "epochObjectDays": 378569,
+  "pairEpochDays": 12157841,
+  "epochsInsideUStar": 628,
+  "epochDaysInsideUStar": 92611.60406332173,
+  "medianEpochDays": 103.05839879050927,
+  "readings": {
+   "t8aEvents": {
+    "events": 26,
+    "exposure": 378569,
+    "rate": 6.867968586968293e-05,
+    "referenceEvents": 488,
+    "referenceExposure": 8172393,
+    "referenceRate": 5.971323209737955e-05,
+    "meaningfulZeroExposure": 16746.706967213115,
+    "leakRatio": 1.1501585738598272,
+    "leakRatioCi95": [
+     0.7437553744001236,
+     1.7060483082107316
+    ],
+    "bar": 0.1,
+    "evaluable": true,
+    "verdict": "LEAKS"
+   },
+   "t11Episodes": {
+    "events": 2,
+    "exposure": 12157841,
+    "rate": 1.6450289159070265e-07,
+    "referenceEvents": 1317,
+    "referenceExposure": 3324051937,
+    "referenceRate": 3.962031956662535e-07,
+    "meaningfulZeroExposure": 2523957.4312832193,
+    "leakRatio": 0.41519829569793176,
+    "leakRatioCi95": [
+     0.05022985307579043,
+     1.5028169695731264
+    ],
+    "bar": 0.1,
+    "evaluable": true,
+    "verdict": "LEAKS"
+   },
+   "triggerChains": {
+    "events": 3018,
+    "exposure": 378569,
+    "rate": 0.007972126613642426,
+    "referenceEvents": 208962,
+    "referenceExposure": 8172393,
+    "referenceRate": 0.025569254929370136,
+    "meaningfulZeroExposure": 39.109469664340885,
+    "leakRatio": 0.31178564395653313,
+    "leakRatioCi95": [
+     0.30068299868899623,
+     0.3231963744713112
+    ],
+    "bar": 0.1,
+    "evaluable": true,
+    "verdict": "LEAKS"
+   }
+  },
+  "secondaryReadings": {
+   "t8aTransferStart": 25,
+   "t8aWholeSpan": 1,
+   "t11Overlap": 13
+  },
+  "note": "sensitivity arm: the cadence threshold applied once per block at 0.10 rather than family-wise over the blocks inside the run"
+ },
+ "v2FlagsInsideAdmittedEpochs": {
+  "count": 0,
+  "note": "labelled addendum: zero by construction, since a v2 flag epoch is inadmissible; printed so the construction is visible rather than assumed"
+ },
+ "V_E4ParitySplit": {
+  "even": {
+   "stratum": "ALL-even",
+   "epochs": 1202,
+   "objects": 143,
+   "epochDays": 236601.6828547453,
+   "epochObjectDays": 236585,
+   "pairEpochDays": 5086802,
+   "epochsInsideUStar": 273,
+   "epochDaysInsideUStar": 45227.59547368051,
+   "medianEpochDays": 111.03263191551014,
+   "readings": {
+    "t8aEvents": {
+     "events": 29,
+     "exposure": 236585,
+     "rate": 0.00012257750914047806,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 2.0527696263464734,
+     "leakRatioCi95": [
+      1.360175306592956,
+      2.9861280159710852
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 5086802,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      1.8329052755101556
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAK-FREE"
+    },
+    "triggerChains": {
+     "events": 1848,
+     "exposure": 236585,
+     "rate": 0.0078111460997104636,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.305489781430361,
+     "leakRatioCi95": [
+      0.2916601365634792,
+      0.31980875525407687
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 31,
+    "t8aWholeSpan": 2,
+    "t11Overlap": 4
+   }
+  },
+  "odd": {
+   "stratum": "ALL-odd",
+   "epochs": 1403,
+   "objects": 154,
+   "epochDays": 280796.05099771987,
+   "epochObjectDays": 280806,
+   "pairEpochDays": 6888299,
+   "epochsInsideUStar": 485,
+   "epochDaysInsideUStar": 85048.47867086808,
+   "medianEpochDays": 112.11465414351915,
+   "readings": {
+    "t8aEvents": {
+     "events": 28,
+     "exposure": 280806,
+     "rate": 9.971296909610193e-05,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 1.6698638742831964,
+     "leakRatioCi95": [
+      1.0980292856807166,
+      2.4440986500041055
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "t11Episodes": {
+     "events": 6,
+     "exposure": 6888299,
+     "rate": 8.710423284471246e-07,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 2.198473757846359,
+     "leakRatioCi95": [
+      0.8053348215783284,
+      4.7979863750846805
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    },
+    "triggerChains": {
+     "events": 1964,
+     "exposure": 280806,
+     "rate": 0.006994152546598007,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.2735375968489473,
+     "leakRatioCi95": [
+      0.2615183206938653,
+      0.28596942175548185
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 23,
+    "t8aWholeSpan": 5,
+    "t11Overlap": 20
+   }
+  },
+  "instabilityFactor": 3.0
+ },
+ "verdict": {
+  "exists": false,
+  "sentence": "a GEO epoch control DOES NOT EXIST",
+  "leakFreeReadings": [],
+  "readingsRegistered": 9,
+  "reason": "leak"
+ },
+ "gates": {
+  "G_E1": {
+   "registeredMeaning": "the epoch rule admits nothing",
+   "admittedEpochs": 2605,
+   "fired": false
+  },
+  "G_E2": {
+   "registeredMeaning": "the exposure cannot support a zero",
+   "anyEvaluableReading": true,
+   "fired": false
+  },
+  "G_E3": {
+   "registeredMeaning": "the control leaks",
+   "fired": true
+  },
+  "G_E4": {
+   "registeredMeaning": "the stratification is degenerate",
+   "turnEpochs": 163,
+   "quietEpochs": 2442,
+   "fired": false
+  },
+  "G_E5": {
+   "registeredMeaning": "the rules do not do what they were derived to do",
+   "vE1": false,
+   "vE2Primary": false,
+   "fired": true
+  },
+  "G_E6": {
+   "registeredMeaning": "the derived blind spot is material",
+   "keepersAdmittedOutsideUStar": 1,
+   "fired": true
+  },
+  "G_E7": {
+   "registeredMeaning": "provenance",
+   "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+   "fired": false
+  }
+ },
+ "diagnostics": {
+  "objects": 1652,
+  "objectsWithCandidateRun": 1276,
+  "candidateRuns": 813376,
+  "rejectedShort": 90972,
+  "rejectedFewSamples": 718377,
+  "rejectedCadence": 1422,
+  "rejectedNoBlock": 0
+ },
+ "postRegistrationDiagnostics": {
+  "label": "post-registration, labelled; enters no gate, no bar and not the verdict",
+  "t8aEventsInsideAdmittedEpochs": [
+   {
+    "approacherNorad": 4353,
+    "approacherName": "NATO 2A",
+    "class": "active",
+    "targetNorad": 26402,
+    "targetName": "ECHOSTAR 6",
+    "arrival": "2005-10-20T09:43:48.300000+00:00",
+    "loiterDays": 36.6692703587963,
+    "impliedUMaxDeg": 5.697958688044637,
+    "medianAbsUDeg": 5.1623343539646385,
+    "epochDays": 139.61947173611043,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22927,
+    "approacherName": "TELSTAR 401",
+    "class": "active",
+    "targetNorad": 24812,
+    "targetName": "GALAXY 25 (TELSTAR 5)",
+    "arrival": "2006-12-27T02:50:10.911000+00:00",
+    "loiterDays": 55.026865810185186,
+    "impliedUMaxDeg": 7.663158167459116,
+    "medianAbsUDeg": 7.016574699592013,
+    "epochDays": 83.76293925926075,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 23670,
+    "approacherName": "TELSTAR 4 (TELSTAR 402R)",
+    "class": "active",
+    "targetNorad": 27854,
+    "targetName": "GALAXY 23 (TELSTAR 13)",
+    "arrival": "2009-12-25T06:17:48.801000+00:00",
+    "loiterDays": 35.150574131944445,
+    "impliedUMaxDeg": 16.4625678278567,
+    "medianAbsUDeg": 11.115235612040749,
+    "epochDays": 476.7661630208331,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 35491,
+    "approacherName": "EWS-G3",
+    "class": "active",
+    "targetNorad": 19483,
+    "targetName": "GSTAR 3",
+    "arrival": "2013-06-06T02:12:46.999000+00:00",
+    "loiterDays": 60.27911530092592,
+    "impliedUMaxDeg": 1.2001737804519306,
+    "medianAbsUDeg": 0.761596874063855,
+    "epochDays": 66.02516746527726,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4353,
+    "approacherName": "NATO 2A",
+    "class": "active",
+    "targetNorad": 28935,
+    "targetName": "ECHOSTAR 10",
+    "arrival": "2015-09-24T02:09:53.752000+00:00",
+    "loiterDays": 64.27306226851852,
+    "impliedUMaxDeg": 5.661709719903035,
+    "medianAbsUDeg": 5.4689157055084365,
+    "epochDays": 66.97174237268337,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4353,
+    "approacherName": "NATO 2A",
+    "class": "active",
+    "targetNorad": 27426,
+    "targetName": "DIRECTV 5 (TEMPO 1)",
+    "arrival": "2015-10-30T08:09:28.066000+00:00",
+    "loiterDays": 36.119103402777775,
+    "impliedUMaxDeg": 5.661709719903035,
+    "medianAbsUDeg": 5.4689157055084365,
+    "epochDays": 66.97174237268337,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 40887,
+    "approacherName": "MUOS 4",
+    "class": "active",
+    "targetNorad": 10294,
+    "targetName": "SIRIO",
+    "arrival": "2016-05-08T01:50:56.210000+00:00",
+    "loiterDays": 30.91614564814815,
+    "impliedUMaxDeg": 1.0475379949148476,
+    "medianAbsUDeg": 0.0957229572448739,
+    "epochDays": 108.70363158564942,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4250,
+    "approacherName": "SKYNET 1",
+    "class": "active",
+    "targetNorad": 38551,
+    "targetName": "ECHOSTAR 17",
+    "arrival": "2017-04-08T17:59:41.929000+00:00",
+    "loiterDays": 30.783397905092592,
+    "impliedUMaxDeg": 2.978861625532871,
+    "medianAbsUDeg": 1.5428208589874544,
+    "epochDays": 258.9246913078714,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4250,
+    "approacherName": "SKYNET 1",
+    "class": "active",
+    "targetNorad": 26624,
+    "targetName": "ANIK F1",
+    "arrival": "2017-05-08T06:06:10.035000+00:00",
+    "loiterDays": 104.26569063657408,
+    "impliedUMaxDeg": 2.978861625532871,
+    "medianAbsUDeg": 1.5428208589874544,
+    "epochDays": 258.9246913078714,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4250,
+    "approacherName": "SKYNET 1",
+    "class": "active",
+    "targetNorad": 39127,
+    "targetName": "ANIK G1",
+    "arrival": "2017-05-08T06:06:10.035000+00:00",
+    "loiterDays": 110.11366819444444,
+    "impliedUMaxDeg": 2.978861625532871,
+    "medianAbsUDeg": 1.5428208589874544,
+    "epochDays": 258.9246913078714,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4250,
+    "approacherName": "SKYNET 1",
+    "class": "active",
+    "targetNorad": 28868,
+    "targetName": "ANIK F1-R",
+    "arrival": "2017-05-10T12:37:15.151000+00:00",
+    "loiterDays": 97.45792525462963,
+    "impliedUMaxDeg": 2.978861625532871,
+    "medianAbsUDeg": 1.5428208589874544,
+    "epochDays": 258.9246913078714,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 5588,
+    "approacherName": "OPS 9432 (DSCS 2-2)",
+    "class": "active",
+    "targetNorad": 41591,
+    "targetName": "BRISAT",
+    "arrival": "2017-10-17T10:58:44.973000+00:00",
+    "loiterDays": 37.246846284722224,
+    "impliedUMaxDeg": 75.43750721674121,
+    "medianAbsUDeg": 73.79584103695234,
+    "epochDays": 112.72113912037094,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22911,
+    "approacherName": "SOLIDARIDAD 1",
+    "class": "active",
+    "targetNorad": 25949,
+    "targetName": "TELSTAR 12 (ORION 2)",
+    "arrival": "2018-01-25T11:00:37.180000+00:00",
+    "loiterDays": 64.06358936342592,
+    "impliedUMaxDeg": 4.62508244842344,
+    "medianAbsUDeg": 3.011327187082145,
+    "epochDays": 276.8042519328701,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 20643,
+    "approacherName": "INSAT 1D",
+    "class": "active",
+    "targetNorad": 41103,
+    "targetName": "CHINASAT 1C",
+    "arrival": "2018-02-12T21:33:39.718000+00:00",
+    "loiterDays": 44.01739563657407,
+    "impliedUMaxDeg": 7.614169959674201,
+    "medianAbsUDeg": 3.9496000562735105,
+    "epochDays": 474.7455348263902,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 36131,
+    "targetName": "DIRECTV 12",
+    "arrival": "2018-08-08T20:40:47.778000+00:00",
+    "loiterDays": 32.78709313657407,
+    "impliedUMaxDeg": 2.0457358283674827,
+    "medianAbsUDeg": 1.3562824123010273,
+    "epochDays": 162.21694614583248,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 11669,
+    "approacherName": "OPS 6393 (FLTSATCOM 3)",
+    "class": "active",
+    "targetNorad": 38093,
+    "targetName": "MUOS 1",
+    "arrival": "2018-12-10T16:25:22.825000+00:00",
+    "loiterDays": 35.391951875,
+    "impliedUMaxDeg": 86.13526493814277,
+    "medianAbsUDeg": 49.94197553707323,
+    "epochDays": 539.3385281134251,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 11669,
+    "approacherName": "OPS 6393 (FLTSATCOM 3)",
+    "class": "active",
+    "targetNorad": 38978,
+    "targetName": "YAMAL 300K",
+    "arrival": "2018-12-13T00:23:02.926000+00:00",
+    "loiterDays": 31.552717488425927,
+    "impliedUMaxDeg": 86.13526493814277,
+    "medianAbsUDeg": 49.94197553707323,
+    "epochDays": 539.3385281134251,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 23448,
+    "approacherName": "RADUGA 32",
+    "class": "active",
+    "targetNorad": 39375,
+    "targetName": "RADUGA 1M-3",
+    "arrival": "2019-01-19T12:06:43.155000+00:00",
+    "loiterDays": 49.103258958333335,
+    "impliedUMaxDeg": 5.990240339699753,
+    "medianAbsUDeg": 3.6612514592096943,
+    "epochDays": 453.8115658912029,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 22112,
+    "approacherName": "COSMOS 2209",
+    "class": "active",
+    "targetNorad": 38978,
+    "targetName": "YAMAL 300K",
+    "arrival": "2019-05-28T11:59:09.765000+00:00",
+    "loiterDays": 31.401653125,
+    "impliedUMaxDeg": 82.91276365045238,
+    "medianAbsUDeg": 49.78444429439543,
+    "epochDays": 539.3665056134269,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22927,
+    "approacherName": "TELSTAR 401",
+    "class": "active",
+    "targetNorad": 41893,
+    "targetName": "ECHOSTAR 19",
+    "arrival": "2019-08-01T06:49:42.693000+00:00",
+    "loiterDays": 61.300445833333335,
+    "impliedUMaxDeg": 8.847039066554899,
+    "medianAbsUDeg": 5.617647870945177,
+    "epochDays": 890.0009560300932,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 22927,
+    "approacherName": "TELSTAR 401",
+    "class": "active",
+    "targetNorad": 33376,
+    "targetName": "GALAXY 19",
+    "arrival": "2019-08-09T10:22:42.733000+00:00",
+    "loiterDays": 41.19791658564815,
+    "impliedUMaxDeg": 8.847039066554899,
+    "medianAbsUDeg": 5.617647870945177,
+    "epochDays": 890.0009560300932,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 23846,
+    "targetName": "MSAT M1",
+    "arrival": "2019-11-10T08:07:35.545000+00:00",
+    "loiterDays": 30.873999814814816,
+    "impliedUMaxDeg": 3.117359219518744,
+    "medianAbsUDeg": 1.830129716891804,
+    "epochDays": 505.6185675810193,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 13974,
+    "approacherName": "RADUGA 12",
+    "class": "active",
+    "targetNorad": 39237,
+    "targetName": "AMOS 4",
+    "arrival": "2020-05-21T06:22:42.834000+00:00",
+    "loiterDays": 33.8328978125,
+    "impliedUMaxDeg": 11.645365464024486,
+    "medianAbsUDeg": 7.737385476745686,
+    "epochDays": 388.9291458912048,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22911,
+    "approacherName": "SOLIDARIDAD 1",
+    "class": "active",
+    "targetNorad": 25949,
+    "targetName": "TELSTAR 12 (ORION 2)",
+    "arrival": "2020-07-30T14:14:44.134000+00:00",
+    "loiterDays": 70.06931542824074,
+    "impliedUMaxDeg": 4.596017872627909,
+    "medianAbsUDeg": 3.0291522268991855,
+    "epochDays": 499.1752607986127,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 14725,
+    "approacherName": "RADUGA 14",
+    "class": "active",
+    "targetNorad": 33463,
+    "targetName": "FENGYUN 2E",
+    "arrival": "2020-08-06T21:02:08.011000+00:00",
+    "loiterDays": 43.14716099537037,
+    "impliedUMaxDeg": 12.694054223122707,
+    "medianAbsUDeg": 10.913902771356021,
+    "epochDays": 100.11988157407541,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22694,
+    "approacherName": "HGS 4 (GALAXY 4)",
+    "class": "active",
+    "targetNorad": 38098,
+    "targetName": "INTELSAT 22",
+    "arrival": "2020-08-15T20:41:41.253000+00:00",
+    "loiterDays": 37.97298256944445,
+    "impliedUMaxDeg": 3.988885240102995,
+    "medianAbsUDeg": 2.382919045446812,
+    "epochDays": 1041.171914999999,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8746,
+    "approacherName": "LES 8",
+    "class": "active",
+    "targetNorad": 40663,
+    "targetName": "DIRECTV 15",
+    "arrival": "2020-08-25T12:26:00.295000+00:00",
+    "loiterDays": 53.57064290509259,
+    "impliedUMaxDeg": 2.0880866337375683,
+    "medianAbsUDeg": 1.3207850587032794,
+    "epochDays": 257.8865680324052,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 43645,
+    "approacherName": "FENGYUN 2H DEB",
+    "class": "passive",
+    "targetNorad": 32478,
+    "targetName": "EXPRESS AM-33",
+    "arrival": "2020-09-11T18:08:01.615000+00:00",
+    "loiterDays": 30.937975266203704,
+    "impliedUMaxDeg": 23.10968118277287,
+    "medianAbsUDeg": 15.35154945087956,
+    "epochDays": 169.4837320138904,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 8746,
+    "approacherName": "LES 8",
+    "class": "active",
+    "targetNorad": 31862,
+    "targetName": "DIRECTV 10",
+    "arrival": "2020-09-13T05:03:03.184000+00:00",
+    "loiterDays": 77.06356103009259,
+    "impliedUMaxDeg": 2.0880866337375683,
+    "medianAbsUDeg": 1.3207850587032794,
+    "epochDays": 257.8865680324052,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 22694,
+    "approacherName": "HGS 4 (GALAXY 4)",
+    "class": "active",
+    "targetNorad": 38098,
+    "targetName": "INTELSAT 22",
+    "arrival": "2020-09-28T09:30:42.520000+00:00",
+    "loiterDays": 40.442363506944446,
+    "impliedUMaxDeg": 3.988885240102995,
+    "medianAbsUDeg": 2.382919045446812,
+    "epochDays": 1041.171914999999,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 36131,
+    "targetName": "DIRECTV 12",
+    "arrival": "2021-03-28T11:55:14.782000+00:00",
+    "loiterDays": 50.82379665509259,
+    "impliedUMaxDeg": 3.6429766996140613,
+    "medianAbsUDeg": 1.7443698866840407,
+    "epochDays": 461.48435087962935,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 20693,
+    "approacherName": "COSMOS 2085",
+    "class": "active",
+    "targetNorad": 41121,
+    "targetName": "COSMOS 2513",
+    "arrival": "2021-05-24T04:54:42.489000+00:00",
+    "loiterDays": 46.025001851851854,
+    "impliedUMaxDeg": 6.119592112120272,
+    "medianAbsUDeg": 3.395831158538897,
+    "epochDays": 954.3196486689812,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 14867,
+    "approacherName": "COSMOS 1546",
+    "class": "active",
+    "targetNorad": 41103,
+    "targetName": "CHINASAT 1C",
+    "arrival": "2021-08-01T10:27:31.583000+00:00",
+    "loiterDays": 41.271208171296294,
+    "impliedUMaxDeg": 6.255068073521727,
+    "medianAbsUDeg": 3.5479113893322847,
+    "epochDays": 273.26356112268695,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 25880,
+    "approacherName": "TELKOM 1",
+    "class": "active",
+    "targetNorad": 37606,
+    "targetName": "ST 2",
+    "arrival": "2021-09-26T12:47:42.672000+00:00",
+    "loiterDays": 32.54619731481481,
+    "impliedUMaxDeg": 13.692961047143488,
+    "medianAbsUDeg": 8.251355657654244,
+    "epochDays": 330.9545107060185,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 14114,
+    "approacherName": "SL-12 R/B(2)",
+    "class": "passive",
+    "targetNorad": 40875,
+    "targetName": "EUTE 8 WEST B",
+    "arrival": "2021-12-18T07:13:18.949000+00:00",
+    "loiterDays": 31.07646153935185,
+    "impliedUMaxDeg": 83.25130310862322,
+    "medianAbsUDeg": 79.68674586523323,
+    "epochDays": 416.78650011574064,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 7547,
+    "approacherName": "SKYNET 2B",
+    "class": "active",
+    "targetNorad": 21789,
+    "targetName": "COSMOS 2172",
+    "arrival": "2022-04-27T02:01:42.795000+00:00",
+    "loiterDays": 33.52194847222222,
+    "impliedUMaxDeg": 75.71601830971974,
+    "medianAbsUDeg": 54.001659888406095,
+    "epochDays": 665.9864930439835,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 28094,
+    "approacherName": "YAMAL 201",
+    "class": "active",
+    "targetNorad": 33051,
+    "targetName": "CHINASAT 9",
+    "arrival": "2022-09-02T10:32:17.606000+00:00",
+    "loiterDays": 30.06116195601852,
+    "impliedUMaxDeg": 18.269235845783026,
+    "medianAbsUDeg": 11.869523211155837,
+    "epochDays": 368.93949372685165,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22911,
+    "approacherName": "SOLIDARIDAD 1",
+    "class": "active",
+    "targetNorad": 26624,
+    "targetName": "ANIK F1",
+    "arrival": "2023-01-28T23:04:29.928000+00:00",
+    "loiterDays": 81.60079888888889,
+    "impliedUMaxDeg": 4.661725767103027,
+    "medianAbsUDeg": 2.7643246098161285,
+    "epochDays": 919.8721619097232,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 22911,
+    "approacherName": "SOLIDARIDAD 1",
+    "class": "active",
+    "targetNorad": 27632,
+    "targetName": "NIMIQ 2",
+    "arrival": "2023-01-29T12:21:23.099000+00:00",
+    "loiterDays": 82.09967043981482,
+    "impliedUMaxDeg": 4.661725767103027,
+    "medianAbsUDeg": 2.7643246098161285,
+    "epochDays": 919.8721619097232,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 26394,
+    "approacherName": "COSMOS 2371",
+    "class": "active",
+    "targetNorad": 45986,
+    "targetName": "EXPRESS 80",
+    "arrival": "2023-05-02T04:00:45.305000+00:00",
+    "loiterDays": 42.41146085648148,
+    "impliedUMaxDeg": 4.85259561442867,
+    "medianAbsUDeg": 3.2060008089468113,
+    "epochDays": 351.0973100810188,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 26394,
+    "approacherName": "COSMOS 2371",
+    "class": "active",
+    "targetNorad": 45344,
+    "targetName": "BEIDOU 3 G2",
+    "arrival": "2023-05-06T14:04:31.085000+00:00",
+    "loiterDays": 31.110956886574073,
+    "impliedUMaxDeg": 4.85259561442867,
+    "medianAbsUDeg": 3.2060008089468113,
+    "epochDays": 351.0973100810188,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 37748,
+    "targetName": "SES 3",
+    "arrival": "2023-09-01T11:54:55.857000+00:00",
+    "loiterDays": 31.12930920138889,
+    "impliedUMaxDeg": 2.3625636077166243,
+    "medianAbsUDeg": 1.6856515247952188,
+    "epochDays": 235.9152776851879,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 40663,
+    "targetName": "DIRECTV 15",
+    "arrival": "2023-09-24T11:28:06.352000+00:00",
+    "loiterDays": 96.17672435185185,
+    "impliedUMaxDeg": 2.3625636077166243,
+    "medianAbsUDeg": 1.6856515247952188,
+    "epochDays": 235.9152776851879,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 8747,
+    "approacherName": "LES 9",
+    "class": "active",
+    "targetNorad": 31862,
+    "targetName": "DIRECTV 10",
+    "arrival": "2023-10-17T10:01:48.762000+00:00",
+    "loiterDays": 55.199907280092596,
+    "impliedUMaxDeg": 2.3625636077166243,
+    "medianAbsUDeg": 1.6856515247952188,
+    "epochDays": 235.9152776851879,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 25880,
+    "approacherName": "TELKOM 1",
+    "class": "active",
+    "targetNorad": 37606,
+    "targetName": "ST 2",
+    "arrival": "2023-10-17T21:56:17.490000+00:00",
+    "loiterDays": 32.965669247685184,
+    "impliedUMaxDeg": 13.378106197463607,
+    "medianAbsUDeg": 12.114583604903515,
+    "epochDays": 107.58121746527831,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 4250,
+    "approacherName": "SKYNET 1",
+    "class": "active",
+    "targetNorad": 38551,
+    "targetName": "ECHOSTAR 17",
+    "arrival": "2024-10-03T20:59:49.138000+00:00",
+    "loiterDays": 31.13048017361111,
+    "impliedUMaxDeg": 3.064403645419246,
+    "medianAbsUDeg": 1.5950216089732407,
+    "epochDays": 599.9809073726829,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 49330,
+    "approacherName": "SJ-21",
+    "class": "active",
+    "targetNorad": 41879,
+    "targetName": "WGS 8 (USA 272)",
+    "arrival": "2024-11-03T15:15:35.444000+00:00",
+    "loiterDays": 39.05477520833333,
+    "impliedUMaxDeg": 89.1302838143,
+    "medianAbsUDeg": 61.90770642734017,
+    "epochDays": 305.85019481481504,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 5587,
+    "approacherName": "OPS 9431 (DSCS 2-1)",
+    "class": "active",
+    "targetNorad": 49817,
+    "targetName": "STPSAT-6",
+    "arrival": "2024-12-14T11:32:28.325000+00:00",
+    "loiterDays": 38.3919268287037,
+    "impliedUMaxDeg": 7.244359865326923,
+    "medianAbsUDeg": 4.833121495320199,
+    "epochDays": 500.2204705902768,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 32478,
+    "approacherName": "EXPRESS AM-33",
+    "class": "active",
+    "targetNorad": 28899,
+    "targetName": "INMARSAT 4-F2",
+    "arrival": "2025-01-26T14:37:42.799000+00:00",
+    "loiterDays": 33.225647199074075,
+    "impliedUMaxDeg": 86.04153778579858,
+    "medianAbsUDeg": 62.58140161679421,
+    "epochDays": 884.7947200810195,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 2717,
+    "approacherName": "INTELSAT 2-F3",
+    "class": "active",
+    "targetNorad": 40875,
+    "targetName": "EUTE 8 WEST B",
+    "arrival": "2025-03-19T08:42:42.656000+00:00",
+    "loiterDays": 72.22096574074074,
+    "impliedUMaxDeg": 89.0748449093315,
+    "medianAbsUDeg": 76.6995414259396,
+    "epochDays": 502.59197664351814,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 32500,
+    "approacherName": "WINDS (KIZUNA)",
+    "class": "active",
+    "targetNorad": 36830,
+    "targetName": "NILESAT 201",
+    "arrival": "2025-08-31T05:43:38.338000+00:00",
+    "loiterDays": 69.57668359953703,
+    "impliedUMaxDeg": 89.60586105243242,
+    "medianAbsUDeg": 74.09753616854331,
+    "epochDays": 486.3759875810174,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 32500,
+    "approacherName": "WINDS (KIZUNA)",
+    "class": "active",
+    "targetNorad": 52817,
+    "targetName": "NILESAT 301",
+    "arrival": "2025-09-01T05:15:38.752000+00:00",
+    "loiterDays": 30.421283900462964,
+    "impliedUMaxDeg": 89.60586105243242,
+    "medianAbsUDeg": 74.09753616854331,
+    "epochDays": 486.3759875810174,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22694,
+    "approacherName": "HGS 4 (GALAXY 4)",
+    "class": "active",
+    "targetNorad": 39500,
+    "targetName": "THAICOM 6",
+    "arrival": "2025-09-09T19:27:27.499000+00:00",
+    "loiterDays": 31.33757701388889,
+    "impliedUMaxDeg": 4.164787046645376,
+    "medianAbsUDeg": 2.5967887538746197,
+    "epochDays": 479.6375493518499,
+    "stratum": "TURN"
+   },
+   {
+    "approacherNorad": 32500,
+    "approacherName": "WINDS (KIZUNA)",
+    "class": "active",
+    "targetNorad": 52817,
+    "targetName": "NILESAT 301",
+    "arrival": "2025-10-02T02:32:38.781000+00:00",
+    "loiterDays": 37.70931736111111,
+    "impliedUMaxDeg": 89.60586105243242,
+    "medianAbsUDeg": 74.09753616854331,
+    "epochDays": 486.3759875810174,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22694,
+    "approacherName": "HGS 4 (GALAXY 4)",
+    "class": "active",
+    "targetNorad": 41552,
+    "targetName": "THAICOM 8",
+    "arrival": "2025-10-21T13:35:21.415000+00:00",
+    "loiterDays": 33.60534586805556,
+    "impliedUMaxDeg": 3.9509912973380983,
+    "medianAbsUDeg": 3.3693753756589615,
+    "epochDays": 85.83013524305352,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 22694,
+    "approacherName": "HGS 4 (GALAXY 4)",
+    "class": "active",
+    "targetNorad": 39500,
+    "targetName": "THAICOM 6",
+    "arrival": "2025-10-24T03:12:51.628000+00:00",
+    "loiterDays": 37.815148379629626,
+    "impliedUMaxDeg": 3.9509912973380983,
+    "medianAbsUDeg": 3.3693753756589615,
+    "epochDays": 85.83013524305352,
+    "stratum": "QUIET"
+   },
+   {
+    "approacherNorad": 25880,
+    "approacherName": "TELKOM 1",
+    "class": "active",
+    "targetNorad": 37606,
+    "targetName": "ST 2",
+    "arrival": "2025-11-07T01:12:41.652000+00:00",
+    "loiterDays": 36.91122618055556,
+    "impliedUMaxDeg": 13.84697242895395,
+    "medianAbsUDeg": 9.549021235700735,
+    "epochDays": 361.3921348611111,
+    "stratum": "QUIET"
+   }
+  ],
+  "leakByImpliedAmplitudeBand": [
+   {
+    "impliedUMaxDegFrom": 0.0,
+    "impliedUMaxDegTo": 1.0,
+    "epochs": 48,
+    "objects": 10,
+    "epochObjectDays": 8120,
+    "t8aEvents": 0,
+    "peakRateDegPerDay": 0.007704508200735847,
+    "daysToCrossPointOneDegAtPeakRate": 12.979413791843216,
+    "reading": {
+     "events": 0,
+     "exposure": 8120,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      7.6367811369532
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    }
+   },
+   {
+    "impliedUMaxDegFrom": 1.0,
+    "impliedUMaxDegTo": 5.0,
+    "epochs": 336,
+    "objects": 59,
+    "epochObjectDays": 59250,
+    "t8aEvents": 26,
+    "peakRateDegPerDay": 0.03847561865772562,
+    "daysToCrossPointOneDegAtPeakRate": 2.5990485270578163,
+    "reading": {
+     "events": 26,
+     "exposure": 59250,
+     "rate": 0.00043881856540084387,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 7.348765926540776,
+     "leakRatioCi95": [
+      4.752113558333846,
+      10.90054011799204
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   {
+    "impliedUMaxDegFrom": 5.0,
+    "impliedUMaxDegTo": 20.0,
+    "epochs": 462,
+    "objects": 60,
+    "epochObjectDays": 89820,
+    "t8aEvents": 18,
+    "peakRateDegPerDay": 0.15098760211314563,
+    "daysToCrossPointOneDegAtPeakRate": 0.6623060344058115,
+    "reading": {
+     "events": 18,
+     "exposure": 89820,
+     "rate": 0.0002004008016032064,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 3.35605350044351,
+     "leakRatioCi95": [
+      1.9722665487701028,
+      5.360708505742224
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   {
+    "impliedUMaxDegFrom": 20.0,
+    "impliedUMaxDegTo": 90.0,
+    "epochs": 1759,
+    "objects": 198,
+    "epochObjectDays": 360201,
+    "t8aEvents": 13,
+    "peakRateDegPerDay": 0.4414582154284887,
+    "daysToCrossPointOneDegAtPeakRate": 0.22652200481293092,
+    "reading": {
+     "events": 13,
+     "exposure": 360201,
+     "rate": 3.6090960324929693e-05,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.6044047367269122,
+     "leakRatioCi95": [
+      0.3195114943452971,
+      1.0433267706951477
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   }
+  ],
+  "t11EpisodesInsideAdmittedEpochs": [
+   {
+    "a": 15677,
+    "b": 19483,
+    "nameA": "GSTAR 1",
+    "nameB": "GSTAR 3",
+    "start": "2005-05-04T18:23:38.704000+00:00",
+    "dwellDays": 183.5838102777778,
+    "impliedUMaxDegA": 1.24567169933107,
+    "impliedUMaxDegB": 1.2252656082585776,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   },
+   {
+    "a": 15677,
+    "b": 19483,
+    "nameA": "GSTAR 1",
+    "nameB": "GSTAR 3",
+    "start": "2016-05-14T14:58:05.784000+00:00",
+    "dwellDays": 67.89257091435185,
+    "impliedUMaxDegA": 0.9246884260803664,
+    "impliedUMaxDegB": 0.8714017808909102,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   },
+   {
+    "a": 15677,
+    "b": 19483,
+    "nameA": "GSTAR 1",
+    "nameB": "GSTAR 3",
+    "start": "2021-09-02T06:24:36.861000+00:00",
+    "dwellDays": 62.3380946875,
+    "impliedUMaxDegA": 1.0156255476114666,
+    "impliedUMaxDegB": 0.956018468176823,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   },
+   {
+    "a": 15677,
+    "b": 19483,
+    "nameA": "GSTAR 1",
+    "nameB": "GSTAR 3",
+    "start": "2023-01-13T11:26:37.383000+00:00",
+    "dwellDays": 59.89084712962963,
+    "impliedUMaxDegA": 1.0156255476114666,
+    "impliedUMaxDegB": 0.956018468176823,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   },
+   {
+    "a": 15677,
+    "b": 19483,
+    "nameA": "GSTAR 1",
+    "nameB": "GSTAR 3",
+    "start": "2024-02-23T08:47:52.641000+00:00",
+    "dwellDays": 95.7313904050926,
+    "impliedUMaxDegA": 0.9352572471327616,
+    "impliedUMaxDegB": 1.0074866890222225,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   },
+   {
+    "a": 3029,
+    "b": 19483,
+    "nameA": "ATS 3",
+    "nameB": "GSTAR 3",
+    "start": "2022-09-05T15:04:44.619000+00:00",
+    "dwellDays": 81.0010130787037,
+    "impliedUMaxDegA": 1.2484004008156357,
+    "impliedUMaxDegB": 0.956018468176823,
+    "stratumA": "QUIET",
+    "stratumB": "QUIET"
+   }
+  ],
+  "classOfAdmittedObjects": {
+   "active": 266,
+   "passive": 30,
+   "unknown": 1
+  },
+  "blindBandCompleted": {
+   "registeredDerivation": "section 3.3 solved |sin 2u| > ratio for u near 0 only",
+   "theAccelerationAlsoVanishesAt": 90.0,
+   "ratio": 0.25361612755792523,
+   "bandNearStableDeg": [
+    0.0,
+    7.345799838852717
+   ],
+   "bandNearUnstableDeg": [
+    82.65420016114729,
+    90.0
+   ],
+   "fractionOfLongitudeInEitherBand": 0.16323999641894926
+  }
+ },
+ "sourceSha256": {
+  "tools/geo_epoch_control.py": "37cb34918b5e6df1b852db50107d5f598cb34010d775ffca305dc918b3dd40a8"
+ },
+ "wallSeconds": 108.27185368537903
+}

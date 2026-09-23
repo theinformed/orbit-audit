@@ -1,0 +1,337 @@
+{
+  "accelerationCheck_aCycleOnADerived": {
+    "ci95": [
+      0.32013280925819165,
+      1.094006991494894
+    ],
+    "objects": 136,
+    "slope": 0.9216961559571433
+  },
+  "acceptance": {
+    "D1_power": true,
+    "D2_floorSeparation": true,
+    "D2_isCircular": "REGISTRATION DEFECT: screen G6 already requires R_pos >= 3 x the F1 floor, so the median of the survivors cannot fail D2. D2 as registered is vacuous and is reported as such; the substantive question is whether the TARGET box lies above the floor, which is what floorDerivedElementNoise answers.",
+    "D3_notNaturalLibration": true,
+    "D4_internalAgreement": false
+  },
+  "cpuSeconds": 383.91346000000004,
+  "cyclePeriod": {
+    "perCycleQuantiles": {
+      "max": 230.14741559027777,
+      "mean": 25.61894114202274,
+      "median": 18.83614689814815,
+      "min": 3.0095921875,
+      "n": 732,
+      "p25": 10.970152653356482,
+      "p75": 32.49732219907408,
+      "p90": 47.819473194444434
+    },
+    "perObjectMedianQuantiles": {
+      "max": 57.34065857638889,
+      "mean": 18.132169784347766,
+      "median": 15.734414001736113,
+      "min": 4.936822065972223,
+      "n": 68,
+      "p25": 12.346626536458334,
+      "p75": 22.822722552083334,
+      "p90": 31.24442627662038
+    },
+    "withinSevenToTwentyEightDays": 54
+  },
+  "cycles": {
+    "found": 184591,
+    "objectsWithAnyCycle": 136,
+    "objectsWithThreeCycles": 68,
+    "resolved": 732,
+    "screenCounts": {
+      "G3-too-few-samples": 95110,
+      "G4-too-short": 78210,
+      "G6-at-floor": 183360
+    }
+  },
+  "deadband": {
+    "medianRatioToOwnPrediction": 6.512684586605994,
+    "ofCarriers": 68,
+    "perCycleQuantiles": {
+      "max": 0.2762722765685339,
+      "mean": 0.14488555313707857,
+      "median": 0.13294078133655152,
+      "min": 0.09993005865077897,
+      "n": 732,
+      "p25": 0.11247252952410203,
+      "p75": 0.17114126919103967,
+      "p90": 0.20009186749296326
+    },
+    "perObjectMedianBootstrap": {
+      "ci95": [
+        0.11632109461351092,
+        0.12537755670545625
+      ],
+      "median": 0.11803769212849091,
+      "objects": 68
+    },
+    "perObjectMedianQuantiles": {
+      "max": 0.19471910390556957,
+      "mean": 0.12738577380266547,
+      "median": 0.11803769212849091,
+      "min": 0.10344078037940463,
+      "n": 68,
+      "p25": 0.11275138032035148,
+      "p75": 0.13590721206093814,
+      "p90": 0.15934936932671706
+    },
+    "t3DeadbandDeg": 0.0208,
+    "withinFactorOfTwoOfT3": 0
+  },
+  "deltaVCommercialCivilOnly": {
+    "note": "Computed ONLY for objects in data/propulsion-catalog-v1.json, policy commercial-civil-only. Every other carrier in this receipt carries angles and times only.",
+    "objects": 8,
+    "rows": [
+      {
+        "dvPerCycleMps": 0.1057184536349383,
+        "dvPerYearMps": 0.7511253989315203,
+        "measuredCycleDays": 24.165028935185184,
+        "medianRPosDeg": 0.11963919326763417,
+        "name": "Intelsat 605",
+        "norad": 21653,
+        "theoreticalCycleDays": 51.40774795405582
+      },
+      {
+        "dvPerCycleMps": 0.14882349853310461,
+        "dvPerYearMps": 1.6545826088765718,
+        "measuredCycleDays": 13.982260538194446,
+        "medianRPosDeg": 0.10763137383871779,
+        "name": "Intelsat 601",
+        "norad": 21765,
+        "theoreticalCycleDays": 32.852867271537626
+      },
+      {
+        "dvPerCycleMps": 0.1668690973396101,
+        "dvPerYearMps": 1.714130986531054,
+        "measuredCycleDays": 15.986989045138888,
+        "medianRPosDeg": 0.1306147270456801,
+        "name": "Astra 1D",
+        "norad": 23331,
+        "theoreticalCycleDays": 35.55675632854468
+      },
+      {
+        "dvPerCycleMps": 0.14807790934779408,
+        "dvPerYearMps": 1.6379373643097404,
+        "measuredCycleDays": 20.943096099537037,
+        "medianRPosDeg": 0.1076384853378185,
+        "name": "Astra 1F",
+        "norad": 23842,
+        "theoreticalCycleDays": 33.02046681868967
+      },
+      {
+        "dvPerCycleMps": 0.15065908666585934,
+        "dvPerYearMps": 1.554117672903747,
+        "measuredCycleDays": 19.091565248842592,
+        "medianRPosDeg": 0.1174332502152442,
+        "name": "Eutelsat W2",
+        "norad": 25491,
+        "theoreticalCycleDays": 35.408021132588495
+      },
+      {
+        "dvPerCycleMps": 0.16473811385776202,
+        "dvPerYearMps": 1.7438786149776389,
+        "measuredCycleDays": 13.677056221064815,
+        "medianRPosDeg": 0.12512850223848204,
+        "name": "Hot Bird 5",
+        "norad": 25495,
+        "theoreticalCycleDays": 34.50389010436894
+      },
+      {
+        "dvPerCycleMps": 0.14078747729302477,
+        "dvPerYearMps": 1.3460716768976106,
+        "measuredCycleDays": 14.691085381944443,
+        "medianRPosDeg": 0.1183979512691935,
+        "name": "Eutelsat W1",
+        "norad": 26487,
+        "theoreticalCycleDays": 38.201996939564744
+      },
+      {
+        "dvPerCycleMps": 0.1364946837114516,
+        "dvPerYearMps": 1.306279529638721,
+        "measuredCycleDays": 5.03396224537037,
+        "medianRPosDeg": 0.11467788414170954,
+        "name": "Eutelsat 9B",
+        "norad": 41310,
+        "theoreticalCycleDays": 38.16540188714129
+      }
+    ]
+  },
+  "executionMode": "cpu",
+  "floorDerivedElementNoise": {
+    "construction": "0.5 x sigma_lambda x E[range of m gaussians], the peak-to-trough a pure-noise cycle of m samples returns; sigma_lambda is the second-difference MAD estimate on mean longitude, measured on this population",
+    "expectedRangeConstant": 3.2561578660817068,
+    "floorRPosDeg": 0.010833352271488898,
+    "sigmaLongitudeDegMeasured": 0.0066540706667427025,
+    "t3AboveDerivedFloor": true,
+    "t3AboveF1Floor": false,
+    "t3DeadbandDeg": 0.0208,
+    "typicalCycleSamples": 12
+  },
+  "floorF1": {
+    "construction": "registration \u00a73.2: residuals about the SEGMENT centre, permuted in time",
+    "cycles": 45131,
+    "medianRPosDeg": 0.03327965209875039,
+    "quantilesRPosDeg": {
+      "max": 0.28453265324968413,
+      "mean": 0.04027606617921346,
+      "median": 0.03327965209875039,
+      "min": 0.001818521039712806,
+      "n": 45131,
+      "p25": 0.025113203645745652,
+      "p75": 0.045062540771215964,
+      "p90": 0.06683957106277205
+    },
+    "whatItActuallyBounds": "the SEGMENT ENVELOPE, not the element noise. The residuals it permutes contain the sawtooth itself, so the surrogate keeps the signal's amplitude and only destroys its order. F1 is therefore an upper bound on the floor and is over-conservative by construction -- reported as a registration defect, not quietly replaced."
+  },
+  "floorF2": {
+    "bootstrap": {
+      "ci95": [
+        0.17503866301586868,
+        0.1840685169301821
+      ],
+      "median": 0.17902970381216576,
+      "objects": 29
+    },
+    "contaminated": 0,
+    "cycles": 461,
+    "objects": 29,
+    "objectsWithThreeCycles": 29,
+    "quantilesRPosDeg": {
+      "max": 0.2914307690591329,
+      "mean": 0.1747100469638957,
+      "median": 0.18033751539383047,
+      "min": 0.10051275795327541,
+      "n": 461,
+      "p25": 0.15424424711204665,
+      "p75": 0.19474909938120533,
+      "p90": 0.20629686943009773
+    },
+    "rosterObjects": 331
+  },
+  "gpuNote": "No GPU arm. CPU only; nothing is left to prove later.",
+  "highInclinationCarriers": {
+    "medianRPosDeg": 0.13062456437376824,
+    "n": 17,
+    "norads": [
+      8747,
+      10000,
+      12564,
+      15144,
+      15946,
+      16597,
+      17083,
+      19330,
+      20410,
+      21765,
+      21813,
+      23185,
+      23200,
+      23943,
+      23948,
+      24665,
+      29398
+    ],
+    "note": "T3's line carriers include objects at 9-16 deg of inclination, which are not routine east-west keepers; registration \u00a77 requires them reported separately"
+  },
+  "inputs": {
+    "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+    "cadenceJsonl": "b7d594cc4ee57e7f46e54d1696f887b890583af94122bc1b1c9f069885f03f99",
+    "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+    "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f"
+  },
+  "internalCheck_rRateOnRPos": {
+    "ci95": [
+      0.16911203564834643,
+      0.659618777747233
+    ],
+    "objects": 136,
+    "slope": 0.379863948084994
+  },
+  "jsonlSampling": "every resolved cycle, plus every 4th of the rest; every cycle is in the statistics above and only the published file is thinned",
+  "maxRssKb": 1165544,
+  "measuredAt": "2026-09-22T18:30:23.131012+00:00",
+  "parentCommit": "f0f2b41",
+  "parentRegistration": "docs/stationkeeping-efficiency-preregistration-20260922.md",
+  "registration": "docs/t10c-cycle-deadband-preregistration-20260922.md",
+  "registrationCommit": "0a49ba5",
+  "roster": {
+    "byRegime": {
+      "GEO": 208,
+      "LEO": 6
+    },
+    "carriers": 214,
+    "geoCarriersWithArchiveHistory": 208
+  },
+  "runtimeProofs": {
+    "aMaxT3Form": 0.0017005994391406812,
+    "aMaxT8aForm": 0.0017006955627927864,
+    "deadbandAt14dHalfAcceleration": 0.010416171564736672,
+    "deadbandAt14dMaxAcceleration": 0.020832343129473345,
+    "sigmaRatePropagatedDegPerDay": 0.0001597563823234465
+  },
+  "schema": 1,
+  "seeds": {
+    "bootstrap": 20260922,
+    "draws": 10000,
+    "surrogate": 20260922
+  },
+  "sensitivities": {
+    "parentInclinationScreen": {
+      "cycles": 730,
+      "medianRPosDeg": 0.13265321878390068,
+      "objects": 136
+    },
+    "prominence3sigma": {
+      "cycles": 648,
+      "medianCycleDays": 17.619012112268518,
+      "medianRPosDeg": 0.13252813900690796,
+      "objects": 127
+    },
+    "prominence8sigma": {
+      "cycles": 797,
+      "medianCycleDays": 19.927408287037036,
+      "medianRPosDeg": 0.13014539649115875,
+      "objects": 143
+    }
+  },
+  "sigmaRate": {
+    "measuredDegPerDay": 0.0010905735318057822,
+    "measuredOverPropagated": 6.826478641696966,
+    "propagatedDegPerDay": 0.0001597563823234465,
+    "segmentsMeasured": 1858,
+    "usedDegPerDay": 0.0010905735318057822
+  },
+  "sourceSha256": "e1c4c6545dca43e2f66f80d03f0c3a2ed698da826bee79f07d60ccc3802286b1",
+  "track": "T10c follow-up 3",
+  "unscreenedByFloor": {
+    "cycles": 80677,
+    "note": "G3/G4/G5 only. The G6 floor screen is what selects, so this is the distribution BEFORE selection.",
+    "objectsWithThreeCycles": 207,
+    "perCycleQuantiles": {
+      "max": 0.2762722765685339,
+      "mean": 0.02217505843420367,
+      "median": 0.018268404070681754,
+      "min": 0.00042632922010099605,
+      "n": 80677,
+      "p25": 0.011429268390308778,
+      "p75": 0.027182131892885764,
+      "p90": 0.03908134717686986
+    },
+    "perObjectMedianBootstrap": {
+      "ci95": [
+        0.01875352224495508,
+        0.021190384827743713
+      ],
+      "median": 0.02030130337771574,
+      "objects": 207
+    },
+    "withinFactorOfTwoOfT3": 191
+  },
+  "verdict": "MEASURED, AND THE 14.00-DAY LINE DOES NOT PREDICT IT",
+  "wallSeconds": 401.4315824508667
+}

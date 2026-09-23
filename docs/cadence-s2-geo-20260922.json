@@ -1,0 +1,3169 @@
+{
+  "backgroundAnnulusSteps": [
+    8,
+    40
+  ],
+  "channel": "eccentricity",
+  "coreSteps": 3,
+  "d1Best": {
+    "carrierObjects": 321,
+    "d1": {
+      "allPass": true,
+      "clause1_payloadExcess": {
+        "bar": 5.0,
+        "pass": true,
+        "value": 12.139767054908486
+      },
+      "clause2_controlExcess": {
+        "bar": 1.5,
+        "pass": true,
+        "value": 0.18285714285714286
+      },
+      "clause3_clearOfNaturalLines": {
+        "nearest": "synodic month",
+        "pass": true,
+        "separationCoreHalfWidths": 1.13564803804994
+      },
+      "clause4_carrierObjects": {
+        "bar": 20,
+        "pass": true,
+        "value": 321
+      }
+    },
+    "geoPassive": {
+      "coreHalfWidthDays": 0.4672222222222222,
+      "corePeaks": 2,
+      "excess": 0.18285714285714286,
+      "localExpected": 10.9375
+    },
+    "geoPayload": {
+      "coreHalfWidthDays": 0.4672222222222222,
+      "corePeaks": 798,
+      "excess": 12.139767054908486,
+      "localExpected": 65.734375
+    },
+    "periodDays": 29.0,
+    "pooledPassive": {
+      "coreHalfWidthDays": 0.4672222222222222,
+      "corePeaks": 72,
+      "excess": 1.2635042500685494,
+      "localExpected": 56.984375
+    },
+    "pooledPayload": {
+      "coreHalfWidthDays": 0.4672222222222222,
+      "corePeaks": 818,
+      "excess": 6.880273360494152,
+      "localExpected": 118.890625
+    },
+    "separation": {
+      "clearOfAll": true,
+      "coreHalfWidthDays": 0.4672222222222222,
+      "inCoreHalfWidths": {
+        "anomalistic month": 3.09360285374554,
+        "half sidereal month": 32.83041617122473,
+        "half synodic month": 30.466658739595722,
+        "sidereal month": 3.592080856123663,
+        "solar semiannual": 328.7514863258026,
+        "synodic month": 1.13564803804994
+      },
+      "nearest": "synodic month",
+      "nearestSeparation": 1.13564803804994
+    },
+    "topCarriers": [
+      {
+        "dominantPeriodDays": 29.42050531263707,
+        "medianEccentricity": 0.00042945,
+        "medianInclinationDeg": 0.039274999871850014,
+        "medianPerigeeKm": 35768.77734375,
+        "medianRangeQuanta": 39895.0,
+        "name": "ASIASTAR",
+        "norad": 26107,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 12,
+        "windowsTotal": 24
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.00029655,
+        "medianInclinationDeg": 0.023049999959766865,
+        "medianPerigeeKm": 35775.0859375,
+        "medianRangeQuanta": 59410.0,
+        "name": "DIRECTV 7S",
+        "norad": 28238,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 8,
+        "windowsTotal": 20
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.0003612,
+        "medianInclinationDeg": 0.03790000081062317,
+        "medianPerigeeKm": 35771.43359375,
+        "medianRangeQuanta": 44450.0,
+        "name": "OPTUS C1",
+        "norad": 27831,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 8,
+        "windowsTotal": 21
+      },
+      {
+        "dominantPeriodDays": 29.42050531263707,
+        "medianEccentricity": 0.0002995,
+        "medianInclinationDeg": 0.01590000092983246,
+        "medianPerigeeKm": 35774.00390625,
+        "medianRangeQuanta": 25640.0,
+        "name": "DIRECTV 8",
+        "norad": 28659,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 8,
+        "windowsTotal": 19
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.000234,
+        "medianInclinationDeg": 0.016150000505149364,
+        "medianPerigeeKm": 35776.80859375,
+        "medianRangeQuanta": 19760.0,
+        "name": "INTELSAT 15",
+        "norad": 36106,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 8,
+        "windowsTotal": 14
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.00015329999999999999,
+        "medianInclinationDeg": 0.03754999861121178,
+        "medianPerigeeKm": 35780.1796875,
+        "medianRangeQuanta": 23225.0,
+        "name": "ECHOSTAR 10",
+        "norad": 28935,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 7,
+        "windowsTotal": 18
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.0002264,
+        "medianInclinationDeg": 0.0340999998152256,
+        "medianPerigeeKm": 35776.98046875,
+        "medianRangeQuanta": 21530.0,
+        "name": "AMC-15",
+        "norad": 28446,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 7,
+        "windowsTotal": 19
+      },
+      {
+        "dominantPeriodDays": 29.58167254107827,
+        "medianEccentricity": 0.000335525,
+        "medianInclinationDeg": 0.017924999818205833,
+        "medianPerigeeKm": 35772.486328125,
+        "medianRangeQuanta": 17750.0,
+        "name": "DIRECTV 5 (TEMPO 1)",
+        "norad": 27426,
+        "objectType": "PAYLOAD",
+        "significantWindows": 0,
+        "windowsOnLine": 6,
+        "windowsTotal": 22
+      }
+    ]
+  },
+  "d1PassingCandidates": [
+    {
+      "carrierObjects": 321,
+      "d1": {
+        "allPass": true,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 12.139767054908486
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": true,
+          "value": 0.18285714285714286
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "synodic month",
+          "pass": true,
+          "separationCoreHalfWidths": 1.13564803804994
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 321
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 0.4672222222222222,
+        "corePeaks": 2,
+        "excess": 0.18285714285714286,
+        "localExpected": 10.9375
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.4672222222222222,
+        "corePeaks": 798,
+        "excess": 12.139767054908486,
+        "localExpected": 65.734375
+      },
+      "periodDays": 29.0,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.4672222222222222,
+        "corePeaks": 72,
+        "excess": 1.2635042500685494,
+        "localExpected": 56.984375
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.4672222222222222,
+        "corePeaks": 818,
+        "excess": 6.880273360494152,
+        "localExpected": 118.890625
+      },
+      "separation": {
+        "clearOfAll": true,
+        "coreHalfWidthDays": 0.4672222222222222,
+        "inCoreHalfWidths": {
+          "anomalistic month": 3.09360285374554,
+          "half sidereal month": 32.83041617122473,
+          "half synodic month": 30.466658739595722,
+          "sidereal month": 3.592080856123663,
+          "solar semiannual": 328.7514863258026,
+          "synodic month": 1.13564803804994
+        },
+        "nearest": "synodic month",
+        "nearestSeparation": 1.13564803804994
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.00042945,
+          "medianInclinationDeg": 0.039274999871850014,
+          "medianPerigeeKm": 35768.77734375,
+          "medianRangeQuanta": 39895.0,
+          "name": "ASIASTAR",
+          "norad": 26107,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 12,
+          "windowsTotal": 24
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00029655,
+          "medianInclinationDeg": 0.023049999959766865,
+          "medianPerigeeKm": 35775.0859375,
+          "medianRangeQuanta": 59410.0,
+          "name": "DIRECTV 7S",
+          "norad": 28238,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 8,
+          "windowsTotal": 20
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0003612,
+          "medianInclinationDeg": 0.03790000081062317,
+          "medianPerigeeKm": 35771.43359375,
+          "medianRangeQuanta": 44450.0,
+          "name": "OPTUS C1",
+          "norad": 27831,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 8,
+          "windowsTotal": 21
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.0002995,
+          "medianInclinationDeg": 0.01590000092983246,
+          "medianPerigeeKm": 35774.00390625,
+          "medianRangeQuanta": 25640.0,
+          "name": "DIRECTV 8",
+          "norad": 28659,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 8,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000234,
+          "medianInclinationDeg": 0.016150000505149364,
+          "medianPerigeeKm": 35776.80859375,
+          "medianRangeQuanta": 19760.0,
+          "name": "INTELSAT 15",
+          "norad": 36106,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 8,
+          "windowsTotal": 14
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00015329999999999999,
+          "medianInclinationDeg": 0.03754999861121178,
+          "medianPerigeeKm": 35780.1796875,
+          "medianRangeQuanta": 23225.0,
+          "name": "ECHOSTAR 10",
+          "norad": 28935,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002264,
+          "medianInclinationDeg": 0.0340999998152256,
+          "medianPerigeeKm": 35776.98046875,
+          "medianRangeQuanta": 21530.0,
+          "name": "AMC-15",
+          "norad": 28446,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000335525,
+          "medianInclinationDeg": 0.017924999818205833,
+          "medianPerigeeKm": 35772.486328125,
+          "medianRangeQuanta": 17750.0,
+          "name": "DIRECTV 5 (TEMPO 1)",
+          "norad": 27426,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 22
+        }
+      ]
+    }
+  ],
+  "d1Screens": {
+    "control": "geoPassive (same-regime, s1s2-prereg 5.2)",
+    "maxControlExcess": 1.5,
+    "minCarrierObjects": 20,
+    "minPayloadExcess": 5.0
+  },
+  "d1Verdict": "D1 MET",
+  "derivations": {
+    "cubicDetrendAdequacy": {
+      "adequate": true,
+      "archiveQuantumDeg": 0.0001,
+      "inclinationAtWindowEndDeg": 2.5807349997849056,
+      "leastSquaresBoundDeg": 4.546431373018567e-06,
+      "meanRateDegPerYear": 0.8727902395105896,
+      "taylorRemainderDeg": 2.039943500995034e-05,
+      "windowYears": 2.9568788501026693,
+      "xMaxRadians": 0.1752699787365581
+    },
+    "eastWestDeadbandDeg": {
+      "14.0": 0.02083234312947334,
+      "21.0": 0.04687277204131502
+    },
+    "fourteenDaySeparationInCoreHalfWidths": {
+      "anomalistic month": 124.48102040816329,
+      "half sidereal month": 3.11418367346939,
+      "half synodic month": 7.028265306122449,
+      "sidereal month": 122.34214285714287,
+      "solar semiannual": 1548.3673469387757,
+      "synodic month": 142.62795918367348
+    },
+    "geoBetaPeriodDaysAtZeroInclination": 360.3552831763242,
+    "geoLongitudeAccelerationDegPerDay2": 0.001700599439140681,
+    "inclinationDrift": {
+      "geoJ2NodalRegressionDegPerYear": -4.8994910014344955,
+      "lunar": {
+        "nodeMax": {
+          "lunarDiDtDegPerYear": 0.7680085491099127,
+          "thetaDeg": 28.5843,
+          "totalDiDtDegPerYear": 1.061239422785191
+        },
+        "nodeMean": {
+          "lunarDiDtDegPerYear": 0.6385109467629555,
+          "thetaDeg": 23.4393,
+          "totalDiDtDegPerYear": 0.9317418204382337
+        },
+        "nodeMin": {
+          "lunarDiDtDegPerYear": 0.5038681476026445,
+          "thetaDeg": 18.2943,
+          "totalDiDtDegPerYear": 0.7970990212779228
+        }
+      },
+      "lunarPolePrecessionDegPerYear": 1.6051970525700379,
+      "registeredIntervalDegPerYear": [
+        0.75,
+        0.85,
+        0.95
+      ],
+      "solarDiDtDegPerYear": 0.2932308736752783,
+      "solarPolePrecessionDegPerYear": 0.7371734760889491
+    },
+    "northSouthDeadbandDeg": {
+      "14.0": 0.016290212183436004,
+      "21.0": 0.024435318275154,
+      "43.0": 0.05003422313483915,
+      "86.0": 0.1000684462696783
+    },
+    "northSouthPeriodDays": {
+      "0.01": {
+        "0.75": 9.74,
+        "0.85": 8.594117647058823,
+        "0.95": 7.689473684210528
+      },
+      "0.025": {
+        "0.75": 24.35,
+        "0.85": 21.48529411764706,
+        "0.95": 19.22368421052632
+      },
+      "0.05": {
+        "0.75": 48.7,
+        "0.85": 42.97058823529412,
+        "0.95": 38.44736842105264
+      },
+      "0.1": {
+        "0.75": 97.4,
+        "0.85": 85.94117647058825,
+        "0.95": 76.89473684210527
+      },
+      "0.25": {
+        "0.75": 243.5,
+        "0.85": 214.8529411764706,
+        "0.95": 192.23684210526315
+      }
+    },
+    "s1NaturalLines": {
+      "anomalistic month": {
+        "amplitudeCeilingDeg": 0.019273135359880674,
+        "coreHalfWidthDays": 0.42180887842222226,
+        "periodDays": 27.5546
+      },
+      "half sidereal month": {
+        "amplitudeCeilingDeg": 0.009555151402589546,
+        "coreHalfWidthDays": 0.10367788267222222,
+        "periodDays": 13.6609
+      },
+      "half synodic month": {
+        "amplitudeCeilingDeg": 0.010327626803845679,
+        "coreHalfWidthDays": 0.12111893560555553,
+        "periodDays": 14.7653
+      },
+      "sidereal month": {
+        "amplitudeCeilingDeg": 0.019110232859923637,
+        "coreHalfWidthDays": 0.41470849493888884,
+        "periodDays": 27.3217
+      },
+      "solar semiannual": {
+        "amplitudeCeilingDeg": 0.05865437087281452,
+        "coreHalfWidthDays": 18.523755555555553,
+        "periodDays": 182.6
+      },
+      "synodic month": {
+        "amplitudeCeilingDeg": 0.020655253607691357,
+        "coreHalfWidthDays": 0.48447574242222213,
+        "periodDays": 29.5306
+      }
+    },
+    "srpCyclesPerWindow": 2.9568788501026693,
+    "srpForcedEccentricity": {
+      "0.01": 0.00014525572623927995,
+      "0.02": 0.0002905114524785599,
+      "0.05": 0.0007262786311963997
+    },
+    "srpPeriodDays": 365.25
+  },
+  "gridResolutionCyclesPerDay": 0.00018518518518518518,
+  "populations": {
+    "geoPassive": {
+      "objects": 331,
+      "windows": 5579
+    },
+    "geoPayload": {
+      "objects": 1248,
+      "windows": 23018
+    },
+    "pooledPassive": {
+      "objects": 11112,
+      "windows": 217323
+    },
+    "pooledPayload": {
+      "objects": 7884,
+      "windows": 98705
+    }
+  },
+  "predictedBands": {
+    "P1 loose box +/-0.10 deg (76.9-97.4 d)": {
+      "bandDays": [
+        76.89473684210527,
+        97.4
+      ],
+      "geoPassive": {
+        "share": 0.02903746191073669,
+        "windowsInBand": 162
+      },
+      "geoPayload": {
+        "share": 0.028238769658528107,
+        "windowsInBand": 650
+      },
+      "pooledPassive": {
+        "share": 0.02040281056307892,
+        "windowsInBand": 4434
+      },
+      "pooledPayload": {
+        "share": 0.02372726812218226,
+        "windowsInBand": 2342
+      },
+      "uniformInFrequencyShare": 0.005525937368523502
+    },
+    "P1 tight box +/-0.05 deg (38.4-48.7 d)": {
+      "bandDays": [
+        38.44736842105264,
+        48.7
+      ],
+      "geoPassive": {
+        "share": 0.009858397562287149,
+        "windowsInBand": 55
+      },
+      "geoPayload": {
+        "share": 0.011599617690503085,
+        "windowsInBand": 267
+      },
+      "pooledPassive": {
+        "share": 0.00866452239293586,
+        "windowsInBand": 1883
+      },
+      "pooledPayload": {
+        "share": 0.00995896864393901,
+        "windowsInBand": 983
+      },
+      "uniformInFrequencyShare": 0.011051874737047005
+    }
+  },
+  "registration": "docs/cadence-preregistration-20260921.md",
+  "status": "DESCRIPTIVE DIAGNOSTIC -- not a registered test, no p-values",
+  "strongestGeoPayloadExcesses": [
+    {
+      "carrierObjects": 418,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 32.59627329192546
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": true,
+          "value": 0.26373626373626374
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "synodic month",
+          "pass": false,
+          "separationCoreHalfWidths": 0.06329215742602647
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 418
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 0.4834722222222222,
+        "corePeaks": 3,
+        "excess": 0.26373626373626374,
+        "localExpected": 11.375
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.4834722222222222,
+        "corePeaks": 2214,
+        "excess": 32.59627329192546,
+        "localExpected": 67.921875
+      },
+      "periodDays": 29.5,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.4834722222222222,
+        "corePeaks": 107,
+        "excess": 1.7690519245672953,
+        "localExpected": 60.484375
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 0.4834722222222222,
+        "inCoreHalfWidths": {
+          "anomalistic month": 4.0238092502154545,
+          "half sidereal month": 32.76113760413674,
+          "half synodic month": 30.476828497558174,
+          "sidereal month": 4.505532892846883,
+          "solar semiannual": 316.6676242459064,
+          "synodic month": 0.06329215742602647
+        },
+        "nearest": "synodic month",
+        "nearestSeparation": 0.06329215742602647
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000335525,
+          "medianInclinationDeg": 0.017924999818205833,
+          "medianPerigeeKm": 35772.486328125,
+          "medianRangeQuanta": 17750.0,
+          "name": "DIRECTV 5 (TEMPO 1)",
+          "norad": 27426,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 22
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.0002995,
+          "medianInclinationDeg": 0.01590000092983246,
+          "medianPerigeeKm": 35774.00390625,
+          "medianRangeQuanta": 25640.0,
+          "name": "DIRECTV 8",
+          "norad": 28659,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002448,
+          "medianInclinationDeg": 0.015300000552088022,
+          "medianPerigeeKm": 35776.529296875,
+          "medianRangeQuanta": 54680.0,
+          "name": "IPSTAR 1",
+          "norad": 28786,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000284125,
+          "medianInclinationDeg": 0.019550000317394733,
+          "medianPerigeeKm": 35774.640625,
+          "medianRangeQuanta": 16880.0,
+          "name": "GALAXY 16",
+          "norad": 29236,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0003067,
+          "medianInclinationDeg": 0.01759999990463257,
+          "medianPerigeeKm": 35773.70703125,
+          "medianRangeQuanta": 16580.0,
+          "name": "DIRECTV 9S",
+          "norad": 29494,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 17
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00020725,
+          "medianInclinationDeg": 0.01640000008046627,
+          "medianPerigeeKm": 35777.98046875,
+          "medianRangeQuanta": 23430.0,
+          "name": "ANIK F3",
+          "norad": 31102,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 17
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.00042945,
+          "medianInclinationDeg": 0.039274999871850014,
+          "medianPerigeeKm": 35768.77734375,
+          "medianRangeQuanta": 39895.0,
+          "name": "ASIASTAR",
+          "norad": 26107,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 24
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00033335000000000005,
+          "medianInclinationDeg": 0.02539999969303608,
+          "medianPerigeeKm": 35772.515625,
+          "medianRangeQuanta": 32800.0,
+          "name": "OPTUS D1",
+          "norad": 29495,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 17
+        }
+      ]
+    },
+    {
+      "carrierObjects": 403,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 31.50375939849624
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": true,
+          "value": 0.17753120665742025
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "synodic month",
+          "pass": false,
+          "separationCoreHalfWidths": 0.5903484549638391
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 403
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 0.4753124999999999,
+        "corePeaks": 2,
+        "excess": 0.17753120665742025,
+        "localExpected": 11.265625
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.4753124999999999,
+        "corePeaks": 2095,
+        "excess": 31.50375939849624,
+        "localExpected": 66.5
+      },
+      "periodDays": 29.25,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.4753124999999999,
+        "corePeaks": 90,
+        "excess": 1.5915998894722299,
+        "localExpected": 56.546875
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 0.4753124999999999,
+        "inCoreHalfWidths": {
+          "anomalistic month": 3.566916502301117,
+          "half sidereal month": 32.797580539119004,
+          "half synodic month": 30.474056541748855,
+          "sidereal month": 4.056909927679159,
+          "solar semiannual": 322.62984878369497,
+          "synodic month": 0.5903484549638391
+        },
+        "nearest": "synodic month",
+        "nearestSeparation": 0.5903484549638391
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000335525,
+          "medianInclinationDeg": 0.017924999818205833,
+          "medianPerigeeKm": 35772.486328125,
+          "medianRangeQuanta": 17750.0,
+          "name": "DIRECTV 5 (TEMPO 1)",
+          "norad": 27426,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 22
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.0002995,
+          "medianInclinationDeg": 0.01590000092983246,
+          "medianPerigeeKm": 35774.00390625,
+          "medianRangeQuanta": 25640.0,
+          "name": "DIRECTV 8",
+          "norad": 28659,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000284125,
+          "medianInclinationDeg": 0.019550000317394733,
+          "medianPerigeeKm": 35774.640625,
+          "medianRangeQuanta": 16880.0,
+          "name": "GALAXY 16",
+          "norad": 29236,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002448,
+          "medianInclinationDeg": 0.015300000552088022,
+          "medianPerigeeKm": 35776.529296875,
+          "medianRangeQuanta": 54680.0,
+          "name": "IPSTAR 1",
+          "norad": 28786,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00020725,
+          "medianInclinationDeg": 0.01640000008046627,
+          "medianPerigeeKm": 35777.98046875,
+          "medianRangeQuanta": 23430.0,
+          "name": "ANIK F3",
+          "norad": 31102,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 17
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00027985,
+          "medianInclinationDeg": 0.024299999698996544,
+          "medianPerigeeKm": 35774.66796875,
+          "medianRangeQuanta": 36770.0,
+          "name": "ASTRA 4A (SIRIUS 4)",
+          "norad": 32299,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 16
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002264,
+          "medianInclinationDeg": 0.0340999998152256,
+          "medianPerigeeKm": 35776.98046875,
+          "medianRangeQuanta": 21530.0,
+          "name": "AMC-15",
+          "norad": 28446,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0005878750000000001,
+          "medianInclinationDeg": 0.06554999947547913,
+          "medianPerigeeKm": 35761.69140625,
+          "medianRangeQuanta": 31510.0,
+          "name": "EUTE 172A (GE 23)",
+          "norad": 28924,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 18
+        }
+      ]
+    },
+    {
+      "carrierObjects": 412,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 31.047921871451283
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": true,
+          "value": 0.34829931972789113
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "synodic month",
+          "pass": false,
+          "separationCoreHalfWidths": 0.4462057764282189
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 412
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 0.49170138888888887,
+        "corePeaks": 4,
+        "excess": 0.34829931972789113,
+        "localExpected": 11.484375
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.49170138888888887,
+        "corePeaks": 2136,
+        "excess": 31.047921871451283,
+        "localExpected": 68.796875
+      },
+      "periodDays": 29.75,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.49170138888888887,
+        "corePeaks": 89,
+        "excess": 1.3675870348139256,
+        "localExpected": 65.078125
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 0.49170138888888887,
+        "inCoreHalfWidths": {
+          "anomalistic month": 4.464905020831861,
+          "half sidereal month": 32.72128239531107,
+          "half synodic month": 30.475203728550245,
+          "sidereal month": 4.938566485417697,
+          "solar semiannual": 310.8594025845632,
+          "synodic month": 0.4462057764282189
+        },
+        "nearest": "synodic month",
+        "nearestSeparation": 0.4462057764282189
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000335525,
+          "medianInclinationDeg": 0.017924999818205833,
+          "medianPerigeeKm": 35772.486328125,
+          "medianRangeQuanta": 17750.0,
+          "name": "DIRECTV 5 (TEMPO 1)",
+          "norad": 27426,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 22
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002448,
+          "medianInclinationDeg": 0.015300000552088022,
+          "medianPerigeeKm": 35776.529296875,
+          "medianRangeQuanta": 54680.0,
+          "name": "IPSTAR 1",
+          "norad": 28786,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000284125,
+          "medianInclinationDeg": 0.019550000317394733,
+          "medianPerigeeKm": 35774.640625,
+          "medianRangeQuanta": 16880.0,
+          "name": "GALAXY 16",
+          "norad": 29236,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.0002995,
+          "medianInclinationDeg": 0.01590000092983246,
+          "medianPerigeeKm": 35774.00390625,
+          "medianRangeQuanta": 25640.0,
+          "name": "DIRECTV 8",
+          "norad": 28659,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.00020725,
+          "medianInclinationDeg": 0.01640000008046627,
+          "medianPerigeeKm": 35777.98046875,
+          "medianRangeQuanta": 23430.0,
+          "name": "ANIK F3",
+          "norad": 31102,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 17
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002264,
+          "medianInclinationDeg": 0.0340999998152256,
+          "medianPerigeeKm": 35776.98046875,
+          "medianRangeQuanta": 21530.0,
+          "name": "AMC-15",
+          "norad": 28446,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0003067,
+          "medianInclinationDeg": 0.01759999990463257,
+          "medianPerigeeKm": 35773.70703125,
+          "medianRangeQuanta": 16580.0,
+          "name": "DIRECTV 9S",
+          "norad": 29494,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 15,
+          "windowsTotal": 17
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.00042945,
+          "medianInclinationDeg": 0.039274999871850014,
+          "medianPerigeeKm": 35768.77734375,
+          "medianRangeQuanta": 39895.0,
+          "name": "ASIASTAR",
+          "norad": 26107,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 14,
+          "windowsTotal": 24
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6379488011684048
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.396701388888886,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.396701388888886,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 196.25,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.396701388888886,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.396701388888886,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.884177889569558,
+          "half sidereal month": 8.533516296807175,
+          "half synodic month": 8.48190086413242,
+          "sidereal month": 7.8950627449389446,
+          "solar semiannual": 0.6379488011684048,
+          "synodic month": 7.791827205971846
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6379488011684048
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6479808868947033
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.45125,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.45125,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 196.5,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.45125,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.45125,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.875783462502185,
+          "half sidereal month": 8.523470660217935,
+          "half synodic month": 8.471986480974302,
+          "sidereal month": 7.886640638657421,
+          "solar semiannual": 0.6479808868947033,
+          "synodic month": 7.783667618437153
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6479808868947033
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6579599560197559
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.505868055555556,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.505868055555556,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 196.75,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.505868055555556,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.505868055555556,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.867406215034979,
+          "half sidereal month": 8.513448493547465,
+          "half synodic month": 8.46209506772215,
+          "sidereal month": 7.878235817420633,
+          "solar semiannual": 0.6579599560197559,
+          "synodic month": 7.77552431587632
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6579599560197559
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6678863150300192
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.560555555555553,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.560555555555553,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 197.0,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.560555555555553,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.560555555555553,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.8590460975546925,
+          "half sidereal month": 8.503449715272232,
+          "half synodic month": 8.452226545388957,
+          "sidereal month": 7.869848231080421,
+          "solar semiannual": 0.6678863150300192,
+          "synodic month": 7.767397253214462
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6678863150300192
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6777602683282976
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.6153125,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.6153125,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 197.25,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.6153125,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.6153125,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.850703060619641,
+          "half sidereal month": 8.493474244242362,
+          "half synodic month": 8.442380835345313,
+          "sidereal month": 7.861477829663578,
+          "solar semiannual": 0.6777602683282976,
+          "synodic month": 7.759286385519524
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6777602683282976
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6875821182502808
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.670138888888886,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.670138888888886,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 197.5,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.670138888888886,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.670138888888886,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.842377054959143,
+          "half sidereal month": 8.48352199967954,
+          "half synodic month": 8.432557859317418,
+          "sidereal month": 7.8531245633712565,
+          "solar semiannual": 0.6875821182502808,
+          "synodic month": 7.751191668001924
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6875821182502808
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    {
+      "carrierObjects": 1139,
+      "d1": {
+        "allPass": false,
+        "clause1_payloadExcess": {
+          "bar": 5.0,
+          "pass": true,
+          "value": 25.37451328771784
+        },
+        "clause2_controlExcess": {
+          "bar": 1.5,
+          "pass": false,
+          "value": 22.540929608393316
+        },
+        "clause3_clearOfNaturalLines": {
+          "nearest": "solar semiannual",
+          "pass": false,
+          "separationCoreHalfWidths": 0.6973521650809281
+        },
+        "clause4_carrierObjects": {
+          "bar": 20,
+          "pass": true,
+          "value": 1139
+        }
+      },
+      "geoPassive": {
+        "coreHalfWidthDays": 21.725034722222222,
+        "corePeaks": 2887,
+        "excess": 22.540929608393316,
+        "localExpected": 128.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 21.725034722222222,
+        "corePeaks": 10488,
+        "excess": 25.37451328771784,
+        "localExpected": 413.328125
+      },
+      "periodDays": 197.75,
+      "pooledPassive": {
+        "coreHalfWidthDays": 21.725034722222222,
+        "corePeaks": 68257,
+        "excess": 5.719952705241836,
+        "localExpected": 11933.140625
+      },
+      "separation": {
+        "clearOfAll": false,
+        "coreHalfWidthDays": 21.725034722222222,
+        "inCoreHalfWidths": {
+          "anomalistic month": 7.834068031472907,
+          "half sidereal month": 8.47359290117488,
+          "half synodic month": 8.422757539385087,
+          "sidereal month": 7.844788382578343,
+          "solar semiannual": 0.6973521650809281,
+          "synodic month": 7.743113056014168
+        },
+        "nearest": "solar semiannual",
+        "nearestSeparation": 0.6973521650809281
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.00032744999999999996,
+          "medianInclinationDeg": 11.795225143432617,
+          "medianPerigeeKm": 35772.638671875,
+          "medianRangeQuanta": 54365.0,
+          "name": "GOES 5",
+          "norad": 12472,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 25,
+          "windowsTotal": 38
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 24,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0004162,
+          "medianInclinationDeg": 9.228500366210938,
+          "medianPerigeeKm": 35778.4609375,
+          "medianRangeQuanta": 67680.0,
+          "name": "OPTUS A3 (AUSSAT 3)",
+          "norad": 18350,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 3.464769139520783,
+          "medianEccentricity": 0.0005151,
+          "medianInclinationDeg": 11.594499588012695,
+          "medianPerigeeKm": 35764.60546875,
+          "medianRangeQuanta": 86180.0,
+          "name": "SATCOM C5",
+          "norad": 13631,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0007925499999999999,
+          "medianInclinationDeg": 12.161999702453613,
+          "medianPerigeeKm": 35844.03515625,
+          "medianRangeQuanta": 86900.0,
+          "name": "SBS 3",
+          "norad": 13651,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 24,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0003839,
+          "medianInclinationDeg": 10.445050239562988,
+          "medianPerigeeKm": 35770.359375,
+          "medianRangeQuanta": 73770.0,
+          "name": "COSMOS 2133",
+          "norad": 21111,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 33
+        },
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.0005912,
+          "medianInclinationDeg": 9.82610034942627,
+          "medianPerigeeKm": 35761.6171875,
+          "medianRangeQuanta": 92730.0,
+          "name": "ACTS",
+          "norad": 22796,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 23,
+          "windowsTotal": 31
+        }
+      ]
+    }
+  ],
+  "supplementaryRegistration": "docs/cadence-s1s2-preregistration-20260922.md",
+  "targets": {
+    "P1 loose box +/-0.10 deg": {
+      "carrierObjects": 171,
+      "coreHalfWidthDays": 4.103269896193773,
+      "geoPassive": {
+        "coreHalfWidthDays": 4.103269896193773,
+        "corePeaks": 56,
+        "excess": 0.10691167258300271,
+        "localExpected": 523.796875
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 4.103269896193773,
+        "corePeaks": 250,
+        "excess": 0.130941469163284,
+        "localExpected": 1909.25
+      },
+      "periodDays": 85.94117647058825,
+      "pooledPassive": {
+        "coreHalfWidthDays": 4.103269896193773,
+        "corePeaks": 1134,
+        "excess": 0.05044469960882004,
+        "localExpected": 22480.0625
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 4.103269896193773,
+        "corePeaks": 1038,
+        "excess": 0.10664200955463092,
+        "localExpected": 9733.5
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 84.97853886767916,
+          "medianEccentricity": 0.0013219500000000001,
+          "medianInclinationDeg": 14.244250297546387,
+          "medianPerigeeKm": 36138.572265625,
+          "medianRangeQuanta": 68620.0,
+          "name": "ANIK A1 (TELESAT 1)",
+          "norad": 6278,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 5,
+          "windowsTotal": 22
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.00039505,
+          "medianInclinationDeg": 14.433249950408936,
+          "medianPerigeeKm": 36154.775390625,
+          "medianRangeQuanta": 60330.0,
+          "name": "SAKURA 1A (CS-1A)",
+          "norad": 10516,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 4,
+          "windowsTotal": 24
+        },
+        {
+          "dominantPeriodDays": 165.9217821379032,
+          "medianEccentricity": 0.000692525,
+          "medianInclinationDeg": 11.805799961090088,
+          "medianPerigeeKm": 36015.248046875,
+          "medianRangeQuanta": 92790.0,
+          "name": "KIKU 5 (ETS 5)",
+          "norad": 18316,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 4,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.003462575,
+          "medianInclinationDeg": 13.675524711608887,
+          "medianPerigeeKm": 36334.14453125,
+          "medianRangeQuanta": 63090.0,
+          "name": "GORIZONT 15",
+          "norad": 19017,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 4,
+          "windowsTotal": 30
+        },
+        {
+          "dominantPeriodDays": 171.18156176803882,
+          "medianEccentricity": 0.0009866,
+          "medianInclinationDeg": 13.059700012207031,
+          "medianPerigeeKm": 35988.1796875,
+          "medianRangeQuanta": 83830.0,
+          "name": "SAKURA 2A (CS-2A)",
+          "norad": 13782,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 4,
+          "windowsTotal": 27
+        }
+      ]
+    },
+    "P1 tight box +/-0.05 deg": {
+      "carrierObjects": 43,
+      "coreHalfWidthDays": 1.0258174740484431,
+      "geoPassive": {
+        "coreHalfWidthDays": 1.0258174740484431,
+        "corePeaks": 10,
+        "excess": 0.7881773399014779,
+        "localExpected": 12.6875
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 1.0258174740484431,
+        "corePeaks": 57,
+        "excess": 0.7329716696805304,
+        "localExpected": 77.765625
+      },
+      "periodDays": 42.97058823529412,
+      "pooledPassive": {
+        "coreHalfWidthDays": 1.0258174740484431,
+        "corePeaks": 326,
+        "excess": 1.4052670573179766,
+        "localExpected": 231.984375
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 1.0258174740484431,
+        "corePeaks": 184,
+        "excess": 0.8007071462568844,
+        "localExpected": 229.796875
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.001700575,
+          "medianInclinationDeg": 13.931275367736816,
+          "medianPerigeeKm": 36000.455078125,
+          "medianRangeQuanta": 69370.0,
+          "name": "HIMAWARI 1 (GMS 1)",
+          "norad": 10143,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 3,
+          "windowsTotal": 24
+        },
+        {
+          "dominantPeriodDays": 203.42465027270953,
+          "medianEccentricity": 0.0004135,
+          "medianInclinationDeg": 8.441349983215332,
+          "medianPerigeeKm": 35919.33984375,
+          "medianRangeQuanta": 100790.0,
+          "name": "HELLAS-SAT 1 (DFS 3)",
+          "norad": 22175,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 3,
+          "windowsTotal": 29
+        },
+        {
+          "dominantPeriodDays": 211.38791005506366,
+          "medianEccentricity": 0.00033145,
+          "medianInclinationDeg": 0.03784999996423721,
+          "medianPerigeeKm": 35773.630859375,
+          "medianRangeQuanta": 138040.0,
+          "name": "NSS 806 (INTELSAT 806)",
+          "norad": 25239,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 3,
+          "windowsTotal": 26
+        },
+        {
+          "dominantPeriodDays": 42.67241491820704,
+          "medianEccentricity": 0.0006371,
+          "medianInclinationDeg": 13.25570011138916,
+          "medianPerigeeKm": 35878.75390625,
+          "medianRangeQuanta": 65130.0,
+          "name": "HIMAWARI 3 (GMS 3)",
+          "norad": 15152,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 25
+        },
+        {
+          "dominantPeriodDays": 102.76816464470657,
+          "medianEccentricity": 2.8175e-05,
+          "medianInclinationDeg": 0.02759999968111515,
+          "medianPerigeeKm": 35785.46484375,
+          "medianRangeQuanta": 40150.0,
+          "name": "SPACEWAY 2",
+          "norad": 28903,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 18
+        }
+      ]
+    },
+    "P2 east-west coincidence 14.0 d": {
+      "carrierObjects": 16,
+      "coreHalfWidthDays": 0.10888888888888887,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 1,
+        "excess": 0.2689075630252101,
+        "localExpected": 3.71875
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 21,
+        "excess": 0.9230769230769231,
+        "localExpected": 22.75
+      },
+      "periodDays": 14.0,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 6,
+        "excess": 0.7836734693877551,
+        "localExpected": 7.65625
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 28,
+        "excess": 1.1277533039647578,
+        "localExpected": 24.828125
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 15.145334594901707,
+          "medianEccentricity": 0.006366325,
+          "medianInclinationDeg": 3.216649889945984,
+          "medianPerigeeKm": 33703.806640625,
+          "medianRangeQuanta": 51905.0,
+          "name": "OPS 9316 (IDSCS 6)",
+          "norad": 2220,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 211.38791005506366,
+          "medianEccentricity": 0.000216,
+          "medianInclinationDeg": 9.513199806213379,
+          "medianPerigeeKm": 35784.4296875,
+          "medianRangeQuanta": 92810.0,
+          "name": "LEASAT 5",
+          "norad": 20410,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 27
+        },
+        {
+          "dominantPeriodDays": 203.42465027270953,
+          "medianEccentricity": 0.000215,
+          "medianInclinationDeg": 3.2467000484466553,
+          "medianPerigeeKm": 35781.56640625,
+          "medianRangeQuanta": 110480.0,
+          "name": "MEASAT 2",
+          "norad": 24653,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 27
+        },
+        {
+          "dominantPeriodDays": 176.78571794317492,
+          "medianEccentricity": 2.455e-05,
+          "medianInclinationDeg": 0.019100000150501728,
+          "medianPerigeeKm": 35785.59375,
+          "medianRangeQuanta": 19140.0,
+          "name": "DIRECTV 11",
+          "norad": 32729,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 16
+        },
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 3.72e-05,
+          "medianInclinationDeg": 0.01850000023841858,
+          "medianPerigeeKm": 35785.24609375,
+          "medianRangeQuanta": 56040.0,
+          "name": "XM-3",
+          "norad": 28626,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 19
+        }
+      ]
+    },
+    "anomalistic month": {
+      "carrierObjects": 128,
+      "coreHalfWidthDays": 0.42180887842222226,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.42180887842222226,
+        "corePeaks": 58,
+        "excess": 15.596638655462185,
+        "localExpected": 3.71875
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.42180887842222226,
+        "corePeaks": 289,
+        "excess": 1.0598819551888143,
+        "localExpected": 272.671875
+      },
+      "periodDays": 27.5546,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.42180887842222226,
+        "corePeaks": 88,
+        "excess": 1.6253968253968254,
+        "localExpected": 54.140625
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.42180887842222226,
+        "corePeaks": 341,
+        "excess": 1.0784207145327864,
+        "localExpected": 316.203125
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 176.78571794317492,
+          "medianEccentricity": 0.00018255,
+          "medianInclinationDeg": 0.04270000010728836,
+          "medianPerigeeKm": 35779.20703125,
+          "medianRangeQuanta": 72310.0,
+          "name": "SES 7 (PROTOSTAR 2)",
+          "norad": 34941,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 15
+        },
+        {
+          "dominantPeriodDays": 171.18156176803882,
+          "medianEccentricity": 0.0005229,
+          "medianInclinationDeg": 3.1791000366210938,
+          "medianPerigeeKm": 35773.98828125,
+          "medianRangeQuanta": 56870.0,
+          "name": "ELEKTRO-L",
+          "norad": 37344,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 13
+        },
+        {
+          "dominantPeriodDays": 27.900421953734032,
+          "medianEccentricity": 4.005e-05,
+          "medianInclinationDeg": 0.018050000071525574,
+          "medianPerigeeKm": 35785.26171875,
+          "medianRangeQuanta": 41120.0,
+          "name": "INMARSAT 5-F1",
+          "norad": 39476,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 10
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.0018091000000000001,
+          "medianInclinationDeg": 15.878600120544434,
+          "medianPerigeeKm": 36748.13671875,
+          "medianRangeQuanta": 64420.0,
+          "name": "OPS 9437 (DSCS 2-7)",
+          "norad": 10000,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 23
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.0002734,
+          "medianInclinationDeg": 11.052800178527832,
+          "medianPerigeeKm": 35773.93359375,
+          "medianRangeQuanta": 61690.0,
+          "name": "RADUGA 29",
+          "norad": 22557,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 31
+        }
+      ]
+    },
+    "half sidereal month": {
+      "carrierObjects": 14,
+      "coreHalfWidthDays": 0.10367788267222222,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.10367788267222222,
+        "corePeaks": 3,
+        "excess": 0.6857142857142857,
+        "localExpected": 4.375
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.10367788267222222,
+        "corePeaks": 46,
+        "excess": 2.2490450725744844,
+        "localExpected": 20.453125
+      },
+      "periodDays": 13.6609,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.10367788267222222,
+        "corePeaks": 5,
+        "excess": 0.5378151260504201,
+        "localExpected": 9.296875
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.10367788267222222,
+        "corePeaks": 49,
+        "excess": 2.1132075471698113,
+        "localExpected": 23.1875
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 13.652033457100845,
+          "medianEccentricity": 2.81e-05,
+          "medianInclinationDeg": 0.011699999682605267,
+          "medianPerigeeKm": 35785.5,
+          "medianRangeQuanta": 21890.0,
+          "name": "EUTE 115 WEST B(SATMEX 7",
+          "norad": 40425,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 8,
+          "windowsTotal": 9
+        },
+        {
+          "dominantPeriodDays": 12.779690479074164,
+          "medianEccentricity": 0.00132495,
+          "medianInclinationDeg": 3.3150999546051025,
+          "medianPerigeeKm": 33733.26953125,
+          "medianRangeQuanta": 45930.0,
+          "name": "OPS 9341 (IDSCS 19)",
+          "norad": 3284,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 21
+        },
+        {
+          "dominantPeriodDays": 13.652033457100845,
+          "medianEccentricity": 2.9e-05,
+          "medianInclinationDeg": 0.011599999852478504,
+          "medianPerigeeKm": 35785.39453125,
+          "medianRangeQuanta": 14300.0,
+          "name": "EUTE 117W B",
+          "norad": 41589,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 7
+        },
+        {
+          "dominantPeriodDays": 13.756368962269276,
+          "medianEccentricity": 0.0014744,
+          "medianInclinationDeg": 2.999924898147583,
+          "medianPerigeeKm": 33735.97265625,
+          "medianRangeQuanta": 44430.0,
+          "name": "OPS 9342 (IDSCS 20)",
+          "norad": 3285,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 13.652033457100845,
+          "medianEccentricity": 2.26e-05,
+          "medianInclinationDeg": 0.0210999995470047,
+          "medianPerigeeKm": 35785.76171875,
+          "medianRangeQuanta": 23060.0,
+          "name": "EUTE 172B",
+          "norad": 42741,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 5,
+          "windowsTotal": 7
+        }
+      ]
+    },
+    "half synodic month": {
+      "carrierObjects": 12,
+      "coreHalfWidthDays": 0.12111893560555553,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.12111893560555553,
+        "corePeaks": 4,
+        "excess": 1.9248120300751879,
+        "localExpected": 2.078125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.12111893560555553,
+        "corePeaks": 12,
+        "excess": 0.5835866261398176,
+        "localExpected": 20.5625
+      },
+      "periodDays": 14.7653,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.12111893560555553,
+        "corePeaks": 12,
+        "excess": 1.7142857142857142,
+        "localExpected": 7.0
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.12111893560555553,
+        "corePeaks": 13,
+        "excess": 0.5659863945578232,
+        "localExpected": 22.96875
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 16.045381151498542,
+          "medianEccentricity": 0.0077128,
+          "medianInclinationDeg": 3.122099995613098,
+          "medianPerigeeKm": 33746.74609375,
+          "medianRangeQuanta": 49355.0,
+          "name": "OPS 9348 (IDSCS 26)",
+          "norad": 3291,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 1,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.007062799999999999,
+          "medianInclinationDeg": 12.539850234985352,
+          "medianPerigeeKm": 35894.77734375,
+          "medianRangeQuanta": 66140.0,
+          "name": "RADUGA 18",
+          "norad": 16497,
+          "objectType": "PAYLOAD",
+          "significantWindows": 1,
+          "windowsOnLine": 1,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 108.99082145649997,
+          "medianEccentricity": 0.0019528,
+          "medianInclinationDeg": 8.135549545288086,
+          "medianPerigeeKm": 36014.421875,
+          "medianRangeQuanta": 90420.0,
+          "name": "INTELSAT 515",
+          "norad": 19772,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 1,
+          "windowsTotal": 35
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.00048059999999999997,
+          "medianInclinationDeg": 2.461474895477295,
+          "medianPerigeeKm": 35772.509765625,
+          "medianRangeQuanta": 109005.0,
+          "name": "OPTUS B3",
+          "norad": 23227,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 1,
+          "windowsTotal": 30
+        },
+        {
+          "dominantPeriodDays": 140.0943351225533,
+          "medianEccentricity": 0.0011744,
+          "medianInclinationDeg": 12.8784499168396,
+          "medianPerigeeKm": 35742.44140625,
+          "medianRangeQuanta": 80115.0,
+          "name": "METEOSAT 1",
+          "norad": 10489,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 1,
+          "windowsTotal": 24
+        }
+      ]
+    },
+    "primary 21.0 d GEO line": {
+      "carrierObjects": 10,
+      "coreHalfWidthDays": 0.245,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.245,
+        "corePeaks": 2,
+        "excess": 0.8311688311688312,
+        "localExpected": 2.40625
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.245,
+        "corePeaks": 17,
+        "excess": 1.1181911613566289,
+        "localExpected": 15.203125
+      },
+      "periodDays": 21.0,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.245,
+        "corePeaks": 13,
+        "excess": 0.7923809523809524,
+        "localExpected": 16.40625
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.245,
+        "corePeaks": 21,
+        "excess": 1.0607734806629834,
+        "localExpected": 19.796875
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 71.48014278163224,
+          "medianEccentricity": 0.00021755,
+          "medianInclinationDeg": 3.1520750522613525,
+          "medianPerigeeKm": 35912.7265625,
+          "medianRangeQuanta": 79230.0,
+          "name": "BRAZILSAT B1",
+          "norad": 23199,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 4,
+          "windowsTotal": 30
+        },
+        {
+          "dominantPeriodDays": 196.0396000268752,
+          "medianEccentricity": 0.00042055,
+          "medianInclinationDeg": 9.550350189208984,
+          "medianPerigeeKm": 35863.271484375,
+          "medianRangeQuanta": 70460.0,
+          "name": "AGILA 1 (PALAPA B2P)",
+          "norad": 17706,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 34
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.0003971,
+          "medianInclinationDeg": 6.192150115966797,
+          "medianPerigeeKm": 35859.04296875,
+          "medianRangeQuanta": 70870.0,
+          "name": "PALAPA B4",
+          "norad": 21964,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 27
+        },
+        {
+          "dominantPeriodDays": 23.627685313759567,
+          "medianEccentricity": 0.032654075,
+          "medianInclinationDeg": 11.451700210571289,
+          "medianPerigeeKm": 33228.017578125,
+          "medianRangeQuanta": 106630.0,
+          "name": "INSAT 2D",
+          "norad": 24820,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 26
+        },
+        {
+          "dominantPeriodDays": 189.1719734764339,
+          "medianEccentricity": 0.0002125,
+          "medianInclinationDeg": 2.397200107574463,
+          "medianPerigeeKm": 35780.3515625,
+          "medianRangeQuanta": 69470.0,
+          "name": "BRAZILSAT B2",
+          "norad": 23536,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 2,
+          "windowsTotal": 29
+        }
+      ]
+    },
+    "sidereal month": {
+      "carrierObjects": 133,
+      "coreHalfWidthDays": 0.41470849493888884,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.41470849493888884,
+        "corePeaks": 57,
+        "excess": 17.37142857142857,
+        "localExpected": 3.28125
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.41470849493888884,
+        "corePeaks": 296,
+        "excess": 1.0842490842490842,
+        "localExpected": 273.0
+      },
+      "periodDays": 27.3217,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.41470849493888884,
+        "corePeaks": 92,
+        "excess": 1.8365564566437929,
+        "localExpected": 50.09375
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.41470849493888884,
+        "corePeaks": 345,
+        "excess": 1.118144528282777,
+        "localExpected": 308.546875
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.0018091000000000001,
+          "medianInclinationDeg": 15.878600120544434,
+          "medianPerigeeKm": 36748.13671875,
+          "medianRangeQuanta": 64420.0,
+          "name": "OPS 9437 (DSCS 2-7)",
+          "norad": 10000,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 23
+        },
+        {
+          "dominantPeriodDays": 176.78571794317492,
+          "medianEccentricity": 0.00018255,
+          "medianInclinationDeg": 0.04270000010728836,
+          "medianPerigeeKm": 35779.20703125,
+          "medianRangeQuanta": 72310.0,
+          "name": "SES 7 (PROTOSTAR 2)",
+          "norad": 34941,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 15
+        },
+        {
+          "dominantPeriodDays": 171.18156176803882,
+          "medianEccentricity": 0.0005229,
+          "medianInclinationDeg": 3.1791000366210938,
+          "medianPerigeeKm": 35773.98828125,
+          "medianRangeQuanta": 56870.0,
+          "name": "ELEKTRO-L",
+          "norad": 37344,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 7,
+          "windowsTotal": 13
+        },
+        {
+          "dominantPeriodDays": 211.38791005506366,
+          "medianEccentricity": 0.0003295,
+          "medianInclinationDeg": 8.293499946594238,
+          "medianPerigeeKm": 35772.4921875,
+          "medianRangeQuanta": 55860.0,
+          "name": "COSMOS 2379",
+          "norad": 26892,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 23
+        },
+        {
+          "dominantPeriodDays": 220.00000696629309,
+          "medianEccentricity": 0.0015048000000000001,
+          "medianInclinationDeg": 11.206600189208984,
+          "medianPerigeeKm": 35722.326171875,
+          "medianRangeQuanta": 94035.0,
+          "name": "INSAT 1D",
+          "norad": 20643,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 6,
+          "windowsTotal": 28
+        }
+      ]
+    },
+    "solar semiannual": {
+      "carrierObjects": 1067,
+      "coreHalfWidthDays": 18.523755555555553,
+      "geoPassive": {
+        "coreHalfWidthDays": 18.523755555555553,
+        "corePeaks": 2403,
+        "excess": 21.53949579831933,
+        "localExpected": 111.5625
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 18.523755555555553,
+        "corePeaks": 8123,
+        "excess": 23.36923491863706,
+        "localExpected": 347.59375
+      },
+      "periodDays": 182.6,
+      "pooledPassive": {
+        "coreHalfWidthDays": 18.523755555555553,
+        "corePeaks": 46957,
+        "excess": 4.431702119815668,
+        "localExpected": 10595.703125
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 18.523755555555553,
+        "corePeaks": 20966,
+        "excess": 6.395180585078497,
+        "localExpected": 3278.40625
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 182.76923223571666,
+          "medianEccentricity": 0.0005694249999999999,
+          "medianInclinationDeg": 0.17970000207424164,
+          "medianPerigeeKm": 35763.41796875,
+          "medianRangeQuanta": 63415.0,
+          "name": "INMARSAT 3-F2",
+          "norad": 24307,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 21,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 165.9217821379032,
+          "medianEccentricity": 0.0022328499999999998,
+          "medianInclinationDeg": 15.613399982452393,
+          "medianPerigeeKm": 35692.42578125,
+          "medianRangeQuanta": 48425.0,
+          "name": "LES 9",
+          "norad": 8747,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 20,
+          "windowsTotal": 42
+        },
+        {
+          "dominantPeriodDays": 126.9230779414699,
+          "medianEccentricity": 0.00065935,
+          "medianInclinationDeg": 11.678300380706787,
+          "medianPerigeeKm": 35879.314453125,
+          "medianRangeQuanta": 82850.0,
+          "name": "SBS 1",
+          "norad": 12065,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 20,
+          "windowsTotal": 40
+        },
+        {
+          "dominantPeriodDays": 171.18156176803882,
+          "medianEccentricity": 0.000671375,
+          "medianInclinationDeg": 13.209500312805176,
+          "medianPerigeeKm": 35905.072265625,
+          "medianRangeQuanta": 95040.0,
+          "name": "SUPERBIRD A",
+          "norad": 20040,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 20,
+          "windowsTotal": 28
+        },
+        {
+          "dominantPeriodDays": 151.91815896002439,
+          "medianEccentricity": 0.0015788999999999998,
+          "medianInclinationDeg": 10.416999816894531,
+          "medianPerigeeKm": 35958.66015625,
+          "medianRangeQuanta": 87645.0,
+          "name": "SATCOM 2R",
+          "norad": 14328,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 19,
+          "windowsTotal": 34
+        }
+      ]
+    },
+    "synodic month": {
+      "carrierObjects": 418,
+      "coreHalfWidthDays": 0.48447574242222213,
+      "geoPassive": {
+        "coreHalfWidthDays": 0.48447574242222213,
+        "corePeaks": 3,
+        "excess": 0.26373626373626374,
+        "localExpected": 11.375
+      },
+      "geoPayload": {
+        "coreHalfWidthDays": 0.48447574242222213,
+        "corePeaks": 2214,
+        "excess": 32.59627329192546,
+        "localExpected": 67.921875
+      },
+      "periodDays": 29.5306,
+      "pooledPassive": {
+        "coreHalfWidthDays": 0.48447574242222213,
+        "corePeaks": 107,
+        "excess": 1.7690519245672953,
+        "localExpected": 60.484375
+      },
+      "pooledPayload": {
+        "coreHalfWidthDays": 0.48447574242222213,
+        "corePeaks": 2222,
+        "excess": 18.25285585932486,
+        "localExpected": 121.734375
+      },
+      "topCarriers": [
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000335525,
+          "medianInclinationDeg": 0.017924999818205833,
+          "medianPerigeeKm": 35772.486328125,
+          "medianRangeQuanta": 17750.0,
+          "name": "DIRECTV 5 (TEMPO 1)",
+          "norad": 27426,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 22
+        },
+        {
+          "dominantPeriodDays": 29.42050531263707,
+          "medianEccentricity": 0.0002995,
+          "medianInclinationDeg": 0.01590000092983246,
+          "medianPerigeeKm": 35774.00390625,
+          "medianRangeQuanta": 25640.0,
+          "name": "DIRECTV 8",
+          "norad": 28659,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 18,
+          "windowsTotal": 19
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0002448,
+          "medianInclinationDeg": 0.015300000552088022,
+          "medianPerigeeKm": 35776.529296875,
+          "medianRangeQuanta": 54680.0,
+          "name": "IPSTAR 1",
+          "norad": 28786,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.000284125,
+          "medianInclinationDeg": 0.019550000317394733,
+          "medianPerigeeKm": 35774.640625,
+          "medianRangeQuanta": 16880.0,
+          "name": "GALAXY 16",
+          "norad": 29236,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 17,
+          "windowsTotal": 18
+        },
+        {
+          "dominantPeriodDays": 29.58167254107827,
+          "medianEccentricity": 0.0003067,
+          "medianInclinationDeg": 0.01759999990463257,
+          "medianPerigeeKm": 35773.70703125,
+          "medianRangeQuanta": 16580.0,
+          "name": "DIRECTV 9S",
+          "norad": 29494,
+          "objectType": "PAYLOAD",
+          "significantWindows": 0,
+          "windowsOnLine": 16,
+          "windowsTotal": 17
+        }
+      ]
+    }
+  }
+}

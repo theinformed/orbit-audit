@@ -1,0 +1,1341 @@
+{
+ "schema": 1,
+ "measuredAt": "2026-09-23T01:50:50.496439+00:00",
+ "registration": "docs/t28-geo-sign-control-preregistration-20260923.md",
+ "registrationCommit": "b56c8b6",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "gpuConsumersRowOwed": false,
+ "archive": {
+  "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+  "bytes": 13893627904,
+  "mtimeMs": 1790126494972,
+  "monthRollupSpan": [
+   "1959-01",
+   "2026-09",
+   183409054
+  ]
+ },
+ "extract": {
+  "rowsScanned": 217007154,
+  "rowsKept": 11626494,
+  "objectsKept": 1768,
+  "wallSeconds": 293.49314546585083
+ },
+ "inputs": {
+  "catalogue": "persistent-pairs-20260922.jsonl",
+  "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+  "episodes": 1317,
+  "t8aCatalogue": "proximity-events-20260922.jsonl",
+  "t8aCatalogueSha256": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "t8aEvents": 493
+ },
+ "derivations": {
+  "aDegPerDay2": 0.0017006955627927864,
+  "sigmaNDegPerDay": 0.0006038533519066339,
+  "blindBandRatio": 0.25361612755792523,
+  "uStarDeg": 7.345799838852717,
+  "blindBandUpperDeg": 82.65420016114729,
+  "blindBandFractionOfLongitude": 0.16323999641894926,
+  "uDwellDeg": 15.755490497334758,
+  "uT11Deg": 1.7916608492359865,
+  "uT11AccelerationUsed": 0.0017006,
+  "uT11WithPgAcceleration": 1.7915600436140493,
+  "t8aXDeg": 0.1,
+  "t8aDDays": 30.0,
+  "t11XDeg": 0.0416647,
+  "t11DDays": 56.0,
+  "v1FloorDegPerDay": 0.01,
+  "cadenceLimitAtUDwellDays": 11.25,
+  "horizonDays": 180.0,
+  "substrateMaxSpacingDays": 2.5454545454545454
+ },
+ "signWallSeconds": 37.75072717666626,
+ "chainSignTally": {
+  "free": 178784,
+  "keeper": 78401,
+  "unevaluable": 18305
+ },
+ "persistence": {
+  "carrier": {
+   "chains": 40578,
+   "freeSignChains": 10795,
+   "freeSignFraction": 0.2660308541574252,
+   "chainPairs": 40371,
+   "conditionalFreeGivenFree": 0.5994029293777404,
+   "runLengthHistogram": {
+    "1": 3077,
+    "2": 709,
+    "3": 233,
+    "4": 103,
+    "5": 45,
+    "6": 42,
+    "7": 26,
+    "8": 12,
+    "9": 15,
+    "10": 11,
+    "11": 4,
+    "12": 2,
+    "13": 2,
+    "14": 6,
+    "15": 3,
+    "16": 4,
+    "17": 4,
+    "18": 1,
+    "19": 2,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "23": 3,
+    "24": 5,
+    "25": 2,
+    "26": 2,
+    "27": 1,
+    "28": 3,
+    "29": 2,
+    "30": 2,
+    "31": 3,
+    "34": 1,
+    "35": 2,
+    "36": 1,
+    "37": 2,
+    "38": 1,
+    "40": 1,
+    "41": 1,
+    "42": 2,
+    "44": 2,
+    "45": 2,
+    "46": 3,
+    "47": 1,
+    "48": 1,
+    "49": 1,
+    "51": 1,
+    "52": 3,
+    "55": 1,
+    "56": 1,
+    "57": 1,
+    "58": 1,
+    "65": 1,
+    "68": 1,
+    "74": 1,
+    "79": 1,
+    "84": 2,
+    "85": 1,
+    "99": 1,
+    "103": 1,
+    "120": 1,
+    "121": 1,
+    "122": 1,
+    "288": 1,
+    "400": 1
+   },
+   "qK": {
+    "1": {
+     "windows": 40578,
+     "allFree": 10795,
+     "q": 0.2660308541574252,
+     "ci95": [
+      0.26173599487026955,
+      0.2703592156447834
+     ]
+    },
+    "2": {
+     "windows": 40371,
+     "allFree": 6425,
+     "q": 0.1591488940080751,
+     "ci95": [
+      0.15559270535957248,
+      0.16275417869274245
+     ]
+    },
+    "3": {
+     "windows": 40164,
+     "allFree": 5132,
+     "q": 0.12777611791654217,
+     "ci95": [
+      0.12452577125431519,
+      0.13108038011567447
+     ]
+    },
+    "4": {
+     "windows": 39957,
+     "allFree": 4548,
+     "q": 0.11382235903596366,
+     "ci95": [
+      0.11072393501328803,
+      0.11697702471460636
+     ]
+    },
+    "5": {
+     "windows": 39750,
+     "allFree": 4197,
+     "q": 0.10558490566037736,
+     "ci95": [
+      0.10258021946286366,
+      0.10864734333662529
+     ]
+    },
+    "6": {
+     "windows": 39543,
+     "allFree": 3949,
+     "q": 0.09986596869230964,
+     "ci95": [
+      0.09692765796308006,
+      0.10286318388004315
+     ]
+    }
+   },
+   "independenceModelPK": {
+    "1": 0.17059999999999997,
+    "2": 0.029104359999999992,
+    "3": 0.004965203815999998,
+    "4": 0.0008470637710095995,
+    "5": 0.00014450907933423766,
+    "6": 2.4653248934420938e-05
+   },
+   "note": "q_k is measured; p^k is the independence model from T22's 0.8294, printed beside it so the cost of dependence is visible",
+   "objects": 207,
+   "rosterSize": 208
+  },
+  "passive": {
+   "chains": 47571,
+   "freeSignChains": 43270,
+   "freeSignFraction": 0.9095877740640306,
+   "chainPairs": 47340,
+   "conditionalFreeGivenFree": 0.9332436132445414,
+   "runLengthHistogram": {
+    "1": 542,
+    "2": 384,
+    "3": 318,
+    "4": 210,
+    "5": 156,
+    "6": 158,
+    "7": 86,
+    "8": 95,
+    "9": 75,
+    "10": 58,
+    "11": 69,
+    "12": 56,
+    "13": 50,
+    "14": 40,
+    "15": 36,
+    "16": 43,
+    "17": 31,
+    "18": 23,
+    "19": 33,
+    "20": 22,
+    "21": 23,
+    "22": 24,
+    "23": 21,
+    "24": 24,
+    "25": 16,
+    "26": 23,
+    "27": 11,
+    "28": 16,
+    "29": 12,
+    "30": 10,
+    "31": 21,
+    "32": 11,
+    "33": 13,
+    "34": 10,
+    "35": 12,
+    "36": 9,
+    "37": 13,
+    "38": 3,
+    "39": 9,
+    "40": 14,
+    "41": 8,
+    "42": 9,
+    "43": 6,
+    "44": 6,
+    "45": 6,
+    "46": 10,
+    "47": 13,
+    "48": 11,
+    "49": 11,
+    "50": 5,
+    "51": 6,
+    "52": 4,
+    "53": 6,
+    "54": 1,
+    "55": 3,
+    "56": 4,
+    "57": 7,
+    "58": 4,
+    "59": 2,
+    "60": 2,
+    "61": 5,
+    "62": 3,
+    "63": 7,
+    "64": 3,
+    "65": 2,
+    "66": 6,
+    "67": 3,
+    "68": 2,
+    "69": 4,
+    "70": 1,
+    "71": 2,
+    "72": 1,
+    "74": 4,
+    "75": 3,
+    "76": 3,
+    "77": 3,
+    "78": 3,
+    "79": 2,
+    "80": 1,
+    "82": 1,
+    "83": 1,
+    "84": 1,
+    "85": 4,
+    "86": 3,
+    "87": 2,
+    "88": 2,
+    "89": 2,
+    "92": 1,
+    "93": 1,
+    "94": 2,
+    "95": 3,
+    "96": 3,
+    "97": 1,
+    "98": 3,
+    "100": 2,
+    "101": 1,
+    "103": 1,
+    "106": 3,
+    "107": 1,
+    "109": 2,
+    "110": 3,
+    "111": 1,
+    "112": 1,
+    "116": 1,
+    "118": 1,
+    "119": 1,
+    "120": 1,
+    "121": 1,
+    "122": 1,
+    "123": 2,
+    "124": 1,
+    "127": 1,
+    "130": 1,
+    "131": 1,
+    "133": 1,
+    "134": 1,
+    "135": 3,
+    "136": 2,
+    "140": 1,
+    "143": 1,
+    "145": 1,
+    "147": 1,
+    "153": 1,
+    "156": 1,
+    "160": 1,
+    "173": 1,
+    "174": 1,
+    "176": 1,
+    "179": 1,
+    "186": 1,
+    "187": 1,
+    "196": 1,
+    "199": 1,
+    "206": 1,
+    "217": 1,
+    "221": 1,
+    "223": 1,
+    "230": 1,
+    "237": 1,
+    "247": 1,
+    "267": 1,
+    "340": 1
+   },
+   "qK": {
+    "1": {
+     "windows": 47571,
+     "allFree": 43270,
+     "q": 0.9095877740640306,
+     "ci95": [
+      0.9069752134148701,
+      0.9121502269024873
+     ]
+    },
+    "2": {
+     "windows": 47340,
+     "allFree": 40220,
+     "q": 0.8495986480777356,
+     "ci95": [
+      0.8463465801102135,
+      0.8528077835699219
+     ]
+    },
+    "3": {
+     "windows": 47115,
+     "allFree": 37712,
+     "q": 0.8004244932611695,
+     "ci95": [
+      0.7967864576684474,
+      0.8040254756020857
+     ]
+    },
+    "4": {
+     "windows": 46903,
+     "allFree": 35588,
+     "q": 0.7587574355584931,
+     "ci95": [
+      0.7548589122862943,
+      0.762623908307906
+     ]
+    },
+    "5": {
+     "windows": 46699,
+     "allFree": 33782,
+     "q": 0.723398787982612,
+     "ci95": [
+      0.7193172303068218,
+      0.7274525580798068
+     ]
+    },
+    "6": {
+     "windows": 46501,
+     "allFree": 32186,
+     "q": 0.6921571579105825,
+     "ci95": [
+      0.6879390036841013,
+      0.6963513112092201
+     ]
+    }
+   },
+   "independenceModelPK": {
+    "1": 0.17059999999999997,
+    "2": 0.029104359999999992,
+    "3": 0.004965203815999998,
+    "4": 0.0008470637710095995,
+    "5": 0.00014450907933423766,
+    "6": 2.4653248934420938e-05
+   },
+   "note": "q_k is measured; p^k is the independence model from T22's 0.8294, printed beside it so the cost of dependence is visible",
+   "objects": 239,
+   "rosterSize": 331
+  },
+  "chosenK": 6,
+  "qBar": 0.01,
+  "barExhausted": true,
+  "achievedQ": 0.09986596869230964
+ },
+ "validation": {
+  "k": 6,
+  "uStarDeg": 7.345799838852717,
+  "blindBandRatio": 0.25361612755792523,
+  "uDwellDeg": 15.755490497334758,
+  "uT11Deg": 1.7916608492359865,
+  "V1": {
+   "objects": 200,
+   "eligible": 155,
+   "admittedEligible": 0,
+   "admittedEligibleFraction": 0.0,
+   "rejectedByClauseA": 0,
+   "hardBar": 0,
+   "hardBarPassed": true,
+   "admissionBar": 0.8,
+   "admissionBarPassed": false,
+   "rejectionReasons": {
+    "too-few-chains": 148,
+    "no-epoch": 7
+   },
+   "unattributedRejections": 0,
+   "pooledFreeSignFractionOnLibrators": 1.0
+  },
+  "V2": {
+   "objects": 200,
+   "outsideBlindBand": 164,
+   "admittedOutsideBlindBand": 0,
+   "admittedInsideBlindBand": 0,
+   "excludedOutsideFraction": 1.0,
+   "bar": 1.0,
+   "passed": true,
+   "admittedKeepers": []
+  },
+  "V2_signedRamp": {
+   "objects": 200,
+   "admittedOutsideBlindBand": 0,
+   "passed": true,
+   "note": "labelled addendum: the ramp follows the SIGN of the acceleration at the object's own slot, so every burn carries the keeper sign by construction"
+  },
+  "V2_maxRamp": {
+   "objects": 200,
+   "admitted": 0,
+   "note": "labelled arm: the ramp rate is the maximum triaxial acceleration rather than the acceleration at the object's own slot"
+  },
+  "V3": {
+   "uMaxDeg": 3.5,
+   "chains": 0,
+   "evaluableChains": 0,
+   "freeSignChains": 0,
+   "keeperSignChains": 0,
+   "armA": {
+    "intervals": 0,
+    "diag": {
+     "epochs": 1,
+     "chains": 0,
+     "noEpoch": 0,
+     "catalogueGap": 0,
+     "tooFewChains": 1,
+     "keeperSign": 0,
+     "unevaluableSign": 0,
+     "amplitude": 0,
+     "admitted": 0,
+     "cadenceTruncated": 0
+    }
+   },
+   "whyRefused": "too-few-chains",
+   "armB": {
+    "intervals": 0,
+    "label": "EXCLUDED-OTHER",
+    "diag": {
+     "epochs": 1,
+     "chains": 0,
+     "noEpoch": 0,
+     "catalogueGap": 0,
+     "tooFewChains": 1,
+     "keeperSign": 0,
+     "unevaluableSign": 0,
+     "amplitude": 0,
+     "admitted": 0,
+     "cadenceTruncated": 0
+    }
+   },
+   "calledControlled": false,
+   "armAAdmitsBar": true,
+   "armAAdmits": false,
+   "amplitudeLabelCorrect": false,
+   "passed": false
+  },
+  "V4": {
+   "sparse": {
+    "spacingDays": 10.0,
+    "intervals": 0,
+    "reason": "catalogue-gap",
+    "epochs": 0
+   },
+   "dense": {
+    "spacingDays": 2.0,
+    "intervals": 1,
+    "epochs": 1,
+    "reason": null
+   },
+   "passed": true
+  },
+  "wallSeconds": 138.3534619808197
+ },
+ "epochWallSeconds": 9.088799238204956,
+ "substrateEpochs": 2605,
+ "reference": {
+  "objectDays": 8172393,
+  "pairDays": 3324051937,
+  "t8aEvents": 488,
+  "t11Episodes": 1317,
+  "triggerChains": 208962,
+  "population": 1306,
+  "t8aRatePerObjectDay": 5.971323209737955e-05,
+  "t11RatePerPairDay": 3.962031956662535e-07,
+  "triggerRatePerObjectDay": 0.025569254929370136,
+  "meaningfulZero": {
+   "t8aObjectDays": 16746.706967213115,
+   "t11PairDays": 2523957.4312832193,
+   "triggerObjectDays": 39.109469664340885
+  },
+  "note": "payload class minus the v1 never-manoeuvred set, on watched days -- identical to T8e 5, so the two exposure tables may be read side by side"
+ },
+ "arms": {
+  "A-NOAMP": {
+   "arm": "A-NOAMP",
+   "intervals": 127,
+   "objects": 71,
+   "assertedDays": 25711.873052997686,
+   "objectDays": 25714,
+   "pairDays": 153061,
+   "medianIntervalDays": 108.17918777777778,
+   "readings": {
+    "t8aEvents": {
+     "events": 0,
+     "exposure": 25714,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      2.4115525718309083
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAK-FREE"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 153061,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      60.914447320190064
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 318,
+     "exposure": 25714,
+     "rate": 0.01236680407560084,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.4836591488395583,
+     "leakRatioCi95": [
+      0.43191924006436844,
+      0.5398955662507299
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 0,
+    "t8aWholeSpan": 0,
+    "t11Overlap": 0
+   },
+   "diagnostics": {
+    "epochs": 2605,
+    "chains": 275490,
+    "noEpoch": 1335,
+    "catalogueGap": 20,
+    "tooFewChains": 2466,
+    "keeperSign": 0,
+    "unevaluableSign": 0,
+    "amplitude": 0,
+    "admitted": 127,
+    "cadenceTruncated": 0
+   }
+  },
+  "B-AMP": {
+   "arm": "B-AMP",
+   "intervals": 127,
+   "objects": 71,
+   "assertedDays": 25711.873052997686,
+   "objectDays": 25714,
+   "pairDays": 153061,
+   "medianIntervalDays": 108.17918777777778,
+   "readings": {
+    "t8aEvents": {
+     "events": 0,
+     "exposure": 25714,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      2.4115525718309083
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAK-FREE"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 153061,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      60.914447320190064
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 318,
+     "exposure": 25714,
+     "rate": 0.01236680407560084,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.4836591488395583,
+     "leakRatioCi95": [
+      0.43191924006436844,
+      0.5398955662507299
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 0,
+    "t8aWholeSpan": 0,
+    "t11Overlap": 0
+   },
+   "diagnostics": {
+    "epochs": 2605,
+    "chains": 275490,
+    "noEpoch": 1335,
+    "catalogueGap": 20,
+    "tooFewChains": 2466,
+    "keeperSign": 0,
+    "unevaluableSign": 0,
+    "amplitude": 0,
+    "admitted": 127,
+    "cadenceTruncated": 0
+   }
+  },
+  "C-AMP-CADENCE": {
+   "arm": "C-AMP-CADENCE",
+   "intervals": 142,
+   "objects": 71,
+   "assertedDays": 12318.919037569445,
+   "objectDays": 12317,
+   "pairDays": 34960,
+   "medianIntervalDays": 21.58956236689815,
+   "readings": {
+    "t8aEvents": {
+     "events": 0,
+     "exposure": 12317,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      5.034558969883899
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 34960,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      266.69411388088133
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 117,
+     "exposure": 12317,
+     "rate": 0.009499066331087115,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.3715034465152134,
+     "leakRatioCi95": [
+      0.30722786140610725,
+      0.445261866721506
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 0,
+    "t8aWholeSpan": 0,
+    "t11Overlap": 0
+   },
+   "diagnostics": {
+    "epochs": 2605,
+    "chains": 275490,
+    "noEpoch": 1335,
+    "catalogueGap": 20,
+    "tooFewChains": 2466,
+    "keeperSign": 0,
+    "unevaluableSign": 0,
+    "amplitude": 0,
+    "admitted": 142,
+    "cadenceTruncated": 90
+   }
+  }
+ },
+ "armS2CausalHorizon": {
+  "arm": "S2-B-AMP",
+  "intervals": 136,
+  "objects": 71,
+  "assertedDays": 14388.995462268518,
+  "objectDays": 14387,
+  "pairDays": 39869,
+  "medianIntervalDays": 115.41923601851852,
+  "readings": {
+   "t8aEvents": {
+    "events": 0,
+    "exposure": 14387,
+    "rate": 0.0,
+    "referenceEvents": 488,
+    "referenceExposure": 8172393,
+    "referenceRate": 5.971323209737955e-05,
+    "meaningfulZeroExposure": 16746.706967213115,
+    "leakRatio": 0.0,
+    "leakRatioCi95": [
+     0.0,
+     4.310187171200388
+    ],
+    "bar": 0.1,
+    "evaluable": false,
+    "verdict": "UNEVALUABLE"
+   },
+   "t11Episodes": {
+    "events": 0,
+    "exposure": 39869,
+    "rate": 0.0,
+    "referenceEvents": 1317,
+    "referenceExposure": 3324051937,
+    "referenceRate": 3.962031956662535e-07,
+    "meaningfulZeroExposure": 2523957.4312832193,
+    "leakRatio": 0.0,
+    "leakRatioCi95": [
+     0.0,
+     233.85653568626276
+    ],
+    "bar": 0.1,
+    "evaluable": false,
+    "verdict": "UNEVALUABLE"
+   },
+   "triggerChains": {
+    "events": 209,
+    "exposure": 14387,
+    "rate": 0.014527003544866893,
+    "referenceEvents": 208962,
+    "referenceExposure": 8172393,
+    "referenceRate": 0.025569254929370136,
+    "meaningfulZeroExposure": 39.109469664340885,
+    "leakRatio": 0.5681434044517443,
+    "leakRatioCi95": [
+     0.49369082363906613,
+     0.6506598996013284
+    ],
+    "bar": 0.1,
+    "evaluable": true,
+    "verdict": "LEAKS"
+   }
+  },
+  "secondaryReadings": {
+   "t8aTransferStart": 0,
+   "t8aWholeSpan": 0,
+   "t11Overlap": 0
+  },
+  "note": "registration 5: the asserted interval ends at t_trig(c_k) + 180.0 d, truncated by a keeper-sign chain or the epoch, so both ends are causal"
+ },
+ "E4OperatingPointCurve": [
+  {
+   "k": 1,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.2660308541574252,
+   "independenceModelPk": 0.17059999999999997,
+   "objects": 168,
+   "objectDays": 203376,
+   "pairDays": 4103796,
+   "leak": {
+    "t8aEvents": 0.6587486022820044,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.49056062226483754
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "LEAK-FREE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 1,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.2660308541574252,
+   "independenceModelPk": 0.17059999999999997,
+   "objects": 163,
+   "objectDays": 201852,
+   "pairDays": 4040817,
+   "leak": {
+    "t8aEvents": 0.5807569346377138,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.492714371700151
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "LEAK-FREE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 2,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.1591488940080751,
+   "independenceModelPk": 0.029104359999999992,
+   "objects": 151,
+   "objectDays": 120469,
+   "pairDays": 1623608,
+   "leak": {
+    "t8aEvents": 0.41703775163435697,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5376095241443734
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 2,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.1591488940080751,
+   "independenceModelPk": 0.029104359999999992,
+   "objects": 149,
+   "objectDays": 119954,
+   "pairDays": 1609896,
+   "leak": {
+    "t8aEvents": 0.4188282249999112,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5389395381159069
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 3,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.12777611791654217,
+   "independenceModelPk": 0.004965203815999998,
+   "objects": 131,
+   "objectDays": 75407,
+   "pairDays": 730216,
+   "leak": {
+    "t8aEvents": 0.22208424903806165,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5425027552999133
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 3,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.12777611791654217,
+   "independenceModelPk": 0.004965203815999998,
+   "objects": 131,
+   "objectDays": 75401,
+   "pairDays": 730210,
+   "leak": {
+    "t8aEvents": 0.2221019212903425,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5420272383554094
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 4,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.11382235903596366,
+   "independenceModelPk": 0.0008470637710095995,
+   "objects": 110,
+   "objectDays": 50169,
+   "pairDays": 378719,
+   "leak": {
+    "t8aEvents": 0.3338058754851226,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5300970593743507
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 4,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.11382235903596366,
+   "independenceModelPk": 0.0008470637710095995,
+   "objects": 110,
+   "objectDays": 50169,
+   "pairDays": 378719,
+   "leak": {
+    "t8aEvents": 0.3338058754851226,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5300970593743507
+   },
+   "verdicts": {
+    "t8aEvents": "LEAKS",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 5,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.10558490566037736,
+   "independenceModelPk": 0.00014450907933423766,
+   "objects": 87,
+   "objectDays": 35102,
+   "pairDays": 239919,
+   "leak": {
+    "t8aEvents": 0.0,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5091740538033099
+   },
+   "verdicts": {
+    "t8aEvents": "LEAK-FREE",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 5,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.10558490566037736,
+   "independenceModelPk": 0.00014450907933423766,
+   "objects": 87,
+   "objectDays": 35102,
+   "pairDays": 239919,
+   "leak": {
+    "t8aEvents": 0.0,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.5091740538033099
+   },
+   "verdicts": {
+    "t8aEvents": "LEAK-FREE",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 6,
+   "arm": "A-NOAMP",
+   "carrierFalseRateQk": 0.09986596869230964,
+   "independenceModelPk": 2.4653248934420938e-05,
+   "objects": 71,
+   "objectDays": 25714,
+   "pairDays": 153061,
+   "leak": {
+    "t8aEvents": 0.0,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.4836591488395583
+   },
+   "verdicts": {
+    "t8aEvents": "LEAK-FREE",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": false
+  },
+  {
+   "k": 6,
+   "arm": "B-AMP",
+   "carrierFalseRateQk": 0.09986596869230964,
+   "independenceModelPk": 2.4653248934420938e-05,
+   "objects": 71,
+   "objectDays": 25714,
+   "pairDays": 153061,
+   "leak": {
+    "t8aEvents": 0.0,
+    "t11Episodes": 0.0,
+    "triggerChains": 0.4836591488395583
+   },
+   "verdicts": {
+    "t8aEvents": "LEAK-FREE",
+    "t11Episodes": "UNEVALUABLE",
+    "triggerChains": "LEAKS"
+   },
+   "chosen": true
+  }
+ ],
+ "E5": {
+  "before": {
+   "hits": 14,
+   "alerts": 272,
+   "precision": 0.051470588235294115,
+   "wilson95": [
+    0.030904281744830706,
+    0.0845296307526815
+   ]
+  },
+  "after": {
+   "hits": 14,
+   "alerts": 272,
+   "precision": 0.051470588235294115,
+   "wilson95": [
+    0.030904281744830706,
+    0.0845296307526815
+   ]
+  },
+  "removed": 0,
+  "removedHits": 0,
+  "certifiedChains": 318,
+  "arm": "B-AMP",
+  "replaySha256": "c78462e9e38d51a105f7196e355f5ff9db355df6374cb3d4881c80cd4d24ea1e"
+ },
+ "V5ParitySplit": {
+  "even": {
+   "arm": "even",
+   "intervals": 59,
+   "objects": 37,
+   "assertedDays": 11543.551066493055,
+   "objectDays": 11545,
+   "pairDays": 24531,
+   "medianIntervalDays": 108.17918777777778,
+   "readings": {
+    "t8aEvents": {
+     "events": 0,
+     "exposure": 11545,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      5.371213757649198
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 24531,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      380.0752607425548
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 132,
+     "exposure": 11545,
+     "rate": 0.011433521004763967,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.4471589428924207,
+     "leakRatioCi95": [
+      0.37411400026269953,
+      0.5303045815580608
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 0,
+    "t8aWholeSpan": 0,
+    "t11Overlap": 0
+   }
+  },
+  "odd": {
+   "arm": "odd",
+   "intervals": 68,
+   "objects": 34,
+   "assertedDays": 14168.32198650463,
+   "objectDays": 14169,
+   "pairDays": 51452,
+   "medianIntervalDays": 102.7008585763889,
+   "readings": {
+    "t8aEvents": {
+     "events": 0,
+     "exposure": 14169,
+     "rate": 0.0,
+     "referenceEvents": 488,
+     "referenceExposure": 8172393,
+     "referenceRate": 5.971323209737955e-05,
+     "meaningfulZeroExposure": 16746.706967213115,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      4.3765024230404395
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "t11Episodes": {
+     "events": 0,
+     "exposure": 51452,
+     "rate": 0.0,
+     "referenceEvents": 1317,
+     "referenceExposure": 3324051937,
+     "referenceRate": 3.962031956662535e-07,
+     "meaningfulZeroExposure": 2523957.4312832193,
+     "leakRatio": 0.0,
+     "leakRatioCi95": [
+      0.0,
+      181.21018077578347
+     ],
+     "bar": 0.1,
+     "evaluable": false,
+     "verdict": "UNEVALUABLE"
+    },
+    "triggerChains": {
+     "events": 186,
+     "exposure": 14169,
+     "rate": 0.013127249629472792,
+     "referenceEvents": 208962,
+     "referenceExposure": 8172393,
+     "referenceRate": 0.025569254929370136,
+     "meaningfulZeroExposure": 39.109469664340885,
+     "leakRatio": 0.5133997711600963,
+     "leakRatioCi95": [
+      0.4422380782150916,
+      0.5927589369699031
+     ],
+     "bar": 0.1,
+     "evaluable": true,
+     "verdict": "LEAKS"
+    }
+   },
+   "secondaryReadings": {
+    "t8aTransferStart": 0,
+    "t8aWholeSpan": 0,
+    "t11Overlap": 0
+   }
+  },
+  "instabilityFactor": 3.0
+ },
+ "verdict": {
+  "exists": false,
+  "sentence": "a leak-free GEO control DOES NOT EXIST",
+  "leakFreeArms": [],
+  "perConsumer": {
+   "t8aEvents": {
+    "reason": "leak-free",
+    "bestLeakRatio": 0.0
+   },
+   "t11Episodes": {
+    "reason": "exposure below the meaningful zero",
+    "bestExposureRatio": 0.06064325733187243
+   },
+   "triggerChains": {
+    "reason": "all arms >= 0.10 with exposure above the meaningful zero",
+    "bestLeakRatio": 0.3715034465152134
+   }
+  },
+  "armsRegistered": 4,
+  "bar": 0.1
+ },
+ "gates": {
+  "G_S1": {
+   "meaning": "the classifier admits nothing in the primary arm",
+   "intervals": 127,
+   "fired": false
+  },
+  "G_S2": {
+   "meaning": "no reading has exposure above its meaningful zero",
+   "fired": false
+  },
+  "G_S3": {
+   "meaning": "every evaluable reading leaks",
+   "fired": true
+  },
+  "G_S4": {
+   "meaning": "the sign clause rejects free motion",
+   "rejectedByClauseA": 0,
+   "fired": false
+  },
+  "G_S5": {
+   "meaning": "a keeper outside the blind band is admitted",
+   "admittedOutside": 0,
+   "fired": false
+  },
+  "G_S6": {
+   "meaning": "the slow librator is mislabelled",
+   "fired": true
+  },
+  "G_S7": {
+   "meaning": "provenance",
+   "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+   "fired": false
+  },
+  "G_S8": {
+   "meaning": "persistence did not buy what 3.5 derived",
+   "chosenK": 6,
+   "achievedQ": 0.09986596869230964,
+   "fired": true
+  }
+ },
+ "postRegistrationDiagnostics": {
+  "label": "post-registration where marked; the T-PRED cadence measurement and the co-moving-partner measurement are registered in 4.4 and 7.2 respectively",
+  "tPredBaselineOffsetAtLeakingChains": {
+   "chains": 318,
+   "p25": 5.768987026910509,
+   "median": 6.432532569446266,
+   "p75": 7.012088232058886,
+   "p95": 8.636406848382283,
+   "archiveMedianBaselineReachDays": 4.7575,
+   "maxBaselineReachInAFiveDayGapRunDays": 27.5
+  },
+  "t8aLeaksWithPartnerClass": [],
+  "classOfAdmittedObjects": {
+   "active": 58,
+   "passive": 13,
+   "unknown": 0
+  }
+ },
+ "sourceSha256": {
+  "tools/geo_sign_control.py": "60f8575a16872f42dfbdb7af956edb054752c24f4fed7b5a8745114cdfb8fe89"
+ },
+ "wallSeconds": 201.5993332862854
+}

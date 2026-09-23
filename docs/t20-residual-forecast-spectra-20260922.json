@@ -1,0 +1,784 @@
+{
+  "registration": "docs/t20-residual-forecast-preregistration-20260922.md",
+  "generatedUtc": "2026-09-22T19:19:03+00:00",
+  "method": {
+    "periodogram": "classical normalised Lomb-Scargle (Lomb 1976; Scargle 1982), implemented directly",
+    "detrend": "mean subtracted and a linear trend removed before transforming",
+    "periodRangeDays": [
+      2.0,
+      200.0
+    ],
+    "oversample": 5.0,
+    "surrogates": 200,
+    "surrogateKind": "phase-scrambled: the series' own Fourier amplitudes preserved, phases replaced by uniform random phases, so the floor is a floor against RED noise",
+    "floorRule": "a line is declared only above the GLOBAL floor, the 95th percentile of the surrogate MAXIMUM power over the scanned band; the per-frequency floor is reported for shape and is not a detection threshold",
+    "seed": 20260922
+  },
+  "missions": {
+    "sentinel-1a": {
+      "norad": 39634,
+      "medianMeanMotionRevPerDay": 14.59198623,
+      "derivedRepeatPeriodDays": 27,
+      "derivedRepeatRevolutions": 394,
+      "derivedRepeatResidualRev": 0.01637178999999378,
+      "namedBands": {
+        "solarRotation": 27.2753,
+        "semiAnnual": 182.625,
+        "sentinel3OrbitControl": 14.0,
+        "groundTrackRepeat": 27.0
+      },
+      "series": {
+        "alongTrack+7d": {
+          "series": "alongTrack+7d",
+          "n": 332,
+          "spanDays": 334.08007027777785,
+          "frequencyResolutionPerDay": 0.0029932943894813275,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 12.098287392037312,
+          "maxPower": 8.355498900697327,
+          "maxPowerPeriodDays": 20.283664218860725,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.789843217869887,
+              "power": 7.487896113250852,
+              "perFrequencyFloor": 7.0988653653751825,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.6189219904115631
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 0.7800381252144357,
+              "perFrequencyFloor": 1.5164224086065026,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.0644750864265161
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.234101901802807,
+              "power": 2.2067218208951935,
+              "perFrequencyFloor": 3.33677233442289,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.18239952064187068
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 27.0,
+              "peakPeriodDays": 26.789843217869887,
+              "power": 7.487896113250852,
+              "perFrequencyFloor": 7.0988653653751825,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.6189219904115631
+            }
+          },
+          "detrendSlopePerDay": 0.04141173146654067
+        },
+        "alongTrack+14d": {
+          "series": "alongTrack+14d",
+          "n": 332,
+          "spanDays": 334.08007027777785,
+          "frequencyResolutionPerDay": 0.0029932943894813275,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 13.59756090354787,
+          "maxPower": 10.822226400288955,
+          "maxPowerPeriodDays": 27.226501231474757,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 27.226501231474757,
+              "power": 10.822226400288955,
+              "perFrequencyFloor": 11.648729892386356,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.7958946811898613
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 2.2053038452448597,
+              "perFrequencyFloor": 3.020258679076251,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.16218378140666775
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.879290140618748,
+              "power": 0.6067299152927393,
+              "perFrequencyFloor": 2.0511977264805203,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.04462049624903181
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 27.0,
+              "peakPeriodDays": 27.226501231474757,
+              "power": 10.822226400288955,
+              "perFrequencyFloor": 11.648729892386356,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.7958946811898613
+            }
+          },
+          "detrendSlopePerDay": 0.15116835706561643
+        },
+        "alongTrack+30d": {
+          "series": "alongTrack+30d",
+          "n": 332,
+          "spanDays": 334.08007027777785,
+          "frequencyResolutionPerDay": 0.0029932943894813275,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 15.598264977144051,
+          "maxPower": 10.455060841151552,
+          "maxPowerPeriodDays": 48.62599749521755,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 27.67762961891622,
+              "power": 10.376500777000608,
+              "perFrequencyFloor": 12.226524121080262,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.665234293186144
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 3.0445178925758447,
+              "perFrequencyFloor": 4.26839426942567,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1951831115215019
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.879290140618748,
+              "power": 0.7958139117986295,
+              "perFrequencyFloor": 2.5127268797443674,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.05101938664106078
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 27.0,
+              "peakPeriodDays": 27.67762961891622,
+              "power": 10.376500777000608,
+              "perFrequencyFloor": 12.226524121080262,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.665234293186144
+            }
+          },
+          "detrendSlopePerDay": 0.6617955202588541
+        },
+        "quadraticCoefficient": {
+          "series": "quadraticCoefficient",
+          "n": 332,
+          "spanDays": 334.08007027777785,
+          "frequencyResolutionPerDay": 0.0029932943894813275,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 17.66649941839613,
+          "maxPower": 11.57180332452631,
+          "maxPowerPeriodDays": 27.67762961891622,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 27.67762961891622,
+              "power": 11.57180332452631,
+              "perFrequencyFloor": 15.030177319169404,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.655013936291
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 4.0275263897187745,
+              "perFrequencyFloor": 5.781571577704884,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.22797535008689446
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.879290140618748,
+              "power": 1.333763544721378,
+              "perFrequencyFloor": 3.05383810535151,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.07549676442026369
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 27.0,
+              "peakPeriodDays": 27.67762961891622,
+              "power": 11.57180332452631,
+              "perFrequencyFloor": 15.030177319169404,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.655013936291
+            }
+          },
+          "detrendSlopePerDay": 0.0007004495269172444
+        },
+        "linearCoefficient": {
+          "series": "linearCoefficient",
+          "n": 332,
+          "spanDays": 334.08007027777785,
+          "frequencyResolutionPerDay": 0.0029932943894813275,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 22.404032471342024,
+          "maxPower": 20.469756143122794,
+          "maxPowerPeriodDays": 6.921013039995748,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.366970341324464,
+              "power": 7.748324069076383,
+              "perFrequencyFloor": 6.708703515019699,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.3458450651233256
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 147.14588555864543,
+              "power": 1.2213832314645117,
+              "perFrequencyFloor": 1.485027461472592,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.05451622305166877
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.234101901802807,
+              "power": 3.1715446985836566,
+              "perFrequencyFloor": 4.513411058430574,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.14156133288239597
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 27.0,
+              "peakPeriodDays": 26.366970341324464,
+              "power": 7.748324069076383,
+              "perFrequencyFloor": 6.708703515019699,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.3458450651233256
+            }
+          },
+          "detrendSlopePerDay": 0.001028179345825131
+        }
+      }
+    },
+    "sentinel-3a": {
+      "norad": 41335,
+      "medianMeanMotionRevPerDay": 14.267372405,
+      "derivedRepeatPeriodDays": 15,
+      "derivedRepeatRevolutions": 214,
+      "derivedRepeatResidualRev": 0.010586074999991979,
+      "namedBands": {
+        "solarRotation": 27.2753,
+        "semiAnnual": 182.625,
+        "sentinel3OrbitControl": 14.0,
+        "groundTrackRepeat": 15.0
+      },
+      "series": {
+        "alongTrack+7d": {
+          "series": "alongTrack+7d",
+          "n": 332,
+          "spanDays": 333.95839138888914,
+          "frequencyResolutionPerDay": 0.002994385006590585,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 34.59611162175353,
+          "maxPower": 24.067411565387502,
+          "maxPowerPeriodDays": 21.870526614281115,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.78139238745738,
+              "power": 4.4097477427705645,
+              "perFrequencyFloor": 4.159219174774888,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.12746368120739268
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 2.365906820841607,
+              "perFrequencyFloor": 2.551120374002022,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.06838649518502418
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.10905478156979,
+              "power": 8.320369299501907,
+              "perFrequencyFloor": 10.287069890222638,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.24050012875638258
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.996026547286633,
+              "power": 12.425831826149755,
+              "perFrequencyFloor": 9.620404567920398,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.35916845112548934
+            }
+          },
+          "detrendSlopePerDay": 0.0027977672724256108
+        },
+        "alongTrack+14d": {
+          "series": "alongTrack+14d",
+          "n": 332,
+          "spanDays": 333.95839138888914,
+          "frequencyResolutionPerDay": 0.002994385006590585,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 52.60271225237573,
+          "maxPower": 37.50776797102439,
+          "maxPowerPeriodDays": 21.870526614281115,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.78139238745738,
+              "power": 9.800510471536276,
+              "perFrequencyFloor": 6.8700853918069775,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1863118849179426
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 4.628348097551493,
+              "perFrequencyFloor": 4.679818302866877,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.08798687176710095
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.10905478156979,
+              "power": 4.131994190124541,
+              "perFrequencyFloor": 5.305168721713264,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.07855097224455236
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.996026547286633,
+              "power": 6.995389051309202,
+              "perFrequencyFloor": 6.723095884351897,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1329853300671443
+            }
+          },
+          "detrendSlopePerDay": 0.010341140820488624
+        },
+        "alongTrack+30d": {
+          "series": "alongTrack+30d",
+          "n": 332,
+          "spanDays": 333.95839138888914,
+          "frequencyResolutionPerDay": 0.002994385006590585,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 39.28575214597026,
+          "maxPower": 28.110785575648443,
+          "maxPowerPeriodDays": 22.160783131116474,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.78139238745738,
+              "power": 10.723462910152207,
+              "perFrequencyFloor": 7.146298016703848,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.27296061102020086
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 11.856527025020421,
+              "perFrequencyFloor": 10.010118407549488,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.301802215239924
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.10905478156979,
+              "power": 2.4456041610783386,
+              "perFrequencyFloor": 3.808610287972383,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.062251682289076314
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.996026547286633,
+              "power": 3.9501287683894546,
+              "perFrequencyFloor": 4.82822751253977,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.10054863538598789
+            }
+          },
+          "detrendSlopePerDay": 0.045211700620718644
+        },
+        "quadraticCoefficient": {
+          "series": "quadraticCoefficient",
+          "n": 332,
+          "spanDays": 333.95839138888914,
+          "frequencyResolutionPerDay": 0.002994385006590585,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 27.573463628921708,
+          "maxPower": 24.023203442997584,
+          "maxPowerPeriodDays": 21.870526614281115,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.358632606105513,
+              "power": 14.31937175393007,
+              "perFrequencyFloor": 12.475301817295229,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.5193171212234118
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 17.680085718489522,
+              "perFrequencyFloor": 14.518059644173755,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.6411993051154061
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.990837959177544,
+              "power": 1.008936520420912,
+              "perFrequencyFloor": 1.5705195778282517,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.03659085176962107
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.996026547286633,
+              "power": 6.7439244729398204,
+              "perFrequencyFloor": 5.250821705998862,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.2445802443863506
+            }
+          },
+          "detrendSlopePerDay": 4.7171759253264195e-05
+        },
+        "linearCoefficient": {
+          "series": "linearCoefficient",
+          "n": 332,
+          "spanDays": 333.95839138888914,
+          "frequencyResolutionPerDay": 0.002994385006590585,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 41.47854754742088,
+          "maxPower": 29.73908942546666,
+          "maxPowerPeriodDays": 21.870526614281115,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.78139238745738,
+              "power": 7.111980520983244,
+              "perFrequencyFloor": 8.17715895441189,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1714616576882877
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 147.13171855558872,
+              "power": 0.8356000610309102,
+              "perFrequencyFloor": 1.3322326543029663,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.02014535489883294
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.10905478156979,
+              "power": 7.5897804628400305,
+              "perFrequencyFloor": 9.178948832222243,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1829808638830209
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.996026547286633,
+              "power": 12.789289078466165,
+              "perFrequencyFloor": 9.538212432859044,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.3083350270123284
+            }
+          },
+          "detrendSlopePerDay": 9.098518080424809e-05
+        }
+      }
+    },
+    "sentinel-3b": {
+      "norad": 43437,
+      "medianMeanMotionRevPerDay": 14.26736529,
+      "derivedRepeatPeriodDays": 15,
+      "derivedRepeatRevolutions": 214,
+      "derivedRepeatResidualRev": 0.010479350000025534,
+      "namedBands": {
+        "solarRotation": 27.2753,
+        "semiAnnual": 182.625,
+        "sentinel3OrbitControl": 14.0,
+        "groundTrackRepeat": 15.0
+      },
+      "series": {
+        "alongTrack+7d": {
+          "series": "alongTrack+7d",
+          "n": 315,
+          "spanDays": 334.0287143055539,
+          "frequencyResolutionPerDay": 0.002993754600046889,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 24.171640298152884,
+          "maxPower": 17.6547313975989,
+          "maxPowerPeriodDays": 21.874628273199292,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 27.222885564326248,
+              "power": 16.104946296986526,
+              "perFrequencyFloor": 10.976002925161339,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.6662744480033163
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 3.4333513912315454,
+              "perFrequencyFloor": 4.072999394299053,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.14204048003700895
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.993577931553883,
+              "power": 10.72778116905138,
+              "perFrequencyFloor": 11.212920516563042,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.4438168463838658
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.865446375198339,
+              "power": 5.7813718177105935,
+              "perFrequencyFloor": 10.428941630818644,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.23917995412799464
+            }
+          },
+          "detrendSlopePerDay": -0.008336126681318974
+        },
+        "alongTrack+14d": {
+          "series": "alongTrack+14d",
+          "n": 315,
+          "spanDays": 334.0287143055539,
+          "frequencyResolutionPerDay": 0.002993754600046889,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 36.176190393597814,
+          "maxPower": 28.262180980764562,
+          "maxPowerPeriodDays": 26.786276548428745,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.786276548428745,
+              "power": 28.262180980764562,
+              "perFrequencyFloor": 18.13600248216118,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.7812370698316036
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 7.401268785305969,
+              "perFrequencyFloor": 8.798009964926667,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.20458950223282185
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.993577931553883,
+              "power": 5.265704302917312,
+              "perFrequencyFloor": 5.232844899778603,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.1455571812738247
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.865446375198339,
+              "power": 3.853087021634065,
+              "perFrequencyFloor": 6.655527711444789,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.10650892146774954
+            }
+          },
+          "detrendSlopePerDay": -0.02365522355832144
+        },
+        "alongTrack+30d": {
+          "series": "alongTrack+30d",
+          "n": 315,
+          "spanDays": 334.0287143055539,
+          "frequencyResolutionPerDay": 0.002993754600046889,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 24.858496366617885,
+          "maxPower": 21.865905658745913,
+          "maxPowerPeriodDays": 22.164932452046365,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.786276548428745,
+              "power": 14.357923923337818,
+              "perFrequencyFloor": 11.614110798455998,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.5775861786483139
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 19.282844710809524,
+              "perFrequencyFloor": 22.446862143077627,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.7757043880057113
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.993577931553883,
+              "power": 4.878639526243077,
+              "perFrequencyFloor": 5.195689352269323,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.19625642091508527
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.865446375198339,
+              "power": 2.713075468585148,
+              "perFrequencyFloor": 5.122711966910468,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.10914077137137296
+            }
+          },
+          "detrendSlopePerDay": -0.07578624518176101
+        },
+        "quadraticCoefficient": {
+          "series": "quadraticCoefficient",
+          "n": 315,
+          "spanDays": 334.0287143055539,
+          "frequencyResolutionPerDay": 0.002993754600046889,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 35.44457236500661,
+          "maxPower": 26.866767664766254,
+          "maxPowerPeriodDays": 200.0,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.786276548428745,
+              "power": 15.197942671148057,
+              "perFrequencyFloor": 13.710384170021271,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.4287805341432908
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 200.0,
+              "power": 26.866767664766254,
+              "perFrequencyFloor": 32.571112546401565,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.757993844250496
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 14.111816149157143,
+              "power": 1.8608314291269463,
+              "perFrequencyFloor": 2.3612138498301625,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.05249975680237268
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 15.134868208853755,
+              "power": 0.7716959271432862,
+              "perFrequencyFloor": 3.1773958681690573,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.02177190682952516
+            }
+          },
+          "detrendSlopePerDay": -5.736406514723301e-05
+        },
+        "linearCoefficient": {
+          "series": "linearCoefficient",
+          "n": 315,
+          "spanDays": 334.0287143055539,
+          "frequencyResolutionPerDay": 0.002993754600046889,
+          "surrogates": 200,
+          "seed": 20260922,
+          "globalFloor": 29.909572914809832,
+          "maxPower": 29.86078264723872,
+          "maxPowerPeriodDays": 26.786276548428745,
+          "linesAboveGlobalFloor": [],
+          "lineCount": 0,
+          "namedBands": {
+            "solarRotation": {
+              "bandPeriodDays": 27.2753,
+              "peakPeriodDays": 26.786276548428745,
+              "power": 29.86078264723872,
+              "perFrequencyFloor": 18.719170905711678,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.9983687407469817
+            },
+            "semiAnnual": {
+              "bandPeriodDays": 182.625,
+              "peakPeriodDays": 147.1399071384538,
+              "power": 0.5232013292222915,
+              "perFrequencyFloor": 1.4598354274654586,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.01749277165249078
+            },
+            "sentinel3OrbitControl": {
+              "bandPeriodDays": 14.0,
+              "peakPeriodDays": 13.993577931553883,
+              "power": 8.233791296511166,
+              "perFrequencyFloor": 8.522144464898345,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.2752894974449526
+            },
+            "groundTrackRepeat": {
+              "bandPeriodDays": 15.0,
+              "peakPeriodDays": 14.865446375198339,
+              "power": 5.132701865896373,
+              "perFrequencyFloor": 8.828098921977508,
+              "aboveGlobalFloor": false,
+              "timesGlobalFloor": 0.17160732720977429
+            }
+          },
+          "detrendSlopePerDay": -0.0008057482693860825
+        }
+      }
+    }
+  }
+}

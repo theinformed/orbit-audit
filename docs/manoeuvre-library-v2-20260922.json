@@ -1,0 +1,1635 @@
+{
+ "libraryVersion": "v2",
+ "registration": "docs/manoeuvre-library-v2-preregistration-20260922.md",
+ "note": "Agreement between rule sets, not accuracy. Every label class in the matrix is another instrument's output on the same element sets, not ground truth. Read the floors before any figure: every threshold is a screen, not a law.",
+ "rules": [
+  {
+   "id": "G6",
+   "type": "graveyard raise",
+   "arm": "G",
+   "clauses": [
+    "(a_before - 42164.0 km) < 235.0 km <= (a_after - 42164.0 km)"
+   ],
+   "thresholds": [
+    {
+     "name": "graveyardRaiseKm",
+     "value": 235.0,
+     "source": "pipeline/orbit_events.py::GEO_GRAVEYARD_MINIMUM_RAISE_KM"
+    },
+    {
+     "name": "geoSemiMajorAxisKm",
+     "value": 42164.0,
+     "source": "pipeline/orbit_events.py::GEO_SEMI_MAJOR_AXIS_KM"
+    }
+   ],
+   "expectedLabelClass": null,
+   "propulsive": true,
+   "stage": 0
+  },
+  {
+   "id": "G7",
+   "type": "decaying",
+   "arm": "G",
+   "clauses": [
+    "perigee altitude before the burn < 200.0 km"
+   ],
+   "thresholds": [
+    {
+     "name": "terminalDecayPerigeeKm",
+     "value": 200.0,
+     "source": "pipeline/orbit_events.py::TERMINAL_DECAY_PERIGEE_KM"
+    }
+   ],
+   "expectedLabelClass": null,
+   "propulsive": false,
+   "stage": 0
+  },
+  {
+   "id": "G1",
+   "type": "drift start",
+   "arm": "G",
+   "clauses": [
+    "|delta drift| >= 0.010 deg/day",
+    "|drift after| > 0.020 deg/day",
+    "|drift before| <= 0.020 deg/day",
+    "|net delta inclination| < hypot(0.0009683819956551464 deg, 0.00037656075792003106 deg/day * natural span days)"
+   ],
+   "thresholds": [
+    {
+     "name": "burnFloorDegPerDay",
+     "value": 0.01,
+     "source": "tools/proximity_geo.py::BURN_FLOOR_DEG_PER_DAY (T8a prereg 5.5)"
+    },
+    {
+     "name": "stationedBandDegPerDay",
+     "value": 0.020000000000000004,
+     "source": "tools/trigger_alarm.py::SLOT_DRIFT_FLOOR = 6 * X / D (T8d)"
+    },
+    {
+     "name": "netPoleResidualDeg",
+     "value": 0.0009683819956551464,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    },
+    {
+     "name": "netRateErrorDegPerDay",
+     "value": 0.00037656075792003106,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    }
+   ],
+   "expectedLabelClass": "t8aInitiatingFlag",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "G2",
+   "type": "drift stop",
+   "arm": "G",
+   "clauses": [
+    "|drift before| > 0.020 deg/day",
+    "|drift after| <= 0.020 deg/day",
+    "an earlier station segment of this object has median longitude within 0.1 deg of the post-burn longitude"
+   ],
+   "thresholds": [
+    {
+     "name": "stationedBandDegPerDay",
+     "value": 0.020000000000000004,
+     "source": "tools/trigger_alarm.py::SLOT_DRIFT_FLOOR = 6 * X / D (T8d)"
+    },
+    {
+     "name": "coLocationHalfWidthDeg",
+     "value": 0.1,
+     "source": "tools/proximity_geo.py::X_PRIMARY_DEG (T8a prereg 4)"
+    },
+    {
+     "name": "stationHalfWidthDeg",
+     "value": 0.3,
+     "source": "tools/proximity_geo.py::STATION_HALF_WIDTH_DEG (T8a prereg 5.3)"
+    },
+    {
+     "name": "stationMinDays",
+     "value": 30.0,
+     "source": "tools/proximity_geo.py::STATION_MIN_DAYS (T8a prereg 5.3)"
+    }
+   ],
+   "expectedLabelClass": "t8aArrival",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "G3",
+   "type": "station acquisition",
+   "arm": "G",
+   "clauses": [
+    "|drift before| > 0.020 deg/day",
+    "|drift after| <= 0.020 deg/day",
+    "no earlier station segment of this object has median longitude within 0.1 deg of the post-burn longitude"
+   ],
+   "thresholds": [
+    {
+     "name": "stationedBandDegPerDay",
+     "value": 0.020000000000000004,
+     "source": "tools/trigger_alarm.py::SLOT_DRIFT_FLOOR = 6 * X / D (T8d)"
+    },
+    {
+     "name": "coLocationHalfWidthDeg",
+     "value": 0.1,
+     "source": "tools/proximity_geo.py::X_PRIMARY_DEG (T8a prereg 4)"
+    },
+    {
+     "name": "stationHalfWidthDeg",
+     "value": 0.3,
+     "source": "tools/proximity_geo.py::STATION_HALF_WIDTH_DEG (T8a prereg 5.3)"
+    },
+    {
+     "name": "stationMinDays",
+     "value": 30.0,
+     "source": "tools/proximity_geo.py::STATION_MIN_DAYS (T8a prereg 5.3)"
+    }
+   ],
+   "expectedLabelClass": "t8aArrival",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "G4",
+   "type": "east-west keeping",
+   "arm": "G",
+   "clauses": [
+    "|delta drift| >= 0.010 deg/day",
+    "|drift before| <= 0.020 deg/day",
+    "|drift after| <= 0.020 deg/day",
+    "the burn epoch is inside a station segment",
+    "|net delta inclination| < hypot(0.0009683819956551464 deg, 0.00037656075792003106 deg/day * natural span days)"
+   ],
+   "thresholds": [
+    {
+     "name": "burnFloorDegPerDay",
+     "value": 0.01,
+     "source": "tools/proximity_geo.py::BURN_FLOOR_DEG_PER_DAY (T8a prereg 5.5)"
+    },
+    {
+     "name": "stationedBandDegPerDay",
+     "value": 0.020000000000000004,
+     "source": "tools/trigger_alarm.py::SLOT_DRIFT_FLOOR = 6 * X / D (T8d)"
+    },
+    {
+     "name": "netPoleResidualDeg",
+     "value": 0.0009683819956551464,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    },
+    {
+     "name": "netRateErrorDegPerDay",
+     "value": 0.00037656075792003106,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    },
+    {
+     "name": "stationHalfWidthDeg",
+     "value": 0.3,
+     "source": "tools/proximity_geo.py::STATION_HALF_WIDTH_DEG (T8a prereg 5.3)"
+    },
+    {
+     "name": "stationMinDays",
+     "value": 30.0,
+     "source": "tools/proximity_geo.py::STATION_MIN_DAYS (T8a prereg 5.3)"
+    }
+   ],
+   "expectedLabelClass": "t10cEastWestObject",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "G5",
+   "type": "north-south keeping",
+   "arm": "G",
+   "clauses": [
+    "|net delta inclination| >= hypot(0.0009683819956551464 deg, 0.00037656075792003106 deg/day * natural span days)",
+    "|delta drift| < 0.010 deg/day"
+   ],
+   "thresholds": [
+    {
+     "name": "netPoleResidualDeg",
+     "value": 0.0009683819956551464,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    },
+    {
+     "name": "netRateErrorDegPerDay",
+     "value": 0.00037656075792003106,
+     "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+    },
+    {
+     "name": "burnFloorDegPerDay",
+     "value": 0.01,
+     "source": "tools/proximity_geo.py::BURN_FLOOR_DEG_PER_DAY (T8a prereg 5.5)"
+    }
+   ],
+   "expectedLabelClass": "t10bNorthSouth",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "P1",
+   "type": "decaying",
+   "arm": "P",
+   "clauses": [
+    "perigee altitude before the burn < 200.0 km"
+   ],
+   "thresholds": [
+    {
+     "name": "terminalDecayPerigeeKm",
+     "value": 200.0,
+     "source": "pipeline/orbit_events.py::TERMINAL_DECAY_PERIGEE_KM"
+    }
+   ],
+   "expectedLabelClass": null,
+   "propulsive": false,
+   "stage": 0
+  },
+  {
+   "id": "P2",
+   "type": "inclination adjust",
+   "arm": "P",
+   "clauses": [
+    "the plane channel fired at this epoch",
+    "|delta inclination| >= 0.01 deg",
+    "|delta semi-major axis| < 0.050 km"
+   ],
+   "thresholds": [
+    {
+     "name": "planeFloorDeg",
+     "value": 0.01,
+     "source": "tools/proximity_plane.py::I_FLOOR_DEG (T8b prereg 5.4)"
+    },
+    {
+     "name": "inTrackFloorKm",
+     "value": 0.05,
+     "source": "tools/proximity_plane.py::DA_FLOOR_KM (T8b prereg 5.4)"
+    }
+   ],
+   "expectedLabelClass": "t8bPlaneFlaggedObject",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "P3",
+   "type": "phasing",
+   "arm": "P",
+   "clauses": [
+    "the in-track channel fired and the plane channel did not",
+    "|delta semi-major axis| >= 0.050 km",
+    "the previous in-track flag within 180 d exists and has the opposite sign of delta semi-major axis"
+   ],
+   "thresholds": [
+    {
+     "name": "inTrackFloorKm",
+     "value": 0.05,
+     "source": "tools/proximity_plane.py::DA_FLOOR_KM (T8b prereg 5.4)"
+    },
+    {
+     "name": "campaignGapDays",
+     "value": 180.0,
+     "source": "tools/proximity_plane.py::CAMPAIGN_MAX_GAP_DAYS (T8b prereg 5.5)"
+    }
+   ],
+   "expectedLabelClass": "t8bCampaignStart",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "P4",
+   "type": "orbit raise",
+   "arm": "P",
+   "clauses": [
+    "the in-track channel fired and the plane channel did not",
+    "delta semi-major axis >= +0.050 km",
+    "the phasing rule does not hold"
+   ],
+   "thresholds": [
+    {
+     "name": "inTrackFloorKm",
+     "value": 0.05,
+     "source": "tools/proximity_plane.py::DA_FLOOR_KM (T8b prereg 5.4)"
+    },
+    {
+     "name": "campaignGapDays",
+     "value": 180.0,
+     "source": "tools/proximity_plane.py::CAMPAIGN_MAX_GAP_DAYS (T8b prereg 5.5)"
+    }
+   ],
+   "expectedLabelClass": "t10aTransferInterval",
+   "propulsive": true,
+   "stage": 1
+  },
+  {
+   "id": "P5",
+   "type": "orbit lower",
+   "arm": "P",
+   "clauses": [
+    "the in-track channel fired and the plane channel did not",
+    "delta semi-major axis <= -0.050 km",
+    "the phasing rule does not hold"
+   ],
+   "thresholds": [
+    {
+     "name": "inTrackFloorKm",
+     "value": 0.05,
+     "source": "tools/proximity_plane.py::DA_FLOOR_KM (T8b prereg 5.4)"
+    },
+    {
+     "name": "campaignGapDays",
+     "value": 180.0,
+     "source": "tools/proximity_plane.py::CAMPAIGN_MAX_GAP_DAYS (T8b prereg 5.5)"
+    }
+   ],
+   "expectedLabelClass": "t10aTransferInterval",
+   "propulsive": true,
+   "stage": 1
+  }
+ ],
+ "rulesSha256": "e2e0cbbdeb50a09c37bbf84131e9dc4b9aa4e8d3b57aa46fbe0343a9ea5cba52",
+ "floors": {
+  "burnFloorDegPerDay": {
+   "value": 0.01,
+   "source": "tools/proximity_geo.py::BURN_FLOOR_DEG_PER_DAY (T8a prereg 5.5)"
+  },
+  "stationedBandDegPerDay": {
+   "value": 0.020000000000000004,
+   "source": "tools/trigger_alarm.py::SLOT_DRIFT_FLOOR = 6 * X / D (T8d)"
+  },
+  "incBarDeg": {
+   "value": 0.000835,
+   "source": "5 sigma_i on sigma_i = 1.67e-4 deg, docs/orbit-history-design.md section 2 table, already floored at the 1e-4 deg publication quantum"
+  },
+  "coLocationHalfWidthDeg": {
+   "value": 0.1,
+   "source": "tools/proximity_geo.py::X_PRIMARY_DEG (T8a prereg 4)"
+  },
+  "relocationBarDeg": {
+   "value": 2.0,
+   "source": "tools/proximity_geo.py::X_FAR_DEG (T8a prereg 4)"
+  },
+  "stationHalfWidthDeg": {
+   "value": 0.3,
+   "source": "tools/proximity_geo.py::STATION_HALF_WIDTH_DEG (T8a prereg 5.3)"
+  },
+  "stationMinDays": {
+   "value": 30.0,
+   "source": "tools/proximity_geo.py::STATION_MIN_DAYS (T8a prereg 5.3)"
+  },
+  "matchToleranceDays": {
+   "value": 5.0,
+   "source": "tools/proximity_geo.py::MAX_GAP_DAYS (T8a prereg 4); the same value is T8d's MERGE_DAYS and CONFIRM_DAYS"
+  },
+  "inTrackFloorKm": {
+   "value": 0.05,
+   "source": "tools/proximity_plane.py::DA_FLOOR_KM (T8b prereg 5.4)"
+  },
+  "planeFloorDeg": {
+   "value": 0.01,
+   "source": "tools/proximity_plane.py::I_FLOOR_DEG (T8b prereg 5.4)"
+  },
+  "campaignGapDays": {
+   "value": 180.0,
+   "source": "tools/proximity_plane.py::CAMPAIGN_MAX_GAP_DAYS (T8b prereg 5.5)"
+  },
+  "graveyardRaiseKm": {
+   "value": 235.0,
+   "source": "pipeline/orbit_events.py::GEO_GRAVEYARD_MINIMUM_RAISE_KM"
+  },
+  "geoSemiMajorAxisKm": {
+   "value": 42164.0,
+   "source": "pipeline/orbit_events.py::GEO_SEMI_MAJOR_AXIS_KM"
+  },
+  "terminalDecayPerigeeKm": {
+   "value": 200.0,
+   "source": "pipeline/orbit_events.py::TERMINAL_DECAY_PERIGEE_KM"
+  },
+  "netPoleResidualDeg": {
+   "value": 0.0009683819956551464,
+   "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+  },
+  "netRateErrorDegPerDay": {
+   "value": 0.00037656075792003106,
+   "source": "v2 prereg section 3, derived: hypot(poleResidualDeg, rateErrorDegPerDay * naturalSpanDays). poleResidualDeg 9.683819956551464e-4 deg is docs/stationkeeping-efficiency-20260922-receipt.json poleNoiseFloor.sigmaPoleDeg, measured on 948942 quiet GEO arcs. rateErrorDegPerDay is |modelPoleSpeedDegPerYear - laplaceCalibrationUnregistered.poleSpeedDegPerYear.median| / 365.25 from the same receipt, the model being (360 / stationkeeping_efficiency.LAPLACE_PRECESSION_PERIOD_YR) * sin(stationkeeping_efficiency.LAPLACE_TILT_DEG). No multiple is applied to either term"
+  }
+ },
+ "episodeTypes": [
+  "relocation",
+  "transfer-leg run"
+ ],
+ "inputs": {
+  "geoExtract": {
+   "path": "/home/sdegan/space-teaching-aid/runtime/proximity-geo/near-geo.npz",
+   "sha256": "ff19d32ea2bd9ec407e0d9d09c8bfa2bf0b7e660d5297d4196375bae30567a2a",
+   "objects": 1652
+  },
+  "planeFlags": {
+   "path": "/home/sdegan/t8b-work/detect-flags.npz",
+   "sha256": "3df0e8243cacfadb9292a95b99193574f43c83cf2cf0a8f71ba875851b89455f",
+   "objectsWithFlags": 54588
+  },
+  "planeElementCache": {
+   "rowsScanned": 217046214,
+   "rowsCached": 217046214,
+   "objects": 68749,
+   "wallSeconds": 875.5511157512665,
+   "byRegime": {
+    "LEO": {
+     "objectDays": 112842668,
+     "objects": 61734
+    },
+    "MEO": {
+     "objectDays": 3331923,
+     "objects": 1044
+    },
+    "HEO": {
+     "objectDays": 17148924,
+     "objects": 8404
+    }
+   }
+  },
+  "proximity-events-20260922.jsonl": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "transfer-loss-20260922.jsonl": "cc8c95dbd16d63c2306ee70b65b775b33eec1ec3c62e82d8d0004c2361c2aaac",
+  "stationkeeping-ns-20260922.jsonl": "9aac01875eca4751949c4ea41636b7aa47960aca82603dc4b4189b58d677ea01",
+  "stationkeeping-ew-20260922.jsonl": "1d2b19c963b9054f151edcef3eba69e7108acb36b28e25b67ace2451425bc870",
+  "proximity-leo-events-20260922.jsonl": "39321a4bda7edaa9939a1784a3e9fae10360815dde41aae44b474ec4add4611b",
+  "toolSha256": "e6ccc46bbbeb3ef7929b62cfdaf680685f4b6d5f79bd1822cfd1b4a3a35beaa9",
+  "ledgerSha256": "cfca5697eff384371d096055a69e0ad9f2d86409095a091dd19783341cb38107",
+  "objectLevelLabelSets": {
+   "t10cEastWestObject": 136,
+   "t8bPlaneFlaggedObject": 2343
+  }
+ },
+ "population": {
+  "burns": 3914621,
+  "byArm": {
+   "G": {
+    "burns": 1018263,
+    "unlabelled": 814571,
+    "unlabelledFraction": 0.7999613066565318,
+    "byType": {
+     "UNLABELLED": 814571,
+     "drift start": 37910,
+     "drift stop": 31103,
+     "east-west keeping": 91142,
+     "graveyard raise": 3638,
+     "north-south keeping": 2563,
+     "station acquisition": 37336
+    }
+   },
+   "P": {
+    "burns": 2896358,
+    "unlabelled": 3845,
+    "unlabelledFraction": 0.0013275292626118733,
+    "byType": {
+     "UNLABELLED": 3845,
+     "decaying": 34394,
+     "inclination adjust": 595,
+     "orbit lower": 1005132,
+     "orbit raise": 1506973,
+     "phasing": 345419
+    }
+   }
+  },
+  "missingFlagEpochs": 0,
+  "planeDetectorBurnsInsideArmGBand": 427174,
+  "stage0AssignmentsThatAlsoSatisfiedAStage1Rule": 34704
+ },
+ "labelCounts": {
+  "t8aInitiatingFlag": 328,
+  "t8aArrival": 493,
+  "t10aTransferInterval": 267,
+  "t10aPostTransferEndpoint": 84,
+  "t10bNorthSouth": 1107,
+  "t8bCampaignStart": 71
+ },
+ "confusion": {
+  "UNLABELLED": {
+   "t10aTransferInterval": 23,
+   "t10bNorthSouth": 1324,
+   "t8aArrival": 487,
+   "t8aInitiatingFlag": 1120
+  },
+  "decaying": {
+   "t10aTransferInterval": 15,
+   "t10bNorthSouth": 5
+  },
+  "drift start": {
+   "t10bNorthSouth": 55,
+   "t8aArrival": 31,
+   "t8aInitiatingFlag": 155
+  },
+  "drift stop": {
+   "t10bNorthSouth": 106,
+   "t8aArrival": 87,
+   "t8aInitiatingFlag": 11
+  },
+  "east-west keeping": {
+   "t10bNorthSouth": 405,
+   "t8aArrival": 66,
+   "t8aInitiatingFlag": 4
+  },
+  "graveyard raise": {
+   "t10bNorthSouth": 14,
+   "t8aInitiatingFlag": 35
+  },
+  "inclination adjust": {
+   "t10aTransferInterval": 14,
+   "t10bNorthSouth": 2,
+   "t8aInitiatingFlag": 1
+  },
+  "north-south keeping": {
+   "t10bNorthSouth": 10,
+   "t8aArrival": 7,
+   "t8aInitiatingFlag": 3
+  },
+  "orbit lower": {
+   "t10aTransferInterval": 8,
+   "t10bNorthSouth": 41,
+   "t8aArrival": 1,
+   "t8bCampaignStart": 20
+  },
+  "orbit raise": {
+   "t10aTransferInterval": 293,
+   "t10bNorthSouth": 83,
+   "t8aArrival": 1,
+   "t8aInitiatingFlag": 2,
+   "t8bCampaignStart": 155
+  },
+  "phasing": {
+   "t10aTransferInterval": 5,
+   "t10bNorthSouth": 5,
+   "t8bCampaignStart": 21
+  },
+  "station acquisition": {
+   "t10bNorthSouth": 87,
+   "t8aArrival": 534,
+   "t8aInitiatingFlag": 90
+  }
+ },
+ "unmatchedByType": {
+  "UNLABELLED": 815462,
+  "decaying": 34374,
+  "drift start": 37669,
+  "drift stop": 30899,
+  "east-west keeping": 90667,
+  "graveyard raise": 3589,
+  "inclination adjust": 578,
+  "north-south keeping": 2543,
+  "orbit lower": 1005062,
+  "orbit raise": 1506439,
+  "phasing": 345388,
+  "station acquisition": 36625
+ },
+ "contestedMatches": 1474,
+ "unlabelledReasons": {
+  "multi-fire": 64,
+  "no-rule": 818352
+ },
+ "competingRuleCombinations": {
+  "G2+G5": 49,
+  "G3+G5": 15
+ },
+ "perTypePrecision": {
+  "UNLABELLED": {
+   "expectedLabelClass": null,
+   "matched": 2954,
+   "agreeing": 0,
+   "forwardAgreement": 0.0,
+   "wilson95": [
+    0.0,
+    0.001298737229217733
+   ],
+   "mostFrequentLabelClass": "t10bNorthSouth",
+   "underpowered": false,
+   "gateF": false
+  },
+  "station acquisition": {
+   "expectedLabelClass": "t8aArrival",
+   "matched": 711,
+   "agreeing": 534,
+   "forwardAgreement": 0.7510548523206751,
+   "wilson95": [
+    0.7179790914901624,
+    0.7814323452624833
+   ],
+   "mostFrequentLabelClass": "t8aArrival",
+   "underpowered": false,
+   "gateF": false
+  },
+  "drift start": {
+   "expectedLabelClass": "t8aInitiatingFlag",
+   "matched": 241,
+   "agreeing": 155,
+   "forwardAgreement": 0.6431535269709544,
+   "wilson95": [
+    0.5808582513406547,
+    0.7009567661500358
+   ],
+   "mostFrequentLabelClass": "t8aInitiatingFlag",
+   "underpowered": false,
+   "gateF": false
+  },
+  "graveyard raise": {
+   "expectedLabelClass": null,
+   "matched": 49,
+   "agreeing": 0,
+   "forwardAgreement": 0.0,
+   "wilson95": [
+    6.434451449290776e-18,
+    0.07269781922049638
+   ],
+   "mostFrequentLabelClass": "t8aInitiatingFlag",
+   "underpowered": false,
+   "gateF": false
+  },
+  "east-west keeping": {
+   "expectedLabelClass": "t10cEastWestObject",
+   "matched": 475,
+   "agreeing": null,
+   "forwardAgreement": null,
+   "wilson95": null,
+   "mostFrequentLabelClass": "t10bNorthSouth",
+   "underpowered": false,
+   "gateF": false,
+   "note": "expected label class is object-level; the burn-level cell is a labelled gap, not a zero"
+  },
+  "drift stop": {
+   "expectedLabelClass": "t8aArrival",
+   "matched": 204,
+   "agreeing": 87,
+   "forwardAgreement": 0.4264705882352941,
+   "wilson95": [
+    0.36057948234448944,
+    0.49507972939208156
+   ],
+   "mostFrequentLabelClass": "t10bNorthSouth",
+   "underpowered": false,
+   "gateF": true
+  },
+  "north-south keeping": {
+   "expectedLabelClass": "t10bNorthSouth",
+   "matched": 20,
+   "agreeing": 10,
+   "forwardAgreement": 0.5,
+   "wilson95": [
+    0.29929800819821234,
+    0.7007019918017877
+   ],
+   "mostFrequentLabelClass": "t10bNorthSouth",
+   "underpowered": false,
+   "gateF": false
+  },
+  "orbit lower": {
+   "expectedLabelClass": "t10aTransferInterval",
+   "matched": 70,
+   "agreeing": 8,
+   "forwardAgreement": 0.11428571428571428,
+   "wilson95": [
+    0.059061289466376454,
+    0.20964221582154374
+   ],
+   "mostFrequentLabelClass": "t10bNorthSouth",
+   "underpowered": false,
+   "gateF": true
+  },
+  "phasing": {
+   "expectedLabelClass": "t8bCampaignStart",
+   "matched": 31,
+   "agreeing": 21,
+   "forwardAgreement": 0.6774193548387096,
+   "wilson95": [
+    0.5014100930808564,
+    0.8143057343364082
+   ],
+   "mostFrequentLabelClass": "t8bCampaignStart",
+   "underpowered": false,
+   "gateF": false
+  },
+  "orbit raise": {
+   "expectedLabelClass": "t10aTransferInterval",
+   "matched": 534,
+   "agreeing": 293,
+   "forwardAgreement": 0.548689138576779,
+   "wilson95": [
+    0.5062845202056953,
+    0.5903982459648759
+   ],
+   "mostFrequentLabelClass": "t10aTransferInterval",
+   "underpowered": false,
+   "gateF": false
+  },
+  "decaying": {
+   "expectedLabelClass": null,
+   "matched": 20,
+   "agreeing": 0,
+   "forwardAgreement": 0.0,
+   "wilson95": [
+    0.0,
+    0.16112515805281938
+   ],
+   "mostFrequentLabelClass": "t10aTransferInterval",
+   "underpowered": false,
+   "gateF": false
+  },
+  "inclination adjust": {
+   "expectedLabelClass": "t8bPlaneFlaggedObject",
+   "matched": 17,
+   "agreeing": null,
+   "forwardAgreement": null,
+   "wilson95": null,
+   "mostFrequentLabelClass": "t10aTransferInterval",
+   "underpowered": true,
+   "gateF": false,
+   "note": "expected label class is object-level; the burn-level cell is a labelled gap, not a zero"
+  }
+ },
+ "episodes": {
+  "relocation": 10705,
+  "transfer-leg run": 323405
+ },
+ "controls": {
+  "UNLABELLED": {
+   "total": 818416,
+   "passive": 177857,
+   "active": 636815,
+   "unknown": 3744,
+   "passiveFraction": 0.21731857637191843
+  },
+  "station acquisition": {
+   "total": 37336,
+   "passive": 1342,
+   "active": 35962,
+   "unknown": 32,
+   "passiveFraction": 0.0359438611527748
+  },
+  "drift start": {
+   "total": 37910,
+   "passive": 1514,
+   "active": 36367,
+   "unknown": 29,
+   "passiveFraction": 0.0399366921656555
+  },
+  "east-west keeping": {
+   "total": 91142,
+   "passive": 591,
+   "active": 90545,
+   "unknown": 6,
+   "passiveFraction": 0.006484387000504707
+  },
+  "drift stop": {
+   "total": 31103,
+   "passive": 384,
+   "active": 30719,
+   "unknown": 0,
+   "passiveFraction": 0.012346075941227535
+  },
+  "north-south keeping": {
+   "total": 2563,
+   "passive": 37,
+   "active": 2524,
+   "unknown": 2,
+   "passiveFraction": 0.01443620756925478
+  },
+  "graveyard raise": {
+   "total": 3638,
+   "passive": 255,
+   "active": 3379,
+   "unknown": 4,
+   "passiveFraction": 0.07009345794392523
+  },
+  "orbit raise": {
+   "total": 1506973,
+   "passive": 71047,
+   "active": 1054799,
+   "unknown": 381127,
+   "passiveFraction": 0.04714550293867242
+  },
+  "phasing": {
+   "total": 345419,
+   "passive": 21646,
+   "active": 203895,
+   "unknown": 119878,
+   "passiveFraction": 0.06266592167773052
+  },
+  "orbit lower": {
+   "total": 1005132,
+   "passive": 140335,
+   "active": 401194,
+   "unknown": 463603,
+   "passiveFraction": 0.13961847797105256
+  },
+  "decaying": {
+   "total": 34394,
+   "passive": 1102,
+   "active": 1034,
+   "unknown": 32258,
+   "passiveFraction": 0.03204047217537943
+  },
+  "inclination adjust": {
+   "total": 595,
+   "passive": 216,
+   "active": 266,
+   "unknown": 113,
+   "passiveFraction": 0.3630252100840336
+  }
+ },
+ "noRuleBreakdown": {
+  "G:below-the-drift-floor-and-the-inclination-bar": 1232,
+  "G:both-channels-moved": 273264,
+  "G:drift-moved-outside-every-band-case": 528609,
+  "G:inside-the-band-but-outside-a-station-segment": 11402,
+  "P:both-channels-fired": 396,
+  "P:in-track-flag-below-the-in-track-floor": 50,
+  "P:plane-flag-with-a-semi-major-axis-change": 1188,
+  "P:plane-flag-with-no-inclination-change-node-dominant": 2211
+ },
+ "deltaQuantiles": {
+  "G:baselineSpanDays": {
+   "p5": 4.270526085648148,
+   "p25": 9.994140995370369,
+   "p50": 18.03786226851852,
+   "p75": 29.917374160879632,
+   "p95": 60.87046222685184
+  },
+  "G:deltaAKm": {
+   "p5": 0.8888305792490427,
+   "p25": 1.0959560433693696,
+   "p50": 1.4207599415167351,
+   "p75": 2.095525474360329,
+   "p95": 6.088155507445452
+  },
+  "G:deltaDriftDegPerDay": {
+   "p5": 0.011386799999968389,
+   "p25": 0.014029200000010178,
+   "p50": 0.018205199999982824,
+   "p75": 0.02687220000001389,
+   "p95": 0.0781452000000428
+  },
+  "G:deltaIncDeg": {
+   "p5": 0.0010999999999999985,
+   "p25": 0.006350000000001188,
+   "p50": 0.015749999999999986,
+   "p75": 0.02939999999999987,
+   "p95": 0.06959999999999944
+  },
+  "G:deltaIncNetDeg": {
+   "p5": 0.00027471067031292767,
+   "p25": 0.0014632925577115763,
+   "p50": 0.003234129642954997,
+   "p75": 0.006747099742428375,
+   "p95": 0.027741865427559683
+  },
+  "G:deltaIncNetJ2Deg": {
+   "p5": 0.00027463401424394635,
+   "p25": 0.0014644672762349487,
+   "p50": 0.0032397613677819237,
+   "p75": 0.006740172737790692,
+   "p95": 0.027769880228050742
+  },
+  "G:deltaIncNetMeasuredModelDeg": {
+   "p5": 0.0002964007184256268,
+   "p25": 0.0016157064123305531,
+   "p50": 0.003990995340728887,
+   "p75": 0.008013765703517882,
+   "p95": 0.02875313428019541
+  },
+  "G:naturalSpanDays": {
+   "p5": 2.484975054398148,
+   "p25": 6.342057219328703,
+   "p50": 11.432585619212963,
+   "p75": 18.140003194444446,
+   "p95": 37.398004704861115
+  },
+  "G:netFloorDeg": {
+   "p5": 0.0013466182425936543,
+   "p25": 0.002577036870744537,
+   "p50": 0.004412633231309247,
+   "p75": 0.006899114054248068,
+   "p95": 0.01411587679942735
+  },
+  "G:ratioNetOverRawAbs": {
+   "p5": 0.018574116835010614,
+   "p25": 0.08894807825711712,
+   "p50": 0.19872148743654408,
+   "p75": 0.6583458671702346,
+   "p95": 4.098958236120977
+  },
+  "P:baselineSpanDays": {
+   "p5": 2.985351429976852,
+   "p25": 4.182663524305555,
+   "p50": 5.3489450694444445,
+   "p75": 8.176564366319445,
+   "p95": 101.99338469328693
+  },
+  "P:deltaAKm": {
+   "p5": 0.10586942922822505,
+   "p25": 0.15312751047371467,
+   "p50": 0.2619612762667236,
+   "p75": 0.9855356841924174,
+   "p95": 19.441747751824412
+  },
+  "P:deltaIncDeg": {
+   "p5": 5.000000000165983e-05,
+   "p25": 0.00030000000000285354,
+   "p50": 0.0007999999999981355,
+   "p75": 0.0020499999999969987,
+   "p95": 0.021150000000005775
+  }
+ },
+ "objectLevelAgreement": {
+  "t10cEastWestObject": {
+   "baseRate": 0.014692610089201483,
+   "burns": 3914621,
+   "byType": {
+    "UNLABELLED": {
+     "burns": 818416,
+     "onALabelledObject": 38613,
+     "fraction": 0.047180162655666553
+    },
+    "decaying": {
+     "burns": 34394,
+     "onALabelledObject": 26,
+     "fraction": 0.0007559458045007851
+    },
+    "drift start": {
+     "burns": 37910,
+     "onALabelledObject": 1602,
+     "fraction": 0.04225797942495384
+    },
+    "drift stop": {
+     "burns": 31103,
+     "onALabelledObject": 1741,
+     "fraction": 0.05597530784811754
+    },
+    "east-west keeping": {
+     "burns": 91142,
+     "onALabelledObject": 11709,
+     "fraction": 0.12846986021812118
+    },
+    "graveyard raise": {
+     "burns": 3638,
+     "onALabelledObject": 236,
+     "fraction": 0.06487080813633865
+    },
+    "inclination adjust": {
+     "burns": 595,
+     "onALabelledObject": 28,
+     "fraction": 0.047058823529411764
+    },
+    "north-south keeping": {
+     "burns": 2563,
+     "onALabelledObject": 475,
+     "fraction": 0.18532969176746
+    },
+    "orbit lower": {
+     "burns": 1005132,
+     "onALabelledObject": 204,
+     "fraction": 0.00020295841740189348
+    },
+    "orbit raise": {
+     "burns": 1506973,
+     "onALabelledObject": 806,
+     "fraction": 0.0005348470078760535
+    },
+    "phasing": {
+     "burns": 345419,
+     "onALabelledObject": 109,
+     "fraction": 0.0003155587851276276
+    },
+    "station acquisition": {
+     "burns": 37336,
+     "onALabelledObject": 1967,
+     "fraction": 0.052683736875937436
+    }
+   }
+  },
+  "t8bPlaneFlaggedObject": {
+   "baseRate": 0.22754565512216893,
+   "burns": 3914621,
+   "byType": {
+    "UNLABELLED": {
+     "burns": 818416,
+     "onALabelledObject": 669113,
+     "fraction": 0.8175707708549197
+    },
+    "decaying": {
+     "burns": 34394,
+     "onALabelledObject": 1484,
+     "fraction": 0.043147060533814036
+    },
+    "drift start": {
+     "burns": 37910,
+     "onALabelledObject": 28364,
+     "fraction": 0.7481930888947508
+    },
+    "drift stop": {
+     "burns": 31103,
+     "onALabelledObject": 24522,
+     "fraction": 0.7884126933093271
+    },
+    "east-west keeping": {
+     "burns": 91142,
+     "onALabelledObject": 74747,
+     "fraction": 0.8201158631585876
+    },
+    "graveyard raise": {
+     "burns": 3638,
+     "onALabelledObject": 3333,
+     "fraction": 0.9161627267729522
+    },
+    "inclination adjust": {
+     "burns": 595,
+     "onALabelledObject": 595,
+     "fraction": 1.0
+    },
+    "north-south keeping": {
+     "burns": 2563,
+     "onALabelledObject": 2494,
+     "fraction": 0.9730784237222005
+    },
+    "orbit lower": {
+     "burns": 1005132,
+     "onALabelledObject": 31811,
+     "fraction": 0.031648579490057026
+    },
+    "orbit raise": {
+     "burns": 1506973,
+     "onALabelledObject": 17541,
+     "fraction": 0.011639890031208256
+    },
+    "phasing": {
+     "burns": 345419,
+     "onALabelledObject": 8472,
+     "fraction": 0.024526734198176706
+    },
+    "station acquisition": {
+     "burns": 37336,
+     "onALabelledObject": 28279,
+     "fraction": 0.7574191129205057
+    }
+   }
+  }
+ },
+ "externalPublishedEventCheck": [
+  {
+   "norad": 25544,
+   "publishedAtMs": 1714089600000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 7,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.5205414351851851
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1716508800000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 7,
+   "nearestType": "phasing",
+   "nearestOffsetDays": 0.8877466550925925
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1776306858000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1773421097000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1771462620000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1769126400000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1763557440000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 1.000313460648148
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1762537397000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.6820238194444445
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1756923300000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 6,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 1.1150440625
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1755145680000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.6731223958333333
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1752677117000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.8156107407407407
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1750300440000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.7348632870370371
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1746051000000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 1.2394958912037037
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1742227200000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 1.187411400462963
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1731986640000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 12,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 1.3514860648148148
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1717861920000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 6,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.6839471875
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1710421860000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 6,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.8297623263888889
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1691764500000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 11,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.23970288194444445
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1666034840000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 6,
+   "nearestType": "phasing",
+   "nearestOffsetDays": 0.34970692129629627
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1656178020000.0,
+   "publishedKind": "reboost",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 11,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.6193850694444445
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1602059190000.0,
+   "publishedKind": "deboost",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 6,
+   "nearestType": "phasing",
+   "nearestOffsetDays": 0.3141558101851852
+  },
+  {
+   "norad": 25544,
+   "publishedAtMs": 1600809550000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "second",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit raise",
+   "nearestOffsetDays": 0.32349319444444447
+  },
+  {
+   "norad": 43600,
+   "publishedAtMs": 1690207200000.0,
+   "publishedKind": "deorbit",
+   "dateExactness": "hour",
+   "burnsWithinTolerance": 14,
+   "nearestType": "phasing",
+   "nearestOffsetDays": 1.9859739699074075
+  },
+  {
+   "norad": 43600,
+   "publishedAtMs": 1690554840000.0,
+   "publishedKind": "deorbit",
+   "dateExactness": "minute",
+   "burnsWithinTolerance": 14,
+   "nearestType": "decaying",
+   "nearestOffsetDays": 0.08646144675925926
+  },
+  {
+   "norad": 25994,
+   "publishedAtMs": 1665532800000.0,
+   "publishedKind": "orbit-lowering",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 5,
+   "nearestType": "phasing",
+   "nearestOffsetDays": 1.170145625
+  },
+  {
+   "norad": 25994,
+   "publishedAtMs": 1666137600000.0,
+   "publishedKind": "orbit-lowering",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 5,
+   "nearestType": "orbit lower",
+   "nearestOffsetDays": 1.5130912615740741
+  },
+  {
+   "norad": 27509,
+   "publishedAtMs": 1665014400000.0,
+   "publishedKind": "disposal",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 1,
+   "nearestType": "graveyard raise",
+   "nearestOffsetDays": 3.4491057986111113
+  },
+  {
+   "norad": 39634,
+   "publishedAtMs": 1746835200000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 62261,
+   "publishedAtMs": 1749600000000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 62261,
+   "publishedAtMs": 1750982400000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 40697,
+   "publishedAtMs": 1731974400000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 42063,
+   "publishedAtMs": 1735084800000.0,
+   "publishedKind": "collision-avoidance",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 39452,
+   "publishedAtMs": 1751328000000.0,
+   "publishedKind": "station-keeping",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  },
+  {
+   "norad": 39453,
+   "publishedAtMs": 1748304000000.0,
+   "publishedKind": "station-keeping",
+   "dateExactness": "day",
+   "burnsWithinTolerance": 0,
+   "nearestType": null,
+   "nearestOffsetDays": null
+  }
+ ],
+ "gates": {
+  "gateP_partition": {
+   "multiFireFraction": 1.634896456132024e-05,
+   "bar": 0.05,
+   "fired": false
+  },
+  "gateU_underpowered": [
+   "inclination adjust"
+  ],
+  "gateF_falsification": [
+   "drift stop",
+   "orbit lower"
+  ],
+  "gateN_unlabelledFraction": 0.2090664715690229,
+  "gateL_leak": {
+   "bar": 0.1,
+   "byType": {
+    "UNLABELLED": {
+     "total": 818416,
+     "passive": 177857,
+     "active": 636815,
+     "unknown": 3744,
+     "passiveFraction": 0.21731857637191843
+    },
+    "station acquisition": {
+     "total": 37336,
+     "passive": 1342,
+     "active": 35962,
+     "unknown": 32,
+     "passiveFraction": 0.0359438611527748
+    },
+    "drift start": {
+     "total": 37910,
+     "passive": 1514,
+     "active": 36367,
+     "unknown": 29,
+     "passiveFraction": 0.0399366921656555
+    },
+    "east-west keeping": {
+     "total": 91142,
+     "passive": 591,
+     "active": 90545,
+     "unknown": 6,
+     "passiveFraction": 0.006484387000504707
+    },
+    "drift stop": {
+     "total": 31103,
+     "passive": 384,
+     "active": 30719,
+     "unknown": 0,
+     "passiveFraction": 0.012346075941227535
+    },
+    "north-south keeping": {
+     "total": 2563,
+     "passive": 37,
+     "active": 2524,
+     "unknown": 2,
+     "passiveFraction": 0.01443620756925478
+    },
+    "graveyard raise": {
+     "total": 3638,
+     "passive": 255,
+     "active": 3379,
+     "unknown": 4,
+     "passiveFraction": 0.07009345794392523
+    },
+    "orbit raise": {
+     "total": 1506973,
+     "passive": 71047,
+     "active": 1054799,
+     "unknown": 381127,
+     "passiveFraction": 0.04714550293867242
+    },
+    "phasing": {
+     "total": 345419,
+     "passive": 21646,
+     "active": 203895,
+     "unknown": 119878,
+     "passiveFraction": 0.06266592167773052
+    },
+    "orbit lower": {
+     "total": 1005132,
+     "passive": 140335,
+     "active": 401194,
+     "unknown": 463603,
+     "passiveFraction": 0.13961847797105256
+    },
+    "decaying": {
+     "total": 34394,
+     "passive": 1102,
+     "active": 1034,
+     "unknown": 32258,
+     "passiveFraction": 0.03204047217537943
+    },
+    "inclination adjust": {
+     "total": 595,
+     "passive": 216,
+     "active": 266,
+     "unknown": 113,
+     "passiveFraction": 0.3630252100840336
+    }
+   },
+   "firedFor": [
+    "inclination adjust",
+    "orbit lower"
+   ]
+  }
+ },
+ "wallSeconds": 807.5916831493378,
+ "perRuleSha256": {
+  "G6": "eea4a0953949433f2396a9c937c1d90df2b4a8fda110ba5ab0373e2bc79ff3ef",
+  "G7": "dd39df40bf66c0213f20c197ae6ff6369390aa48db5943cbd2d6fca0cc92b603",
+  "G1": "6e29b1fc48cbbed80a2e9b3288e9806e53908f86f0292bf548caa28aa74fb662",
+  "G2": "7ce21cad3fc9df73625ef43b21e647927e1263e744a155727272dedde4334bf6",
+  "G3": "8ff71c16c4c43ea7cfa0be162bb584735430e3516afe5f3ae5e078d1fb56892c",
+  "G4": "3ef9db0005c5bf78b05cb3626324a5e219e8767046d30798751d1933c08d59a7",
+  "G5": "6d0ec27a0d9bd08b378c73774a8fada011335fa9ab79c414edae0391fa8c3aa8",
+  "P1": "d97f012979b50743fd59c8f3ac7d22ee0695c0d9b89d46ee728ddd0451ab9021",
+  "P2": "3ab78ac3c20392a38f9cfcdc86bd6c8b632577715b1e46977b689f0dd1f6e28e",
+  "P3": "a7dc74fbd2babe3cf57c656d561c7186f39325df1fac4fc4236bf006d6d3ebb8",
+  "P4": "f472d613ddbb7c845c6e58962ce69cdcc912f0bc1091d376cb50882667eaae20",
+  "P5": "b1e36b9c4b4d03aac41020d70787c101905012ca478700bdd9302fe9a61724aa"
+ },
+ "byteIdenticalToV1": {
+  "G6": true,
+  "G7": true,
+  "G1": false,
+  "G2": true,
+  "G3": false,
+  "G4": false,
+  "G5": false,
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "P5": true
+ },
+ "v1RulesSha256": "164a5fd11e4c63744615bbf58c02289cc812c46b630458a85b84f9aee35024f6",
+ "discriminations": {
+  "note": "v2 registration section 6.3. Computed in the same pass, off the same burn records. Published whatever they show. The variant mixes are a sensitivity on a model choice, not a second answer.",
+  "armGUnlabelledBySpanBin": {
+   "0-4.27": {
+    "v1": {
+     "burns": 50893,
+     "unlabelled": 38816,
+     "unlabelledFraction": 0.762698209969937
+    },
+    "v2": {
+     "burns": 50893,
+     "unlabelled": 28750,
+     "unlabelledFraction": 0.5649106949875229
+    }
+   },
+   "4.27-9.99": {
+    "v1": {
+     "burns": 203443,
+     "unlabelled": 163902,
+     "unlabelledFraction": 0.8056408920434717
+    },
+    "v2": {
+     "burns": 203443,
+     "unlabelled": 119789,
+     "unlabelledFraction": 0.5888086589364097
+    }
+   },
+   "9.99-18.04": {
+    "v1": {
+     "burns": 254927,
+     "unlabelled": 234290,
+     "unlabelledFraction": 0.9190474135732974
+    },
+    "v2": {
+     "burns": 254927,
+     "unlabelled": 204672,
+     "unlabelledFraction": 0.8028651339403045
+    }
+   },
+   "18.04-29.92": {
+    "v1": {
+     "burns": 254947,
+     "unlabelled": 243687,
+     "unlabelledFraction": 0.955833957646099
+    },
+    "v2": {
+     "burns": 254947,
+     "unlabelled": 230614,
+     "unlabelledFraction": 0.9045566333394784
+    }
+   },
+   "29.92-60.87": {
+    "v1": {
+     "burns": 203134,
+     "unlabelled": 193318,
+     "unlabelledFraction": 0.9516772179940335
+    },
+    "v2": {
+     "burns": 203134,
+     "unlabelled": 186777,
+     "unlabelledFraction": 0.9194767985664635
+    }
+   },
+   "60.87-inf": {
+    "v1": {
+     "burns": 50919,
+     "unlabelled": 46605,
+     "unlabelledFraction": 0.9152772049726036
+    },
+    "v2": {
+     "burns": 50919,
+     "unlabelled": 43969,
+     "unlabelledFraction": 0.8635087099118207
+    }
+   }
+  },
+  "armGTypeMixByPrediction": {
+   "asRegistered": {
+    "UNLABELLED": 814571,
+    "drift start": 37910,
+    "drift stop": 31103,
+    "east-west keeping": 91142,
+    "graveyard raise": 3638,
+    "north-south keeping": 2563,
+    "station acquisition": 37336
+   },
+   "atTheCalibratedCircuit": {
+    "UNLABELLED": 827054,
+    "drift start": 32177,
+    "drift stop": 31102,
+    "east-west keeping": 84309,
+    "graveyard raise": 3638,
+    "north-south keeping": 2651,
+    "station acquisition": 37332
+   },
+   "v1RuleSet": {
+    "UNLABELLED": 920618,
+    "drift start": 4555,
+    "drift stop": 31095,
+    "east-west keeping": 17500,
+    "graveyard raise": 3638,
+    "north-south keeping": 3533,
+    "station acquisition": 37324
+   },
+   "withJ2AddedOnTop": {
+    "UNLABELLED": 814605,
+    "drift start": 37893,
+    "drift stop": 31103,
+    "east-west keeping": 91121,
+    "graveyard raise": 3638,
+    "north-south keeping": 2567,
+    "station acquisition": 37336
+   }
+  }
+ },
+ "artifactSha256": "bb9877e034ded6421c11fcfaa930e3624e3dbf4c6ef826ea750fbebd2407445a"
+}

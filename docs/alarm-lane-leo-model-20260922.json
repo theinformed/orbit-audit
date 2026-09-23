@@ -1,0 +1,337 @@
+{
+ "artifact": "alarm-lane-frozen-model",
+ "bars": {
+  "bootstrapJaccard": 0.5,
+  "minSupportForARate": 20
+ },
+ "basePopulation": {
+  "horizonDays": 1095.0,
+  "kind": "never-manoeuvred control",
+  "n": 17160,
+  "note": "zero registered events over 18.79 million object-days of objects with no detected manoeuvre anywhere in their history, expressed as that many independent horizons. The horizons are NOT independent, so the ceiling is optimistic by an unmeasured factor; it is a ceiling, not an estimate.",
+  "objectDays": 18790000.0,
+  "positives": 0,
+  "precision": 0.0,
+  "wilson95": [
+   1.3552527156068805e-20,
+   0.0002238111339999564
+  ]
+ },
+ "caveats": [
+  "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+  "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach.",
+  "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived."
+ ],
+ "checksum": "d11552b67ae69db87266a414987b3180ff5ff75f4b5229b2e1f4625dbaab92d0",
+ "classes": [
+  {
+   "arrivalDays": {
+    "n": 27,
+    "p25": 446.95615383101847,
+    "p5": 96.75932492824074,
+    "p50": 684.4285577546297,
+    "p75": 926.2654241145833,
+    "p95": 1035.746307125
+   },
+   "bootstrapJaccard": null,
+   "cluster": 0,
+   "description": "a campaign-initiating confirmed in-track manoeuvre of a payload-class object in this regime",
+   "measuredNote": "measured by this arm's own replay over the declared window below, and NOT over the whole archive: the archive-wide measurement for this trigger has not been run.",
+   "measuredOn": {
+    "end": "2023-06-01T00:00:00+00:00",
+    "start": "2020-01-01T00:00:00+00:00"
+   },
+   "n": 5327,
+   "name": "PHASING-CAMPAIGN",
+   "namedByFeatures": [
+    "campaign-initiating in-track manoeuvre"
+   ],
+   "passiveControlBar": 0.001,
+   "passiveControlRatio": 0.7971470058543085,
+   "positives": 27,
+   "precision": 0.005068518866153557,
+   "stabilityBasis": "not a cluster: the class is the detector's own definition, so the cluster-stability bar does not apply to it",
+   "underpowered": false,
+   "wilson95": [
+    0.0034858120602888412,
+    0.007364531036106674
+   ]
+  }
+ ],
+ "design": "docs/alarm-lane-design-20260922.md",
+ "detector": {
+  "bandMeanMotionRevDay": [
+   11.320916193999158,
+   16.573699754767034
+  ],
+  "baselineSamples": 10,
+  "campaignMaxGapDays": 180.0,
+  "confirmDays": 0.0,
+  "confirmDaysNote": "the flag epoch is already the second confirming element set, and a campaign's own merge window is 180 days, so charging a further wait would cost warning time for nothing",
+  "confirmRule": "two consecutive element sets over the threshold and agreeing in sign, flagged at the second",
+  "floorDegPerDay": null,
+  "horizonDays": 1095.0,
+  "lookBackFloorDays": 1095.0,
+  "semiMajorAxisFloorKm": 0.05,
+  "sigmaK": 5.0,
+  "sigmaNDegPerDay": null,
+  "thresholdNote": "max(5 sigma_n, 3 |ndot| dt, the semi-major-axis floor), all of it computed by the T8b instrument",
+  "trigger": "a campaign-initiating confirmed in-track manoeuvre of a payload-class object in this regime"
+ },
+ "earnedBy": {
+  "arm": "tools/alarm_lane_leo.py",
+  "eventRecord": "docs/proximity-leo-events-20260922.jsonl",
+  "eventRecordSha256": "39321a4bda7edaa9939a1784a3e9fae10360815dde41aae44b474ec4add4611b",
+  "instrument": "tools/proximity_plane.py",
+  "instrumentSha256": "7f8ad845434f744895e07f1c2f0841cbd08f8f314b86b93efe4d110df1a0cc72",
+  "results": "docs/proximity-leo-results-20260922.md",
+  "resultsSha256": "987f04e60a4c305eefd3657f622d6b25bc628e0c8c08dbf3326f6fbe7ac773b1"
+ },
+ "featureNames": [],
+ "frozenAt": "2026-09-22T17:46:54.111098+00:00",
+ "modelFamily": "leo-phasing-campaign",
+ "modelVersion": "leo-phasing-campaign/20260922/2",
+ "neverSay": [
+  "no purpose, motive or mission, for an object or for anyone operating it",
+  "no attribution of a purpose to an operator, a programme or a state",
+  "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+  "no miss distance, no range, no conjunction probability, no collision risk",
+  "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+  "no point forecast of dwell duration or of closest separation",
+  "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+  "no claim that an individual event was deliberate",
+  "no silent suppression of an alert that did not pan out",
+  "no quoting of the relocation-alert precision, or of another arm's published alert-channel precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did, or by a different detector",
+  "no sentence about an individual object's own history",
+  "no matching product against the blinded second channel, and none of its vocabulary in any output string, until its noise floor is re-derived",
+  "no claim that the measured lead time applies to anything but in-track phasing campaigns inside an already-shared orbit",
+  "no quoting of the published alert-channel precision as this trigger's own: the two denominators are different detectors"
+ ],
+ "note": "the LEO arm of the behavioural alarm lane. Its trigger is a campaign-initiating confirmed in-track manoeuvre; its outcome rule is T8b's own attribution; and its published figures below were measured on T8b's own alert channel, which is a DIFFERENT detector, so this arm may not quote them as its own precision.",
+ "operatingPoints": {
+  "note": "the settings are T8b's own registered sensitivity arms and the numbers in them are T8b's. A tighter setting is not a more certain alert: it is FEWER alerts, with a different measured lead, and the row says which.",
+  "rows": [
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "31 registered events, median warning 219.0 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.05 deg, phase confinement 5.0 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 219.0,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.05,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 0.43661971830985913,
+    "registeredEvents": 31,
+    "supportingEvents": 31,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "54 registered events, median warning 220.8 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.1 deg, phase confinement 5.0 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 220.8,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.1,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 0.7605633802816901,
+    "registeredEvents": 54,
+    "supportingEvents": 54,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": 161,
+    "arrivals": 71,
+    "description": "71 registered events, median warning 195.9 days, never-manoeuvred control 0, published alert-channel precision 44.1%; evidence: co-orbital tolerance 0.2 deg, phase confinement 5.0 deg, dwell at least 30 days.",
+    "isPrimary": true,
+    "medianLeadDays": 195.9,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.2,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": 0.4409937888198758,
+    "precisionLabel": "71/161 = 44.1% on the published alert channel, which is NOT this arm's trigger",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 1.0,
+    "registeredEvents": 71,
+    "supportingEvents": 71,
+    "underpowered": false,
+    "wilson95": [
+     0.36656159342055206,
+     0.5181761410309053
+    ]
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "85 registered events, median warning 171.6 days, never-manoeuvred control 4, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.5 deg, phase confinement 5.0 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 171.6,
+    "neverManoeuvredControlEvents": 4,
+    "point": {
+     "coOrbitalToleranceDeg": 0.5,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 1.1971830985915493,
+    "registeredEvents": 85,
+    "supportingEvents": 85,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "104 registered events, median warning 219.0 days, never-manoeuvred control 6, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 1.0 deg, phase confinement 5.0 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 219.0,
+    "neverManoeuvredControlEvents": 6,
+    "point": {
+     "coOrbitalToleranceDeg": 1.0,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 1.4647887323943662,
+    "registeredEvents": 104,
+    "supportingEvents": 104,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "24 registered events, median warning 17.5 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.2 deg, phase confinement 1.0 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 17.5,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.2,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 1.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 0.3380281690140845,
+    "registeredEvents": 24,
+    "supportingEvents": 24,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "27 registered events, median warning 4.4 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.2 deg, phase confinement 0.2085 deg, dwell at least 30 days.",
+    "isPrimary": false,
+    "medianLeadDays": 4.4,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.2,
+     "minDwellDays": 30.0,
+     "phaseConfinementDeg": 0.2085
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 0.38028169014084506,
+    "registeredEvents": 27,
+    "supportingEvents": 27,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "170 registered events, median warning 196.9 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.2 deg, phase confinement 5.0 deg, dwell at least 14 days.",
+    "isPrimary": false,
+    "medianLeadDays": 196.9,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.2,
+     "minDwellDays": 14.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 2.3943661971830985,
+    "registeredEvents": 170,
+    "supportingEvents": 170,
+    "underpowered": false,
+    "wilson95": null
+   },
+   {
+    "alerts": null,
+    "arrivals": null,
+    "description": "25 registered events, median warning 196.9 days, never-manoeuvred control 0, precision NOT ASSESSABLE at this setting -- a labelled gap; evidence: co-orbital tolerance 0.2 deg, phase confinement 5.0 deg, dwell at least 60 days.",
+    "isPrimary": false,
+    "medianLeadDays": 196.9,
+    "neverManoeuvredControlEvents": 0,
+    "point": {
+     "coOrbitalToleranceDeg": 0.2,
+     "minDwellDays": 60.0,
+     "phaseConfinementDeg": 5.0
+    },
+    "precision": null,
+    "precisionLabel": "NOT ASSESSABLE -- the alert denominator was measured for the primary arm only, so no precision exists for this setting. A labelled gap, not a zero.",
+    "recallNote": "TRUE RECALL IS NOT MEASURABLE here either. `recallProxy` is this setting's registered event count over the primary arm's, and it is a ratio between two rows of one table rather than the fraction of real approaches caught.",
+    "recallProxy": 0.352112676056338,
+    "registeredEvents": 25,
+    "supportingEvents": 25,
+    "underpowered": false,
+    "wilson95": null
+   }
+  ]
+ },
+ "publishedFigures": {
+  "alerts": 161,
+  "channelNote": "measured on T8b's own alert channel, which is NOT the trigger this arm runs. The two denominators are different detectors and this arm does not quote these figures as its own precision.",
+  "hits": 71,
+  "medianCausalLeadDays": 195.9,
+  "precision": 0.4409937888198758,
+  "scope": "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived.",
+  "wilson95": [
+   0.36656159342055206,
+   0.5181761410309053
+  ]
+ },
+ "regime": "LEO",
+ "reservedDecisions": {
+  "framing": null,
+  "ledgerRetention": null,
+  "notificationLeavesTheMachine": null,
+  "objectNamesAppear": null,
+  "publicationSurface": null,
+  "registryCodesEverAppear": null
+ },
+ "reservedNote": "design section 10: seven operator decisions, reserved and not taken. This lane implements none of them. It has no surface, sends nothing, reads no registry code, prints no object name, has no LEO arm, and deletes nothing. Decision 6 -- whether this arm is built -- was ANSWERED by the operator: it is live. Every other decision remains reserved.",
+ "schema": 1,
+ "scope": "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived.",
+ "shippedDetectorPermissions": {
+  "consequence": "this arm says 'confirmed in-track manoeuvre', which is what its own detector measured, and never a word the shipped bundle has not earned",
+  "manoeuvreLabelPermitted": false,
+  "source": "pipeline/orbit_events.py, the published passive control"
+ }
+}

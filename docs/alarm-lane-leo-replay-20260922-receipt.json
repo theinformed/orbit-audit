@@ -1,0 +1,234 @@
+{
+ "artifact": "alarm-lane-leo-replay-receipt",
+ "audit": {
+  "alertsRaised": 0,
+  "artifact": "alarm-lane-ledger-audit",
+  "assessments": 5327,
+  "caveats": [
+   "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+   "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach."
+  ],
+  "classes": [
+   {
+    "arrivals": 27,
+    "assessed": 5327,
+    "belowEvidence": 0,
+    "class": 0,
+    "frozenFigure": {
+     "arrivalDaysP50": 684.4285577546297,
+     "label": "the figure this model earned on the offline population, printed beside the lane's own and never in place of it",
+     "n": 5327,
+     "positives": 27,
+     "precision": 0.005068518866153557,
+     "wilson95": [
+      0.0034858120602888412,
+      0.007364531036106674
+     ]
+    },
+    "leadDays": {
+     "label": "measured on this lane",
+     "max": 1043.6609223032408,
+     "min": 70.0542102662037,
+     "n": 27,
+     "p25": 446.95615383101847,
+     "p50": 684.4285577546297,
+     "p75": 926.2654241145833
+    },
+    "none": 5300,
+    "notAssessable": 0,
+    "pending": 0,
+    "precisionLabel": "27/5327 = 0.507%",
+    "precisionOnThisLane": 0.005068518866153557,
+    "resolved": 5327,
+    "spoken": 0,
+    "underpowered": false,
+    "wilson95": [
+     0.0034858120602888412,
+     0.007364531036106674
+    ],
+    "withdrawn": 0
+   }
+  ],
+  "design": "docs/alarm-lane-design-20260922.md",
+  "modelChecksum": "d11552b67ae69db87266a414987b3180ff5ff75f4b5229b2e1f4625dbaab92d0",
+  "modelVersion": "leo-phasing-campaign/20260922/2",
+  "neverSay": [
+   "no purpose, motive or mission, for an object or for anyone operating it",
+   "no attribution of a purpose to an operator, a programme or a state",
+   "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+   "no miss distance, no range, no conjunction probability, no collision risk",
+   "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+   "no point forecast of dwell duration or of closest separation",
+   "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+   "no claim that an individual event was deliberate",
+   "no silent suppression of an alert that did not pan out",
+   "no quoting of the relocation-alert precision, or of another arm's published alert-channel precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did, or by a different detector",
+   "no sentence about an individual object's own history"
+  ],
+  "reservedDecisions": {
+   "framing": null,
+   "ledgerRetention": null,
+   "leoArmIsBuilt": null,
+   "notificationLeavesTheMachine": null,
+   "objectNamesAppear": null,
+   "publicationSurface": null,
+   "registryCodesEverAppear": null
+  },
+  "reservedNote": "design section 10: seven operator decisions, reserved and not taken. This lane implements none of them. It has no surface, sends nothing, reads no registry code, prints no object name, has no LEO arm, and deletes nothing.",
+  "resolutions": 5327,
+  "schema": 1,
+  "setting": "primary"
+ },
+ "auditReport": "ALARM LANE -- LEDGER AUDIT\nmodel leo-phasing-campaign/20260922/2 checksum d11552b67ae69db8\noperating point: primary\n5327 assessments, 0 alerts raised, 5327 resolutions folded in\n\n  class 0: assessed 5327, spoken 0, resolved 5327 (arrivals 27, none 5300, not assessable 0, pending 0, withdrawn 0, below this setting's evidence 0)\n      precision on this lane: 27/5327 = 0.507%\n      Wilson 95%: 0.349% to 0.736%\n      lead days: n=27 p25 447.0 p50 684.4 p75 926.3\n      frozen figure (earned offline, beside and not instead): 27/5327 = 0.507%, median lead 684.4 d\n\nCAVEATS, printed and not linked:\n  - Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.\n  - The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach.\n\nRESERVED OPERATOR DECISIONS, none taken: framing, ledgerRetention, leoArmIsBuilt, notificationLeavesTheMachine, objectNamesAppear, publicationSurface, registryCodesEverAppear",
+ "cadence": {
+  "citation": "docs/alarm-lane-design-20260922.md section 2.3; the confirmation rule is T8a 5.5",
+  "confirmableVisibilityDays": 0.986926724537037,
+  "derivation": [
+   "the confirmation rule needs 2 consecutive element sets, so a confirmable change becomes visible about 0.987 d after it happens (2 x 0.493 d)",
+   "re-reading more often than one median spacing re-reads unchanged element sets, so the work floor is 0.493 d",
+   "against a median causal lead of 195.9 d, one work floor of latency is 0.3% of the warning budget",
+   "the host timer's own period of 2.0 h is 0.0% of the same budget and buys nothing, because the element sets it would re-read have not changed",
+   "so: fire on the host timer, and do work only when the object's newest element-set epoch has advanced"
+  ],
+  "hostTimerLatencyFractionOfLead": 0.00042538710226305935,
+  "inputs": {
+   "confirmingElementSets": 2,
+   "hostTimerPeriodHours": 2.0,
+   "medianCausalLeadDays": 195.9,
+   "medianEpochSpacingDays": 0.4934633622685185,
+   "medianEpochSpacingSource": "measured over all 26190 objects' element sets in this regime and window"
+  },
+  "latencyFractionOfLead": 0.002518955396980697,
+  "parameter": "--cadence-hours",
+  "rule": "fire on the host timer; do work only when the object's newest element-set epoch has advanced",
+  "workFloorDays": 0.4934633622685185,
+  "workFloorHours": 11.843120694444444
+ },
+ "caveats": [
+  "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+  "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach.",
+  "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived."
+ ],
+ "clock": {
+  "end": "2023-06-01T00:00:00+00:00",
+  "mode": "injected",
+  "start": "2020-01-01T00:00:00+00:00"
+ },
+ "control": {
+  "alertsOnNonPayload": 13443,
+  "bar": 0.001,
+  "barSource": "the shipped detector's own design target of one in a thousand; `pipeline/orbit_events.py` withholds its label because its published control stands at 34 in 1,941",
+  "frozenControl": {
+   "horizonDays": 1095.0,
+   "kind": "never-manoeuvred control",
+   "n": 17160,
+   "note": "zero registered events over 18.79 million object-days of objects with no detected manoeuvre anywhere in their history, expressed as that many independent horizons. The horizons are NOT independent, so the ceiling is optimistic by an unmeasured factor; it is a ceiling, not an estimate.",
+   "objectDays": 18790000.0,
+   "positives": 0,
+   "precision": 0.0,
+   "wilson95": [
+    1.3552527156068805e-20,
+    0.0002238111339999564
+   ]
+  },
+  "hitsOnNonPayload": 4,
+  "kind": "the detector's own alert rate on objects that cannot manoeuvre -- the non-tautological control, in the shape the shipped passive control uses",
+  "perObjectRatio": 0.7971470058543085,
+  "ratioToPayloadAlerts": 2.5235592265815656
+ },
+ "design": "docs/alarm-lane-design-20260922.md",
+ "executionMode": "CPU, one core",
+ "host": "pc",
+ "ledger": {
+  "path": "/home/sdegan/alarm-lane-leo/alarm-lane-leo-replay-ledger.jsonl",
+  "rows": 10655,
+  "sha256": "122960e0c69416ee7967a5c8946f5dcc201993b079fcedb0eb513a14275a8ace"
+ },
+ "measured": {
+  "alerts": 5327,
+  "exactCampaignStartMatches": 0,
+  "hits": 27,
+  "leadDays": {
+   "n": 27,
+   "p25": 446.95615383101847,
+   "p5": 96.75932492824074,
+   "p50": 684.4285577546297,
+   "p75": 926.2654241145833,
+   "p95": 1035.746307125
+  },
+  "notAssessable": 0,
+  "note": "measured on THIS arm's trigger -- a campaign-initiating confirmed in-track manoeuvre -- over the declared window. It is not the published alert-channel figure and does not replace it.",
+  "outcomeRecordEndsAt": "2026-08-07T01:07:28.819000+00:00",
+  "passiveControlBar": 0.001,
+  "passiveControlRatio": 0.7971470058543085,
+  "precision": 0.005068518866153557,
+  "resolved": 5327,
+  "underpowered": false,
+  "wilson95": [
+   0.0034858120602888412,
+   0.007364531036106674
+  ],
+  "window": {
+   "end": "2023-06-01T00:00:00+00:00",
+   "start": "2020-01-01T00:00:00+00:00"
+  }
+ },
+ "model": {
+  "checksum": "d11552b67ae69db87266a414987b3180ff5ff75f4b5229b2e1f4625dbaab92d0",
+  "version": "leo-phasing-campaign/20260922/2"
+ },
+ "neverSay": [
+  "no purpose, motive or mission, for an object or for anyone operating it",
+  "no attribution of a purpose to an operator, a programme or a state",
+  "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+  "no miss distance, no range, no conjunction probability, no collision risk",
+  "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+  "no point forecast of dwell duration or of closest separation",
+  "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+  "no claim that an individual event was deliberate",
+  "no silent suppression of an alert that did not pan out",
+  "no quoting of the relocation-alert precision, or of another arm's published alert-channel precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did, or by a different detector",
+  "no sentence about an individual object's own history",
+  "no matching product against the blinded second channel, and none of its vocabulary in any output string, until its noise floor is re-derived",
+  "no claim that the measured lead time applies to anything but in-track phasing campaigns inside an already-shared orbit",
+  "no quoting of the published alert-channel precision as this trigger's own: the two denominators are different detectors"
+ ],
+ "population": {
+  "objectsInBand": 26190,
+  "objectsWithAConfirmedFlag": 15683,
+  "payloadClass": 6287
+ },
+ "publishedFiguresBeside": {
+  "alerts": 161,
+  "channelNote": "measured on T8b's own alert channel, which is NOT the trigger this arm runs. The two denominators are different detectors and this arm does not quote these figures as its own precision.",
+  "hits": 71,
+  "medianCausalLeadDays": 195.9,
+  "precision": 0.4409937888198758,
+  "scope": "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived.",
+  "wilson95": [
+   0.36656159342055206,
+   0.5181761410309053
+  ]
+ },
+ "regime": "LEO",
+ "reservedDecisions": {
+  "framing": null,
+  "ledgerRetention": null,
+  "notificationLeavesTheMachine": null,
+  "objectNamesAppear": null,
+  "publicationSurface": null,
+  "registryCodesEverAppear": null
+ },
+ "schema": 1,
+ "scope": "in-track phasing campaigns between objects that already share an orbit. This is what the measured catalogue contains and it is not a statement about approach behaviour in this regime generally: the second detection channel was switched off by a direction-noise floor that came back 145 times too large, and it stays off until that floor is re-derived.",
+ "status": "SYNTHETIC EXERCISE. Nothing is deployed, nothing is scheduled, no timer or cron entry exists, nothing is on any site surface, and no alert left this machine.",
+ "wallSeconds": 304.97136902809143,
+ "window": {
+  "end": "2023-06-01T00:00:00+00:00",
+  "lookBackFrom": "2017-01-01T00:00:00+00:00",
+  "start": "2020-01-01T00:00:00+00:00",
+  "tickDays": 0.4934633622685185,
+  "ticks": 2528
+ },
+ "windowRule": "the earliest span of the decade that holds the largest payload population in this regime for which EVERY alert's 1,095-day horizon still closes inside the archive. Chosen on population and on archive extent, both outcome-blind, and fixed before any figure in this replay existed."
+}

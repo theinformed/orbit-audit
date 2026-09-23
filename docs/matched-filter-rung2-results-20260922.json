@@ -1,0 +1,219 @@
+{
+  "arms": {
+    "ar1|peakFPrimaryBand": {
+      "audit": {
+        "abstainedWindows": 90,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.2508208682962422,
+        "objects": 5482,
+        "windowExceedance": 0.09658309234354381,
+        "windowExceedanceP2p5": 0.0894304401762896,
+        "windowExceedanceP97p5": 0.10361671738729678,
+        "windows": 106851
+      },
+      "band": "registered [2, 143.75] d",
+      "calibrationControl": {
+        "abstainedWindows": 21,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.24662402274342574,
+        "objects": 1407,
+        "windowExceedance": 0.08764157347529386,
+        "windowExceedanceP2p5": 0.07524911100118371,
+        "windowExceedanceP97p5": 0.10130172882919747,
+        "windows": 27989
+      },
+      "classesWithThreshold": 60,
+      "surrogateMechanism": "ar1",
+      "thresholdBudgetInducedSpread": {
+        "median": 0.09682642183975816,
+        "p05": 0.09490786235037575,
+        "p95": 0.0990725402663522
+      },
+      "thresholdMedian": 374.66165710449206
+    },
+    "ar1|peakFT3Band": {
+      "audit": {
+        "abstainedWindows": 90,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.4553082816490332,
+        "objects": 5482,
+        "windowExceedance": 0.13118267493986954,
+        "windowExceedanceP2p5": 0.12392542204993263,
+        "windowExceedanceP97p5": 0.13858914722745222,
+        "windows": 106851
+      },
+      "band": "T3 [2, 219.51] d",
+      "calibrationControl": {
+        "abstainedWindows": 21,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.4605543710021322,
+        "objects": 1407,
+        "windowExceedance": 0.12697845582193004,
+        "windowExceedanceP2p5": 0.11327053137508213,
+        "windowExceedanceP97p5": 0.14123049157650988,
+        "windows": 27989
+      },
+      "classesWithThreshold": 60,
+      "surrogateMechanism": "ar1",
+      "thresholdBudgetInducedSpread": {
+        "median": 0.13144472208963887,
+        "p05": 0.12706291939242498,
+        "p95": 0.13580453154392566
+      },
+      "thresholdMedian": 806.7341378784179
+    },
+    "white|peakFPrimaryBand": {
+      "audit": {
+        "abstainedWindows": 90,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.9750091207588472,
+        "objects": 5482,
+        "windowExceedance": 0.7803296178791027,
+        "windowExceedanceP2p5": 0.7744483729610635,
+        "windowExceedanceP97p5": 0.7858172540596593,
+        "windows": 106851
+      },
+      "band": "registered [2, 143.75] d",
+      "calibrationControl": {
+        "abstainedWindows": 21,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.9786780383795309,
+        "objects": 1407,
+        "windowExceedance": 0.778948872771446,
+        "windowExceedanceP2p5": 0.7667999130440291,
+        "windowExceedanceP97p5": 0.7901627558484281,
+        "windows": 27989
+      },
+      "classesWithThreshold": 60,
+      "surrogateMechanism": "white",
+      "thresholdBudgetInducedSpread": {
+        "median": 0.7805823062020945,
+        "p05": 0.7776506537140504,
+        "p95": 0.7847661697129648
+      },
+      "thresholdMedian": 24.305588693618773
+    },
+    "white|peakFT3Band": {
+      "audit": {
+        "abstainedWindows": 90,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.9970813571689164,
+        "objects": 5482,
+        "windowExceedance": 0.971932878494352,
+        "windowExceedanceP2p5": 0.9701673543457884,
+        "windowExceedanceP97p5": 0.9735987556538904,
+        "windows": 106851
+      },
+      "band": "T3 [2, 219.51] d",
+      "calibrationControl": {
+        "abstainedWindows": 21,
+        "medianWindowsPerObject": 17.0,
+        "objectExceedanceMaxOverWindows": 0.9985785358919688,
+        "objects": 1407,
+        "windowExceedance": 0.9698810246882704,
+        "windowExceedanceP2p5": 0.9658438421749767,
+        "windowExceedanceP97p5": 0.9737007003681041,
+        "windows": 27989
+      },
+      "classesWithThreshold": 60,
+      "surrogateMechanism": "white",
+      "thresholdBudgetInducedSpread": {
+        "median": 0.972003069695183,
+        "p05": 0.9714742959822557,
+        "p95": 0.9729160232473257
+      },
+      "thresholdMedian": 24.305588693618773
+    }
+  },
+  "auditRungExposure": {
+    "1": 104525,
+    "2": 712,
+    "3": 417,
+    "4": 1197,
+    "5": 0
+  },
+  "calibratedNullObjectLevelReference": 0.15705680661607324,
+  "classCount": 60,
+  "preregistration": "docs/matched-filter-rung2-preregistration-20260922.md",
+  "provenance": {
+    "amendment1Commit": "03df5c80b11f3cafdc65d8dfd4c30832862625c7",
+    "archive": "/home/sdegan/t3-cadence/full (the T3 extraction; not re-read from the archive)",
+    "design": "docs/matched-filter-design-20260922.md (e51bcce)",
+    "host": "pc (bigmem-PC), two RTX 4080, through /home/sdegan/gpu-broker/gpu-run, class standard, --estimate-mib 1800, beside other sessions' work",
+    "instrument": [
+      "tools/matched_filter.py (unchanged)",
+      "tools/matched_filter_rung2.py",
+      "tools/matched_filter_phase.py"
+    ],
+    "inventoryNpz": "/home/sdegan/t5a-matched-filter/rung2-classes.json.inventory.npz",
+    "perWindowPeakFFilesNotCommitted": {
+      "audit2-0.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/audit2-0.jsonl",
+        "rows": 53477,
+        "sha256": "605e5350e3f6e16ceb186f848819fa07b476cbddd749ccc49575b58ea3dc0898"
+      },
+      "audit2-1.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/audit2-1.jsonl",
+        "rows": 53464,
+        "sha256": "cd3a190f36fc1a85eb02497015df505b2b4556eb9c6dd1ea43ef38c48def5e26"
+      },
+      "calib-0.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/calib-0.jsonl",
+        "rows": 13978,
+        "sha256": "5b44d56effeece9a4703f2a46ced180f17f8c407ebbefb33b813a682ae4ffce0"
+      },
+      "calib-1.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/calib-1.jsonl",
+        "rows": 14032,
+        "sha256": "af07299cd271587bf10551d060b2f2e4565fc12f0cf5b0f714fdd3c31763061a"
+      },
+      "surro-ar1-0.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/surro-ar1-0.jsonl",
+        "rows": 36000,
+        "sha256": "acbcdd998cbcb7fa989965fc73948a4be9de01064833385f13a7c2fcac172979"
+      },
+      "surro-ar1-1.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/surro-ar1-1.jsonl",
+        "rows": 36000,
+        "sha256": "62ad0380b192e4e583f168d436775c698d28d39eb4c38bc5a5ad7c7eb634692c"
+      },
+      "surro-white-0.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/surro-white-0.jsonl",
+        "rows": 36000,
+        "sha256": "259fe95fa7d31a3b507dde40332b9d488d277443d26e23f87e22b50f1de591d2"
+      },
+      "surro-white-1.jsonl": {
+        "path": "/home/sdegan/t5a-matched-filter/surro-white-1.jsonl",
+        "rows": 36000,
+        "sha256": "adb79df8f454282eb3cce438fbfb35325b33f5f96cccfa5176f84c54891fcfd0"
+      }
+    },
+    "preregistration": "docs/matched-filter-rung2-preregistration-20260922.md",
+    "preregistrationCommit": "3729b479adf2e7adea9a9372d9e18dbee8a9f339",
+    "prototype": "docs/matched-filter-prototype-20260922.md (b2c7665)",
+    "statusNote": "REGISTERED RESULT. Not T5a: no T5a pre-registration exists, no p-value, no gate, no object relabelled.",
+    "tests": "tests/test_orbit_matched_filter_rung2.py, 47 offline assertions"
+  },
+  "screenBoundApplied": {
+    "high": 0.02,
+    "low": 0.005,
+    "source": "docs/matched-filter-design-20260922.md section 5.3, fixed before any measurement"
+  },
+  "status": "REGISTERED RESULT -- the Rung-2 transfer test",
+  "t3Comparator": {
+    "heldOutPassiveObjects": 0.09316,
+    "payloads": 0.03361
+  },
+  "verdict": {
+    "heldOutPassiveWindowExceedance": 0.09658309234354381,
+    "insideScreen": false,
+    "primaryArm": "ar1|peakFPrimaryBand",
+    "rung2Admissible": false,
+    "screen": [
+      0.005,
+      0.02
+    ],
+    "surrogateBudgetSpread": 0.004164677915976453,
+    "unresolvedAtThisBudget": false
+  }
+}

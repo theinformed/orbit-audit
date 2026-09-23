@@ -1,0 +1,4485 @@
+{
+ "amendments": {
+  "1": "3979f4e (the bars T20 raised)",
+  "2": "91ceede (A2.3: the construction, the arms, the population and the Sentinel-1A distinction)"
+ },
+ "armSeenInPartition_Sentinel1A": {
+  "0": {
+   "horizonDays": 0,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     0.0,
+     0.0
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": 0.0,
+    "gainPercent": 0.0,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.582038321038447,
+    "medianPlainKm": 0.582038321038447,
+    "n": 272,
+    "objectClustered95": [
+     0.0,
+     0.0
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     0.0,
+     0.0
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": 0.0,
+    "gainPercent": 0.0,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.582038321038447,
+    "medianPlainKm": 0.582038321038447,
+    "n": 272,
+    "objectClustered95": [
+     0.0,
+     0.0
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     0.0,
+     0.0
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": 0.0,
+    "gainPercent": 0.0,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.582038321038447,
+    "medianPlainKm": 0.582038321038447,
+    "n": 272,
+    "objectClustered95": [
+     0.0,
+     0.0
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     0.0,
+     0.0
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": 0.0,
+    "gainPercent": 0.0,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.582038321038447,
+    "medianPlainKm": 0.582038321038447,
+    "n": 272,
+    "objectClustered95": [
+     0.0,
+     0.0
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "1": {
+   "horizonDays": 1,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -0.0149686677674985,
+     0.014968658165889437
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.014968656493814514,
+    "gainPercent": -2.1824141822932743,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.7008447204994788,
+    "medianPlainKm": 0.6858760640056643,
+    "n": 272,
+    "objectClustered95": [
+     -0.014968656493814514,
+     -0.014968656493814514
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -0.01731524827301545,
+     0.01358495777522628
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.011490001968251118,
+    "gainPercent": -1.6752300555798705,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.6973660659739154,
+    "medianPlainKm": 0.6858760640056643,
+    "n": 272,
+    "objectClustered95": [
+     -0.011490001968251118,
+     -0.011490001968251118
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -0.06892806806069574,
+     0.034296281745325216
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.04872122388179423,
+    "gainPercent": -7.103502577018327,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.7345972878874585,
+    "medianPlainKm": 0.6858760640056643,
+    "n": 272,
+    "objectClustered95": [
+     -0.04872122388179423,
+     -0.04872122388179423
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -0.018050636403643017,
+     0.012103446555527975
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.009442920255409715,
+    "gainPercent": -1.3767677210166838,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 0.695318984261074,
+    "medianPlainKm": 0.6858760640056643,
+    "n": 272,
+    "objectClustered95": [
+     -0.009442920255409715,
+     -0.009442920255409715
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "14": {
+   "horizonDays": 14,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -2.9338530318041367,
+     -0.4449655540005385
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -2.511747995903683,
+    "gainPercent": -10.437907973216706,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 26.575458869277323,
+    "medianPlainKm": 24.06371087337364,
+    "n": 272,
+    "objectClustered95": [
+     -2.511747995903683,
+     -2.511747995903683
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -2.8047623493544176,
+     -0.13026784868631444
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -2.0027787327145603,
+    "gainPercent": -8.322817470894,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 26.0664896060882,
+    "medianPlainKm": 24.06371087337364,
+    "n": 272,
+    "objectClustered95": [
+     -2.0027787327145603,
+     -2.0027787327145603
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -0.9295444503615045,
+     0.3748812114526068
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.6190189197733282,
+    "gainPercent": -2.5724167109166407,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 24.68272979314697,
+    "medianPlainKm": 24.06371087337364,
+    "n": 272,
+    "objectClustered95": [
+     -0.6190189197733282,
+     -0.6190189197733282
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -2.6622902029842805,
+     -0.018793368976997016
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -1.9776156658197017,
+    "gainPercent": -8.21824894849415,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 26.041326539193342,
+    "medianPlainKm": 24.06371087337364,
+    "n": 272,
+    "objectClustered95": [
+     -1.9776156658197017,
+     -1.9776156658197017
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "30": {
+   "horizonDays": 30,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -13.471786994557036,
+     -1.3885391114516636
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -6.39145417072038,
+    "gainPercent": -6.429502339228056,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 105.79967946561553,
+    "medianPlainKm": 99.40822529489515,
+    "n": 272,
+    "objectClustered95": [
+     -6.39145417072038,
+     -6.39145417072038
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -12.62305135124052,
+     0.37549416396308627
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -5.322306496192738,
+    "gainPercent": -5.353990055052367,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 104.73053179108788,
+    "medianPlainKm": 99.40822529489515,
+    "n": 272,
+    "objectClustered95": [
+     -5.322306496192738,
+     -5.322306496192738
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -2.1613017516145305,
+     1.5964498118001273
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": 0.4586316816555609,
+    "gainPercent": 0.46136190470660454,
+    "lowerBoundAboveZero": true,
+    "measured": true,
+    "medianCorrectedKm": 98.94959361323959,
+    "medianPlainKm": 99.40822529489515,
+    "n": 272,
+    "objectClustered95": [
+     0.4586316816555609,
+     0.4586316816555609
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -12.48739231603678,
+     -1.070568311517427
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -5.77531289491526,
+    "gainPercent": -5.809693189655842,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 105.1835381898104,
+    "medianPlainKm": 99.40822529489515,
+    "n": 272,
+    "objectClustered95": [
+     -5.77531289491526,
+     -5.77531289491526
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "60": {
+   "horizonDays": 60,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -53.887163045368425,
+     -1.5873207684879724
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -39.032108068899674,
+    "gainPercent": -10.187057596978164,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 422.1860040523479,
+    "medianPlainKm": 383.15389598344825,
+    "n": 272,
+    "objectClustered95": [
+     -39.032108068899674,
+     -39.032108068899674
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -50.8784254121521,
+     4.503100059994554
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -25.842691999539852,
+    "gainPercent": -6.744729016315738,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 408.9965879829881,
+    "medianPlainKm": 383.15389598344825,
+    "n": 272,
+    "objectClustered95": [
+     -25.842691999539852,
+     -25.842691999539852
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -5.410393726338853,
+     2.78976506130145
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -1.691476976744525,
+    "gainPercent": -0.44146151049905924,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 384.8453729601928,
+    "medianPlainKm": 383.15389598344825,
+    "n": 272,
+    "objectClustered95": [
+     -1.691476976744525,
+     -1.691476976744525
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -49.903848149384025,
+     1.3876775732595203
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -36.13516487519155,
+    "gainPercent": -9.43097936729646,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 419.2890608586398,
+    "medianPlainKm": 383.15389598344825,
+    "n": 272,
+    "objectClustered95": [
+     -36.13516487519155,
+     -36.13516487519155
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "7": {
+   "horizonDays": 7,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -0.7334637615544022,
+     0.10521809575234009
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.273237758567646,
+    "gainPercent": -3.8382014690857718,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 7.392138649216541,
+    "medianPlainKm": 7.118900890648895,
+    "n": 272,
+    "objectClustered95": [
+     -0.273237758567646,
+     -0.273237758567646
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -0.7245154022383327,
+     0.0697555224765063
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.3882333378647296,
+    "gainPercent": -5.453557281218754,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 7.507134228513625,
+    "medianPlainKm": 7.118900890648895,
+    "n": 272,
+    "objectClustered95": [
+     -0.3882333378647296,
+     -0.3882333378647296
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -0.4815472432483025,
+     0.1870555176325192
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.20157449596835786,
+    "gainPercent": -2.831539574221887,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 7.320475386617253,
+    "medianPlainKm": 7.118900890648895,
+    "n": 272,
+    "objectClustered95": [
+     -0.20157449596835786,
+     -0.20157449596835786
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -0.6701728015325186,
+     0.05903296594873986
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.3034462523106942,
+    "gainPercent": -4.262543571990013,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 7.422347142959589,
+    "medianPlainKm": 7.118900890648895,
+    "n": 272,
+    "objectClustered95": [
+     -0.3034462523106942,
+     -0.3034462523106942
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  },
+  "90": {
+   "horizonDays": 90,
+   "interceptOnly": {
+    "blockBootstrap95": [
+     -121.24614477060345,
+     5.968709964920455
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -84.38116994389736,
+    "gainPercent": -9.995530077215722,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 928.5702153677088,
+    "medianPlainKm": 844.1890454238114,
+    "n": 272,
+    "objectClustered95": [
+     -84.38116994389736,
+     -84.38116994389736
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "learned": {
+    "blockBootstrap95": [
+     -114.24413226032611,
+     9.903476597746941
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -57.10648859258913,
+    "gainPercent": -6.764656435919486,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 901.2955340164006,
+    "medianPlainKm": 844.1890454238114,
+    "n": 272,
+    "objectClustered95": [
+     -57.10648859258913,
+     -57.10648859258913
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "linearSecondary": {
+    "blockBootstrap95": [
+     -7.814585486853804,
+     4.789349435400368
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -0.05653994114254601,
+    "gainPercent": -0.00669754499291815,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 844.245585364954,
+    "medianPlainKm": 844.1890454238114,
+    "n": 272,
+    "objectClustered95": [
+     -0.05653994114254601,
+     -0.05653994114254601
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   },
+   "n": 272,
+   "placebo180d": {
+    "blockBootstrap95": [
+     -112.1312275780357,
+     3.3646760657935033
+    ],
+    "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+    "gainKm": -69.49546465788967,
+    "gainPercent": -8.232215880389752,
+    "lowerBoundAboveZero": false,
+    "measured": true,
+    "medianCorrectedKm": 913.6845100817011,
+    "medianPlainKm": 844.1890454238114,
+    "n": 272,
+    "objectClustered95": [
+     -69.49546465788967,
+     -69.49546465788967
+    ],
+    "objectList": [
+     "sentinel-1a"
+    ],
+    "objects": 1
+   }
+  }
+ },
+ "armsHeadline_Sentinel3AB": {
+  "registeredOriginWindow": {
+   "asFlown": {
+    "0": {
+     "horizonDays": 0,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "1": {
+     "horizonDays": 1,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0012594528718701814,
+       0.005509083542050597
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.002566556687325916,
+      "gainPercent": 0.7922506785401588,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3213910941985254,
+      "medianPlainKm": 0.3239576508858513,
+      "n": 528,
+      "objectClustered95": [
+       0.002566556687325916,
+       0.005509081458871912
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.006086445752085057,
+       0.01942364807322533
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.011016021994386727,
+      "gainPercent": 3.400451251657056,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3129416288914646,
+      "medianPlainKm": 0.3239576508858513,
+      "n": 528,
+      "objectClustered95": [
+       0.0038748544885172653,
+       0.0186868322837756
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.014632762948108093,
+       0.03527040372600451
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.022417668562334125,
+      "gainPercent": 6.919937992214032,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3015399823235172,
+      "medianPlainKm": 0.3239576508858513,
+      "n": 528,
+      "objectClustered95": [
+       0.019275352090305953,
+       0.025784483621522747
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.010705155813072947,
+       0.02724538163833249
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.016886012528693595,
+      "gainPercent": 5.212413561624293,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.30707163835715773,
+      "medianPlainKm": 0.3239576508858513,
+      "n": 528,
+      "objectClustered95": [
+       0.0036374352159082024,
+       0.02337109450948549
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -1.0797802281761442,
+       -0.025396850639958425
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.39252560351467025,
+      "gainPercent": -2.0110283683942924,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 19.911176343786558,
+      "medianPlainKm": 19.518650740271887,
+      "n": 528,
+      "objectClustered95": [
+       -0.7426546771147855,
+       -0.39252560351467025
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -3.3340023361557787,
+       -0.5912201354701444
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.643225666928096,
+      "gainPercent": -8.418746197131895,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.161876407199983,
+      "medianPlainKm": 19.518650740271887,
+      "n": 528,
+      "objectClustered95": [
+       -2.9275855569231553,
+       -0.7260656988516843
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.7711215984569648,
+       0.09093062303221124
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.11726663966427964,
+      "gainPercent": -0.6007927557324906,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 19.635917379936167,
+      "medianPlainKm": 19.518650740271887,
+      "n": 528,
+      "objectClustered95": [
+       -0.34017027518869725,
+       -0.015647545657444084
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -3.446820612767462,
+       -1.1706719940858537
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -2.1103512996371805,
+      "gainPercent": -10.811973264540232,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.629002039909068,
+      "medianPlainKm": 19.518650740271887,
+      "n": 528,
+      "objectClustered95": [
+       -3.7251454356787477,
+       -0.6585037439540855
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -4.958176855932976,
+       -3.875273539022402
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -4.240535826126504,
+      "gainPercent": -4.486242802178905,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 98.76363707394427,
+      "medianPlainKm": 94.52310124781776,
+      "n": 528,
+      "objectClustered95": [
+       -4.958169478121164,
+       -3.875289616140549
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -14.99567082107453,
+       -6.672561608386731
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -9.37952590530928,
+      "gainPercent": -9.922998485543047,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 103.90262715312704,
+      "medianPlainKm": 94.52310124781776,
+      "n": 528,
+      "objectClustered95": [
+       -13.769262233288543,
+       -4.147425198972655
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -1.5612396159764188,
+       -0.008489670751771428
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.522672123421458,
+      "gainPercent": -0.5529570195238646,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 95.04577337123922,
+      "medianPlainKm": 94.52310124781776,
+      "n": 528,
+      "objectClustered95": [
+       -0.7545275094665556,
+       -0.4465679137481402
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -19.23536606487842,
+       -9.381894370823119
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -14.762083901082619,
+      "gainPercent": -15.617435003936066,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 109.28518514890038,
+      "medianPlainKm": 94.52310124781776,
+      "n": 528,
+      "objectClustered95": [
+       -21.913372805309265,
+       -3.8577516865373127
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "60": {
+     "horizonDays": 60,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -19.832701029396674,
+       -15.50116014914215
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -17.01584382715157,
+      "gainPercent": -4.344029545110369,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 408.722291733441,
+      "medianPlainKm": 391.70644790628944,
+      "n": 528,
+      "objectClustered95": [
+       -19.83265199457594,
+       -15.501164570553328
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -50.15577711419337,
+       -28.79584808464216
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -40.88949227676579,
+      "gainPercent": -10.438810107753973,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 432.59594018305523,
+      "medianPlainKm": 391.70644790628944,
+      "n": 528,
+      "objectClustered95": [
+       -64.21390375970554,
+       -19.82041447404572
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -3.4424797544349417,
+       -0.2347148617719199
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.1685875644282646,
+      "gainPercent": -0.2983324810389217,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 392.8750354707177,
+      "medianPlainKm": 391.70644790628944,
+      "n": 528,
+      "objectClustered95": [
+       -2.527901408481739,
+       -0.8688345929133447
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -71.98900714379465,
+       -32.79359895819523
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -40.06721998338003,
+      "gainPercent": -10.228889567058028,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 431.77366788966947,
+      "medianPlainKm": 391.70644790628944,
+      "n": 528,
+      "objectClustered95": [
+       -95.64443253694265,
+       -14.57550938749364
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.06043280546274415,
+       0.2274696648567397
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.1580101616827223,
+      "gainPercent": 6.908030647912826,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.1293300331738694,
+      "medianPlainKm": 2.2873401948565917,
+      "n": 528,
+      "objectClustered95": [
+       0.14604649444945528,
+       0.19556082328413815
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.15575340735074308,
+       0.5643132649770112
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.3978423514594511,
+      "gainPercent": 17.393230458418735,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.8894978433971406,
+      "medianPlainKm": 2.2873401948565917,
+      "n": 528,
+      "objectClustered95": [
+       0.1295368048840304,
+       0.5974061032682987
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.04526261171875036,
+       0.24597444585545136
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.12723052710703264,
+      "gainPercent": 5.562378844787868,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.160109667749559,
+      "medianPlainKm": 2.2873401948565917,
+      "n": 528,
+      "objectClustered95": [
+       0.057695773421393426,
+       0.2355363704627793
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.07211640635540197,
+       0.4352508371631838
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.175862384017186,
+      "gainPercent": 7.68851019243388,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.1114778108394057,
+      "medianPlainKm": 2.2873401948565917,
+      "n": 528,
+      "objectClustered95": [
+       0.1630044471580665,
+       0.4330224643272689
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "90": {
+     "horizonDays": 90,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -44.62358504147244,
+       -35.07011347422669
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -42.63964250479091,
+      "gainPercent": -4.894292709702863,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 913.851174668743,
+      "medianPlainKm": 871.2115321639521,
+      "n": 528,
+      "objectClustered95": [
+       -44.62335461082944,
+       -34.877644900558835
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -126.64729704947571,
+       -64.96781483530656
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -75.0705806277524,
+      "gainPercent": -8.616802906785326,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 946.2821127917045,
+      "medianPlainKm": 871.2115321639521,
+      "n": 528,
+      "objectClustered95": [
+       -140.81511685668943,
+       -40.79259051375357
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -5.1723119328167995,
+       0.04787515414909649
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -4.558972149246188,
+      "gainPercent": -0.5232910700714004,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 875.7705043131983,
+      "medianPlainKm": 871.2115321639521,
+      "n": 528,
+      "objectClustered95": [
+       -4.558972149246188,
+       -1.7198387905043546
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -170.33911584336457,
+       -74.43282615392674
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -98.35456430199986,
+      "gainPercent": -11.28940110075249,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 969.566096465952,
+      "medianPlainKm": 871.2115321639521,
+      "n": 528,
+      "objectClustered95": [
+       -181.86638333279552,
+       -17.22897916350621
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    }
+   },
+   "manoeuvreFree": {
+    "0": {
+     "horizonDays": 0,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 528,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.5020518511041696,
+      "medianPlainKm": 0.5020518511041696,
+      "n": 528,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "1": {
+     "horizonDays": 1,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0025611689210523762,
+       0.005509090847655829
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.004664006017721711,
+      "gainPercent": 1.4851130880210288,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.30938655722501973,
+      "medianPlainKm": 0.31405056324274144,
+      "n": 497,
+      "objectClustered95": [
+       0.004305886987699514,
+       0.005509069813150247
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.006173728346754281,
+       0.01925530255042176
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.015231616093021372,
+      "gainPercent": 4.850052149484058,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.29881894714972007,
+      "medianPlainKm": 0.31405056324274144,
+      "n": 497,
+      "objectClustered95": [
+       0.0033241863464852917,
+       0.021055328173462895
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.015096578802030233,
+       0.031334658656060846
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.025178809218931675,
+      "gainPercent": 8.017438007098885,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.28887175402380977,
+      "medianPlainKm": 0.31405056324274144,
+      "n": 497,
+      "objectClustered95": [
+       0.019894886256023425,
+       0.031183475679072592
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 497,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.010977662752830575,
+       0.02696204584797241
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.01759675679568201,
+      "gainPercent": 5.603160400027947,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.29645380644705943,
+      "medianPlainKm": 0.31405056324274144,
+      "n": 497,
+      "objectClustered95": [
+       0.004032977813818728,
+       0.02784402488928861
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.2083797817752761,
+       0.9790736335869497
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.5742605299565371,
+      "gainPercent": 12.537894430010677,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 4.005938586906246,
+      "medianPlainKm": 4.580199116862783,
+      "n": 150,
+      "objectClustered95": [
+       0.2555676567123002,
+       0.8077507106056458
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.9211180607483919,
+       2.25891599140043
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 1.4500679779906127,
+      "gainPercent": 31.65949647586151,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 3.13013113887217,
+      "medianPlainKm": 4.580199116862783,
+      "n": 150,
+      "objectClustered95": [
+       -0.20250892712396729,
+       2.2190577050613722
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.06774827558302565,
+       0.5782083355282266
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.12545761361855767,
+      "gainPercent": 2.7391301211483166,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 4.454741503244225,
+      "medianPlainKm": 4.580199116862783,
+      "n": 150,
+      "objectClustered95": [
+       0.12545761361855767,
+       0.18177267298111044
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 150,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.34927553822247676,
+       2.0477078020737665
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 1.1852160708414177,
+      "gainPercent": 25.876955141051464,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 3.3949830460213652,
+      "medianPlainKm": 4.580199116862783,
+      "n": 150,
+      "objectClustered95": [
+       0.09640837704700855,
+       2.030262689853716
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "learned": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "linearSecondary": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "measured": false,
+     "n": 0,
+     "placebo180d": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "reason": "no interval survives at this horizon on this arm: UNMEASURED at this exposure, never zero"
+    },
+    "60": {
+     "horizonDays": 60,
+     "interceptOnly": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "learned": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "linearSecondary": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "measured": false,
+     "n": 0,
+     "placebo180d": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "reason": "no interval survives at this horizon on this arm: UNMEASURED at this exposure, never zero"
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.046754660938957374,
+       0.23997022183026173
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.13857289202161827,
+      "gainPercent": 9.340421036299512,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.3450100373033544,
+      "medianPlainKm": 1.4835829293249727,
+      "n": 323,
+      "objectClustered95": [
+       0.13483407430942718,
+       0.13857289202161827
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.3200543497258661,
+       0.6090089677590252
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.475051923095388,
+      "gainPercent": 32.020584337104474,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.0085310062295847,
+      "medianPlainKm": 1.4835829293249727,
+      "n": 323,
+      "objectClustered95": [
+       0.080807703575275,
+       0.6676169658693143
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.024711183748774686,
+       0.2375693767075441
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.12060288052582502,
+      "gainPercent": 8.129163401785641,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.3629800487991477,
+      "medianPlainKm": 1.4835829293249727,
+      "n": 323,
+      "objectClustered95": [
+       0.09536849224152122,
+       0.13298362451582313
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 323,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.17133017949890442,
+       0.5321106043776546
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.36116258724910466,
+      "gainPercent": 24.343943308476387,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.122420342075868,
+      "medianPlainKm": 1.4835829293249727,
+      "n": 323,
+      "objectClustered95": [
+       0.08656996888772484,
+       0.5791530386290558
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "90": {
+     "horizonDays": 90,
+     "interceptOnly": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "learned": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "linearSecondary": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "measured": false,
+     "n": 0,
+     "placebo180d": {
+      "measured": false,
+      "reason": "no comparison survived; UNMEASURED, never zero"
+     },
+     "reason": "no interval survives at this horizon on this arm: UNMEASURED at this exposure, never zero"
+    }
+   },
+   "window": [
+    "2023-01-01",
+    "2023-10-03"
+   ]
+  },
+  "t20ComparableOrigins": {
+   "asFlown": {
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -1.0797792677747964,
+       0.8439501501890234
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.3873608977158014,
+      "gainPercent": -2.1027756234234225,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 18.808769886904994,
+      "medianPlainKm": 18.421408989189192,
+      "n": 293,
+      "objectClustered95": [
+       -0.49302166350588905,
+       0.48372238575362303
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -2.516770835488862,
+       0.22561464119499774
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.9035118869449192,
+      "gainPercent": -4.904683933108239,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 19.32492087613411,
+      "medianPlainKm": 18.421408989189192,
+      "n": 293,
+      "objectClustered95": [
+       -0.9035118869449192,
+       -0.22589833204229848
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.5023616595305924,
+       0.288715239757499
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.022075983169145275,
+      "gainPercent": 0.11983873319408309,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 18.399333006020047,
+      "medianPlainKm": 18.421408989189192,
+      "n": 293,
+      "objectClustered95": [
+       -0.3109267278310597,
+       0.022075983169145275
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 293,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -3.5730770876803923,
+       -0.5627884081629126
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.1107424084002417,
+      "gainPercent": -6.029627858824986,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 19.532151397589434,
+      "medianPlainKm": 18.421408989189192,
+      "n": 293,
+      "objectClustered95": [
+       -1.644166278188731,
+       -0.2118204029465538
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -4.958175542314109,
+       -3.8752846808265247
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -4.174245363539214,
+      "gainPercent": -4.341066596646949,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 100.33138256948328,
+      "medianPlainKm": 96.15713720594407,
+      "n": 293,
+      "objectClustered95": [
+       -4.958184549986342,
+       -3.875288764615547
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -15.315576230296415,
+       -6.7677002383469045
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -12.77734957267424,
+      "gainPercent": -13.287988748363436,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 108.93448677861831,
+      "medianPlainKm": 96.15713720594407,
+      "n": 293,
+      "objectClustered95": [
+       -14.454310602758909,
+       -9.372978891744708
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -1.307791049151561,
+       -0.0005237781728055779
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.0088333162443206,
+      "gainPercent": -0.00918633447395786,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 96.16597052218839,
+      "medianPlainKm": 96.15713720594407,
+      "n": 293,
+      "objectClustered95": [
+       -1.9470241986499275,
+       -0.0088333162443206
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 293,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -25.168848003809416,
+       -12.097013865056098
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -18.474726324753405,
+      "gainPercent": -19.213057773532974,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 114.63186353069747,
+      "medianPlainKm": 96.15713720594407,
+      "n": 293,
+      "objectClustered95": [
+       -24.340585444161974,
+       -4.079154376823908
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    }
+   },
+   "manoeuvreFree": {
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.2675716471749787,
+       1.026046348689996
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.7103717054908731,
+      "gainPercent": 15.062022247264364,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 4.005938586906246,
+      "medianPlainKm": 4.716310292397119,
+      "n": 66,
+      "objectClustered95": [
+       -0.13618498185917405,
+       0.7103717054908731
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.06104785834959614,
+       1.5415357119359303
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.9691677570848762,
+      "gainPercent": 20.54927892779263,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 3.7471425353122427,
+      "medianPlainKm": 4.716310292397119,
+      "n": 66,
+      "objectClustered95": [
+       -0.30461563722849627,
+       1.9902595808075327
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.6161223422622699,
+       0.38733274505413195
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.25226768005370204,
+      "gainPercent": 5.348835517891341,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 4.464042612343417,
+      "medianPlainKm": 4.716310292397119,
+      "n": 66,
+      "objectClustered95": [
+       -0.17036408040079376,
+       0.25226768005370204
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 66,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -1.0474667566826517,
+       1.3917741251282987
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.6658665296022734,
+      "gainPercent": 14.118378315262186,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 4.0504437627948455,
+      "medianPlainKm": 4.716310292397119,
+      "n": 66,
+      "objectClustered95": [
+       0.17581106067046326,
+       0.6658665296022734
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.006993088805813841,
+       0.2271124271607441
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.08700738799876806,
+      "gainPercent": 6.740245166412602,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.2038564582057534,
+      "medianPlainKm": 1.2908638462045214,
+      "n": 165,
+      "objectClustered95": [
+       0.06090747835532073,
+       0.0942135716249326
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.12470264529959874,
+       0.43873820223165483
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.26730090610978174,
+      "gainPercent": 20.707133978205103,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.0235629400947397,
+      "medianPlainKm": 1.2908638462045214,
+      "n": 165,
+      "objectClustered95": [
+       0.12997212054159202,
+       0.42777937620336715
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.013335993786163047,
+       0.1552453553546247
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.034437079673369286,
+      "gainPercent": 2.6677546028284347,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.2564267665311522,
+      "medianPlainKm": 1.2908638462045214,
+      "n": 165,
+      "objectClustered95": [
+       0.005379216623493388,
+       0.038204123827809244
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     },
+     "n": 165,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.03546487549098359,
+       0.4302453567683642
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.19819761672136105,
+      "gainPercent": 15.353874640157755,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 1.0926662294831604,
+      "medianPlainKm": 1.2908638462045214,
+      "n": 165,
+      "objectClustered95": [
+       -0.04213423362326374,
+       0.41928763515133827
+      ],
+      "objectList": [
+       "sentinel-3a",
+       "sentinel-3b"
+      ],
+      "objects": 2
+     }
+    }
+   },
+   "window": [
+    "2023-07-01",
+    "2023-12-02"
+   ]
+  }
+ },
+ "checkpointSha256": null,
+ "construction": {
+  "headline": "(propagation - truth) along-track = +(3/4) n adot h^2, adot = mu[dA_km]/dt, n in radians per day. Derived from the two-body relation between a and n, quadratic because the error is in the modelled decay RATE.",
+  "secondary": "the direct linear carry of the predicted RTN offset; published beside the headline and NEVER the headline, whichever number is larger.",
+  "zeroHeadIdentity": "with the head zeroed the correction is identically zero at every horizon and the forecast IS plain SGP4; asserted by an offline test."
+ },
+ "floorsPrintedFirst": {
+  "note": "registration 3.3: the +0 d residual is the floor and gate A4 fired in T16(b); the +1 d row is floor-limited and NO GAIN IS QUOTED THERE.",
+  "zeroDayAlongTrackMedianKm": {
+   "sentinel-1a": 0.582,
+   "sentinel-3a": 0.577,
+   "sentinel-3b": 0.33
+  }
+ },
+ "generatedUtc": "2026-09-22T21:29:25+00:00",
+ "manoeuvreFreeHorizonLimit": "amendment 1: the manoeuvre-free subset runs out at +14 d on Sentinel-3A/3B -- T16(b) measured n = 0 at +30 d and beyond -- and Sentinel-1A has no fetchable manoeuvre notice and therefore no manoeuvre-free arm at all. G-E2-manoeuvre-free can be discharged only at +7 d and +14 d and is UNMEASURABLE at the horizon the headline screen reads. That is a weakness of the truth set, not of the model.",
+ "modelVersion": "t18-learned-model/20260922/cadence",
+ "perMission": {
+  "sentinel-1a": {
+   "dropped": 88,
+   "heldOutByConstruction": false,
+   "horizons": {
+    "0": {
+     "horizonDays": 0,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.580124461688933,
+      "medianPlainKm": 0.580124461688933,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.580124461688933,
+      "medianPlainKm": 0.580124461688933,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.580124461688933,
+      "medianPlainKm": 0.580124461688933,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.580124461688933,
+      "medianPlainKm": 0.580124461688933,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "1": {
+     "horizonDays": 1,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.014968669983254412,
+       0.014968658165889437
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.014968643548055272,
+      "gainPercent": -2.418750456860863,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.6338271746377853,
+      "medianPlainKm": 0.61885853108973,
+      "n": 332,
+      "objectClustered95": [
+       -0.014968643548055272,
+       -0.014968643548055272
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -0.019356578211381925,
+       0.01358495777522628
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.012579518096145992,
+      "gainPercent": -2.0326968869597843,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.631438049185876,
+      "medianPlainKm": 0.61885853108973,
+      "n": 332,
+      "objectClustered95": [
+       -0.012579518096145992,
+       -0.012579518096145992
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.06075955355388263,
+       0.028129969284175105
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.049786236105028636,
+      "gainPercent": -8.044849283625693,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.6686447671947586,
+      "medianPlainKm": 0.61885853108973,
+      "n": 332,
+      "objectClustered95": [
+       -0.049786236105028636,
+       -0.049786236105028636
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.018301320242300245,
+       0.011575316814087145
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.015162403068964214,
+      "gainPercent": -2.4500596351584876,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.6340209341586942,
+      "medianPlainKm": 0.61885853108973,
+      "n": 332,
+      "objectClustered95": [
+       -0.015162403068964214,
+       -0.015162403068964214
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -2.933854883359544,
+       -1.0268944115824392
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.9802777013714916,
+      "gainPercent": -7.640105026226854,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 27.899786589974724,
+      "medianPlainKm": 25.919508888603232,
+      "n": 332,
+      "objectClustered95": [
+       -1.9802777013714916,
+       -1.9802777013714916
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -3.44437243471919,
+       -0.883625385018507
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.954891202884454,
+      "gainPercent": -7.542161432479983,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 27.874400091487686,
+      "medianPlainKm": 25.919508888603232,
+      "n": 332,
+      "objectClustered95": [
+       -1.954891202884454,
+       -1.954891202884454
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.9044132514178896,
+       0.16811200628196815
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.5119795864267545,
+      "gainPercent": -1.9752673116884212,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 26.431488475029987,
+      "medianPlainKm": 25.919508888603232,
+      "n": 332,
+      "objectClustered95": [
+       -0.5119795864267545,
+       -0.5119795864267545
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -2.999228254851195,
+       -0.740114733775303
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.7875756027945862,
+      "gainPercent": -6.896641485289023,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 27.70708449139782,
+      "medianPlainKm": 25.919508888603232,
+      "n": 332,
+      "objectClustered95": [
+       -1.7875756027945862,
+       -1.7875756027945862
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -13.471793863400393,
+       -2.4836862602472336
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -10.846832941023479,
+      "gainPercent": -9.803261271795657,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 121.49198092081073,
+      "medianPlainKm": 110.64514797978725,
+      "n": 332,
+      "objectClustered95": [
+       -10.846832941023479,
+       -10.846832941023479
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -14.844535896258371,
+       -1.0913935400036936
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -9.773242057090528,
+      "gainPercent": -8.832960356179298,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 120.41839003687778,
+      "medianPlainKm": 110.64514797978725,
+      "n": 332,
+      "objectClustered95": [
+       -9.773242057090528,
+       -9.773242057090528
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -2.366334880769245,
+       1.157383493735793
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -1.8602933229462337,
+      "gainPercent": -1.6813148673144471,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 112.50544130273349,
+      "medianPlainKm": 110.64514797978725,
+      "n": 332,
+      "objectClustered95": [
+       -1.8602933229462337,
+       -1.8602933229462337
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -13.848161219868228,
+       -2.2374188485569504
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -10.765344394396152,
+      "gainPercent": -9.729612722252199,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 121.4104923741834,
+      "medianPlainKm": 110.64514797978725,
+      "n": 332,
+      "objectClustered95": [
+       -10.765344394396152,
+       -10.765344394396152
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "60": {
+     "horizonDays": 60,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -53.887180845274315,
+       -3.7111757600736532
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -36.24438571803256,
+      "gainPercent": -8.447070586509957,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 465.3207779043978,
+      "medianPlainKm": 429.07639218636524,
+      "n": 303,
+      "objectClustered95": [
+       -36.24438571803256,
+       -36.24438571803256
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -53.2756881176612,
+       3.720616513693286
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -33.478139755610414,
+      "gainPercent": -7.8023728094249245,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 462.55453194197565,
+      "medianPlainKm": 429.07639218636524,
+      "n": 303,
+      "objectClustered95": [
+       -33.478139755610414,
+       -33.478139755610414
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -5.480574418482694,
+       2.8535389289529576
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 2.322348253326709,
+      "gainPercent": 0.5412435397559741,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 426.75404393303853,
+      "medianPlainKm": 429.07639218636524,
+      "n": 303,
+      "objectClustered95": [
+       2.322348253326709,
+       2.322348253326709
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 303,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -53.063140367878,
+       1.0451133369627252
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -23.17133250869597,
+      "gainPercent": -5.400281378946554,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 452.2477246950612,
+      "medianPlainKm": 429.07639218636524,
+      "n": 303,
+      "objectClustered95": [
+       -23.17133250869597,
+       -23.17133250869597
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.7334641531174544,
+       0.01250928429806596
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.341473965851236,
+      "gainPercent": -4.546384469876368,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 7.852364611237457,
+      "medianPlainKm": 7.510890645386221,
+      "n": 332,
+      "objectClustered95": [
+       -0.341473965851236,
+       -0.341473965851236
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -0.8148209249489575,
+       -0.009572332011534132
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.3639040775157696,
+      "gainPercent": -4.845018982393361,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 7.87479472290199,
+      "medianPlainKm": 7.510890645386221,
+      "n": 332,
+      "objectClustered95": [
+       -0.3639040775157696,
+       -0.3639040775157696
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.44250166092844406,
+       0.1743277772545211
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.004239299844233102,
+      "gainPercent": 0.056442039225231076,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 7.506651345541988,
+      "medianPlainKm": 7.510890645386221,
+      "n": 332,
+      "objectClustered95": [
+       0.004239299844233102,
+       0.004239299844233102
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.7055536589981651,
+       0.027809275062909755
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.33049766178666484,
+      "gainPercent": -4.400245954714872,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 7.841388307172886,
+      "medianPlainKm": 7.510890645386221,
+      "n": 332,
+      "objectClustered95": [
+       -0.33049766178666484,
+       -0.33049766178666484
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    },
+    "90": {
+     "horizonDays": 90,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -121.24614477060345,
+       3.4192696599233856
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -88.19247090049305,
+      "gainPercent": -10.410701932511166,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 935.3252720527408,
+      "medianPlainKm": 847.1328011522478,
+      "n": 273,
+      "objectClustered95": [
+       -88.19247090049305,
+       -88.19247090049305
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -114.2419789498806,
+       10.768570779469442
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -62.18904828211521,
+      "gainPercent": -7.341121509818449,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 909.321849434363,
+      "medianPlainKm": 847.1328011522478,
+      "n": 273,
+      "objectClustered95": [
+       -62.18904828211521,
+       -62.18904828211521
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -8.219671555346508,
+       4.789349435400368
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 2.4698889975098837,
+      "gainPercent": 0.29155865457581215,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 844.6629121547379,
+      "medianPlainKm": 847.1328011522478,
+      "n": 273,
+      "objectClustered95": [
+       2.4698889975098837,
+       2.4698889975098837
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     },
+     "n": 273,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -111.9886012254401,
+       1.4561128109514812
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -68.33975759452721,
+      "gainPercent": -8.067183504354132,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 915.472558746775,
+      "medianPlainKm": 847.1328011522478,
+      "n": 273,
+      "objectClustered95": [
+       -68.33975759452721,
+       -68.33975759452721
+      ],
+      "objectList": [
+       "sentinel-1a"
+      ],
+      "objects": 1
+     }
+    }
+   },
+   "manoeuvreNotices": 0,
+   "measured": true,
+   "origins": 332,
+   "truthProduct": "Copernicus AUX_POEORB (Earth Explorer XML), EARTH_FIXED, UTC, 10 s",
+   "zeroDayFloorKm": 0.582
+  },
+  "sentinel-3a": {
+   "dropped": 84,
+   "heldOutByConstruction": true,
+   "horizons": {
+    "0": {
+     "horizonDays": 0,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.576672564061433,
+      "medianPlainKm": 0.576672564061433,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.576672564061433,
+      "medianPlainKm": 0.576672564061433,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.576672564061433,
+      "medianPlainKm": 0.576672564061433,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.576672564061433,
+      "medianPlainKm": 0.576672564061433,
+      "n": 332,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "1": {
+     "horizonDays": 1,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.004305848001344426,
+       0.004305886987699514
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.004305876648076357,
+      "gainPercent": 1.3220499524094003,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3213910941985254,
+      "medianPlainKm": 0.32569697084660176,
+      "n": 332,
+      "objectClustered95": [
+       0.004305876648076357,
+       0.004305876648076357
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.015270908517927506,
+       0.027139827603643696
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.024562576542311032,
+      "gainPercent": 7.541542826899555,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.30113439430429073,
+      "medianPlainKm": 0.32569697084660176,
+      "n": 332,
+      "objectClustered95": [
+       0.024562576542311032,
+       0.024562576542311032
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.01600275644444805,
+       0.045352982133744
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.03282091028886913,
+      "gainPercent": 10.077130961198677,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.29287606055773263,
+      "medianPlainKm": 0.32569697084660176,
+      "n": 332,
+      "objectClustered95": [
+       0.03282091028886913,
+       0.03282091028886913
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.020226124662111523,
+       0.040971405015011786
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.030897993842433635,
+      "gainPercent": 9.486730491265794,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.29479897700416813,
+      "medianPlainKm": 0.32569697084660176,
+      "n": 332,
+      "objectClustered95": [
+       0.030897993842433635,
+       0.030897993842433635
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.8439527221416228,
+       0.5119179278717167
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.6441955831003554,
+      "gainPercent": -3.5224750614179428,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 18.93234729086688,
+      "medianPlainKm": 18.288151707766524,
+      "n": 332,
+      "objectClustered95": [
+       -0.6441955831003554,
+       -0.6441955831003554
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -4.68179860964641,
+       -0.35140826575948864
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -2.7278303427056585,
+      "gainPercent": -14.915833957934725,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.015982050472182,
+      "medianPlainKm": 18.288151707766524,
+      "n": 332,
+      "objectClustered95": [
+       -2.7278303427056585,
+       -2.7278303427056585
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -1.2901229634329356,
+       0.36703717024984783
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.39068648872524037,
+      "gainPercent": -2.136281976266227,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 18.678838196491764,
+      "medianPlainKm": 18.288151707766524,
+      "n": 332,
+      "objectClustered95": [
+       -0.39068648872524037,
+       -0.39068648872524037
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -6.1385271204602,
+       -1.285726900108346
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -3.525390221461251,
+      "gainPercent": -19.276908228862215,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.813541929227775,
+      "medianPlainKm": 18.288151707766524,
+      "n": 332,
+      "objectClustered95": [
+       -3.525390221461251,
+       -3.525390221461251
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -3.8752972567780404,
+       -3.8752684950608653
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -3.875291937123393,
+      "gainPercent": -4.105841918324882,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 98.26012248375218,
+      "medianPlainKm": 94.38483054662879,
+      "n": 332,
+      "objectClustered95": [
+       -3.875291937123393,
+       -3.875291937123393
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -23.053441360108593,
+       -12.99757757613068
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -14.795274302254342,
+      "gainPercent": -15.675479011370431,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 109.18010484888313,
+      "medianPlainKm": 94.38483054662879,
+      "n": 332,
+      "objectClustered95": [
+       -14.795274302254342,
+       -14.795274302254342
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -1.5849349316421293,
+       -0.059312742313039735
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.6609428246104301,
+      "gainPercent": -0.7002638250051267,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 95.04577337123922,
+      "medianPlainKm": 94.38483054662879,
+      "n": 332,
+      "objectClustered95": [
+       -0.6609428246104301,
+       -0.6609428246104301
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -32.281259047227856,
+       -19.26710364993403
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -24.208829819846727,
+      "gainPercent": -25.64906847810346,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 118.59366036647552,
+      "medianPlainKm": 94.38483054662879,
+      "n": 332,
+      "objectClustered95": [
+       -24.208829819846727,
+       -24.208829819846727
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "60": {
+     "horizonDays": 60,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -15.501197425566147,
+       -15.501088560741891
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -15.501148349477205,
+      "gainPercent": -3.9347631364237343,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 409.4549344359769,
+      "medianPlainKm": 393.9537860864997,
+      "n": 305,
+      "objectClustered95": [
+       -15.501148349477205,
+       -15.501148349477205
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -82.94480590710495,
+       -53.47214742048453
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -62.735914873719594,
+      "gainPercent": -15.92468890753211,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 456.6897009602193,
+      "medianPlainKm": 393.9537860864997,
+      "n": 305,
+      "objectClustered95": [
+       -62.735914873719594,
+       -62.735914873719594
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -4.039943615697382,
+       -0.36374309661641746
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -5.06939031529356,
+      "gainPercent": -1.2867982221093526,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 399.02317640179325,
+      "medianPlainKm": 393.9537860864997,
+      "n": 305,
+      "objectClustered95": [
+       -5.06939031529356,
+       -5.06939031529356
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 305,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -126.86104120913662,
+       -76.88861099783738
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -102.35310137757529,
+      "gainPercent": -25.980991931653072,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 496.306887464075,
+      "medianPlainKm": 393.9537860864997,
+      "n": 305,
+      "objectClustered95": [
+       -102.35310137757529,
+       -102.35310137757529
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0014848766586802126,
+       0.2109879505798924
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.1979720564176568,
+      "gainPercent": 8.42328352218369,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.152323477340343,
+      "medianPlainKm": 2.3502955337579996,
+      "n": 332,
+      "objectClustered95": [
+       0.1979720564176568,
+       0.1979720564176568
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.29585076825566375,
+       0.7936549061575835
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.641918703541422,
+      "gainPercent": 27.31225474930072,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 1.7083768302165776,
+      "medianPlainKm": 2.3502955337579996,
+      "n": 332,
+      "objectClustered95": [
+       0.641918703541422,
+       0.641918703541422
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.0011867569981458541,
+       0.31897866109025547
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.15042953233681544,
+      "gainPercent": 6.400451780474028,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.199866001421184,
+      "medianPlainKm": 2.3502955337579996,
+      "n": 332,
+      "objectClustered95": [
+       0.15042953233681544,
+       0.15042953233681544
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 332,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.10218782410422497,
+       0.8259423083417362
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.34995648653023004,
+      "gainPercent": 14.889892845546447,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.0003390472277696,
+      "medianPlainKm": 2.3502955337579996,
+      "n": 332,
+      "objectClustered95": [
+       0.34995648653023004,
+       0.34995648653023004
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    },
+    "90": {
+     "horizonDays": 90,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -34.87770273907108,
+       -34.87742281142823
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -34.87759354015566,
+      "gainPercent": -4.00929389584502,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 904.7961988162767,
+      "medianPlainKm": 869.9186052761211,
+      "n": 275,
+      "objectClustered95": [
+       -34.87759354015566,
+       -34.87759354015566
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -180.47778019862469,
+       -117.34910010028428
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -146.27005549282467,
+      "gainPercent": -16.81422314750896,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 1016.1886607689457,
+      "medianPlainKm": 869.9186052761211,
+      "n": 275,
+      "objectClustered95": [
+       -146.27005549282467,
+       -146.27005549282467
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -5.324985228200376,
+       0.05729370380485907
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -4.878254572047581,
+      "gainPercent": -0.5607713805016474,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 874.7968598481687,
+      "medianPlainKm": 869.9186052761211,
+      "n": 275,
+      "objectClustered95": [
+       -4.878254572047581,
+       -4.878254572047581
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     },
+     "n": 275,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -258.32956670048077,
+       -159.32401674133212
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -186.848408337082,
+      "gainPercent": -21.47883804344826,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 1056.767013613203,
+      "medianPlainKm": 869.9186052761211,
+      "n": 275,
+      "objectClustered95": [
+       -186.848408337082,
+       -186.848408337082
+      ],
+      "objectList": [
+       "sentinel-3a"
+      ],
+      "objects": 1
+     }
+    }
+   },
+   "manoeuvreNotices": 151,
+   "measured": true,
+   "origins": 332,
+   "truthProduct": "CNES/SSALTO POE SP3-c version 30 (POE-G), ITRF, TAI, 60 s",
+   "zeroDayFloorKm": 0.577
+  },
+  "sentinel-3b": {
+   "dropped": 80,
+   "heldOutByConstruction": true,
+   "horizons": {
+    "0": {
+     "horizonDays": 0,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.30880584767350444,
+      "medianPlainKm": 0.30880584767350444,
+      "n": 315,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.30880584767350444,
+      "medianPlainKm": 0.30880584767350444,
+      "n": 315,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.30880584767350444,
+      "medianPlainKm": 0.30880584767350444,
+      "n": 315,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 315,
+     "placebo180d": {
+      "blockBootstrap95": [
+       0.0,
+       0.0
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.0,
+      "gainPercent": 0.0,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 0.30880584767350444,
+      "medianPlainKm": 0.30880584767350444,
+      "n": 315,
+      "objectClustered95": [
+       0.0,
+       0.0
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "1": {
+     "horizonDays": 1,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.0016351045013180965,
+       0.005509090847655829
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.005509056366125864,
+      "gainPercent": 1.6426230553726557,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3298725972705355,
+      "medianPlainKm": 0.33538165363666134,
+      "n": 315,
+      "objectClustered95": [
+       0.005509056366125864,
+       0.005509056366125864
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -0.001867277240734655,
+       0.009628992047639062
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.008199672768411714,
+      "gainPercent": 2.4448781498629324,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3271819808682496,
+      "medianPlainKm": 0.33538165363666134,
+      "n": 315,
+      "objectClustered95": [
+       0.008199672768411714,
+       0.008199672768411714
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       0.0004929692149389098,
+       0.023915208547611755
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.01250468252895015,
+      "gainPercent": 3.72849331302338,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.3228769711077112,
+      "medianPlainKm": 0.33538165363666134,
+      "n": 315,
+      "objectClustered95": [
+       0.01250468252895015,
+       0.01250468252895015
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 315,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.0014871146474780828,
+       0.007084673924923457
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.005092361787390309,
+      "gainPercent": 1.5183781617664645,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 0.330289291849271,
+      "medianPlainKm": 0.33538165363666134,
+      "n": 315,
+      "objectClustered95": [
+       0.005092361787390309,
+       0.005092361787390309
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "14": {
+     "horizonDays": 14,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -1.0797824100808668,
+       0.25170642649736763
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.6096502176209455,
+      "gainPercent": -2.9095415723009985,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.563130429928282,
+      "medianPlainKm": 20.953480212307337,
+      "n": 315,
+      "objectClustered95": [
+       -0.6096502176209455,
+       -0.6096502176209455
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -1.7935771551846051,
+       0.237928499614533
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.7173094052838174,
+      "gainPercent": -3.423342557015875,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.670789617591154,
+      "medianPlainKm": 20.953480212307337,
+      "n": 315,
+      "objectClustered95": [
+       -0.7173094052838174,
+       -0.7173094052838174
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.5831081234442834,
+       0.09699852489896799
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.07679235579919919,
+      "gainPercent": 0.3664897430933409,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 20.876687856508138,
+      "medianPlainKm": 20.953480212307337,
+      "n": 315,
+      "objectClustered95": [
+       0.07679235579919919,
+       0.07679235579919919
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 315,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -1.6026147890052265,
+       0.4123660709591934
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.6044811108020625,
+      "gainPercent": -2.8848721294852564,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 21.5579613231094,
+      "medianPlainKm": 20.953480212307337,
+      "n": 315,
+      "objectClustered95": [
+       -0.6044811108020625,
+       -0.6044811108020625
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "30": {
+     "horizonDays": 30,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -4.958184549986342,
+       -4.958156114655609
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -4.95816837996361,
+      "gainPercent": -4.799714638316154,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 108.25948426200623,
+      "medianPlainKm": 103.30131588204262,
+      "n": 315,
+      "objectClustered95": [
+       -4.95816837996361,
+       -4.95816837996361
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -8.333160788740102,
+       -2.5166886559875463
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -6.384585497174015,
+      "gainPercent": -6.1805461456700375,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 109.68590137921663,
+      "medianPlainKm": 103.30131588204262,
+      "n": 315,
+      "objectClustered95": [
+       -6.384585497174015,
+       -6.384585497174015
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -1.0519051735499119,
+       0.2004945920083827
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.4815861755467665,
+      "gainPercent": -0.4661955866048005,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 103.78290205758938,
+      "medianPlainKm": 103.30131588204262,
+      "n": 315,
+      "objectClustered95": [
+       -0.4815861755467665,
+       -0.4815861755467665
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 315,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -5.94975517566138,
+       -0.3357727944637842
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -3.254584512210087,
+      "gainPercent": -3.1505741087813655,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 106.5559003942527,
+      "medianPlainKm": 103.30131588204262,
+      "n": 315,
+      "objectClustered95": [
+       -3.254584512210087,
+       -3.254584512210087
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "60": {
+     "horizonDays": 60,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -19.83274231421351,
+       -19.832595967688746
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -19.832707917207813,
+      "gainPercent": -4.919069570702928,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 423.0127734183702,
+      "medianPlainKm": 403.1800655011624,
+      "n": 290,
+      "objectClustered95": [
+       -19.832707917207813,
+       -19.832707917207813
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -28.672864255660002,
+       -9.109990280169146
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -19.639614826473917,
+      "gainPercent": -4.871177051390527,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 422.8196803276363,
+      "medianPlainKm": 403.1800655011624,
+      "n": 290,
+      "objectClustered95": [
+       -19.639614826473917,
+       -19.639614826473917
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -2.2105443615083686,
+       0.21923024029023955
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -0.6870166490763268,
+      "gainPercent": -0.17039945866925457,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 403.86708215023873,
+      "medianPlainKm": 403.1800655011624,
+      "n": 290,
+      "objectClustered95": [
+       -0.6870166490763268,
+       -0.6870166490763268
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 290,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -22.464389787979783,
+       -3.9542031640233546
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -13.061293242810223,
+      "gainPercent": -3.2395682129211236,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 416.2413587439726,
+      "medianPlainKm": 403.1800655011624,
+      "n": 290,
+      "objectClustered95": [
+       -13.061293242810223,
+       -13.061293242810223
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "7": {
+     "horizonDays": 7,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -0.09080004900551097,
+       0.26994472290912963
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.1966236536243966,
+      "gainPercent": 7.2092127813362845,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.5307705791194293,
+      "medianPlainKm": 2.727394232743826,
+      "n": 315,
+      "objectClustered95": [
+       0.1966236536243966,
+       0.1966236536243966
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -0.053663812839473184,
+       0.33751149954205883
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.2808489987603293,
+      "gainPercent": 10.297337854153497,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.4465452339834965,
+      "medianPlainKm": 2.727394232743826,
+      "n": 315,
+      "objectClustered95": [
+       0.2808489987603293,
+       0.2808489987603293
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -0.09232800504047889,
+       0.1819550262406766
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.12122991203010702,
+      "gainPercent": 4.444898745281379,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.606164320713719,
+      "medianPlainKm": 2.727394232743826,
+      "n": 315,
+      "objectClustered95": [
+       0.12122991203010702,
+       0.12122991203010702
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 315,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -0.1122295049335564,
+       0.39763602070544035
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": 0.30948100393479416,
+      "gainPercent": 11.347131273481084,
+      "lowerBoundAboveZero": true,
+      "measured": true,
+      "medianCorrectedKm": 2.4179132288090317,
+      "medianPlainKm": 2.727394232743826,
+      "n": 315,
+      "objectClustered95": [
+       0.30948100393479416,
+       0.30948100393479416
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    },
+    "90": {
+     "horizonDays": 90,
+     "interceptOnly": {
+      "blockBootstrap95": [
+       -44.62370448695947,
+       -44.62333435920527
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -44.62362194790728,
+      "gainPercent": -5.08430276284482,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 922.2979861499916,
+      "medianPlainKm": 877.6743642020843,
+      "n": 260,
+      "objectClustered95": [
+       -44.62362194790728,
+       -44.62362194790728
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "learned": {
+      "blockBootstrap95": [
+       -59.686524335099634,
+       -22.226290731934643
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -42.23773726243064,
+      "gainPercent": -4.812461088666981,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 919.912101464515,
+      "medianPlainKm": 877.6743642020843,
+      "n": 260,
+      "objectClustered95": [
+       -42.23773726243064,
+       -42.23773726243064
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "linearSecondary": {
+      "blockBootstrap95": [
+       -3.7750624983414327,
+       0.9221178416424809
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -2.160472257493552,
+      "gainPercent": -0.24615875153852665,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 879.8348364595779,
+      "medianPlainKm": 877.6743642020843,
+      "n": 260,
+      "objectClustered95": [
+       -2.160472257493552,
+       -2.160472257493552
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     },
+     "n": 260,
+     "placebo180d": {
+      "blockBootstrap95": [
+       -49.47263941415398,
+       -5.926918349304287
+      ],
+      "blockBootstrapNote": "30-day blocks over origins. The WEAKER assumption: it treats blocks as exchangeable across objects and is printed only beside the clustered one.",
+      "gainKm": -20.511352873378655,
+      "gainPercent": -2.3370117335062006,
+      "lowerBoundAboveZero": false,
+      "measured": true,
+      "medianCorrectedKm": 898.185717075463,
+      "medianPlainKm": 877.6743642020843,
+      "n": 260,
+      "objectClustered95": [
+       -20.511352873378655,
+       -20.511352873378655
+      ],
+      "objectList": [
+       "sentinel-3b"
+      ],
+      "objects": 1
+     }
+    }
+   },
+   "manoeuvreNotices": 148,
+   "measured": true,
+   "origins": 315,
+   "truthProduct": "CNES/SSALTO POE SP3-c version 30 (POE-G), ITRF, TAI, 60 s",
+   "zeroDayFloorKm": 0.33
+  }
+ },
+ "population": {
+  "headline": [
+   "sentinel-3a",
+   "sentinel-3b"
+  ],
+  "heldOutByConstruction": [
+   "sentinel-3a",
+   "sentinel-3b"
+  ],
+  "note": "Sentinel-1A's split partition is `train`. It was not among the 1,998 objects the training extraction drew, so no element set of it entered any training batch -- but that is a fact about the draw, not a guarantee from the split. It is UNSEEN IN FACT AND NOT HELD OUT BY CONSTRUCTION and never enters a headline figure.",
+  "seenInPartitionNotInTraining": [
+   "sentinel-1a"
+  ]
+ },
+ "registration": "docs/t18-preregistration-20260922.md section 3.3",
+ "t20Bars": {
+  "note": "amendment 2 A2.3: a two-spacecraft T18 figure is not strictly comparable with a three-spacecraft T20 bar, so the bar is ALSO recomputed on Sentinel-3A and 3B alone from T20's committed perObject blocks. Neither replaces the other. At +60 d and +90 d there is NO T20 BAR AT ALL and the result is UNMEASURED, never zero.",
+  "published3Object": {
+   "14": {
+    "classical": 14.28,
+    "interceptOnly": 5.13
+   },
+   "30": {
+    "classical": 80.4,
+    "interceptOnly": 51.82
+   }
+  },
+  "recomputedPerObject": {
+   "arms": {
+    "A": {
+     "label": "classical corrected (the bar of amendment 1 A1.1)",
+     "perObject": {
+      "sentinel-1a": {
+       "14": {
+        "gainKm": 25.311659202130027,
+        "medianCorrectedKm": 11.189802680824027,
+        "medianPlainKm": 36.501461882954054,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": 113.48408772275538,
+        "medianCorrectedKm": 35.12036004661424,
+        "medianPlainKm": 148.6044477693696,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": 9.407025645675567,
+        "medianCorrectedKm": 3.9040503062406886,
+        "medianPlainKm": 13.311075951916255,
+        "nTest": 152
+       }
+      },
+      "sentinel-3a": {
+       "14": {
+        "gainKm": 2.242882407936527,
+        "medianCorrectedKm": 16.274750391903574,
+        "medianPlainKm": 18.5176327998401,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": 56.49681417594533,
+        "medianCorrectedKm": 41.975242805269545,
+        "medianPlainKm": 98.47205698121488,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": -2.0341390642846573,
+        "medianCorrectedKm": 6.720178802299227,
+        "medianPlainKm": 4.6860397380145695,
+        "nTest": 152
+       }
+      },
+      "sentinel-3b": {
+       "14": {
+        "gainKm": 4.502016012704022,
+        "medianCorrectedKm": 17.445065316292123,
+        "medianPlainKm": 21.947081328996145,
+        "nTest": 141
+       },
+       "30": {
+        "gainKm": 60.13826802331785,
+        "medianCorrectedKm": 41.55773624489686,
+        "medianPlainKm": 101.69600426821471,
+        "nTest": 141
+       },
+       "7": {
+        "gainKm": -2.7610713309737385,
+        "medianCorrectedKm": 7.803105049839971,
+        "medianPlainKm": 5.042033718866232,
+        "nTest": 141
+       }
+      }
+     },
+     "pooledThreeObject": {
+      "14": 14.284325358052058,
+      "30": 80.39917955826571,
+      "7": 1.4125360893109447
+     }
+    },
+    "A_interceptOnly": {
+     "label": "intercept-only (the line of amendment 1 A1.2)",
+     "perObject": {
+      "sentinel-1a": {
+       "14": {
+        "gainKm": 11.61937218110025,
+        "medianCorrectedKm": 24.882089701853804,
+        "medianPlainKm": 36.501461882954054,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": 28.928991078826215,
+        "medianCorrectedKm": 119.6754566905434,
+        "medianPlainKm": 148.6044477693696,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": 6.1521864578515855,
+        "medianCorrectedKm": 7.1588894940646695,
+        "medianPlainKm": 13.311075951916255,
+        "nTest": 152
+       }
+      },
+      "sentinel-3a": {
+       "14": {
+        "gainKm": -4.361975130894805,
+        "medianCorrectedKm": 22.879607930734906,
+        "medianPlainKm": 18.5176327998401,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": 55.682599026220274,
+        "medianCorrectedKm": 42.7894579549946,
+        "medianPlainKm": 98.47205698121488,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": -2.8077776179542813,
+        "medianCorrectedKm": 7.493817355968851,
+        "medianPlainKm": 4.6860397380145695,
+        "nTest": 152
+       }
+      },
+      "sentinel-3b": {
+       "14": {
+        "gainKm": -0.3459566108273684,
+        "medianCorrectedKm": 22.293037939823513,
+        "medianPlainKm": 21.947081328996145,
+        "nTest": 141
+       },
+       "30": {
+        "gainKm": 56.255477644694125,
+        "medianCorrectedKm": 45.44052662352058,
+        "medianPlainKm": 101.69600426821471,
+        "nTest": 141
+       },
+       "7": {
+        "gainKm": -3.1166274957202766,
+        "medianCorrectedKm": 8.158661214586509,
+        "medianPlainKm": 5.042033718866232,
+        "nTest": 141
+       }
+      }
+     },
+     "pooledThreeObject": {
+      "14": 5.1337140513063275,
+      "30": 51.81658269371371,
+      "7": -0.10696745610226532
+     }
+    },
+    "B": {
+     "label": "manoeuvre-free (T20's arm B; gate G-E2-manoeuvre-free)",
+     "perObject": {
+      "sentinel-3a": {
+       "14": {
+        "gainKm": -0.5034145531917629,
+        "medianCorrectedKm": 4.094471492974671,
+        "medianPlainKm": 3.5910569397829084,
+        "nTest": 35
+       },
+       "7": {
+        "gainKm": 0.7535549785305591,
+        "medianCorrectedKm": 1.9662920531703851,
+        "medianPlainKm": 2.719847031700944,
+        "nTest": 86
+       }
+      },
+      "sentinel-3b": {
+       "14": {
+        "gainKm": -2.680424744481443,
+        "medianCorrectedKm": 6.2850014984971665,
+        "medianPlainKm": 3.6045767540157234,
+        "nTest": 31
+       },
+       "7": {
+        "gainKm": 0.6003158541708813,
+        "medianCorrectedKm": 1.9660992583230947,
+        "medianPlainKm": 2.566415112493976,
+        "nTest": 79
+       }
+      }
+     },
+     "pooledThreeObject": {
+      "14": -1.4394524715523742,
+      "30": null,
+      "7": 0.6513591286462441
+     }
+    },
+    "B_interceptOnly": {
+     "label": "manoeuvre-free, intercept-only",
+     "perObject": {
+      "sentinel-3a": {
+       "14": {
+        "gainKm": -0.5056564134608541,
+        "medianCorrectedKm": 4.0967133532437625,
+        "medianPlainKm": 3.5910569397829084,
+        "nTest": 35
+       },
+       "7": {
+        "gainKm": 0.9762035344894815,
+        "medianCorrectedKm": 1.7436434972114627,
+        "medianPlainKm": 2.719847031700944,
+        "nTest": 86
+       }
+      },
+      "sentinel-3b": {
+       "14": {
+        "gainKm": -0.4340684005767983,
+        "medianCorrectedKm": 4.038645154592522,
+        "medianPlainKm": 3.6045767540157234,
+        "nTest": 31
+       },
+       "7": {
+        "gainKm": 0.29505271494758123,
+        "medianCorrectedKm": 2.271362397546395,
+        "medianPlainKm": 2.566415112493976,
+        "nTest": 79
+       }
+      }
+     },
+     "pooledThreeObject": {
+      "14": -0.4748117278494357,
+      "30": null,
+      "7": 0.6174966787648195
+     }
+    },
+    "P1": {
+     "label": "the 180-day placebo (T20's P1; gate G-E2-placebo)",
+     "perObject": {
+      "sentinel-1a": {
+       "14": {
+        "gainKm": 9.468680031215918,
+        "medianCorrectedKm": 27.032781851738136,
+        "medianPlainKm": 36.501461882954054,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": 22.802286807163668,
+        "medianCorrectedKm": 125.80216096220595,
+        "medianPlainKm": 148.6044477693696,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": 2.6394683638414485,
+        "medianCorrectedKm": 10.671607588074806,
+        "medianPlainKm": 13.311075951916255,
+        "nTest": 152
+       }
+      },
+      "sentinel-3a": {
+       "14": {
+        "gainKm": -2.221242876264789,
+        "medianCorrectedKm": 20.73887567610489,
+        "medianPlainKm": 18.5176327998401,
+        "nTest": 152
+       },
+       "30": {
+        "gainKm": -40.899282656300585,
+        "medianCorrectedKm": 139.37133963751546,
+        "medianPlainKm": 98.47205698121488,
+        "nTest": 152
+       },
+       "7": {
+        "gainKm": -1.9261896709318806,
+        "medianCorrectedKm": 6.61222940894645,
+        "medianPlainKm": 4.6860397380145695,
+        "nTest": 152
+       }
+      },
+      "sentinel-3b": {
+       "14": {
+        "gainKm": 1.9075941994223236,
+        "medianCorrectedKm": 20.03948712957382,
+        "medianPlainKm": 21.947081328996145,
+        "nTest": 141
+       },
+       "30": {
+        "gainKm": 57.07429801927837,
+        "medianCorrectedKm": 44.621706248936334,
+        "medianPlainKm": 101.69600426821471,
+        "nTest": 141
+       },
+       "7": {
+        "gainKm": -3.0864433503730044,
+        "medianCorrectedKm": 8.128477069239237,
+        "medianPlainKm": 5.042033718866232,
+        "nTest": 141
+       }
+      }
+     },
+     "pooledThreeObject": {
+      "14": 6.957851502428575,
+      "30": 15.465599138404059,
+      "7": -0.555177004269571
+     }
+    }
+   },
+   "measured": true,
+   "note": "the published pooled bars are three-object medians and cannot be re-pooled on two objects from this artefact, which carries no per-origin values. The per-object gains below are what a two-object headline is read against, and the three-object pooled bar is printed beside them.",
+   "source": "docs/t20-residual-forecast-results-20260922.json (c96d5ec)"
+  }
+ }
+}

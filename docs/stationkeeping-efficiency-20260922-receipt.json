@@ -1,0 +1,1503 @@
+{
+ "schema": 1,
+ "track": "T10b/T10c",
+ "registration": "docs/stationkeeping-efficiency-preregistration-20260922.md",
+ "registrationCommit": "f0f2b41",
+ "measuredAt": "2026-09-22T08:41:15.614772+00:00",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "gpuBrokerRequest": null,
+ "gpuNote": "No GPU arm was built; the CPU figures below are the entire cost of both studies and nothing is left to prove later.",
+ "seeds": {
+  "bootstrap": 20260922,
+  "monteCarlo": 20260922,
+  "bootstrapDraws": 10000,
+  "monteCarloDraws": 200
+ },
+ "inputs": {
+  "sha256": {
+   "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+   "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f",
+   "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3"
+  },
+  "archiveHashVerified": true,
+  "events": "/tmp/t2-repricing-20260921/events.jsonl.gz",
+  "archive": "/tmp/eol-study-20260920/archive.sqlite3",
+  "catalogue": "/home/sdegan/space-teaching-aid/data/propulsion-catalog-v1.json"
+ },
+ "sourceSha256": "c5d0b9702646557ff12d9cfa3cd8346e19c1e32f6f3a567169aa0e64fd94cad4",
+ "runtimeProofs": {
+  "eq3NodeIdentityWorstDeg": 3.7099898890849414e-11,
+  "t10aApogeeKickMps": 1837.4396175374025,
+  "t10aApogeeKickPublished": 1837.4396175374018,
+  "naturalDriftDegPerYearAtZeroInc": 0.8743342879211329,
+  "naturalDriftRaanDegOverOneDay": 89.99077908338423,
+  "naturalDriftSense": "retrograde about the Laplace pole (measured)",
+  "registeredAsWrittenDriftRaanDegOverOneDay": 270.0092209166158,
+  "naturalDriftRaanDegOverOneYear": 86.63199481446973,
+  "registeredWithJ2DriftDegPerYearAtZeroInc": 0.87333551638436,
+  "j2DoubleCountNote": "Registration eq. (10) double-counts the oblateness that eq. (9)'s 7.4 deg Laplace tilt already encodes; the primary path uses eq. (9) alone and every event publishes the registered sum beside it.",
+  "aMaxDegPerDay2T3": 0.0017005994391406812,
+  "aMaxDegPerDay2T8a": 0.0017006955627927864,
+  "cycleDaysAt0p0208Deg": 13.988732630750672,
+  "dvPerCycleMpsAt0p0208Deg": 0.06754463675771602,
+  "dvPerYearMpsAtAMax": 1.7636107020534197,
+  "manoeuvresPerYearAt0p0208Deg": 26.110299599056653,
+  "deadbandCancellationRelativeResidual": 1.2590341205488192e-16,
+  "deadbandCancellationProbedHalfWidthsDeg": [
+   0.0001,
+   0.001,
+   0.01,
+   0.1,
+   1.0
+  ],
+  "northSouthBudgetMpsPerYear": 45.61308250437111
+ },
+ "census": {
+  "catalogueObjects": 151,
+  "catalogueObjectsWithEvents": 151,
+  "objectsWithArchiveHistory": 151,
+  "nsEventsSeen": 1107,
+  "ewEventsSeen": 2556,
+  "geoObjectsForSegments": 136
+ },
+ "screenCounts": {
+  "N1-not-geo": 343,
+  "N3-inside-raising-window": 265,
+  "N4-above-odometer-ceiling": 4,
+  "N4-starts-before-launch": 1
+ },
+ "poleNoiseFloor": {
+  "sigmaPoleDeg": 0.0009683819956551464,
+  "sigmaPoleDegShortArcsUnder1p5d": 0.0007943808539560928,
+  "quietArcs": 948942,
+  "medianResidualDeg": 0.0007980307110831131,
+  "medianSpanDays": 0.5021035300925926,
+  "note": "MEASURED on quiet arcs. An upper bound on pole noise, not a sigma: it contains fit noise, the unmodelled periodic lunisolar terms and any sub-threshold burn (registration section 3.1)."
+ },
+ "driftDirectionControl": {
+  "meanRaanDeg": 55.38668020482539,
+  "predictedRaanDeg": 270.0,
+  "separationDeg": 145.38668020482538,
+  "concentration": 0.40261383810180507,
+  "n": 948942,
+  "pass": false,
+  "unregisteredResidualHeading": {
+   "pooledHeadingRaanDeg": 270.223893952181,
+   "concentration": 0.2374947414199843
+  },
+  "unregisteredProjectedRateRatio": 0.1154663834313607,
+  "unregisteredUnkeptSubsets": {
+   "inclinationAtLeast0.5deg": {
+    "n": 163621,
+    "pooledHeadingRaanDeg": 47.07858259682137,
+    "separationDeg": 137.07858259682138,
+    "concentration": 0.6334479965538357,
+    "projectedRateRatio": 0.9207191524249946,
+    "wouldPass": false
+   },
+   "inclinationAtLeast1deg": {
+    "n": 154767,
+    "pooledHeadingRaanDeg": 44.03624177599494,
+    "separationDeg": 134.03624177599494,
+    "concentration": 0.628177072376621,
+    "projectedRateRatio": 0.9162346568875963,
+    "wouldPass": false
+   },
+   "inclinationAtLeast2deg": {
+    "n": 139843,
+    "pooledHeadingRaanDeg": 38.92479686516282,
+    "separationDeg": 128.92479686516282,
+    "concentration": 0.6217830068831891,
+    "projectedRateRatio": 0.902742647970171,
+    "wouldPass": false
+   }
+  }
+ },
+ "laplaceCalibrationUnregistered": {
+  "n": 33,
+  "tiltDeg": {
+   "n": 33,
+   "min": 2.111730227811919,
+   "p25": 6.438083912167039,
+   "median": 6.747126521374816,
+   "p75": 7.479147001854086,
+   "p90": 8.032493739752365,
+   "max": 8.174634467608469,
+   "mean": 6.594465855882325
+  },
+  "circuitRateDegPerYear": {
+   "n": 33,
+   "min": -8.284481583393434,
+   "p25": -6.821120156402832,
+   "median": -6.401863674630127,
+   "p75": -6.214412148541192,
+   "p90": -6.166565557583735,
+   "max": -2.8135828667745257,
+   "mean": -6.314670902042876
+  },
+  "periodYears": {
+   "n": 33,
+   "min": 43.45474081584465,
+   "p25": 52.777255310782955,
+   "median": 56.23362481563609,
+   "p75": 57.92985585684215,
+   "p90": 58.37933615335622,
+   "max": 127.95073649730523,
+   "mean": 59.57510625179549
+  },
+  "poleSpeedDegPerYear": {
+   "n": 33,
+   "min": 0.21669888653352398,
+   "p25": 0.711386472813724,
+   "median": 0.7372991976588145,
+   "p75": 0.8333007860346252,
+   "p90": 0.9899036803356819,
+   "max": 1.0262236368959239,
+   "mean": 0.7331237100680759
+  },
+  "modelTiltDeg": 7.4,
+  "modelCircuitRateDegPerYear": -6.7924528301886795,
+  "modelPoleSpeedDegPerYear": 0.8748380144891058,
+  "registeredIntervalDegPerYear": [
+   0.75,
+   0.95
+  ],
+  "allRetrograde": true,
+  "perObject": [
+   {
+    "years": 21.473859739460543,
+    "incStartDeg": 3.0004,
+    "incEndDeg": 14.3709,
+    "circuitDeg": -143.28657352849,
+    "tiltDeg": 7.0651899808831065,
+    "circuitRateDegPerYear": -6.672604518561952,
+    "periodYears": 53.95194620010021,
+    "poleSpeedDegPerYear": 0.8207207688954965,
+    "samples": 7181,
+    "norad": 20315,
+    "name": "Intelsat 602"
+   },
+   {
+    "years": 20.898282941922073,
+    "incStartDeg": 3.0017,
+    "incEndDeg": 14.0761,
+    "circuitDeg": -139.3318916413588,
+    "tiltDeg": 6.77606939721136,
+    "circuitRateDegPerYear": -6.667145431448736,
+    "periodYears": 53.99612228374234,
+    "poleSpeedDegPerYear": 0.7866513441615921,
+    "samples": 7172,
+    "norad": 20523,
+    "name": "Intelsat 603"
+   },
+   {
+    "years": 17.746346770064896,
+    "incStartDeg": 3.0027,
+    "incEndDeg": 13.48,
+    "circuitDeg": -112.85254515370603,
+    "tiltDeg": 6.630440803427921,
+    "circuitRateDegPerYear": -6.359198691195942,
+    "periodYears": 56.61090610337521,
+    "poleSpeedDegPerYear": 0.7342642759016924,
+    "samples": 6438,
+    "norad": 21139,
+    "name": "Astra 1B"
+   },
+   {
+    "years": 20.21922384839151,
+    "incStartDeg": 3.0044,
+    "incEndDeg": 14.1494,
+    "circuitDeg": -133.26549950959753,
+    "tiltDeg": 6.890262915856333,
+    "circuitRateDegPerYear": -6.5910294336149375,
+    "periodYears": 54.61969236003748,
+    "poleSpeedDegPerYear": 0.790713434865886,
+    "samples": 6784,
+    "norad": 21222,
+    "name": "Anik E2"
+   },
+   {
+    "years": 18.80453160452633,
+    "incStartDeg": 3.003,
+    "incEndDeg": 13.6667,
+    "circuitDeg": -122.06169698159248,
+    "tiltDeg": 6.608983721542905,
+    "circuitRateDegPerYear": -6.491078828691044,
+    "periodYears": 55.46073457138953,
+    "poleSpeedDegPerYear": 0.7470771220854271,
+    "samples": 6723,
+    "norad": 21653,
+    "name": "Intelsat 605"
+   },
+   {
+    "years": 18.8615291724339,
+    "incStartDeg": 3.0013,
+    "incEndDeg": 13.4834,
+    "circuitDeg": -122.71058027408277,
+    "tiltDeg": 6.4245879972323845,
+    "circuitRateDegPerYear": -6.505865942906905,
+    "periodYears": 55.334678451604766,
+    "poleSpeedDegPerYear": 0.7279764004155802,
+    "samples": 6499,
+    "norad": 21765,
+    "name": "Intelsat 601"
+   },
+   {
+    "years": 17.04650766541182,
+    "incStartDeg": 3.0025,
+    "incEndDeg": 13.0573,
+    "circuitDeg": -108.06108979275406,
+    "tiltDeg": 6.445609970862966,
+    "circuitRateDegPerYear": -6.339192279953927,
+    "periodYears": 56.78956941224323,
+    "poleSpeedDegPerYear": 0.7116375982869463,
+    "samples": 6480,
+    "norad": 22087,
+    "name": "Optus B1"
+   },
+   {
+    "years": 16.787894466435976,
+    "incStartDeg": 3.0069,
+    "incEndDeg": 12.9815,
+    "circuitDeg": -105.32652130392997,
+    "tiltDeg": 6.438083912167039,
+    "circuitRateDegPerYear": -6.273956600960841,
+    "periodYears": 57.38005901170354,
+    "poleSpeedDegPerYear": 0.7034953330617905,
+    "samples": 6416,
+    "norad": 22653,
+    "name": "Astra 1C"
+   },
+   {
+    "years": 10.960622691300985,
+    "incStartDeg": 3.0033,
+    "incEndDeg": 11.0215,
+    "circuitDeg": -68.93636121667755,
+    "tiltDeg": 7.143374019181443,
+    "circuitRateDegPerYear": -6.289456644775267,
+    "periodYears": 57.23864879473438,
+    "poleSpeedDegPerYear": 0.7821106374707881,
+    "samples": 5740,
+    "norad": 22871,
+    "name": "Intelsat 701"
+   },
+   {
+    "years": 14.502452871606206,
+    "incStartDeg": 3.0011,
+    "incEndDeg": 12.276,
+    "circuitDeg": -89.64567822773037,
+    "tiltDeg": 6.608512245574831,
+    "circuitRateDegPerYear": -6.181414897285699,
+    "periodYears": 58.23909347325617,
+    "poleSpeedDegPerYear": 0.711386472813724,
+    "samples": 6055,
+    "norad": 22930,
+    "name": "DirecTV 1"
+   },
+   {
+    "years": 13.616504792728218,
+    "incStartDeg": 3.0016,
+    "incEndDeg": 11.8901,
+    "circuitDeg": -83.96287203222727,
+    "tiltDeg": 6.6489861062700975,
+    "circuitRateDegPerYear": -6.166257296591042,
+    "periodYears": 58.38225404558169,
+    "poleSpeedDegPerYear": 0.7139688025672214,
+    "samples": 5982,
+    "norad": 23305,
+    "name": "Intelsat 703 / NSS-703"
+   },
+   {
+    "years": 13.026294658117221,
+    "incStartDeg": 3.0056,
+    "incEndDeg": 11.6483,
+    "circuitDeg": -80.56183015602079,
+    "tiltDeg": 6.703212070558973,
+    "circuitRateDegPerYear": -6.184554569846107,
+    "periodYears": 58.20952761177723,
+    "poleSpeedDegPerYear": 0.7219008849266104,
+    "samples": 5660,
+    "norad": 23314,
+    "name": "Thaicom 2"
+   },
+   {
+    "years": 15.736708396963014,
+    "incStartDeg": 3.02,
+    "incEndDeg": 12.4345,
+    "circuitDeg": -97.79439184013714,
+    "tiltDeg": 6.298855947562185,
+    "circuitRateDegPerYear": -6.214412148541192,
+    "periodYears": 57.92985585684215,
+    "poleSpeedDegPerYear": 0.6818108990200956,
+    "samples": 6816,
+    "norad": 23331,
+    "name": "Astra 1D"
+   },
+   {
+    "years": 12.750463977773974,
+    "incStartDeg": 3.0041,
+    "incEndDeg": 11.7026,
+    "circuitDeg": -78.6422938912854,
+    "tiltDeg": 6.849117816194069,
+    "circuitRateDegPerYear": -6.167798601554505,
+    "periodYears": 58.36766458445435,
+    "poleSpeedDegPerYear": 0.735541820586118,
+    "samples": 5927,
+    "norad": 23686,
+    "name": "Astra 1E"
+   },
+   {
+    "years": 6.543105276288438,
+    "incStartDeg": 3.0002,
+    "incEndDeg": 8.8454,
+    "circuitDeg": -44.94728018364249,
+    "tiltDeg": 8.036076452085211,
+    "circuitRateDegPerYear": -6.869411126017941,
+    "periodYears": 52.40623881667201,
+    "poleSpeedDegPerYear": 0.9603203088629517,
+    "samples": 3891,
+    "norad": 23754,
+    "name": "EchoStar 1"
+   },
+   {
+    "years": 11.170964152945723,
+    "incStartDeg": 3.0032,
+    "incEndDeg": 11.2596,
+    "circuitDeg": -70.01667523109607,
+    "tiltDeg": 7.206505609911318,
+    "circuitRateDegPerYear": -6.267737884794219,
+    "periodYears": 57.43699028534271,
+    "poleSpeedDegPerYear": 0.7862619054614742,
+    "samples": 5828,
+    "norad": 25237,
+    "name": "Hot Bird 4"
+   },
+   {
+    "years": 13.251191083035465,
+    "incStartDeg": 3.0013,
+    "incEndDeg": 11.8275,
+    "circuitDeg": -81.864854965874,
+    "tiltDeg": 6.747126521374816,
+    "circuitRateDegPerYear": -6.17792426755355,
+    "periodYears": 58.271999527530554,
+    "poleSpeedDegPerYear": 0.7258294536329244,
+    "samples": 5643,
+    "norad": 25491,
+    "name": "Eutelsat W2"
+   },
+   {
+    "years": 9.860148243149036,
+    "incStartDeg": 3.0019,
+    "incEndDeg": 10.7206,
+    "circuitDeg": -63.12332486428388,
+    "tiltDeg": 7.479147001854086,
+    "circuitRateDegPerYear": -6.401863674630127,
+    "periodYears": 56.23362481563609,
+    "poleSpeedDegPerYear": 0.8333007860346252,
+    "samples": 5285,
+    "norad": 25495,
+    "name": "Hot Bird 5"
+   },
+   {
+    "years": 4.253440003232185,
+    "incStartDeg": 3.0026,
+    "incEndDeg": 6.982,
+    "circuitDeg": -30.61306548259702,
+    "tiltDeg": 8.0470139094465,
+    "circuitRateDegPerYear": -7.197248687964138,
+    "periodYears": 50.01911363741302,
+    "poleSpeedDegPerYear": 1.007511291222707,
+    "samples": 2712,
+    "norad": 26038,
+    "name": "Galaxy 11"
+   },
+   {
+    "years": 11.465750424683753,
+    "incStartDeg": 3.0051,
+    "incEndDeg": 11.5338,
+    "circuitDeg": -71.68622285409297,
+    "tiltDeg": 7.3668392196509815,
+    "circuitRateDegPerYear": -6.252205062807323,
+    "periodYears": 57.57968530839506,
+    "poleSpeedDegPerYear": 0.801667928478729,
+    "samples": 5789,
+    "norad": 26487,
+    "name": "Eutelsat W1"
+   },
+   {
+    "years": 5.891400225112176,
+    "incStartDeg": 3.0013,
+    "incEndDeg": 8.306,
+    "circuitDeg": -41.001778231209805,
+    "tiltDeg": 8.018162890420978,
+    "circuitRateDegPerYear": -6.959598170981349,
+    "periodYears": 51.72712434764573,
+    "poleSpeedDegPerYear": 0.9707735477277217,
+    "samples": 3972,
+    "norad": 26608,
+    "name": "Intelsat 1R (PAS-1R)"
+   },
+   {
+    "years": 6.857494897457348,
+    "incStartDeg": 3.0009,
+    "incEndDeg": 9.0632,
+    "circuitDeg": -46.77579666747589,
+    "tiltDeg": 8.017065263514743,
+    "circuitRateDegPerYear": -6.821120156402832,
+    "periodYears": 52.777255310782955,
+    "poleSpeedDegPerYear": 0.951328267079751,
+    "samples": 4223,
+    "norad": 26761,
+    "name": "XM-1 (Roll)"
+   },
+   {
+    "years": 6.517107214363576,
+    "incStartDeg": 3.0015,
+    "incEndDeg": 8.7894,
+    "circuitDeg": -44.758990558534364,
+    "tiltDeg": 7.993808528563918,
+    "circuitRateDegPerYear": -6.867923004225928,
+    "periodYears": 52.41759404968387,
+    "poleSpeedDegPerYear": 0.9550952002209152,
+    "samples": 3898,
+    "norad": 27499,
+    "name": "Hot Bird 6"
+   },
+   {
+    "years": 23.25145987768398,
+    "incStartDeg": 6.282,
+    "incEndDeg": 8.9843,
+    "circuitDeg": -150.4248721299053,
+    "tiltDeg": 4.199322387540418,
+    "circuitRateDegPerYear": -6.469480751799089,
+    "periodYears": 55.64588779399152,
+    "poleSpeedDegPerYear": 0.47373680029752196,
+    "samples": 9331,
+    "norad": 27825,
+    "name": "Thuraya 2"
+   },
+   {
+    "years": 18.703642955231068,
+    "incStartDeg": 3.0024,
+    "incEndDeg": 13.5465,
+    "circuitDeg": -121.55757582373782,
+    "tiltDeg": 6.513981936711712,
+    "circuitRateDegPerYear": -6.499139024130076,
+    "periodYears": 55.39195248222695,
+    "poleSpeedDegPerYear": 0.7372991976588145,
+    "samples": 6501,
+    "norad": 28218,
+    "name": "Superbird A2"
+   },
+   {
+    "years": 21.483095284147083,
+    "incStartDeg": 3.0006,
+    "incEndDeg": 5.2992,
+    "circuitDeg": -69.76949774285762,
+    "tiltDeg": 4.906354808202028,
+    "circuitRateDegPerYear": -3.2476464317663893,
+    "periodYears": 110.84950519204044,
+    "poleSpeedDegPerYear": 0.2777628515148032,
+    "samples": 5559,
+    "norad": 28628,
+    "name": "Inmarsat-4 F1"
+   },
+   {
+    "years": 4.91857524361802,
+    "incStartDeg": 3.0012,
+    "incEndDeg": 7.5986,
+    "circuitDeg": -34.96053422745962,
+    "tiltDeg": 8.174634467608469,
+    "circuitRateDegPerYear": -7.107857966150224,
+    "periodYears": 50.64817019620105,
+    "poleSpeedDegPerYear": 1.0106715404627766,
+    "samples": 2897,
+    "norad": 28638,
+    "name": "Apstar-6"
+   },
+   {
+    "years": 6.447666030528303,
+    "incStartDeg": 3.0002,
+    "incEndDeg": 5.2186,
+    "circuitDeg": -27.785509581289546,
+    "tiltDeg": 5.103658790192215,
+    "circuitRateDegPerYear": -4.309390320424658,
+    "periodYears": 83.5384992382228,
+    "poleSpeedDegPerYear": 0.3833543209907065,
+    "samples": 4741,
+    "norad": 28899,
+    "name": "Inmarsat-4 F2"
+   },
+   {
+    "years": 18.649006107562045,
+    "incStartDeg": 6.3948,
+    "incEndDeg": 6.1483,
+    "circuitDeg": -115.89987014810826,
+    "tiltDeg": 3.746008407423137,
+    "circuitRateDegPerYear": -6.2148014473067095,
+    "periodYears": 57.92622709708806,
+    "poleSpeedDegPerYear": 0.406035425171179,
+    "samples": 9687,
+    "norad": 32404,
+    "name": "Thuraya 3"
+   },
+   {
+    "years": 18.068081230416762,
+    "incStartDeg": 3.079,
+    "incEndDeg": 4.3855,
+    "circuitDeg": -50.836043785391,
+    "tiltDeg": 4.417228888820738,
+    "circuitRateDegPerYear": -2.8135828667745257,
+    "periodYears": 127.95073649730523,
+    "poleSpeedDegPerYear": 0.21669888653352398,
+    "samples": 9309,
+    "norad": 33278,
+    "name": "Inmarsat-4 F3"
+   },
+   {
+    "years": 3.0829410416508227,
+    "incStartDeg": 3.0044,
+    "incEndDeg": 5.9449,
+    "circuitDeg": -22.6093413697886,
+    "tiltDeg": 8.043953915566336,
+    "circuitRateDegPerYear": -7.3336924269177635,
+    "periodYears": 49.08850535899859,
+    "poleSpeedDegPerYear": 1.0262236368959239,
+    "samples": 1736,
+    "norad": 35812,
+    "name": "Palapa-D"
+   },
+   {
+    "years": 4.046169046442061,
+    "incStartDeg": 3.0004,
+    "incEndDeg": 6.7298,
+    "circuitDeg": -29.072003895403807,
+    "tiltDeg": 7.957467112891591,
+    "circuitRateDegPerYear": -7.185069027446554,
+    "periodYears": 50.10390277738746,
+    "poleSpeedDegPerYear": 0.9946862134876719,
+    "samples": 2313,
+    "norad": 41308,
+    "name": "Intelsat 29e"
+   },
+   {
+    "years": 6.557821339392096,
+    "incStartDeg": 6.6414,
+    "incEndDeg": 5.3981,
+    "circuitDeg": -54.328150113378285,
+    "tiltDeg": 2.111730227811919,
+    "circuitRateDegPerYear": -8.284481583393434,
+    "periodYears": 43.45474081584465,
+    "poleSpeedDegPerYear": 0.30526907545281307,
+    "samples": 4081,
+    "norad": 45245,
+    "name": "JCSAT-17"
+   }
+  ],
+  "note": "UNREGISTERED measurement on catalogue objects that have stopped north-south keeping. It is what fixed the sense of registration eq. (9) and it is the only direct calibration of the natural-motion model this programme has."
+ },
+ "t10b": {
+  "n": 738,
+  "objects": 66,
+  "etaBootstrap": {
+   "median": 0.8984067592559668,
+   "ci95": [
+    0.8727108245719671,
+    0.9247803714130178
+   ],
+   "nGroups": 66,
+   "nValues": 738
+  },
+  "etaQuantiles": {
+   "n": 738,
+   "min": 0.26380657782365435,
+   "p25": 0.7926372933347616,
+   "median": 0.8984067592559668,
+   "p75": 0.9646455991193079,
+   "p90": 0.9925529033183543,
+   "max": 0.9999916011021728,
+   "mean": 0.8559349397026188
+  },
+  "R3_etaShippedDenominatorQuantiles": {
+   "n": 738,
+   "min": 0.42754362648345756,
+   "p25": 0.9955732289429186,
+   "median": 1.0005463005217905,
+   "p75": 1.0035186433973275,
+   "p90": 1.0067910280049635,
+   "max": 1.0207310977154478,
+   "mean": 0.9984422660014906
+  },
+  "R2_etaNoNaturalSubtractionQuantiles": {
+   "n": 738,
+   "min": 0.26791677311907486,
+   "p25": 0.7930518335824215,
+   "median": 0.9000570742171314,
+   "p75": 0.9648551648957512,
+   "p90": 0.9922927241710959,
+   "max": 0.9999915783176994,
+   "mean": 0.8567833060184384
+  },
+  "nodeOffsetBootstrap": {
+   "median": 21.92160582559663,
+   "ci95": [
+    16.066296927981114,
+    30.24774037083144
+   ],
+   "nGroups": 62,
+   "nValues": 695
+  },
+  "nodeOffsetQuantiles": {
+   "n": 695,
+   "min": 0.02515356674251734,
+   "p25": 11.088029672687256,
+   "median": 21.92160582559663,
+   "p75": 43.94518783308041,
+   "p90": 63.63762796045715,
+   "max": 89.9517663564404,
+   "mean": 28.876529946386892
+  },
+  "uEffectiveQuantiles": {
+   "n": 695,
+   "min": 0.4847908178152108,
+   "p25": 45.87754389152662,
+   "median": 142.02542590704508,
+   "p75": 167.27484774629943,
+   "p90": 174.9146496390088,
+   "max": 179.97484643325748,
+   "mean": 108.63330444338517
+  },
+  "thetaNetQuantiles": {
+   "n": 738,
+   "min": 0.011321730249413119,
+   "p25": 0.03326404685059581,
+   "median": 0.040020118152896814,
+   "p75": 0.04736848505112073,
+   "p90": 0.055448009473681725,
+   "max": 6.852748696052868,
+   "mean": 0.050506830961165046
+  },
+  "diNetQuantiles": {
+   "n": 738,
+   "min": 0.010182362888434979,
+   "p25": 0.027130979373356033,
+   "median": 0.03455400177212058,
+   "p75": 0.039822045247599434,
+   "p90": 0.046943678415564564,
+   "max": 6.84246500934586,
+   "mean": 0.04421286586593031
+  },
+  "spanDaysQuantiles": {
+   "n": 738,
+   "min": 0.10148542824074074,
+   "p25": 0.21006690104166667,
+   "median": 0.2797472337962963,
+   "p75": 0.3574298177083333,
+   "p90": 0.43470248842592596,
+   "max": 0.7794471643518519,
+   "mean": 0.28527264746750475
+  },
+  "naturalFractionQuantiles": {
+   "n": 738,
+   "min": 0.00022943525146455252,
+   "p25": 0.012836289596554208,
+   "median": 0.017178819032293312,
+   "p75": 0.021956644259401727,
+   "p90": 0.025800451681840916,
+   "max": 0.030627443168107848,
+   "mean": 0.01731093898968213
+  },
+  "naturalPoleMotionDegQuantiles": {
+   "n": 738,
+   "min": 0.000240938557564139,
+   "p25": 0.0005033323010155265,
+   "median": 0.0006703884678086544,
+   "p75": 0.0008524529973239364,
+   "p90": 0.0010405091772648016,
+   "max": 0.0018909425018525672,
+   "mean": 0.000682983415393128
+  },
+  "shippedOverExactMinimum": {
+   "n": 738,
+   "min": 0.26882395602046344,
+   "p25": 0.7930802443666853,
+   "median": 0.900259789355419,
+   "p75": 0.9649963163959391,
+   "p90": 0.9918739135144008,
+   "max": 1.033536000759647,
+   "mean": 0.8573708197601904
+  },
+  "radialTermBoundMpsQuantiles": {
+   "n": 738,
+   "min": 0.041200136368637424,
+   "p25": 0.696247496895514,
+   "median": 1.0240057421778928,
+   "p75": 1.4513838192975759,
+   "p90": 1.7034204335056788,
+   "max": 10.012402188378307,
+   "mean": 1.0769733416098677
+  },
+  "signSplit": {
+   "inclinationLowered": 369,
+   "inclinationRaised": 369,
+   "medianEtaLowered": 0.9188339125720182,
+   "medianEtaRaised": 0.882917377846897
+  },
+  "registrationDefects_naturalModel": {
+   "medianEtaPrimaryLaplaceOnly": 0.8984067592559668,
+   "medianEtaRegisteredAsWritten": 0.8989042184792433,
+   "medianThetaNetPrimaryDeg": 0.040020118152896814,
+   "medianThetaNetRegisteredAsWrittenDeg": 0.03945805552584729,
+   "medianAbsoluteThetaDifferenceDeg": 0.0011128195813822836,
+   "maxAbsoluteThetaDifferenceDeg": 0.003607974003017489,
+   "note": "TWO defects in the registered natural-motion model. (1) eq. (10) double-counts the oblateness that eq. (9)'s 7.4 deg Laplace tilt already encodes -- found by the test suite before any data was read. (2) eq. (9) did not state the SENSE of the circuit and its unstated default is prograde, which is backwards -- found by the registered drift-direction control of \u00a73.3 and confirmed by the direct calibration on eleven retired satellites. The primary applies eq. (9) alone, retrograde; the registration as written travels beside every event as etaRegisteredAsWritten."
+  },
+  "R4_monteCarlo": {
+   "medianEta": 0.8989891984935301,
+   "relativeShift": 0.000648302377027585,
+   "draws": 200,
+   "sigmaIncDeg": 0.00017
+  },
+  "busFamilies": {
+   "A2100": {
+    "events": 105,
+    "objects": 8,
+    "medianEta": 0.9305765054242265,
+    "medianNodeOffsetDeg": 23.83890419653696,
+    "etaQuantiles": {
+     "n": 105,
+     "min": 0.3464128861471026,
+     "p25": 0.8685268875247634,
+     "median": 0.9305765054242265,
+     "p75": 0.9796810996940802,
+     "p90": 0.9969725447004534,
+     "max": 0.9998892754295492,
+     "mean": 0.9030987487909646
+    },
+    "medianPenaltyMpsPerYear": 3.402857870759306
+   },
+   "BSS-702": {
+    "events": 19,
+    "objects": 7,
+    "medianEta": 0.9547581686478147,
+    "medianNodeOffsetDeg": 13.919595928446327,
+    "etaQuantiles": {
+     "n": 19,
+     "min": 0.8402633331911055,
+     "p25": 0.9055073033744161,
+     "median": 0.9547581686478147,
+     "p75": 0.9804890220940652,
+     "p90": 0.9966175701375636,
+     "max": 0.9992620511042277,
+     "mean": 0.9408053260423795
+    },
+    "medianPenaltyMpsPerYear": 2.161405321138751
+   },
+   "EUROSTAR-2000": {
+    "events": 3,
+    "objects": 1
+   },
+   "EUROSTAR-3000": {
+    "events": 335,
+    "objects": 16,
+    "medianEta": 0.8611622742391403,
+    "medianNodeOffsetDeg": 32.3338969166204,
+    "etaQuantiles": {
+     "n": 335,
+     "min": 0.26380657782365435,
+     "p25": 0.7385568627225572,
+     "median": 0.8611622742391403,
+     "p75": 0.9358565353526742,
+     "p90": 0.983832602238074,
+     "max": 0.9999694445036865,
+     "mean": 0.814671891970662
+    },
+    "medianPenaltyMpsPerYear": 7.353801750598698
+   },
+   "GE ASTRO SPACE SERIES 5000": {
+    "events": 3,
+    "objects": 1
+   },
+   "HS-376": {
+    "events": 2,
+    "objects": 1
+   },
+   "HS-389": {
+    "events": 1,
+    "objects": 1
+   },
+   "HS-601": {
+    "events": 27,
+    "objects": 4
+   },
+   "LM 2100": {
+    "events": 11,
+    "objects": 1
+   },
+   "LOCKHEED MARTIN SERIES 7000": {
+    "events": 1,
+    "objects": 1
+   },
+   "SPACEBUS-3000": {
+    "events": 2,
+    "objects": 2
+   },
+   "SPACEBUS-4000": {
+    "events": 145,
+    "objects": 9,
+    "medianEta": 0.9498978817471353,
+    "medianNodeOffsetDeg": 11.088029672687256,
+    "etaQuantiles": {
+     "n": 145,
+     "min": 0.31907025818077295,
+     "p25": 0.8869005720520791,
+     "median": 0.9498978817471353,
+     "p75": 0.9835636072401287,
+     "p90": 0.9970560315953355,
+     "max": 0.9999916011021728,
+     "mean": 0.8999326893960442
+    },
+    "medianPenaltyMpsPerYear": 2.4058502470900702
+   },
+   "SSL-1300": {
+    "events": 84,
+    "objects": 14,
+    "medianEta": 0.8755398875478179,
+    "medianNodeOffsetDeg": 24.608230689914137,
+    "etaQuantiles": {
+     "n": 84,
+     "min": 0.5293344523745772,
+     "p25": 0.7611051370052972,
+     "median": 0.8755398875478179,
+     "p75": 0.9420861095549466,
+     "p90": 0.9890241788699737,
+     "max": 0.9995722954682658,
+     "mean": 0.85317538966404
+    },
+    "medianPenaltyMpsPerYear": 6.484009990321129
+   }
+  },
+  "operatorFamilies": {
+   "AMAZONAS": {
+    "events": 28,
+    "objects": 2
+   },
+   "AMC": {
+    "events": 38,
+    "objects": 3
+   },
+   "AMOS": {
+    "events": 1,
+    "objects": 1
+   },
+   "ANIK": {
+    "events": 4,
+    "objects": 2
+   },
+   "APSTAR": {
+    "events": 8,
+    "objects": 1
+   },
+   "ARABSAT": {
+    "events": 75,
+    "objects": 3
+   },
+   "ASIASAT": {
+    "events": 9,
+    "objects": 3
+   },
+   "ASTRA": {
+    "events": 181,
+    "objects": 9,
+    "medianEta": 0.8617855243115209,
+    "medianNodeOffsetDeg": 35.499091616447934,
+    "etaQuantiles": {
+     "n": 181,
+     "min": 0.26380657782365435,
+     "p25": 0.776756887339453,
+     "median": 0.8617855243115209,
+     "p75": 0.9300567624444789,
+     "p90": 0.9819058166542243,
+     "max": 0.9996015521757742,
+     "mean": 0.8211807926543372
+    },
+    "medianPenaltyMpsPerYear": 7.3154956831208775
+   },
+   "BSAT": {
+    "events": 79,
+    "objects": 5,
+    "medianEta": 0.9059066074226552,
+    "medianNodeOffsetDeg": 26.4289021951944,
+    "etaQuantiles": {
+     "n": 79,
+     "min": 0.5288989661399522,
+     "p25": 0.8144782310019499,
+     "median": 0.9059066074226552,
+     "p75": 0.9619048375350344,
+     "p90": 0.9947541094693398,
+     "max": 0.9998892754295492,
+     "mean": 0.8768301610459647
+    },
+    "medianPenaltyMpsPerYear": 4.73767344622557
+   },
+   "ECHOSTAR": {
+    "events": 1,
+    "objects": 1
+   },
+   "EUTELSAT": {
+    "events": 79,
+    "objects": 8,
+    "medianEta": 0.8796243723224346,
+    "medianNodeOffsetDeg": 19.247267270518535,
+    "etaQuantiles": {
+     "n": 79,
+     "min": 0.309525575014523,
+     "p25": 0.7986238136617547,
+     "median": 0.8796243723224346,
+     "p75": 0.9444615752668003,
+     "p90": 0.9766389885434291,
+     "max": 0.9947915093862194,
+     "mean": 0.8345113580331046
+    },
+    "medianPenaltyMpsPerYear": 6.2421001617717575
+   },
+   "GALAXY": {
+    "events": 1,
+    "objects": 1
+   },
+   "GOES": {
+    "events": 7,
+    "objects": 2
+   },
+   "HISPASAT": {
+    "events": 10,
+    "objects": 1
+   },
+   "HOT BIRD": {
+    "events": 4,
+    "objects": 2
+   },
+   "HOTBIRD": {
+    "events": 17,
+    "objects": 1
+   },
+   "INTELSAT": {
+    "events": 12,
+    "objects": 6,
+    "medianEta": 0.9484482891997902,
+    "medianNodeOffsetDeg": 29.3827039975572,
+    "etaQuantiles": {
+     "n": 12,
+     "min": 0.5293344523745772,
+     "p25": 0.8699326264515623,
+     "median": 0.9484482891997902,
+     "p75": 0.9866143400728958,
+     "p90": 0.9980768912688402,
+     "max": 0.9992620511042277,
+     "mean": 0.8978260247657586
+    },
+    "medianPenaltyMpsPerYear": 2.479241583065498
+   },
+   "JCSAT": {
+    "events": 2,
+    "objects": 1
+   },
+   "KOREASAT": {
+    "events": 12,
+    "objects": 2
+   },
+   "MEASAT": {
+    "events": 21,
+    "objects": 1
+   },
+   "NILESAT": {
+    "events": 22,
+    "objects": 1
+   },
+   "NIMIQ": {
+    "events": 6,
+    "objects": 1
+   },
+   "OPTUS": {
+    "events": 1,
+    "objects": 1
+   },
+   "PALAPA": {
+    "events": 5,
+    "objects": 1
+   },
+   "RASCOM": {
+    "events": 23,
+    "objects": 1
+   },
+   "SES": {
+    "events": 12,
+    "objects": 2
+   },
+   "STAR ONE": {
+    "events": 13,
+    "objects": 1
+   },
+   "THAICOM": {
+    "events": 2,
+    "objects": 1
+   },
+   "T\u00dcRKSAT": {
+    "events": 64,
+    "objects": 1
+   },
+   "XM": {
+    "events": 1,
+    "objects": 1
+   }
+  },
+  "acceptance": {
+   "B1_power": true,
+   "B2_excludesUnity": true,
+   "B3_aboveNoiseFloor": true,
+   "B4_notDriftDominated": true,
+   "verdict": "NO POPULATION CLAIM (drift-direction control failed)"
+  },
+  "annualPenalty": {
+   "northSouthBudgetMpsPerYear": 45.61308250437111,
+   "budgetBandMpsPerYear": [
+    40.24691923679176,
+    50.97921103560391
+   ],
+   "medianPenaltyMpsPerYear": 5.157998672874796,
+   "p90PenaltyMpsPerYear": 23.9182717956321
+  },
+  "R1_driftRateSensitivity": {
+   "low0.75": {
+    "driftDegPerYear": 0.75,
+    "precessionPeriodYr": 61.82188635723014,
+    "medianEta": 0.8989346071392874,
+    "n": 738
+   },
+   "high0.95": {
+    "driftDegPerYear": 0.95,
+    "precessionPeriodYr": 48.806752387286956,
+    "medianEta": 0.8977400388686891,
+    "n": 738
+   },
+   "measuredUnregistered": {
+    "driftDegPerYear": 0.7372991976588145,
+    "precessionPeriodYr": 62.886837413023585,
+    "medianEta": 0.8989260040583013,
+    "n": 738
+   }
+  },
+  "R1_maxRelativeShift": 0.000742114170901632,
+  "R1_driftModelSensitive": false,
+  "R5_spanSensitivity": {
+   "span3d": {
+    "n": 738,
+    "medianEta": 0.8984067592559668,
+    "medianNodeOffsetDeg": 21.92160582559663
+   },
+   "span21d": {
+    "n": 738,
+    "medianEta": 0.8984067592559668,
+    "medianNodeOffsetDeg": 21.92160582559663
+   }
+  },
+  "driftDirectionControl": {
+   "meanRaanDeg": 55.38668020482539,
+   "predictedRaanDeg": 270.0,
+   "separationDeg": 145.38668020482538,
+   "concentration": 0.40261383810180507,
+   "n": 948942,
+   "pass": false,
+   "unregisteredResidualHeading": {
+    "pooledHeadingRaanDeg": 270.223893952181,
+    "concentration": 0.2374947414199843
+   },
+   "unregisteredProjectedRateRatio": 0.1154663834313607,
+   "unregisteredUnkeptSubsets": {
+    "inclinationAtLeast0.5deg": {
+     "n": 163621,
+     "pooledHeadingRaanDeg": 47.07858259682137,
+     "separationDeg": 137.07858259682138,
+     "concentration": 0.6334479965538357,
+     "projectedRateRatio": 0.9207191524249946,
+     "wouldPass": false
+    },
+    "inclinationAtLeast1deg": {
+     "n": 154767,
+     "pooledHeadingRaanDeg": 44.03624177599494,
+     "separationDeg": 134.03624177599494,
+     "concentration": 0.628177072376621,
+     "projectedRateRatio": 0.9162346568875963,
+     "wouldPass": false
+    },
+    "inclinationAtLeast2deg": {
+     "n": 139843,
+     "pooledHeadingRaanDeg": 38.92479686516282,
+     "separationDeg": 128.92479686516282,
+     "concentration": 0.6217830068831891,
+     "projectedRateRatio": 0.902742647970171,
+     "wouldPass": false
+    }
+   }
+  }
+ },
+ "t10c": {
+  "segments": 834,
+  "usableSegments": 212,
+  "objects": 106,
+  "observedYearsQuantiles": {
+   "n": 212,
+   "min": 0.083051373773671,
+   "p25": 0.24544171173504956,
+   "median": 1.5093320378926154,
+   "p75": 8.101894256819277,
+   "p90": 13.63972831512219,
+   "max": 23.30236507725556,
+   "mean": 4.4272558574596275
+  },
+  "slotDegQuantiles": {
+   "n": 212,
+   "min": -148.0740575308197,
+   "p25": -72.12539196282715,
+   "median": 23.498304870534227,
+   "p75": 105.30931557537221,
+   "p90": 136.00702178384788,
+   "max": 178.09516520803538,
+   "mean": 16.847074777851713
+  },
+  "deadbandDegQuantiles": {
+   "n": 212,
+   "min": 0.014027537203186214,
+   "p25": 0.03619404066180696,
+   "median": 0.04524068826238714,
+   "p75": 0.05886703125984291,
+   "p90": 0.09173159871257064,
+   "max": 0.19428728521097954,
+   "mean": 0.053272025566866624
+  },
+  "deadbandP1P99Quantiles": {
+   "n": 212,
+   "min": 0.01640526122864685,
+   "p25": 0.04234991210182683,
+   "median": 0.05424800998960328,
+   "p75": 0.0777188656988175,
+   "p90": 0.11587967943926494,
+   "max": 0.2116046252116639,
+   "mean": 0.06476127693544079
+  },
+  "deadbandMinMaxQuantiles": {
+   "n": 212,
+   "min": 0.01668513302542607,
+   "p25": 0.0733192058094847,
+   "median": 0.11895774158157701,
+   "p75": 0.16072593031393367,
+   "p90": 0.18524187879841988,
+   "max": 0.25608830834833896,
+   "mean": 0.11639369478054859
+  },
+  "deadbandFromDriftQuantiles": {
+   "n": 212,
+   "min": 0.0058843737802064195,
+   "p25": 0.029906399660628,
+   "median": 0.051825231169201166,
+   "p75": 0.16075374861671726,
+   "p90": 2.9452130485220263,
+   "max": 169.26867354884183,
+   "mean": 2.330825748416867
+  },
+  "deadbandEstimatorRatio": {
+   "n": 212,
+   "min": 0.15873995454687637,
+   "p25": 0.7105880848416353,
+   "median": 1.1247173450645993,
+   "p75": 3.1230456607211443,
+   "p90": 40.476342173296686,
+   "max": 2311.3772526819366,
+   "mean": 35.54328007613948
+  },
+  "detectedDvPerYearQuantiles": {
+   "n": 212,
+   "min": 0.010031701596165482,
+   "p25": 0.19782701062215402,
+   "median": 0.521272107103297,
+   "p75": 3.330162086922093,
+   "p90": 11.760743948310342,
+   "max": 75.46282525473227,
+   "mean": 3.886181145407577
+  },
+  "theoryDvPerYearQuantiles": {
+   "n": 212,
+   "min": 0.005918204008063269,
+   "p25": 0.8763059161020257,
+   "median": 1.424697733097883,
+   "p75": 1.6990653916031309,
+   "p90": 1.7596225302192345,
+   "max": 1.7636069299688288,
+   "mean": 1.2246234420463586
+  },
+  "theoryCycleDaysQuantiles": {
+   "n": 212,
+   "min": 11.659975877893645,
+   "p25": 21.22541468015958,
+   "median": 24.030085161903912,
+   "p75": 32.87642449366337,
+   "p90": 54.748701463900254,
+   "max": 317.494433478457,
+   "mean": 34.59735398096158
+  },
+  "theoryManoeuvresPerYearQuantiles": {
+   "n": 212,
+   "min": 1.1504138702475342,
+   "p25": 11.109907214222968,
+   "median": 15.199764424949226,
+   "p75": 17.208147174696617,
+   "p90": 19.772818261107012,
+   "max": 31.325107686756365,
+   "mean": 14.196590619027031
+  },
+  "detectedEventsPerYearQuantiles": {
+   "n": 212,
+   "min": 0.057321200427947694,
+   "p25": 0.9129146076471688,
+   "median": 3.1990207154982153,
+   "p75": 6.948743846506777,
+   "p90": 11.461464768051528,
+   "max": 35.08218109347708,
+   "mean": 4.995926847004683
+  },
+  "M1_slopeDvOnDeadband": {
+   "slope": 9.349906530686184,
+   "ci95": [
+    1.954256895899399,
+    23.569870713590355
+   ],
+   "n": 212,
+   "nGroups": 106
+  },
+  "M1_sqrtAlternativeSlope": 5.761098329008842,
+  "M1b_slopeEventRateOnDeadband": {
+   "slope": -6.201692761999225,
+   "ci95": [
+    -29.97419118467228,
+    10.79291753256529
+   ],
+   "n": 212,
+   "nGroups": 106
+  },
+  "M2_slopeDvOnAcceleration": {
+   "slope": 0.05324596454495753,
+   "ci95": [
+    -0.35003560203107137,
+    0.3112873833413721
+   ],
+   "n": 212,
+   "nGroups": 106
+  },
+  "M2_theoreticalSlope": 1.7636107020534197,
+  "M3_recallRatio": {
+   "n": 212,
+   "min": 0.00888585763342351,
+   "p25": 0.16927523280998336,
+   "median": 0.4765088293387922,
+   "p75": 4.502871889406817,
+   "p90": 12.940137511213514,
+   "max": 69.9583683203407,
+   "mean": 4.903172455667779
+  },
+  "M4_freeDriftControl": {
+   "slope": 0.00965531620607842,
+   "ci95": [
+    0.0053988640306157475,
+    0.014485348439017654
+   ],
+   "n": 834,
+   "nGroups": 136
+  },
+  "M4b_freeDriftShortWindowUnregistered": {
+   "slope": 0.09711541200007881,
+   "ci95": [
+    0.06909854540880923,
+    0.1254407458297202
+   ],
+   "n": 718,
+   "nGroups": 136
+  },
+  "M4c_freeDriftAdjacentPairUnregistered": {
+   "slope": 0.8436604446993932,
+   "ci95": [
+    0.8039757277601285,
+    0.8849752955807899
+   ],
+   "n": 474,
+   "nGroups": 136
+  },
+  "M4c_pairAccelQuantiles": {
+   "n": 474,
+   "min": -0.001998552245157108,
+   "p25": -0.0007219160231736588,
+   "median": 5.30429592445735e-05,
+   "p75": 0.0009503079242404145,
+   "p90": 0.0015442866078908951,
+   "max": 0.0019642596768566878,
+   "mean": 7.774769597097519e-05
+  },
+  "M4c_predictedAccelQuantiles": {
+   "n": 474,
+   "min": -0.0017006583154167178,
+   "p25": -0.0011031264621769866,
+   "median": 3.793511581986335e-05,
+   "p75": 0.0012661191061540617,
+   "p90": 0.001669940428848986,
+   "max": 0.0017005382055297472,
+   "mean": 3.387568525148807e-05
+  },
+  "M4c_ratioQuantiles": {
+   "n": 439,
+   "min": -1.0886868130224696,
+   "p25": 0.6138166813914199,
+   "median": 0.8015560442435644,
+   "p75": 0.9961730831927795,
+   "p90": 1.1488239486187295,
+   "max": 2.1028265658576837,
+   "mean": 0.7782232647309579
+  },
+  "M4c_segments": 474,
+  "M4c_namedExamples": [
+   {
+    "norad": 28446,
+    "name": "AMC-15",
+    "slotDeg": -105.04951632453118,
+    "derivedAccelDegPerDay2": 8.876067223761689e-06,
+    "measuredAccelDegPerDay2": -5.8139928734923434e-06,
+    "pairs": 9678,
+    "observedYears": 20.580092259835983
+   },
+   {
+    "norad": 35696,
+    "name": "AsiaSat 5",
+    "slotDeg": 100.50357429770406,
+    "derivedAccelDegPerDay2": -0.0013180787533124715,
+    "measuredAccelDegPerDay2": -0.0016087784218958964,
+    "pairs": 9427,
+    "observedYears": 16.291757434912668
+   },
+   {
+    "norad": 37393,
+    "name": "Yahsat 1A (Al Yah 1)",
+    "slotDeg": 52.497550894489166,
+    "derivedAccelDegPerDay2": 0.0012068662471009716,
+    "measuredAccelDegPerDay2": 0.00126774797531933,
+    "pairs": 9233,
+    "observedYears": 14.660586504898978
+   },
+   {
+    "norad": 32729,
+    "name": "DirecTV-11 (AT&T T-11)",
+    "slotDeg": -99.18684077495926,
+    "derivedAccelDegPerDay2": -0.00033692071765121606,
+    "measuredAccelDegPerDay2": -0.000135495520612678,
+    "pairs": 9080,
+    "observedYears": 17.44555230061855
+   },
+   {
+    "norad": 37776,
+    "name": "BSAT-3c",
+    "slotDeg": 109.96033578589959,
+    "derivedAccelDegPerDay2": -0.001595276321511029,
+    "measuredAccelDegPerDay2": -0.0018666259882904256,
+    "pairs": 9057,
+    "observedYears": 14.375768006660836
+   },
+   {
+    "norad": 27825,
+    "name": "Thuraya 2",
+    "slotDeg": 44.01036578828479,
+    "derivedAccelDegPerDay2": 0.001504115840686309,
+    "measuredAccelDegPerDay2": 0.0016291281642708435,
+    "pairs": 9032,
+    "observedYears": 22.079399030693082
+   },
+   {
+    "norad": 28358,
+    "name": "Intelsat 10-02",
+    "slotDeg": -0.9817815037777393,
+    "derivedAccelDegPerDay2": 0.0007941382475765111,
+    "measuredAccelDegPerDay2": 0.0004825947421248675,
+    "pairs": 8917,
+    "observedYears": 16.984224297570158
+   },
+   {
+    "norad": 36131,
+    "name": "DirecTV-12 (AT&T T-12)",
+    "slotDeg": -102.74628164776678,
+    "derivedAccelDegPerDay2": -0.0001277361073280221,
+    "measuredAccelDegPerDay2": -7.687715079225436e-05,
+    "pairs": 8909,
+    "observedYears": 15.641580518702309
+   }
+  ],
+  "M4b_shortWindowAccelQuantiles": {
+   "n": 718,
+   "min": -0.03159622015705396,
+   "p25": -0.00016747745641914854,
+   "median": 1.1900853192603801e-05,
+   "p75": 0.0002500460492917525,
+   "p90": 0.0006047424321111975,
+   "max": 0.06456588283969096,
+   "mean": 7.046891150857895e-05
+  },
+  "M4b_windowDays": 10.0,
+  "quietArcDaysQuantiles": {
+   "n": 834,
+   "min": 0.08134153935185186,
+   "p25": 43.63208361689815,
+   "median": 73.82869921874999,
+   "p75": 260.8347230005787,
+   "p90": 1146.644427587963,
+   "max": 6203.4879246875,
+   "mean": 399.5225341045844
+  },
+  "M4_measuredAccelQuantiles": {
+   "n": 834,
+   "min": -0.013516565283226893,
+   "p25": -2.191424077994534e-05,
+   "median": -9.55521250493441e-08,
+   "p75": 3.954727077504276e-05,
+   "p90": 0.00013506343250106056,
+   "max": 0.008614373040422951,
+   "mean": -1.1725309108246776e-05
+  },
+  "M4_predictedAccelQuantiles": {
+   "n": 834,
+   "min": -0.0017006583154167178,
+   "p25": -0.0007246741554781486,
+   "median": 0.0006356705027840432,
+   "p75": 0.0015308569849252756,
+   "p90": 0.0016557016186452935,
+   "max": 0.0017005382055297472,
+   "mean": 0.0003230643789133801
+  },
+  "freeDriftSegments": 834,
+  "shippedOverExactMinimum": {
+   "n": 1976,
+   "min": 0.013937666225570548,
+   "p25": 0.6900489374816599,
+   "median": 0.8524128622615407,
+   "p75": 0.9379269608303897,
+   "p90": 0.9845298691910309,
+   "max": 8.679988617960305,
+   "mean": 0.7545084487412156
+  },
+  "acceptance": {
+   "C1_power": true,
+   "C2_decidable": false,
+   "C3_freeDriftControlPasses": false,
+   "C4_recallLimited": false,
+   "verdict": "INPUT NOT VERIFIED"
+  }
+ },
+ "wallSeconds": 565.2954134941101,
+ "cpuSeconds": 548.3015869999999,
+ "maxRssKb": 959528
+}

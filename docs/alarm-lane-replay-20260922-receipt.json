@@ -1,0 +1,1778 @@
+{
+ "artifact": "alarm-lane-replay-receipt",
+ "cadence": {
+  "citation": "docs/alarm-lane-design-20260922.md section 2.3; the confirmation rule is T8a 5.5",
+  "confirmableVisibilityDays": 1.5128473032407408,
+  "derivation": [
+   "the confirmation rule needs 2 consecutive element sets, so a confirmable change becomes visible about 1.513 d after it happens (2 x 0.756 d)",
+   "re-reading more often than one median spacing re-reads unchanged element sets, so the work floor is 0.756 d",
+   "against a median causal lead of 36.1 d, one work floor of latency is 2.1% of the warning budget",
+   "the host timer's own period of 2.0 h is 0.2% of the same budget and buys nothing, because the element sets it would re-read have not changed",
+   "so: fire on the host timer, and do work only when the object's newest element-set epoch has advanced"
+  ],
+  "hostTimerLatencyFractionOfLead": 0.0023084025854108953,
+  "inputs": {
+   "confirmingElementSets": 2,
+   "hostTimerPeriodHours": 2.0,
+   "medianCausalLeadDays": 36.1,
+   "medianEpochSpacingDays": 0.7564236516203704,
+   "medianEpochSpacingSource": "measured over all 1652 watched objects' element sets"
+  },
+  "latencyFractionOfLead": 0.020953563756796963,
+  "parameter": "--cadence-hours",
+  "replayTickDays": 0.7564236516203704,
+  "replayTickSource": "the derived work floor",
+  "rule": "fire on the host timer; do work only when the object's newest element-set epoch has advanced",
+  "workFloorDays": 0.7564236516203704,
+  "workFloorHours": 18.15416763888889
+ },
+ "caveats": [
+  "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+  "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach."
+ ],
+ "clock": {
+  "end": "2020-01-01T00:00:00+00:00",
+  "mode": "injected",
+  "start": "2010-01-01T00:00:00+00:00"
+ },
+ "curve": {
+  "checksum": "50c0fec902eb29773d472d98c849624b539715e393c367765f1638b4a7cabe64",
+  "monotonicityNote": "A TIGHTER SETTING IS NOT AUTOMATICALLY A MORE PRECISE ONE, and this table is the evidence. On the measured numbers the tighter named settings raise FEWER alerts than the loosest one and do NOT all reach a higher precision on the class that may already speak. A setting is worth what its own row says it is worth and nothing else; read the row.",
+  "recallNote": "TRUE RECALL IS NOT MEASURABLE. The outcome record is a lower bound and not a census: a transfer executed below the detector's floor is invisible, and a third of the catalogued events carry no confirmable initiating change. `recallProxy` is the fraction of the arrivals the loosest setting at the same horizon raises which this setting still raises. It is a ratio between two rows of this table and it is not the fraction of real approaches caught.",
+  "tradeoffNote": "A tighter setting is not a more certain alert. It is FEWER alerts, at a HIGHER MEASURED PRECISION, with LATER warning, and each of those three is measured and printed here.",
+  "version": "operating-points/20260922/1"
+ },
+ "design": "docs/alarm-lane-design-20260922.md",
+ "executionMode": "CPU, one core",
+ "host": "pc",
+ "inSampleNote": "The frozen partition was fitted on the whole 1959-2026 primary arm, which contains this window, so every precision figure measured here is IN SAMPLE for the taxonomy. The out-of-sample figure is the object-disjoint one in the results document and nothing here replaces it.",
+ "model": {
+  "checksum": "9cf012aab4e2501117c8a50c13c26b263b3ab7500eb8e80149319e67c66a0a13",
+  "version": "trigger-time-taxonomy/20260922/1"
+ },
+ "neverSay": [
+  "no purpose, motive or mission, for an object or for anyone operating it",
+  "no attribution of a purpose to an operator, a programme or a state",
+  "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+  "no miss distance, no range, no conjunction probability, no collision risk",
+  "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+  "no point forecast of dwell duration or of closest separation",
+  "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+  "no claim that an individual event was deliberate",
+  "no silent suppression of an alert that did not pan out",
+  "no quoting of the relocation-alert precision, or of the plane-change precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did",
+  "no sentence about an individual object's own history"
+ ],
+ "reservedDecisions": {
+  "framing": null,
+  "ledgerRetention": null,
+  "leoArmIsBuilt": null,
+  "notificationLeavesTheMachine": null,
+  "objectNamesAppear": null,
+  "publicationSurface": null,
+  "registryCodesEverAppear": null
+ },
+ "reservedNote": "design section 10: seven operator decisions, reserved and not taken. This lane implements none of them. It has no surface, sends nothing, reads no registry code, prints no object name, has no LEO arm, and deletes nothing.",
+ "runs": [
+  {
+   "alertsRaised": 272,
+   "announcementLagDays": {
+    "n": 71551,
+    "p25": 0.18614791087962962,
+    "p5": 0.03748003182870371,
+    "p50": 0.3776145543981482,
+    "p75": 0.568160300925926,
+    "p95": 0.7181432407407408
+   },
+   "announcementLagNote": "the delay between the announce time the detector defines and the tick on which the lane actually spoke. It is the cost of the derived cadence, measured rather than assumed. A setting with a persistence requirement above one adds its own wait on top, and that wait is in this number too.",
+   "assessments": 71551,
+   "audit": {
+    "alertsRaised": 272,
+    "artifact": "alarm-lane-ledger-audit",
+    "assessments": 71551,
+    "caveats": [
+     "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+     "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach."
+    ],
+    "classes": [
+     {
+      "arrivals": 47,
+      "assessed": 33327,
+      "belowEvidence": 601,
+      "class": 0,
+      "frozenFigure": {
+       "arrivalDaysP50": 29.385573842592592,
+       "label": "the figure this model earned on the offline population, printed beside the lane's own and never in place of it",
+       "n": 96962,
+       "positives": 73,
+       "precision": 0.0007528722592355768,
+       "wilson95": [
+        0.000598883695444341,
+        0.0009464177897629892
+       ]
+      },
+      "leadDays": {
+       "label": "measured on this lane",
+       "max": 172.2929482175926,
+       "min": 0.6537372800925926,
+       "n": 47,
+       "p25": 14.372904155092593,
+       "p50": 34.045574745370374,
+       "p75": 81.69091001157408
+      },
+      "none": 33280,
+      "notAssessable": 0,
+      "pending": 0,
+      "precisionLabel": "47/33327 = 0.141%",
+      "precisionOnThisLane": 0.001410267950910673,
+      "resolved": 33327,
+      "spoken": 0,
+      "underpowered": false,
+      "wilson95": [
+       0.0010607800230770827,
+       0.0018746831857223254
+      ],
+      "withdrawn": 0
+     },
+     {
+      "arrivals": 14,
+      "assessed": 272,
+      "belowEvidence": 0,
+      "class": 1,
+      "frozenFigure": {
+       "arrivalDaysP50": 22.075601348379628,
+       "label": "the figure this model earned on the offline population, printed beside the lane's own and never in place of it",
+       "n": 822,
+       "positives": 28,
+       "precision": 0.0340632603406326,
+       "wilson95": [
+        0.023670831265169022,
+        0.04879036353382792
+       ]
+      },
+      "leadDays": {
+       "label": "measured on this lane",
+       "max": 90.22037545138889,
+       "min": 0.377420775462963,
+       "n": 14,
+       "p25": 9.536013961226852,
+       "p50": 22.075601348379628,
+       "p75": 37.57135260416667
+      },
+      "none": 258,
+      "notAssessable": 0,
+      "pending": 0,
+      "precisionLabel": "14/272 = 5.147%",
+      "precisionOnThisLane": 0.051470588235294115,
+      "resolved": 272,
+      "spoken": 272,
+      "underpowered": false,
+      "wilson95": [
+       0.030904281744830713,
+       0.0845296307526815
+      ],
+      "withdrawn": 0
+     },
+     {
+      "arrivals": 0,
+      "assessed": 37952,
+      "belowEvidence": 0,
+      "class": "not-assessable",
+      "leadDays": {
+       "label": "NOT ASSESSABLE -- no resolved arrival yet; a labelled gap",
+       "max": null,
+       "min": null,
+       "n": 0,
+       "p25": null,
+       "p50": null,
+       "p75": null
+      },
+      "none": 0,
+      "notAssessable": 37952,
+      "pending": 0,
+      "precisionLabel": "NOT ASSESSABLE -- no assessment of this class has resolved yet; a labelled gap, not a zero",
+      "precisionOnThisLane": null,
+      "resolved": 0,
+      "spoken": 0,
+      "underpowered": true,
+      "wilson95": [
+       null,
+       null
+      ],
+      "withdrawn": 0
+     }
+    ],
+    "design": "docs/alarm-lane-design-20260922.md",
+    "modelChecksum": "9cf012aab4e2501117c8a50c13c26b263b3ab7500eb8e80149319e67c66a0a13",
+    "modelVersion": "trigger-time-taxonomy/20260922/1",
+    "neverSay": [
+     "no purpose, motive or mission, for an object or for anyone operating it",
+     "no attribution of a purpose to an operator, a programme or a state",
+     "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+     "no miss distance, no range, no conjunction probability, no collision risk",
+     "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+     "no point forecast of dwell duration or of closest separation",
+     "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+     "no claim that an individual event was deliberate",
+     "no silent suppression of an alert that did not pan out",
+     "no quoting of the relocation-alert precision, or of the plane-change precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did",
+     "no sentence about an individual object's own history"
+    ],
+    "reservedDecisions": {
+     "framing": null,
+     "ledgerRetention": null,
+     "leoArmIsBuilt": null,
+     "notificationLeavesTheMachine": null,
+     "objectNamesAppear": null,
+     "publicationSurface": null,
+     "registryCodesEverAppear": null
+    },
+    "reservedNote": "design section 10: seven operator decisions, reserved and not taken. This lane implements none of them. It has no surface, sends nothing, reads no registry code, prints no object name, has no LEO arm, and deletes nothing.",
+    "resolutions": 33599,
+    "schema": 1,
+    "setting": "everything"
+   },
+   "auditReport": "ALARM LANE -- LEDGER AUDIT\nmodel trigger-time-taxonomy/20260922/1 checksum 9cf012aab4e25011\noperating point: everything\n71551 assessments, 272 alerts raised, 33599 resolutions folded in\n\n  class 0: assessed 33327, spoken 0, resolved 33327 (arrivals 47, none 33280, not assessable 0, pending 0, withdrawn 0, below this setting's evidence 601)\n      precision on this lane: 47/33327 = 0.141%\n      Wilson 95%: 0.106% to 0.187%\n      lead days: n=47 p25 14.4 p50 34.0 p75 81.7\n      frozen figure (earned offline, beside and not instead): 73/96962 = 0.075%, median lead 29.4 d\n\n  class 1: assessed 272, spoken 272, resolved 272 (arrivals 14, none 258, not assessable 0, pending 0, withdrawn 0, below this setting's evidence 0)\n      precision on this lane: 14/272 = 5.147%\n      Wilson 95%: 3.090% to 8.453%\n      lead days: n=14 p25 9.5 p50 22.1 p75 37.6\n      frozen figure (earned offline, beside and not instead): 28/822 = 3.406%, median lead 22.1 d\n\n  class not-assessable: assessed 37952, spoken 0, resolved 0 (arrivals 0, none 0, not assessable 37952, pending 0, withdrawn 0, below this setting's evidence 0)\n      precision on this lane: NOT ASSESSABLE -- no assessment of this class has resolved yet; a labelled gap, not a zero\n      lead days: NOT ASSESSABLE -- no resolved arrival yet; a labelled gap\n\nCAVEATS, printed and not linked:\n  - Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.\n  - The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach.\n\nRESERVED OPERATOR DECISIONS, none taken: framing, ledgerRetention, leoArmIsBuilt, notificationLeavesTheMachine, objectNamesAppear, publicationSurface, registryCodesEverAppear",
+   "belowEvidence": 601,
+   "classes": [
+    {
+     "arrivalsInReplay": 47,
+     "assessedInReplay": 33327,
+     "belowEvidenceInReplay": 601,
+     "class": 0,
+     "curveFigure": {
+      "alerts": 95425,
+      "alertsPerYear2010s": 3292.3,
+      "arrivals": 73,
+      "label": "what the operating-point curve says this setting is worth over the whole archive; the replay's own numbers are beside it",
+      "leadDaysP50": 29.385573842592592,
+      "mayBeSpoken": false,
+      "precision": 0.0007649986900707361,
+      "wilson95": [
+       0.0006085305185274762,
+       0.0009616599661317501
+      ]
+     },
+     "frozenFigure": {
+      "arrivalDays": {
+       "n": 73,
+       "p25": 9.365750625,
+       "p5": 2.2174302916666666,
+       "p50": 29.385573842592592,
+       "p75": 62.87453702546296,
+       "p95": 158.79156971527775
+      },
+      "label": "earned on the whole 1959-2026 primary arm; printed beside the replay's own figure, never instead",
+      "n": 96962,
+      "positives": 73,
+      "precision": 0.0007528722592355768,
+      "wilson95": [
+       0.000598883695444341,
+       0.0009464177897629892
+      ]
+     },
+     "leadDaysFromActualAnnouncement": {
+      "n": 47,
+      "p25": 14.101043168402779,
+      "p5": 1.469787365740741,
+      "p50": 33.63663352430556,
+      "p75": 81.60533173611111,
+      "p95": 159.11271980150462
+     },
+     "leadDaysFromAnnounceRule": {
+      "n": 47,
+      "p25": 14.372904155092593,
+      "p5": 2.2138176180555558,
+      "p50": 34.045574745370374,
+      "p75": 81.69091001157408,
+      "p95": 159.42679376388887
+     },
+     "mayBeSpoken": false,
+     "precisionInReplay": 0.001410267950910673,
+     "spokenInReplay": 0,
+     "underpowered": false,
+     "wilson95": [
+      0.0010607800230770827,
+      0.0018746831857223254
+     ],
+     "withdrawnInReplay": 0
+    },
+    {
+     "arrivalsInReplay": 14,
+     "assessedInReplay": 272,
+     "belowEvidenceInReplay": 0,
+     "class": 1,
+     "curveFigure": {
+      "alerts": 821,
+      "alertsPerYear2010s": 27.7,
+      "arrivals": 28,
+      "label": "what the operating-point curve says this setting is worth over the whole archive; the replay's own numbers are beside it",
+      "leadDaysP50": 22.075601348379628,
+      "mayBeSpoken": true,
+      "precision": 0.0341047503045067,
+      "wilson95": [
+       0.023699789505964977,
+       0.048849253926274275
+      ]
+     },
+     "frozenFigure": {
+      "arrivalDays": {
+       "n": 28,
+       "p25": 6.950745677083333,
+       "p5": 0.7219483807870372,
+       "p50": 22.075601348379628,
+       "p75": 47.51146409722222,
+       "p95": 90.02235190856481
+      },
+      "label": "earned on the whole 1959-2026 primary arm; printed beside the replay's own figure, never instead",
+      "n": 822,
+      "positives": 28,
+      "precision": 0.0340632603406326,
+      "wilson95": [
+       0.023670831265169022,
+       0.04879036353382792
+      ]
+     },
+     "leadDaysFromActualAnnouncement": {
+      "n": 14,
+      "p25": 9.354497581018519,
+      "p5": 0.17313967158564816,
+      "p50": 21.740447028356485,
+      "p75": 37.26928629340278,
+      "p95": 62.275125100694424
+     },
+     "leadDaysFromAnnounceRule": {
+      "n": 14,
+      "p25": 9.536013961226852,
+      "p5": 0.8380909872685186,
+      "p50": 22.075601348379628,
+      "p75": 37.57135260416667,
+      "p95": 62.631310475694434
+     },
+     "mayBeSpoken": true,
+     "precisionInReplay": 0.051470588235294115,
+     "spokenInReplay": 272,
+     "underpowered": false,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ],
+     "withdrawnInReplay": 0
+    },
+    {
+     "arrivalsInReplay": 0,
+     "assessedInReplay": 37952,
+     "belowEvidenceInReplay": 0,
+     "class": "not-assessable",
+     "leadDaysFromActualAnnouncement": {
+      "label": "NOT ASSESSABLE -- no values; a labelled gap",
+      "n": 0
+     },
+     "leadDaysFromAnnounceRule": {
+      "label": "NOT ASSESSABLE -- no values; a labelled gap",
+      "n": 0
+     },
+     "precisionInReplay": 0.0,
+     "spokenInReplay": 0,
+     "underpowered": false,
+     "wilson95": [
+      0.0,
+      0.00010120863279666257
+     ],
+     "withdrawnInReplay": 0
+    }
+   ],
+   "committedSubset": "alarm-lane-replay-20260922-everything-ledger.jsonl",
+   "counters": {
+    "alertsRaised": 272,
+    "firings": 4828,
+    "notAssessable": 37952,
+    "objectsRead": 2509565,
+    "objectsSkippedNoAdvance": 1965442,
+    "triggersAssessed": 71551,
+    "withheldByClass": 33327
+   },
+   "fidelity": {
+    "classAgreements": 33595,
+    "classDisagreements": 0,
+    "explainedByLabelledGaps": 124,
+    "inBoth": 33595,
+    "labelledGapReasonKinds": [
+     "the usable look-back"
+    ],
+    "liveAssessments": 33599,
+    "note": "the offline table is the population every frozen figure was measured on. The only differences are the design's own labelled-gap rule, which the offline measurement does not apply, and triggers the offline table drops as not resolvable -- a property that needs 210 days of future element sets and that NO LIVE LANE CAN KNOW.",
+    "offlineTriggers": 33719,
+    "onlyLive": 4,
+    "onlyLiveBecauseNotResolvableOffline": 4,
+    "onlyOffline": 124,
+    "unexplainedOnlyLive": 0,
+    "unexplainedOnlyOffline": 0
+   },
+   "lastTickMs": 1577772601894.5,
+   "ledger": {
+    "path": "/home/sdegan/alarm-lane-work/alarm-lane-replay-everything-ledger.jsonl",
+    "rows": 105151,
+    "sha256": "c78462e9e38d51a105f7196e355f5ff9db355df6374cb3d4881c80cd4d24ea1e"
+   },
+   "notAssessable": 37952,
+   "observedArrivals": [
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 171.6662311574074,
+     "leadFromAnnounceRuleDays": 172.2929482175926,
+     "norad": 23571,
+     "spoken": false,
+     "tTrigIso": "2010-07-24T15:49:02.619000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 159.7085181539352,
+     "leadFromAnnounceRuleDays": 160.0620178125,
+     "norad": 36287,
+     "spoken": false,
+     "tTrigIso": "2011-07-05T14:49:45.202000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 23.389399988425925,
+     "leadFromAnnounceRuleDays": 23.573545300925925,
+     "norad": 37677,
+     "spoken": false,
+     "tTrigIso": "2011-08-02T18:35:52.547000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 54.20701012152778,
+     "leadFromAnnounceRuleDays": 54.700125844907404,
+     "norad": 24652,
+     "spoken": false,
+     "tTrigIso": "2011-12-30T23:51:43.200000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 16.826305561342593,
+     "leadFromAnnounceRuleDays": 17.32638605324074,
+     "norad": 32388,
+     "spoken": true,
+     "tTrigIso": "2012-01-09T01:32:41.486000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 13.879204357638889,
+     "leadFromAnnounceRuleDays": 13.990276006944445,
+     "norad": 24936,
+     "spoken": false,
+     "tTrigIso": "2012-02-07T04:44:21.983000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.63467199074074,
+     "leadFromAnnounceRuleDays": 14.755532303240741,
+     "norad": 38356,
+     "spoken": false,
+     "tTrigIso": "2012-07-21T20:16:02.009000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.54718674189814,
+     "leadFromAnnounceRuleDays": 157.62317724537036,
+     "norad": 35491,
+     "spoken": false,
+     "tTrigIso": "2012-12-25T11:15:24.485000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 2.495884670138889,
+     "leadFromAnnounceRuleDays": 2.972914085648148,
+     "norad": 37207,
+     "spoken": true,
+     "tTrigIso": "2013-01-31T21:20:24.898000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 2.1965725578703705,
+     "leadFromAnnounceRuleDays": 2.9296355439814814,
+     "norad": 27554,
+     "spoken": false,
+     "tTrigIso": "2013-11-05T05:46:29.882000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 54.300065520833336,
+     "leadFromAnnounceRuleDays": 55.043074930555555,
+     "norad": 37737,
+     "spoken": false,
+     "tTrigIso": "2013-11-09T18:27:40.532000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 13.791513211805556,
+     "leadFromAnnounceRuleDays": 13.942570752314815,
+     "norad": 39460,
+     "spoken": false,
+     "tTrigIso": "2014-01-19T17:00:20.499000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.72252364583332,
+     "leadFromAnnounceRuleDays": 157.73781967592592,
+     "norad": 39163,
+     "spoken": false,
+     "tTrigIso": "2014-02-03T05:11:35.360000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 57.86453635416667,
+     "leadFromAnnounceRuleDays": 58.37308030092593,
+     "norad": 39487,
+     "spoken": false,
+     "tTrigIso": "2014-04-17T20:27:49.083000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 1.0309917650462963,
+     "leadFromAnnounceRuleDays": 1.2,
+     "norad": 26853,
+     "spoken": false,
+     "tTrigIso": "2014-04-25T00:00:00+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 87.23713943287036,
+     "leadFromAnnounceRuleDays": 87.24623387731482,
+     "norad": 25785,
+     "spoken": false,
+     "tTrigIso": "2014-05-26T04:09:31.695000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 33.63663352430556,
+     "leadFromAnnounceRuleDays": 34.045574745370374,
+     "norad": 28622,
+     "spoken": false,
+     "tTrigIso": "2014-06-01T13:56:59.965000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 149.80712700810184,
+     "leadFromAnnounceRuleDays": 149.8410601736111,
+     "norad": 39522,
+     "spoken": false,
+     "tTrigIso": "2014-07-02T05:07:00.801000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 24.059730225694445,
+     "leadFromAnnounceRuleDays": 24.07294709490741,
+     "norad": 39616,
+     "spoken": false,
+     "tTrigIso": "2014-09-17T09:20:21.046000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 139.25225996527777,
+     "leadFromAnnounceRuleDays": 139.74722614583334,
+     "norad": 40271,
+     "spoken": false,
+     "tTrigIso": "2014-11-29T06:43:53.245000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.5249005324074,
+     "leadFromAnnounceRuleDays": 157.94460431712963,
+     "norad": 40333,
+     "spoken": false,
+     "tTrigIso": "2015-02-05T10:24:46.231000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 75.97352403935186,
+     "leadFromAnnounceRuleDays": 76.13558614583333,
+     "norad": 26495,
+     "spoken": false,
+     "tTrigIso": "2015-03-21T13:32:16.675000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.322881979166667,
+     "leadFromAnnounceRuleDays": 14.993684849537036,
+     "norad": 26719,
+     "spoken": false,
+     "tTrigIso": "2015-06-22T20:26:41.907000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 28.949868246527778,
+     "leadFromAnnounceRuleDays": 29.385573842592592,
+     "norad": 40663,
+     "spoken": false,
+     "tTrigIso": "2015-07-30T03:38:29.483000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 109.51366545717593,
+     "leadFromAnnounceRuleDays": 109.68609604166667,
+     "norad": 27499,
+     "spoken": false,
+     "tTrigIso": "2015-11-08T18:37:06.913000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 47.40415208333334,
+     "leadFromAnnounceRuleDays": 47.42339876157408,
+     "norad": 25371,
+     "spoken": true,
+     "tTrigIso": "2016-01-09T04:46:57.286000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 165.58296430555555,
+     "leadFromAnnounceRuleDays": 165.83052917824074,
+     "norad": 34713,
+     "spoken": false,
+     "tTrigIso": "2016-02-18T19:37:40.783000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 27.377260503472222,
+     "leadFromAnnounceRuleDays": 27.498633020833335,
+     "norad": 26369,
+     "spoken": true,
+     "tTrigIso": "2016-02-28T18:39:38.848000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 0.04327935763888889,
+     "leadFromAnnounceRuleDays": 0.6537372800925926,
+     "norad": 28946,
+     "spoken": false,
+     "tTrigIso": "2016-03-20T11:14:21.967000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 8.019144565972223,
+     "leadFromAnnounceRuleDays": 8.024993634259259,
+     "norad": 41029,
+     "spoken": true,
+     "tTrigIso": "2016-06-10T18:24:00.550000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 4.787515185185185,
+     "leadFromAnnounceRuleDays": 4.918089282407408,
+     "norad": 26494,
+     "spoken": false,
+     "tTrigIso": "2016-08-07T21:16:39.577000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 53.33538621527778,
+     "leadFromAnnounceRuleDays": 53.72610811342592,
+     "norad": 27399,
+     "spoken": false,
+     "tTrigIso": "2016-11-13T23:04:33.262000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 22.812482320601852,
+     "leadFromAnnounceRuleDays": 22.893427303240742,
+     "norad": 39498,
+     "spoken": false,
+     "tTrigIso": "2017-01-11T12:22:53.257000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 35.82549142939815,
+     "leadFromAnnounceRuleDays": 35.850249363425924,
+     "norad": 27298,
+     "spoken": false,
+     "tTrigIso": "2017-01-16T02:39:17.839000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": -0.19688006944444444,
+     "leadFromAnnounceRuleDays": 0.377420775462963,
+     "norad": 41903,
+     "spoken": true,
+     "tTrigIso": "2017-02-06T11:56:12.433000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 29.539884577546296,
+     "leadFromAnnounceRuleDays": 29.920003402777777,
+     "norad": 23613,
+     "spoken": false,
+     "tTrigIso": "2017-03-27T20:37:04.987000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 32.72566274305556,
+     "leadFromAnnounceRuleDays": 33.47700096064815,
+     "norad": 40147,
+     "spoken": false,
+     "tTrigIso": "2017-06-23T23:44:47.041000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 49.6989930787037,
+     "leadFromAnnounceRuleDays": 49.849744351851854,
+     "norad": 42814,
+     "spoken": false,
+     "tTrigIso": "2017-08-12T00:01:37.977000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 7.310320127314815,
+     "leadFromAnnounceRuleDays": 7.435012488425926,
+     "norad": 27403,
+     "spoken": false,
+     "tTrigIso": "2017-09-21T20:58:39.656000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 38.79794852430555,
+     "leadFromAnnounceRuleDays": 38.967529641203704,
+     "norad": 42747,
+     "spoken": true,
+     "tTrigIso": "2018-01-06T11:38:16.761000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 0.3723810706018518,
+     "leadFromAnnounceRuleDays": 1.0861441782407408,
+     "norad": 29644,
+     "spoken": true,
+     "tTrigIso": "2018-03-04T10:17:39.703000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.484115931712964,
+     "leadFromAnnounceRuleDays": 14.996624560185186,
+     "norad": 26824,
+     "spoken": false,
+     "tTrigIso": "2018-03-31T20:40:28.216000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 8.998287523148148,
+     "leadFromAnnounceRuleDays": 9.365750625,
+     "norad": 43228,
+     "spoken": false,
+     "tTrigIso": "2018-06-10T08:29:35.475000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 2.296642760416667,
+     "leadFromAnnounceRuleDays": 2.9781850925925926,
+     "norad": 43271,
+     "spoken": false,
+     "tTrigIso": "2018-06-13T19:43:34.047000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 68.95413633680556,
+     "leadFromAnnounceRuleDays": 69.12238517361111,
+     "norad": 43432,
+     "spoken": false,
+     "tTrigIso": "2018-07-17T14:49:42.759000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 125.01579189236111,
+     "leadFromAnnounceRuleDays": 125.74365090277777,
+     "norad": 41586,
+     "spoken": false,
+     "tTrigIso": "2018-09-27T16:11:52.776000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 1.158307997685185,
+     "leadFromAnnounceRuleDays": 1.9070385069444444,
+     "norad": 40146,
+     "spoken": false,
+     "tTrigIso": "2018-10-10T12:19:04.538000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 20.05361955439815,
+     "leadFromAnnounceRuleDays": 20.574520555555555,
+     "norad": 36590,
+     "spoken": true,
+     "tTrigIso": "2018-10-14T12:33:24.025000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 40.06144481481481,
+     "leadFromAnnounceRuleDays": 40.643285104166665,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2018-11-09T22:29:23.993000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 7.228781805555555,
+     "leadFromAnnounceRuleDays": 7.522425532407407,
+     "norad": 43633,
+     "spoken": false,
+     "tTrigIso": "2019-01-03T16:30:24.428000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 124.93250675347223,
+     "leadFromAnnounceRuleDays": 125.01186788194444,
+     "norad": 26590,
+     "spoken": false,
+     "tTrigIso": "2019-01-19T18:53:13.518000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 13.360556626157408,
+     "leadFromAnnounceRuleDays": 14.06907494212963,
+     "norad": 43488,
+     "spoken": true,
+     "tTrigIso": "2019-02-06T07:29:14.421000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 60.10195407986111,
+     "leadFromAnnounceRuleDays": 60.851226724537035,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2019-02-22T21:54:03.324000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 12.639352881944445,
+     "leadFromAnnounceRuleDays": 13.038979907407407,
+     "norad": 26369,
+     "spoken": false,
+     "tTrigIso": "2019-04-11T22:00:17.926000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 32.68329960069445,
+     "leadFromAnnounceRuleDays": 33.38282149305556,
+     "norad": 27632,
+     "spoken": true,
+     "tTrigIso": "2019-05-03T13:16:42.111000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 47.58988451967593,
+     "leadFromAnnounceRuleDays": 47.77566010416667,
+     "norad": 20253,
+     "spoken": true,
+     "tTrigIso": "2019-05-10T02:50:29.820000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 89.5477147511574,
+     "leadFromAnnounceRuleDays": 90.22037545138889,
+     "norad": 24812,
+     "spoken": true,
+     "tTrigIso": "2019-06-07T09:00:53.079000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 24.952706278935185,
+     "leadFromAnnounceRuleDays": 25.6647609375,
+     "norad": 41729,
+     "spoken": false,
+     "tTrigIso": "2019-06-08T20:22:39.448000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 62.727798506944445,
+     "leadFromAnnounceRuleDays": 62.87453702546296,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2019-07-08T21:57:27.899000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 23.427274502314816,
+     "leadFromAnnounceRuleDays": 23.576682141203705,
+     "norad": 44035,
+     "spoken": true,
+     "tTrigIso": "2019-08-02T02:49:37.399000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 31.26165798611111,
+     "leadFromAnnounceRuleDays": 31.96245920138889,
+     "norad": 27400,
+     "spoken": false,
+     "tTrigIso": "2019-10-29T19:47:07.407000+00:00"
+    }
+   ],
+   "setting": "everything",
+   "settingPoint": {
+    "leadHorizonDays": 180.0,
+    "minDriftChangeDegPerDay": 0.01,
+    "minSlotsReached": 0,
+    "persistenceSweeps": 1
+   },
+   "settingTradeoff": "A tighter setting is not a more certain alert. It is FEWER alerts, at a HIGHER MEASURED PRECISION, with LATER warning, and each of those three is measured and printed here.",
+   "ticks": 4828,
+   "withdrawn": 0
+  },
+  {
+   "alertsRaised": 132,
+   "announcementLagDays": {
+    "n": 71551,
+    "p25": 0.1865816087962963,
+    "p5": 0.03752302372685185,
+    "p50": 0.37836254050925927,
+    "p75": 0.5694538252314815,
+    "p95": 0.7198347077546297
+   },
+   "announcementLagNote": "the delay between the announce time the detector defines and the tick on which the lane actually spoke. It is the cost of the derived cadence, measured rather than assumed. A setting with a persistence requirement above one adds its own wait on top, and that wait is in this number too.",
+   "assessments": 71551,
+   "audit": {
+    "alertsRaised": 132,
+    "artifact": "alarm-lane-ledger-audit",
+    "assessments": 71551,
+    "caveats": [
+     "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+     "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach."
+    ],
+    "classes": [
+     {
+      "arrivals": 47,
+      "assessed": 33327,
+      "belowEvidence": 33308,
+      "class": 0,
+      "frozenFigure": {
+       "arrivalDaysP50": 29.385573842592592,
+       "label": "the figure this model earned on the offline population, printed beside the lane's own and never in place of it",
+       "n": 96962,
+       "positives": 73,
+       "precision": 0.0007528722592355768,
+       "wilson95": [
+        0.000598883695444341,
+        0.0009464177897629892
+       ]
+      },
+      "leadDays": {
+       "label": "measured on this lane",
+       "max": 172.2929482175926,
+       "min": 0.6537372800925926,
+       "n": 47,
+       "p25": 14.372904155092593,
+       "p50": 34.045574745370374,
+       "p75": 81.69091001157408
+      },
+      "none": 33268,
+      "notAssessable": 12,
+      "pending": 0,
+      "precisionLabel": "47/33315 = 0.141%",
+      "precisionOnThisLane": 0.0014107759267597178,
+      "resolved": 33315,
+      "spoken": 7,
+      "underpowered": false,
+      "wilson95": [
+       0.0010611621714504667,
+       0.0018753582637398743
+      ],
+      "withdrawn": 12
+     },
+     {
+      "arrivals": 14,
+      "assessed": 272,
+      "belowEvidence": 123,
+      "class": 1,
+      "frozenFigure": {
+       "arrivalDaysP50": 22.075601348379628,
+       "label": "the figure this model earned on the offline population, printed beside the lane's own and never in place of it",
+       "n": 822,
+       "positives": 28,
+       "precision": 0.0340632603406326,
+       "wilson95": [
+        0.023670831265169022,
+        0.04879036353382792
+       ]
+      },
+      "leadDays": {
+       "label": "measured on this lane",
+       "max": 90.22037545138889,
+       "min": 0.377420775462963,
+       "n": 14,
+       "p25": 9.536013961226852,
+       "p50": 22.075601348379628,
+       "p75": 37.57135260416667
+      },
+      "none": 234,
+      "notAssessable": 24,
+      "pending": 0,
+      "precisionLabel": "14/248 = 5.645%",
+      "precisionOnThisLane": 0.056451612903225805,
+      "resolved": 248,
+      "spoken": 125,
+      "underpowered": false,
+      "wilson95": [
+       0.03392139725118435,
+       0.09251314204111138
+      ],
+      "withdrawn": 24
+     },
+     {
+      "arrivals": 0,
+      "assessed": 37952,
+      "belowEvidence": 0,
+      "class": "not-assessable",
+      "leadDays": {
+       "label": "NOT ASSESSABLE -- no resolved arrival yet; a labelled gap",
+       "max": null,
+       "min": null,
+       "n": 0,
+       "p25": null,
+       "p50": null,
+       "p75": null
+      },
+      "none": 0,
+      "notAssessable": 37952,
+      "pending": 0,
+      "precisionLabel": "NOT ASSESSABLE -- no assessment of this class has resolved yet; a labelled gap, not a zero",
+      "precisionOnThisLane": null,
+      "resolved": 0,
+      "spoken": 0,
+      "underpowered": true,
+      "wilson95": [
+       null,
+       null
+      ],
+      "withdrawn": 0
+     }
+    ],
+    "design": "docs/alarm-lane-design-20260922.md",
+    "modelChecksum": "9cf012aab4e2501117c8a50c13c26b263b3ab7500eb8e80149319e67c66a0a13",
+    "modelVersion": "trigger-time-taxonomy/20260922/1",
+    "neverSay": [
+     "no purpose, motive or mission, for an object or for anyone operating it",
+     "no attribution of a purpose to an operator, a programme or a state",
+     "no per-nation narrative, no country grouping, no registry-code aggregate; a registry code is metadata, no detector branch reads one, and whether one ever appears on a surface is a reserved decision",
+     "no miss distance, no range, no conjunction probability, no collision risk",
+     "no velocity-change figure, no consumable-remaining figure, no mass and no remaining-life estimate for any object",
+     "no point forecast of dwell duration or of closest separation",
+     "no 'first', no 'at catalogue scale', no 'validated' before the corresponding gate has run",
+     "no claim that an individual event was deliberate",
+     "no silent suppression of an alert that did not pan out",
+     "no quoting of the relocation-alert precision, or of the plane-change precision, as the precision of a trigger-time alert: both are measured on populations defined by what the object subsequently did",
+     "no sentence about an individual object's own history"
+    ],
+    "reservedDecisions": {
+     "framing": null,
+     "ledgerRetention": null,
+     "leoArmIsBuilt": null,
+     "notificationLeavesTheMachine": null,
+     "objectNamesAppear": null,
+     "publicationSurface": null,
+     "registryCodesEverAppear": null
+    },
+    "reservedNote": "design section 10: seven operator decisions, reserved and not taken. This lane implements none of them. It has no surface, sends nothing, reads no registry code, prints no object name, has no LEO arm, and deletes nothing.",
+    "resolutions": 33563,
+    "schema": 1,
+    "setting": "high-confidence"
+   },
+   "auditReport": "ALARM LANE -- LEDGER AUDIT\nmodel trigger-time-taxonomy/20260922/1 checksum 9cf012aab4e25011\noperating point: high-confidence\n71551 assessments, 132 alerts raised, 33563 resolutions folded in\n\n  class 0: assessed 33327, spoken 7, resolved 33315 (arrivals 47, none 33268, not assessable 12, pending 0, withdrawn 12, below this setting's evidence 33308)\n      precision on this lane: 47/33315 = 0.141%\n      Wilson 95%: 0.106% to 0.188%\n      lead days: n=47 p25 14.4 p50 34.0 p75 81.7\n      frozen figure (earned offline, beside and not instead): 73/96962 = 0.075%, median lead 29.4 d\n\n  class 1: assessed 272, spoken 125, resolved 248 (arrivals 14, none 234, not assessable 24, pending 0, withdrawn 24, below this setting's evidence 123)\n      precision on this lane: 14/248 = 5.645%\n      Wilson 95%: 3.392% to 9.251%\n      lead days: n=14 p25 9.5 p50 22.1 p75 37.6\n      frozen figure (earned offline, beside and not instead): 28/822 = 3.406%, median lead 22.1 d\n\n  class not-assessable: assessed 37952, spoken 0, resolved 0 (arrivals 0, none 0, not assessable 37952, pending 0, withdrawn 0, below this setting's evidence 0)\n      precision on this lane: NOT ASSESSABLE -- no assessment of this class has resolved yet; a labelled gap, not a zero\n      lead days: NOT ASSESSABLE -- no resolved arrival yet; a labelled gap\n\nCAVEATS, printed and not linked:\n  - Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.\n  - The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach.\n\nRESERVED OPERATOR DECISIONS, none taken: framing, ledgerRetention, leoArmIsBuilt, notificationLeavesTheMachine, objectNamesAppear, publicationSurface, registryCodesEverAppear",
+   "belowEvidence": 33431,
+   "classes": [
+    {
+     "arrivalsInReplay": 47,
+     "assessedInReplay": 33327,
+     "belowEvidenceInReplay": 33308,
+     "class": 0,
+     "curveFigure": {
+      "alerts": 53,
+      "alertsPerYear2010s": 0.7,
+      "arrivals": 1,
+      "label": "what the operating-point curve says this setting is worth over the whole archive; the replay's own numbers are beside it",
+      "leadDaysP50": 124.9872272511574,
+      "mayBeSpoken": true,
+      "precision": 0.018867924528301886,
+      "wilson95": [
+       0.0033384533882637665,
+       0.09942912052501235
+      ]
+     },
+     "frozenFigure": {
+      "arrivalDays": {
+       "n": 73,
+       "p25": 9.365750625,
+       "p5": 2.2174302916666666,
+       "p50": 29.385573842592592,
+       "p75": 62.87453702546296,
+       "p95": 158.79156971527775
+      },
+      "label": "earned on the whole 1959-2026 primary arm; printed beside the replay's own figure, never instead",
+      "n": 96962,
+      "positives": 73,
+      "precision": 0.0007528722592355768,
+      "wilson95": [
+       0.000598883695444341,
+       0.0009464177897629892
+      ]
+     },
+     "leadDaysFromActualAnnouncement": {
+      "n": 47,
+      "p25": 14.101043168402779,
+      "p5": 1.469787365740741,
+      "p50": 33.63663352430556,
+      "p75": 81.60533173611111,
+      "p95": 159.11271980150462
+     },
+     "leadDaysFromAnnounceRule": {
+      "n": 47,
+      "p25": 14.372904155092593,
+      "p5": 2.2138176180555558,
+      "p50": 34.045574745370374,
+      "p75": 81.69091001157408,
+      "p95": 159.42679376388887
+     },
+     "mayBeSpoken": true,
+     "precisionInReplay": 0.001410267950910673,
+     "spokenInReplay": 7,
+     "underpowered": false,
+     "wilson95": [
+      0.0010607800230770827,
+      0.0018746831857223254
+     ],
+     "withdrawnInReplay": 12
+    },
+    {
+     "arrivalsInReplay": 14,
+     "assessedInReplay": 272,
+     "belowEvidenceInReplay": 123,
+     "class": 1,
+     "curveFigure": {
+      "alerts": 373,
+      "alertsPerYear2010s": 12.7,
+      "arrivals": 10,
+      "label": "what the operating-point curve says this setting is worth over the whole archive; the replay's own numbers are beside it",
+      "leadDaysP50": 39.646686475694445,
+      "mayBeSpoken": true,
+      "precision": 0.02680965147453083,
+      "wilson95": [
+       0.014626406943454136,
+       0.04864014258988208
+      ]
+     },
+     "frozenFigure": {
+      "arrivalDays": {
+       "n": 28,
+       "p25": 6.950745677083333,
+       "p5": 0.7219483807870372,
+       "p50": 22.075601348379628,
+       "p75": 47.51146409722222,
+       "p95": 90.02235190856481
+      },
+      "label": "earned on the whole 1959-2026 primary arm; printed beside the replay's own figure, never instead",
+      "n": 822,
+      "positives": 28,
+      "precision": 0.0340632603406326,
+      "wilson95": [
+       0.023670831265169022,
+       0.04879036353382792
+      ]
+     },
+     "leadDaysFromActualAnnouncement": {
+      "n": 14,
+      "p25": 8.78717984230324,
+      "p5": 0.17313967158564816,
+      "p50": 21.362235202546298,
+      "p75": 37.08018038049768,
+      "p95": 61.51870144907406
+     },
+     "leadDaysFromAnnounceRule": {
+      "n": 14,
+      "p25": 9.536013961226852,
+      "p5": 0.8380909872685186,
+      "p50": 22.075601348379628,
+      "p75": 37.57135260416667,
+      "p95": 62.631310475694434
+     },
+     "mayBeSpoken": true,
+     "precisionInReplay": 0.051470588235294115,
+     "spokenInReplay": 125,
+     "underpowered": false,
+     "wilson95": [
+      0.030904281744830713,
+      0.0845296307526815
+     ],
+     "withdrawnInReplay": 24
+    },
+    {
+     "arrivalsInReplay": 0,
+     "assessedInReplay": 37952,
+     "belowEvidenceInReplay": 0,
+     "class": "not-assessable",
+     "leadDaysFromActualAnnouncement": {
+      "label": "NOT ASSESSABLE -- no values; a labelled gap",
+      "n": 0
+     },
+     "leadDaysFromAnnounceRule": {
+      "label": "NOT ASSESSABLE -- no values; a labelled gap",
+      "n": 0
+     },
+     "precisionInReplay": 0.0,
+     "spokenInReplay": 0,
+     "underpowered": false,
+     "wilson95": [
+      0.0,
+      0.00010120863279666257
+     ],
+     "withdrawnInReplay": 0
+    }
+   ],
+   "committedSubset": "alarm-lane-replay-20260922-high-confidence-ledger.jsonl",
+   "counters": {
+    "alertsRaised": 132,
+    "firings": 4828,
+    "notAssessable": 37952,
+    "objectsRead": 2509565,
+    "objectsSkippedNoAdvance": 1965442,
+    "triggersAssessed": 71551,
+    "withheldByClass": 33467
+   },
+   "fidelity": {
+    "classAgreements": 33595,
+    "classDisagreements": 0,
+    "explainedByLabelledGaps": 124,
+    "inBoth": 33595,
+    "labelledGapReasonKinds": [
+     "the usable look-back"
+    ],
+    "liveAssessments": 33599,
+    "note": "the offline table is the population every frozen figure was measured on. The only differences are the design's own labelled-gap rule, which the offline measurement does not apply, and triggers the offline table drops as not resolvable -- a property that needs 210 days of future element sets and that NO LIVE LANE CAN KNOW.",
+    "offlineTriggers": 33719,
+    "onlyLive": 4,
+    "onlyLiveBecauseNotResolvableOffline": 4,
+    "onlyOffline": 124,
+    "unexplainedOnlyLive": 0,
+    "unexplainedOnlyOffline": 0
+   },
+   "lastTickMs": 1577772601894.5,
+   "ledger": {
+    "path": "/home/sdegan/alarm-lane-work/alarm-lane-replay-high-confidence-ledger.jsonl",
+    "rows": 105115,
+    "sha256": "14fae6bf500c8bc248c34ee0e08696805b17b8ce335e352c4afd33379750545b"
+   },
+   "notAssessable": 37952,
+   "observedArrivals": [
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 171.6662311574074,
+     "leadFromAnnounceRuleDays": 172.2929482175926,
+     "norad": 23571,
+     "spoken": false,
+     "tTrigIso": "2010-07-24T15:49:02.619000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 159.7085181539352,
+     "leadFromAnnounceRuleDays": 160.0620178125,
+     "norad": 36287,
+     "spoken": false,
+     "tTrigIso": "2011-07-05T14:49:45.202000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 23.389399988425925,
+     "leadFromAnnounceRuleDays": 23.573545300925925,
+     "norad": 37677,
+     "spoken": false,
+     "tTrigIso": "2011-08-02T18:35:52.547000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 54.20701012152778,
+     "leadFromAnnounceRuleDays": 54.700125844907404,
+     "norad": 24652,
+     "spoken": false,
+     "tTrigIso": "2011-12-30T23:51:43.200000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 16.826305561342593,
+     "leadFromAnnounceRuleDays": 17.32638605324074,
+     "norad": 32388,
+     "spoken": false,
+     "tTrigIso": "2012-01-09T01:32:41.486000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 13.879204357638889,
+     "leadFromAnnounceRuleDays": 13.990276006944445,
+     "norad": 24936,
+     "spoken": false,
+     "tTrigIso": "2012-02-07T04:44:21.983000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.63467199074074,
+     "leadFromAnnounceRuleDays": 14.755532303240741,
+     "norad": 38356,
+     "spoken": false,
+     "tTrigIso": "2012-07-21T20:16:02.009000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.54718674189814,
+     "leadFromAnnounceRuleDays": 157.62317724537036,
+     "norad": 35491,
+     "spoken": false,
+     "tTrigIso": "2012-12-25T11:15:24.485000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 2.495884670138889,
+     "leadFromAnnounceRuleDays": 2.972914085648148,
+     "norad": 37207,
+     "spoken": false,
+     "tTrigIso": "2013-01-31T21:20:24.898000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 2.1965725578703705,
+     "leadFromAnnounceRuleDays": 2.9296355439814814,
+     "norad": 27554,
+     "spoken": false,
+     "tTrigIso": "2013-11-05T05:46:29.882000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 54.300065520833336,
+     "leadFromAnnounceRuleDays": 55.043074930555555,
+     "norad": 37737,
+     "spoken": false,
+     "tTrigIso": "2013-11-09T18:27:40.532000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 13.791513211805556,
+     "leadFromAnnounceRuleDays": 13.942570752314815,
+     "norad": 39460,
+     "spoken": false,
+     "tTrigIso": "2014-01-19T17:00:20.499000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.72252364583332,
+     "leadFromAnnounceRuleDays": 157.73781967592592,
+     "norad": 39163,
+     "spoken": false,
+     "tTrigIso": "2014-02-03T05:11:35.360000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 57.86453635416667,
+     "leadFromAnnounceRuleDays": 58.37308030092593,
+     "norad": 39487,
+     "spoken": false,
+     "tTrigIso": "2014-04-17T20:27:49.083000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 1.0309917650462963,
+     "leadFromAnnounceRuleDays": 1.2,
+     "norad": 26853,
+     "spoken": false,
+     "tTrigIso": "2014-04-25T00:00:00+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 87.23713943287036,
+     "leadFromAnnounceRuleDays": 87.24623387731482,
+     "norad": 25785,
+     "spoken": false,
+     "tTrigIso": "2014-05-26T04:09:31.695000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 33.63663352430556,
+     "leadFromAnnounceRuleDays": 34.045574745370374,
+     "norad": 28622,
+     "spoken": false,
+     "tTrigIso": "2014-06-01T13:56:59.965000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 149.80712700810184,
+     "leadFromAnnounceRuleDays": 149.8410601736111,
+     "norad": 39522,
+     "spoken": false,
+     "tTrigIso": "2014-07-02T05:07:00.801000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 24.059730225694445,
+     "leadFromAnnounceRuleDays": 24.07294709490741,
+     "norad": 39616,
+     "spoken": false,
+     "tTrigIso": "2014-09-17T09:20:21.046000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 139.25225996527777,
+     "leadFromAnnounceRuleDays": 139.74722614583334,
+     "norad": 40271,
+     "spoken": false,
+     "tTrigIso": "2014-11-29T06:43:53.245000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 157.5249005324074,
+     "leadFromAnnounceRuleDays": 157.94460431712963,
+     "norad": 40333,
+     "spoken": false,
+     "tTrigIso": "2015-02-05T10:24:46.231000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 75.97352403935186,
+     "leadFromAnnounceRuleDays": 76.13558614583333,
+     "norad": 26495,
+     "spoken": false,
+     "tTrigIso": "2015-03-21T13:32:16.675000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.322881979166667,
+     "leadFromAnnounceRuleDays": 14.993684849537036,
+     "norad": 26719,
+     "spoken": false,
+     "tTrigIso": "2015-06-22T20:26:41.907000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 28.949868246527778,
+     "leadFromAnnounceRuleDays": 29.385573842592592,
+     "norad": 40663,
+     "spoken": false,
+     "tTrigIso": "2015-07-30T03:38:29.483000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 109.51366545717593,
+     "leadFromAnnounceRuleDays": 109.68609604166667,
+     "norad": 27499,
+     "spoken": false,
+     "tTrigIso": "2015-11-08T18:37:06.913000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 46.64772843171296,
+     "leadFromAnnounceRuleDays": 47.42339876157408,
+     "norad": 25371,
+     "spoken": true,
+     "tTrigIso": "2016-01-09T04:46:57.286000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 165.58296430555555,
+     "leadFromAnnounceRuleDays": 165.83052917824074,
+     "norad": 34713,
+     "spoken": false,
+     "tTrigIso": "2016-02-18T19:37:40.783000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 27.377260503472222,
+     "leadFromAnnounceRuleDays": 27.498633020833335,
+     "norad": 26369,
+     "spoken": false,
+     "tTrigIso": "2016-02-28T18:39:38.848000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 0.04327935763888889,
+     "leadFromAnnounceRuleDays": 0.6537372800925926,
+     "norad": 28946,
+     "spoken": false,
+     "tTrigIso": "2016-03-20T11:14:21.967000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 7.262720914351852,
+     "leadFromAnnounceRuleDays": 8.024993634259259,
+     "norad": 41029,
+     "spoken": true,
+     "tTrigIso": "2016-06-10T18:24:00.550000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 4.787515185185185,
+     "leadFromAnnounceRuleDays": 4.918089282407408,
+     "norad": 26494,
+     "spoken": false,
+     "tTrigIso": "2016-08-07T21:16:39.577000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 53.33538621527778,
+     "leadFromAnnounceRuleDays": 53.72610811342592,
+     "norad": 27399,
+     "spoken": false,
+     "tTrigIso": "2016-11-13T23:04:33.262000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 22.812482320601852,
+     "leadFromAnnounceRuleDays": 22.893427303240742,
+     "norad": 39498,
+     "spoken": false,
+     "tTrigIso": "2017-01-11T12:22:53.257000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 35.82549142939815,
+     "leadFromAnnounceRuleDays": 35.850249363425924,
+     "norad": 27298,
+     "spoken": false,
+     "tTrigIso": "2017-01-16T02:39:17.839000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": -0.19688006944444444,
+     "leadFromAnnounceRuleDays": 0.377420775462963,
+     "norad": 41903,
+     "spoken": false,
+     "tTrigIso": "2017-02-06T11:56:12.433000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 29.539884577546296,
+     "leadFromAnnounceRuleDays": 29.920003402777777,
+     "norad": 23613,
+     "spoken": false,
+     "tTrigIso": "2017-03-27T20:37:04.987000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 32.72566274305556,
+     "leadFromAnnounceRuleDays": 33.47700096064815,
+     "norad": 40147,
+     "spoken": false,
+     "tTrigIso": "2017-06-23T23:44:47.041000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 49.6989930787037,
+     "leadFromAnnounceRuleDays": 49.849744351851854,
+     "norad": 42814,
+     "spoken": false,
+     "tTrigIso": "2017-08-12T00:01:37.977000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 7.310320127314815,
+     "leadFromAnnounceRuleDays": 7.435012488425926,
+     "norad": 27403,
+     "spoken": false,
+     "tTrigIso": "2017-09-21T20:58:39.656000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 38.79794852430555,
+     "leadFromAnnounceRuleDays": 38.967529641203704,
+     "norad": 42747,
+     "spoken": false,
+     "tTrigIso": "2018-01-06T11:38:16.761000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 0.3723810706018518,
+     "leadFromAnnounceRuleDays": 1.0861441782407408,
+     "norad": 29644,
+     "spoken": false,
+     "tTrigIso": "2018-03-04T10:17:39.703000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 14.484115931712964,
+     "leadFromAnnounceRuleDays": 14.996624560185186,
+     "norad": 26824,
+     "spoken": false,
+     "tTrigIso": "2018-03-31T20:40:28.216000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 8.998287523148148,
+     "leadFromAnnounceRuleDays": 9.365750625,
+     "norad": 43228,
+     "spoken": false,
+     "tTrigIso": "2018-06-10T08:29:35.475000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 2.296642760416667,
+     "leadFromAnnounceRuleDays": 2.9781850925925926,
+     "norad": 43271,
+     "spoken": false,
+     "tTrigIso": "2018-06-13T19:43:34.047000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 68.95413633680556,
+     "leadFromAnnounceRuleDays": 69.12238517361111,
+     "norad": 43432,
+     "spoken": false,
+     "tTrigIso": "2018-07-17T14:49:42.759000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 124.25936824074074,
+     "leadFromAnnounceRuleDays": 125.74365090277777,
+     "norad": 41586,
+     "spoken": true,
+     "tTrigIso": "2018-09-27T16:11:52.776000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 1.158307997685185,
+     "leadFromAnnounceRuleDays": 1.9070385069444444,
+     "norad": 40146,
+     "spoken": false,
+     "tTrigIso": "2018-10-10T12:19:04.538000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 20.05361955439815,
+     "leadFromAnnounceRuleDays": 20.574520555555555,
+     "norad": 36590,
+     "spoken": false,
+     "tTrigIso": "2018-10-14T12:33:24.025000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 40.06144481481481,
+     "leadFromAnnounceRuleDays": 40.643285104166665,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2018-11-09T22:29:23.993000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 7.228781805555555,
+     "leadFromAnnounceRuleDays": 7.522425532407407,
+     "norad": 43633,
+     "spoken": false,
+     "tTrigIso": "2019-01-03T16:30:24.428000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 124.93250675347223,
+     "leadFromAnnounceRuleDays": 125.01186788194444,
+     "norad": 26590,
+     "spoken": false,
+     "tTrigIso": "2019-01-19T18:53:13.518000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 13.360556626157408,
+     "leadFromAnnounceRuleDays": 14.06907494212963,
+     "norad": 43488,
+     "spoken": false,
+     "tTrigIso": "2019-02-06T07:29:14.421000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 60.10195407986111,
+     "leadFromAnnounceRuleDays": 60.851226724537035,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2019-02-22T21:54:03.324000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 12.639352881944445,
+     "leadFromAnnounceRuleDays": 13.038979907407407,
+     "norad": 26369,
+     "spoken": false,
+     "tTrigIso": "2019-04-11T22:00:17.926000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 31.926875949074073,
+     "leadFromAnnounceRuleDays": 33.38282149305556,
+     "norad": 27632,
+     "spoken": true,
+     "tTrigIso": "2019-05-03T13:16:42.111000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 46.83346086805555,
+     "leadFromAnnounceRuleDays": 47.77566010416667,
+     "norad": 20253,
+     "spoken": true,
+     "tTrigIso": "2019-05-10T02:50:29.820000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 88.79129109953703,
+     "leadFromAnnounceRuleDays": 90.22037545138889,
+     "norad": 24812,
+     "spoken": true,
+     "tTrigIso": "2019-06-07T09:00:53.079000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 24.952706278935185,
+     "leadFromAnnounceRuleDays": 25.6647609375,
+     "norad": 41729,
+     "spoken": false,
+     "tTrigIso": "2019-06-08T20:22:39.448000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 62.727798506944445,
+     "leadFromAnnounceRuleDays": 62.87453702546296,
+     "norad": 40258,
+     "spoken": false,
+     "tTrigIso": "2019-07-08T21:57:27.899000+00:00"
+    },
+    {
+     "class": 1,
+     "leadFromActualAnnouncementDays": 22.670850850694446,
+     "leadFromAnnounceRuleDays": 23.576682141203705,
+     "norad": 44035,
+     "spoken": true,
+     "tTrigIso": "2019-08-02T02:49:37.399000+00:00"
+    },
+    {
+     "class": 0,
+     "leadFromActualAnnouncementDays": 31.26165798611111,
+     "leadFromAnnounceRuleDays": 31.96245920138889,
+     "norad": 27400,
+     "spoken": false,
+     "tTrigIso": "2019-10-29T19:47:07.407000+00:00"
+    }
+   ],
+   "setting": "high-confidence",
+   "settingPoint": {
+    "leadHorizonDays": 180.0,
+    "minDriftChangeDegPerDay": 1.0,
+    "minSlotsReached": 5,
+    "persistenceSweeps": 2
+   },
+   "settingTradeoff": "A tighter setting is not a more certain alert. It is FEWER alerts, at a HIGHER MEASURED PRECISION, with LATER warning, and each of those three is measured and printed here.",
+   "ticks": 4828,
+   "withdrawn": 36
+  }
+ ],
+ "schema": 1,
+ "settingsExercised": [
+  "everything",
+  "high-confidence"
+ ],
+ "status": "SYNTHETIC EXERCISE. Nothing is deployed, nothing is scheduled, no timer or cron entry exists, nothing is on any site surface, and no alert left this machine.",
+ "wallSeconds": 1716.9534406661987,
+ "window": {
+  "end": "2020-01-01T00:00:00+00:00",
+  "start": "2010-01-01T00:00:00+00:00",
+  "tickDays": 0.7564236516203704,
+  "warmStart": true
+ },
+ "windowRule": "the decade with the most confirmed drift changes, per docs/trigger-alarm-results-20260922.md section 3.1 (the 2010s, 71,661 of 226,422 flag chains). Chosen on ALERT VOLUME, which is outcome-blind, and fixed before any figure in this replay existed."
+}

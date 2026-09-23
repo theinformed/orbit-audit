@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "measuredAt": "2026-09-22T03:02:00.841228+00:00",
+  "registration": "docs/proximity-preregistration-20260922.md",
+  "host": "bigmem-PC",
+  "executionMode": "cpu",
+  "archive": {
+    "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+    "bytes": 13890236416,
+    "mtimeMs": 1790040142459,
+    "monthRollupSpan": [
+      "1959-01",
+      "2026-09",
+      183352638
+    ]
+  },
+  "extract": {
+    "rowsScanned": 217007154,
+    "rowsKept": 11626494,
+    "objectsKept": 1768,
+    "wallSeconds": 293.49314546585083
+  },
+  "population": {
+    "classifiedObjects": 1613,
+    "active": 1308,
+    "passive": 305,
+    "stationedSegments": 24685,
+    "gridDays": 22642
+  },
+  "calibration": {
+    "sigma_n_deg_per_day": 0.0006038533519066339,
+    "sigma_n_samples": 3740056,
+    "gateA_bar_deg_per_day": 0.0003333333333333333,
+    "crossValidationBias_deg_per_day": -0.0073941536095725015,
+    "crossValidationScatter_deg_per_day": 0.0034863964056268083,
+    "crossValidationSegments": 2639,
+    "d_floor_30d": 0.020000000000000004,
+    "burnThreshold_deg_per_day": 0.01
+  },
+  "screen": {
+    "pairsSeen": 951764,
+    "pairsExact": 770056,
+    "radiusDeg": 0.75,
+    "minDays": 5.6000000000000005
+  },
+  "arms": {
+    "primary": {
+      "X": 0.1,
+      "D": 30.0,
+      "rawEvents": 493,
+      "activeResolved": 487,
+      "passiveResolved": 5,
+      "ambiguous": 1,
+      "librationZone": 72,
+      "librationHalfWidthDeg": 3.7540251131488005,
+      "standingColocations": 1,
+      "rejections": {
+        "loiterTooShort": 4191020,
+        "loiterGapTooLong": 2669,
+        "noPriorSeparation": 1797,
+        "attributionUnresolved": 79
+      }
+    },
+    "X=0.05": {
+      "X": 0.05,
+      "D": 30.0,
+      "rawEvents": 361,
+      "activeResolved": 361,
+      "passiveResolved": 0,
+      "ambiguous": 0,
+      "librationZone": 47,
+      "librationHalfWidthDeg": 1.872979345307829,
+      "standingColocations": 0,
+      "rejections": {
+        "loiterTooShort": 2267198,
+        "loiterGapTooLong": 2163,
+        "noPriorSeparation": 2091,
+        "attributionUnresolved": 19
+      }
+    },
+    "X=0.2": {
+      "X": 0.2,
+      "D": 30.0,
+      "rawEvents": 1192,
+      "activeResolved": 1126,
+      "passiveResolved": 41,
+      "ambiguous": 25,
+      "librationZone": 347,
+      "librationHalfWidthDeg": 7.574526334808665,
+      "standingColocations": 8,
+      "rejections": {
+        "loiterTooShort": 7513104,
+        "loiterGapTooLong": 4131,
+        "noPriorSeparation": 2325,
+        "attributionUnresolved": 220
+      }
+    },
+    "X=0.5": {
+      "X": 0.5,
+      "D": 30.0,
+      "rawEvents": 4806,
+      "activeResolved": 4037,
+      "passiveResolved": 290,
+      "ambiguous": 479,
+      "librationZone": 2529,
+      "librationHalfWidthDeg": 20.39647519937781,
+      "standingColocations": 51,
+      "rejections": {
+        "loiterTooShort": 15074753,
+        "loiterGapTooLong": 8487,
+        "attributionUnresolved": 1156,
+        "noPriorSeparation": 3195
+      }
+    },
+    "D=7": {
+      "X": 0.1,
+      "D": 7.0,
+      "rawEvents": 4403,
+      "activeResolved": 3885,
+      "passiveResolved": 166,
+      "ambiguous": 352,
+      "librationZone": 4403,
+      "librationHalfWidthDeg": null,
+      "standingColocations": 1,
+      "rejections": {
+        "loiterTooShort": 4176102,
+        "loiterGapTooLong": 5058,
+        "noPriorSeparation": 9506,
+        "attributionUnresolved": 997,
+        "loiterUnderOccupied": 2
+      }
+    },
+    "D=14": {
+      "X": 0.1,
+      "D": 14.0,
+      "rawEvents": 1464,
+      "activeResolved": 1386,
+      "passiveResolved": 48,
+      "ambiguous": 30,
+      "librationZone": 717,
+      "librationHalfWidthDeg": 18.43475564693722,
+      "standingColocations": 1,
+      "rejections": {
+        "loiterTooShort": 4185855,
+        "loiterGapTooLong": 4043,
+        "noPriorSeparation": 4459,
+        "attributionUnresolved": 236,
+        "loiterUnderOccupied": 1
+      }
+    }
+  },
+  "relocations": {
+    "activeRelocations": 2956,
+    "relocationAlerts": 1483,
+    "alertPrecision": 0.32838840188806473,
+    "alertPrecisionJeffreys95": [
+      NaN,
+      NaN
+    ]
+  },
+  "leadTime": {
+    "events": 487,
+    "withFlag": 326,
+    "withoutFlag": 161,
+    "leadCausalDays": {
+      "p5": 2.2703028038194444,
+      "p25": 10.557864299768518,
+      "p50": 36.14785574074074,
+      "p75": 95.9746465451389,
+      "p95": 162.70915906828702
+    },
+    "leadCausalNonPositive": 4,
+    "leadCausalMean": 56.33374106573789,
+    "secondary_leadFirstFlagDays": {
+      "p5": 17.628641186342595,
+      "p25": 81.36848907407406,
+      "p50": 146.29374414351852,
+      "p75": 171.11216630497685,
+      "p95": 179.55115682581018
+    }
+  },
+  "null": {
+    "permutations": 1000,
+    "seed": 20260922,
+    "relocationCases": 2956,
+    "stationedSegments": 24685,
+    "observed": 1091,
+    "expectedUniformPerArrival": 0.29184201623815964,
+    "nullMeanWithSelf": 5300.392,
+    "nullMeanExcludingSelf": 2385.719,
+    "nullP2p5ExcludingSelf": 2202.95,
+    "nullP97p5ExcludingSelf": 2589.025,
+    "nullP2p5WithSelf": 5114.975,
+    "nullP97p5WithSelf": 5503.05,
+    "excessOverNull": -1294.719,
+    "observedGreaterThanNullFraction": 0.0
+  },
+  "repetition": {
+    "approachers": 224,
+    "repeaters2": 112,
+    "repeaters3": 53,
+    "repeaters5": 19,
+    "multiTargetRepeaters": 78,
+    "iccLog": {
+      "transferDriftDegPerDay": 0.34999878030033676,
+      "transferDays": 0.27674128004261783,
+      "approacherMotionDeg": 0.6794071266998135,
+      "closestSeparationDeg": 0.3049305193368001,
+      "loiterDays": 0.435593298612482,
+      "departureDriftDegPerDay": 0.3856267148770535
+    },
+    "leaveOneOutSkill": {
+      "loiterDays": {
+        "n": 375,
+        "maeOwnLog": 0.5751998736849826,
+        "maePopulationLog": 0.6661718051299466,
+        "skill": 0.13655926405834384
+      },
+      "closestSeparationDeg": {
+        "n": 375,
+        "maeOwnLog": 3.270194940972999,
+        "maePopulationLog": 3.2978404949659326,
+        "skill": 0.008382926352906939
+      }
+    },
+    "nullEventsPerRelocation": 0.8070767929634641,
+    "objectsTested": 224,
+    "fdrSurvivors": 9,
+    "fdrTop": [
+      {
+        "norad": 39498,
+        "events": 6,
+        "p": 0.00019318825410763463
+      },
+      {
+        "norad": 40147,
+        "events": 6,
+        "p": 0.00019318825410763463
+      },
+      {
+        "norad": 40269,
+        "events": 6,
+        "p": 0.00019318825410763463
+      },
+      {
+        "norad": 4250,
+        "events": 10,
+        "p": 0.00021597827781250079
+      },
+      {
+        "norad": 41029,
+        "events": 8,
+        "p": 0.00027602773557067195
+      },
+      {
+        "norad": 44035,
+        "events": 7,
+        "p": 0.0014036547068937422
+      },
+      {
+        "norad": 40880,
+        "events": 5,
+        "p": 0.001466351387159115
+      },
+      {
+        "norad": 47256,
+        "events": 5,
+        "p": 0.001466351387159115
+      },
+      {
+        "norad": 55841,
+        "events": 10,
+        "p": 0.001876671050913048
+      }
+    ]
+  },
+  "gates": {
+    "A_instrumentUnfit": true,
+    "B_detectorLeaks": true,
+    "C_nullExplainsCatalogue": false,
+    "D_underpoweredRepetition": false,
+    "E_noLeadTime": false,
+    "activeEventsPerStationedSegment": 0.01701447255135091,
+    "passiveEventsPerStationedSegment": 0.017006802721088437
+  },
+  "constants": {
+    "a_geo_km": 42164.16963930638,
+    "drift_deg_per_day_per_km": -0.012842147149631559,
+    "km_per_deg_geo": 735.9035865753264,
+    "lambda_ddot_max_deg_per_day2": 0.0017006955627927864,
+    "drift_deg_per_day_per_m_s": 0.3522200526379257
+  },
+  "sourceSha256": {
+    "tools/proximity_geo.py": "59c5270b8231d88481d24a6dc37e9d4b630ffbe5a74f4d96f50aefd1bb134480",
+    "pipeline/orbit_history.py": "f9beae5c4adc7d69ae1e573721972d57cb98dba13be2e452093b752f75c6d9e8",
+    "pipeline/orbit_campaigns.py": "6fe3ae546426165f3cb8a04a7ff542d744a4be1a268a7b99cc607e4a9a0766e0",
+    "pipeline/orbit_events.py": "abc601e8736d2c3904573d987de4ef1438a55574446e0f5111e9c9340d40a8a9"
+  },
+  "eventsFile": "docs/proximity-events-20260922.jsonl",
+  "eventsSha256": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "wallSeconds": 2021.9960398674011,
+  "cpuSeconds": 2019.32567855
+}

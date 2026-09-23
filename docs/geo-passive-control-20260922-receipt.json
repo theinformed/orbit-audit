@@ -1,0 +1,697 @@
+{
+ "schema": 1,
+ "measuredAt": "2026-09-22T18:30:39.247528+00:00",
+ "registration": "docs/persistent-pairs-response-preregistration-20260922.md",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "archive": {
+  "path": "/home/sdegan/space-orbit-history/orbit-history.sqlite3",
+  "bytes": 13892550656,
+  "mtimeMs": 1790097768016,
+  "monthRollupSpan": [
+   "1959-01",
+   "2026-09",
+   183391698
+  ]
+ },
+ "extract": {
+  "rowsScanned": 217007154,
+  "rowsKept": 11626494,
+  "objectsKept": 1768,
+  "wallSeconds": 293.49314546585083
+ },
+ "inputs": {
+  "catalogue": "persistent-pairs-20260922.jsonl",
+  "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+  "episodes": 1317,
+  "t8aCatalogue": "proximity-events-20260922.jsonl",
+  "t8aCatalogueSha256": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "t8aEvents": 493
+ },
+ "derivations": {
+  "aDegPerDay2": 0.0017006955627927864,
+  "omega0RadPerDay": 0.007704899369205557,
+  "t0Days": 815.4792173265513,
+  "peakRateCoeffDegPerDay": 0.4414582154284887,
+  "stableLongitudesDeg": [
+   75.1,
+   -104.7
+  ],
+  "sigmaNDegPerDay": 0.0006038533519066339,
+  "fiveSigmaN": 0.0030192667595331695,
+  "t8aFloorDegPerDay": 0.01,
+  "freeMotionOverOneSampleDegPerDay": 0.0014711016618157602,
+  "freeMotionOverBaselineDegPerDay": 0.014711016618157602,
+  "ewBurnStepDegPerDay": 0.011904868939549505
+ },
+ "validation": {
+  "sigmaNDegPerDay": 0.0006038533519066339,
+  "ewBurnStepDegPerDay": 0.011904868939549505,
+  "ewDriftHalfAmplitudeDegPerDay": 0.0059524344697747525,
+  "V1": {
+   "objects": 200,
+   "f1RegisteredAdmitted": 2,
+   "f1RegisteredAdmittedFraction": 0.01,
+   "f1FamilywiseAdmitted": 193,
+   "f1FamilywiseAdmittedFraction": 0.965,
+   "zeroV2Flags": 200,
+   "zeroV2FlagFraction": 1.0,
+   "f2Passed": 200,
+   "f2PassedFraction": 1.0,
+   "bar": 0.95,
+   "passed": true
+  },
+  "V2": {
+   "objects": 200,
+   "withV2Flag": 200,
+   "withV2FlagFraction": 1.0,
+   "failingF2Criterion2or5": 200,
+   "failingFraction": 1.0,
+   "excludedByF1Registered": 200,
+   "excludedByF1Familywise": 200,
+   "excludedByF1RegisteredFraction": 1.0,
+   "excludedByF1FamilywiseFraction": 1.0,
+   "bar": 0.95,
+   "passed": true
+  },
+  "V2b": {
+   "objects": 200,
+   "withV2Flag": 182,
+   "withV2FlagFraction": 0.91,
+   "failingF2Criterion2or5": 200,
+   "failingFraction": 1.0,
+   "excludedByF1Registered": 200,
+   "excludedByF1Familywise": 199,
+   "excludedByF1RegisteredFraction": 1.0,
+   "excludedByF1FamilywiseFraction": 0.995,
+   "note": "post-registration addition, labelled: the ramp rate is the triaxial acceleration at the object's own slot rather than the registered maximum, so the synthetic keeper is self-consistent"
+  },
+  "V3": {
+   "ladder": [
+    {
+     "burnScale": 0.1,
+     "burnStepDegPerDay": 0.0011904868939549506,
+     "withV2FlagFraction": 0.86
+    },
+    {
+     "burnScale": 0.2,
+     "burnStepDegPerDay": 0.002380973787909901,
+     "withV2FlagFraction": 0.87
+    },
+    {
+     "burnScale": 0.3,
+     "burnStepDegPerDay": 0.0035714606818648513,
+     "withV2FlagFraction": 0.87
+    },
+    {
+     "burnScale": 0.4,
+     "burnStepDegPerDay": 0.004761947575819802,
+     "withV2FlagFraction": 0.88
+    },
+    {
+     "burnScale": 0.5,
+     "burnStepDegPerDay": 0.0059524344697747525,
+     "withV2FlagFraction": 0.89
+    },
+    {
+     "burnScale": 0.6,
+     "burnStepDegPerDay": 0.007142921363729703,
+     "withV2FlagFraction": 0.895
+    },
+    {
+     "burnScale": 0.7,
+     "burnStepDegPerDay": 0.008333408257684654,
+     "withV2FlagFraction": 0.9
+    },
+    {
+     "burnScale": 0.7999999999999999,
+     "burnStepDegPerDay": 0.009523895151639603,
+     "withV2FlagFraction": 0.9
+    },
+    {
+     "burnScale": 0.8999999999999999,
+     "burnStepDegPerDay": 0.010714382045594554,
+     "withV2FlagFraction": 0.905
+    },
+    {
+     "burnScale": 0.9999999999999999,
+     "burnStepDegPerDay": 0.011904868939549503,
+     "withV2FlagFraction": 0.91
+    },
+    {
+     "burnScale": 1.0999999999999999,
+     "burnStepDegPerDay": 0.013095355833504454,
+     "withV2FlagFraction": 0.91
+    },
+    {
+     "burnScale": 1.2,
+     "burnStepDegPerDay": 0.014285842727459405,
+     "withV2FlagFraction": 0.91
+    },
+    {
+     "burnScale": 1.3,
+     "burnStepDegPerDay": 0.015476329621414356,
+     "withV2FlagFraction": 0.91
+    },
+    {
+     "burnScale": 1.4,
+     "burnStepDegPerDay": 0.016666816515369307,
+     "withV2FlagFraction": 0.915
+    },
+    {
+     "burnScale": 1.5,
+     "burnStepDegPerDay": 0.017857303409324256,
+     "withV2FlagFraction": 0.92
+    },
+    {
+     "burnScale": 1.5999999999999999,
+     "burnStepDegPerDay": 0.019047790303279206,
+     "withV2FlagFraction": 0.925
+    },
+    {
+     "burnScale": 1.7,
+     "burnStepDegPerDay": 0.02023827719723416,
+     "withV2FlagFraction": 0.935
+    },
+    {
+     "burnScale": 1.8,
+     "burnStepDegPerDay": 0.021428764091189108,
+     "withV2FlagFraction": 0.94
+    },
+    {
+     "burnScale": 1.9,
+     "burnStepDegPerDay": 0.022619250985144057,
+     "withV2FlagFraction": 0.94
+    },
+    {
+     "burnScale": 2.0,
+     "burnStepDegPerDay": 0.02380973787909901,
+     "withV2FlagFraction": 0.94
+    }
+   ],
+   "flagFraction": 0.5,
+   "detectionFloorDegPerDay": 0.0011904868939549506,
+   "detectionFloorInEwBurns": 0.1,
+   "routineEwBurnBelowFloor": false
+  },
+  "wallSeconds": 67.90280532836914
+ },
+ "classifyWallSeconds": 37.013323068618774,
+ "population": {
+  "objects": 1652,
+  "payload": 1308,
+  "cataloguePassive": 307,
+  "v1NeverManoeuvred": 9,
+  "v2ZeroFlag": 110,
+  "v2ZeroFlagAdmissible": 44,
+  "nonEvaluable": 775,
+  "v1FlaggedButV2Clean": 51,
+  "f1NoLine": 21,
+  "f1NoLineFamilywise": 112,
+  "f2Passed": 28,
+  "f2FailingOnlyPeriodBound": 4,
+  "classD": 3,
+  "classF": 0,
+  "classI": 0,
+  "classFfamilywise": 5,
+  "classIfamilywise": 0
+ },
+ "reference": {
+  "payloadNotNeverManoeuvred": {
+   "objects": 1306,
+   "pairExposureDays": 712483466,
+   "episodes": 1317,
+   "episodeRatePerPairDay": 1.8484639473724994e-06,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 3717395,
+   "stationSegments": 24374,
+   "t8aEvents": 488,
+   "eventRatePerObjectDay": 0.00013127472329413473,
+   "eventLeakRatio": NaN,
+   "unevaluable": false,
+   "leakFree": false
+  }
+ },
+ "leak": {
+  "D": {
+   "objects": 3,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 578,
+   "stationSegments": 16,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": 0.0,
+   "eventLeakRatio": 0.0,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "F": {
+   "objects": 0,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 0,
+   "stationSegments": 0,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": NaN,
+   "eventLeakRatio": NaN,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "I": {
+   "objects": 0,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 0,
+   "stationSegments": 0,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": NaN,
+   "eventLeakRatio": NaN,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "Fw": {
+   "objects": 5,
+   "pairExposureDays": 232,
+   "episodes": 0,
+   "episodeRatePerPairDay": 0.0,
+   "episodeLeakRatio": 0.0,
+   "stationedObjectDays": 2635,
+   "stationSegments": 60,
+   "t8aEvents": 3,
+   "eventRatePerObjectDay": 0.0011385199240986717,
+   "eventLeakRatio": 8.672803838616357,
+   "unevaluable": false,
+   "leakFree": false
+  },
+  "Iw": {
+   "objects": 0,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 0,
+   "stationSegments": 0,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": NaN,
+   "eventLeakRatio": NaN,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "v1NeverManoeuvred": {
+   "objects": 9,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 3029,
+   "stationSegments": 17,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": 0.0,
+   "eventLeakRatio": 0.0,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "bar": 0.1
+ },
+ "leakNote": "D, F and I are the registered classes. Fw and Iw use the family-wise F1 threshold and are a post-registration addition, labelled; both are leak-tested and both are reported whatever they show.",
+ "V4ParitySplit": {
+  "even": {
+   "objects": 0,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 0,
+   "stationSegments": 0,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": NaN,
+   "eventLeakRatio": NaN,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "odd": {
+   "objects": 0,
+   "pairExposureDays": 0,
+   "episodes": 0,
+   "episodeRatePerPairDay": NaN,
+   "episodeLeakRatio": NaN,
+   "stationedObjectDays": 0,
+   "stationSegments": 0,
+   "t8aEvents": 0,
+   "eventRatePerObjectDay": NaN,
+   "eventLeakRatio": NaN,
+   "unevaluable": true,
+   "leakFree": false
+  },
+  "instabilityFactor": 3.0
+ },
+ "e1ReExpression": {
+  "provenStationKeeping": 1237,
+  "geometryOnly": 58,
+  "unproven": 22,
+  "episodes": 1317,
+  "addendumBothMembersHaveAnyV1Flag": 1317,
+  "addendumCadenceTestableEpisodes": 449
+ },
+ "e1ReExpressionFamilywise": {
+  "provenStationKeeping": 1237,
+  "geometryOnly": 58,
+  "unproven": 22,
+  "episodes": 1317,
+  "addendumBothMembersHaveAnyV1Flag": 1317,
+  "addendumCadenceTestableEpisodes": 449
+ },
+ "gates": {
+  "G4": {
+   "registeredMeaning": "the passive class does not exist",
+   "pairExposureDays": 0,
+   "fired": true
+  },
+  "G5": {
+   "registeredMeaning": "the passive class leaks",
+   "bar": 0.1,
+   "episodeLeakRatio": NaN,
+   "eventLeakRatio": NaN,
+   "fired": false
+  },
+  "G6": {
+   "registeredMeaning": "the class rules do not do what they were derived to do",
+   "v1": true,
+   "v2": true,
+   "fired": false
+  },
+  "G7": {
+   "registeredMeaning": "provenance",
+   "catalogueSha256": "5df77537334ac5792b708c4c93f84c14b28d07df7803b5a7ccd459a29d0167bb",
+   "fired": false
+  }
+ },
+ "classRows": [
+  {
+   "norad": 8482,
+   "class": "active",
+   "elementSets": 4349,
+   "spanDays": 2728.094368483796,
+   "admissible": true,
+   "v1Flags": 50,
+   "v2Flags": 0,
+   "evaluableFraction": 0.9970039179534455,
+   "evaluable": true,
+   "minBlockFap": 0.00030942782326812016,
+   "cadenceBlocks": 46,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": false,
+   "sidakAlpha": 0.002287824922660553,
+   "f2": {
+    "c1BoundMotion": false,
+    "c2Turnaround": false,
+    "c3Centred": false,
+    "c4RateBound": false,
+    "c5PeriodBound": false,
+    "uMaxDeg": null,
+    "uMidDeg": null,
+    "maxAbsDriftDegPerDay": null,
+    "predictedPeakRateDegPerDay": null,
+    "turnarounds": 0,
+    "observedHalfPeriodDays": null,
+    "predictedHalfPeriodDays": null,
+    "stableLongitudeDeg": null,
+    "passed": false
+   },
+   "inD": true,
+   "inF": false,
+   "inI": false,
+   "inFw": false,
+   "inIw": false
+  },
+  {
+   "norad": 17874,
+   "class": "passive",
+   "elementSets": 9021,
+   "spanDays": 15333.24409451389,
+   "admissible": true,
+   "v1Flags": 2035,
+   "v2Flags": 12,
+   "evaluableFraction": 0.8191099766951504,
+   "evaluable": false,
+   "minBlockFap": 0.0009042111682393478,
+   "cadenceBlocks": 237,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": true,
+   "sidakAlpha": 0.00044446033602485446,
+   "f2": {
+    "c1BoundMotion": true,
+    "c2Turnaround": true,
+    "c3Centred": true,
+    "c4RateBound": true,
+    "c5PeriodBound": true,
+    "uMaxDeg": 24.845369917337052,
+    "uMidDeg": -0.24759367577902935,
+    "maxAbsDriftDegPerDay": 0.21805890000001682,
+    "predictedPeakRateDegPerDay": 0.18548784204815297,
+    "turnarounds": 39,
+    "observedHalfPeriodDays": 395.407560723379,
+    "predictedHalfPeriodDays": 427.77633996014,
+    "stableLongitudeDeg": 75.1,
+    "passed": true
+   },
+   "inD": false,
+   "inF": false,
+   "inI": false,
+   "inFw": true,
+   "inIw": false
+  },
+  {
+   "norad": 22839,
+   "class": "passive",
+   "elementSets": 7260,
+   "spanDays": 11997.074313263889,
+   "admissible": true,
+   "v1Flags": 1654,
+   "v2Flags": 6,
+   "evaluableFraction": 0.8481379310344828,
+   "evaluable": false,
+   "minBlockFap": 0.0007865787880800683,
+   "cadenceBlocks": 189,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": true,
+   "sidakAlpha": 0.0005573076921542297,
+   "f2": {
+    "c1BoundMotion": true,
+    "c2Turnaround": true,
+    "c3Centred": true,
+    "c4RateBound": true,
+    "c5PeriodBound": true,
+    "uMaxDeg": 75.63426349704044,
+    "uMidDeg": -6.798973728499547,
+    "maxAbsDriftDegPerDay": 0.45892049999997653,
+    "predictedPeakRateDegPerDay": 0.4276545706790723,
+    "turnarounds": 15,
+    "observedHalfPeriodDays": 805.44037197338,
+    "predictedHalfPeriodDays": 729.0083844812119,
+    "stableLongitudeDeg": 75.1,
+    "passed": true
+   },
+   "inD": false,
+   "inF": false,
+   "inI": false,
+   "inFw": true,
+   "inIw": false
+  },
+  {
+   "norad": 23132,
+   "class": "active",
+   "elementSets": 4897,
+   "spanDays": 4109.731072511574,
+   "admissible": true,
+   "v1Flags": 93,
+   "v2Flags": 0,
+   "evaluableFraction": 0.9928381420094128,
+   "evaluable": true,
+   "minBlockFap": 3.915826219312659e-06,
+   "cadenceBlocks": 70,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": false,
+   "sidakAlpha": 0.001504018053185452,
+   "f2": {
+    "c1BoundMotion": false,
+    "c2Turnaround": false,
+    "c3Centred": false,
+    "c4RateBound": false,
+    "c5PeriodBound": false,
+    "uMaxDeg": null,
+    "uMidDeg": null,
+    "maxAbsDriftDegPerDay": null,
+    "predictedPeakRateDegPerDay": null,
+    "turnarounds": 0,
+    "observedHalfPeriodDays": null,
+    "predictedHalfPeriodDays": null,
+    "stableLongitudeDeg": null,
+    "passed": false
+   },
+   "inD": true,
+   "inF": false,
+   "inI": false,
+   "inFw": false,
+   "inIw": false
+  },
+  {
+   "norad": 26939,
+   "class": "passive",
+   "elementSets": 8237,
+   "spanDays": 9060.515672858797,
+   "admissible": true,
+   "v1Flags": 1151,
+   "v2Flags": 4,
+   "evaluableFraction": 0.9579433572383615,
+   "evaluable": true,
+   "minBlockFap": 0.005715925651902616,
+   "cadenceBlocks": 159,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": true,
+   "sidakAlpha": 0.0006624252520172069,
+   "f2": {
+    "c1BoundMotion": true,
+    "c2Turnaround": true,
+    "c3Centred": true,
+    "c4RateBound": true,
+    "c5PeriodBound": true,
+    "uMaxDeg": 29.062619375073893,
+    "uMidDeg": -0.38006449858843894,
+    "maxAbsDriftDegPerDay": 0.2519024999999715,
+    "predictedPeakRateDegPerDay": 0.2144450448746723,
+    "turnarounds": 22,
+    "observedHalfPeriodDays": 401.28871876157064,
+    "predictedHalfPeriodDays": 435.62586929635654,
+    "stableLongitudeDeg": 75.1,
+    "passed": true
+   },
+   "inD": false,
+   "inF": false,
+   "inI": false,
+   "inFw": true,
+   "inIw": false
+  },
+  {
+   "norad": 40924,
+   "class": "passive",
+   "elementSets": 3868,
+   "spanDays": 3982.8036979861113,
+   "admissible": true,
+   "v1Flags": 366,
+   "v2Flags": 3,
+   "evaluableFraction": 0.9725246241575947,
+   "evaluable": true,
+   "minBlockFap": 0.038554538275383174,
+   "cadenceBlocks": 69,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": true,
+   "sidakAlpha": 0.0015257987786765348,
+   "f2": {
+    "c1BoundMotion": true,
+    "c2Turnaround": true,
+    "c3Centred": true,
+    "c4RateBound": true,
+    "c5PeriodBound": true,
+    "uMaxDeg": 27.14143054942042,
+    "uMidDeg": -0.41359451664615676,
+    "maxAbsDriftDegPerDay": 0.23188350000003766,
+    "predictedPeakRateDegPerDay": 0.20138816133580964,
+    "turnarounds": 10,
+    "observedHalfPeriodDays": 407.36698868634267,
+    "predictedHalfPeriodDays": 431.8640911541932,
+    "stableLongitudeDeg": 75.1,
+    "passed": true
+   },
+   "inD": false,
+   "inF": false,
+   "inI": false,
+   "inFw": true,
+   "inIw": false
+  },
+  {
+   "norad": 43645,
+   "class": "passive",
+   "elementSets": 3767,
+   "spanDays": 2890.5409497569444,
+   "admissible": true,
+   "v1Flags": 78,
+   "v2Flags": 195,
+   "evaluableFraction": 0.9901517167953154,
+   "evaluable": true,
+   "minBlockFap": 0.0037605912652734813,
+   "cadenceBlocks": 49,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": true,
+   "sidakAlpha": 0.0021479045498390414,
+   "f2": {
+    "c1BoundMotion": true,
+    "c2Turnaround": true,
+    "c3Centred": true,
+    "c4RateBound": true,
+    "c5PeriodBound": true,
+    "uMaxDeg": 22.88387505077199,
+    "uMidDeg": -0.3093073105774806,
+    "maxAbsDriftDegPerDay": 0.21117209999994202,
+    "predictedPeakRateDegPerDay": 0.17166750870956415,
+    "turnarounds": 7,
+    "observedHalfPeriodDays": 386.6748773987256,
+    "predictedHalfPeriodDays": 424.6207401195509,
+    "stableLongitudeDeg": 75.1,
+    "passed": true
+   },
+   "inD": false,
+   "inF": false,
+   "inI": false,
+   "inFw": true,
+   "inIw": false
+  },
+  {
+   "norad": 59479,
+   "class": "active",
+   "elementSets": 1529,
+   "spanDays": 881.4858642476852,
+   "admissible": true,
+   "v1Flags": 1,
+   "v2Flags": 0,
+   "evaluableFraction": 0.9960500329163924,
+   "evaluable": true,
+   "minBlockFap": 2.923195837481207e-14,
+   "cadenceBlocks": 14,
+   "f1NoLine": false,
+   "f1NoLineFamilywise": false,
+   "sidakAlpha": 0.007497503559252716,
+   "f2": {
+    "c1BoundMotion": false,
+    "c2Turnaround": false,
+    "c3Centred": false,
+    "c4RateBound": false,
+    "c5PeriodBound": false,
+    "uMaxDeg": null,
+    "uMidDeg": null,
+    "maxAbsDriftDegPerDay": null,
+    "predictedPeakRateDegPerDay": null,
+    "turnarounds": 0,
+    "observedHalfPeriodDays": null,
+    "predictedHalfPeriodDays": null,
+    "stableLongitudeDeg": null,
+    "passed": false
+   },
+   "inD": true,
+   "inF": false,
+   "inI": false,
+   "inFw": false,
+   "inIw": false
+  }
+ ],
+ "sourceSha256": {
+  "tools/geo_passive_control.py": "19bb36f7e0976d39a224481f0d7f9464dfd5e0db9344cea98378caef5d939810"
+ },
+ "wallSeconds": 105.4834816455841
+}

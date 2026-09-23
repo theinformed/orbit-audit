@@ -1,0 +1,2782 @@
+{
+ "E1": {
+  "A1_unseenObjectAnyEra": {
+   "arm": "A1",
+   "byDaBin": {
+    "0-20 m": {
+     "k": 1,
+     "n": 576,
+     "rate": 0.001736111111111111,
+     "wilson95": [
+      0.00030653200754328803,
+      0.009767702481241838
+     ]
+    },
+    "100-200 m": {
+     "k": 6,
+     "n": 27,
+     "rate": 0.2222222222222222,
+     "wilson95": [
+      0.10607239450521502,
+      0.407569288713143
+     ]
+    },
+    "20-50 m": {
+     "k": 2,
+     "n": 342,
+     "rate": 0.005847953216374269,
+     "wilson95": [
+      0.0016051873749938373,
+      0.021068377700735573
+     ]
+    },
+    "200-500 m": {
+     "k": 16,
+     "n": 36,
+     "rate": 0.4444444444444444,
+     "wilson95": [
+      0.29541268737029736,
+      0.6041893824780752
+     ]
+    },
+    "50-100 m": {
+     "k": 4,
+     "n": 53,
+     "rate": 0.07547169811320754,
+     "wilson95": [
+      0.029739555080797647,
+      0.17858477486779245
+     ]
+    },
+    ">=500 m": {
+     "k": 29,
+     "n": 100,
+     "rate": 0.29,
+     "wilson95": [
+      0.21014835747477711,
+      0.38538891177917933
+     ]
+    }
+   },
+   "byFloor": {
+    "aboveFloor": {
+     "k": 50,
+     "n": 157,
+     "rate": 0.3184713375796178,
+     "wilson95": [
+      0.2506774841752416,
+      0.3949362747567474
+     ]
+    },
+    "belowFloor": {
+     "k": 8,
+     "n": 977,
+     "rate": 0.008188331627430911,
+     "wilson95": [
+      0.004154885643040458,
+      0.01607413164005523
+     ]
+    }
+   },
+   "bySpacecraft": {
+    "cryosat-2": {
+     "k": 8,
+     "n": 241,
+     "rate": 0.03319502074688797,
+     "wilson95": [
+      0.01691458894197191,
+      0.06412339750819687
+     ]
+    },
+    "hy-2a": {
+     "k": 2,
+     "n": 58,
+     "rate": 0.034482758620689655,
+     "wilson95": [
+      0.009507928328618048,
+      0.117291454671132
+     ]
+    },
+    "jason-1": {
+     "k": 2,
+     "n": 119,
+     "rate": 0.01680672268907563,
+     "wilson95": [
+      0.004621175446921304,
+      0.059212801271214206
+     ]
+    },
+    "jason-2": {
+     "k": 5,
+     "n": 111,
+     "rate": 0.04504504504504504,
+     "wilson95": [
+      0.019391760078496988,
+      0.10113491177344208
+     ]
+    },
+    "jason-3": {
+     "k": 6,
+     "n": 85,
+     "rate": 0.07058823529411765,
+     "wilson95": [
+      0.032750963106967956,
+      0.14556059359706933
+     ]
+    },
+    "saral": {
+     "k": 8,
+     "n": 67,
+     "rate": 0.11940298507462686,
+     "wilson95": [
+      0.061762325325624645,
+      0.2183202584084647
+     ]
+    },
+    "sentinel-3a": {
+     "k": 0,
+     "n": 147,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.025466863370882158
+     ]
+    },
+    "sentinel-3b": {
+     "k": 5,
+     "n": 145,
+     "rate": 0.034482758620689655,
+     "wilson95": [
+      0.014817219593179352,
+      0.07817742673720834
+     ]
+    },
+    "sentinel-6a": {
+     "k": 4,
+     "n": 32,
+     "rate": 0.125,
+     "wilson95": [
+      0.04970134386451466,
+      0.2806830548604724
+     ]
+    },
+    "swot": {
+     "k": 18,
+     "n": 86,
+     "rate": 0.20930232558139536,
+     "wilson95": [
+      0.13669816073229207,
+      0.3067659074682616
+     ]
+    },
+    "topex-poseidon": {
+     "k": 0,
+     "n": 43,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.08200980326112514
+     ]
+    }
+   },
+   "campaignLevel": {
+    "k": 11,
+    "n": 1134,
+    "rate": 0.009700176366843033,
+    "wilson95": [
+     0.005424956372567511,
+     0.017285992171388067
+    ]
+   },
+   "falseFlags": {
+    "flagsInQuietWindows": 18,
+    "flagsPerQuietWindowDay": 0.012642669007901668,
+    "note": "an UPPER bound on false flags: MAD-LEO's quiet windows are mined from an element-set archive, not declared quiet by an operator",
+    "quietWindowDays": 1423.75,
+    "quietWindows": 1139,
+    "quietWindowsWithAtLeastOneFlag": 14
+   },
+   "overall": {
+    "k": 58,
+    "n": 1134,
+    "notEvaluable": 0,
+    "rate": 0.05114638447971781,
+    "wilson95": [
+     0.039772240516111314,
+     0.06555127173006384
+    ]
+   },
+   "placeboControlPostRegistration": {
+    "k": 52,
+    "n": 5610,
+    "rate": 0.009269162210338681,
+    "wilson95": [
+     0.007075790694396631,
+     0.012134131711412957
+    ]
+   },
+   "threshold": 4.021723926401443,
+   "totalFlags": 429
+  },
+  "A2_unseenObjectUnseenEra": {
+   "arm": "A2",
+   "byDaBin": {
+    "0-20 m": {
+     "k": 0,
+     "n": 95,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.03886485355700491
+     ]
+    },
+    "20-50 m": {
+     "k": 0,
+     "n": 124,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.030048615354356968
+     ]
+    },
+    "200-500 m": {
+     "k": 0,
+     "n": 5,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.4344824648984954
+     ]
+    },
+    "50-100 m": {
+     "k": 1,
+     "n": 23,
+     "rate": 0.043478260869565216,
+     "wilson95": [
+      0.007716666140909378,
+      0.20991155075768483
+     ]
+    },
+    ">=500 m": {
+     "k": 2,
+     "n": 10,
+     "rate": 0.2,
+     "wilson95": [
+      0.05668215143900576,
+      0.5098375285351918
+     ]
+    }
+   },
+   "byFloor": {
+    "aboveFloor": {
+     "k": 2,
+     "n": 15,
+     "rate": 0.13333333333333333,
+     "wilson95": [
+      0.03736125909298635,
+      0.3788198283891687
+     ]
+    },
+    "belowFloor": {
+     "k": 1,
+     "n": 242,
+     "rate": 0.004132231404958678,
+     "wilson95": [
+      0.0007298131130305599,
+      0.02303126791242309
+     ]
+    }
+   },
+   "bySpacecraft": {
+    "cryosat-2": {
+     "k": 1,
+     "n": 48,
+     "rate": 0.020833333333333332,
+     "wilson95": [
+      0.003687110976297432,
+      0.10899217998459129
+     ]
+    },
+    "jason-3": {
+     "k": 2,
+     "n": 34,
+     "rate": 0.058823529411764705,
+     "wilson95": [
+      0.0162826552057532,
+      0.19093606908495156
+     ]
+    },
+    "saral": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.5614970318706057
+     ]
+    },
+    "sentinel-3a": {
+     "k": 0,
+     "n": 59,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.061129370553725075
+     ]
+    },
+    "sentinel-3b": {
+     "k": 0,
+     "n": 63,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.057471199614275104
+     ]
+    },
+    "sentinel-6a": {
+     "k": 0,
+     "n": 9,
+     "rate": 0.0,
+     "wilson95": [
+      2.7755575615628914e-17,
+      0.2991450485179449
+     ]
+    },
+    "swot": {
+     "k": 0,
+     "n": 41,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.08566757022119471
+     ]
+    }
+   },
+   "campaignLevel": {
+    "k": 2,
+    "n": 257,
+    "rate": 0.007782101167315175,
+    "wilson95": [
+     0.002136733527118833,
+     0.027925430892200724
+    ]
+   },
+   "falseFlags": {
+    "flagsInQuietWindows": 0,
+    "flagsPerQuietWindowDay": 0.0,
+    "note": "an UPPER bound on false flags: MAD-LEO's quiet windows are mined from an element-set archive, not declared quiet by an operator",
+    "quietWindowDays": 331.25,
+    "quietWindows": 265,
+    "quietWindowsWithAtLeastOneFlag": 0
+   },
+   "overall": {
+    "k": 3,
+    "n": 257,
+    "notEvaluable": 0,
+    "rate": 0.011673151750972763,
+    "wilson95": [
+     0.003977718468562253,
+     0.03375193872214609
+    ]
+   },
+   "placeboControlPostRegistration": {
+    "k": 0,
+    "n": 1235,
+    "rate": 0.0,
+    "wilson95": [
+     0.0,
+     0.0031008478083614814
+    ]
+   },
+   "threshold": 4.021723926401443,
+   "totalFlags": 429
+  },
+  "floorMatchedOperatingPoint": {
+   "flagsInQuiet": 18,
+   "flagsPerQuietWindowDay": 0.012642669007901668,
+   "quietWindowDays": 1423.75,
+   "threshold": 4.021723926401443
+  },
+  "floorOnTheSameLabels": {
+   "byDaBin": {
+    "0-20 m": {
+     "k": 1,
+     "n": 576,
+     "rate": 0.001736111111111111,
+     "wilson95": [
+      0.00030653200754328803,
+      0.009767702481241838
+     ]
+    },
+    "100-200 m": {
+     "k": 6,
+     "n": 27,
+     "rate": 0.2222222222222222,
+     "wilson95": [
+      0.10607239450521502,
+      0.407569288713143
+     ]
+    },
+    "20-50 m": {
+     "k": 2,
+     "n": 342,
+     "rate": 0.005847953216374269,
+     "wilson95": [
+      0.0016051873749938373,
+      0.021068377700735573
+     ]
+    },
+    "200-500 m": {
+     "k": 16,
+     "n": 36,
+     "rate": 0.4444444444444444,
+     "wilson95": [
+      0.29541268737029736,
+      0.6041893824780752
+     ]
+    },
+    "50-100 m": {
+     "k": 4,
+     "n": 53,
+     "rate": 0.07547169811320754,
+     "wilson95": [
+      0.029739555080797647,
+      0.17858477486779245
+     ]
+    },
+    ">=500 m": {
+     "k": 29,
+     "n": 100,
+     "rate": 0.29,
+     "wilson95": [
+      0.21014835747477711,
+      0.38538891177917933
+     ]
+    }
+   },
+   "byFloor": {
+    "aboveFloor": {
+     "k": 50,
+     "n": 157,
+     "rate": 0.3184713375796178,
+     "wilson95": [
+      0.2506774841752416,
+      0.3949362747567474
+     ]
+    },
+    "belowFloor": {
+     "k": 8,
+     "n": 977,
+     "rate": 0.008188331627430911,
+     "wilson95": [
+      0.004154885643040458,
+      0.01607413164005523
+     ]
+    }
+   },
+   "bySpacecraft": {
+    "cryosat-2": {
+     "k": 8,
+     "n": 241,
+     "rate": 0.03319502074688797,
+     "wilson95": [
+      0.01691458894197191,
+      0.06412339750819687
+     ]
+    },
+    "hy-2a": {
+     "k": 2,
+     "n": 58,
+     "rate": 0.034482758620689655,
+     "wilson95": [
+      0.009507928328618048,
+      0.117291454671132
+     ]
+    },
+    "jason-1": {
+     "k": 2,
+     "n": 119,
+     "rate": 0.01680672268907563,
+     "wilson95": [
+      0.004621175446921304,
+      0.059212801271214206
+     ]
+    },
+    "jason-2": {
+     "k": 5,
+     "n": 111,
+     "rate": 0.04504504504504504,
+     "wilson95": [
+      0.019391760078496988,
+      0.10113491177344208
+     ]
+    },
+    "jason-3": {
+     "k": 6,
+     "n": 85,
+     "rate": 0.07058823529411765,
+     "wilson95": [
+      0.032750963106967956,
+      0.14556059359706933
+     ]
+    },
+    "saral": {
+     "k": 8,
+     "n": 67,
+     "rate": 0.11940298507462686,
+     "wilson95": [
+      0.061762325325624645,
+      0.2183202584084647
+     ]
+    },
+    "sentinel-3a": {
+     "k": 0,
+     "n": 147,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.025466863370882158
+     ]
+    },
+    "sentinel-3b": {
+     "k": 5,
+     "n": 145,
+     "rate": 0.034482758620689655,
+     "wilson95": [
+      0.014817219593179352,
+      0.07817742673720834
+     ]
+    },
+    "sentinel-6a": {
+     "k": 4,
+     "n": 32,
+     "rate": 0.125,
+     "wilson95": [
+      0.04970134386451466,
+      0.2806830548604724
+     ]
+    },
+    "swot": {
+     "k": 18,
+     "n": 86,
+     "rate": 0.20930232558139536,
+     "wilson95": [
+      0.13669816073229207,
+      0.3067659074682616
+     ]
+    },
+    "topex-poseidon": {
+     "k": 0,
+     "n": 43,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.08200980326112514
+     ]
+    }
+   },
+   "overall": {
+    "k": 58,
+    "n": 1134,
+    "notEvaluable": 0,
+    "rate": 0.05114638447971781,
+    "wilson95": [
+     0.039772240516111314,
+     0.06555127173006384
+    ]
+   }
+  },
+  "labelShuffledArm_G4": {
+   "byDaBin": {
+    "0-20 m": {
+     "k": 2,
+     "n": 1056,
+     "rate": 0.001893939393939394,
+     "wilson95": [
+      0.0005195402370572334,
+      0.0068791690295240925
+     ]
+    },
+    "100-200 m": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "wilson95": [
+      0.3423802274009781,
+      1.0
+     ]
+    },
+    "20-50 m": {
+     "k": 2,
+     "n": 56,
+     "rate": 0.03571428571428571,
+     "wilson95": [
+      0.009849425145597307,
+      0.12118780183372099
+     ]
+    },
+    "200-500 m": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.390334288013856
+     ]
+    },
+    "50-100 m": {
+     "k": 1,
+     "n": 2,
+     "rate": 0.5,
+     "wilson95": [
+      0.09453120570165269,
+      0.9054687942983473
+     ]
+    },
+    ">=500 m": {
+     "k": 4,
+     "n": 12,
+     "rate": 0.3333333333333333,
+     "wilson95": [
+      0.1381200910624633,
+      0.609377911184688
+     ]
+    }
+   },
+   "byFloor": {
+    "aboveFloor": {
+     "k": 6,
+     "n": 20,
+     "rate": 0.3,
+     "wilson95": [
+      0.14547724484243413,
+      0.5189728184040687
+     ]
+    },
+    "belowFloor": {
+     "k": 5,
+     "n": 1114,
+     "rate": 0.004488330341113106,
+     "wilson95": [
+      0.0019186243128755422,
+      0.010463685104308972
+     ]
+    }
+   },
+   "bySpacecraft": {
+    "cryosat-2": {
+     "k": 0,
+     "n": 241,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.015689576597736354
+     ]
+    },
+    "hy-2a": {
+     "k": 3,
+     "n": 58,
+     "rate": 0.05172413793103448,
+     "wilson95": [
+      0.01774613465530045,
+      0.14139401193705148
+     ]
+    },
+    "jason-1": {
+     "k": 1,
+     "n": 119,
+     "rate": 0.008403361344537815,
+     "wilson95": [
+      0.0014849430396015016,
+      0.046067885447545046
+     ]
+    },
+    "jason-2": {
+     "k": 0,
+     "n": 111,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.033450104708566714
+     ]
+    },
+    "jason-3": {
+     "k": 1,
+     "n": 85,
+     "rate": 0.011764705882352941,
+     "wilson95": [
+      0.0020797871339802397,
+      0.06367170884458268
+     ]
+    },
+    "saral": {
+     "k": 0,
+     "n": 67,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.05422613941537227
+     ]
+    },
+    "sentinel-3a": {
+     "k": 0,
+     "n": 147,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.025466863370882158
+     ]
+    },
+    "sentinel-3b": {
+     "k": 1,
+     "n": 145,
+     "rate": 0.006896551724137931,
+     "wilson95": [
+      0.0012184498701111948,
+      0.0380277310576328
+     ]
+    },
+    "sentinel-6a": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.10717919829998272
+     ]
+    },
+    "swot": {
+     "k": 5,
+     "n": 86,
+     "rate": 0.05813953488372093,
+     "wilson95": [
+      0.02508693561635532,
+      0.1289784480484863
+     ]
+    },
+    "topex-poseidon": {
+     "k": 0,
+     "n": 43,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.08200980326112514
+     ]
+    }
+   },
+   "construction": "per spacecraft, the multiset of inter-label gaps is permuted and the event times rebuilt from the first real event, seed 20260922 (amendment 3). Permuting labels onto themselves would be the identity for a membership test.",
+   "mustLoseAllSkill": true,
+   "overall": {
+    "k": 11,
+    "n": 1134,
+    "notEvaluable": 0,
+    "rate": 0.009700176366843033,
+    "wilson95": [
+     0.005424956372567511,
+     0.017285992171388067
+    ]
+   },
+   "skillLost": {
+    "fractionOfSkillRemaining": 0.1896551724137931,
+    "reading": "gate G4 asks that the permuted arm lose ALL skill. What is published is the fraction of the real recall the permuted arm retains, because that is a number and 'loses all skill' is an impression.",
+    "realLabelRecall": 0.05114638447971781,
+    "shuffledLabelRecall": 0.009700176366843033
+   }
+  },
+  "matchedOperatingPoint": {
+   "flagsInQuiet": 18,
+   "flagsPerQuietWindowDay": 0.012642669007901668,
+   "quietWindowDays": 1423.75,
+   "threshold": 4.021723926401443
+  },
+  "measured": true,
+  "reversalClause": {
+   "anyBinReversesVsFloor": false,
+   "anyBinReversesVsShipped": true,
+   "bins": {
+    "0-20 m": {
+     "floor": {
+      "k": 1,
+      "n": 576,
+      "rate": 0.001736111111111111,
+      "wilson95": [
+       0.00030653200754328803,
+       0.009767702481241838
+      ]
+     },
+     "full": {
+      "k": 1,
+      "n": 576,
+      "rate": 0.001736111111111111,
+      "wilson95": [
+       0.00030653200754328803,
+       0.009767702481241838
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": true,
+     "shipped": {
+      "k": 6,
+      "n": 576,
+      "rate": 0.010416666666666666,
+      "wilson95": [
+       0.0047825519272765606,
+       0.0225377760373137
+      ]
+     },
+     "underpowered": false
+    },
+    "100-200 m": {
+     "floor": {
+      "k": 6,
+      "n": 27,
+      "rate": 0.2222222222222222,
+      "wilson95": [
+       0.10607239450521502,
+       0.407569288713143
+      ]
+     },
+     "full": {
+      "k": 6,
+      "n": 27,
+      "rate": 0.2222222222222222,
+      "wilson95": [
+       0.10607239450521502,
+       0.407569288713143
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": true,
+     "shipped": {
+      "k": 10,
+      "n": 27,
+      "rate": 0.37037037037037035,
+      "wilson95": [
+       0.21532512958080754,
+       0.5577076559210928
+      ]
+     },
+     "underpowered": false
+    },
+    "20-50 m": {
+     "floor": {
+      "k": 2,
+      "n": 342,
+      "rate": 0.005847953216374269,
+      "wilson95": [
+       0.0016051873749938373,
+       0.021068377700735573
+      ]
+     },
+     "full": {
+      "k": 2,
+      "n": 342,
+      "rate": 0.005847953216374269,
+      "wilson95": [
+       0.0016051873749938373,
+       0.021068377700735573
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": false,
+     "shipped": {
+      "k": 2,
+      "n": 342,
+      "rate": 0.005847953216374269,
+      "wilson95": [
+       0.0016051873749938373,
+       0.021068377700735573
+      ]
+     },
+     "underpowered": false
+    },
+    "200-500 m": {
+     "floor": {
+      "k": 16,
+      "n": 36,
+      "rate": 0.4444444444444444,
+      "wilson95": [
+       0.29541268737029736,
+       0.6041893824780752
+      ]
+     },
+     "full": {
+      "k": 16,
+      "n": 36,
+      "rate": 0.4444444444444444,
+      "wilson95": [
+       0.29541268737029736,
+       0.6041893824780752
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": true,
+     "shipped": {
+      "k": 21,
+      "n": 36,
+      "rate": 0.5833333333333334,
+      "wilson95": [
+       0.4220025157127144,
+       0.7285943795147266
+      ]
+     },
+     "underpowered": false
+    },
+    "50-100 m": {
+     "floor": {
+      "k": 4,
+      "n": 53,
+      "rate": 0.07547169811320754,
+      "wilson95": [
+       0.029739555080797647,
+       0.17858477486779245
+      ]
+     },
+     "full": {
+      "k": 4,
+      "n": 53,
+      "rate": 0.07547169811320754,
+      "wilson95": [
+       0.029739555080797647,
+       0.17858477486779245
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": false,
+     "shipped": {
+      "k": 1,
+      "n": 53,
+      "rate": 0.018867924528301886,
+      "wilson95": [
+       0.0033384533871654437,
+       0.09942912055457001
+      ]
+     },
+     "underpowered": false
+    },
+    ">=500 m": {
+     "floor": {
+      "k": 29,
+      "n": 100,
+      "rate": 0.29,
+      "wilson95": [
+       0.21014835747477711,
+       0.38538891177917933
+      ]
+     },
+     "full": {
+      "k": 29,
+      "n": 100,
+      "rate": 0.29,
+      "wilson95": [
+       0.21014835747477711,
+       0.38538891177917933
+      ]
+     },
+     "reversesVsFloor": false,
+     "reversesVsShipped": true,
+     "shipped": {
+      "k": 50,
+      "n": 100,
+      "rate": 0.5,
+      "wilson95": [
+       0.4038315303442626,
+       0.5961684696557374
+      ]
+     },
+     "underpowered": false
+    }
+   },
+   "clause": "registration 3.1: if any |da| bin reverses sign the POOLED claim is WITHHELD and the reversal is the result. The floor already reversed the 50-100 m bin against the shipped detector, so the clause was live before this ran.",
+   "pooledClaimWithheld": true
+  },
+  "screenE1": {
+   "baselineUpper": 9.655525523650489,
+   "clears": false,
+   "learnedLower": 3.9772240516111315,
+   "screen": "the learned model's recall Wilson lower bound must exceed the shipped detector's Wilson upper bound of 9.656% at the matched false-flag rate"
+  },
+  "sweep": [
+   {
+    "flagsInQuiet": 698,
+    "flagsPerQuietWindowDay": 0.49025460930640913,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.5298853814601898
+   },
+   {
+    "flagsInQuiet": 692,
+    "flagsPerQuietWindowDay": 0.4860403863037752,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.5492639813418946
+   },
+   {
+    "flagsInQuiet": 686,
+    "flagsPerQuietWindowDay": 0.48182616330114136,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.5681093029528291
+   },
+   {
+    "flagsInQuiet": 680,
+    "flagsPerQuietWindowDay": 0.47761194029850745,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.588226185135413
+   },
+   {
+    "flagsInQuiet": 675,
+    "flagsPerQuietWindowDay": 0.4741000877963126,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6064612428061449
+   },
+   {
+    "flagsInQuiet": 667,
+    "flagsPerQuietWindowDay": 0.4684811237928007,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6255733033470801
+   },
+   {
+    "flagsInQuiet": 663,
+    "flagsPerQuietWindowDay": 0.46567164179104475,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6451588390971504
+   },
+   {
+    "flagsInQuiet": 657,
+    "flagsPerQuietWindowDay": 0.4614574187884109,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6632703801336496
+   },
+   {
+    "flagsInQuiet": 654,
+    "flagsPerQuietWindowDay": 0.4593503072870939,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6815131085316357
+   },
+   {
+    "flagsInQuiet": 652,
+    "flagsPerQuietWindowDay": 0.45794556628621597,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.6992646986438256
+   },
+   {
+    "flagsInQuiet": 647,
+    "flagsPerQuietWindowDay": 0.4544337137840211,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.7177498915957254
+   },
+   {
+    "flagsInQuiet": 637,
+    "flagsPerQuietWindowDay": 0.4474100087796313,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.7377074368338472
+   },
+   {
+    "flagsInQuiet": 628,
+    "flagsPerQuietWindowDay": 0.44108867427568044,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.7565537430945686
+   },
+   {
+    "flagsInQuiet": 618,
+    "flagsPerQuietWindowDay": 0.4340649692712906,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.7755581369574928
+   },
+   {
+    "flagsInQuiet": 613,
+    "flagsPerQuietWindowDay": 0.4305531167690957,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.7944143832973166
+   },
+   {
+    "flagsInQuiet": 607,
+    "flagsPerQuietWindowDay": 0.42633889376646183,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.8137151992013875
+   },
+   {
+    "flagsInQuiet": 602,
+    "flagsPerQuietWindowDay": 0.4228270412642669,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.8325500120823853
+   },
+   {
+    "flagsInQuiet": 598,
+    "flagsPerQuietWindowDay": 0.420017559262511,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.8529422234636866
+   },
+   {
+    "flagsInQuiet": 594,
+    "flagsPerQuietWindowDay": 0.41720807726075504,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.8731118007365058
+   },
+   {
+    "flagsInQuiet": 589,
+    "flagsPerQuietWindowDay": 0.41369622475856016,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.8923513801517372
+   },
+   {
+    "flagsInQuiet": 584,
+    "flagsPerQuietWindowDay": 0.4101843722563652,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.9096922594433898
+   },
+   {
+    "flagsInQuiet": 579,
+    "flagsPerQuietWindowDay": 0.40667251975417035,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.9273350665632105
+   },
+   {
+    "flagsInQuiet": 576,
+    "flagsPerQuietWindowDay": 0.40456540825285336,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.9459233376535172
+   },
+   {
+    "flagsInQuiet": 563,
+    "flagsPerQuietWindowDay": 0.3954345917471466,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.9659891856302841
+   },
+   {
+    "flagsInQuiet": 552,
+    "flagsPerQuietWindowDay": 0.38770851624231784,
+    "quietWindowDays": 1423.75,
+    "threshold": 0.9857510455616748
+   },
+   {
+    "flagsInQuiet": 544,
+    "flagsPerQuietWindowDay": 0.382089552238806,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.004326483297235
+   },
+   {
+    "flagsInQuiet": 537,
+    "flagsPerQuietWindowDay": 0.3771729587357331,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.02282923056224
+   },
+   {
+    "flagsInQuiet": 533,
+    "flagsPerQuietWindowDay": 0.3743634767339772,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.0430750075171011
+   },
+   {
+    "flagsInQuiet": 532,
+    "flagsPerQuietWindowDay": 0.3736611062335382,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.0618468579048255
+   },
+   {
+    "flagsInQuiet": 530,
+    "flagsPerQuietWindowDay": 0.3722563652326602,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.080237782793468
+   },
+   {
+    "flagsInQuiet": 525,
+    "flagsPerQuietWindowDay": 0.3687445127304653,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.0986535160269968
+   },
+   {
+    "flagsInQuiet": 524,
+    "flagsPerQuietWindowDay": 0.36804214223002635,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.1169091224646979
+   },
+   {
+    "flagsInQuiet": 512,
+    "flagsPerQuietWindowDay": 0.3596136962247586,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.1348023175468274
+   },
+   {
+    "flagsInQuiet": 503,
+    "flagsPerQuietWindowDay": 0.35329236172080775,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.1537957813572486
+   },
+   {
+    "flagsInQuiet": 494,
+    "flagsPerQuietWindowDay": 0.3469710272168569,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.1708357787027772
+   },
+   {
+    "flagsInQuiet": 491,
+    "flagsPerQuietWindowDay": 0.3448639157155399,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.1896184093659194
+   },
+   {
+    "flagsInQuiet": 486,
+    "flagsPerQuietWindowDay": 0.34135206321334505,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.2088799313348866
+   },
+   {
+    "flagsInQuiet": 470,
+    "flagsPerQuietWindowDay": 0.3301141352063213,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.2269722275071895
+   },
+   {
+    "flagsInQuiet": 464,
+    "flagsPerQuietWindowDay": 0.32589991220368747,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.245150826265425
+   },
+   {
+    "flagsInQuiet": 456,
+    "flagsPerQuietWindowDay": 0.3202809482001756,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.2626949449022964
+   },
+   {
+    "flagsInQuiet": 449,
+    "flagsPerQuietWindowDay": 0.3153643546971027,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.2810712237351198
+   },
+   {
+    "flagsInQuiet": 440,
+    "flagsPerQuietWindowDay": 0.3090430201931519,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.2986859027885502
+   },
+   {
+    "flagsInQuiet": 437,
+    "flagsPerQuietWindowDay": 0.30693590869183496,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.3161148973258983
+   },
+   {
+    "flagsInQuiet": 430,
+    "flagsPerQuietWindowDay": 0.30201931518876207,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.3339235270045873
+   },
+   {
+    "flagsInQuiet": 427,
+    "flagsPerQuietWindowDay": 0.29991220368744514,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.3513920868736273
+   },
+   {
+    "flagsInQuiet": 422,
+    "flagsPerQuietWindowDay": 0.2964003511852502,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.3696499050251965
+   },
+   {
+    "flagsInQuiet": 417,
+    "flagsPerQuietWindowDay": 0.29288849868305533,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.3875660524338262
+   },
+   {
+    "flagsInQuiet": 411,
+    "flagsPerQuietWindowDay": 0.2886742756804214,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.4058595911505316
+   },
+   {
+    "flagsInQuiet": 403,
+    "flagsPerQuietWindowDay": 0.28305531167690956,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.4242178055222436
+   },
+   {
+    "flagsInQuiet": 396,
+    "flagsPerQuietWindowDay": 0.2781387181738367,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.4418186469089556
+   },
+   {
+    "flagsInQuiet": 388,
+    "flagsPerQuietWindowDay": 0.27251975417032487,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.4602407216285176
+   },
+   {
+    "flagsInQuiet": 379,
+    "flagsPerQuietWindowDay": 0.26619841966637403,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.478487021941135
+   },
+   {
+    "flagsInQuiet": 373,
+    "flagsPerQuietWindowDay": 0.2619841966637401,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.496360386518594
+   },
+   {
+    "flagsInQuiet": 364,
+    "flagsPerQuietWindowDay": 0.2556628621597893,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.5153425981491293
+   },
+   {
+    "flagsInQuiet": 359,
+    "flagsPerQuietWindowDay": 0.2521510096575944,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.5342836177474586
+   },
+   {
+    "flagsInQuiet": 349,
+    "flagsPerQuietWindowDay": 0.24512730465320456,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.5514919501893307
+   },
+   {
+    "flagsInQuiet": 342,
+    "flagsPerQuietWindowDay": 0.2402107111501317,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.5701953026449056
+   },
+   {
+    "flagsInQuiet": 332,
+    "flagsPerQuietWindowDay": 0.23318700614574187,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.588571530600395
+   },
+   {
+    "flagsInQuiet": 324,
+    "flagsPerQuietWindowDay": 0.22756804214223003,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.608700601116688
+   },
+   {
+    "flagsInQuiet": 315,
+    "flagsPerQuietWindowDay": 0.2212467076382792,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.625789557945813
+   },
+   {
+    "flagsInQuiet": 309,
+    "flagsPerQuietWindowDay": 0.2170324846356453,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.644236371721097
+   },
+   {
+    "flagsInQuiet": 301,
+    "flagsPerQuietWindowDay": 0.21141352063213345,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.663114740620442
+   },
+   {
+    "flagsInQuiet": 295,
+    "flagsPerQuietWindowDay": 0.20719929762949957,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.6820847434744342
+   },
+   {
+    "flagsInQuiet": 291,
+    "flagsPerQuietWindowDay": 0.20438981562774364,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.7027782464085033
+   },
+   {
+    "flagsInQuiet": 286,
+    "flagsPerQuietWindowDay": 0.20087796312554873,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.7201942861076036
+   },
+   {
+    "flagsInQuiet": 279,
+    "flagsPerQuietWindowDay": 0.19596136962247585,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.7386711523904286
+   },
+   {
+    "flagsInQuiet": 275,
+    "flagsPerQuietWindowDay": 0.19315188762071994,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.7558525282421658
+   },
+   {
+    "flagsInQuiet": 272,
+    "flagsPerQuietWindowDay": 0.191044776119403,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.7750029014370146
+   },
+   {
+    "flagsInQuiet": 268,
+    "flagsPerQuietWindowDay": 0.18823529411764706,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.794898295575523
+   },
+   {
+    "flagsInQuiet": 257,
+    "flagsPerQuietWindowDay": 0.18050921861281827,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.8136684542483947
+   },
+   {
+    "flagsInQuiet": 253,
+    "flagsPerQuietWindowDay": 0.17769973661106234,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.8348195546316886
+   },
+   {
+    "flagsInQuiet": 249,
+    "flagsPerQuietWindowDay": 0.1748902546093064,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.8550960658180038
+   },
+   {
+    "flagsInQuiet": 244,
+    "flagsPerQuietWindowDay": 0.1713784021071115,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.8767855195100103
+   },
+   {
+    "flagsInQuiet": 238,
+    "flagsPerQuietWindowDay": 0.16716417910447762,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.8965506064270534
+   },
+   {
+    "flagsInQuiet": 231,
+    "flagsPerQuietWindowDay": 0.16224758560140473,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.9173823924526667
+   },
+   {
+    "flagsInQuiet": 225,
+    "flagsPerQuietWindowDay": 0.15803336259877085,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.9392404560522654
+   },
+   {
+    "flagsInQuiet": 218,
+    "flagsPerQuietWindowDay": 0.153116769095698,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.9596117379003637
+   },
+   {
+    "flagsInQuiet": 215,
+    "flagsPerQuietWindowDay": 0.15100965759438104,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.9782165578330995
+   },
+   {
+    "flagsInQuiet": 210,
+    "flagsPerQuietWindowDay": 0.14749780509218613,
+    "quietWindowDays": 1423.75,
+    "threshold": 1.9998503023987353
+   },
+   {
+    "flagsInQuiet": 202,
+    "flagsPerQuietWindowDay": 0.14187884108867427,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.02125804874365
+   },
+   {
+    "flagsInQuiet": 195,
+    "flagsPerQuietWindowDay": 0.1369622475856014,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.042364988131836
+   },
+   {
+    "flagsInQuiet": 192,
+    "flagsPerQuietWindowDay": 0.13485513608428445,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.062897828284202
+   },
+   {
+    "flagsInQuiet": 190,
+    "flagsPerQuietWindowDay": 0.1334503950834065,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.0864067728333904
+   },
+   {
+    "flagsInQuiet": 189,
+    "flagsPerQuietWindowDay": 0.13274802458296753,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.107449259387256
+   },
+   {
+    "flagsInQuiet": 186,
+    "flagsPerQuietWindowDay": 0.13064091308165057,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.129964155888193
+   },
+   {
+    "flagsInQuiet": 177,
+    "flagsPerQuietWindowDay": 0.12431957857769974,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.1518523057555865
+   },
+   {
+    "flagsInQuiet": 170,
+    "flagsPerQuietWindowDay": 0.11940298507462686,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.175749021732322
+   },
+   {
+    "flagsInQuiet": 165,
+    "flagsPerQuietWindowDay": 0.11589113257243196,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.1989016904267173
+   },
+   {
+    "flagsInQuiet": 160,
+    "flagsPerQuietWindowDay": 0.11237928007023705,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.2219264893443538
+   },
+   {
+    "flagsInQuiet": 155,
+    "flagsPerQuietWindowDay": 0.10886742756804214,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.244550793502835
+   },
+   {
+    "flagsInQuiet": 150,
+    "flagsPerQuietWindowDay": 0.10535557506584724,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.2664549893193833
+   },
+   {
+    "flagsInQuiet": 145,
+    "flagsPerQuietWindowDay": 0.10184372256365233,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.289662255229345
+   },
+   {
+    "flagsInQuiet": 139,
+    "flagsPerQuietWindowDay": 0.09762949956101843,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.3146175523023205
+   },
+   {
+    "flagsInQuiet": 132,
+    "flagsPerQuietWindowDay": 0.09271290605794556,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.3390720667571037
+   },
+   {
+    "flagsInQuiet": 126,
+    "flagsPerQuietWindowDay": 0.08849868305531168,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.363268808842092
+   },
+   {
+    "flagsInQuiet": 123,
+    "flagsPerQuietWindowDay": 0.08639157155399473,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.3865905865751063
+   },
+   {
+    "flagsInQuiet": 117,
+    "flagsPerQuietWindowDay": 0.08217734855136084,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.4127372792896784
+   },
+   {
+    "flagsInQuiet": 109,
+    "flagsPerQuietWindowDay": 0.076558384547849,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.438660262534125
+   },
+   {
+    "flagsInQuiet": 108,
+    "flagsPerQuietWindowDay": 0.07585601404741,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.4662572876915756
+   },
+   {
+    "flagsInQuiet": 104,
+    "flagsPerQuietWindowDay": 0.07304653204565409,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.4942876989842615
+   },
+   {
+    "flagsInQuiet": 101,
+    "flagsPerQuietWindowDay": 0.07093942054433713,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.5221677351939396
+   },
+   {
+    "flagsInQuiet": 93,
+    "flagsPerQuietWindowDay": 0.06532045654082529,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.5535853737027527
+   },
+   {
+    "flagsInQuiet": 90,
+    "flagsPerQuietWindowDay": 0.06321334503950835,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.582474891049514
+   },
+   {
+    "flagsInQuiet": 85,
+    "flagsPerQuietWindowDay": 0.05970149253731343,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.611841617521903
+   },
+   {
+    "flagsInQuiet": 82,
+    "flagsPerQuietWindowDay": 0.05759438103599649,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.6424725621737504
+   },
+   {
+    "flagsInQuiet": 77,
+    "flagsPerQuietWindowDay": 0.05408252853380158,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.676757129429909
+   },
+   {
+    "flagsInQuiet": 73,
+    "flagsPerQuietWindowDay": 0.05127304653204565,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.7113789681681006
+   },
+   {
+    "flagsInQuiet": 68,
+    "flagsPerQuietWindowDay": 0.04776119402985075,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.7467044139308365
+   },
+   {
+    "flagsInQuiet": 64,
+    "flagsPerQuietWindowDay": 0.04495171202809482,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.7832571019373584
+   },
+   {
+    "flagsInQuiet": 60,
+    "flagsPerQuietWindowDay": 0.04214223002633889,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.822805108642356
+   },
+   {
+    "flagsInQuiet": 58,
+    "flagsPerQuietWindowDay": 0.040737489025460934,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.8642098386612034
+   },
+   {
+    "flagsInQuiet": 56,
+    "flagsPerQuietWindowDay": 0.03933274802458297,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.910730747035971
+   },
+   {
+    "flagsInQuiet": 52,
+    "flagsPerQuietWindowDay": 0.036523266022827044,
+    "quietWindowDays": 1423.75,
+    "threshold": 2.9567651731944693
+   },
+   {
+    "flagsInQuiet": 50,
+    "flagsPerQuietWindowDay": 0.03511852502194908,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.0125203273872856
+   },
+   {
+    "flagsInQuiet": 49,
+    "flagsPerQuietWindowDay": 0.034416154521510096,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.0744637974635745
+   },
+   {
+    "flagsInQuiet": 48,
+    "flagsPerQuietWindowDay": 0.033713784021071114,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.140143694679713
+   },
+   {
+    "flagsInQuiet": 44,
+    "flagsPerQuietWindowDay": 0.03090430201931519,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.213795940479771
+   },
+   {
+    "flagsInQuiet": 42,
+    "flagsPerQuietWindowDay": 0.029499561018437225,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.2871935300093322
+   },
+   {
+    "flagsInQuiet": 38,
+    "flagsPerQuietWindowDay": 0.0266900790166813,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.3694854163377737
+   },
+   {
+    "flagsInQuiet": 33,
+    "flagsPerQuietWindowDay": 0.02317822651448639,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.463040656579772
+   },
+   {
+    "flagsInQuiet": 28,
+    "flagsPerQuietWindowDay": 0.019666374012291484,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.563770369005893
+   },
+   {
+    "flagsInQuiet": 27,
+    "flagsPerQuietWindowDay": 0.0189640035118525,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.664721710282934
+   },
+   {
+    "flagsInQuiet": 23,
+    "flagsPerQuietWindowDay": 0.016154521510096578,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.791302336456944
+   },
+   {
+    "flagsInQuiet": 19,
+    "flagsPerQuietWindowDay": 0.01334503950834065,
+    "quietWindowDays": 1423.75,
+    "threshold": 3.9434070679201354
+   },
+   {
+    "flagsInQuiet": 16,
+    "flagsPerQuietWindowDay": 0.011237928007023706,
+    "quietWindowDays": 1423.75,
+    "threshold": 4.135231292207659
+   },
+   {
+    "flagsInQuiet": 13,
+    "flagsPerQuietWindowDay": 0.009130816505706761,
+    "quietWindowDays": 1423.75,
+    "threshold": 4.4222327306531914
+   },
+   {
+    "flagsInQuiet": 9,
+    "flagsPerQuietWindowDay": 0.006321334503950834,
+    "quietWindowDays": 1423.75,
+    "threshold": 5.032142294939613
+   },
+   {
+    "flagsInQuiet": 6,
+    "flagsPerQuietWindowDay": 0.004214223002633889,
+    "quietWindowDays": 1423.75,
+    "threshold": 6.749167576493565
+   }
+  ]
+ },
+ "E1c": {
+  "clears": false,
+  "labelShuffledIncrement": {
+   "clusterKind": "truth spacecraft",
+   "clusters": 11,
+   "floorRecall": 0.009700176366843033,
+   "fullRecall": 0.009700176366843033,
+   "increment": 0.0,
+   "incrementClustered95": [
+    0.0,
+    0.0
+   ],
+   "lowerBoundAboveZero": false,
+   "measured": true,
+   "n": 1134,
+   "note": "a PAIRED bootstrap over ELEVEN clusters. The interval is the interval of the difference. An increment whose interval straddles zero is NOT DEMONSTRATED, never a trend.",
+   "resamples": 2000,
+   "seed": 20260922
+  },
+  "paired": {
+   "clusterKind": "truth spacecraft",
+   "clusters": 11,
+   "floorRecall": 0.05114638447971781,
+   "fullRecall": 0.05114638447971781,
+   "increment": 0.0,
+   "incrementClustered95": [
+    0.0,
+    0.0
+   ],
+   "lowerBoundAboveZero": false,
+   "measured": true,
+   "n": 1134,
+   "note": "a PAIRED bootstrap over ELEVEN clusters. The interval is the interval of the difference. An increment whose interval straddles zero is NOT DEMONSTRATED, never a trend.",
+   "resamples": 2000,
+   "seed": 20260922
+  },
+  "screen": "registration 3.2: the full model's recall increment above the cadence-only floor, at the same matched false-flag rate, must have an object-clustered bootstrap lower bound above zero. Failing means the model measures the sampling schedule."
+ },
+ "E3": {
+  "dispersion": {
+   "classes": 8,
+   "difference": 0.0,
+   "differenceClustered95": [
+    0.0,
+    0.0
+   ],
+   "floorBarPublished": 6.9,
+   "floorP90OverP10": 6.899681491969196,
+   "fullP90OverP10": 6.899681491969196,
+   "lowerBoundAboveZero": false,
+   "measured": true,
+   "resamples": 2000,
+   "screen": "registration 3.4: the screen FIRES unless the full model's dispersion is below the cadence-only floor's with a bootstrap lower bound on the difference above zero. A score whose rate is predicted by sampling class is measuring sampling class.",
+   "screenFires": true,
+   "shippedDetector": 3.433
+  },
+  "floorRatioPublished": 9.415,
+  "floorThresholdFixedOnPassiveNull": 8.261870718002324,
+  "passiveNull": {
+   "classes": {
+    "__abstained__": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 4,
+     "underpowered": true,
+     "windowDays": 9720.0,
+     "windows": 9
+    },
+    "g1:0": {
+     "flags": 615,
+     "flagsPerWindowDay": 0.0057519640852974185,
+     "objects": 83,
+     "underpowered": false,
+     "windowDays": 106920.0,
+     "windows": 99
+    },
+    "g1:1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 6,
+     "underpowered": true,
+     "windowDays": 7560.0,
+     "windows": 7
+    },
+    "g1:2": {
+     "flags": 8,
+     "flagsPerWindowDay": 0.0006172839506172839,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 12960.0,
+     "windows": 12
+    },
+    "g1g2:2-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2:3-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3:0-2-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 6,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2g3:1-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 4,
+     "underpowered": true,
+     "windowDays": 4320.0,
+     "windows": 4
+    },
+    "g1g2g3:1-3-1": {
+     "flags": 53,
+     "flagsPerWindowDay": 0.0061342592592592594,
+     "objects": 6,
+     "underpowered": true,
+     "windowDays": 8640.0,
+     "windows": 8
+    },
+    "g1g2g3g4:0-1-2-2": {
+     "flags": 908,
+     "flagsPerWindowDay": 0.014495530012771393,
+     "objects": 43,
+     "underpowered": false,
+     "windowDays": 62640.0,
+     "windows": 58
+    },
+    "g1g2g3g4:0-2-0-1": {
+     "flags": 16,
+     "flagsPerWindowDay": 0.000462962962962963,
+     "objects": 24,
+     "underpowered": false,
+     "windowDays": 34560.0,
+     "windows": 32
+    },
+    "g1g2g3g4:0-2-1-1": {
+     "flags": 53,
+     "flagsPerWindowDay": 0.0003864100320793234,
+     "objects": 93,
+     "underpowered": false,
+     "windowDays": 137160.0,
+     "windows": 127
+    },
+    "g1g2g3g4:0-2-1-2": {
+     "flags": 118,
+     "flagsPerWindowDay": 0.00048131832272801434,
+     "objects": 146,
+     "underpowered": false,
+     "windowDays": 245160.0,
+     "windows": 227
+    },
+    "g1g2g3g4:0-2-2-2": {
+     "flags": 607,
+     "flagsPerWindowDay": 0.008781828703703703,
+     "objects": 48,
+     "underpowered": false,
+     "windowDays": 69120.0,
+     "windows": 64
+    },
+    "g1g2g3g4:0-3-0-0": {
+     "flags": 5,
+     "flagsPerWindowDay": 2.6916451335055986e-05,
+     "objects": 153,
+     "underpowered": false,
+     "windowDays": 185760.0,
+     "windows": 172
+    },
+    "g1g2g3g4:0-3-0-1": {
+     "flags": 288,
+     "flagsPerWindowDay": 0.00028368794326241134,
+     "objects": 378,
+     "underpowered": false,
+     "windowDays": 1015200.0,
+     "windows": 940
+    },
+    "g1g2g3g4:0-3-0-2": {
+     "flags": 18,
+     "flagsPerWindowDay": 0.000641025641025641,
+     "objects": 20,
+     "underpowered": false,
+     "windowDays": 28080.0,
+     "windows": 26
+    },
+    "g1g2g3g4:0-3-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 19,
+     "underpowered": true,
+     "windowDays": 21600.0,
+     "windows": 20
+    },
+    "g1g2g3g4:0-3-1-1": {
+     "flags": 1257,
+     "flagsPerWindowDay": 0.001747580914247581,
+     "objects": 271,
+     "underpowered": false,
+     "windowDays": 719280.0,
+     "windows": 666
+    },
+    "g1g2g3g4:0-3-1-2": {
+     "flags": 386,
+     "flagsPerWindowDay": 0.003003423591658886,
+     "objects": 79,
+     "underpowered": false,
+     "windowDays": 128520.0,
+     "windows": 119
+    },
+    "g1g2g3g4:0-3-2-1": {
+     "flags": 58,
+     "flagsPerWindowDay": 0.0020655270655270657,
+     "objects": 19,
+     "underpowered": true,
+     "windowDays": 28080.0,
+     "windows": 26
+    },
+    "g1g2g3g4:1-0-1-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 8,
+     "underpowered": true,
+     "windowDays": 10800.0,
+     "windows": 10
+    },
+    "g1g2g3g4:1-0-2-2": {
+     "flags": 325,
+     "flagsPerWindowDay": 0.004629629629629629,
+     "objects": 30,
+     "underpowered": false,
+     "windowDays": 70200.0,
+     "windows": 65
+    },
+    "g1g2g3g4:1-1-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:1-1-1-1": {
+     "flags": 24,
+     "flagsPerWindowDay": 0.0002554278416347382,
+     "objects": 60,
+     "underpowered": false,
+     "windowDays": 93960.0,
+     "windows": 87
+    },
+    "g1g2g3g4:1-1-1-2": {
+     "flags": 159,
+     "flagsPerWindowDay": 0.0007146709816612729,
+     "objects": 121,
+     "underpowered": false,
+     "windowDays": 222480.0,
+     "windows": 206
+    },
+    "g1g2g3g4:1-1-2-1": {
+     "flags": 2,
+     "flagsPerWindowDay": 0.00026455026455026457,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 7560.0,
+     "windows": 7
+    },
+    "g1g2g3g4:1-1-2-2": {
+     "flags": 459,
+     "flagsPerWindowDay": 0.0017206477732793523,
+     "objects": 147,
+     "underpowered": false,
+     "windowDays": 266760.0,
+     "windows": 247
+    },
+    "g1g2g3g4:1-2-0-0": {
+     "flags": 3,
+     "flagsPerWindowDay": 0.00030864197530864197,
+     "objects": 8,
+     "underpowered": true,
+     "windowDays": 9720.0,
+     "windows": 9
+    },
+    "g1g2g3g4:1-2-0-1": {
+     "flags": 1,
+     "flagsPerWindowDay": 6.17283950617284e-05,
+     "objects": 14,
+     "underpowered": true,
+     "windowDays": 16200.0,
+     "windows": 15
+    },
+    "g1g2g3g4:1-2-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 5,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2g3g4:1-2-1-1": {
+     "flags": 34,
+     "flagsPerWindowDay": 0.00018964747880410531,
+     "objects": 95,
+     "underpowered": false,
+     "windowDays": 179280.0,
+     "windows": 166
+    },
+    "g1g2g3g4:1-2-1-2": {
+     "flags": 39,
+     "flagsPerWindowDay": 0.0006335282651072125,
+     "objects": 44,
+     "underpowered": false,
+     "windowDays": 61560.0,
+     "windows": 57
+    },
+    "g1g2g3g4:1-2-2-1": {
+     "flags": 8,
+     "flagsPerWindowDay": 0.0006172839506172839,
+     "objects": 10,
+     "underpowered": true,
+     "windowDays": 12960.0,
+     "windows": 12
+    },
+    "g1g2g3g4:1-2-2-2": {
+     "flags": 108,
+     "flagsPerWindowDay": 0.005,
+     "objects": 17,
+     "underpowered": true,
+     "windowDays": 21600.0,
+     "windows": 20
+    },
+    "g1g2g3g4:1-3-0-0": {
+     "flags": 1,
+     "flagsPerWindowDay": 0.00030864197530864197,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:2-0-1-2": {
+     "flags": 26,
+     "flagsPerWindowDay": 0.0006172839506172839,
+     "objects": 34,
+     "underpowered": false,
+     "windowDays": 42120.0,
+     "windows": 39
+    },
+    "g1g2g3g4:2-0-2-2": {
+     "flags": 783,
+     "flagsPerWindowDay": 0.0014529058116232465,
+     "objects": 167,
+     "underpowered": false,
+     "windowDays": 538920.0,
+     "windows": 499
+    },
+    "g1g2g3g4:2-1-1-1": {
+     "flags": 4,
+     "flagsPerWindowDay": 3.5958288385472854e-05,
+     "objects": 59,
+     "underpowered": false,
+     "windowDays": 111240.0,
+     "windows": 103
+    },
+    "g1g2g3g4:2-1-1-2": {
+     "flags": 17,
+     "flagsPerWindowDay": 0.00010931069958847737,
+     "objects": 84,
+     "underpowered": false,
+     "windowDays": 155520.0,
+     "windows": 144
+    },
+    "g1g2g3g4:2-1-2-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 15,
+     "underpowered": true,
+     "windowDays": 25920.0,
+     "windows": 24
+    },
+    "g1g2g3g4:2-1-2-2": {
+     "flags": 1234,
+     "flagsPerWindowDay": 0.005628534938879767,
+     "objects": 109,
+     "underpowered": false,
+     "windowDays": 219240.0,
+     "windows": 203
+    },
+    "g1g2g3g4:2-2-0-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:2-2-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:2-2-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 17280.0,
+     "windows": 16
+    },
+    "g1g2g3g4:2-2-2-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:3-0-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 8,
+     "underpowered": true,
+     "windowDays": 10800.0,
+     "windows": 10
+    },
+    "g1g2g3g4:3-0-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 31,
+     "underpowered": false,
+     "windowDays": 38880.0,
+     "windows": 36
+    },
+    "g1g2g3g4:3-0-1-2": {
+     "flags": 74,
+     "flagsPerWindowDay": 0.0011051373954599761,
+     "objects": 47,
+     "underpowered": false,
+     "windowDays": 66960.0,
+     "windows": 62
+    },
+    "g1g2g3g4:3-0-2-0": {
+     "flags": 2,
+     "flagsPerWindowDay": 0.00014245014245014244,
+     "objects": 11,
+     "underpowered": true,
+     "windowDays": 14040.0,
+     "windows": 13
+    },
+    "g1g2g3g4:3-0-2-1": {
+     "flags": 25,
+     "flagsPerWindowDay": 0.00017670342097823015,
+     "objects": 80,
+     "underpowered": false,
+     "windowDays": 141480.0,
+     "windows": 131
+    },
+    "g1g2g3g4:3-0-2-2": {
+     "flags": 1725,
+     "flagsPerWindowDay": 0.0006779381248820977,
+     "objects": 306,
+     "underpowered": false,
+     "windowDays": 2544480.0,
+     "windows": 2356
+    },
+    "g1g2g3g4:3-1-1-1": {
+     "flags": 31,
+     "flagsPerWindowDay": 0.001025132275132275,
+     "objects": 18,
+     "underpowered": true,
+     "windowDays": 30240.0,
+     "windows": 28
+    },
+    "g1g2g3g4:3-1-1-2": {
+     "flags": 32,
+     "flagsPerWindowDay": 0.0008008008008008008,
+     "objects": 21,
+     "underpowered": false,
+     "windowDays": 39960.0,
+     "windows": 37
+    },
+    "g1g2g3g4:3-1-2-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:3-1-2-2": {
+     "flags": 61,
+     "flagsPerWindowDay": 0.0011074800290486566,
+     "objects": 32,
+     "underpowered": false,
+     "windowDays": 55080.0,
+     "windows": 51
+    }
+   },
+   "exposureGate": [
+    "g1g2g3g4:0-2-1-2",
+    "g1g2g3g4:0-3-0-1",
+    "g1g2g3g4:0-3-1-1",
+    "g1g2g3g4:1-1-1-2",
+    "g1g2g3g4:1-1-2-2",
+    "g1g2g3g4:2-0-2-2",
+    "g1g2g3g4:2-1-2-2",
+    "g1g2g3g4:3-0-2-2"
+   ],
+   "flagsPerWindowDay": 0.0005570013240195407,
+   "objects": 1000,
+   "totalFlags": 4392,
+   "totalWindowDays": 7885080.0
+  },
+  "ratio": 9.415331723465524,
+  "regimeMatchedControl": {
+   "flagsPerWindowDay": 0.0020230314347961407,
+   "measured": true,
+   "note": "amendment 2 A2.1: the SAME passive class, partition, admissibility rule, hash order and cap, restricted to GEO. The threshold does not move -- it is the one fixed on the registered all-regime null.",
+   "objects": 75,
+   "ratio": 2.592323651452282,
+   "totalFlags": 1040,
+   "totalWindowDays": 514080.0,
+   "underpowered": false
+  },
+  "registeredFalseAlarmFraction": 0.01,
+  "routineOperations": {
+   "classes": {
+    "g1:0": {
+     "flags": 73,
+     "flagsPerWindowDay": 0.033796296296296297,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 2160.0,
+     "windows": 2
+    },
+    "g1:2": {
+     "flags": 12,
+     "flagsPerWindowDay": 0.001851851851851852,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2:2-2": {
+     "flags": 12,
+     "flagsPerWindowDay": 0.005555555555555556,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 2160.0,
+     "windows": 2
+    },
+    "g1g2g3:1-3-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:0-1-2-2": {
+     "flags": 73,
+     "flagsPerWindowDay": 0.033796296296296297,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 2160.0,
+     "windows": 2
+    },
+    "g1g2g3g4:0-2-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 10800.0,
+     "windows": 10
+    },
+    "g1g2g3g4:0-2-1-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 8640.0,
+     "windows": 8
+    },
+    "g1g2g3g4:0-2-2-2": {
+     "flags": 118,
+     "flagsPerWindowDay": 0.027314814814814816,
+     "objects": 4,
+     "underpowered": true,
+     "windowDays": 4320.0,
+     "windows": 4
+    },
+    "g1g2g3g4:0-3-0-0": {
+     "flags": 105,
+     "flagsPerWindowDay": 0.019444444444444445,
+     "objects": 5,
+     "underpowered": true,
+     "windowDays": 5400.0,
+     "windows": 5
+    },
+    "g1g2g3g4:0-3-0-1": {
+     "flags": 623,
+     "flagsPerWindowDay": 0.015180311890838207,
+     "objects": 20,
+     "underpowered": false,
+     "windowDays": 41040.0,
+     "windows": 38
+    },
+    "g1g2g3g4:0-3-0-2": {
+     "flags": 81,
+     "flagsPerWindowDay": 0.0125,
+     "objects": 4,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2g3g4:0-3-1-1": {
+     "flags": 238,
+     "flagsPerWindowDay": 0.004320987654320987,
+     "objects": 18,
+     "underpowered": true,
+     "windowDays": 55080.0,
+     "windows": 51
+    },
+    "g1g2g3g4:0-3-1-2": {
+     "flags": 730,
+     "flagsPerWindowDay": 0.051994301994301995,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 14040.0,
+     "windows": 13
+    },
+    "g1g2g3g4:0-3-2-1": {
+     "flags": 26,
+     "flagsPerWindowDay": 0.008024691358024692,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:1-1-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:1-1-2-2": {
+     "flags": 1,
+     "flagsPerWindowDay": 0.0002314814814814815,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 4320.0,
+     "windows": 4
+    },
+    "g1g2g3g4:1-2-0-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 7,
+     "underpowered": true,
+     "windowDays": 8640.0,
+     "windows": 8
+    },
+    "g1g2g3g4:1-2-0-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:1-2-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 5,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2g3g4:1-2-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 11,
+     "underpowered": true,
+     "windowDays": 22680.0,
+     "windows": 21
+    },
+    "g1g2g3g4:1-2-2-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:1-3-0-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 3240.0,
+     "windows": 3
+    },
+    "g1g2g3g4:2-0-2-2": {
+     "flags": 42,
+     "flagsPerWindowDay": 0.005555555555555556,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 7560.0,
+     "windows": 7
+    },
+    "g1g2g3g4:2-1-1-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 2160.0,
+     "windows": 2
+    },
+    "g1g2g3g4:2-1-1-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 2160.0,
+     "windows": 2
+    },
+    "g1g2g3g4:2-1-2-1": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:2-1-2-2": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 3,
+     "underpowered": true,
+     "windowDays": 6480.0,
+     "windows": 6
+    },
+    "g1g2g3g4:2-2-1-0": {
+     "flags": 0,
+     "flagsPerWindowDay": 0.0,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 1080.0,
+     "windows": 1
+    },
+    "g1g2g3g4:2-2-1-1": {
+     "flags": 15,
+     "flagsPerWindowDay": 0.001736111111111111,
+     "objects": 4,
+     "underpowered": true,
+     "windowDays": 8640.0,
+     "windows": 8
+    },
+    "g1g2g3g4:2-2-2-1": {
+     "flags": 3,
+     "flagsPerWindowDay": 0.0005555555555555556,
+     "objects": 1,
+     "underpowered": true,
+     "windowDays": 5400.0,
+     "windows": 5
+    },
+    "g1g2g3g4:3-0-2-2": {
+     "flags": 192,
+     "flagsPerWindowDay": 0.01616161616161616,
+     "objects": 2,
+     "underpowered": true,
+     "windowDays": 11880.0,
+     "windows": 11
+    }
+   },
+   "exposureGate": [],
+   "flagsPerWindowDay": 0.0052443522360534804,
+   "objects": 41,
+   "source": "docs/t10b-drift-control-20260922.jsonl north-south keepers, test partition",
+   "totalFlags": 1365,
+   "totalWindowDays": 260280.0
+  },
+  "screenE3": {
+   "fires": true,
+   "improvesOnFloor": false,
+   "screen": "the routine-keeper flag rate may not exceed the passive null's by more than 3.0; the screen is read on the REGISTERED ratio (amendment 2 A2.1) and the matched ratio is published beside it"
+  },
+  "t14Comparator": {
+   "measured": false,
+   "reason": "registration 3.4 requires T14's own tail-rank score on the identical populations and threshold. T14 is DESIGN LANDED with no registration and no instrument, so no tail-rank score exists to run. The comparator is UNMEASURED, never a pass, and the learned score is not credited with beating it."
+  },
+  "t3CadenceCarriers": {
+   "measured": false,
+   "reason": "registration 3.4 admits the T3 14.00 d inclination-line carriers only WHERE THEIR NORADS ARE RECOVERABLE FROM A COMMITTED ARTIFACT. The committed line artefact carries 8 named top carriers for that line, not the 56 named comsats, and 8 is below gate G7's bar of 20. The population is UNMEASURED, never zero, and lends its name to nothing."
+  },
+  "thresholdFixedOnPassiveNull": 8.261870718002324
+ },
+ "G5_leakageAudit": {
+  "note": "the distribution is published; it is not asserted to show the split worked",
+  "statistic": "cosine similarity of a test window's frozen embedding to its nearest training window",
+  "testToTrain": {
+   "5": 0.713543176651001,
+   "25": 0.948098361492157,
+   "50": 0.9901453256607056,
+   "75": 0.9958922266960144,
+   "95": 0.9984012842178345,
+   "99": 0.9991773366928101
+  },
+  "trainToTrain": {
+   "5": 0.9859755039215088,
+   "25": 0.9935675859451294,
+   "50": 0.9963041543960571,
+   "75": 0.9980717897415161,
+   "95": 0.9993654489517212,
+   "99": 0.9997047781944275
+  }
+ },
+ "G_geometryProbe": {
+  "behaviourProbe_T13v2": {
+   "accuracy": 0.396798652064027,
+   "bootstrapDraws": 2000,
+   "classes": 29,
+   "majorityRate": 0.22620050547598988,
+   "measured": true,
+   "n": 2374,
+   "normalised": 0.22046815459989116,
+   "normalisedClustered95": [
+    0.1657785777819948,
+    0.2719242266330956
+   ],
+   "objects": 448,
+   "seed": 20260922
+  },
+  "behaviourProbe_T14fallback": {
+   "accuracy": 0.40421052631578946,
+   "bootstrapDraws": 2000,
+   "classes": 25,
+   "majorityRate": 0.22736842105263158,
+   "measured": true,
+   "n": 2375,
+   "normalised": 0.2288828337874659,
+   "normalisedClustered95": [
+    0.1762112711743158,
+    0.27822906473690967
+   ],
+   "objects": 447,
+   "seed": 20260922
+  },
+  "samplingProbe": {
+   "accuracy": 0.5508830950378469,
+   "bootstrapDraws": 2000,
+   "classes": 55,
+   "majorityRate": 0.30067283431455005,
+   "measured": true,
+   "n": 2378,
+   "normalised": 0.3577871316897174,
+   "normalisedClustered95": [
+    0.300402057792439,
+    0.41596766128491236
+   ],
+   "objects": 449,
+   "seed": 20260922
+  },
+  "t13Ledger": {
+   "measured": true,
+   "objects": 3698,
+   "reason": null,
+   "rows": 10326,
+   "typedRows": 6374
+  },
+  "t13SubsetLimitation": "the committed v2 ledger is a SUBSET -- every burn another instrument also labelled plus a seeded uniform sample of the rest, 10,326 rows of 3,914,621 -- so which windows carry a type is biased toward windows another instrument also flagged. Stronger than the T14 fallback; still not a gate against a complete typing.",
+  "t13WindowsCovered": {
+   "test": 76,
+   "testFraction": 0.031932773109243695,
+   "train": 83,
+   "trainFraction": 0.010304158907510862,
+   "underpowered": false
+  },
+  "testWindows": 2380,
+  "trainWindows": 8055,
+  "verdict_T13v2": {
+   "behaviourNormalised": 0.22046815459989116,
+   "margin": -0.1373189770898262,
+   "samplingNormalised": 0.3577871316897174,
+   "verdict": "FAIL"
+  },
+  "verdict_T14fallback": {
+   "behaviourNormalised": 0.2288828337874659,
+   "margin": -0.12890429790225147,
+   "samplingNormalised": 0.3577871316897174,
+   "verdict": "FAIL"
+  }
+ },
+ "amendments": {
+  "1": "3979f4e (E2 bars)",
+  "2": "91ceede (four ambiguities)"
+ },
+ "baseline": {
+  "binKeyNote": "the keys are `truthset_recall.bin_of`'s own. A baseline quoted under a different key is compared against nothing, and the reversal clause then reads as silence rather than as a comparison.",
+  "byDaBin": {
+   "0-20 m": [
+    6,
+    576
+   ],
+   "100-200 m": [
+    10,
+    27
+   ],
+   "20-50 m": [
+    2,
+    342
+   ],
+   "200-500 m": [
+    21,
+    36
+   ],
+   "50-100 m": [
+    1,
+    53
+   ],
+   ">=500 m": [
+    50,
+    100
+   ]
+  },
+  "flagsPerQuietWindowDay": 0.012642669007901668,
+  "instrument": "tools/proximity_plane.detect_manoeuvres, shipped settings, imported and called, never edited",
+  "recall": {
+   "k": 90,
+   "n": 1134,
+   "recall": 0.07936507936507936,
+   "wilson95": [
+    0.06501510889203253,
+    0.09655525523650489
+   ]
+  }
+ },
+ "checkpoint": "/home/sdegan/t18-work/ckpt-cadence.pt",
+ "checkpointSha256": null,
+ "compositionLimits": [
+  "The labels are ELEVEN GEODETIC AND ALTIMETRY SPACECRAFT, not constellations: CryoSat-2, Sentinel-3A, Sentinel-3B, Jason-1, Jason-2, Jason-3, SWOT, SARAL, HY-2A, TOPEX/Poseidon, Sentinel-6A.",
+  "No figure here is 'the model's recall' without the qualifier: on this labelled set, these eleven geodetic and altimetry spacecraft, these burn sizes.",
+  "Nothing here says anything about Starlink, about any constellation, or about any operator whose manoeuvre log is not public. A constellation-class labelled baseline remains UNMEASURED.",
+  "Eleven cooperative, exceptionally well-tracked spacecraft are not a census. What makes them measurable makes them unrepresentative.",
+  "Recall and precision measured on different populations do not compose.",
+  "Every threshold here is a chosen screen, not a physical law."
+ ],
+ "floor": {
+  "dispersion": 6.9,
+  "e3Ratio": 9.415,
+  "note": "every number below is an increment above THIS, with it printed beside, and never an increment above the shipped detector's 7.937%.",
+  "recall": {
+   "k": 58,
+   "n": 1134,
+   "recall": 0.05114638447971781,
+   "wilson95": [
+    0.03977,
+    0.06564
+   ]
+  },
+  "source": "docs/t18-floor-20260922.json (c62b298)"
+ },
+ "floorCheckpoint": "/home/sdegan/t18-work/ckpt-cadence.pt",
+ "floorVariant": "cadence",
+ "generatedUtc": "2026-09-22T21:42:46+00:00",
+ "modelMeta": {
+  "bestValidationNll": 1.6774691343307495,
+  "claimMiB": 2048,
+  "coTenanted": true,
+  "device": {
+   "cudaVisibleDevices": "GPU-e7724e1e-bdd0-0671-dd83-00b1177c7c0e",
+   "device": "cuda",
+   "name": "NVIDIA GeForce RTX 4080",
+   "totalMiB": 16375.5
+  },
+  "durationS": 745.2344706058502,
+  "learnedDegreesOfFreedom": {
+   "dARGP_deg": 2.0058553218841553,
+   "dA_km": 2.0071120262145996,
+   "dAlongTrack_km": 2.1868233680725098,
+   "dCrossTrack_km": 2.4481124877929688,
+   "dE": 2.6492228507995605,
+   "dI_deg": 2.006789445877075,
+   "dM_deg": 2.053255558013916,
+   "dRAAN_deg": 2.0040502548217773,
+   "dRadial_km": 2.004214286804199
+  },
+  "parameters": 696475,
+  "peakMiB": 798.0,
+  "rateMarkSeconds": null,
+  "seed": 20260922,
+  "startedUtc": "2026-09-22T20:14:08+00:00",
+  "stepRateMark": null,
+  "steps": 20000,
+  "wholeRunReprice": null
+ },
+ "modelVersion": "t18-learned-model/20260922/cadence",
+ "registration": "docs/t18-preregistration-20260922.md",
+ "registrationCommit": "2618343",
+ "variant": "cadence"
+}

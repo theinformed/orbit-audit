@@ -1,0 +1,1557 @@
+{
+ "schema": 1,
+ "registration": "docs/alarm-pattern-preregistration-20260922.md",
+ "arm": "flagged",
+ "events": 326,
+ "approachers": 170,
+ "featureNames": [
+  "init_drift_change_mag",
+  "init_ramp_days",
+  "init_stage_count",
+  "init_abruptness",
+  "transit_days",
+  "transit_drift_median",
+  "transit_drift_peak",
+  "transit_drift_flatness",
+  "transit_midcourse_count",
+  "transit_longitude_span",
+  "arrival_brake_mag",
+  "arrival_brake_days",
+  "arrival_overshoot_deg",
+  "arrival_residual_drift",
+  "arrival_flag_count",
+  "dwell_sk_tightness",
+  "dwell_rel_amplitude",
+  "dwell_rel_period_days",
+  "dwell_rel_osc_fraction",
+  "dwell_correction_rate",
+  "departure_observed",
+  "departure_drift_abs",
+  "departure_reverses",
+  "departure_dest_distance_deg",
+  "cadence_days_since_prev",
+  "cadence_prior_events",
+  "cadence_prior_targets",
+  "cadence_prior_arrivals",
+  "lead_causal_days",
+  "has_initiating_flag",
+  "libration_zone",
+  "separation_at_start_deg",
+  "miss_init_flag",
+  "miss_ramp",
+  "miss_brake_days",
+  "miss_dwell_period",
+  "miss_departure"
+ ],
+ "elementHistories": null,
+ "historyLoadSeconds": null,
+ "missingFraction": {
+  "init_drift_change_mag": 0.0,
+  "init_ramp_days": 0.0,
+  "init_stage_count": 0.0,
+  "init_abruptness": 0.0,
+  "transit_days": 0.0,
+  "transit_drift_median": 0.0,
+  "transit_drift_peak": 0.0,
+  "transit_drift_flatness": 0.0,
+  "transit_midcourse_count": 0.0,
+  "transit_longitude_span": 0.0,
+  "arrival_brake_mag": 0.0,
+  "arrival_brake_days": 0.024539877300613498,
+  "arrival_overshoot_deg": 0.0,
+  "arrival_residual_drift": 0.0,
+  "arrival_flag_count": 0.0,
+  "dwell_sk_tightness": 0.0,
+  "dwell_rel_amplitude": 0.0,
+  "dwell_rel_period_days": 0.29754601226993865,
+  "dwell_rel_osc_fraction": 0.29754601226993865,
+  "dwell_correction_rate": 0.0,
+  "departure_observed": 0.0,
+  "departure_drift_abs": 0.18404907975460122,
+  "departure_reverses": 0.19325153374233128,
+  "departure_dest_distance_deg": 0.32515337423312884,
+  "cadence_days_since_prev": 0.5214723926380368,
+  "cadence_prior_events": 0.0,
+  "cadence_prior_targets": 0.0,
+  "cadence_prior_arrivals": 0.0,
+  "lead_causal_days": 0.0,
+  "has_initiating_flag": 0.0,
+  "libration_zone": 0.0,
+  "separation_at_start_deg": 0.0,
+  "miss_init_flag": 0.0,
+  "miss_ramp": 0.0,
+  "miss_brake_days": 0.0,
+  "miss_dwell_period": 0.0,
+  "miss_departure": 0.0
+ },
+ "kSweep": [
+  {
+   "k": 2,
+   "silhouette": 0.12078663538897642,
+   "inertia": 9820.037196965663,
+   "sizes": [
+    143,
+    183
+   ]
+  },
+  {
+   "k": 3,
+   "silhouette": 0.12564484249894448,
+   "inertia": 9192.81674345753,
+   "sizes": [
+    32,
+    169,
+    125
+   ]
+  },
+  {
+   "k": 4,
+   "silhouette": 0.1200969807371621,
+   "inertia": 8640.07156450695,
+   "sizes": [
+    115,
+    18,
+    162,
+    31
+   ]
+  },
+  {
+   "k": 5,
+   "silhouette": 0.12257178655318317,
+   "inertia": 8169.805531787202,
+   "sizes": [
+    13,
+    131,
+    95,
+    31,
+    56
+   ]
+  },
+  {
+   "k": 6,
+   "silhouette": 0.12711058556135602,
+   "inertia": 7887.179528243795,
+   "sizes": [
+    95,
+    20,
+    12,
+    127,
+    17,
+    55
+   ]
+  },
+  {
+   "k": 7,
+   "silhouette": 0.11336486957623321,
+   "inertia": 7569.094046079079,
+   "sizes": [
+    31,
+    99,
+    19,
+    12,
+    22,
+    42,
+    101
+   ]
+  },
+  {
+   "k": 8,
+   "silhouette": 0.12288998791018323,
+   "inertia": 7317.266421824566,
+   "sizes": [
+    48,
+    17,
+    6,
+    100,
+    3,
+    96,
+    24,
+    32
+   ]
+  },
+  {
+   "k": 9,
+   "silhouette": 0.12026714608686898,
+   "inertia": 7044.720454038737,
+   "sizes": [
+    80,
+    27,
+    22,
+    25,
+    100,
+    5,
+    7,
+    31,
+    29
+   ]
+  },
+  {
+   "k": 10,
+   "silhouette": 0.1052226486660412,
+   "inertia": 6849.935945893158,
+   "sizes": [
+    19,
+    26,
+    7,
+    6,
+    55,
+    20,
+    20,
+    42,
+    92,
+    39
+   ]
+  }
+ ],
+ "kChosen": 6,
+ "gap": {
+  "kChosen": 10,
+  "rows": [
+   {
+    "k": 2,
+    "gap": 1.30533723739833,
+    "sk": 0.012813746613807664
+   },
+   {
+    "k": 3,
+    "gap": 1.3269774857159966,
+    "sk": 0.01075918244994124
+   },
+   {
+    "k": 4,
+    "gap": 1.3483056887217018,
+    "sk": 0.011282819985011098
+   },
+   {
+    "k": 5,
+    "gap": 1.380499538273419,
+    "sk": 0.008817688375061042
+   },
+   {
+    "k": 6,
+    "gap": 1.392039010478193,
+    "sk": 0.010216916884673124
+   },
+   {
+    "k": 7,
+    "gap": 1.412733064202257,
+    "sk": 0.009674666654042879
+   },
+   {
+    "k": 8,
+    "gap": 1.4249204526996238,
+    "sk": 0.01104815867106344
+   },
+   {
+    "k": 9,
+    "gap": 1.4494543186254507,
+    "sk": 0.011143339889525277
+   },
+   {
+    "k": 10,
+    "gap": 1.462385509859148,
+    "sk": 0.010415288511713023
+   }
+  ]
+ },
+ "clusterSizes": [
+  95,
+  20,
+  12,
+  127,
+  17,
+  55
+ ],
+ "clusters": [
+  {
+   "cluster": 0,
+   "n": 95,
+   "objects": 77,
+   "top": [
+    {
+     "feature": "transit_drift_flatness",
+     "z": 0.9787624211494601
+    },
+    {
+     "feature": "arrival_brake_mag",
+     "z": 0.9174957294908193
+    },
+    {
+     "feature": "transit_days",
+     "z": -0.8838440498019842
+    },
+    {
+     "feature": "transit_drift_median",
+     "z": 0.7411289940483462
+    },
+    {
+     "feature": "arrival_flag_count",
+     "z": 0.708764738930058
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.5009579999999971,
+    "init_ramp_days": 1.8775331373745083,
+    "init_stage_count": 1.0,
+    "init_abruptness": 0.34293082973806716,
+    "transit_days": 3.947915902777778,
+    "transit_drift_median": 0.6050535036765369,
+    "transit_drift_peak": 0.9808634999999981,
+    "transit_drift_flatness": 0.8291476419524324,
+    "transit_midcourse_count": 0.0,
+    "transit_longitude_span": 2.2376760069720376,
+    "arrival_brake_mag": 0.5700167999999621,
+    "arrival_brake_days": 2.297010763888889,
+    "arrival_overshoot_deg": 0.03588645175466354,
+    "arrival_residual_drift": 0.0074156999999672735,
+    "arrival_flag_count": 6.0,
+    "dwell_sk_tightness": 0.007365526413067869,
+    "dwell_rel_amplitude": 0.02887144690297985,
+    "dwell_rel_period_days": 8.5,
+    "dwell_rel_osc_fraction": 0.1584890618843262,
+    "dwell_correction_rate": 4.8,
+    "departure_observed": 1.0,
+    "departure_drift_abs": 0.00894209999998452,
+    "departure_reverses": 1.0,
+    "departure_dest_distance_deg": 2.400419056433634,
+    "cadence_days_since_prev": 262.4292370486111,
+    "cadence_prior_events": 0.0,
+    "cadence_prior_targets": 0.0,
+    "cadence_prior_arrivals": 0.0,
+    "lead_causal_days": 12.509559560185185,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 2.2500000000005116,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 0.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 0.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 95,
+     "p25": 42.59649945023148,
+     "median": 88.62070971064814,
+     "p75": 139.76964662037037,
+     "p95": 834.3231162268518
+    },
+    "closestSeparationDeg": {
+     "n": 95,
+     "p25": 2.0228396877541854e-05,
+     "median": 0.00013626907272623612,
+     "p75": 0.00037370212777432243,
+     "p95": 0.021617457734737378
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.021052631578947368,
+   "cadenceDays": {
+    "n": 25,
+    "p25": 0.14362402777777777,
+    "median": 262.4292370486111,
+    "p75": 857.4891655092592
+   }
+  },
+  {
+   "cluster": 1,
+   "n": 20,
+   "objects": 8,
+   "top": [
+    {
+     "feature": "init_ramp_days",
+     "z": -2.0886895329406268
+    },
+    {
+     "feature": "arrival_overshoot_deg",
+     "z": -1.6076506987927477
+    },
+    {
+     "feature": "cadence_prior_targets",
+     "z": 1.3097416282402161
+    },
+    {
+     "feature": "init_stage_count",
+     "z": 1.1665345008414927
+    },
+    {
+     "feature": "transit_midcourse_count",
+     "z": 1.1072053972338982
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.3109877999999924,
+    "init_ramp_days": 0.0,
+    "init_stage_count": 9.0,
+    "init_abruptness": 1.9042128000000957,
+    "transit_days": 80.70880260995371,
+    "transit_drift_median": 0.03712787625222512,
+    "transit_drift_peak": 0.934761299999991,
+    "transit_drift_flatness": 0.053609725861522906,
+    "transit_midcourse_count": 17.5,
+    "transit_longitude_span": 2.157400091210123,
+    "arrival_brake_mag": 0.014687999999978274,
+    "arrival_brake_days": 3.570458315972222,
+    "arrival_overshoot_deg": 0.0,
+    "arrival_residual_drift": 0.009283199999998715,
+    "arrival_flag_count": 0.0,
+    "dwell_sk_tightness": 0.006168182923750598,
+    "dwell_rel_amplitude": 0.02452368429645481,
+    "dwell_rel_period_days": 8.5,
+    "dwell_rel_osc_fraction": 0.1526228968355953,
+    "dwell_correction_rate": 0.0,
+    "departure_observed": 1.0,
+    "departure_drift_abs": 0.012421499999987873,
+    "departure_reverses": -1.0,
+    "departure_dest_distance_deg": 30.97518176722791,
+    "cadence_days_since_prev": 46.970528449074074,
+    "cadence_prior_events": 3.0,
+    "cadence_prior_targets": 3.0,
+    "cadence_prior_arrivals": 3.0,
+    "lead_causal_days": 82.42996622685186,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 2.1961543769168657,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 0.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 0.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 20,
+     "p25": 38.10333293981482,
+     "median": 51.133338547453704,
+     "p75": 61.979913628472225,
+     "p95": 124.8637492418982
+    },
+    "closestSeparationDeg": {
+     "n": 20,
+     "p25": 0.0020886694033279696,
+     "median": 0.004378037772838184,
+     "p75": 0.011166258933521078,
+     "p95": 0.023619823237508813
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.0,
+   "cadenceDays": {
+    "n": 18,
+    "p25": 9.897889050925926,
+    "median": 46.970528449074074,
+    "p75": 67.91531276909723
+   }
+  },
+  {
+   "cluster": 2,
+   "n": 12,
+   "objects": 10,
+   "top": [
+    {
+     "feature": "miss_brake_days",
+     "z": 4.150303298591604
+    },
+    {
+     "feature": "transit_drift_peak",
+     "z": -2.702342698702577
+    },
+    {
+     "feature": "transit_longitude_span",
+     "z": 2.6638336205203093
+    },
+    {
+     "feature": "transit_drift_median",
+     "z": 2.357986403145182
+    },
+    {
+     "feature": "separation_at_start_deg",
+     "z": 2.278416338037849
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.016976699999986522,
+    "init_ramp_days": 0.8127717942127997,
+    "init_stage_count": 1.5,
+    "init_abruptness": 0.021632400000044072,
+    "transit_days": 1.0288118171296297,
+    "transit_drift_median": 19.69252715034072,
+    "transit_drift_peak": 0.009186900000031528,
+    "transit_drift_flatness": 1.0,
+    "transit_midcourse_count": 0.0,
+    "transit_longitude_span": 9.234754016659537,
+    "arrival_brake_mag": 0.01628279999997062,
+    "arrival_brake_days": 1.6912804166666668,
+    "arrival_overshoot_deg": 0.015983621388897973,
+    "arrival_residual_drift": 0.006080999999994674,
+    "arrival_flag_count": 0.0,
+    "dwell_sk_tightness": 0.0060601735462242345,
+    "dwell_rel_amplitude": 0.0262875417180453,
+    "dwell_rel_period_days": 9.0,
+    "dwell_rel_osc_fraction": 0.19392333938079268,
+    "dwell_correction_rate": 1.2,
+    "departure_observed": 1.0,
+    "departure_drift_abs": 0.014010899999959747,
+    "departure_reverses": 0.0,
+    "departure_dest_distance_deg": 0.01682483882439101,
+    "cadence_days_since_prev": 27.861762743055557,
+    "cadence_prior_events": 0.0,
+    "cadence_prior_targets": 0.0,
+    "cadence_prior_arrivals": 0.0,
+    "lead_causal_days": 13.94967740162037,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 9.247714820415752,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 1.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 0.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 12,
+     "p25": 95.53057133680556,
+     "median": 148.19061971643518,
+     "p75": 247.318164375,
+     "p95": 416.04465788194443
+    },
+    "closestSeparationDeg": {
+     "n": 12,
+     "p25": 9.867209485037165e-07,
+     "median": 2.4092341135428796e-05,
+     "p75": 0.0001277527171552606,
+     "p95": 0.0009952628298151467
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.08333333333333333,
+   "cadenceDays": {
+    "n": 4,
+    "p25": 0.0,
+    "median": 27.861762743055557,
+    "p75": 71.81201208912037
+   }
+  },
+  {
+   "cluster": 3,
+   "n": 127,
+   "objects": 87,
+   "top": [
+    {
+     "feature": "transit_days",
+     "z": 0.7407282017170684
+    },
+    {
+     "feature": "transit_drift_median",
+     "z": -0.7306914792467196
+    },
+    {
+     "feature": "arrival_brake_mag",
+     "z": -0.7185238939719124
+    },
+    {
+     "feature": "transit_drift_flatness",
+     "z": -0.715935902397019
+    },
+    {
+     "feature": "arrival_flag_count",
+     "z": -0.625324998114399
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.253909799999974,
+    "init_ramp_days": 3.705385358694228,
+    "init_stage_count": 1.0,
+    "init_abruptness": 0.288942612469228,
+    "transit_days": 63.92279988425926,
+    "transit_drift_median": 0.04177761638686505,
+    "transit_drift_peak": 0.9012783000000013,
+    "transit_drift_flatness": 0.0980813107297351,
+    "transit_midcourse_count": 10.0,
+    "transit_longitude_span": 2.2887608027433686,
+    "arrival_brake_mag": 0.010695600000019567,
+    "arrival_brake_days": 2.971523738425926,
+    "arrival_overshoot_deg": 0.05812087505444197,
+    "arrival_residual_drift": 0.008033099999977367,
+    "arrival_flag_count": 0.0,
+    "dwell_sk_tightness": 0.010146462808933165,
+    "dwell_rel_amplitude": 0.04651545221020255,
+    "dwell_rel_period_days": 9.0,
+    "dwell_rel_osc_fraction": 0.12015807641579024,
+    "dwell_correction_rate": 0.0,
+    "departure_observed": 1.0,
+    "departure_drift_abs": 0.010029300000041985,
+    "departure_reverses": 1.0,
+    "departure_dest_distance_deg": 0.2371643231217888,
+    "cadence_days_since_prev": 70.13281474537038,
+    "cadence_prior_events": 1.0,
+    "cadence_prior_targets": 1.0,
+    "cadence_prior_arrivals": 1.0,
+    "lead_causal_days": 87.19778130787037,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 2.2348999999996693,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 0.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 0.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 127,
+     "p25": 34.46284148148148,
+     "median": 54.751859664351855,
+     "p75": 107.19531429976851,
+     "p95": 381.26652329861076
+    },
+    "closestSeparationDeg": {
+     "n": 127,
+     "p25": 6.597478291325842e-05,
+     "median": 0.0003581428266556941,
+     "p75": 0.0015780918836298952,
+     "p95": 0.049499307568993345
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.08661417322834646,
+   "cadenceDays": {
+    "n": 66,
+    "p25": 33.97825785590278,
+    "median": 70.13281474537038,
+    "p75": 136.92201795138888
+   }
+  },
+  {
+   "cluster": 4,
+   "n": 17,
+   "objects": 4,
+   "top": [
+    {
+     "feature": "cadence_prior_events",
+     "z": 3.112277393139774
+    },
+    {
+     "feature": "cadence_prior_targets",
+     "z": 2.9072651490919856
+    },
+    {
+     "feature": "departure_drift_abs",
+     "z": 2.3046694783188397
+    },
+    {
+     "feature": "arrival_flag_count",
+     "z": 1.2992618492485397
+    },
+    {
+     "feature": "cadence_prior_arrivals",
+     "z": 1.1659557214232135
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.7792361999999855,
+    "init_ramp_days": 4.740330719934786,
+    "init_stage_count": 3.0,
+    "init_abruptness": 0.39612751684722686,
+    "transit_days": 4.215431620370371,
+    "transit_drift_median": 0.679587412787311,
+    "transit_drift_peak": 1.2874964999999747,
+    "transit_drift_flatness": 0.5028073861637127,
+    "transit_midcourse_count": 1.0,
+    "transit_longitude_span": 2.297941710804812,
+    "arrival_brake_mag": 0.40734359999999015,
+    "arrival_brake_days": 2.906757615740741,
+    "arrival_overshoot_deg": 0.06569625840268145,
+    "arrival_residual_drift": 0.0045938999999748376,
+    "arrival_flag_count": 9.0,
+    "dwell_sk_tightness": 0.010383843463444009,
+    "dwell_rel_amplitude": 0.03372602091595808,
+    "dwell_rel_period_days": 11.0,
+    "dwell_rel_osc_fraction": 0.29683895679661515,
+    "dwell_correction_rate": 6.0,
+    "departure_observed": 1.0,
+    "departure_drift_abs": 1.647816899999981,
+    "departure_reverses": 1.0,
+    "departure_dest_distance_deg": 54.527919033191665,
+    "cadence_days_since_prev": 105.80943875,
+    "cadence_prior_events": 8.0,
+    "cadence_prior_targets": 6.0,
+    "cadence_prior_arrivals": 6.0,
+    "lead_causal_days": 5.4946547453703705,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 2.299188759631363,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 0.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 0.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 17,
+     "p25": 54.726108645833335,
+     "median": 89.75705341435186,
+     "p75": 100.14552425925926,
+     "p95": 213.05474269212962
+    },
+    "closestSeparationDeg": {
+     "n": 17,
+     "p25": 5.70772799903807e-05,
+     "median": 0.00023197425650778314,
+     "p75": 0.009606318957565918,
+     "p95": 0.026737466534342492
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.0,
+   "cadenceDays": {
+    "n": 17,
+    "p25": 36.91521497685185,
+    "median": 105.80943875,
+    "p75": 146.58228246527779
+   }
+  },
+  {
+   "cluster": 5,
+   "n": 55,
+   "objects": 35,
+   "top": [
+    {
+     "feature": "miss_departure",
+     "z": 2.105548226313832
+    },
+    {
+     "feature": "departure_observed",
+     "z": -2.105548226313832
+    },
+    {
+     "feature": "departure_reverses",
+     "z": 0.7333047450116511
+    },
+    {
+     "feature": "libration_zone",
+     "z": 0.31081097785738016
+    },
+    {
+     "feature": "init_stage_count",
+     "z": 0.27234782488605935
+    }
+   ],
+   "centroid": {
+    "init_drift_change_mag": 0.36948060000003125,
+    "init_ramp_days": 3.8417926238425144,
+    "init_stage_count": 4.0,
+    "init_abruptness": 0.29364678206066475,
+    "transit_days": 27.704018391203704,
+    "transit_drift_median": 0.17254877233887528,
+    "transit_drift_peak": 0.7717784999999822,
+    "transit_drift_flatness": 0.42225520856635906,
+    "transit_midcourse_count": 5.0,
+    "transit_longitude_span": 2.3279834543830447,
+    "arrival_brake_mag": 0.027025200000025507,
+    "arrival_brake_days": 2.6693070833333334,
+    "arrival_overshoot_deg": 0.04631799300400985,
+    "arrival_residual_drift": 0.009611699999993562,
+    "arrival_flag_count": 3.0,
+    "dwell_sk_tightness": 0.008590244069011987,
+    "dwell_rel_amplitude": 0.038324488615316454,
+    "dwell_rel_period_days": 9.5,
+    "dwell_rel_osc_fraction": 0.09364614207504886,
+    "dwell_correction_rate": 3.5999999999999996,
+    "departure_observed": 0.0,
+    "departure_drift_abs": null,
+    "departure_reverses": null,
+    "departure_dest_distance_deg": null,
+    "cadence_days_since_prev": 42.349984820601854,
+    "cadence_prior_events": 0.0,
+    "cadence_prior_targets": 0.0,
+    "cadence_prior_arrivals": 0.0,
+    "lead_causal_days": 39.97134072916667,
+    "has_initiating_flag": 1.0,
+    "libration_zone": 0.0,
+    "separation_at_start_deg": 2.341689795291643,
+    "miss_init_flag": 0.0,
+    "miss_ramp": 0.0,
+    "miss_brake_days": 0.0,
+    "miss_dwell_period": 0.0,
+    "miss_departure": 1.0
+   },
+   "outcomes": {
+    "loiterDays": {
+     "n": 55,
+     "p25": 43.692395966435186,
+     "median": 82.07262493055556,
+     "p75": 209.93072318287037,
+     "p95": 484.34234878472216
+    },
+    "closestSeparationDeg": {
+     "n": 55,
+     "p25": 1.8987651657198512e-05,
+     "median": 9.99999992359335e-05,
+     "p75": 0.0006532264834504531,
+     "p95": 0.01293126650988938
+    }
+   },
+   "flaggedFraction": 1.0,
+   "librationFraction": 0.14545454545454545,
+   "cadenceDays": {
+    "n": 26,
+    "p25": 2.0337534837962963,
+    "median": 42.349984820601854,
+    "p75": 77.41642227430555
+   }
+  }
+ ],
+ "stabilityJaccard": [
+  0.5426779935275081,
+  0.2063894523326572,
+  0.4166666666666667,
+  0.4393939393939394,
+  0.45,
+  0.44642857142857145
+ ],
+ "ariFlagged": 0.0,
+ "eta2Loiter": 0.0513499098962883,
+ "eta2Separation": 0.06740933361872299,
+ "causal": {
+  "kChosen": 4,
+  "kSweep": [
+   {
+    "k": 2,
+    "silhouette": 0.17066831436901733,
+    "inertia": 6627.278253202152,
+    "sizes": [
+     142,
+     184
+    ]
+   },
+   {
+    "k": 3,
+    "silhouette": 0.1728142935168481,
+    "inertia": 6060.266703472899,
+    "sizes": [
+     180,
+     132,
+     14
+    ]
+   },
+   {
+    "k": 4,
+    "silhouette": 0.17326631026222938,
+    "inertia": 5611.026760926441,
+    "sizes": [
+     117,
+     165,
+     28,
+     16
+    ]
+   },
+   {
+    "k": 5,
+    "silhouette": 0.13657740510299113,
+    "inertia": 5280.8571688345955,
+    "sizes": [
+     93,
+     97,
+     22,
+     106,
+     8
+    ]
+   },
+   {
+    "k": 6,
+    "silhouette": 0.1452179119291414,
+    "inertia": 4985.833336823675,
+    "sizes": [
+     94,
+     91,
+     108,
+     21,
+     6,
+     6
+    ]
+   },
+   {
+    "k": 7,
+    "silhouette": 0.1438553047934164,
+    "inertia": 4725.681071776414,
+    "sizes": [
+     21,
+     29,
+     110,
+     6,
+     7,
+     54,
+     99
+    ]
+   },
+   {
+    "k": 8,
+    "silhouette": 0.15389954380130139,
+    "inertia": 4500.3990141975,
+    "sizes": [
+     109,
+     11,
+     102,
+     17,
+     54,
+     6,
+     21,
+     6
+    ]
+   },
+   {
+    "k": 9,
+    "silhouette": 0.15447698294310414,
+    "inertia": 4286.5675435649255,
+    "sizes": [
+     34,
+     6,
+     27,
+     18,
+     93,
+     2,
+     6,
+     41,
+     99
+    ]
+   },
+   {
+    "k": 10,
+    "silhouette": 0.14221831664898188,
+    "inertia": 4151.469079611349,
+    "sizes": [
+     7,
+     16,
+     103,
+     41,
+     43,
+     16,
+     58,
+     18,
+     6,
+     18
+    ]
+   }
+  ],
+  "features": [
+   "init_drift_change_mag",
+   "init_ramp_days",
+   "init_stage_count",
+   "init_abruptness",
+   "transit_days",
+   "transit_drift_median",
+   "transit_drift_peak",
+   "transit_drift_flatness",
+   "transit_midcourse_count",
+   "transit_longitude_span",
+   "arrival_brake_mag",
+   "arrival_brake_days",
+   "arrival_overshoot_deg",
+   "arrival_residual_drift",
+   "arrival_flag_count",
+   "cadence_days_since_prev",
+   "cadence_prior_events",
+   "cadence_prior_targets",
+   "cadence_prior_arrivals",
+   "lead_causal_days",
+   "has_initiating_flag",
+   "libration_zone",
+   "separation_at_start_deg",
+   "miss_init_flag",
+   "miss_ramp",
+   "miss_brake_days",
+   "miss_dwell_period"
+  ],
+  "clusterSizes": [
+   117,
+   165,
+   28,
+   16
+  ],
+  "eta2Loiter": 0.038827358965736206,
+  "ariFlagged": 0.0,
+  "ariWithFull": 0.6448577636917873,
+  "clusters": [
+   {
+    "cluster": 0,
+    "n": 117,
+    "objects": 92,
+    "top": [
+     {
+      "feature": "transit_drift_flatness",
+      "z": 0.9549391710897555
+     },
+     {
+      "feature": "arrival_brake_mag",
+      "z": 0.903028204898081
+     },
+     {
+      "feature": "transit_days",
+      "z": -0.8749210481136371
+     },
+     {
+      "feature": "arrival_flag_count",
+      "z": 0.7594885137131004
+     },
+     {
+      "feature": "transit_drift_median",
+      "z": 0.7418257770516666
+     }
+    ],
+    "centroid": {
+     "init_drift_change_mag": 0.4427261999999814,
+     "init_ramp_days": 2.0630602273220306,
+     "init_stage_count": 1.0,
+     "init_abruptness": 0.33676560000009204,
+     "transit_days": 3.9823080671296296,
+     "transit_drift_median": 0.5765375084367733,
+     "transit_drift_peak": 0.9850893000000269,
+     "transit_drift_flatness": 0.818819693723647,
+     "transit_midcourse_count": 0.0,
+     "transit_longitude_span": 2.246495247720908,
+     "arrival_brake_mag": 0.5420016000000487,
+     "arrival_brake_days": 2.5128070717592594,
+     "arrival_overshoot_deg": 0.035247815473468336,
+     "arrival_residual_drift": 0.008169899999984409,
+     "arrival_flag_count": 6.0,
+     "dwell_sk_tightness": 0.007147528316465923,
+     "dwell_rel_amplitude": 0.025823651146261995,
+     "dwell_rel_period_days": 9.0,
+     "dwell_rel_osc_fraction": 0.15158776935519783,
+     "dwell_correction_rate": 4.8,
+     "departure_observed": 1.0,
+     "departure_drift_abs": 0.008988899999991418,
+     "departure_reverses": 1.0,
+     "departure_dest_distance_deg": 3.019813670500753,
+     "cadence_days_since_prev": 101.44395360532408,
+     "cadence_prior_events": 0.0,
+     "cadence_prior_targets": 0.0,
+     "cadence_prior_arrivals": 0.0,
+     "lead_causal_days": 9.918089282407408,
+     "has_initiating_flag": 1.0,
+     "libration_zone": 0.0,
+     "separation_at_start_deg": 2.253432036558138,
+     "miss_init_flag": 0.0,
+     "miss_ramp": 0.0,
+     "miss_brake_days": 0.0,
+     "miss_dwell_period": 0.0,
+     "miss_departure": 0.0
+    },
+    "outcomes": {
+     "loiterDays": {
+      "n": 117,
+      "p25": 44.03190037037037,
+      "median": 88.75702032407408,
+      "p75": 153.14744412037038,
+      "p95": 830.2780779513885
+     },
+     "closestSeparationDeg": {
+      "n": 117,
+      "p25": 1.946993000956354e-05,
+      "median": 0.00011681260752993694,
+      "p75": 0.00037343544960322106,
+      "p95": 0.014161905708215199
+     }
+    },
+    "flaggedFraction": 1.0,
+    "librationFraction": 0.042735042735042736,
+    "cadenceDays": {
+     "n": 30,
+     "p25": 0.15183865162037036,
+     "median": 101.44395360532408,
+     "p75": 846.4759688020833
+    }
+   },
+   {
+    "cluster": 1,
+    "n": 165,
+    "objects": 107,
+    "top": [
+     {
+      "feature": "transit_days",
+      "z": 0.7442156984128174
+     },
+     {
+      "feature": "transit_drift_median",
+      "z": -0.7202954359836227
+     },
+     {
+      "feature": "transit_drift_flatness",
+      "z": -0.7097927539976875
+     },
+     {
+      "feature": "arrival_brake_mag",
+      "z": -0.6980013532696555
+     },
+     {
+      "feature": "arrival_flag_count",
+      "z": -0.6129924922026938
+     }
+    ],
+    "centroid": {
+     "init_drift_change_mag": 0.27748260000001324,
+     "init_ramp_days": 3.710609698064453,
+     "init_stage_count": 2.0,
+     "init_abruptness": 0.288942612469228,
+     "transit_days": 69.21927561342592,
+     "transit_drift_median": 0.043459809615658734,
+     "transit_drift_peak": 0.8117571000000225,
+     "transit_drift_flatness": 0.08727932421104101,
+     "transit_midcourse_count": 10.0,
+     "transit_longitude_span": 2.289289258437151,
+     "arrival_brake_mag": 0.010897200000044904,
+     "arrival_brake_days": 2.9027371180555557,
+     "arrival_overshoot_deg": 0.05514294237411832,
+     "arrival_residual_drift": 0.0082617000000198,
+     "arrival_flag_count": 0.0,
+     "dwell_sk_tightness": 0.0100757214155891,
+     "dwell_rel_amplitude": 0.04651545221020255,
+     "dwell_rel_period_days": 9.0,
+     "dwell_rel_osc_fraction": 0.11466670290267941,
+     "dwell_correction_rate": 1.2,
+     "departure_observed": 1.0,
+     "departure_drift_abs": 0.009912300000024743,
+     "departure_reverses": 1.0,
+     "departure_dest_distance_deg": 0.4118640895801491,
+     "cadence_days_since_prev": 64.02884532407407,
+     "cadence_prior_events": 1.0,
+     "cadence_prior_targets": 1.0,
+     "cadence_prior_arrivals": 1.0,
+     "lead_causal_days": 84.95603748842592,
+     "has_initiating_flag": 1.0,
+     "libration_zone": 0.0,
+     "separation_at_start_deg": 2.2357045615481184,
+     "miss_init_flag": 0.0,
+     "miss_ramp": 0.0,
+     "miss_brake_days": 0.0,
+     "miss_dwell_period": 0.0,
+     "miss_departure": 0.0
+    },
+    "outcomes": {
+     "loiterDays": {
+      "n": 165,
+      "p25": 35.82791877314815,
+      "median": 56.05019599537037,
+      "p75": 118.10176180555555,
+      "p95": 368.39990023611097
+     },
+     "closestSeparationDeg": {
+      "n": 165,
+      "p25": 5.6400332965722555e-05,
+      "median": 0.0003581428266556941,
+      "p75": 0.0021493482782375395,
+      "p95": 0.04950163013577935
+     }
+    },
+    "flaggedFraction": 1.0,
+    "librationFraction": 0.08484848484848485,
+    "cadenceDays": {
+     "n": 91,
+     "p25": 18.781094288194446,
+     "median": 64.02884532407407,
+     "p75": 112.6616893113426
+    }
+   },
+   {
+    "cluster": 2,
+    "n": 28,
+    "objects": 4,
+    "top": [
+     {
+      "feature": "dwell_rel_period_days",
+      "z": 2.5580307471120642
+     },
+     {
+      "feature": "dwell_rel_amplitude",
+      "z": 2.5389003271897144
+     },
+     {
+      "feature": "dwell_rel_osc_fraction",
+      "z": 1.1506602034171467
+     },
+     {
+      "feature": "init_stage_count",
+      "z": 0.9834270714471384
+     },
+     {
+      "feature": "arrival_flag_count",
+      "z": 0.7727819702832901
+     }
+    ],
+    "centroid": {
+     "init_drift_change_mag": 0.5721435000000383,
+     "init_ramp_days": 3.381360418763399,
+     "init_stage_count": 8.0,
+     "init_abruptness": 0.54472925427352,
+     "transit_days": 10.944005347222221,
+     "transit_drift_median": 0.306794803516555,
+     "transit_drift_peak": 0.9887126999999793,
+     "transit_drift_flatness": 0.12978128539128975,
+     "transit_midcourse_count": 9.5,
+     "transit_longitude_span": 2.1677020878884257,
+     "arrival_brake_mag": 0.24020639999997684,
+     "arrival_brake_days": 2.9842099421296298,
+     "arrival_overshoot_deg": 0.048118252137669515,
+     "arrival_residual_drift": 0.005453099999982669,
+     "arrival_flag_count": 8.0,
+     "dwell_sk_tightness": 0.006396436636118552,
+     "dwell_rel_amplitude": 0.03155689326148234,
+     "dwell_rel_period_days": 9.0,
+     "dwell_rel_osc_fraction": 0.23330621967107237,
+     "dwell_correction_rate": 4.8,
+     "departure_observed": 1.0,
+     "departure_drift_abs": 0.853931100000068,
+     "departure_reverses": -1.0,
+     "departure_dest_distance_deg": 54.531312656414684,
+     "cadence_days_since_prev": 73.81779708333335,
+     "cadence_prior_events": 6.5,
+     "cadence_prior_targets": 5.5,
+     "cadence_prior_arrivals": 5.5,
+     "lead_causal_days": 21.686748171296294,
+     "has_initiating_flag": 1.0,
+     "libration_zone": 0.0,
+     "separation_at_start_deg": 2.1527419699562245,
+     "miss_init_flag": 0.0,
+     "miss_ramp": 0.0,
+     "miss_brake_days": 0.0,
+     "miss_dwell_period": 0.0,
+     "miss_departure": 0.0
+    },
+    "outcomes": {
+     "loiterDays": {
+      "n": 28,
+      "p25": 47.42070319155093,
+      "median": 57.948357540509264,
+      "p75": 89.75705341435186,
+      "p95": 172.52085160590264
+     },
+     "closestSeparationDeg": {
+      "n": 28,
+      "p25": 0.00022393158031519533,
+      "median": 0.003592732023037115,
+      "p75": 0.009442743149314481,
+      "p95": 0.023057694673666158
+     }
+    },
+    "flaggedFraction": 1.0,
+    "librationFraction": 0.0,
+    "cadenceDays": {
+     "n": 28,
+     "p25": 31.272784094328703,
+     "median": 73.81779708333335,
+     "p75": 138.8576110445602
+    }
+   },
+   {
+    "cluster": 3,
+    "n": 16,
+    "objects": 11,
+    "top": [
+     {
+      "feature": "cadence_prior_events",
+      "z": 3.0730748946578093
+     },
+     {
+      "feature": "transit_longitude_span",
+      "z": 2.631487881941273
+     },
+     {
+      "feature": "departure_reverses",
+      "z": 2.4958478150787005
+     },
+     {
+      "feature": "transit_drift_peak",
+      "z": -2.4492551854697764
+     },
+     {
+      "feature": "transit_drift_median",
+      "z": 1.8761784409173239
+     }
+    ],
+    "centroid": {
+     "init_drift_change_mag": 0.09850680000000978,
+     "init_ramp_days": 0.2644137573340447,
+     "init_stage_count": 3.0,
+     "init_abruptness": 1.1403660352465248,
+     "transit_days": 1.878272476851852,
+     "transit_drift_median": 1.173493556316091,
+     "transit_drift_peak": 0.012862499999982901,
+     "transit_drift_flatness": 1.0,
+     "transit_midcourse_count": 0.0,
+     "transit_longitude_span": 9.5184906026536,
+     "arrival_brake_mag": 0.015948000000037155,
+     "arrival_brake_days": 0.9972622800925925,
+     "arrival_overshoot_deg": 0.018171304653719744,
+     "arrival_residual_drift": 0.0060405000000116615,
+     "arrival_flag_count": 0.0,
+     "dwell_sk_tightness": 0.007887661278331848,
+     "dwell_rel_amplitude": 0.0262875417180453,
+     "dwell_rel_period_days": 9.0,
+     "dwell_rel_osc_fraction": 0.1836737325346369,
+     "dwell_correction_rate": 0.6,
+     "departure_observed": 1.0,
+     "departure_drift_abs": 0.012844500000028347,
+     "departure_reverses": 1.0,
+     "departure_dest_distance_deg": 0.01682483882439101,
+     "cadence_days_since_prev": 5.304106655092593,
+     "cadence_prior_events": 0.0,
+     "cadence_prior_targets": 0.0,
+     "cadence_prior_arrivals": 0.0,
+     "lead_causal_days": 27.764937887731485,
+     "has_initiating_flag": 1.0,
+     "libration_zone": 0.0,
+     "separation_at_start_deg": 9.497215389931853,
+     "miss_init_flag": 0.0,
+     "miss_ramp": 0.0,
+     "miss_brake_days": 0.5,
+     "miss_dwell_period": 0.0,
+     "miss_departure": 0.0
+    },
+    "outcomes": {
+     "loiterDays": {
+      "n": 16,
+      "p25": 44.96717281539352,
+      "median": 148.19061971643518,
+      "p75": 299.6732988020833,
+      "p95": 454.38782241608794
+     },
+     "closestSeparationDeg": {
+      "n": 16,
+      "p25": 1.5858714235150728e-06,
+      "median": 6.529184648229602e-05,
+      "p75": 0.0004201394170451067,
+      "p95": 0.005070002163023446
+     }
+    },
+    "flaggedFraction": 1.0,
+    "librationFraction": 0.1875,
+    "cadenceDays": {
+     "n": 7,
+     "p25": 0.4983623784722222,
+     "median": 5.304106655092593,
+     "p75": 52.838694849537035
+    }
+   }
+  ]
+ },
+ "gateV": {
+  "loiterDays": {
+   "n": 232,
+   "maeOwnLog": 0.6236301842469982,
+   "maePopulationLog": 0.714263928491746,
+   "skill": 0.12689111213572246,
+   "ci95": [
+    -0.02604314071907145,
+    0.27709652600641965
+   ]
+  },
+  "closestSeparationDeg": {
+   "n": 232,
+   "maeOwnLog": 3.7103291928731075,
+   "maePopulationLog": 3.530504442538006,
+   "skill": -0.05093457698804915,
+   "ci95": [
+    -0.2592914577472589,
+    0.15470809513204367
+   ]
+  }
+ },
+ "foldSeconds": 60.97647047042847,
+ "estimands": {
+  "E1a_loiter": {
+   "n": 232,
+   "skill": 0.0012253843543809095,
+   "maeModelLog": 0.7133886806488736,
+   "maePopulationLog": 0.714263928491746,
+   "ci95": [
+    -0.06147449453278129,
+    0.06638548736646335
+   ],
+   "objects": 76
+  },
+  "E1b_loiter": {
+   "n": 156,
+   "skill": 0.021040987199018257,
+   "maeModelLog": 0.7245907927071241,
+   "maePopulationLog": 0.7401645862924706,
+   "ci95": [
+    -0.03807011885841538,
+    0.08194199364034409
+   ],
+   "objects": 76
+  },
+  "E2_loiter": {
+   "n": 326,
+   "skill": 0.01983144904882017,
+   "maeModelLog": 0.6821363684015322,
+   "maePopulationLog": 0.6959378238972983,
+   "ci95": [
+    -0.02521376788647746,
+    0.061914436367574203
+   ],
+   "objects": 170
+  },
+  "E3a_separation": {
+   "n": 232,
+   "skill": -0.04916748542670346,
+   "maeModelLog": 3.704090468265405,
+   "maePopulationLog": 3.530504442538006,
+   "ci95": [
+    -0.1666496808835965,
+    0.02746824877510446
+   ],
+   "objects": 76
+  },
+  "E3b_separation": {
+   "n": 156,
+   "skill": -0.002555201708560384,
+   "maeModelLog": 3.744027233375165,
+   "maePopulationLog": 3.73448487125155,
+   "ci95": [
+    -0.08892672781712199,
+    0.05728145856938865
+   ],
+   "objects": 76
+  },
+  "E3c_separation": {
+   "n": 326,
+   "skill": 0.00494181936187188,
+   "maeModelLog": 3.4629005959960497,
+   "maePopulationLog": 3.480098614711454,
+   "ci95": [
+    -0.02234094574787073,
+    0.030923009873434847
+   ],
+   "objects": 170
+  },
+  "E4_interval": {
+   "n": 101,
+   "skill": -0.015220908438503988,
+   "maeModelLog": 1.729017895429445,
+   "maePopulationLog": 1.7030952387385536,
+   "ci95": [
+    -0.06109992229906819,
+    0.018669050845688866
+   ],
+   "objects": 29
+  },
+  "E4_interval_prior": {
+   "n": 72,
+   "skill": -0.04953891586805681,
+   "maeModelLog": 1.443717007877032,
+   "maePopulationLog": 1.375572631037656,
+   "ci95": [
+    -0.15797863791109595,
+    0.008300203408243933
+   ],
+   "objects": 29
+  },
+  "E4_population": {
+   "n": 143,
+   "p25": 20.15446263310185,
+   "median": 69.05421625,
+   "p75": 145.96013407986112
+  }
+ },
+ "diagnostics": {
+  "loiterDays": {
+   "D1_knn": {
+    "n": 326,
+    "label": "10-nearest training events, continuous",
+    "skill": 0.04345360221854777,
+    "maeModelLog": 0.6656968185288233,
+    "maePopulationLog": 0.6959378238972983,
+    "ci95": [
+     -0.01695655249271451,
+     0.10630006761976342
+    ],
+    "objects": 170
+   },
+   "D2_cluster_plus_own": {
+    "n": 232,
+    "label": "cluster median and own-history median, averaged",
+    "skill": 0.1635834254479509,
+    "maeModelLog": 0.5974221883951559,
+    "maePopulationLog": 0.714263928491746,
+    "ci95": [
+     0.07742077418248586,
+     0.24938182084884927
+    ],
+    "objects": 76
+   },
+   "D3_betweenObjectEta2": 0.7135639942737371,
+   "D3_betweenClusterEta2": 0.0513499098962883,
+   "POST_REGISTRATION": true
+  },
+  "closestSeparationDeg": {
+   "D1_knn": {
+    "n": 326,
+    "label": "10-nearest training events, continuous",
+    "skill": 0.04557202304012331,
+    "maeModelLog": 3.3215034804599224,
+    "maePopulationLog": 3.480098614711454,
+    "ci95": [
+     -0.004456517144064108,
+     0.09807836147728309
+    ],
+    "objects": 170
+   },
+   "D2_cluster_plus_own": {
+    "n": 232,
+    "label": "cluster median and own-history median, averaged",
+    "skill": 0.03407222997197723,
+    "maeModelLog": 3.4102122832547637,
+    "maePopulationLog": 3.530504442538006,
+    "ci95": [
+     -0.0857889912600035,
+     0.1424186134663369
+    ],
+    "objects": 76
+   },
+   "D3_betweenObjectEta2": 0.6613947484526721,
+   "D3_betweenClusterEta2": 0.06740933361872299,
+   "POST_REGISTRATION": true
+  }
+ },
+ "gates": {
+  "P": true,
+  "Q": true,
+  "R": false,
+  "S": false,
+  "T": true,
+  "U": false,
+  "V": true
+ },
+ "gateBars": {
+  "P": 0.157,
+  "Q": 0.5,
+  "R": 0.5,
+  "S": 0.05,
+  "T": [
+   20,
+   50
+  ],
+  "U": [
+   0.5,
+   0.3
+  ],
+  "V": 0.005,
+  "baselineLoiter": 0.137,
+  "baselineSeparation": 0.008
+ },
+ "wallSeconds": 98.85990118980408,
+ "cpuSeconds": 97.71801407999999,
+ "gpuRaceRequired": false,
+ "measuredAt": "2026-09-22T07:55:32.300794+00:00",
+ "host": "bigmem-PC",
+ "executionMode": "cpu",
+ "eventsSha256": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+ "sourceSha256": {
+  "tools/alarm_pattern.py": "71eeb14defd4560e332d19b4d36818e00b4508a7bdfe491abd98fdf4e8b756ac",
+  "tools/proximity_geo.py": "59c5270b8231d88481d24a6dc37e9d4b630ffbe5a74f4d96f50aefd1bb134480",
+  "docs/alarm-pattern-preregistration-20260922.md": "319ff38bec49e3d892ebfd7bf4f1f78348e1281cc78f7d238bd4fd58f97a2af4"
+ }
+}

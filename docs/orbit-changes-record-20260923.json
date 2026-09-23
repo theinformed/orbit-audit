@@ -1,0 +1,163 @@
+{
+ "byClosure": {
+  "lapsed": 6,
+  "open": 133,
+  "settled": 1853
+ },
+ "byKind": {
+  "campaign": 71,
+  "impulsive": 1760,
+  "not-observed-onset": 161
+ },
+ "byRegime": {
+  "GEO": 491,
+  "HEO": 227,
+  "LEO": 1211,
+  "MEO": 35,
+  "near-GEO": 9,
+  "transfer": 19
+ },
+ "byStage": {
+  "S1": 500,
+  "none": 1492
+ },
+ "byState": {
+  "COMPLETED": 1853,
+  "IN PROGRESS": 20,
+  "INITIATED": 119
+ },
+ "byVerdict": {
+  "unmeasured": 1992
+ },
+ "changeSteps": 2058,
+ "changeStepsByFamily": {
+  "catalogue": 1500,
+  "geoColocation": 487,
+  "leoStation": 71
+ },
+ "changeStepsBySignature": {
+  "disposal lowering": 11,
+  "disposal raise": 3,
+  "east-west station-keeping": 25,
+  "in-plane lowering": 136,
+  "in-plane raise": 840,
+  "north-south station-keeping": 32,
+  "not separable": 4,
+  "null": 558,
+  "plane change": 413,
+  "plane rotation": 6,
+  "unclassified change": 30
+ },
+ "episodeSchema": 1,
+ "episodes": 1992,
+ "families": {
+  "catalogue": {
+   "frozen": false,
+   "generatedAt": "2026-09-22T10:50:18Z",
+   "rows": 1500,
+   "source": "manifest.orbitEvents"
+  },
+  "geoColocation": {
+   "archiveToMs": 1762477961652,
+   "frozen": true,
+   "rows": 487,
+   "source": "docs/proximity-events-20260922.jsonl"
+  },
+  "leoStation": {
+   "archiveToMs": 1786064848819,
+   "frozen": true,
+   "rows": 71,
+   "source": "docs/proximity-leo-events-20260922.jsonl"
+  }
+ },
+ "generatedAt": "2026-09-22T10:50:18Z",
+ "indexPath": "orbit-changes-index-2bfc38124779744a.json",
+ "indexSha256": "2bfc38124779744a8b12a20944252dc3c47f858523883cc5ecb39868ca1940e8",
+ "manoeuvreLabelPermitted": false,
+ "measuredError": {
+  "byHorizon": {
+   "10": {
+    "n": 131987,
+    "p50Deg": 0.0817,
+    "p75Deg": 0.2034,
+    "p95Deg": 0.865
+   },
+   "120": {
+    "n": 11501,
+    "p50Deg": 1.9244,
+    "p75Deg": 6.3057,
+    "p95Deg": 12.3406
+   },
+   "15": {
+    "n": 96631,
+    "p50Deg": 0.1406,
+    "p75Deg": 0.3561,
+    "p95Deg": 1.1833
+   },
+   "180": {
+    "n": 6882,
+    "p50Deg": 2.6514,
+    "p75Deg": 12.0611,
+    "p95Deg": 25.7665
+   },
+   "20": {
+    "n": 73970,
+    "p50Deg": 0.2027,
+    "p75Deg": 0.4854,
+    "p95Deg": 1.4406
+   },
+   "30": {
+    "n": 49318,
+    "p50Deg": 0.4084,
+    "p75Deg": 0.8982,
+    "p95Deg": 2.0805
+   },
+   "45": {
+    "n": 33720,
+    "p50Deg": 0.8154,
+    "p75Deg": 1.592,
+    "p95Deg": 2.6528
+   },
+   "5": {
+    "n": 158758,
+    "p50Deg": 0.0365,
+    "p75Deg": 0.0897,
+    "p95Deg": 0.5513
+   },
+   "60": {
+    "n": 24373,
+    "p50Deg": 1.0762,
+    "p75Deg": 2.0741,
+    "p95Deg": 3.7198
+   },
+   "90": {
+    "n": 15664,
+    "p50Deg": 1.5197,
+    "p75Deg": 3.8623,
+    "p95Deg": 7.3453
+   }
+  },
+  "membershipHorizonDays": 20,
+  "precisionHorizonDays": 10,
+  "publishedHorizonDays": 30,
+  "publishedP50Deg": 0.408,
+  "registration": "docs/kinematic-inputs-preregistration-20260922.md",
+  "slotSpacingP50Deg": 0.394,
+  "source": "docs/kinematic-inputs-20260922.json",
+  "unfitBarDeg": 2.0,
+  "unfitHorizonDays": 180
+ },
+ "modelChecksum": "9cf012aab4e2501117c8a50c13c26b263b3ab7500eb8e80149319e67c66a0a13",
+ "modelVersion": "trigger-time-taxonomy/20260922/1",
+ "recordToMs": 1790097182667,
+ "reopenedEpisodes": 0,
+ "schema": 1,
+ "stateRatesMeasured": false,
+ "stepsWithoutEpisode": 130,
+ "stepsWithoutEpisodeByFamily": {
+  "catalogue": 59,
+  "leoStation": 71
+ },
+ "trackerVersion": "620284a7e241bf1851f6593134cf4c95c0698fb5e4ad3241c3185d19a65420b9",
+ "what": "a count of the published orbit-change record; no measurement is performed here and no quantity is derived"
+}

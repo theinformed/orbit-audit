@@ -2,7 +2,7 @@
 
 This repository is the public release of a research programme on **detecting
 orbital manoeuvres from public two-line element (TLE) sets**, and on **bounding
-the false alarms that such detection produces**. It contains the two papers, the
+the false alarms that such detection produces**. It contains the papers, the
 pre-registrations they were executed under, the machine receipts behind every
 number they report, and the analysis and site code that produced them.
 
@@ -27,21 +27,26 @@ only ever reports success is not a control.
 |---|---|---|
 | **Paper A** | [Does station-keeping relax before retirement? A registered, population-scale observational test in the geostationary belt](docs/paper-a-draft-20260921.md) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884814.svg)](https://doi.org/10.5281/zenodo.22884814) |
 | **Paper B** | [A continuously audited, publicly gated false-alarm control for manoeuvre detection from two-line element sets](docs/paper-b-draft-20260921.md) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22884816.svg)](https://doi.org/10.5281/zenodo.22884816) |
+| **Paper D** | [A public, audited record of orbit changes: episodes, their reading, and the numbers that license every entry](docs/paper-d-draft-20260923.md) | draft, 2026-09-23 |
 
-Both are drafts by **Sean D. Egan and Derek Conklin**, dated 2026-09-21, released
-under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (the repository's
-own Apache 2.0 license, below, covers the code; the papers themselves are CC BY).
-LaTeX sources and built PDFs are under [`docs/latex/`](docs/latex/) —
-[paper A](docs/latex/paper-a/paper-a.pdf) (22 pages) and
-[paper B](docs/latex/paper-b/paper-b.pdf) (28 pages).
+All three are by **Sean D. Egan and Derek Conklin**, released under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (the repository's own
+Apache 2.0 license, below, covers the code; the papers themselves are CC BY).
+Papers A and B are dated 2026-09-21 and have DOIs. **Paper D is a draft, dated
+2026-09-23, and has no DOI**: it has not been deposited, and `CITATION.cff`
+will not name it until it has. LaTeX sources and built PDFs are under
+[`docs/latex/`](docs/latex/) — [paper A](docs/latex/paper-a/paper-a.pdf)
+(22 pages), [paper B](docs/latex/paper-b/paper-b.pdf) (28 pages) and
+[paper D](docs/latex/paper-d/paper-d.pdf) (33 pages).
 
-Every numeric claim in both drafts is followed by an HTML comment of the form
+Every numeric claim in each draft is followed by an HTML comment of the form
 `<!-- src: ... -->` naming the document or machine receipt it was taken from.
 Nothing was recomputed or estimated while drafting. Comments marked
 `derivation:` instead of `src:` are arithmetic performed for the draft from
 numbers that are themselves traced, and are marked so that no reader mistakes a
 derivation for a receipt. Every document named in those comments is in this
-repository, under `docs/`.
+repository, under `docs/`, with the single exception named in
+[`DATA.md`](DATA.md).
 
 `docs/latex/check-numbers.py` is the acceptance test for the typesetting: it
 extracts every numeric token from a draft and from the `.tex` built from it and
@@ -51,6 +56,7 @@ diffs the two ordered sequences, so a single altered digit fails.
 cd docs/latex
 python3 check-numbers.py ../paper-a-draft-20260921.md paper-a/paper-a.tex
 python3 check-numbers.py ../paper-b-draft-20260921.md paper-b/paper-b.tex
+python3 check-numbers.py ../paper-d-draft-20260923.md paper-d/paper-d.tex
 ```
 
 Paper A reports two results in order: cessation of north-south station-keeping
@@ -60,6 +66,19 @@ reports the false-alarm apparatus, one worked detector change carried end to end
 under pre-registration, and — at equal prominence — two registered stress tests
 the apparatus failed, including a full-archive re-measurement that shut the gate
 at 5.3560x against an unchanged 10x separation requirement.
+
+Paper D describes the published record of orbit changes itself: 1,992 episodes
+assembled from 2,058 detected steps, a forward horizon that stops at +20 days
+because that is where the measured error stops resolving one occupied longitude
+from the next, a type library that leaves 80.0% of near-geostationary burns
+unlabelled, a detection recall of 7.94% against the best-labelled population
+available, and an alarm whose low-orbit arm publishes a withheld gate instead
+of an alert. Its registrations, results documents and receipts are in `docs/`,
+and its figures are rebuilt with `python3 tools/make_figures.py paper-d`.
+Appendix A of the draft identifies each measurement's registration and result
+by the commit that first carries the document, in the working repository this
+release was cut from rather than in this one; the documents those commits
+carry are all in `docs/`.
 
 ## Reproducibility and registration
 
@@ -102,7 +121,7 @@ sha256sum -c <(grep -E '^[0-9a-f]{64}  docs/' docs/registration-anchor-manifest2
 ## Repository layout
 
 ```
-docs/          the two papers, the pre-registrations, and every results,
+docs/          the papers, the pre-registrations, and every results,
                receipt, strata and lines artifact the papers cite
 docs/latex/    LaTeX sources, the Markdown-to-LaTeX converter, the number checker
                and the built PDFs
@@ -122,6 +141,9 @@ deploy/        the publication path: container, nginx and systemd definitions
 data/          reference and override data the pipeline reads
 ```
 
+[`DATA.md`](DATA.md) sets out every upstream product the analyses read, its
+distributor and its licence, and what is published here in place of it.
+
 ## Hosts and configuration
 
 No credentials, keys or tokens appear anywhere in this repository, and no
@@ -135,10 +157,29 @@ silently talk to somebody else's machine:
 | `ORBIT_ARCHIVE_BIND` | `deploy/orbit-archive.compose.yaml` | `127.0.0.1` |
 | `SPACE_MODEL_URL` | `pipeline/catalog_factcheck.py` | `http://model-host.example.invalid:18080/v1/chat/completions` |
 | `SPACE_MODEL_NAME` | `pipeline/catalog_factcheck.py` | `bigmem-chat` |
+| `ORBIT_ARCHIVE_DB` | the analysis instruments in `tools/` | `element-archive.not-configured.sqlite3` |
+| `ORBIT_TRUTHSET_ROOT` | `tools/truthset_*.py`, `tools/differential_detect.py` | `truthset.not-configured` |
+| `ORBIT_COLUMN_CACHE` | `tools/per_object_noise.py` | `element-column-cache.not-configured` |
+| `ORBIT_TRIGGER_WORK` | `tools/kinematic_inputs.py` | `trigger-alarm-work.not-configured` |
+| `ORBIT_PLANE_WORK` | `tools/kinematic_inputs.py` | `plane-detect-work.not-configured` |
+| `ORBIT_NODE` | `tools/truthset_growth.py` | whatever `node` is on `PATH` |
+| `SUPGP_FETCH_HOST` | `tools/supgp_ingest.py` | `supgp-lane.example.invalid` |
+| `EPHEMERIS_FETCH_HOST` | `tools/supgp_ingest.py`, `tools/starlink_collect.py` | `ephemeris-lane.example.invalid` |
+| `SUPPLEMENTAL_ARCHIVE_ROOT` | `tools/supgp_ingest.py`, `tools/starlink_collect.py` | `supplemental-archive.not-configured` |
 
 `ORBIT_ARCHIVE_BIND` is a security boundary rather than a convenience: the
 archive container must publish on exactly one address, and the loopback default
 is the safe one. Do not set it to `0.0.0.0`.
+
+The two `*_FETCH_HOST` variables are boundaries too. Each upstream provider
+counts requests per account and per address, so each fetching lane is pinned to
+one machine; the placeholder matches no real host, and an unconfigured checkout
+refuses to open the socket rather than fetching from wherever it is run.
+
+Everything else above is a filesystem location that is a property of an
+installation rather than of the code. Working directories are not in this table
+because they are not defaulted at all: they are required command-line
+arguments. The offline test suites need none of this.
 
 ## Building and testing
 
@@ -151,12 +192,20 @@ analysis code:
 python3 -m unittest discover -s tests -p 'test_orbit*.py'
 ```
 
-This runs 681 tests and must report `OK (skipped=5)`. The skips are GPU paths
-that need CUDA hardware. To run the wider Python suite:
+This runs 820 tests and must report `OK (skipped=5)`. The skips are GPU paths
+that need CUDA hardware.
+
+It does not cover everything. The approach, alarm, type-library, truth-set and
+control instruments behind paper D carry suites of their own, and the wider run
+is what covers them:
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
+
+That runs 3057 tests and must report `OK (skipped=121)`. Every test in
+either run builds its own fixture: no archive, no network and no credentials,
+so a fresh clone runs the whole suite as it stands.
 
 Optional environments, both isolated from the system interpreter:
 
@@ -203,7 +252,7 @@ tools/release_gate.sh
 
 The gate is a mechanical check that this repository names no AI vendor or coding
 assistant in any file, content or filename, with one deliberate exception: the
-Acknowledgments sentence carried by the two papers, which is a required
+Acknowledgments sentence carried by the papers, which is a required
 disclosure and is whitelisted verbatim and counted exactly. The script documents
 how it reads text, PDF and binary files, and exits non-zero on any violation.
 
@@ -212,7 +261,14 @@ how it reads text, PDF and binary files, and exits non-zero on any violation.
 Orbital elements come from Space-Track OMM/SATCAT and CelesTrak mirrors under
 their respective terms of use. This repository contains analysis code, reference
 data and results documents; it does not redistribute the element archive itself,
-which is 216.9 million rows at the time of the papers.
+which is 216.9 million rows at the time of papers A and B and 217.0 million at
+the time of paper D.
+
+[`DATA.md`](DATA.md) is the full account: every upstream product the analyses
+read, its distributor, its licence and its identifier; what is published here
+instead of each one; the one receipt that is withheld and why; and the
+environment variables that point the tools at a local copy of the raw
+material.
 
 ## License
 

@@ -1,0 +1,485 @@
+{
+  "schema": 1,
+  "track": "T10a-transfer-loss",
+  "registration": "docs/transfer-loss-preregistration-20260922.md",
+  "registrationCommit": "83c5cd4",
+  "measuredAt": "2026-09-22T06:55:26.408550+00:00",
+  "inputs": {
+    "events": "/tmp/t2-repricing-20260921/events.jsonl.gz",
+    "archive": "/tmp/eol-study-20260920/archive.sqlite3",
+    "catalogue": "/home/sdegan/space-teaching-aid/data/propulsion-catalog-v1.json",
+    "sha256": {
+      "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f",
+      "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+      "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3"
+    }
+  },
+  "seeds": {
+    "monteCarlo": 20260922,
+    "bootstrap": 20260922,
+    "draws": 200,
+    "bootstrapDraws": 10000
+  },
+  "runtimeProofs": {
+    "gtoGeoCombinedKickMps": 1837.4396175374025,
+    "gtoGeoClosedFormMps": 1837.4396175374018,
+    "hohmannMps": 3770.728927574945,
+    "hohmannClosedFormMps": 3770.728927574946,
+    "splitConditionWorstResidual": 8.881784197001252e-16,
+    "gridCrosscheckWorstGapKmS": 0.0,
+    "interiorOptimumStrictlyWins": 200,
+    "edelbaumCoplanarMps": 4471.389015072545,
+    "edelbaumLeoGeo28p5Mps": 5950.7681840073055
+  },
+  "census": {
+    "catalogueObjects": 151,
+    "objectsWithRaisingLeg": 136,
+    "objectsWithDetectedRaisingPhase": 84
+  },
+  "phasesBuilt": 84,
+  "singleBurnIdentityChecked": 16,
+  "screenCounts": {
+    "S6-detection-incomplete": 9,
+    "S1-single-burn-identity": 16,
+    "S2-below-transfer-magnitude": 5,
+    "S3-not-a-raise": 2,
+    "S5-eccentric-electric": 2
+  },
+  "primaryPopulation": 58,
+  "byClass": {
+    "chemical": {
+      "verdict": "INFORMATIVE",
+      "A1_power": true,
+      "A2_excludesZero": true,
+      "A3_aboveNoiseFloor": true,
+      "A4_notDriftDominated": true,
+      "medianLossFraction": 0.003402760879630873,
+      "medianLossSigma": 3.3835157870431484e-06,
+      "medianCoastFraction": 0.0008323138045085669,
+      "bootstrap": {
+        "median": 0.003402760879630873,
+        "ci95": [
+          0.0013681147922544046,
+          0.005153160471507601
+        ],
+        "n": 58
+      },
+      "D2_defectMedianAboveCeiling": false,
+      "lossQuantiles": {
+        "n": 58,
+        "min": 2.9781745632506684e-05,
+        "p25": 0.000508729006068187,
+        "median": 0.003402760879630873,
+        "p75": 0.010059089153488077,
+        "p90": 0.0388840265531246,
+        "max": 0.7475527436761558,
+        "mean": 0.03466733538811124
+      },
+      "excessMpsBootstrap": {
+        "median": 3.396036481089027,
+        "ci95": [
+          1.6109201533777764,
+          7.91131337838533
+        ],
+        "n": 58
+      },
+      "excessMpsQuantiles": {
+        "n": 58,
+        "min": 0.054543756200700955,
+        "p25": 0.6731960324879651,
+        "median": 3.396036481089027,
+        "p75": 14.231813254936398,
+        "p90": 34.286033502361015,
+        "max": 1630.7918833807416,
+        "mean": 52.09074606336753
+      },
+      "events": 58
+    },
+    "electric": {
+      "verdict": "UNDERPOWERED",
+      "A1_power": false,
+      "n": 0,
+      "events": 0
+    }
+  },
+  "pooled": {
+    "verdict": "INFORMATIVE",
+    "A1_power": true,
+    "A2_excludesZero": true,
+    "A3_aboveNoiseFloor": true,
+    "A4_notDriftDominated": true,
+    "medianLossFraction": 0.003402760879630873,
+    "medianLossSigma": 3.3835157870431484e-06,
+    "medianCoastFraction": 0.0008323138045085669,
+    "bootstrap": {
+      "median": 0.003402760879630873,
+      "ci95": [
+        0.0013681147922544046,
+        0.005153160471507601
+      ],
+      "n": 58
+    },
+    "D2_defectMedianAboveCeiling": false,
+    "lossQuantiles": {
+      "n": 58,
+      "min": 2.9781745632506684e-05,
+      "p25": 0.000508729006068187,
+      "median": 0.003402760879630873,
+      "p75": 0.010059089153488077,
+      "p90": 0.0388840265531246,
+      "max": 0.7475527436761558,
+      "mean": 0.03466733538811124
+    },
+    "excessMpsBootstrap": {
+      "median": 3.396036481089027,
+      "ci95": [
+        1.6109201533777764,
+        7.91131337838533
+      ],
+      "n": 58
+    },
+    "excessMpsQuantiles": {
+      "n": 58,
+      "min": 0.054543756200700955,
+      "p25": 0.6731960324879651,
+      "median": 3.396036481089027,
+      "p75": 14.231813254936398,
+      "p90": 34.286033502361015,
+      "max": 1630.7918833807416,
+      "mean": 52.09074606336753
+    }
+  },
+  "busFamilies": {
+    "A2100": {
+      "events": 5,
+      "class": "chemical",
+      "medianLossFraction": 0.005153160471507601,
+      "medianExcessMps": 4.347815180945304,
+      "summarised": true,
+      "quantiles": {
+        "n": 5,
+        "min": 3.8347692458584604e-05,
+        "p25": 0.0018755581451090908,
+        "median": 0.005153160471507601,
+        "p75": 0.07644229854393614,
+        "p90": 0.30591492319249713,
+        "max": 0.45889667295820447,
+        "mean": 0.10848120756224318
+      }
+    },
+    "ALPHABUS": {
+      "events": 1,
+      "class": "chemical",
+      "medianLossFraction": 0.05350899598185155,
+      "medianExcessMps": 79.11092579471119,
+      "summarised": false,
+      "quantiles": null
+    },
+    "BSS-702": {
+      "events": 14,
+      "class": "chemical",
+      "medianLossFraction": 0.0020348698135851384,
+      "medianExcessMps": 2.577384763686382,
+      "summarised": true,
+      "quantiles": {
+        "n": 14,
+        "min": 0.00029825344001488396,
+        "p25": 0.0012493052185094111,
+        "median": 0.0020348698135851384,
+        "p75": 0.016800600034346858,
+        "p90": 0.02900148436115734,
+        "max": 0.05338952014758669,
+        "mean": 0.010777158290685642
+      }
+    },
+    "BSS-GEM": {
+      "events": 1,
+      "class": "chemical",
+      "medianLossFraction": 0.016819693618748577,
+      "medianExcessMps": 20.719152457663768,
+      "summarised": false,
+      "quantiles": null
+    },
+    "EUROSTAR-2000": {
+      "events": 1,
+      "class": "chemical",
+      "medianLossFraction": 0.002700982742367186,
+      "medianExcessMps": 3.8139318017204005,
+      "summarised": false,
+      "quantiles": null
+    },
+    "EUROSTAR-3000": {
+      "events": 9,
+      "class": "chemical",
+      "medianLossFraction": 0.0041045390168945595,
+      "medianExcessMps": 6.027324882252742,
+      "summarised": true,
+      "quantiles": {
+        "n": 9,
+        "min": 0.0004455453672917997,
+        "p25": 0.0005647214074044893,
+        "median": 0.0041045390168945595,
+        "p75": 0.005001557122980893,
+        "p90": 0.1535960511842716,
+        "max": 0.7475527436761558,
+        "mean": 0.08541704345829923
+      }
+    },
+    "HS-601": {
+      "events": 1,
+      "class": "chemical",
+      "medianLossFraction": 0.01012624574002019,
+      "medianExcessMps": 14.649023809177152,
+      "summarised": false,
+      "quantiles": null
+    },
+    "LM-2100": {
+      "events": 1,
+      "class": "chemical",
+      "medianLossFraction": 0.00027980148936768146,
+      "medianExcessMps": 0.2905244117434904,
+      "summarised": false,
+      "quantiles": null
+    },
+    "SPACEBUS-4000": {
+      "events": 4,
+      "class": "chemical",
+      "medianLossFraction": 0.0025560270796286533,
+      "medianExcessMps": 1.7409720851396742,
+      "summarised": false,
+      "quantiles": null
+    },
+    "SSL-1300": {
+      "events": 21,
+      "class": "chemical",
+      "medianLossFraction": 0.0021414985161440914,
+      "medianExcessMps": 2.9781411604576533,
+      "summarised": true,
+      "quantiles": {
+        "n": 21,
+        "min": 2.9781745632506684e-05,
+        "p25": 0.00046508543324641494,
+        "median": 0.0021414985161440914,
+        "p75": 0.006697983774674121,
+        "p90": 0.01690981582754092,
+        "max": 0.3546090796439343,
+        "mean": 0.02161443874692733
+      }
+    }
+  },
+  "lossByBurnCount": {
+    "2": {
+      "events": 15,
+      "medianLossFraction": 0.0005647214074044893
+    },
+    "3": {
+      "events": 13,
+      "medianLossFraction": 0.0023147789113393547
+    },
+    "4": {
+      "events": 13,
+      "medianLossFraction": 0.0021414985161440914
+    },
+    "5": {
+      "events": 10,
+      "medianLossFraction": 0.014843408401876368
+    },
+    "6": {
+      "events": 4,
+      "medianLossFraction": 0.005077358797244247
+    },
+    "7": {
+      "events": 2,
+      "medianLossFraction": 0.0049379325175045174
+    },
+    "8": {
+      "events": 1,
+      "medianLossFraction": 0.006105168838387298
+    }
+  },
+  "theilSenSlopeLossPerBurn": 0.0009890888466096814,
+  "driftOrbit": {
+    "withOvershoot": 2,
+    "withoutOvershoot": 56,
+    "medianExcessWithMps": 15.025184052413238,
+    "medianExcessWithoutMps": 3.396036481089027
+  },
+  "shippedPricingConservatism": {
+    "n": 267,
+    "min": 0.07176510146224481,
+    "p25": 0.8209762894249015,
+    "median": 0.9415550008734925,
+    "p75": 1.0085155141475215,
+    "p90": 1.257821625147133,
+    "max": 93.40050981957765,
+    "mean": 1.3583784383740807
+  },
+  "endpointSensitivity": {
+    "baseMedian": 0.003402760879630873,
+    "registeredCentredMedianVariant": 0.005268369112090943,
+    "registeredRelativeShift": 0.5482631011857785,
+    "sensitive": true,
+    "unregisteredOneSidedVariant": 0.002287979506317872,
+    "unregisteredOneSidedRelativeShift": -0.3276108468232804,
+    "raisingSignatureOnlyVariant": 0.003402760879630873
+  },
+  "j2NodeReduction": {
+    "correctedMedian": 0.003402760879630873,
+    "uncorrectedMedian": 0.0035622676353853633,
+    "factor": 1.0468756875363494,
+    "medianJ2NodeDriftDegOverPhase": 0.7092992319983078
+  },
+  "diagnostics": {
+    "eventsWithCoastFractionAboveA4Threshold": 2,
+    "coastFractionQuantiles": {
+      "n": 58,
+      "min": 0.0,
+      "p25": 0.0002808548704474929,
+      "median": 0.0008323138045085669,
+      "p75": 0.002425222834427535,
+      "p90": 0.010050871821738621,
+      "max": 0.3144839276659252,
+      "mean": 0.01293464203147822
+    },
+    "planeBacktrackDegQuantilesUnregistered": {
+      "n": 58,
+      "min": 7.623268546197437e-06,
+      "p25": 0.001769885458744569,
+      "median": 0.02051442552257754,
+      "p75": 0.2273791215253389,
+      "p90": 0.5512576616521332,
+      "max": 32.94446287404922,
+      "mean": 0.7629891517116698
+    },
+    "excessPropellantKgLowEdgeQuantiles": {
+      "n": 58,
+      "min": 0.022601134451509797,
+      "p25": 0.7168570442999578,
+      "median": 3.33685096753364,
+      "p75": 14.364927215552441,
+      "p90": 38.897338175365206,
+      "max": 1203.9234507025883,
+      "mean": 42.40249473243987
+    },
+    "excessPropellantKgHighEdgeQuantiles": {
+      "n": 58,
+      "min": 0.022601134451509797,
+      "p25": 0.7335723219437833,
+      "median": 3.3733680863645947,
+      "p75": 14.55202082981247,
+      "p90": 39.54599712072034,
+      "max": 1207.3360719299685,
+      "mean": 42.772171436869286
+    },
+    "negativeLossValues": [
+      [
+        20523,
+        "INTELSAT 603",
+        -0.25914290129119655,
+        97.9476476389719,
+        132.20855656195928
+      ],
+      [
+        32729,
+        "DIRECTV 11",
+        -0.013055914478392494,
+        1283.634410266258,
+        1300.615130175128
+      ],
+      [
+        35696,
+        "ASIASAT 5",
+        -1.2636357584749902e-05,
+        2234.331364115001,
+        2234.359598281858
+      ],
+      [
+        38331,
+        "JCSAT 13",
+        -0.21506957986500674,
+        1075.98753005364,
+        1370.8062555004435
+      ],
+      [
+        41866,
+        "GOES 16",
+        -0.0005275306460393869,
+        996.3096396752229,
+        996.8355009510346
+      ],
+      [
+        43488,
+        "SES 12",
+        -0.9582795991432367,
+        90.79183100723915,
+        2176.1974751621033
+      ],
+      [
+        43562,
+        "TELSTAR 19V",
+        -0.21168868245601735,
+        1762.3569456266703,
+        2235.610356473592
+      ],
+      [
+        44307,
+        "YAMAL 601",
+        -0.5943744465918919,
+        284.79050967573795,
+        702.101993532948
+      ],
+      [
+        48838,
+        "XM-8",
+        -0.7520403579557771,
+        540.0101274281111,
+        2177.814595053342
+      ]
+    ],
+    "electricArm": [
+      {
+        "norad": 43175,
+        "name": "SES 14",
+        "screens": [
+          "S1-single-burn-identity",
+          "S5-eccentric-electric"
+        ],
+        "burnIntervals": 1,
+        "lossFraction": 0.0,
+        "detectedPathMps": 187.18037980973105,
+        "idealMps": 187.18037980973105,
+        "worstEccentricity": 0.7632631
+      },
+      {
+        "norad": 43488,
+        "name": "SES 12",
+        "screens": [
+          "S5-eccentric-electric",
+          "S6-detection-incomplete"
+        ],
+        "burnIntervals": 2,
+        "lossFraction": -0.9582795991432367,
+        "detectedPathMps": 90.79183100723915,
+        "idealMps": 2176.1974751621033,
+        "worstEccentricity": 0.8146424
+      },
+      {
+        "norad": 54755,
+        "name": "SES MPOWER-A F1",
+        "screens": [
+          "S2-below-transfer-magnitude"
+        ],
+        "burnIntervals": 2,
+        "lossFraction": 0.825596759873467,
+        "detectedPathMps": 13.873973596261742,
+        "idealMps": 7.599692276635807,
+        "worstEccentricity": 0.0107427
+      }
+    ],
+    "catalogueElectricRaisingObjects": 14
+  },
+  "sourceSha256": "b57c64a00342ca3b294417e9c6bce3c461ae99f8b00b0b18958663e2f9da4087",
+  "executionMode": "cpu",
+  "wallSeconds": 103.133,
+  "cpuSeconds": 93.772
+}

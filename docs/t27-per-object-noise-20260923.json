@@ -1,0 +1,2611 @@
+{
+  "registration": "docs/t27-per-object-noise-preregistration-20260923.md",
+  "generatedUtc": "2026-09-23T01:09:11+00:00",
+  "seed": 20260923,
+  "bootstrapDraws": 2000,
+  "blockDays": 90.0,
+  "change": {
+    "callSite": "proximity_plane.detect_manoeuvres(el, sigma_n, sigma_theta)",
+    "shipped": {
+      "sigmaN": 6.2747e-05,
+      "sigmaTheta": 0.6994
+    },
+    "underTest": "proximity_plane.object_sigma_contributions(el)",
+    "unchanged": {
+      "k": 5.0,
+      "baselineSamples": 10,
+      "daFloorKm": 0.05,
+      "iFloorDeg": 0.01,
+      "campaignMaxGapDays": 180.0
+    }
+  },
+  "gates": {
+    "G1_detectorUntouched": {
+      "clean": true,
+      "diffstat": "",
+      "blobHashes": {
+        "tools/proximity_plane.py": "433bb7b8df657ae5dd7a04996f7f4e5deb2b4f65",
+        "tools/trigger_alarm.py": "140cbc32841ec2c1e0e5eaea288d64168eb53336",
+        "tools/alarm_lane_leo.py": "66fb64b28cf9decdd3e682c6a97f7a84abd3bd0a",
+        "pipeline/orbit_events.py": "b2ee05cf3b8b7064963852243584f7fc0de0fdd5"
+      }
+    },
+    "G2_reproduction": {
+      "shipped": {
+        "published": {
+          "hits": 90,
+          "labels": 1134,
+          "quietFlags": 18,
+          "unmatched": 321
+        },
+        "measured": {
+          "hits": 90,
+          "labels": 1134,
+          "quietFlags": 18,
+          "unmatched": 321
+        },
+        "match": true
+      },
+      "perObject": {
+        "published": {
+          "hits": 128,
+          "labels": 1134,
+          "quietFlags": 18,
+          "unmatched": 520
+        },
+        "measured": {
+          "hits": 128,
+          "labels": 1134,
+          "quietFlags": 18,
+          "unmatched": 520
+        },
+        "match": true
+      },
+      "clean": true
+    }
+  },
+  "labels": {
+    "labelSet": {
+      "labels": 1134,
+      "stableWindows": 1139,
+      "spacecraft": [
+        "cryosat-2",
+        "hy-2a",
+        "jason-1",
+        "jason-2",
+        "jason-3",
+        "saral",
+        "sentinel-3a",
+        "sentinel-3b",
+        "sentinel-6a",
+        "swot",
+        "topex-poseidon"
+      ]
+    },
+    "gates": {
+      "G2_reproduction": {
+        "shipped": {
+          "published": {
+            "hits": 90,
+            "labels": 1134,
+            "quietFlags": 18,
+            "unmatched": 321
+          },
+          "measured": {
+            "hits": 90,
+            "labels": 1134,
+            "quietFlags": 18,
+            "unmatched": 321
+          },
+          "match": true
+        },
+        "perObject": {
+          "published": {
+            "hits": 128,
+            "labels": 1134,
+            "quietFlags": 18,
+            "unmatched": 520
+          },
+          "measured": {
+            "hits": 128,
+            "labels": 1134,
+            "quietFlags": 18,
+            "unmatched": 520
+          },
+          "match": true
+        },
+        "clean": true
+      }
+    },
+    "arms": {
+      "shipped": {
+        "cells": {
+          "overall": {
+            "k": 90,
+            "n": 1134,
+            "recall": 0.07936507936507936,
+            "wilson95": [
+              0.06501510889203253,
+              0.09655525523650489
+            ]
+          },
+          "campaignLevel": {
+            "k": 15,
+            "n": 1134,
+            "recall": 0.013227513227513227,
+            "wilson95": [
+              0.008032237390896186,
+              0.021709567638354674
+            ]
+          },
+          "placeboAssociation": {
+            "k": 17,
+            "n": 5610,
+            "recall": 0.0030303030303030303,
+            "wilson95": [
+              0.0018928905554342296,
+              0.004847851786518962
+            ]
+          },
+          "byChannel": {
+            "intrack": 90,
+            "plane": 0
+          },
+          "byDaBin": {
+            "0-20 m": {
+              "k": 6,
+              "n": 576,
+              "recall": 0.010416666666666666,
+              "wilson95": [
+                0.0047825519272765606,
+                0.0225377760373137
+              ]
+            },
+            "100-200 m": {
+              "k": 10,
+              "n": 27,
+              "recall": 0.37037037037037035,
+              "wilson95": [
+                0.21532512958080754,
+                0.5577076559210928
+              ]
+            },
+            "20-50 m": {
+              "k": 2,
+              "n": 342,
+              "recall": 0.005847953216374269,
+              "wilson95": [
+                0.0016051873749938373,
+                0.021068377700735573
+              ]
+            },
+            "200-500 m": {
+              "k": 21,
+              "n": 36,
+              "recall": 0.5833333333333334,
+              "wilson95": [
+                0.4220025157127144,
+                0.7285943795147266
+              ]
+            },
+            "50-100 m": {
+              "k": 1,
+              "n": 53,
+              "recall": 0.018867924528301886,
+              "wilson95": [
+                0.0033384533871654437,
+                0.09942912055457001
+              ]
+            },
+            ">=500 m": {
+              "k": 50,
+              "n": 100,
+              "recall": 0.5,
+              "wilson95": [
+                0.4038315303442626,
+                0.5961684696557374
+              ]
+            }
+          },
+          "byOwnFloor": {
+            "aboveFloor": {
+              "k": 81,
+              "n": 157,
+              "recall": 0.5159235668789809,
+              "wilson95": [
+                0.438310059991843,
+                0.5927764523825438
+              ]
+            },
+            "belowFloor": {
+              "k": 9,
+              "n": 977,
+              "recall": 0.009211873080859774,
+              "wilson95": [
+                0.004853864618836377,
+                0.017414218185002085
+              ]
+            }
+          },
+          "byShippedFloor": {
+            "aboveFloor": {
+              "k": 81,
+              "n": 157,
+              "recall": 0.5159235668789809,
+              "wilson95": [
+                0.438310059991843,
+                0.5927764523825438
+              ]
+            },
+            "belowFloor": {
+              "k": 9,
+              "n": 977,
+              "recall": 0.009211873080859774,
+              "wilson95": [
+                0.004853864618836377,
+                0.017414218185002085
+              ]
+            }
+          },
+          "bySpacecraft": {
+            "cryosat-2": {
+              "k": 13,
+              "n": 241,
+              "recall": 0.05394190871369295,
+              "wilson95": [
+                0.03179158465505069,
+                0.09008915795288837
+              ]
+            },
+            "hy-2a": {
+              "k": 0,
+              "n": 58,
+              "recall": 0.0,
+              "wilson95": [
+                0.0,
+                0.062117855814546374
+              ]
+            },
+            "jason-1": {
+              "k": 7,
+              "n": 119,
+              "recall": 0.058823529411764705,
+              "wilson95": [
+                0.028783312476047734,
+                0.11645640539703253
+              ]
+            },
+            "jason-2": {
+              "k": 16,
+              "n": 111,
+              "recall": 0.14414414414414414,
+              "wilson95": [
+                0.09071519934098202,
+                0.2213799202263763
+              ]
+            },
+            "jason-3": {
+              "k": 17,
+              "n": 85,
+              "recall": 0.2,
+              "wilson95": [
+                0.12878998142660225,
+                0.2971537088734786
+              ]
+            },
+            "saral": {
+              "k": 8,
+              "n": 67,
+              "recall": 0.11940298507462686,
+              "wilson95": [
+                0.061762325325624645,
+                0.2183202584084647
+              ]
+            },
+            "sentinel-3a": {
+              "k": 2,
+              "n": 147,
+              "recall": 0.013605442176870748,
+              "wilson95": [
+                0.0037390672772061734,
+                0.04824570457337987
+              ]
+            },
+            "sentinel-3b": {
+              "k": 8,
+              "n": 145,
+              "recall": 0.05517241379310345,
+              "wilson95": [
+                0.028218774305221232,
+                0.10508722107714921
+              ]
+            },
+            "sentinel-6a": {
+              "k": 4,
+              "n": 32,
+              "recall": 0.125,
+              "wilson95": [
+                0.04970134386451466,
+                0.2806830548604724
+              ]
+            },
+            "swot": {
+              "k": 11,
+              "n": 86,
+              "recall": 0.12790697674418605,
+              "wilson95": [
+                0.07294621790785254,
+                0.2146877893888562
+              ]
+            },
+            "topex-poseidon": {
+              "k": 4,
+              "n": 43,
+              "recall": 0.09302325581395349,
+              "wilson95": [
+                0.0367716406241073,
+                0.21602703644890148
+              ]
+            }
+          }
+        },
+        "falseFlags": {
+          "totals": {
+            "flagsInStableWindows": 18,
+            "suspect": 9,
+            "windowsHit": 10,
+            "stableWindows": 1139,
+            "stableWindowDays": 1423.75,
+            "flagsInLabelSpan": 460,
+            "flagsUnmatched": 321,
+            "flagsPerStableWindowDay": 0.012642669007901668
+          },
+          "perSpacecraft": {
+            "cryosat-2": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 102.21403440144863,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 64,
+                "plane": 0,
+                "either": 64,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 241,
+                "stableWindowDays": 301.25,
+                "flagsInStableWindows": 3,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.00995850622406639,
+                "labelSpanYears": 16.214477590279362,
+                "flagsInLabelSpan": 60,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 2.775297554265804
+              }
+            },
+            "hy-2a": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 111.44546829430762,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 101,
+                "plane": 0,
+                "either": 101,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 58,
+                "stableWindowDays": 72.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 8.699901228230285,
+                "flagsInLabelSpan": 7,
+                "flagsUnmatched": 7,
+                "unmatchedPerYear": 0.804606835912771
+              }
+            },
+            "jason-1": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 125.48814657445354,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 42,
+                "plane": 0,
+                "either": 42,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 119,
+                "stableWindowDays": 148.75,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.013445378151260505,
+                "labelSpanYears": 11.508944561278424,
+                "flagsInLabelSpan": 42,
+                "flagsUnmatched": 36,
+                "unmatchedPerYear": 3.1280018604938946
+              }
+            },
+            "jason-2": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 124.89842069482948,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 59,
+                "plane": 0,
+                "either": 59,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 111,
+                "stableWindowDays": 138.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 11.28389837101047,
+                "flagsInLabelSpan": 59,
+                "flagsUnmatched": 28,
+                "unmatchedPerYear": 2.481411926921902
+              }
+            },
+            "jason-3": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 125.98856999540864,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 85,
+                "plane": 0,
+                "either": 85,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 85,
+                "stableWindowDays": 106.25,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.460429321494663,
+                "flagsInLabelSpan": 85,
+                "flagsUnmatched": 50,
+                "unmatchedPerYear": 4.779918535203643
+              }
+            },
+            "saral": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 104.61794292213851,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 53,
+                "plane": 0,
+                "either": 53,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 70,
+                "stableWindowDays": 87.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 12.95186931246356,
+                "flagsInLabelSpan": 53,
+                "flagsUnmatched": 39,
+                "unmatchedPerYear": 3.0111483569765776
+              }
+            },
+            "sentinel-3a": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 105.26897016115703,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 14,
+                "plane": 0,
+                "either": 14,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 147,
+                "stableWindowDays": 183.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.322230150201536,
+                "flagsInLabelSpan": 10,
+                "flagsUnmatched": 8,
+                "unmatchedPerYear": 0.7750263153979186
+              }
+            },
+            "sentinel-3b": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 105.26901738231109,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 50,
+                "plane": 0,
+                "either": 50,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 145,
+                "stableWindowDays": 181.25,
+                "flagsInStableWindows": 4,
+                "flagsInStableWindowsFlaggedSuspect": 2,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.022068965517241378,
+                "labelSpanYears": 8.11816681243187,
+                "flagsInLabelSpan": 46,
+                "flagsUnmatched": 30,
+                "unmatchedPerYear": 3.6954155652553324
+              }
+            },
+            "sentinel-6a": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 125.98856622505333,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 14,
+                "plane": 0,
+                "either": 14,
+                "campaignStarts": 1
+              },
+              "falseFlags": {
+                "stableWindows": 32,
+                "stableWindowDays": 40.0,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.05,
+                "labelSpanYears": 5.492479307678658,
+                "flagsInLabelSpan": 14,
+                "flagsUnmatched": 8,
+                "unmatchedPerYear": 1.4565371213717182
+              }
+            },
+            "swot": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 108.61879858453088,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 67,
+                "plane": 0,
+                "either": 67,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 87,
+                "stableWindowDays": 108.75,
+                "flagsInStableWindows": 6,
+                "flagsInStableWindowsFlaggedSuspect": 6,
+                "stableWindowsWithAtLeastOneFlag": 3,
+                "flagsPerStableWindowDay": 0.05517241379310345,
+                "labelSpanYears": 3.4002940299325677,
+                "flagsInLabelSpan": 40,
+                "flagsUnmatched": 32,
+                "unmatchedPerYear": 9.410950852575123
+              }
+            },
+            "topex-poseidon": {
+              "sigmaN": 6.2747e-05,
+              "sigmaTheta": 0.6994,
+              "source": "pooled",
+              "floorMetres": 125.98388546818595,
+              "thresholdSetBy": "fitNoise",
+              "flagCounts": {
+                "intrack": 44,
+                "plane": 0,
+                "either": 44,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 44,
+                "stableWindowDays": 55.0,
+                "flagsInStableWindows": 1,
+                "flagsInStableWindowsFlaggedSuspect": 1,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.01818181818181818,
+                "labelSpanYears": 12.255589778690396,
+                "flagsInLabelSpan": 44,
+                "flagsUnmatched": 38,
+                "unmatchedPerYear": 3.1006259744490725
+              }
+            }
+          }
+        }
+      },
+      "perObject": {
+        "cells": {
+          "overall": {
+            "k": 128,
+            "n": 1134,
+            "recall": 0.1128747795414462,
+            "wilson95": [
+              0.09574889640751935,
+              0.13261460433132324
+            ]
+          },
+          "campaignLevel": {
+            "k": 23,
+            "n": 1134,
+            "recall": 0.020282186948853614,
+            "wilson95": [
+              0.013552582180597954,
+              0.030250935819243464
+            ]
+          },
+          "placeboAssociation": {
+            "k": 27,
+            "n": 5610,
+            "recall": 0.004812834224598931,
+            "wilson95": [
+              0.0033098599407484445,
+              0.0069935052765922896
+            ]
+          },
+          "byChannel": {
+            "intrack": 128,
+            "plane": 0
+          },
+          "byDaBin": {
+            "0-20 m": {
+              "k": 8,
+              "n": 576,
+              "recall": 0.013888888888888888,
+              "wilson95": [
+                0.00705414947472249,
+                0.027164615880189823
+              ]
+            },
+            "100-200 m": {
+              "k": 14,
+              "n": 27,
+              "recall": 0.5185185185185185,
+              "wilson95": [
+                0.33985615751233816,
+                0.6925677302731044
+              ]
+            },
+            "20-50 m": {
+              "k": 12,
+              "n": 342,
+              "recall": 0.03508771929824561,
+              "wilson95": [
+                0.020183590234553805,
+                0.06031994140474191
+              ]
+            },
+            "200-500 m": {
+              "k": 22,
+              "n": 36,
+              "recall": 0.6111111111111112,
+              "wilson95": [
+                0.4486445909291694,
+                0.7521512693740855
+              ]
+            },
+            "50-100 m": {
+              "k": 21,
+              "n": 53,
+              "recall": 0.39622641509433965,
+              "wilson95": [
+                0.2758940673551368,
+                0.530585213298963
+              ]
+            },
+            ">=500 m": {
+              "k": 51,
+              "n": 100,
+              "recall": 0.51,
+              "wilson95": [
+                0.4134801193183753,
+                0.6057800107171506
+              ]
+            }
+          },
+          "byOwnFloor": {
+            "aboveFloor": {
+              "k": 108,
+              "n": 216,
+              "recall": 0.5,
+              "wilson95": [
+                0.4339058081359978,
+                0.5660941918640022
+              ]
+            },
+            "belowFloor": {
+              "k": 20,
+              "n": 918,
+              "recall": 0.02178649237472767,
+              "wilson95": [
+                0.014146992960058032,
+                0.03341157408301837
+              ]
+            }
+          },
+          "byShippedFloor": {
+            "aboveFloor": {
+              "k": 84,
+              "n": 157,
+              "recall": 0.535031847133758,
+              "wilson95": [
+                0.45710906025240766,
+                0.6112812669712436
+              ]
+            },
+            "belowFloor": {
+              "k": 44,
+              "n": 977,
+              "recall": 0.04503582395087001,
+              "wilson95": [
+                0.03371753522573086,
+                0.05991784080410481
+              ]
+            }
+          },
+          "bySpacecraft": {
+            "cryosat-2": {
+              "k": 32,
+              "n": 241,
+              "recall": 0.13278008298755187,
+              "wilson95": [
+                0.09564822178115825,
+                0.18143499422630785
+              ]
+            },
+            "hy-2a": {
+              "k": 0,
+              "n": 58,
+              "recall": 0.0,
+              "wilson95": [
+                0.0,
+                0.062117855814546374
+              ]
+            },
+            "jason-1": {
+              "k": 10,
+              "n": 119,
+              "recall": 0.08403361344537816,
+              "wilson95": [
+                0.04628480918844952,
+                0.14779835337759756
+              ]
+            },
+            "jason-2": {
+              "k": 17,
+              "n": 111,
+              "recall": 0.15315315315315314,
+              "wilson95": [
+                0.0978747637265473,
+                0.23163566926948542
+              ]
+            },
+            "jason-3": {
+              "k": 17,
+              "n": 85,
+              "recall": 0.2,
+              "wilson95": [
+                0.12878998142660225,
+                0.2971537088734786
+              ]
+            },
+            "saral": {
+              "k": 15,
+              "n": 67,
+              "recall": 0.22388059701492538,
+              "wilson95": [
+                0.1406373112762777,
+                0.3370696612366891
+              ]
+            },
+            "sentinel-3a": {
+              "k": 6,
+              "n": 147,
+              "recall": 0.04081632653061224,
+              "wilson95": [
+                0.01883856143244675,
+                0.08618202737754707
+              ]
+            },
+            "sentinel-3b": {
+              "k": 9,
+              "n": 145,
+              "recall": 0.06206896551724138,
+              "wilson95": [
+                0.03299508240879859,
+                0.11374802932423281
+              ]
+            },
+            "sentinel-6a": {
+              "k": 4,
+              "n": 32,
+              "recall": 0.125,
+              "wilson95": [
+                0.04970134386451466,
+                0.2806830548604724
+              ]
+            },
+            "swot": {
+              "k": 12,
+              "n": 86,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.08165847154544775,
+                0.2282369730232388
+              ]
+            },
+            "topex-poseidon": {
+              "k": 6,
+              "n": 43,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.06555723426826224,
+                0.2726358797106885
+              ]
+            }
+          }
+        },
+        "falseFlags": {
+          "totals": {
+            "flagsInStableWindows": 18,
+            "suspect": 9,
+            "windowsHit": 10,
+            "stableWindows": 1139,
+            "stableWindowDays": 1423.75,
+            "flagsInLabelSpan": 715,
+            "flagsUnmatched": 520,
+            "flagsPerStableWindowDay": 0.012642669007901668
+          },
+          "perSpacecraft": {
+            "cryosat-2": {
+              "sigmaN": 4.96320511946534e-07,
+              "sigmaTheta": 0.0803294365802831,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 167,
+                "plane": 0,
+                "either": 167,
+                "campaignStarts": 8
+              },
+              "falseFlags": {
+                "stableWindows": 241,
+                "stableWindowDays": 301.25,
+                "flagsInStableWindows": 3,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.00995850622406639,
+                "labelSpanYears": 16.214477590279362,
+                "flagsInLabelSpan": 163,
+                "flagsUnmatched": 116,
+                "unmatchedPerYear": 7.154100362107406
+              }
+            },
+            "hy-2a": {
+              "sigmaN": 4.4789899900547644e-07,
+              "sigmaTheta": 0.12834941728646762,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 141,
+                "plane": 0,
+                "either": 141,
+                "campaignStarts": 7
+              },
+              "falseFlags": {
+                "stableWindows": 58,
+                "stableWindowDays": 72.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 8.699901228230285,
+                "flagsInLabelSpan": 21,
+                "flagsUnmatched": 21,
+                "unmatchedPerYear": 2.413820507738313
+              }
+            },
+            "jason-1": {
+              "sigmaN": 2.1184412072988706e-07,
+              "sigmaTheta": 0.6706953870556668,
+              "source": "own",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 119,
+                "stableWindowDays": 148.75,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.013445378151260505,
+                "labelSpanYears": 11.508944561278424,
+                "flagsInLabelSpan": 54,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.910002325617368
+              }
+            },
+            "jason-2": {
+              "sigmaN": 1.9973874249462267e-07,
+              "sigmaTheta": 0.6461654943480726,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 65,
+                "plane": 0,
+                "either": 65,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 111,
+                "stableWindowDays": 138.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 11.28389837101047,
+                "flagsInLabelSpan": 65,
+                "flagsUnmatched": 33,
+                "unmatchedPerYear": 2.9245211995865272
+              }
+            },
+            "jason-3": {
+              "sigmaN": 1.755279860240939e-07,
+              "sigmaTheta": 0.5382925657313364,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 85,
+                "plane": 0,
+                "either": 85,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 85,
+                "stableWindowDays": 106.25,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.460429321494663,
+                "flagsInLabelSpan": 85,
+                "flagsUnmatched": 50,
+                "unmatchedPerYear": 4.779918535203643
+              }
+            },
+            "saral": {
+              "sigmaN": 3.4500328131779524e-07,
+              "sigmaTheta": 0.2896984516006001,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 112,
+                "plane": 0,
+                "either": 112,
+                "campaignStarts": 6
+              },
+              "falseFlags": {
+                "stableWindows": 70,
+                "stableWindowDays": 87.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 12.95186931246356,
+                "flagsInLabelSpan": 112,
+                "flagsUnmatched": 91,
+                "unmatchedPerYear": 7.026012832945347
+              }
+            },
+            "sentinel-3a": {
+              "sigmaN": 2.1789680930993243e-07,
+              "sigmaTheta": 0.12471219671819336,
+              "source": "own",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 42,
+                "plane": 0,
+                "either": 42,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 147,
+                "stableWindowDays": 183.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.322230150201536,
+                "flagsInLabelSpan": 38,
+                "flagsUnmatched": 29,
+                "unmatchedPerYear": 2.8094703933174547
+              }
+            },
+            "sentinel-3b": {
+              "sigmaN": 4.2368824038460047e-07,
+              "sigmaTheta": 0.2893371776834033,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 68,
+                "plane": 0,
+                "either": 68,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 145,
+                "stableWindowDays": 181.25,
+                "flagsInStableWindows": 4,
+                "flagsInStableWindowsFlaggedSuspect": 2,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.022068965517241378,
+                "labelSpanYears": 8.11816681243187,
+                "flagsInLabelSpan": 64,
+                "flagsUnmatched": 47,
+                "unmatchedPerYear": 5.789484385566688
+              }
+            },
+            "sentinel-6a": {
+              "sigmaN": 1.3315916273825535e-07,
+              "sigmaTheta": 0.7175954362462925,
+              "source": "own",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 14,
+                "plane": 0,
+                "either": 14,
+                "campaignStarts": 1
+              },
+              "falseFlags": {
+                "stableWindows": 32,
+                "stableWindowDays": 40.0,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.05,
+                "labelSpanYears": 5.492479307678658,
+                "flagsInLabelSpan": 14,
+                "flagsUnmatched": 8,
+                "unmatchedPerYear": 1.4565371213717182
+              }
+            },
+            "swot": {
+              "sigmaN": 4.6000437616556724e-07,
+              "sigmaTheta": 0.28518194047207784,
+              "source": "own",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 73,
+                "plane": 0,
+                "either": 73,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 87,
+                "stableWindowDays": 108.75,
+                "flagsInStableWindows": 6,
+                "flagsInStableWindowsFlaggedSuspect": 6,
+                "stableWindowsWithAtLeastOneFlag": 3,
+                "flagsPerStableWindowDay": 0.05517241379310345,
+                "labelSpanYears": 3.4002940299325677,
+                "flagsInLabelSpan": 44,
+                "flagsUnmatched": 35,
+                "unmatchedPerYear": 10.293227495004041
+              }
+            },
+            "topex-poseidon": {
+              "sigmaN": 1.755279860240939e-07,
+              "sigmaTheta": 0.714058951611957,
+              "source": "own",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 44,
+                "stableWindowDays": 55.0,
+                "flagsInStableWindows": 1,
+                "flagsInStableWindowsFlaggedSuspect": 1,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.01818181818181818,
+                "labelSpanYears": 12.255589778690396,
+                "flagsInLabelSpan": 55,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.6717939171107434
+              }
+            }
+          }
+        }
+      },
+      "placeboDonor": {
+        "cells": {
+          "overall": {
+            "k": 128,
+            "n": 1134,
+            "recall": 0.1128747795414462,
+            "wilson95": [
+              0.09574889640751935,
+              0.13261460433132324
+            ]
+          },
+          "campaignLevel": {
+            "k": 23,
+            "n": 1134,
+            "recall": 0.020282186948853614,
+            "wilson95": [
+              0.013552582180597954,
+              0.030250935819243464
+            ]
+          },
+          "placeboAssociation": {
+            "k": 27,
+            "n": 5610,
+            "recall": 0.004812834224598931,
+            "wilson95": [
+              0.0033098599407484445,
+              0.0069935052765922896
+            ]
+          },
+          "byChannel": {
+            "intrack": 128,
+            "plane": 0
+          },
+          "byDaBin": {
+            "0-20 m": {
+              "k": 8,
+              "n": 576,
+              "recall": 0.013888888888888888,
+              "wilson95": [
+                0.00705414947472249,
+                0.027164615880189823
+              ]
+            },
+            "100-200 m": {
+              "k": 14,
+              "n": 27,
+              "recall": 0.5185185185185185,
+              "wilson95": [
+                0.33985615751233816,
+                0.6925677302731044
+              ]
+            },
+            "20-50 m": {
+              "k": 12,
+              "n": 342,
+              "recall": 0.03508771929824561,
+              "wilson95": [
+                0.020183590234553805,
+                0.06031994140474191
+              ]
+            },
+            "200-500 m": {
+              "k": 22,
+              "n": 36,
+              "recall": 0.6111111111111112,
+              "wilson95": [
+                0.4486445909291694,
+                0.7521512693740855
+              ]
+            },
+            "50-100 m": {
+              "k": 21,
+              "n": 53,
+              "recall": 0.39622641509433965,
+              "wilson95": [
+                0.2758940673551368,
+                0.530585213298963
+              ]
+            },
+            ">=500 m": {
+              "k": 51,
+              "n": 100,
+              "recall": 0.51,
+              "wilson95": [
+                0.4134801193183753,
+                0.6057800107171506
+              ]
+            }
+          },
+          "byOwnFloor": {
+            "aboveFloor": {
+              "k": 108,
+              "n": 216,
+              "recall": 0.5,
+              "wilson95": [
+                0.4339058081359978,
+                0.5660941918640022
+              ]
+            },
+            "belowFloor": {
+              "k": 20,
+              "n": 918,
+              "recall": 0.02178649237472767,
+              "wilson95": [
+                0.014146992960058032,
+                0.03341157408301837
+              ]
+            }
+          },
+          "byShippedFloor": {
+            "aboveFloor": {
+              "k": 84,
+              "n": 157,
+              "recall": 0.535031847133758,
+              "wilson95": [
+                0.45710906025240766,
+                0.6112812669712436
+              ]
+            },
+            "belowFloor": {
+              "k": 44,
+              "n": 977,
+              "recall": 0.04503582395087001,
+              "wilson95": [
+                0.03371753522573086,
+                0.05991784080410481
+              ]
+            }
+          },
+          "bySpacecraft": {
+            "cryosat-2": {
+              "k": 32,
+              "n": 241,
+              "recall": 0.13278008298755187,
+              "wilson95": [
+                0.09564822178115825,
+                0.18143499422630785
+              ]
+            },
+            "hy-2a": {
+              "k": 0,
+              "n": 58,
+              "recall": 0.0,
+              "wilson95": [
+                0.0,
+                0.062117855814546374
+              ]
+            },
+            "jason-1": {
+              "k": 10,
+              "n": 119,
+              "recall": 0.08403361344537816,
+              "wilson95": [
+                0.04628480918844952,
+                0.14779835337759756
+              ]
+            },
+            "jason-2": {
+              "k": 17,
+              "n": 111,
+              "recall": 0.15315315315315314,
+              "wilson95": [
+                0.0978747637265473,
+                0.23163566926948542
+              ]
+            },
+            "jason-3": {
+              "k": 17,
+              "n": 85,
+              "recall": 0.2,
+              "wilson95": [
+                0.12878998142660225,
+                0.2971537088734786
+              ]
+            },
+            "saral": {
+              "k": 15,
+              "n": 67,
+              "recall": 0.22388059701492538,
+              "wilson95": [
+                0.1406373112762777,
+                0.3370696612366891
+              ]
+            },
+            "sentinel-3a": {
+              "k": 6,
+              "n": 147,
+              "recall": 0.04081632653061224,
+              "wilson95": [
+                0.01883856143244675,
+                0.08618202737754707
+              ]
+            },
+            "sentinel-3b": {
+              "k": 9,
+              "n": 145,
+              "recall": 0.06206896551724138,
+              "wilson95": [
+                0.03299508240879859,
+                0.11374802932423281
+              ]
+            },
+            "sentinel-6a": {
+              "k": 4,
+              "n": 32,
+              "recall": 0.125,
+              "wilson95": [
+                0.04970134386451466,
+                0.2806830548604724
+              ]
+            },
+            "swot": {
+              "k": 12,
+              "n": 86,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.08165847154544775,
+                0.2282369730232388
+              ]
+            },
+            "topex-poseidon": {
+              "k": 6,
+              "n": 43,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.06555723426826224,
+                0.2726358797106885
+              ]
+            }
+          }
+        },
+        "falseFlags": {
+          "totals": {
+            "flagsInStableWindows": 18,
+            "suspect": 9,
+            "windowsHit": 10,
+            "stableWindows": 1139,
+            "stableWindowDays": 1423.75,
+            "flagsInLabelSpan": 715,
+            "flagsUnmatched": 520,
+            "flagsPerStableWindowDay": 0.012642669007901668
+          },
+          "perSpacecraft": {
+            "cryosat-2": {
+              "sigmaN": 1.3315916273825535e-07,
+              "sigmaTheta": 0.7175954362462925,
+              "source": "donor:sentinel-6a",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 167,
+                "plane": 0,
+                "either": 167,
+                "campaignStarts": 8
+              },
+              "falseFlags": {
+                "stableWindows": 241,
+                "stableWindowDays": 301.25,
+                "flagsInStableWindows": 3,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.00995850622406639,
+                "labelSpanYears": 16.214477590279362,
+                "flagsInLabelSpan": 163,
+                "flagsUnmatched": 116,
+                "unmatchedPerYear": 7.154100362107406
+              }
+            },
+            "hy-2a": {
+              "sigmaN": 1.755279860240939e-07,
+              "sigmaTheta": 0.714058951611957,
+              "source": "donor:topex-poseidon",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 141,
+                "plane": 0,
+                "either": 141,
+                "campaignStarts": 7
+              },
+              "falseFlags": {
+                "stableWindows": 58,
+                "stableWindowDays": 72.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 8.699901228230285,
+                "flagsInLabelSpan": 21,
+                "flagsUnmatched": 21,
+                "unmatchedPerYear": 2.413820507738313
+              }
+            },
+            "jason-1": {
+              "sigmaN": 1.9973874249462267e-07,
+              "sigmaTheta": 0.6461654943480726,
+              "source": "donor:jason-2",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 119,
+                "stableWindowDays": 148.75,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.013445378151260505,
+                "labelSpanYears": 11.508944561278424,
+                "flagsInLabelSpan": 54,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.910002325617368
+              }
+            },
+            "jason-2": {
+              "sigmaN": 4.6000437616556724e-07,
+              "sigmaTheta": 0.28518194047207784,
+              "source": "donor:swot",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 65,
+                "plane": 0,
+                "either": 65,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 111,
+                "stableWindowDays": 138.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 11.28389837101047,
+                "flagsInLabelSpan": 65,
+                "flagsUnmatched": 33,
+                "unmatchedPerYear": 2.9245211995865272
+              }
+            },
+            "jason-3": {
+              "sigmaN": 2.1184412072988706e-07,
+              "sigmaTheta": 0.6706953870556668,
+              "source": "donor:jason-1",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 85,
+                "plane": 0,
+                "either": 85,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 85,
+                "stableWindowDays": 106.25,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.460429321494663,
+                "flagsInLabelSpan": 85,
+                "flagsUnmatched": 50,
+                "unmatchedPerYear": 4.779918535203643
+              }
+            },
+            "saral": {
+              "sigmaN": 4.96320511946534e-07,
+              "sigmaTheta": 0.0803294365802831,
+              "source": "donor:cryosat-2",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 112,
+                "plane": 0,
+                "either": 112,
+                "campaignStarts": 6
+              },
+              "falseFlags": {
+                "stableWindows": 70,
+                "stableWindowDays": 87.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 12.95186931246356,
+                "flagsInLabelSpan": 112,
+                "flagsUnmatched": 91,
+                "unmatchedPerYear": 7.026012832945347
+              }
+            },
+            "sentinel-3a": {
+              "sigmaN": 3.4500328131779524e-07,
+              "sigmaTheta": 0.2896984516006001,
+              "source": "donor:saral",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 42,
+                "plane": 0,
+                "either": 42,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 147,
+                "stableWindowDays": 183.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.322230150201536,
+                "flagsInLabelSpan": 38,
+                "flagsUnmatched": 29,
+                "unmatchedPerYear": 2.8094703933174547
+              }
+            },
+            "sentinel-3b": {
+              "sigmaN": 2.1789680930993243e-07,
+              "sigmaTheta": 0.12471219671819336,
+              "source": "donor:sentinel-3a",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 68,
+                "plane": 0,
+                "either": 68,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 145,
+                "stableWindowDays": 181.25,
+                "flagsInStableWindows": 4,
+                "flagsInStableWindowsFlaggedSuspect": 2,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.022068965517241378,
+                "labelSpanYears": 8.11816681243187,
+                "flagsInLabelSpan": 64,
+                "flagsUnmatched": 47,
+                "unmatchedPerYear": 5.789484385566688
+              }
+            },
+            "sentinel-6a": {
+              "sigmaN": 1.755279860240939e-07,
+              "sigmaTheta": 0.5382925657313364,
+              "source": "donor:jason-3",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 14,
+                "plane": 0,
+                "either": 14,
+                "campaignStarts": 1
+              },
+              "falseFlags": {
+                "stableWindows": 32,
+                "stableWindowDays": 40.0,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.05,
+                "labelSpanYears": 5.492479307678658,
+                "flagsInLabelSpan": 14,
+                "flagsUnmatched": 8,
+                "unmatchedPerYear": 1.4565371213717182
+              }
+            },
+            "swot": {
+              "sigmaN": 4.4789899900547644e-07,
+              "sigmaTheta": 0.12834941728646762,
+              "source": "donor:hy-2a",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 73,
+                "plane": 0,
+                "either": 73,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 87,
+                "stableWindowDays": 108.75,
+                "flagsInStableWindows": 6,
+                "flagsInStableWindowsFlaggedSuspect": 6,
+                "stableWindowsWithAtLeastOneFlag": 3,
+                "flagsPerStableWindowDay": 0.05517241379310345,
+                "labelSpanYears": 3.4002940299325677,
+                "flagsInLabelSpan": 44,
+                "flagsUnmatched": 35,
+                "unmatchedPerYear": 10.293227495004041
+              }
+            },
+            "topex-poseidon": {
+              "sigmaN": 4.2368824038460047e-07,
+              "sigmaTheta": 0.2893371776834033,
+              "source": "donor:sentinel-3b",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 44,
+                "stableWindowDays": 55.0,
+                "flagsInStableWindows": 1,
+                "flagsInStableWindowsFlaggedSuspect": 1,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.01818181818181818,
+                "labelSpanYears": 12.255589778690396,
+                "flagsInLabelSpan": 55,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.6717939171107434
+              }
+            }
+          }
+        }
+      },
+      "placeboShift": {
+        "cells": {
+          "overall": {
+            "k": 128,
+            "n": 1134,
+            "recall": 0.1128747795414462,
+            "wilson95": [
+              0.09574889640751935,
+              0.13261460433132324
+            ]
+          },
+          "campaignLevel": {
+            "k": 23,
+            "n": 1134,
+            "recall": 0.020282186948853614,
+            "wilson95": [
+              0.013552582180597954,
+              0.030250935819243464
+            ]
+          },
+          "placeboAssociation": {
+            "k": 27,
+            "n": 5610,
+            "recall": 0.004812834224598931,
+            "wilson95": [
+              0.0033098599407484445,
+              0.0069935052765922896
+            ]
+          },
+          "byChannel": {
+            "intrack": 128,
+            "plane": 0
+          },
+          "byDaBin": {
+            "0-20 m": {
+              "k": 8,
+              "n": 576,
+              "recall": 0.013888888888888888,
+              "wilson95": [
+                0.00705414947472249,
+                0.027164615880189823
+              ]
+            },
+            "100-200 m": {
+              "k": 14,
+              "n": 27,
+              "recall": 0.5185185185185185,
+              "wilson95": [
+                0.33985615751233816,
+                0.6925677302731044
+              ]
+            },
+            "20-50 m": {
+              "k": 12,
+              "n": 342,
+              "recall": 0.03508771929824561,
+              "wilson95": [
+                0.020183590234553805,
+                0.06031994140474191
+              ]
+            },
+            "200-500 m": {
+              "k": 22,
+              "n": 36,
+              "recall": 0.6111111111111112,
+              "wilson95": [
+                0.4486445909291694,
+                0.7521512693740855
+              ]
+            },
+            "50-100 m": {
+              "k": 21,
+              "n": 53,
+              "recall": 0.39622641509433965,
+              "wilson95": [
+                0.2758940673551368,
+                0.530585213298963
+              ]
+            },
+            ">=500 m": {
+              "k": 51,
+              "n": 100,
+              "recall": 0.51,
+              "wilson95": [
+                0.4134801193183753,
+                0.6057800107171506
+              ]
+            }
+          },
+          "byOwnFloor": {
+            "aboveFloor": {
+              "k": 108,
+              "n": 216,
+              "recall": 0.5,
+              "wilson95": [
+                0.4339058081359978,
+                0.5660941918640022
+              ]
+            },
+            "belowFloor": {
+              "k": 20,
+              "n": 918,
+              "recall": 0.02178649237472767,
+              "wilson95": [
+                0.014146992960058032,
+                0.03341157408301837
+              ]
+            }
+          },
+          "byShippedFloor": {
+            "aboveFloor": {
+              "k": 84,
+              "n": 157,
+              "recall": 0.535031847133758,
+              "wilson95": [
+                0.45710906025240766,
+                0.6112812669712436
+              ]
+            },
+            "belowFloor": {
+              "k": 44,
+              "n": 977,
+              "recall": 0.04503582395087001,
+              "wilson95": [
+                0.03371753522573086,
+                0.05991784080410481
+              ]
+            }
+          },
+          "bySpacecraft": {
+            "cryosat-2": {
+              "k": 32,
+              "n": 241,
+              "recall": 0.13278008298755187,
+              "wilson95": [
+                0.09564822178115825,
+                0.18143499422630785
+              ]
+            },
+            "hy-2a": {
+              "k": 0,
+              "n": 58,
+              "recall": 0.0,
+              "wilson95": [
+                0.0,
+                0.062117855814546374
+              ]
+            },
+            "jason-1": {
+              "k": 10,
+              "n": 119,
+              "recall": 0.08403361344537816,
+              "wilson95": [
+                0.04628480918844952,
+                0.14779835337759756
+              ]
+            },
+            "jason-2": {
+              "k": 17,
+              "n": 111,
+              "recall": 0.15315315315315314,
+              "wilson95": [
+                0.0978747637265473,
+                0.23163566926948542
+              ]
+            },
+            "jason-3": {
+              "k": 17,
+              "n": 85,
+              "recall": 0.2,
+              "wilson95": [
+                0.12878998142660225,
+                0.2971537088734786
+              ]
+            },
+            "saral": {
+              "k": 15,
+              "n": 67,
+              "recall": 0.22388059701492538,
+              "wilson95": [
+                0.1406373112762777,
+                0.3370696612366891
+              ]
+            },
+            "sentinel-3a": {
+              "k": 6,
+              "n": 147,
+              "recall": 0.04081632653061224,
+              "wilson95": [
+                0.01883856143244675,
+                0.08618202737754707
+              ]
+            },
+            "sentinel-3b": {
+              "k": 9,
+              "n": 145,
+              "recall": 0.06206896551724138,
+              "wilson95": [
+                0.03299508240879859,
+                0.11374802932423281
+              ]
+            },
+            "sentinel-6a": {
+              "k": 4,
+              "n": 32,
+              "recall": 0.125,
+              "wilson95": [
+                0.04970134386451466,
+                0.2806830548604724
+              ]
+            },
+            "swot": {
+              "k": 12,
+              "n": 86,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.08165847154544775,
+                0.2282369730232388
+              ]
+            },
+            "topex-poseidon": {
+              "k": 6,
+              "n": 43,
+              "recall": 0.13953488372093023,
+              "wilson95": [
+                0.06555723426826224,
+                0.2726358797106885
+              ]
+            }
+          }
+        },
+        "falseFlags": {
+          "totals": {
+            "flagsInStableWindows": 18,
+            "suspect": 9,
+            "windowsHit": 10,
+            "stableWindows": 1139,
+            "stableWindowDays": 1423.75,
+            "flagsInLabelSpan": 715,
+            "flagsUnmatched": 520,
+            "flagsPerStableWindowDay": 0.012642669007901668
+          },
+          "perSpacecraft": {
+            "cryosat-2": {
+              "sigmaN": 4.4789899685512925e-07,
+              "sigmaTheta": 0.08087449904110233,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 167,
+                "plane": 0,
+                "either": 167,
+                "campaignStarts": 8
+              },
+              "falseFlags": {
+                "stableWindows": 241,
+                "stableWindowDays": 301.25,
+                "flagsInStableWindows": 3,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.00995850622406639,
+                "labelSpanYears": 16.214477590279362,
+                "flagsInLabelSpan": 163,
+                "flagsUnmatched": 116,
+                "unmatchedPerYear": 7.154100362107406
+              }
+            },
+            "hy-2a": {
+              "sigmaN": 4.491095352162425e-06,
+              "sigmaTheta": 0.08719440638736675,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 141,
+                "plane": 0,
+                "either": 141,
+                "campaignStarts": 7
+              },
+              "falseFlags": {
+                "stableWindows": 58,
+                "stableWindowDays": 72.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 8.699901228230285,
+                "flagsInLabelSpan": 21,
+                "flagsUnmatched": 21,
+                "unmatchedPerYear": 2.413820507738313
+              }
+            },
+            "jason-1": {
+              "sigmaN": 4.0553017518205105e-07,
+              "sigmaTheta": 0.5391758260065839,
+              "source": "shifted",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 119,
+                "stableWindowDays": 148.75,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.013445378151260505,
+                "labelSpanYears": 11.508944561278424,
+                "flagsInLabelSpan": 54,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.910002325617368
+              }
+            },
+            "jason-2": {
+              "sigmaN": 3.2079252538485323e-07,
+              "sigmaTheta": 0.6235529338330397,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 65,
+                "plane": 0,
+                "either": 65,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 111,
+                "stableWindowDays": 138.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 11.28389837101047,
+                "flagsInLabelSpan": 65,
+                "flagsUnmatched": 33,
+                "unmatchedPerYear": 2.9245211995865272
+              }
+            },
+            "jason-3": {
+              "sigmaN": 1.6947529851922206e-07,
+              "sigmaTheta": 0.6278623824132781,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 85,
+                "plane": 0,
+                "either": 85,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 85,
+                "stableWindowDays": 106.25,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.460429321494663,
+                "flagsInLabelSpan": 85,
+                "flagsUnmatched": 50,
+                "unmatchedPerYear": 4.779918535203643
+              }
+            },
+            "saral": {
+              "sigmaN": 2.844763901414733e-07,
+              "sigmaTheta": 0.32944572925474463,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 112,
+                "plane": 0,
+                "either": 112,
+                "campaignStarts": 6
+              },
+              "falseFlags": {
+                "stableWindows": 70,
+                "stableWindowDays": 87.5,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 12.95186931246356,
+                "flagsInLabelSpan": 112,
+                "flagsUnmatched": 91,
+                "unmatchedPerYear": 7.026012832945347
+              }
+            },
+            "sentinel-3a": {
+              "sigmaN": 1.8158067567931288e-07,
+              "sigmaTheta": 0.12501167767595087,
+              "source": "shifted",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 42,
+                "plane": 0,
+                "either": 42,
+                "campaignStarts": 5
+              },
+              "falseFlags": {
+                "stableWindows": 147,
+                "stableWindowDays": 183.75,
+                "flagsInStableWindows": 0,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 0,
+                "flagsPerStableWindowDay": 0.0,
+                "labelSpanYears": 10.322230150201536,
+                "flagsInLabelSpan": 38,
+                "flagsUnmatched": 29,
+                "unmatchedPerYear": 2.8094703933174547
+              }
+            },
+            "sentinel-3b": {
+              "sigmaN": 3.1473983626722107e-07,
+              "sigmaTheta": 0.2893684387521801,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 68,
+                "plane": 0,
+                "either": 68,
+                "campaignStarts": 3
+              },
+              "falseFlags": {
+                "stableWindows": 145,
+                "stableWindowDays": 181.25,
+                "flagsInStableWindows": 4,
+                "flagsInStableWindowsFlaggedSuspect": 2,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.022068965517241378,
+                "labelSpanYears": 8.11816681243187,
+                "flagsInLabelSpan": 64,
+                "flagsUnmatched": 47,
+                "unmatchedPerYear": 5.789484385566688
+              }
+            },
+            "sentinel-6a": {
+              "sigmaN": 1.3315916166308178e-07,
+              "sigmaTheta": 0.7182244357147656,
+              "source": "shifted",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 14,
+                "plane": 0,
+                "either": 14,
+                "campaignStarts": 1
+              },
+              "falseFlags": {
+                "stableWindows": 32,
+                "stableWindowDays": 40.0,
+                "flagsInStableWindows": 2,
+                "flagsInStableWindowsFlaggedSuspect": 0,
+                "stableWindowsWithAtLeastOneFlag": 2,
+                "flagsPerStableWindowDay": 0.05,
+                "labelSpanYears": 5.492479307678658,
+                "flagsInLabelSpan": 14,
+                "flagsUnmatched": 8,
+                "unmatchedPerYear": 1.4565371213717182
+              }
+            },
+            "swot": {
+              "sigmaN": 6.779011854754996e-07,
+              "sigmaTheta": 0.3247115233679673,
+              "source": "shifted",
+              "floorMetres": 50.0,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 73,
+                "plane": 0,
+                "either": 73,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 87,
+                "stableWindowDays": 108.75,
+                "flagsInStableWindows": 6,
+                "flagsInStableWindowsFlaggedSuspect": 6,
+                "stableWindowsWithAtLeastOneFlag": 3,
+                "flagsPerStableWindowDay": 0.05517241379310345,
+                "labelSpanYears": 3.4002940299325677,
+                "flagsInLabelSpan": 44,
+                "flagsUnmatched": 35,
+                "unmatchedPerYear": 10.293227495004041
+              }
+            },
+            "topex-poseidon": {
+              "sigmaN": 6.476377393497519e-07,
+              "sigmaTheta": 0.6269154027718368,
+              "source": "shifted",
+              "floorMetres": 49.99999999999999,
+              "thresholdSetBy": "floor",
+              "flagCounts": {
+                "intrack": 55,
+                "plane": 0,
+                "either": 55,
+                "campaignStarts": 2
+              },
+              "falseFlags": {
+                "stableWindows": 44,
+                "stableWindowDays": 55.0,
+                "flagsInStableWindows": 1,
+                "flagsInStableWindowsFlaggedSuspect": 1,
+                "stableWindowsWithAtLeastOneFlag": 1,
+                "flagsPerStableWindowDay": 0.01818181818181818,
+                "labelSpanYears": 12.255589778690396,
+                "flagsInLabelSpan": 55,
+                "flagsUnmatched": 45,
+                "unmatchedPerYear": 3.6717939171107434
+              }
+            }
+          }
+        }
+      }
+    },
+    "increments": {
+      "perObject": {
+        "vsShipped": {
+          "objectCluster": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              1.120214752567694,
+              5.536574463597457
+            ],
+            "units": 11,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 2.2081798555148815,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          },
+          "timeBlock90d": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              2.024122764822084,
+              4.90919054490483
+            ],
+            "units": 118,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 1.4425338900413731,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          }
+        },
+        "armOfRecord": "objectCluster",
+        "decisionLowerBound": 1.120214752567694
+      },
+      "placeboDonor": {
+        "vsShipped": {
+          "objectCluster": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              1.120214752567694,
+              5.536574463597457
+            ],
+            "units": 11,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 2.2081798555148815,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          },
+          "timeBlock90d": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              2.024122764822084,
+              4.90919054490483
+            ],
+            "units": 118,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 1.4425338900413731,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          }
+        },
+        "armOfRecord": "objectCluster",
+        "decisionLowerBound": 1.120214752567694
+      },
+      "placeboShift": {
+        "vsShipped": {
+          "objectCluster": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              1.120214752567694,
+              5.536574463597457
+            ],
+            "units": 11,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 2.2081798555148815,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          },
+          "timeBlock90d": {
+            "incrementPoints": 3.3509700176366843,
+            "ci95": [
+              2.024122764822084,
+              4.90919054490483
+            ],
+            "units": 118,
+            "draws": 2000,
+            "seed": 20260923,
+            "minimumDetectablePoints": 1.4425338900413731,
+            "demonstrable": 1.0,
+            "lowerBoundAboveZero": true
+          }
+        },
+        "armOfRecord": "objectCluster",
+        "decisionLowerBound": 1.120214752567694
+      }
+    },
+    "placeboP1": {
+      "perObjectHits": 128,
+      "donorHits": 128,
+      "differenceLabels": 0,
+      "reproducesWithinOneLabel": true,
+      "registeredReading": "the gain is the 50 m floor becoming binding, NOT per-object adaptation; the word describing adaptation is withheld"
+    },
+    "reversalClause": {
+      "binsWorse": [],
+      "fires": false
+    },
+    "fallbacks": {
+      "perObject": [],
+      "placeboShift": []
+    }
+  },
+  "decision": {
+    "verdict": "NOT SHIPPED",
+    "failingClauses": [
+      "E3a (passive rate demonstrably worse)",
+      "E3c (alarm lane passive/payload ratio grows)"
+    ]
+  },
+  "catalogue": {
+    "regime": "LEO",
+    "E3a": {
+      "catalogue_passive": {
+        "shipped": {
+          "flags": 152567,
+          "exposureObjectDays": 86859654,
+          "perObjectDay": 0.0017564771786910411,
+          "perObjectYear": 0.6415532895169027,
+          "jeffreys95PerObjectDay": [
+            0.0017476877738409331,
+            0.001765299788114294
+          ],
+          "jeffreys95PerObjectYear": [
+            0.6383429593954009,
+            0.6447757476087459
+          ],
+          "objects": 9915,
+          "objectsWithAnyFlag": 8665,
+          "intrackFlags": 151543,
+          "planeFlags": 1024,
+          "objectsWithAnyFlagFraction": 0.8739283913262733,
+          "campaignStartsIntrack": 33049,
+          "alertsPerObjectYear": 0.1389730060786266
+        },
+        "perObject": {
+          "flags": 390284,
+          "exposureObjectDays": 86859654,
+          "perObjectDay": 0.004493271409992032,
+          "perObjectYear": 1.6411673824995894,
+          "jeffreys95PerObjectDay": [
+            0.004479222826458518,
+            0.0045073530157147546
+          ],
+          "jeffreys95PerObjectYear": [
+            1.6360361373639736,
+            1.646310688989814
+          ],
+          "objects": 9915,
+          "objectsWithAnyFlag": 9365,
+          "intrackFlags": 379720,
+          "planeFlags": 10564,
+          "objectsWithAnyFlagFraction": 0.9445284921835603,
+          "campaignStartsIntrack": 50941,
+          "alertsPerObjectYear": 0.21420992776336098
+        }
+      },
+      "payload": {
+        "shipped": {
+          "flags": 1582671,
+          "exposureObjectDays": 37721364,
+          "perObjectDay": 0.04195688681883296,
+          "perObjectYear": 15.324752910578736,
+          "jeffreys95PerObjectDay": [
+            0.04189294132502265,
+            0.04202090260261576
+          ],
+          "jeffreys95PerObjectYear": [
+            15.301396818964523,
+            15.348134675605406
+          ],
+          "objects": 12520,
+          "objectsWithAnyFlag": 11755,
+          "intrackFlags": 1573393,
+          "planeFlags": 9278,
+          "objectsWithAnyFlagFraction": 0.9388977635782748,
+          "campaignStartsIntrack": 26687,
+          "alertsPerObjectYear": 0.2584059965035923
+        },
+        "perObject": {
+          "flags": 1607933,
+          "exposureObjectDays": 37721364,
+          "perObjectDay": 0.04262658688588249,
+          "perObjectYear": 15.56936086006858,
+          "jeffreys95PerObjectDay": [
+            0.04256215528723928,
+            0.04269108867172983
+          ],
+          "jeffreys95PerObjectYear": [
+            15.545827218664147,
+            15.592920137349319
+          ],
+          "objects": 12520,
+          "objectsWithAnyFlag": 11960,
+          "intrackFlags": 1527134,
+          "planeFlags": 80799,
+          "objectsWithAnyFlagFraction": 0.9552715654952076,
+          "campaignStartsIntrack": 29912,
+          "alertsPerObjectYear": 0.28963316099282244
+        }
+      },
+      "note": "catalogue_passive is DEBRIS and ROCKET BODY -- an UPPER bound on the false-alarm rate, because some spent stages do perform disposal burns. Admission is frozen at the shipped arm's, so both arms are scored on one population.",
+      "verdict": {
+        "shippedJeffreysUpperPerObjectDay": 0.001765299788114294,
+        "perObjectJeffreysLowerPerObjectDay": 0.004479222826458518,
+        "pointRatio": 2.5581154509166466,
+        "fails": true,
+        "underpowered": false
+      }
+    },
+    "E3b": {
+      "frozenClassObjects": 2259,
+      "frozenClassPayloadObjects": 765,
+      "definitionIsCircular": true,
+      "circularityNote": "this class is DEFINED by the shipped detector raising no flag on it, so the shipped arm's rate is zero by construction and any per-object flag makes the change look worse for a reason that is not about the change. Reported, never gating.",
+      "scopeLimit": "T8b's published zero events over 18,792,698 object-days is an APPROACH-event rate from its whole analyze stage, not a flag rate. It is carried as context and is NOT re-scored here.",
+      "shipped": {
+        "wholeClass": {
+          "flags": 0,
+          "exposureObjectDays": 26054565,
+          "perObjectDay": 0.0,
+          "perObjectYear": 0.0,
+          "jeffreys95PerObjectDay": [
+            0.0,
+            9.641085890743639e-08
+          ],
+          "jeffreys95PerObjectYear": [
+            0.0,
+            3.521406621594114e-05
+          ],
+          "objectsWithAnyFlag": 0,
+          "intrackFlags": 0,
+          "planeFlags": 0
+        },
+        "payloadSubset": {
+          "flags": 0,
+          "exposureObjectDays": 11761949,
+          "perObjectDay": 0.0,
+          "perObjectYear": 0.0,
+          "jeffreys95PerObjectDay": [
+            0.0,
+            2.135651808177208e-07
+          ],
+          "jeffreys95PerObjectYear": [
+            0.0,
+            7.800468229367252e-05
+          ],
+          "objectsWithAnyFlag": 0,
+          "intrackFlags": 0,
+          "planeFlags": 0
+        }
+      },
+      "perObject": {
+        "wholeClass": {
+          "flags": 14508,
+          "exposureObjectDays": 26054565,
+          "perObjectDay": 0.0005568314036331061,
+          "perObjectYear": 0.20338267017699202,
+          "jeffreys95PerObjectDay": [
+            0.0005478284758340128,
+            0.0005659452936799814
+          ],
+          "jeffreys95PerObjectYear": [
+            0.20009435079837318,
+            0.20671151851661318
+          ],
+          "objectsWithAnyFlag": 993,
+          "intrackFlags": 12831,
+          "planeFlags": 1677
+        },
+        "payloadSubset": {
+          "flags": 2713,
+          "exposureObjectDays": 11761949,
+          "perObjectDay": 0.00023065905148883064,
+          "perObjectYear": 0.08424821855629538,
+          "jeffreys95PerObjectDay": [
+            0.0002221030328866098,
+            0.00023946102593902507
+          ],
+          "jeffreys95PerObjectYear": [
+            0.08112313276183424,
+            0.08746313972422891
+          ],
+          "objectsWithAnyFlag": 205,
+          "intrackFlags": 1649,
+          "planeFlags": 1064
+        }
+      },
+      "secondaryScreen": {
+        "fractionOfFrozenPayloadObjectsNowFlagged": 0.2679738562091503,
+        "bar": 0.1,
+        "namedConcern": true
+      }
+    },
+    "E3c": {
+      "shipped": {
+        "passiveAlertsPerObjectYear": 0.1389730060786266,
+        "payloadAlertsPerObjectYear": 0.2584059965035923,
+        "ratio": 0.5378087504122399
+      },
+      "perObject": {
+        "passiveAlertsPerObjectYear": 0.21420992776336098,
+        "payloadAlertsPerObjectYear": 0.28963316099282244,
+        "ratio": 0.7395904772405169
+      },
+      "fails": true,
+      "note": "the live low-orbit alarm arm fails its own passive control at 0.797 today; this ratio may not grow"
+    },
+    "E4": {
+      "shipped": {
+        "objects": 61861,
+        "exposureObjectDays": 172386301,
+        "exposureObjectYears": 471967.9686220208,
+        "intrackFlags": 2753349,
+        "planeFlags": 11933,
+        "flags": 2765282,
+        "flagsPerObjectYear": 5.859045918038979,
+        "campaignStartsIntrack": 129508,
+        "campaignStartsEither": 130199,
+        "objectsWithAnyFlag": 49137
+      },
+      "perObject": {
+        "objects": 61861,
+        "exposureObjectDays": 172386301,
+        "exposureObjectYears": 471967.9686220208,
+        "intrackFlags": 2845593,
+        "planeFlags": 99104,
+        "flags": 2944697,
+        "flagsPerObjectYear": 6.239188241094987,
+        "campaignStartsIntrack": 153725,
+        "campaignStartsEither": 154531,
+        "objectsWithAnyFlag": 49294
+      },
+      "growth": {
+        "flagsPerObjectYear": 1.0648812670823447,
+        "campaignStartsIntrack": 1.1869923093554067,
+        "extraFlags": 179415,
+        "extraCampaignStarts": 24217,
+        "bar": 2.0,
+        "extraFlagsPerYearAcrossCatalogue": 23515.9842465677,
+        "fails": false
+      },
+      "sigmaDistribution": {
+        "objectsWithOwnSigmaAbovePooled": 30665,
+        "objectsWithOwnSigmaBelowPooled": 26225,
+        "medianOwnSigmaN": 7.072567276798882e-05,
+        "p95OwnSigmaN": 0.005803453336222724,
+        "pooledSigmaN": 6.2747e-05,
+        "medianOwnSigmaTheta": 0.7047594375694212,
+        "p95OwnSigmaTheta": 2.8913844856087465,
+        "pooledSigmaTheta": 0.6994,
+        "objectsWithPlaneBarAtTheResolutionFloor": {
+          "shipped": 0,
+          "perObject": 87
+        }
+      },
+      "fallbacks": {
+        "sigmaNPooled": 4971,
+        "sigmaThetaPooled": 4971,
+        "sigmaNZero": 0,
+        "sigmaThetaZero": 0,
+        "sigmaNAbovePooled": 30665,
+        "sigmaNBelowPooled": 26225
+      }
+    }
+  },
+  "sigmaByClass": {
+    "catalogue_passive": {
+      "objects": 9915,
+      "medianOwnSigmaN": 3.873721058938421e-06,
+      "p25": 1.3739604391102761e-06,
+      "p75": 9.634367961991188e-06,
+      "fractionBelowPooled": 0.9776096822995461,
+      "medianAsMultipleOfPooled": 0.06173555801772867
+    },
+    "payload": {
+      "objects": 12520,
+      "medianOwnSigmaN": 5.950398707750677e-05,
+      "p25": 5.429262171040076e-06,
+      "p75": 9.450820162939991e-05,
+      "fractionBelowPooled": 0.5518370607028754,
+      "medianAsMultipleOfPooled": 0.9483160482175526
+    },
+    "pooledSigmaN": 6.2747e-05,
+    "note": "post-registration diagnostic; admission is the control's own, 200 element sets and 365 days"
+  },
+  "runs": {
+    "labelsStage": "2026-09-23T01:09:11+00:00",
+    "catalogueStage": "2026-09-23T01:23:28+00:00",
+    "sigmaByClassStage": "2026-09-23T01:34:39+00:00",
+    "host": "pc",
+    "device": "CPU only, nice -n 15",
+    "gpu": "none declared, none used"
+  }
+}

@@ -25,9 +25,9 @@ itself.
 3. Keep changes focused. Unrelated formatting or unrelated file changes make
    a pull request harder to review and are usually asked to be split out.
 4. Describe what changed and why in the pull request description. If the
-   change affects a numeric result reported in either of the two research
-   papers in `docs/`, say so explicitly; those papers are not modified by
-   ordinary code contributions.
+   change affects a numeric result reported in any of the research papers in
+   `docs/`, say so explicitly; those papers are not modified by ordinary code
+   contributions.
 
 ## Code style
 
@@ -38,10 +38,17 @@ follows the existing `src/` conventions and is checked by `npm run check`.
 ## Scope
 
 This repository does not redistribute the underlying two-line element
-archive (see the main [README](README.md)); contributions that would require
-committing a redistributed archive will not be merged. Issues about the
-Space-Track or CelesTrak terms of use should be raised with those services,
-not in this repository.
+archive, nor any of the other bulk upstream products the analyses read; what
+is published, what is not and under whose terms is set out in
+[DATA.md](DATA.md). Contributions that would require committing a
+redistributed archive will not be merged. Issues about the Space-Track or
+CelesTrak terms of use should be raised with those services, not in this
+repository.
+
+A receipt in `docs/` records the SHA-256 of the code that produced it. If a
+change alters a file some receipt pins, `tests/test_released_sources.py` will
+say so; the remedy is to account for the difference in
+`docs/released-source-hashes-20260923.json`, never to edit the receipt.
 
 ## License
 

@@ -1,0 +1,748 @@
+{
+  "carrierVersusControlAtTheLine": {
+    "sawtooth:d1.0:r1.0": {
+      "carrier": {
+        "F_at_14d": {
+          "p10": 0.7105323791503907,
+          "p25": 1.9325542449951172,
+          "p50": 13.271111488342285,
+          "p75": 130.55105590820312,
+          "p90": 510.4883422851563
+        }
+      },
+      "control": {
+        "F_at_14d": {
+          "p10": 0.4114450216293336,
+          "p25": 0.7752960920333862,
+          "p50": 1.6107901334762573,
+          "p75": 3.364762306213379,
+          "p90": 6.118688201904294
+        }
+      },
+      "medianRatio": 8.23888302550116
+    },
+    "sinusoid-comparator": {
+      "carrier": {
+        "F_at_14d": {
+          "p10": 0.34660167098045347,
+          "p25": 1.224700927734375,
+          "p50": 8.633852005004883,
+          "p75": 148.61532592773438,
+          "p90": 860.9774414062505
+        }
+      },
+      "control": {
+        "F_at_14d": {
+          "p10": 0.10886017680168152,
+          "p25": 0.3070141524076462,
+          "p50": 0.8065405488014221,
+          "p75": 1.8632558584213257,
+          "p90": 3.772833204269406
+        }
+      },
+      "medianRatio": 10.704795955808315
+    },
+    "step-train:d0.5:r1.0": {
+      "carrier": {
+        "F_at_14d": {
+          "p10": 0.5611368656158447,
+          "p25": 1.4226123094558716,
+          "p50": 8.423144340515137,
+          "p75": 141.39999389648438,
+          "p90": 843.1515747070315
+        }
+      },
+      "control": {
+        "F_at_14d": {
+          "p10": 0.2766412436962128,
+          "p25": 0.5722481310367584,
+          "p50": 1.1604341268539429,
+          "p75": 2.2705814838409424,
+          "p90": 4.328190231323242
+        }
+      },
+      "medianRatio": 7.258614811123449
+    },
+    "two-burn:d0.5:r1.0": {
+      "carrier": {
+        "F_at_14d": {
+          "p10": 0.3779907822608948,
+          "p25": 1.2155288457870483,
+          "p50": 6.659931659698486,
+          "p75": 43.15476608276367,
+          "p90": 125.57148437500004
+        }
+      },
+      "control": {
+        "F_at_14d": {
+          "p10": 0.21224006712436677,
+          "p25": 0.49383457005023956,
+          "p50": 1.252569317817688,
+          "p75": 3.4991395473480225,
+          "p90": 9.285623550415037
+        }
+      },
+      "medianRatio": 5.3170164436902185
+    }
+  },
+  "carrierWindowsWithPeakOnTheLine": {
+    "pilotSinusoid": {
+      "carrier": {
+        "fraction": 0.3167420814479638,
+        "of": 3757,
+        "windows": 1190
+      }
+    },
+    "sawtooth:d1.0:r1.0": {
+      "carrier": {
+        "fraction": 0.31620974181527817,
+        "objects": 189,
+        "of": 3757,
+        "windows": 1188
+      },
+      "control": {
+        "fraction": 0.005377307761247535,
+        "objects": 4,
+        "of": 5579,
+        "windows": 30
+      }
+    },
+    "sinusoid-comparator": {
+      "carrier": {
+        "fraction": 0.31887143997870643,
+        "objects": 206,
+        "of": 3757,
+        "windows": 1198
+      },
+      "control": {
+        "fraction": 0.006273525721455458,
+        "objects": 8,
+        "of": 5579,
+        "windows": 35
+      }
+    },
+    "step-train:d0.5:r1.0": {
+      "carrier": {
+        "fraction": 0.3228639872238488,
+        "objects": 197,
+        "of": 3757,
+        "windows": 1213
+      },
+      "control": {
+        "fraction": 0.005915038537372289,
+        "objects": 7,
+        "of": 5579,
+        "windows": 33
+      }
+    },
+    "two-burn:d0.5:r1.0": {
+      "carrier": {
+        "fraction": 0.054564812350279476,
+        "objects": 57,
+        "of": 3757,
+        "windows": 205
+      },
+      "control": {
+        "fraction": 0.002867897472665352,
+        "objects": 10,
+        "of": 5579,
+        "windows": 16
+      }
+    }
+  },
+  "channel": "mean_motion",
+  "cost": {
+    "batches": 112,
+    "cudaVisibleDevices": "GPU-e7724e1e-bdd0-0671-dd83-00b1177c7c0e",
+    "device": "gpu",
+    "gpuBrokerRequestId": "d68c4fd8-f133-46b2-82b7-8e89e8c476eb",
+    "gridStageRateVersusPilotAssumption": 0.2130060200420062,
+    "gridStageSeconds": 884.92,
+    "peakPoolMib": 1602.8,
+    "pilotSinusoidFitsPerSecondPerCard": 1876000.0,
+    "poolBudgetMib": 2048.0,
+    "reductionShareOfComputeStages": 0.48808702786369473,
+    "reductionStageSeconds": 843.73,
+    "templateEvaluations": 466902944,
+    "templateEvaluationsPerSecond": 553377.1399452161,
+    "wallClockSeconds": 1751.4,
+    "windowDenseEvaluations": 353613616,
+    "windowDenseEvaluationsPerSecond": 399599.29359880363,
+    "windowsEvaluated": 9336
+  },
+  "design": "docs/matched-filter-design-20260922.md (e51bcce)",
+  "kMax": {
+    "histogramOverWindowFrequencies": {
+      "0": 3024249,
+      "1": 41994432,
+      "2": 21711959,
+      "3": 12672542,
+      "4": 7607709,
+      "5": 29714845
+    },
+    "note": "computed per object from its own epochs (design 4.2); the population median spacing of 0.3989 d is not used anywhere"
+  },
+  "lineExcessAt14d": {
+    "carrier": {
+      "pilotSinusoid": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 1190,
+        "excess": 91.42857142857143,
+        "localExpected": 13.015625
+      },
+      "sawtooth:d1.0:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 1188,
+        "excess": 107.54172560113155,
+        "localExpected": 11.046875
+      },
+      "sinusoid-comparator": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 1198,
+        "excess": 84.90808416389812,
+        "localExpected": 14.109375
+      },
+      "step-train:d0.5:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 1213,
+        "excess": 96.43726708074534,
+        "localExpected": 12.578125
+      },
+      "two-burn:d0.5:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 205,
+        "excess": 124.95238095238095,
+        "localExpected": 1.640625
+      }
+    },
+    "control": {
+      "pilotSinusoid": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 31,
+        "excess": 4.107660455486543,
+        "localExpected": 7.546875
+      },
+      "sawtooth:d1.0:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 30,
+        "excess": 2.7705627705627704,
+        "localExpected": 10.828125
+      },
+      "sinusoid-comparator": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 35,
+        "excess": 3.2989690721649483,
+        "localExpected": 10.609375
+      },
+      "step-train:d0.5:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 33,
+        "excess": 3.209726443768997,
+        "localExpected": 10.28125
+      },
+      "two-burn:d0.5:r1.0": {
+        "coreHalfWidthDays": 0.10888888888888887,
+        "corePeaks": 16,
+        "excess": 1.6253968253968254,
+        "localExpected": 9.84375
+      }
+    }
+  },
+  "lineExcessAt14dCaveat": "THE CARRIER SET IS SELECTED BY THE PILOT. The 208 east-west and 56 north-south carriers are exactly the GEO payloads whose PILOT peaks landed inside the 14 d core, so a line excess computed on them is circular in the pilot's favour and is reported only as a consistency read, never as a detection. The same-shell GEO passive control is NOT selected, so the control rows are the ones that carry weight; and the per-window paired gain below compares two templates on the SAME window and is not affected by which windows were chosen.",
+  "lineGeometry": {
+    "coreHalfWidthDays": 0.10888888888888887,
+    "coreSteps": 3,
+    "gridUsedForExcess": "pilot (1.85185e-4 c/d), so the core half-width is the pilot's +/-0.109 d at 14 d and the excesses are comparable to the published ones",
+    "periodDays": 14.0
+  },
+  "objects": {
+    "carrier": 225,
+    "control": 331
+  },
+  "peakPeriodDistribution": {
+    "carrier": {
+      "pilotSinusoid": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          62,
+          281,
+          22,
+          1375,
+          64,
+          522,
+          291,
+          255,
+          108,
+          777
+        ],
+        "fractionAbove100d": 0.23556028746340166,
+        "fractionAbovePTop143_75d": 0.20681394729837638
+      },
+      "sawtooth:d1.0:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          32,
+          254,
+          27,
+          1350,
+          48,
+          625,
+          347,
+          361,
+          713,
+          0
+        ],
+        "fractionAbove100d": 0.18898056960340698,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "sinusoid-comparator": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          40,
+          303,
+          32,
+          1395,
+          64,
+          557,
+          305,
+          363,
+          698,
+          0
+        ],
+        "fractionAbove100d": 0.1852541921746074,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "step-train:d0.5:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          63,
+          290,
+          24,
+          1400,
+          46,
+          533,
+          289,
+          353,
+          759,
+          0
+        ],
+        "fractionAbove100d": 0.20175672078786266,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "two-burn:d0.5:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          207,
+          44,
+          7,
+          225,
+          21,
+          1353,
+          150,
+          1018,
+          732,
+          0
+        ],
+        "fractionAbove100d": 0.19377162629757785,
+        "fractionAbovePTop143_75d": 0.0
+      }
+    },
+    "control": {
+      "pilotSinusoid": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          107,
+          250,
+          185,
+          88,
+          725,
+          819,
+          618,
+          977,
+          308,
+          1502
+        ],
+        "fractionAbove100d": 0.324430901595268,
+        "fractionAbovePTop143_75d": 0.26922387524645996
+      },
+      "sawtooth:d1.0:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          175,
+          296,
+          262,
+          109,
+          741,
+          831,
+          638,
+          1106,
+          1421,
+          0
+        ],
+        "fractionAbove100d": 0.25452590069905,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "sinusoid-comparator": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          153,
+          285,
+          265,
+          112,
+          740,
+          827,
+          630,
+          1096,
+          1471,
+          0
+        ],
+        "fractionAbove100d": 0.2631295931170461,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "step-train:d0.5:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          153,
+          281,
+          256,
+          109,
+          739,
+          827,
+          627,
+          1113,
+          1474,
+          0
+        ],
+        "fractionAbove100d": 0.2636673238931708,
+        "fractionAbovePTop143_75d": 0.0
+      },
+      "two-burn:d0.5:r1.0": {
+        "bins": [
+          "2.0-5.0",
+          "5.0-10.0",
+          "10.0-13.0",
+          "13.0-15.0",
+          "15.0-20.0",
+          "20.0-30.0",
+          "30.0-50.0",
+          "50.0-100.0",
+          "100.0-143.75",
+          "143.75-inf"
+        ],
+        "counts": [
+          614,
+          176,
+          116,
+          51,
+          179,
+          491,
+          1497,
+          878,
+          1577,
+          0
+        ],
+        "fractionAbove100d": 0.28195017028141245,
+        "fractionAbovePTop143_75d": 0.0
+      }
+    }
+  },
+  "phaseAtTheLine": {
+    "byMember": {
+      "sawtooth:d1.0:r1.0": {
+        "circularMeanResultantLength": 0.06248321213067413,
+        "phaseAt14dPercentiles": {
+          "p10": 0.5832004427909852,
+          "p25": 1.6307405233383179,
+          "p50": 3.3046302795410156,
+          "p75": 4.966076374053955,
+          "p90": 5.837109375000001
+        }
+      },
+      "sinusoid-comparator": {
+        "circularMeanResultantLength": 0.054009296023344755,
+        "phaseAt14dPercentiles": {
+          "p10": 0.592737078666687,
+          "p25": 1.582513451576233,
+          "p50": 3.2713100910186768,
+          "p75": 4.855292320251465,
+          "p90": 5.609463024139404
+        }
+      },
+      "step-train:d0.5:r1.0": {
+        "circularMeanResultantLength": 0.04349631173317434,
+        "phaseAt14dPercentiles": {
+          "p10": 0.5953949928283692,
+          "p25": 1.6022769212722778,
+          "p50": 3.257269859313965,
+          "p75": 4.868978023529053,
+          "p90": 5.766673851013183
+        }
+      },
+      "two-burn:d0.5:r1.0": {
+        "circularMeanResultantLength": 0.31051763315023534,
+        "phaseAt14dPercentiles": {
+          "p10": 0.4229890525341034,
+          "p25": 1.0765990018844604,
+          "p50": 2.1640007495880127,
+          "p75": 3.333805561065674,
+          "p90": 5.317936801910401
+        }
+      }
+    },
+    "note": "retained and reported because design 2.1 makes the complex harmonic amplitude the core data product and hands the phase to T4 on a common absolute epoch. The resultant length below is over windows pooled across objects, which is NOT a synchrony statistic and is not registered as one."
+  },
+  "responseGainAtTheLine": {
+    "sawtooth:d1.0:r1.0": {
+      "carrier": {
+        "fractionAboveUnity": 0.589832313015704,
+        "meanGainDb": 1.1778550137212336,
+        "medianGainDb": 0.7783686501919074,
+        "of": 3757,
+        "powerRatioPercentiles": {
+          "p10": 0.4139410423229716,
+          "p25": 0.6592087655272574,
+          "p50": 1.1962910814778023,
+          "p75": 1.9515539017191,
+          "p90": 4.156067664536524
+        },
+        "windowsCompared": 3757
+      },
+      "carrierWindowsThePilotPutOnTheLine": {
+        "fractionAboveUnity": 0.30756302521008405,
+        "meanGainDb": -1.8687784461185883,
+        "medianGainDb": -2.7151565998070177,
+        "of": 1190,
+        "powerRatioPercentiles": {
+          "p10": 0.33029511316299265,
+          "p25": 0.39013717899897987,
+          "p50": 0.535160856358748,
+          "p75": 1.16453094409606,
+          "p90": 1.58314343406469
+        },
+        "windowsCompared": 1190
+      },
+      "control": {
+        "fractionAboveUnity": 0.7962000358487185,
+        "meanGainDb": 3.562308788092366,
+        "medianGainDb": 2.5429799967238105,
+        "of": 5579,
+        "powerRatioPercentiles": {
+          "p10": 0.7858652852883066,
+          "p25": 1.0923020156993744,
+          "p50": 1.79596554109608,
+          "p75": 3.607021427764698,
+          "p90": 8.801012765152075
+        },
+        "windowsCompared": 5579
+      },
+      "designPrediction": {
+        "appliesTo": "an IDEAL sawtooth observed with all five harmonics retained and no template mismatch",
+        "dB": 1.6542569780550105,
+        "powerRatio": 1.4636111111111112
+      }
+    },
+    "step-train:d0.5:r1.0": {
+      "carrier": {
+        "fractionAboveUnity": 0.5709342560553633,
+        "meanGainDb": 0.6837049913311742,
+        "medianGainDb": 0.17801026205479753,
+        "of": 3757,
+        "powerRatioPercentiles": {
+          "p10": 0.8161732104060037,
+          "p25": 0.9072307105828615,
+          "p50": 1.0418399967738625,
+          "p75": 1.2695675561257438,
+          "p90": 1.8750341126361172
+        },
+        "windowsCompared": 3757
+      },
+      "carrierWindowsThePilotPutOnTheLine": {
+        "fractionAboveUnity": 0.4714285714285714,
+        "meanGainDb": -0.0099868672407132,
+        "medianGainDb": -0.03799357811882928,
+        "of": 1190,
+        "powerRatioPercentiles": {
+          "p10": 0.8286665629877308,
+          "p25": 0.891456098154033,
+          "p50": 0.9912898107599,
+          "p75": 1.1177742268014408,
+          "p90": 1.2333763951633472
+        },
+        "windowsCompared": 1190
+      },
+      "control": {
+        "fractionAboveUnity": 0.7918981896397204,
+        "meanGainDb": 2.045622039563236,
+        "medianGainDb": 1.2932054257169492,
+        "of": 5579,
+        "powerRatioPercentiles": {
+          "p10": 0.8957484392946427,
+          "p25": 1.0408564123862036,
+          "p50": 1.34685406869278,
+          "p75": 1.961804135692297,
+          "p90": 3.3537554971257926
+        },
+        "windowsCompared": 5579
+      },
+      "designPrediction": {
+        "appliesTo": "an IDEAL sawtooth observed with all five harmonics retained and no template mismatch",
+        "dB": 1.6542569780550105,
+        "powerRatio": 1.4636111111111112
+      }
+    },
+    "two-burn:d0.5:r1.0": {
+      "carrier": {
+        "fractionAboveUnity": 0.36092627096087304,
+        "meanGainDb": -2.6051628566867886,
+        "medianGainDb": -3.034374880256841,
+        "of": 3757,
+        "powerRatioPercentiles": {
+          "p10": 0.04928304192400275,
+          "p25": 0.11827703088021442,
+          "p50": 0.49723594028822293,
+          "p75": 1.832846018022524,
+          "p90": 8.18711063492071
+        },
+        "windowsCompared": 3757
+      },
+      "carrierWindowsThePilotPutOnTheLine": {
+        "fractionAboveUnity": 0.014285714285714285,
+        "meanGainDb": -10.412163489468325,
+        "medianGainDb": -10.535055945709368,
+        "of": 1190,
+        "powerRatioPercentiles": {
+          "p10": 0.024935854025109387,
+          "p25": 0.04865067093574298,
+          "p50": 0.08840857803556532,
+          "p75": 0.207205358273604,
+          "p90": 0.41875013398654576
+        },
+        "windowsCompared": 1190
+      },
+      "control": {
+        "fractionAboveUnity": 0.6234092131206309,
+        "meanGainDb": 2.6105595540991087,
+        "medianGainDb": 2.2927471158845587,
+        "of": 5579,
+        "powerRatioPercentiles": {
+          "p10": 0.19730554226865027,
+          "p25": 0.5407242944929844,
+          "p50": 1.6954098874522998,
+          "p75": 5.73691248300465,
+          "p90": 20.287746225766053
+        },
+        "windowsCompared": 5579
+      },
+      "designPrediction": {
+        "appliesTo": "an IDEAL sawtooth observed with all five harmonics retained and no template mismatch",
+        "dB": 1.6542569780550105,
+        "powerRatio": 1.4636111111111112
+      }
+    }
+  },
+  "run": "/home/sdegan/t5a-matched-filter/dev-mm-ptop.jsonl",
+  "status": "DESCRIPTIVE DIAGNOSTIC -- no p-values, no gate, no registration",
+  "windows": {
+    "carrier": 3757,
+    "control": 5579
+  }
+}

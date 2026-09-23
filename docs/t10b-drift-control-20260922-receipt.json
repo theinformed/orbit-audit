@@ -1,0 +1,561 @@
+{
+  "busFamilyBlindArm": {
+    "draws": 10000,
+    "labelledObjectRows": 62,
+    "objectRows": 62,
+    "observed": {
+      "families": 5,
+      "familySizes": {
+        "A2100": 8,
+        "BSS-702": 5,
+        "EUROSTAR-3000": 16,
+        "SPACEBUS-4000": 9,
+        "SSL-1300": 12
+      },
+      "spearman": -0.6,
+      "spread": 0.08353204849230444
+    },
+    "pF1Spread": 0.3157684231576842,
+    "pF2Spearman": 0.5118488151184881,
+    "permutedSpreadQuantiles": {
+      "max": 0.28314279578804835,
+      "mean": 0.07429364014165973,
+      "median": 0.06913242304361544,
+      "min": 0.004838530131458629,
+      "n": 10000,
+      "p25": 0.05258036961532275,
+      "p75": 0.09058420216321128,
+      "p90": 0.11415409730321001
+    },
+    "registeredDecision": "WITHDRAWN"
+  },
+  "cpuSeconds": 56.977661999999995,
+  "driftModels": {
+    "M-measured": {
+      "periodYr": 56.2,
+      "sense": -1.0,
+      "tiltDeg": 6.75
+    },
+    "M-model": {
+      "periodYr": 53.0,
+      "sense": -1.0,
+      "tiltDeg": 7.4
+    },
+    "M-prograde": {
+      "periodYr": 53.0,
+      "sense": 1.0,
+      "tiltDeg": 7.4
+    }
+  },
+  "executionMode": "cpu",
+  "gpuNote": "No GPU arm. CPU only; nothing is left to prove later.",
+  "hypothesisArms": {
+    "M-measured": {
+      "primary": {
+        "axialDeltaObs": {
+          "R2": 0.4539457883202884,
+          "meanAxisDeg": 8.083015937635464,
+          "n": 695,
+          "rayleighP": 6.337279900967603e-63,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": true,
+        "ceilingH2Deg": 27.531545540724608,
+        "ceilingH2bDeg": 26.232559448314873,
+        "medianAbsDeltaObsDeg": 21.921605853336388,
+        "n": 695,
+        "objects": 62,
+        "residualMedianH2Deg": 11.084418585040325,
+        "residualMedianH2bDeg": 29.335135794894228,
+        "signedDeltaObsMedianDeg": 7.834196894378749,
+        "signedPsiMedianDeg": 13.43974071976055,
+        "slopeH2": {
+          "ci95": [
+            0.5730240015668229,
+            1.0099515245542943
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": 0.829481143687564
+        },
+        "slopeH2b": {
+          "ci95": [
+            -0.30626485501802075,
+            0.44082652440627296
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": -0.0852413856935597
+        }
+      },
+      "psiWithin90": {
+        "axialDeltaObs": {
+          "R2": 0.6128894393593083,
+          "meanAxisDeg": 11.497978932560768,
+          "n": 426,
+          "rayleighP": 3.1934456389953785e-70,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": false,
+        "ceilingH2Deg": 18.01357753250322,
+        "ceilingH2bDeg": 9.00678876625161,
+        "medianAbsDeltaObsDeg": 17.73398287815725,
+        "n": 426,
+        "objects": 53,
+        "residualMedianH2Deg": 11.773835775145358,
+        "residualMedianH2bDeg": 14.366205887649883,
+        "signedDeltaObsMedianDeg": 10.80478838509697,
+        "signedPsiMedianDeg": 9.064321402699562,
+        "slopeH2": {
+          "ci95": [
+            0.20340743069580247,
+            1.138001226143908
+          ],
+          "draws": 10000,
+          "n": 426,
+          "objects": 53,
+          "slope": 0.719640775215314
+        },
+        "slopeH2b": {
+          "ci95": [
+            0.40681486139160494,
+            2.276002452287816
+          ],
+          "draws": 10000,
+          "n": 426,
+          "objects": 53,
+          "slope": 1.439281550430628
+        }
+      }
+    },
+    "M-model": {
+      "primary": {
+        "axialDeltaObs": {
+          "R2": 0.4539457883202884,
+          "meanAxisDeg": 8.083015937635464,
+          "n": 695,
+          "rayleighP": 6.337279900967603e-63,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": true,
+        "ceilingH2Deg": 27.57438439251601,
+        "ceilingH2bDeg": 26.22620339818848,
+        "medianAbsDeltaObsDeg": 21.921605853336388,
+        "n": 695,
+        "objects": 62,
+        "residualMedianH2Deg": 11.092589046206342,
+        "residualMedianH2bDeg": 29.322259617338872,
+        "signedDeltaObsMedianDeg": 7.834196894378749,
+        "signedPsiMedianDeg": 13.513932975191437,
+        "slopeH2": {
+          "ci95": [
+            0.5705317663626838,
+            1.0081380947867402
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": 0.828953357447109
+        },
+        "slopeH2b": {
+          "ci95": [
+            -0.30627874369742214,
+            0.4406832687779557
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": -0.08525788393861135
+        }
+      },
+      "psiWithin90": {
+        "axialDeltaObs": {
+          "R2": 0.6128894393593083,
+          "meanAxisDeg": 11.497978932560768,
+          "n": 426,
+          "rayleighP": 3.1934456389953785e-70,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": false,
+        "ceilingH2Deg": 18.027040700995016,
+        "ceilingH2bDeg": 9.013520350497508,
+        "medianAbsDeltaObsDeg": 17.73398287815725,
+        "n": 426,
+        "objects": 53,
+        "residualMedianH2Deg": 11.714082961215453,
+        "residualMedianH2bDeg": 14.35684093675954,
+        "signedDeltaObsMedianDeg": 10.80478838509697,
+        "signedPsiMedianDeg": 9.098871698252196,
+        "slopeH2": {
+          "ci95": [
+            0.204452196666495,
+            1.1337347645075069
+          ],
+          "draws": 10000,
+          "n": 426,
+          "objects": 53,
+          "slope": 0.7201052351791553
+        },
+        "slopeH2b": {
+          "ci95": [
+            0.40890439333299,
+            2.2674695290150138
+          ],
+          "draws": 10000,
+          "n": 426,
+          "objects": 53,
+          "slope": 1.4402104703583105
+        }
+      }
+    },
+    "M-prograde": {
+      "primary": {
+        "axialDeltaObs": {
+          "R2": 0.4539457883202884,
+          "meanAxisDeg": 8.083015937635464,
+          "n": 695,
+          "rayleighP": 6.337279900967603e-63,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": true,
+        "ceilingH2Deg": 27.57438439251601,
+        "ceilingH2bDeg": 63.77379660181151,
+        "medianAbsDeltaObsDeg": 21.921605853336388,
+        "n": 695,
+        "objects": 62,
+        "residualMedianH2Deg": 11.09258904620637,
+        "residualMedianH2bDeg": 68.06761770927223,
+        "signedDeltaObsMedianDeg": 7.834196894378749,
+        "signedPsiMedianDeg": -58.95395127414102,
+        "slopeH2": {
+          "ci95": [
+            0.570531766362684,
+            1.0081380947867402
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": 0.828953357447109
+        },
+        "slopeH2b": {
+          "ci95": [
+            -0.10821480670710214,
+            0.36237663305900775
+          ],
+          "draws": 10000,
+          "n": 695,
+          "objects": 62,
+          "slope": 0.026799094330691824
+        }
+      },
+      "psiWithin90": {
+        "axialDeltaObs": {
+          "R2": 0.2388636568466538,
+          "meanAxisDeg": 173.63473613346528,
+          "n": 269,
+          "rayleighP": 2.1599237620767896e-07,
+          "uniformMedianAbs": 45.0
+        },
+        "c0_ceilingH2Passes": true,
+        "c0_ceilingH2bPasses": true,
+        "ceilingH2Deg": 43.36815797361342,
+        "ceilingH2bDeg": 21.68407898680671,
+        "medianAbsDeltaObsDeg": 33.4224184399888,
+        "n": 269,
+        "objects": 36,
+        "residualMedianH2Deg": 9.908239986982238,
+        "residualMedianH2bDeg": 20.922167875238912,
+        "signedDeltaObsMedianDeg": -6.736880764980128,
+        "signedPsiMedianDeg": -22.099182752108106,
+        "slopeH2": {
+          "ci95": [
+            0.7247802103236866,
+            1.011491927338998
+          ],
+          "draws": 10000,
+          "n": 269,
+          "objects": 36,
+          "slope": 0.859372218186898
+        },
+        "slopeH2b": {
+          "ci95": [
+            1.4495604206473731,
+            2.022983854677996
+          ],
+          "draws": 10000,
+          "n": 269,
+          "objects": 36,
+          "slope": 1.718744436373796
+        }
+      }
+    }
+  },
+  "inputs": {
+    "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+    "cadenceJsonl": "b7d594cc4ee57e7f46e54d1696f887b890583af94122bc1b1c9f069885f03f99",
+    "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+    "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f",
+    "nsJsonl": "9aac01875eca4751949c4ea41636b7aa47960aca82603dc4b4189b58d677ea01"
+  },
+  "keptCensus": {
+    "informativeEvents": 695,
+    "objects": 62,
+    "publishedMedianNodeOffsetDeg": 21.9,
+    "signedMagnitudeWorstDisagreementDeg": 1.8965800705927904e-05
+  },
+  "maxRssKb": 484796,
+  "measuredAt": "2026-09-22T17:43:41.365567+00:00",
+  "parentCommit": "f0f2b41",
+  "parentProvenance": {
+    "executionMode": "cpu",
+    "inputs": {
+      "archive": "ffc4c4e521ca0c4eb78d5ec48039e8c9032e2f05183e5b3f09fe703bc5b734c3",
+      "catalogue": "7f7a50bc4dff644705f52ec28fb2c52a7f8589c7be45433a7f4c23dcc72711a9",
+      "events": "6804c147596fdf2c78c1c6671a97f8037bcd33202dac785db85aac943d49e66f"
+    },
+    "measuredAt": "2026-09-22T08:41:15.614772+00:00",
+    "note": "Analysis artifact. Every delta-v is a LOWER BOUND. Population is data/propulsion-catalog-v1.json, policy commercial-civil-only; no government or military object is read, priced or named.",
+    "registration": "docs/stationkeeping-efficiency-preregistration-20260922.md",
+    "registrationCommit": "f0f2b41",
+    "seeds": {
+      "bootstrap": 20260922,
+      "bootstrapDraws": 10000,
+      "monteCarlo": 20260922,
+      "monteCarloDraws": 200
+    },
+    "sourceSha256": "c5d0b9702646557ff12d9cfa3cd8346e19c1e32f6f3a567169aa0e64fd94cad4"
+  },
+  "parentRegistration": "docs/stationkeeping-efficiency-preregistration-20260922.md",
+  "parentSigmaPoleDeg": 0.0009683819956551464,
+  "passiveNull": {
+    "axial": {
+      "R2": 0.10082397756650781,
+      "meanAxisDeg": 85.66088416909368,
+      "n": 16662,
+      "rayleighP": 2.757050797551827e-74,
+      "uniformMedianAbs": 45.0
+    },
+    "byModel": {
+      "M-measured": {
+        "axial": {
+          "R2": 0.06434095676565293,
+          "meanAxisDeg": 86.4157443683415,
+          "n": 17135,
+          "rayleighP": 1.5610712091108906e-31,
+          "uniformMedianAbs": 45.0
+        },
+        "inclinationQuantilesDeg": {
+          "max": 17.121856398818988,
+          "mean": 5.096174150349623,
+          "median": 3.6359891944935967,
+          "min": 0.011516703479148929,
+          "n": 17135,
+          "p25": 1.1283412180075978,
+          "p75": 8.381489027288499,
+          "p90": 12.558859932386149
+        },
+        "medianAbsDeltaObsCi": {
+          "ci95": [
+            41.46007702141674,
+            46.19467759890472
+          ],
+          "intervalIsOn": "the median of per-object medians",
+          "median": 48.585125873853514,
+          "medianOfPerObjectMedians": 44.659484081426584,
+          "n": 17135,
+          "objects": 117
+        },
+        "medianAbsDeltaObsDeg": 48.585125873853514,
+        "medianPlaneRotationDeg": 0.009447378261999413,
+        "n": 17135,
+        "objects": 117,
+        "quantilesAbsDeltaObsDeg": {
+          "max": 89.99951284607806,
+          "mean": 47.44854213992441,
+          "median": 48.585125873853514,
+          "min": 0.005156022852588649,
+          "n": 17135,
+          "p25": 22.911247216954195,
+          "p75": 72.40517064788334,
+          "p90": 83.56571445069356
+        }
+      },
+      "M-model": {
+        "axial": {
+          "R2": 0.10082397756650781,
+          "meanAxisDeg": 85.66088416909368,
+          "n": 16662,
+          "rayleighP": 2.757050797551827e-74,
+          "uniformMedianAbs": 45.0
+        },
+        "inclinationQuantilesDeg": {
+          "max": 17.12181694895013,
+          "mean": 5.0464471966204885,
+          "median": 3.534150106004869,
+          "min": 0.010916817722420426,
+          "n": 16662,
+          "p25": 1.0806686136743244,
+          "p75": 8.33210512228298,
+          "p90": 12.587252315105491
+        },
+        "medianAbsDeltaObsCi": {
+          "ci95": [
+            43.500295245690324,
+            48.41477296972195
+          ],
+          "intervalIsOn": "the median of per-object medians",
+          "median": 51.08205314606403,
+          "medianOfPerObjectMedians": 46.347852207824786,
+          "n": 16662,
+          "objects": 117
+        },
+        "medianAbsDeltaObsDeg": 51.08205314606403,
+        "medianPlaneRotationDeg": 0.009648750046314276,
+        "n": 16662,
+        "objects": 117,
+        "quantilesAbsDeltaObsDeg": {
+          "max": 89.99335603884882,
+          "mean": 48.77687449376289,
+          "median": 51.08205314606403,
+          "min": 1.014237034269172e-05,
+          "n": 16662,
+          "p25": 24.375103994132893,
+          "p75": 74.1576864463368,
+          "p90": 84.13453177794612
+        }
+      },
+      "M-prograde": {
+        "axial": {
+          "R2": 0.20816796957473585,
+          "meanAxisDeg": 107.21271383780612,
+          "n": 382675,
+          "rayleighP": 0.0,
+          "uniformMedianAbs": 45.0
+        },
+        "inclinationQuantilesDeg": {
+          "max": 18.337494689679012,
+          "mean": 10.324549928307631,
+          "median": 11.627611215318668,
+          "min": 0.010550740957344543,
+          "n": 382675,
+          "p25": 7.4058385201226535,
+          "p75": 14.026535225565247,
+          "p90": 14.774811761168023
+        },
+        "medianAbsDeltaObsCi": {
+          "ci95": [
+            51.26713553417308,
+            57.995136969924424
+          ],
+          "intervalIsOn": "the median of per-object medians",
+          "median": 52.32034076221346,
+          "medianOfPerObjectMedians": 54.32708335825279,
+          "n": 382675,
+          "objects": 154
+        },
+        "medianAbsDeltaObsDeg": 52.32034076221346,
+        "medianPlaneRotationDeg": 0.006561718211164424,
+        "n": 382675,
+        "objects": 154,
+        "quantilesAbsDeltaObsDeg": {
+          "max": 89.99977902569981,
+          "mean": 51.46074414313106,
+          "median": 52.32034076221346,
+          "min": 0.0006845623685194369,
+          "n": 382675,
+          "p25": 33.550711287584974,
+          "p75": 71.27338130232403,
+          "p90": 82.68060959242328
+        }
+      }
+    },
+    "contaminatedObjects": [],
+    "discriminationPasses": false,
+    "discriminationRatioProgradeOverModel": 0.6800588863498369,
+    "objectsWithArchiveHistory": 331,
+    "rosterExpected": 331,
+    "rosterObjects": 331
+  },
+  "passiveRowSampling": "every row",
+  "passiveRowsWritten": 16662,
+  "registration": "docs/t10b-drift-control-preregistration-20260922.md",
+  "registrationCommit": "2da0784",
+  "registrationDefect_flatChart": {
+    "exactFormUsedAsPrimary": "equivalent_u, eq. (E1)",
+    "flatMinusExactDeg": {
+      "max": 0.07089508490889784,
+      "mean": 0.00020615389300634215,
+      "median": 5.385163376558921e-06,
+      "min": 2.6870168312598253e-09,
+      "n": 695,
+      "p25": 1.3916219785414796e-06,
+      "p75": 1.2452039683807925e-05,
+      "p90": 2.497436918815766e-05
+    },
+    "foundBy": "the test suite, before any data was read",
+    "handledUnder": "registration \u00a76.3 D1",
+    "incPredQuantilesDeg": {
+      "max": 6.90426500934586,
+      "mean": 0.08738220606931917,
+      "median": 0.053434216014018536,
+      "min": 0.009764572949308575,
+      "n": 695,
+      "p25": 0.030765256237921722,
+      "p75": 0.07004784448371582,
+      "p90": 0.08657314041278431
+    },
+    "medianAbsDeltaObsFlatDeg": 21.921610677537245,
+    "what": "registration \u00a72.1 identity D1 asserts the flat-chart angle is exactly u; it is exact only as i -> 0, the error being (1 - cos i) sin u cos u"
+  },
+  "residualBoundDeg": {
+    "max": 0.2693167161115536,
+    "mean": 0.15441832298275895,
+    "median": 0.15370886703772033,
+    "min": 0.0019634534178009358,
+    "n": 695,
+    "p25": 0.1137047409077421,
+    "p75": 0.1946920482555774,
+    "p90": 0.22901779795440366
+  },
+  "runtimeProofs": {
+    "driftHeadingAtZeroInclinationProgradeDeg": 270.0,
+    "driftHeadingAtZeroInclinationRetrogradeDeg": 90.0,
+    "exactUAtU30Inc0.05Deg": 30.0,
+    "exactUAtU30Inc10Deg": 30.00000000000196,
+    "flatChartUAtU30Inc0.05Deg": 30.000015991862824,
+    "flatChartUAtU30Inc10Deg": 30.38258769145071,
+    "foldIsPeriodic180": true,
+    "poleSpeedAtZeroInclinationDegPerYr": 0.8748380143715424
+  },
+  "s2StopRule": {
+    "eventsOutsideConditioningBound": 0,
+    "examples": [],
+    "registeredToleranceDeg": 1e-06,
+    "verdict": "DISCHARGED under registration \u00a76.3 D1: every disagreement is inside the derived arccos conditioning bound of the parent's eq. (8), so the two forms differ by floating point and not by algebra",
+    "worstDisagreementDeg": 1.8965800705927904e-05
+  },
+  "schema": 1,
+  "seeds": {
+    "bootstrap": 20260922,
+    "bootstrapDraws": 10000,
+    "permutation": 20260922,
+    "permutationDraws": 10000
+  },
+  "sourceSha256": "b47942f34b3a7e0cd7678aede4ad00c6e141fcb8ff8cc23b05f28d5bccf92e63",
+  "track": "T10b follow-up 1",
+  "verdict": {
+    "explainedFraction": 0.4939882999256603,
+    "outcome": "C-PARTIAL",
+    "reasons": [
+      "H2 [0.5705317663626838, 1.0081380947867402], H2b [-0.30627874369742214, 0.4406832687779557]; residual medians 11.092589046206342, 29.322259617338872 against m_raw 21.921605853336388; passive p=2.757050797551827e-74; both_null=False resid_ge=False passive_clean=False"
+    ]
+  },
+  "wallSeconds": 73.26752138137817
+}
