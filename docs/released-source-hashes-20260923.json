@@ -1,211 +1,245 @@
 {
-  "howToCheck": "sha256sum the file and compare with releasedSha256; the hashes under supersedes are the values older receipts record for the same path.",
-  "kinds": {
-    "later-revision": "The instrument was revised later in the programme, after the receipt that pins the earlier copy was written. This repository carries the later copy, because that is the one the subsequent measurements ran; the earlier hash is named here so the older receipt's pin can still be read for what it is.",
-    "released-form": "The copy released here differs from the copy that was measured in comments, docstrings and installation-specific path defaults only. Where a path was involved, the measured copy carried a filesystem location that resolves on one machine as an argument default or a module constant; here each working directory is a required command-line argument and each installation-specific location is read from a named environment variable whose placeholder cannot resolve. No executable statement, threshold, decision rule, registered constant or emitted string differs, and the offline suites that cover these files pass on the released copy."
+ "howToCheck": "sha256sum the file and compare with releasedSha256; the hashes under supersedes are the values older receipts record for the same path.",
+ "kinds": {
+  "later-revision": "The instrument was revised later in the programme, after the receipt that pins the earlier copy was written. This repository carries the later copy, because that is the one the subsequent measurements ran; the earlier hash is named here so the older receipt's pin can still be read for what it is.",
+  "released-form": "The copy released here differs from the copy that was measured in comments, docstrings and installation-specific path defaults only. Where a path was involved, the measured copy carried a filesystem location that resolves on one machine as an argument default or a module constant; here each working directory is a required command-line argument and each installation-specific location is read from a named environment variable whose placeholder cannot resolve. No executable statement, threshold, decision rule, registered constant or emitted string differs, and the offline suites that cover these files pass on the released copy."
+ },
+ "sources": [
+  {
+   "kind": "released-form",
+   "path": "pipeline/orbit_campaigns.py",
+   "recordedIn": [
+    "correction-quantum-20260920-receipt.json",
+    "eol-policy-relaxation-20260920-receipt.json",
+    "eol-three-arm-20260920-receipt.json",
+    "fuel-odometer-20260920-receipt.json",
+    "orbit-phase2-inclination-decomposition-20260920.json",
+    "orbit-phase2b-corroboration-20260920.json",
+    "paperb-results-20260920.json",
+    "phase3-results-20260921.json",
+    "proximity-20260922-receipt.json",
+    "proximity-leo-20260922-receipt.json",
+    "repricing-20260921-receipt.json"
+   ],
+   "releasedSha256": "42d2943dff797909c76db6377ec56e76115c698cd67dd57a607f73b0103861f7",
+   "supersedes": [
+    "1037ac43f14144cd519ef296005723369d0c3a26412b5608dd654e3800bb507b",
+    "6fe3ae546426165f3cb8a04a7ff542d744a4be1a268a7b99cc607e4a9a0766e0",
+    "cb178a31dde7086ecc093fa480770e05537c9c78d2011cb8c097e3ca66e9426c"
+   ]
   },
-  "sources": [
-    {
-      "kind": "released-form",
-      "path": "pipeline/orbit_campaigns.py",
-      "recordedIn": [
-        "correction-quantum-20260920-receipt.json",
-        "eol-policy-relaxation-20260920-receipt.json",
-        "eol-three-arm-20260920-receipt.json",
-        "fuel-odometer-20260920-receipt.json",
-        "orbit-phase2-inclination-decomposition-20260920.json",
-        "orbit-phase2b-corroboration-20260920.json",
-        "paperb-results-20260920.json",
-        "phase3-results-20260921.json",
-        "proximity-20260922-receipt.json",
-        "proximity-leo-20260922-receipt.json",
-        "repricing-20260921-receipt.json"
-      ],
-      "releasedSha256": "42d2943dff797909c76db6377ec56e76115c698cd67dd57a607f73b0103861f7",
-      "supersedes": [
-        "1037ac43f14144cd519ef296005723369d0c3a26412b5608dd654e3800bb507b",
-        "6fe3ae546426165f3cb8a04a7ff542d744a4be1a268a7b99cc607e4a9a0766e0",
-        "cb178a31dde7086ecc093fa480770e05537c9c78d2011cb8c097e3ca66e9426c"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "pipeline/orbit_events.py",
-      "recordedIn": [
-        "correction-quantum-20260920-receipt.json",
-        "eol-three-arm-20260920-receipt.json",
-        "fuel-odometer-20260920-receipt.json",
-        "orbit-phase2-inclination-decomposition-20260920.json",
-        "orbit-phase2b-corroboration-20260920.json",
-        "paperb-results-20260920.json",
-        "phase3-results-20260921.json",
-        "proximity-20260922-receipt.json",
-        "proximity-leo-20260922-receipt.json",
-        "repricing-20260921-receipt.json"
-      ],
-      "releasedSha256": "9f01783995fbe93d39997aece06a938383790bd38b5a53579fdb8aaca2aa93f1",
-      "supersedes": [
-        "56bc4fa3a4aa23a743eb368b5537e8e99f2e77867630f8f81b5d86b8885330de",
-        "abc601e8736d2c3904573d987de4ef1438a55574446e0f5111e9c9340d40a8a9"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "pipeline/orbit_history.py",
-      "recordedIn": [
-        "correction-quantum-20260920-receipt.json",
-        "eol-policy-relaxation-20260920-receipt.json",
-        "eol-three-arm-20260920-receipt.json",
-        "fuel-odometer-20260920-receipt.json",
-        "proximity-20260922-receipt.json",
-        "repricing-20260921-receipt.json"
-      ],
-      "releasedSha256": "eab404ca45748204d308fb3078545b560b08dd84d7020879be94c94481314754",
-      "supersedes": [
-        "f9beae5c4adc7d69ae1e573721972d57cb98dba13be2e452093b752f75c6d9e8"
-      ]
-    },
-    {
-      "kind": "later-revision",
-      "path": "pipeline/orbit_sweep_gpu.py",
-      "recordedIn": [
-        "orbit-phase2-inclination-decomposition-20260920.json"
-      ],
-      "releasedSha256": "c711e5b515ef42849ca04ad3f1d0ae41ec5181caf755133e12c50eddca24c8b8",
-      "supersedes": [
-        "bd3bef2b57d20026b3907cf7492b2369015c247eea33dc57709f9012cdb2d66b"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/alarm_pattern.py",
-      "recordedIn": [
-        "alarm-pattern-20260922-receipt.json",
-        "alarm-pattern-flagged-20260922-receipt.json",
-        "trigger-alarm-20260922-receipt.json"
-      ],
-      "releasedSha256": "65dab57d65dd8076af0588e0cddc93566b6900f5d0871e560759f1958087f5ee",
-      "supersedes": [
-        "71eeb14defd4560e332d19b4d36818e00b4508a7bdfe491abd98fdf4e8b756ac"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/covariance_realism.py",
-      "recordedIn": [
-        "t19-covariance-realism-20260923.json"
-      ],
-      "releasedSha256": "a4df5a76165d3cf668eeb985f7fa96e892ffd5f63a1bbac89c4d31466cb44056",
-      "supersedes": [
-        "843e4d7060c1eff289ea462621680192f4c4a6263fdc8606835bc4353158be24"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/fuel_odometer.py",
-      "recordedIn": [
-        "repricing-20260921-receipt.json"
-      ],
-      "releasedSha256": "688a4289a958dda8fe5764b72aa45b2c77f86a0c2d9be58da4d627601ec50d84",
-      "supersedes": [
-        "bd73945e93b7a9d5a18bce33c922cf70825a39ad30b9e68867a119e04a827e61"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/geo_sign_control.py",
-      "recordedIn": [
-        "t28-geo-sign-control-20260923-receipt.json"
-      ],
-      "releasedSha256": "22cbd6e0cb73f305f4ed274f56bcc4bf220ebb49a5cf8f69554c80491c94949a",
-      "supersedes": [
-        "60f8575a16872f42dfbdb7af956edb054752c24f4fed7b5a8745114cdfb8fe89"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/kinematic_inputs.py",
-      "recordedIn": [
-        "kinematic-inputs-20260922-receipt.json"
-      ],
-      "releasedSha256": "9e2face3eb8c80744029c69908e92fb18e0603459c58baab920a4f08efe01547",
-      "supersedes": [
-        "ae1e083068af7b11637b9c371fb8db193697399374ca15def8b2003090f4a5a8"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/paperb_analyze.py",
-      "recordedIn": [
-        "paperb-results-20260920.json"
-      ],
-      "releasedSha256": "89f6a23a76dff1b7496ca708b6e1893820af50619ca55a6802153f076767d818",
-      "supersedes": [
-        "52bb00906d2d3b6ccffb499e3b7cabd5f6ea695e7289965efe96cbbc640879b6"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/paperb_selftest.py",
-      "recordedIn": [
-        "paperb-results-20260920.json"
-      ],
-      "releasedSha256": "2401caa168d894757c09901f0ca25d65376277bbdf58c6eda765fc2285a83e02",
-      "supersedes": [
-        "5b28c7d808223571dd819842448fb323143540234588660c4df0de13a995f8ec"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/phase3_analyze.py",
-      "recordedIn": [
-        "phase3-results-20260921.json"
-      ],
-      "releasedSha256": "fc26e14ad8fcec4fb0c991fee930732542c08dd46e7936786c542b7c70286116",
-      "supersedes": [
-        "8b20e6127ddefcbf593551422ec088cacdc947660eb8d14392af45cca298729a"
-      ]
-    },
-    {
-      "kind": "later-revision",
-      "path": "tools/proximity_geo.py",
-      "recordedIn": [
-        "alarm-pattern-20260922-receipt.json",
-        "alarm-pattern-flagged-20260922-receipt.json",
-        "persistent-pairs-20260922-receipt.json",
-        "proximity-20260922-receipt.json",
-        "trigger-alarm-20260922-receipt.json"
-      ],
-      "releasedSha256": "69ef85d7570ebb3b72102c09d5b7cadd22cef181e383fef5279267417653eb24",
-      "supersedes": [
-        "59c5270b8231d88481d24a6dc37e9d4b630ffbe5a74f4d96f50aefd1bb134480"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/proximity_plane.py",
-      "recordedIn": [
-        "alarm-lane-leo-model-20260922.json",
-        "proximity-leo-20260922-receipt.json"
-      ],
-      "releasedSha256": "6d24ae464e4ea9e52d7197d99a71bf2bff16e122bf1bdda7ce13bb27cc02fbcb",
-      "supersedes": [
-        "7f8ad845434f744895e07f1c2f0841cbd08f8f314b86b93efe4d110df1a0cc72"
-      ]
-    },
-    {
-      "kind": "released-form",
-      "path": "tools/trigger_alarm.py",
-      "recordedIn": [
-        "alarm-lane-model-20260922.json",
-        "trigger-alarm-20260922-receipt.json"
-      ],
-      "releasedSha256": "f181c44bd1646cd50adbdd5c4d8c1496c57ec9c0b4e88a13227c5aa4d040c112",
-      "supersedes": [
-        "ed6ffc91b17820b407b94d97e449d57dc29696e27277e811b41fe7dfb02a09f1"
-      ]
-    }
-  ],
-  "what": "Files in this repository whose SHA-256 a published receipt records, and which do not hash to the value that receipt recorded.",
-  "why": "Each measurement's receipt pins the instrument that produced it by hash, so a reader can tell whether the file in front of them is the file that earned the number. Where the file here is not that file, this record says so, names the hash it supersedes and says why, rather than letting the two disagree silently. No receipt was edited: rewriting a receipt to match a later file would destroy the property the receipt exists for."
+  {
+   "kind": "released-form",
+   "path": "pipeline/orbit_events.py",
+   "recordedIn": [
+    "correction-quantum-20260920-receipt.json",
+    "eol-three-arm-20260920-receipt.json",
+    "fuel-odometer-20260920-receipt.json",
+    "orbit-phase2-inclination-decomposition-20260920.json",
+    "orbit-phase2b-corroboration-20260920.json",
+    "paperb-results-20260920.json",
+    "phase3-results-20260921.json",
+    "proximity-20260922-receipt.json",
+    "proximity-leo-20260922-receipt.json",
+    "repricing-20260921-receipt.json"
+   ],
+   "releasedSha256": "9f01783995fbe93d39997aece06a938383790bd38b5a53579fdb8aaca2aa93f1",
+   "supersedes": [
+    "56bc4fa3a4aa23a743eb368b5537e8e99f2e77867630f8f81b5d86b8885330de",
+    "abc601e8736d2c3904573d987de4ef1438a55574446e0f5111e9c9340d40a8a9"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "pipeline/orbit_history.py",
+   "recordedIn": [
+    "correction-quantum-20260920-receipt.json",
+    "eol-policy-relaxation-20260920-receipt.json",
+    "eol-three-arm-20260920-receipt.json",
+    "fuel-odometer-20260920-receipt.json",
+    "proximity-20260922-receipt.json",
+    "repricing-20260921-receipt.json"
+   ],
+   "releasedSha256": "eab404ca45748204d308fb3078545b560b08dd84d7020879be94c94481314754",
+   "supersedes": [
+    "f9beae5c4adc7d69ae1e573721972d57cb98dba13be2e452093b752f75c6d9e8"
+   ]
+  },
+  {
+   "kind": "later-revision",
+   "path": "pipeline/orbit_sweep_gpu.py",
+   "recordedIn": [
+    "orbit-phase2-inclination-decomposition-20260920.json"
+   ],
+   "releasedSha256": "c711e5b515ef42849ca04ad3f1d0ae41ec5181caf755133e12c50eddca24c8b8",
+   "supersedes": [
+    "bd3bef2b57d20026b3907cf7492b2369015c247eea33dc57709f9012cdb2d66b"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/alarm_lane.py",
+   "recordedIn": [
+    "m3-ladder-20260923-receipt.json"
+   ],
+   "releasedSha256": "649c25398f47b8d0fcf6ad5c59f88066ce70d09c2abdeadefc392c0aee88a2b5",
+   "supersedes": [
+    "014c19bddce88a26bd6ddec8969f39ee798bfe0ae7bbcf5e551d59f64ffaeae3"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/alarm_lane_leo.py",
+   "recordedIn": [
+    "m3-ladder-20260923-receipt.json"
+   ],
+   "releasedSha256": "34513fafa00d0d97e626fbd8e0d8d72c19e2837bdd00ba349363249d4d1f486c",
+   "supersedes": [
+    "94529e625350e4c85330b43720b5cab9e2897434a7bfa6a3e2c11115e6e0e9b8"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/alarm_pattern.py",
+   "recordedIn": [
+    "alarm-pattern-20260922-receipt.json",
+    "alarm-pattern-flagged-20260922-receipt.json",
+    "trigger-alarm-20260922-receipt.json"
+   ],
+   "releasedSha256": "65dab57d65dd8076af0588e0cddc93566b6900f5d0871e560759f1958087f5ee",
+   "supersedes": [
+    "71eeb14defd4560e332d19b4d36818e00b4508a7bdfe491abd98fdf4e8b756ac"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/covariance_realism.py",
+   "recordedIn": [
+    "t19-covariance-realism-20260923.json"
+   ],
+   "releasedSha256": "a4df5a76165d3cf668eeb985f7fa96e892ffd5f63a1bbac89c4d31466cb44056",
+   "supersedes": [
+    "843e4d7060c1eff289ea462621680192f4c4a6263fdc8606835bc4353158be24"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/fuel_odometer.py",
+   "recordedIn": [
+    "repricing-20260921-receipt.json"
+   ],
+   "releasedSha256": "688a4289a958dda8fe5764b72aa45b2c77f86a0c2d9be58da4d627601ec50d84",
+   "supersedes": [
+    "bd73945e93b7a9d5a18bce33c922cf70825a39ad30b9e68867a119e04a827e61"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/geo_sign_control.py",
+   "recordedIn": [
+    "t28-geo-sign-control-20260923-receipt.json"
+   ],
+   "releasedSha256": "22cbd6e0cb73f305f4ed274f56bcc4bf220ebb49a5cf8f69554c80491c94949a",
+   "supersedes": [
+    "60f8575a16872f42dfbdb7af956edb054752c24f4fed7b5a8745114cdfb8fe89"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/kinematic_inputs.py",
+   "recordedIn": [
+    "kinematic-inputs-20260922-receipt.json"
+   ],
+   "releasedSha256": "9e2face3eb8c80744029c69908e92fb18e0603459c58baab920a4f08efe01547",
+   "supersedes": [
+    "ae1e083068af7b11637b9c371fb8db193697399374ca15def8b2003090f4a5a8"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/ladder_replay.py",
+   "recordedIn": [
+    "m3-ladder-20260923-receipt.json"
+   ],
+   "releasedSha256": "835ad713bfc3d8b73c970dca56add9a8b0acb847676b5e859158587c3df0bb10",
+   "supersedes": [
+    "f96876032ac49f4509924ceb72630a85edbeac2620c1fbaf15127822a20b5c37"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/paperb_analyze.py",
+   "recordedIn": [
+    "paperb-results-20260920.json"
+   ],
+   "releasedSha256": "89f6a23a76dff1b7496ca708b6e1893820af50619ca55a6802153f076767d818",
+   "supersedes": [
+    "52bb00906d2d3b6ccffb499e3b7cabd5f6ea695e7289965efe96cbbc640879b6"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/paperb_selftest.py",
+   "recordedIn": [
+    "paperb-results-20260920.json"
+   ],
+   "releasedSha256": "2401caa168d894757c09901f0ca25d65376277bbdf58c6eda765fc2285a83e02",
+   "supersedes": [
+    "5b28c7d808223571dd819842448fb323143540234588660c4df0de13a995f8ec"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/phase3_analyze.py",
+   "recordedIn": [
+    "phase3-results-20260921.json"
+   ],
+   "releasedSha256": "fc26e14ad8fcec4fb0c991fee930732542c08dd46e7936786c542b7c70286116",
+   "supersedes": [
+    "8b20e6127ddefcbf593551422ec088cacdc947660eb8d14392af45cca298729a"
+   ]
+  },
+  {
+   "kind": "later-revision",
+   "path": "tools/proximity_geo.py",
+   "recordedIn": [
+    "alarm-pattern-20260922-receipt.json",
+    "alarm-pattern-flagged-20260922-receipt.json",
+    "persistent-pairs-20260922-receipt.json",
+    "proximity-20260922-receipt.json",
+    "trigger-alarm-20260922-receipt.json"
+   ],
+   "releasedSha256": "69ef85d7570ebb3b72102c09d5b7cadd22cef181e383fef5279267417653eb24",
+   "supersedes": [
+    "59c5270b8231d88481d24a6dc37e9d4b630ffbe5a74f4d96f50aefd1bb134480"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/proximity_plane.py",
+   "recordedIn": [
+    "alarm-lane-leo-model-20260922.json",
+    "proximity-leo-20260922-receipt.json"
+   ],
+   "releasedSha256": "6d24ae464e4ea9e52d7197d99a71bf2bff16e122bf1bdda7ce13bb27cc02fbcb",
+   "supersedes": [
+    "7f8ad845434f744895e07f1c2f0841cbd08f8f314b86b93efe4d110df1a0cc72"
+   ]
+  },
+  {
+   "kind": "released-form",
+   "path": "tools/trigger_alarm.py",
+   "recordedIn": [
+    "alarm-lane-model-20260922.json",
+    "m3-ladder-20260923-receipt.json",
+    "trigger-alarm-20260922-receipt.json"
+   ],
+   "releasedSha256": "f181c44bd1646cd50adbdd5c4d8c1496c57ec9c0b4e88a13227c5aa4d040c112",
+   "supersedes": [
+    "ed6ffc91b17820b407b94d97e449d57dc29696e27277e811b41fe7dfb02a09f1"
+   ]
+  }
+ ],
+ "what": "Files in this repository whose SHA-256 a published receipt records, and which do not hash to the value that receipt recorded.",
+ "why": "Each measurement's receipt pins the instrument that produced it by hash, so a reader can tell whether the file in front of them is the file that earned the number. Where the file here is not that file, this record says so, names the hash it supersedes and says why, rather than letting the two disagree silently. No receipt was edited: rewriting a receipt to match a later file would destroy the property the receipt exists for."
 }

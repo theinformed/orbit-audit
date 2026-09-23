@@ -28,7 +28,10 @@ recomputed while drafting. Primary sources:
   docs/geo-libration-epoch-control-results-20260922.md + -receipt.json
   docs/t27-per-object-noise-results-20260923.md
   docs/t28-geo-sign-control-results-20260923.md
-  docs/research-program-runbook-20260921.md    (the deployment record, T12)
+  docs/m3-ladder-results-20260923.md
+  docs/research-program-runbook-20260921.md    (the deployment record, T12;
+      an internal operational document, not part of the public release -- see
+      section 7.3)
 A small number of comments are marked `derivation:` rather than `src:`. Those
 are arithmetic performed for this draft — quotients and sums — from numbers that
 are themselves traced. They are marked so that no reader mistakes a derivation
@@ -184,7 +187,7 @@ At onset and at every state change the record prints a **reading**: four lines i
 
 **R2, the routine check.** Whether the change is consistent with a pattern this class of object has shown before, with the count of times it has been seen. When it is not consistent, the line names the feature, its value, the class range it falls outside, and the rate at which routine objects of that class exceed that deviation. When the pattern baselines have not been measured, it prints *Routine check: not yet measured*. **On the published record this line is a gap on every one of the 1,992 episodes**: the verdict field reads `unmeasured` for all of them <!-- src: docs/orbit-changes-record-20260923.json, byVerdict, unmeasured 1992 -->.
 
-**R3, the reach.** Printed only when R2 is *not routine* or *not measured*. It gives the number of catalogued objects whose stations the change reaches inside the horizon, the ladder stage, and that stage's measured precision with its Wilson interval — followed, verbatim, by the sentence *No figure exists for any particular satellite.* Above the first rung the line prints *no number until the replay* <!-- src: docs/change-ledger-and-reading-design-20260922.md, section 2.1 -->. On the published record, 500 of the 1,992 episodes carry a stage at all, and every one of those is the first rung <!-- src: docs/orbit-changes-record-20260923.json, byStage, S1 500 -->.
+**R3, the reach.** Printed only when R2 is *not routine* or *not measured*. It gives the number of catalogued objects whose stations the change reaches inside the horizon, the ladder stage, and that stage's measured precision with its Wilson interval — followed, verbatim, by the sentence *No figure exists for any particular satellite.* Above the first rung the line printed *no number until the replay* when the record was published <!-- src: docs/change-ledger-and-reading-design-20260922.md, section 2.1 -->. That replay has since been run, and §5.4 reports its verdict: no stage above the first earns a precision, so what the line may print above the first rung is a stated withholding rather than a figure. On the published record, 500 of the 1,992 episodes carry a stage at all, and every one of those is the first rung <!-- src: docs/orbit-changes-record-20260923.json, byStage, S1 500 -->.
 
 **R4, the denial.** Two structural caveats and a statement of what the section is not, printed byte for byte on every reading, every labelled gap and every alert: that mean longitude is a slot coordinate and not a miss distance, so this is not a conjunction warning; that the catalogue is a lower bound, so absence of an entry is not evidence of absence; and that the section is ownership-agnostic arithmetic on public element sets which attributes no purpose to anyone <!-- src: docs/orbits-section-design-20260922.md, sections 3 and 4 -->.
 
@@ -477,6 +480,29 @@ The same table carries the complementary finding: the evidence thresholds carry 
 
 One reconciliation is stated rather than smoothed over: the loosest grid point holds 96,246 triggers where the frozen artifact's primary arm holds 97,784, because the grid applies the floor to the chain's net drift change while the flag threshold applies it to each element set's departure from its trailing baseline. **No positive is lost by the difference** — both carry the same 101 — and the artifact records it <!-- src: docs/alarm-lane-build-20260922.md, section 5.2 -->.
 
+**And the sequential ladder that would have given the record's reach line a precision per stage does not earn one.** The reach clause of §2.4 was registered to carry, above its first rung, the measured precision of that rung; the replay that would supply it has been run, and its registered answer is that no rung above the first may print a number.
+
+At the geostationary belt the registered rung rule returns **yes** — the second stage's Wilson lower bound of 0.374% exceeds the first stage's point precision of 0.253% on 3,254 resolved episodes — and then two things take it away <!-- src: docs/m3-ladder-results-20260923.md, section 0 -->. The registered time control fires on the second and third stages: under a time-shuffled archive their precisions sit inside the shuffled band, so both are withheld <!-- src: docs/m3-ladder-results-20260923.md, section 0 -->. And a comparison on like populations, computed after the registered numbers existed and changing no rule, removes the separation outright. The registered rule advances an episode only when a new burn's reachable set is larger than the old one or disjoint from it, and an empty set is disjoint from everything, so an episode whose first burn reached nothing can never advance: **16,812 of 24,111 episodes opened with an empty set, and every one of the 3,254 that reached the second stage had a non-empty first set** <!-- src: docs/m3-ladder-results-20260923.md, section 3.4 -->.
+
+| population | arrivals / episodes | precision | Wilson 95% |
+|---|---:|---:|---|
+| first stage, every episode | 61 / 24,111 | 0.253% | [0.197%, 0.325%] |
+| **first stage, episodes whose first burn reached a station** | **57 / 7,299** | **0.781%** | **[0.603%, 1.010%]** |
+| first stage, episodes whose first burn reached nothing | 4 / 16,812 | 0.024% | [0.009%, 0.061%] |
+| second stage, which only the second population can reach | 19 / 3,254 | 0.584% | [0.374%, 0.910%] |
+
+<!-- src: docs/m3-ladder-results-20260923.md, section 3.4 -->
+
+**The second stage is not above the first stage it should be compared with; it is below it, with overlapping intervals**, and the registered falsifier — *the precision of a later stage is not separated above the first* — is met once the comparison is made on like populations <!-- src: docs/m3-ladder-results-20260923.md, sections 0 and 3.4 -->.
+
+**What does lift the precision is the size of the reachable set, and it does so at the first rung with no second burn at all.** On the same dial as the rest of this section, the loosest setting's first rung is 60 of 23,663, or 0.254% [0.197%, 0.326%]; requiring five occupied longitudes on the propagated path takes the first rung to **43 of 543, or 7.919% [5.932%, 10.497%]** <!-- src: docs/m3-ladder-results-20260923.md, section 7 -->. No setting shows a stage above its own first rung separated from it, and at the two tightest settings every stage above the first holds fewer than twenty resolved episodes and is labelled underpowered with no rate <!-- src: docs/m3-ladder-results-20260923.md, section 7 -->.
+
+**The set does contain the eventual partner, which is the one thing the ladder was allowed to keep.** Over the 74 arrivals the outcome record attributes to an episode inside the window, the partner was inside the first stage's set in 47 — **63.5% [52.1%, 73.6%]** — at the governing 20-day horizon of §2.5, and in 66 of 74 (89.2%) at a 180-day arm whose own propagation gate fires there <!-- src: docs/m3-ladder-results-20260923.md, section 4 -->. That is the recall of the *set* given an episode, and not of the detector.
+
+**In low orbit the layer is withheld altogether.** The rung rule returns no — the second stage resolved 440 times with nothing arriving, a 95% upper bound of 0.866%, and the third 298 times with an upper bound of 1.273% — and the registered set-recall gate fires: the eventual partner was inside the first set in 14 of 33 arrivals, **42.4% [27.2%, 59.2%]**, which is below half <!-- src: docs/m3-ladder-results-20260923.md, section 0 -->. Its control says the same from the other side: objects the catalogue does not class as payloads climb the same ladder, 507 of them reaching the second stage and 346 the third, a per-episode leak of about 0.44 against a bar of 0.10 <!-- src: docs/m3-ladder-results-20260923.md, section 0 -->.
+
+So the record's reach line keeps its first rung and its counts, and above that rung it prints the reason it has no number rather than a number.
+
 ### 5.5 The controls: one that holds, one that fires, and one that was withheld
 
 **The low-orbit control holds, and it is the strongest number in this programme.** Built on manoeuvre history rather than on a catalogue field — zero detected manoeuvres over a whole history, with at least 200 element sets and at least 365 days of span — it returns **exactly zero events across 18,792,698 object-days**, Wilson 95% [0, 2.04e-7], against a payload rate of 2.028e-6 per object-day. **Leak ratio 0.000 against a registered bar of 0.10** <!-- src: docs/proximity-leo-results-20260922.md, section 6.1 -->. The registration predicted in advance that this gate *would* fire, on the strength of its own proof that chance co-planarity is certain for any pair whose inclinations differ by less than the plane tolerance. It did not.
@@ -587,25 +613,31 @@ Every measurement reported here was governed by a registration that fixed its es
 
 Where a measurement departed from its registration, the departure is declared in that measurement's own results document and is reported as a departure in this paper: the registered bar the type library missed (§3.2), the smoothing prior that was wrong for a base rate of one in a thousand (§5.3), the validation bars the libration-epoch control could not meet (§5.6), and the sweep grid the differential measurement had to extend (§4.4) are all of that kind. No threshold, gate or decision rule was altered after a number existed.
 
-The analysis code, every artefact this paper cites and the verification commands are published in the release repository at https://github.com/theinformed/orbit-audit.
+Appendix A's identifiers are those of the private working repository this work is carried out in. The public release repository's history is squashed to a release, so **a reader of the public repository can verify the documents but not the ordering**: every registration, results document and receipt named in Appendix A is published there, and each registration is additionally anchored as §7.2 describes, but the sequence of identifiers itself is checkable only by a reader holding the working repository. One row of that table names code rather than a document — the operating-point curve's registration is the measurement grid, committed on its own before the table it produced existed — and it is marked as such.
+
+The analysis code, the instruments, the registrations, the results documents and the receipts are published in the release repository at https://github.com/theinformed/orbit-audit, together with the verification commands. **Three things this paper cites are not there, and they are named rather than implied.** The adversarial-pass ledger of the schedule-floor measurement is withheld, because a field the registration requires names a tool that the release gate forbids any published file to name, and rewriting a field of a registered record to pass a gate would be worse than omitting the record; what the ledger holds — one pass, the verdict, and exactly what it changed — is stated in full in section 10 of that measurement's own fail record, which is published. The programme's operational runbook and the record's deployment report are internal documents and are not published; §7.3 says what a reader can check in their place. And the record's own published artifacts are content-addressed files on the live surface rather than files in either repository; the census of §2.1 pins the one this paper counts by its hash.
 
 ### 7.2 The external anchor, and exactly what it proves
 
-The registration documents are anchored by an external timestamping service. Two manifests of cryptographic hashes — listing each registration document's hash and, for the recorded set, the repository identifiers of the registrations themselves — were stamped to a public blockchain on 21 September 2026, and the manifests with their proof files are published, alongside the analysis code and every artefact the companion papers cite, in the public release repository at https://github.com/theinformed/orbit-audit, together with the verification commands. Both attestations are complete <!-- src: docs/research-program-runbook-20260921.md, "PUBLISHED + SUBMITTED" block -->.
+The registration documents are anchored by an external timestamping service. Two manifests of cryptographic hashes — listing each registration document's hash and, for the recorded set, the repository identifiers of the registrations themselves — were stamped to a public blockchain on 21 September 2026, and the manifests with their proof files are published in the release repository together with the commands that verify them. Both attestations are complete <!-- src: the release repository's own README, "Reproducibility and registration", and docs/registration-anchor-manifest-20260921.txt.ots and -manifest2-20260921.txt.ots -->.
 
 What the anchor proves is bounded and we state the bound. It establishes that every registration document existed, byte for byte, no later than the stamp date. It does **not** retroactively prove that each registration preceded its results, because the stamps postdate the experiments they govern. That finer ordering rests on the repository's history, whose registration identifiers the anchored manifest names; the anchor ensures any future rewriting of that record cannot go unnoticed. Registrations made after the stamp date are stamped before their experiments run, which closes the gap prospectively. The word *verifiable* is reserved for what a reader can check themselves: the documents against the manifests, and the manifests against the public attestations.
 
 Several of the registrations in Appendix A postdate that stamp. Those rest on the repository's history alone, and this paper says so rather than implying a coverage the anchor does not have.
 
-### 7.3 The release gate
+### 7.3 What a reader can run, and what they cannot
 
-The record's own publication passes a gate before it reaches a reader, and the gate is procedural rather than aspirational. The release is built outside the repository tree, the frontend and the data half are deployed together, and the served bundle is verified byte-identical to the built copy on both the loopback interface and the public address. The deployment held a mutation claim for two minutes, kept a rollback snapshot, rebuilt only the web service, and verified the container healthy with zero restarts <!-- src: docs/research-program-runbook-20260921.md, T12 row -->.
+**The deployment is not public and its record is not either.** The record reached its readers through an internal release procedure with its own checks — the bundle built outside the repository tree, the served copy verified byte-identical to the built one, a rollback snapshot kept — and the report of that deployment is an operational document that this release does not contain. A reader therefore cannot check the deployment. This paper states its outcome, the published artifacts it produced (§2.1), and nothing about the process that a reader would have to take on trust.
 
-The test gates run at that release were: the full frontend suite at 2,589 of 2,589 across 138 files; the section's own suites at 83 and 34; the release step's own tests at 35 of 35; every test reaching the changed module at 65 of 65; and the five programme modules at 439 of 439 <!-- src: the deployment's own gate table, carried in the change record referenced by docs/research-program-runbook-20260921.md, T12 -->.
+What a reader *can* run is the release repository itself. Three checks were run on a fresh clone of it while this revision was prepared, and the results below are that run's own output rather than a figure quoted from an internal record.
+
+The repository's own test suite returns **3,057 tests, OK, with 121 skipped**. The number-fidelity check that compares each paper's draft against its typeset form returns **PASS with 0 discrepancies on all three papers**. And the publication gate — which forbids any published file to name a tool, and which is the reason for the one withheld receipt named in §7.1 — returns **PASS, 0 disallowed references**.
+
+The three commands are, in order, `unittest` discovery over the repository's `tests` directory; `docs/latex/check-numbers.py` given a paper's draft and its typeset form; and `tools/release_gate.sh` <!-- src: run on a fresh clone of https://github.com/theinformed/orbit-audit while preparing this revision -->.
 
 ### 7.4 Figures
 
-Every figure in this paper is drawn from an artifact held in the repository, by one program held there with it, deterministically: no randomness is used anywhere, the creation timestamp is suppressed, and two runs on the same artifacts produce byte-identical output. The provenance of each figure — the source file and the fields read — travels with it as a comment in both this draft and its typeset form, so a reader can check a plotted value against a receipt without running anything. The counts in Figure 1 come from a census of the published record that pins that record's own hash and performs no measurement of its own <!-- src: tools/make_figures.py and tools/orbit_changes_record_census.py -->.
+Every figure in this paper is drawn from an artifact held in the repository, by one program held there with it, deterministically: no randomness is used anywhere and the creation timestamp is suppressed. That the output is byte-identical between runs is a property we measured rather than assumed — every figure was drawn twice from the same artefacts and the two sets of hashes compared — and the measurement was made in the environment the figures are drawn in, since a plotting library is not among the release repository's own dependencies. The provenance of each figure — the source file and the fields read — travels with it as a comment in both this draft and its typeset form, so a reader can check a plotted value against a receipt without running anything. The counts in Figure 1 come from a census of the published record that pins that record's own hash and performs no measurement of its own <!-- src: tools/make_figures.py and tools/orbit_changes_record_census.py -->.
 
 ### 7.5 What is not reproducible, in those words
 
@@ -615,7 +647,7 @@ Every figure in this paper is drawn from an artifact held in the repository, by 
 4. **Nothing in the lane has been exercised against a concurrent writer.** Its state file and ledger are written by one process, and the lane does not lock <!-- src: docs/alarm-lane-build-20260922.md, section 9 -->.
 5. **The plane channel of the low-orbit arm is unbuilt and stays unbuilt**; its noise floor is still 145 times too large, so no matching product exists against it and none of its vocabulary reaches any output string <!-- src: docs/alarm-lane-build-20260922.md, section 9 -->.
 6. **The medium- and high-eccentricity regimes have no arm.** Two events and zero events respectively, both labelled underpowered <!-- src: docs/proximity-leo-results-20260922.md, section 9 -->.
-7. **The ladder replay has a registration and no result.** Until it is measured, every reach stage above the first prints *no number until the replay*, and §2.4's third line carries that string rather than a figure on all but 500 of the record's episodes.
+7. **No stage of the reach ladder above the first may print a precision, and §5.4 says on what evidence.** The replay has been run; its second and third stages are withheld by the registered time control and are below the first stage once both are measured on the same population, and in low orbit the layer is withheld entirely. The recall of the *set* is measured; the recall of the detector that opens an episode at all is not <!-- src: docs/m3-ladder-results-20260923.md, sections 0 and 4 -->.
 
 ---
 
@@ -623,7 +655,7 @@ Every figure in this paper is drawn from an artifact held in the repository, by 
 
 A public record of orbit changes is easy to build and hard to justify. The arithmetic that produces the entries is a few pages; the measurements that say what an entry means run to a dozen registrations, and most of them came back with answers their authors did not want.
 
-The record described here holds 1,992 episodes assembled from 2,058 detected steps, with 130 steps that opened nothing and 161 episodes whose onset was never seen, all counted on the face of the record. Its forward path stops at +20 days because that is where the measured error stops resolving one occupied longitude from the next. Its type library leaves 80.0% of near-geostationary burns unlabelled and says so. Its detection recall is 7.94% on the best-labelled population available, which is a low outlier against published figures on the same spacecraft, and the same measurement shows why: 86% of those operators' burns fall below a threshold set by a population statistic 130 to 470 times coarser than the objects under test. Two thirds of the recall that remains is reachable from the archive's sampling schedule alone. Its alarm fires 0.103% true at the population level and 3.41% in its one reproducible class, tightening the evidence does not improve that, and its low-orbit arm publishes a withheld gate instead of an alert because its own control fires at 0.797 of the treated rate.
+The record described here holds 1,992 episodes assembled from 2,058 detected steps, with 130 steps that opened nothing and 161 episodes whose onset was never seen, all counted on the face of the record. Its forward path stops at +20 days because that is where the measured error stops resolving one occupied longitude from the next. Its type library leaves 80.0% of near-geostationary burns unlabelled and says so. Its detection recall is 7.94% on the best-labelled population available, which is a low outlier against published figures on the same spacecraft, and the same measurement shows why: 86% of those operators' burns fall below a threshold set by a population statistic 130 to 470 times coarser than the objects under test. Two thirds of the recall that remains is reachable from the archive's sampling schedule alone. Its alarm fires 0.103% true at the population level and 3.41% in its one reproducible class, tightening the evidence does not improve that, and its low-orbit arm publishes a withheld gate instead of an alert because its own control fires at 0.797 of the treated rate. The ladder that would have given its reach line a precision at each stage earns no rung above the first, and what the registered rule mistook for the second burn's contribution turns out to be the size of the reachable set: requiring five occupied longitudes on the propagated path lifts the first rung from 0.254% to 7.919% with no second burn at all.
 
 And the belt at the centre of most of it has no leak-free passive control, for a reason that is physics rather than engineering: a slow librator dwells near occupied longitudes for months, which is precisely the shape an approach detector is built to find. That is measured on 517,391 object-days with the leak falling by a factor of twelve as the libration gets faster, and it caps every near-geostationary statement in this programme at *reported, not claimed*.
 
@@ -633,14 +665,14 @@ None of that was repaired to make the record look better. The registered bars th
 
 ## Appendix A. Registration and result identifiers
 
-Identifiers are those of the repository from which this paper is written; each registration is a single document and each result a single results document with its machine receipt.
+Identifiers are those of the private working repository this paper is written from; each registration is a single document, except where the table says otherwise, and each result a single results document with its machine receipt. The public release repository's history is squashed, so these identifiers order the work in the working repository and cannot be resolved in the public one; the documents they carry are all published there. §7.1 states that distinction and §7.2 states what the external anchor adds to it.
 
 | measurement | registration | result |
 |---|---|---|
 | Near-geostationary approach events (§5.1, §5.2, §5.5, §5.7) | `c898397` | `4182a98` |
 | Low-orbit co-orbital stations (§5.1, §5.2, §5.5) | `23d4776` | `7a515fd` |
 | Trigger-time predictor and its classes (§5.2, §5.3) | `154c53f` | `c7e5d5e` |
-| Operating-point curve and the replay (§5.4) | `13e80ed` | `be5166c` |
+| Operating-point curve and the replay (§5.4) | `13e80ed` (code, not a document) | `be5166c` |
 | Libration-epoch control (§5.6) | `86e80c3` | `a84b0ed` |
 | Sign-and-persistence control (§5.6) | `b56c8b6` | `cb25357` |
 | Manoeuvre-type library, version 2 (§3) | `b648755` | `c2e0b9d` |
@@ -651,7 +683,7 @@ Identifiers are those of the repository from which this paper is written; each r
 | Physics-scheduled null and the sign test (§4.6) | `1f27ef5` | `978d5f4` |
 | Kinematic inputs, the horizon and the phase (§2.5, §2.6) | `3f8bcab` | `518cddb` |
 | Covariance realism of public ephemerides (§6) | `d246fb4` | `8327443` |
-| Ladder replay (§2.4, §7.5) | `bb0eb17` | none |
+| Ladder replay (§2.4, §5.4, §7.5) | `bb0eb17` | `63414ca` |
 | The published record (§2.1, §7.3) | none | `abbb153` |
 
 <!-- src: identifiers read from the repository's own history; the registration column is the commit that carries the registration document alone, the result column the commit that first carries the results document -->

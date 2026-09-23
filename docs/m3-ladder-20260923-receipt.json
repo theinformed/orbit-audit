@@ -1,0 +1,43 @@
+{
+ "artifact": "m3-ladder-receipt",
+ "caveats": [
+  "Mean longitude is a slot coordinate, not a miss distance. Two objects sharing a mean longitude are routinely tens of kilometres apart, kept so by eccentricity- and inclination-vector separation this track does not model. This lane is not a conjunction warning and does not replace one.",
+  "The catalogue is a lower bound, never a census. A transfer executed below 0.010 deg/day is invisible, and 33% of the catalogued events had no visible initiating change. Absence of an alert is not evidence of absence of an approach."
+ ],
+ "design": "docs/kinematic-reach-design-20260922.md",
+ "executionMode": "CPU, one core",
+ "geoLeak": {
+  "bar": 0.1,
+  "chains": 3812,
+  "objectDays": 517391,
+  "ratio": 0.288,
+  "sentence": "The GEO catalogues remain uncontrolled. This trigger fires 3,812 times inside 517,391 days of provably uncontrolled motion -- 0.288 [0.279, 0.298] of the rate it fires on objects that can manoeuvre, against a bar of 0.10. A rung precision measured here is a property of this detector on this catalogue, not a rate at which objects of a class do anything.",
+  "source": "docs/geo-libration-epoch-control-results-20260922.md",
+  "wilson95": [
+   0.279,
+   0.298
+  ]
+ },
+ "host": "pc",
+ "inputs": {
+  "docs/alarm-lane-leo-model-20260922.json": "2abc45653ce5e0ab17b4a660a62a7d3598ec52db77bc5484fcc4edca3dd0e901",
+  "docs/alarm-lane-model-20260922.json": "3140a6502674502d4e97bd00737ea18376149098d43bd6ca4eeebd8d7890b20f",
+  "docs/alarm-lane-operating-points-20260922.json": "2fd4c8d0ffa55db399c22c9fdaf1349a347e7e020293732b2d5af4fc69b93a86",
+  "docs/manoeuvre-library-ledger-v2-20260922.jsonl": "690b4accdee3bdefc966778aa209f357201f568114dd5c143780be5da56bc216",
+  "docs/proximity-events-20260922.jsonl": "b2e6b364402248fc5fcdaf3fa90ad5eda67be6f6446e6ba900e09e217c70deef",
+  "docs/proximity-leo-events-20260922.jsonl": "39321a4bda7edaa9939a1784a3e9fae10360815dde41aae44b474ec4add4611b",
+  "tools/alarm_lane.py": "014c19bddce88a26bd6ddec8969f39ee798bfe0ae7bbcf5e551d59f64ffaeae3",
+  "tools/alarm_lane_leo.py": "94529e625350e4c85330b43720b5cab9e2897434a7bfa6a3e2c11115e6e0e9b8",
+  "tools/ladder_replay.py": "f96876032ac49f4509924ceb72630a85edbeac2620c1fbaf15127822a20b5c37",
+  "tools/trigger_alarm.py": "ed6ffc91b17820b407b94d97e449d57dc29696e27277e811b41fe7dfb02a09f1"
+ },
+ "measuredAt": "2026-09-23T02:39:06.289023+00:00",
+ "registration": "docs/m3-ladder-replay-preregistration-20260923.md",
+ "schema": 1,
+ "status": "SYNTHETIC EXERCISE with an INJECTED CLOCK. Nothing is deployed, nothing is scheduled, no timer or cron entry exists, and nothing here is on any site surface.",
+ "verdicts": {
+  "GEO": "YES",
+  "LEO": "NO"
+ },
+ "wallSeconds": 716.9019277095795
+}
